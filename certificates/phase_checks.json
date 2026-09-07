@@ -1,0 +1,935 @@
+{
+  "affine_phases": {
+    "5": {
+      "1": 2,
+      "2": 1,
+      "3": 1,
+      "4": 2
+    },
+    "6": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 1
+    },
+    "7": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    }
+  },
+  "alternating_certificate": {
+    "cells": [
+      {
+        "color": 0,
+        "neighbors": [
+          1,
+          2,
+          1,
+          5,
+          3,
+          4
+        ],
+        "point": [
+          0,
+          0
+        ],
+        "repeated": 1
+      },
+      {
+        "color": 1,
+        "neighbors": [
+          2,
+          3,
+          2,
+          0,
+          4,
+          5
+        ],
+        "point": [
+          1,
+          0
+        ],
+        "repeated": 2
+      },
+      {
+        "color": 2,
+        "neighbors": [
+          3,
+          4,
+          3,
+          1,
+          5,
+          0
+        ],
+        "point": [
+          2,
+          0
+        ],
+        "repeated": 3
+      },
+      {
+        "color": 3,
+        "neighbors": [
+          4,
+          5,
+          4,
+          2,
+          0,
+          1
+        ],
+        "point": [
+          3,
+          0
+        ],
+        "repeated": 4
+      },
+      {
+        "color": 4,
+        "neighbors": [
+          5,
+          0,
+          5,
+          3,
+          1,
+          2
+        ],
+        "point": [
+          4,
+          0
+        ],
+        "repeated": 5
+      },
+      {
+        "color": 5,
+        "neighbors": [
+          0,
+          1,
+          0,
+          4,
+          2,
+          3
+        ],
+        "point": [
+          5,
+          0
+        ],
+        "repeated": 0
+      },
+      {
+        "color": 2,
+        "neighbors": [
+          3,
+          5,
+          4,
+          1,
+          0,
+          1
+        ],
+        "point": [
+          0,
+          1
+        ],
+        "repeated": 1
+      },
+      {
+        "color": 3,
+        "neighbors": [
+          4,
+          0,
+          5,
+          2,
+          1,
+          2
+        ],
+        "point": [
+          1,
+          1
+        ],
+        "repeated": 2
+      },
+      {
+        "color": 4,
+        "neighbors": [
+          5,
+          1,
+          0,
+          3,
+          2,
+          3
+        ],
+        "point": [
+          2,
+          1
+        ],
+        "repeated": 3
+      },
+      {
+        "color": 5,
+        "neighbors": [
+          0,
+          2,
+          1,
+          4,
+          3,
+          4
+        ],
+        "point": [
+          3,
+          1
+        ],
+        "repeated": 4
+      },
+      {
+        "color": 0,
+        "neighbors": [
+          1,
+          3,
+          2,
+          5,
+          4,
+          5
+        ],
+        "point": [
+          4,
+          1
+        ],
+        "repeated": 5
+      },
+      {
+        "color": 1,
+        "neighbors": [
+          2,
+          4,
+          3,
+          0,
+          5,
+          0
+        ],
+        "point": [
+          5,
+          1
+        ],
+        "repeated": 0
+      }
+    ],
+    "partners": {
+      "0": [
+        1,
+        5
+      ],
+      "1": [
+        0,
+        2
+      ],
+      "2": [
+        1,
+        3
+      ],
+      "3": [
+        2,
+        4
+      ],
+      "4": [
+        3,
+        5
+      ],
+      "5": [
+        0,
+        4
+      ]
+    },
+    "periods": [
+      [
+        6,
+        0
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "balanced_weights": {
+    "moser_spindle": {
+      "colors": 4,
+      "complete_partitions": 16,
+      "distinct_mass_rows": 17,
+      "normalized_weights": null,
+      "rank": 7,
+      "vertices": 7
+    },
+    "odd_cycle": {
+      "colors": 3,
+      "complete_partitions": 5,
+      "distinct_mass_rows": 10,
+      "normalized_weights": null,
+      "rank": 5,
+      "vertices": 5
+    },
+    "triangle": {
+      "colors": 3,
+      "complete_partitions": 1,
+      "distinct_mass_rows": 3,
+      "normalized_weights": [
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "rank": 3,
+      "vertices": 3
+    }
+  },
+  "column_family": {
+    "local_even_cases": 18,
+    "partners": {
+      "0": [
+        3,
+        4,
+        5
+      ],
+      "1": [
+        3,
+        4,
+        5
+      ],
+      "2": [
+        3,
+        4,
+        5
+      ],
+      "3": [
+        0,
+        1,
+        2
+      ],
+      "4": [
+        0,
+        1,
+        2
+      ],
+      "5": [
+        0,
+        1,
+        2
+      ]
+    },
+    "periods": [
+      [
+        6,
+        0
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "rows": [
+      [
+        0,
+        3,
+        0,
+        5,
+        0,
+        4
+      ],
+      [
+        1,
+        4,
+        1,
+        3,
+        1,
+        5
+      ],
+      [
+        2,
+        5,
+        2,
+        4,
+        2,
+        3
+      ]
+    ]
+  },
+  "exact_geometry": {
+    "all_pairs_checked": 21,
+    "ducz_polynomial_residue_cases": 256,
+    "field": "Q(sqrt(3),sqrt(11))",
+    "induced_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "moser_rotation_squared_norm": "1",
+    "moser_vertices": 7
+  },
+  "pair_logic": {
+    "5": {
+      "(0, 0)": 30,
+      "(1, 0)": 60,
+      "(2, 6)": 10
+    },
+    "6": {
+      "(0, 0)": 90,
+      "(1, 0)": 120,
+      "(2, 6)": 15
+    }
+  },
+  "relation_calibration": {
+    "abstract_copier_boundary": [
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "abstract_copier_partitions": 2,
+    "spindle_4_colorings": 16,
+    "spindle_4_witness": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2,
+      3
+    ],
+    "spindle_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        3,
+        6
+      ]
+    ]
+  },
+  "row_transitions": [
+    {
+      "duplicate": 5,
+      "following": 3,
+      "previous": 2
+    },
+    {
+      "duplicate": 1,
+      "following": 2,
+      "previous": 3
+    },
+    {
+      "duplicate": 3,
+      "following": 3,
+      "previous": 3
+    },
+    {
+      "duplicate": 3,
+      "following": 4,
+      "previous": 4
+    },
+    {
+      "duplicate": 5,
+      "following": 5,
+      "previous": 4
+    },
+    {
+      "duplicate": 1,
+      "following": 4,
+      "previous": 5
+    }
+  ],
+  "symmetry": {
+    "invariant_matching_to_pair_functions": 0,
+    "invariant_pair_endomorphisms": 1,
+    "invariant_pair_to_matching_functions": 0,
+    "matching_stabilizer": 48,
+    "pair_stabilizer": 48,
+    "pair_stabilizer_matching_orbits": [
+      3,
+      12
+    ]
+  },
+  "triangle_support": {
+    "cells": [
+      {
+        "color": 0,
+        "n_mod3": 0,
+        "neighbors": [
+          1,
+          3,
+          4,
+          5,
+          1,
+          2
+        ],
+        "q": 0,
+        "repeated": 1
+      },
+      {
+        "color": 2,
+        "n_mod3": 1,
+        "neighbors": [
+          0,
+          5,
+          3,
+          4,
+          0,
+          1
+        ],
+        "q": 0,
+        "repeated": 0
+      },
+      {
+        "color": 1,
+        "n_mod3": 2,
+        "neighbors": [
+          2,
+          4,
+          5,
+          3,
+          2,
+          0
+        ],
+        "q": 0,
+        "repeated": 2
+      },
+      {
+        "color": 1,
+        "n_mod3": 0,
+        "neighbors": [
+          0,
+          4,
+          3,
+          0,
+          2,
+          5
+        ],
+        "q": 1,
+        "repeated": 0
+      },
+      {
+        "color": 0,
+        "n_mod3": 1,
+        "neighbors": [
+          2,
+          3,
+          5,
+          2,
+          1,
+          4
+        ],
+        "q": 1,
+        "repeated": 2
+      },
+      {
+        "color": 2,
+        "n_mod3": 2,
+        "neighbors": [
+          1,
+          5,
+          4,
+          1,
+          0,
+          3
+        ],
+        "q": 1,
+        "repeated": 1
+      },
+      {
+        "color": 0,
+        "n_mod3": 0,
+        "neighbors": [
+          1,
+          2,
+          4,
+          1,
+          5,
+          3
+        ],
+        "q": 2,
+        "repeated": 1
+      },
+      {
+        "color": 2,
+        "n_mod3": 1,
+        "neighbors": [
+          0,
+          1,
+          3,
+          0,
+          4,
+          5
+        ],
+        "q": 2,
+        "repeated": 0
+      },
+      {
+        "color": 1,
+        "n_mod3": 2,
+        "neighbors": [
+          2,
+          0,
+          5,
+          2,
+          3,
+          4
+        ],
+        "q": 2,
+        "repeated": 2
+      },
+      {
+        "color": 1,
+        "n_mod3": 0,
+        "neighbors": [
+          4,
+          0,
+          2,
+          0,
+          3,
+          5
+        ],
+        "q": 3,
+        "repeated": 0
+      },
+      {
+        "color": 0,
+        "n_mod3": 1,
+        "neighbors": [
+          3,
+          2,
+          1,
+          2,
+          5,
+          4
+        ],
+        "q": 3,
+        "repeated": 2
+      },
+      {
+        "color": 2,
+        "n_mod3": 2,
+        "neighbors": [
+          5,
+          1,
+          0,
+          1,
+          4,
+          3
+        ],
+        "q": 3,
+        "repeated": 1
+      },
+      {
+        "color": 4,
+        "n_mod3": 0,
+        "neighbors": [
+          5,
+          2,
+          0,
+          1,
+          5,
+          3
+        ],
+        "q": 4,
+        "repeated": 5
+      },
+      {
+        "color": 3,
+        "n_mod3": 1,
+        "neighbors": [
+          4,
+          1,
+          2,
+          0,
+          4,
+          5
+        ],
+        "q": 4,
+        "repeated": 4
+      },
+      {
+        "color": 5,
+        "n_mod3": 2,
+        "neighbors": [
+          3,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "q": 4,
+        "repeated": 3
+      },
+      {
+        "color": 5,
+        "n_mod3": 0,
+        "neighbors": [
+          4,
+          0,
+          2,
+          4,
+          3,
+          1
+        ],
+        "q": 5,
+        "repeated": 4
+      },
+      {
+        "color": 4,
+        "n_mod3": 1,
+        "neighbors": [
+          3,
+          2,
+          1,
+          3,
+          5,
+          0
+        ],
+        "q": 5,
+        "repeated": 3
+      },
+      {
+        "color": 3,
+        "n_mod3": 2,
+        "neighbors": [
+          5,
+          1,
+          0,
+          5,
+          4,
+          2
+        ],
+        "q": 5,
+        "repeated": 5
+      },
+      {
+        "color": 4,
+        "n_mod3": 0,
+        "neighbors": [
+          5,
+          3,
+          0,
+          5,
+          1,
+          2
+        ],
+        "q": 6,
+        "repeated": 5
+      },
+      {
+        "color": 3,
+        "n_mod3": 1,
+        "neighbors": [
+          4,
+          5,
+          2,
+          4,
+          0,
+          1
+        ],
+        "q": 6,
+        "repeated": 4
+      },
+      {
+        "color": 5,
+        "n_mod3": 2,
+        "neighbors": [
+          3,
+          4,
+          1,
+          3,
+          2,
+          0
+        ],
+        "q": 6,
+        "repeated": 3
+      },
+      {
+        "color": 5,
+        "n_mod3": 0,
+        "neighbors": [
+          0,
+          4,
+          3,
+          4,
+          2,
+          1
+        ],
+        "q": 7,
+        "repeated": 4
+      },
+      {
+        "color": 4,
+        "n_mod3": 1,
+        "neighbors": [
+          2,
+          3,
+          5,
+          3,
+          1,
+          0
+        ],
+        "q": 7,
+        "repeated": 3
+      },
+      {
+        "color": 3,
+        "n_mod3": 2,
+        "neighbors": [
+          1,
+          5,
+          4,
+          5,
+          0,
+          2
+        ],
+        "q": 7,
+        "repeated": 5
+      }
+    ],
+    "partners": {
+      "0": [
+        1,
+        2
+      ],
+      "1": [
+        0,
+        2
+      ],
+      "2": [
+        0,
+        1
+      ],
+      "3": [
+        4,
+        5
+      ],
+      "4": [
+        3,
+        5
+      ],
+      "5": [
+        3,
+        4
+      ]
+    },
+    "periods": [
+      [
+        8,
+        0
+      ],
+      [
+        6,
+        3
+      ]
+    ]
+  },
+  "wheel_defect_counts": {
+    "5": {
+      "2": 480,
+      "3": 240,
+      "4": 12
+    },
+    "6": {
+      "1": 1080,
+      "2": 2400,
+      "3": 600,
+      "4": 20
+    },
+    "7": {
+      "0": 720,
+      "1": 6480,
+      "2": 7200,
+      "3": 1200,
+      "4": 30
+    }
+  }
+}

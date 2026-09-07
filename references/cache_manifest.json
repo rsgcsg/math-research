@@ -1,0 +1,9 @@
+{
+  "description": "Optional original HTML cache; URLs are pinned to paper versions. Cache contents are ignored by Git.",
+  "papers": {
+    "ducz_moser_2606.12325v1.html": "https://arxiv.org/html/2606.12325v1",
+    "ducz_varga_2606.28157v1.html": "https://arxiv.org/html/2606.28157v1",
+    "haugland_2608.04542v4.html": "https://arxiv.org/html/2608.04542v4",
+    "kiss_laczkovich_2403.01279v3.html": "https://arxiv.org/html/2403.01279v3"
+  }
+}
