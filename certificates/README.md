@@ -1,5 +1,13 @@
 # Evidence
 
+- `root_contact_repair.json`: all 52 single-vertex unused-color changes of
+  T047's specified boundary (48 repairable), plus an exact 42-point escaped
+  realization with only a root-to-root cross edge. The independent verifier
+  re-enumerates both spindle extensions and their joint counts, checks all
+  861 escaped geometric pairs, a one-point repair, and a four-coloring. It
+  also checks 2160 direct local reset cases supporting T048's written proof.
+  This is not a complete boundary census or a non-five-colorable graph.
+
 - `rooted_spindle.json`: all 1000 ordered three-list triangle inputs,
   partitioned into 110 exact tip-support signatures, covering 10^7 spindle
   list assignments. `verify_rooted_spindle.py` checks every member by direct
