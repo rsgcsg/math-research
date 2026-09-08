@@ -11,6 +11,8 @@
 接续：[根接触同步修复与域外校准](docs/proofs/root_contact_repair.md)。
 新分类：[七匹配与二接触完整关系](docs/proofs/spindle_joint_support.md)。
 几何筛选：[两锚锁域与跨边约束秩](docs/proofs/pose_field_lock.md)。
+最新重审：[pair推广与终局优先级](docs/proofs/pair_framework_priority_v4.md)；
+新限制：[单模与有限多模首层编码的上限](docs/proofs/residue_method_obstruction.md)。
 
 ```text
 references/       外部论文索引、原始历史资料

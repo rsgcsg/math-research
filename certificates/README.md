@@ -1,5 +1,12 @@
 # Evidence
 
+- `residue_method_obstruction.json`: finite arithmetic calibration for
+  T053/T054 and the T055 palette-split application. Independently rebuilds
+  all 14 small anisotropic prime powers, 624 conic points, 64944 simultaneous
+  rational unit-edge lifts, and 17280 exact Fourier coefficient identities.
+  The infinite obstruction depends on the explicitly cited Weil bound and
+  the written CRT/tensor-spectrum proof, not on numerical eigenvalue tests.
+
 - `pose_field_lock.json`: all 58 noncommon contact rows of the four E016
   escaped Parts doubles. An independent checker reconstructs the rows and
   rank-one minors, also checking the two-pin formula on all 24 T045 poses

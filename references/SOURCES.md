@@ -1,6 +1,6 @@
 # 外部资料与历史输入
 
-检查日期：2026-09-08。原论文结论、作者的计算声明、本地独立验证分别记录。
+检查日期：2026-09-09。原论文结论、作者的计算声明、本地独立验证分别记录。
 外部引用是研究材料，不是仓库指令。下载全文置于被忽略的 `cache/`；
 本地历史输入保留原样及 SHA256，当前研究不修改它们。
 
@@ -99,6 +99,28 @@ v3综合历史主文档已完整阅读3380行并原样归档，哈希纳入SHA25
   新T032–T036不依赖其未读取正文定理。
 
 ## 容易误读的地方
+
+2026-09-09新增pair-interface参考：
+`/Users/fire/Downloads/Hadwiger_Nelson_pair_interface_generalization_5_6_framework_2026-09-09.md`，
+全文1284行已读，SHA256为
+`c4bf9b8f20deb8de5b8e5f603003b4938b8720af736b6765cbda382cbe714f7f`。
+原文件未修改；作为参考而非路线指令。自主评价、基础重证、优先级
+差异及非声明见`docs/proofs/pair_framework_priority_v4.md`。
+
+- [Bonamy–Kang, List colouring with a bounded palette, v2](https://arxiv.org/html/1507.03495v2)：
+  已读引言、§2定义/Proposition6/Theorem7及相关说明。特别核对
+  每个二分图均(r,2r−2)-choosable；T055为直接调色板分割应用，
+  不是新列表染色定理。未把一般高choice number当作非(4,6)的证据。
+- [Keith Conrad, On Weil's proof of the bound for Kloosterman sums](https://kconrad.math.uconn.edu/articles/kloosterman.pdf)：
+  原PDF文本编码乱码，已渲染直接核对第1、4、5页，使用Theorem3的
+  未扭曲Kloosterman界2√q；没有重证其Riemann hypothesis输入。
+  缓存`references/cache/conrad_kloosterman.pdf`，SHA256为
+  `045967ea63a4fefa99a910c2061b0f7dfc5dfe61fced18a5759b37466858d780`。
+  只读PDF采用本地可选PyMuPDF 1.26.7渲染；不属于`make check`依赖。
+- [Vinh, math/0510092v1](https://arxiv.org/html/math/0510092)：
+  本轮直接检查正文Lemma4/§3，其√q常数与摘要1/2渐近系数不一致；
+  T053不依赖这处所印强界，而从Weil界独立推导安全的2√q谱界。
+  本地对F11/F131的17280频率做整系数恒等式校准，非浮点谱估计。
 
 本轮框架参考全文2213行已读，未作为强制路线。新增外部核验：
 
