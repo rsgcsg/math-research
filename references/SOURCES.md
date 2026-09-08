@@ -100,6 +100,17 @@ v3综合历史主文档已完整阅读3380行并原样归档，哈希纳入SHA25
 
 ## 容易误读的地方
 
+本轮Property-B资产：完整阅读Downloads中的
+`HN_round_conclusions_propertyB_repair_cascade_2026-09-08 (1).md`；
+参考但不作为路线指令，未为归档完整性重复复制历史文件。
+
+- Grill–Linzmayer, [Improved Lower Bounds for Property B, v3](https://arxiv.org/html/2403.05674v3)：
+  已读§§1–3及Theorem 1，m(7)≥128按外部定理使用；没有独立重放其
+  GMP计算。这给T039单颜色修复127条不同超边的充分界，不是新HN界。
+- Moser–Tardos, [A constructive proof of the general Lovász Local Lemma, v3](https://arxiv.org/html/0903.0544v3)：
+  已读§1及Theorems 1.1/1.2；D≤22以x=1/23的精确有理不等式校准。
+  不宣称本文后续算法分析已全部独立重证。
+
 1. 局部满射(每邻域看到其余全部色)并不等于equitable(颜色级邻数固定)。
 2. 7色 affine 三角格覆盖不是全平面7色铺砌本身。
 3. 普通单位距离图允许边交叉；若“planar gadget”指平面图，会被四色定理

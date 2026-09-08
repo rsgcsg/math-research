@@ -49,6 +49,12 @@
 | T038 | 三点全异或边界顶点唯一第五色阻止constant-pair模块activation | 已证，新联合推论 | Parts509由T026不能单独激活；顶点5-critical宿主亦不行；无额外跨内部边是必要假设 |
 | T039 | 共同坏palette含同色时，多NAE gate的第五色修复归约为Property B | 已证，局部精确校准 | 边界必须是单位边；坏gate≤63自动可修复；一般情形须超图可二染；不是所有多模块无条件延伸 |
 | T040 | 指定21点gate网络，边界四色染色下至多六坏gate均可同时修复 | 已证，独立精确几何 | 全部364个边界三点不共单位圆，任意平面点至多邻接2端口；独立集击中≤6点，不制造新坏gate；不需共同坏颜色，要求无跨内部边 |
+| T041 | 指定gate不同刚体边界交叠≤4，四点交叠恰三种半转 | 已证，独立完整分类 | 1176个等长有序锚点/定向情况，182恒等、36四点、958两点；覆盖任意实平面等距变换 |
+| T042 | 指定gate网络至多七初始坏gate均可同时修复 | 已证 | T041六点唯一性＋一次选点交换；四色边界宿主，无额外跨内部边；好gate数不限，不需共同坏palette |
+| T043 | 固定四色底色下的一次独立集第五色repair精确CNF | 已证，封闭自动机独立检查 | 正击中、七元负全选、单位边独立性；30状态闭合；不等价于无条件五染色 |
+| T044 | 指定gate同色Property-B超边交叠≤2，点对复用≤16 | 已证，独立几何筛选 | 四点交叠为两完整单位边；非单位距离重数≤4；不保证候选超图可实现或不可修复 |
+| T045 | 无额外跨内部边的指定gate网络，同色点对复用≤8 | 已证，独立互斥配对证书 | 两例外距离全部24姿态、每姿态210点对；12个互斥对由实际跨内部单位边证明；不依赖最大团搜索结果 |
+| C005 | 真实七旧坏gate→新坏gate cascade仍可一步换点修复 | 独立精确构造 | 161点256诱导边，12880点对，完整五色修复及无条件四色见证；不是feedback障碍 |
 | Q001 | 什么真实单位距离约束能压缩接缝自由度？ | 开放 | 不能假设 activation |
 | Q002 | 超越小分离集的柔性 palette 编码是否存在？ | 开放 | 先证明必要条件，再搜 |
 | Q003 | 任意长层链是否恰由禁止连续三个全覆盖接口刻画？ | 已解决：是 | T021，包括双向无限非周期词 |
@@ -75,6 +81,7 @@
 | E019 | 多中心/Galois符号与颜色frame区分，平移层算术试探 | 几何校准完成；算术搜索UNKNOWN | C004全部21点对及K1,5预染色量词校准；F11²×周期1–4各10000冲突预算未判定，不作负结论 |
 | E020 | 六点对共同名单及实共轭几何筛选 | 完成，独立认证T036 | 210849个K2,3、5130个K4、240003正词、4656碰撞、90平方和矛盾；不恢复历史六轨道全名单声明 |
 | E021 | v3重读、spindle完整名单与pair-gate修复 | 完成 | 3380行完整阅读；T037–T040；证书spindle_pair_gate.json及独立verify_spindle_gate.py；历史28点/六轨道全名单仍待重放 |
+| E022 | 七gate cascade、刚体重合与完整repair编译 | 完成，独立认证 | T041–T045/C005；gate_repair_cascade.json及repair_pair_fan.json；36⁷局部输入由30状态封闭归纳覆盖，不是逐输入遍历 |
 
 证明入口：[phase_structure](proofs/phase_structure.md)、
 [transport_obstructions](proofs/transport_obstructions.md)、
@@ -88,7 +95,9 @@
 [锚定点对与五轨道](proofs/anchored_pair_reduction.md)、
 [六轨道与实共轭平方和](proofs/six_pair_trace.md)、
 [spindle名单与activation修复](proofs/spindle_activation_repair.md)、
-[v3路线融合重审](proofs/v3_route_reassessment.md)。
+[v3路线融合重审](proofs/v3_route_reassessment.md)、
+[七gate修复与完整编译](proofs/seven_gate_repair.md)、
+[修复超图几何筛选](proofs/geometric_repair_hypergraph.md)。
 
 三类状态限制已被反例排除：最小defect→matching、对径重复→matching、
 伙伴支持→二分。没有排除带额外真实单位距离gadget的更强reduction。

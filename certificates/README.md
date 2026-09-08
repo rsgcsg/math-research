@@ -1,5 +1,17 @@
 # Evidence
 
+- `repair_pair_fan.json`: all 24 poses for the two exceptional nonunit
+  boundary distances, covered by 12 disjoint incompatible pairs. Each pair
+  has an explicit extra cross-interior unit edge. The independent checker
+  verifies pose completeness and these witnesses, proving T045 without
+  trusting the diagnostic maximum-clique search or claiming achievability.
+
+- `gate_repair_cascade.json`: 1176 anchored rigid-overlap cases, a 161-point
+  repairable cascade with all 12880 pairs checked, and complete four-/five-color
+  witnesses. `verify_repair_cascade.py` independently checks geometry, the
+  78-clause repair formula, a closed 30-state local compiler automaton, and
+  the T044 geometric restrictions on same-color repair hyperedges.
+
 - `spindle_pair_gate.json`: reconstructed 21-point, 32-edge Moser NAE_10
   unit-edge gate. `verify_spindle_gate.py` checks all 210 pairs, a four-coloring,
   10816 local triangle-list identities and the local fresh-color repair rule.

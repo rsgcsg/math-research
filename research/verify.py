@@ -23,6 +23,8 @@ from verify_pair_orbits import verify as verify_pair_orbits
 from verify_anchored_geometry import verify as verify_anchored_geometry
 from verify_six_pair_uniform import verify as verify_six_pair_uniform
 from verify_spindle_gate import verify as verify_spindle_gate
+from verify_repair_cascade import verify as verify_repair_cascade
+from verify_repair_pair_fan import verify as verify_repair_pair_fan
 
 
 def main():
@@ -94,6 +96,8 @@ def main():
     print(json.dumps(verify_anchored_geometry(), indent=2))
     print(json.dumps(verify_six_pair_uniform(root), indent=2))
     print(json.dumps(verify_spindle_gate(root), indent=2))
+    print(json.dumps(verify_repair_cascade(root), indent=2))
+    print(json.dumps(verify_repair_pair_fan(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

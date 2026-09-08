@@ -85,7 +85,22 @@ def verify_overlap(boundary, saved):
     assert saved['overlap_histogram'] == {str(k): v for k, v in sorted(histogram.items())}
     assert saved['four_overlap_anchor_witnesses'] == fours
     assert saved['max_nonidentity_overlap'] == 4
-    return dict(anchor_cases=1176, histogram=dict(histogram), maximum_distinct_overlap=4)
+    # T044: every four-point intersection is the union of two boundary edges.
+    four_maps = {tuple(tuple(pair) for pair in w['mapping']) for w in fours}
+    assert len(four_maps) == 3
+    for mapping in four_maps:
+        for side in (0, 1):
+            common = {pair[side] for pair in mapping}
+            assert all((v ^ 1) in common for v in common)
+            for triple in combinations(common, 3):
+                assert any((v ^ 1) in triple for v in triple)
+    # Each equal-length ordered source pair allows two isometries.
+    nonunit = [len(group)//2 for length, group in length_groups.items() if length != ONE]
+    assert Counter(nonunit) == {1: 78, 2: 1, 4: 1}
+    return dict(anchor_cases=1176, histogram=dict(histogram), maximum_distinct_overlap=4,
+                same_color_repair_edge_intersection_bound=2,
+                nonunit_distance_multiplicity_histogram=dict(Counter(nonunit)),
+                maximum_gate_poses_through_nonunit_pair=16)
 
 
 def verify_compiler_automaton():
@@ -199,6 +214,9 @@ def verify(root):
                    for clause in clauses) == expected
     # Exact LLL substitution x=1/(D+1), with p=1/64 and D=22.
     assert F(1, 64) <= F(1, 23)*F(22, 23)**22
+    packing_bound = lambda v: (v*(((v-1)*((v-2)//5))//6))//7
+    assert packing_bound(31) == 110 and packing_bound(32) == 141
+    assert all(packing_bound(v) < 128 for v in range(7, 32))
     return dict(status='VERIFIED_RIGID_OVERLAP_AND_REPAIRABLE_CASCADE', overlap=overlap,
                 vertices=161, all_pairs=len(distances), induced_edges=256,
                 bad_gate_trace=trace, complete_five_coloring=True,

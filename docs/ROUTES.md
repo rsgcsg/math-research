@@ -69,6 +69,12 @@ flowchart TD
 
 ## 当前最多三个活跃方向
 
+T042已进一步关闭七初始坏gate，且T043把一次修复精确编译为正击中、
+负全选和独立性CNF。当前指定21点模板候选必须至少八坏gate；同色
+Property-B候选另须通过T044交叠≤2与T045点对复用≤8的几何必要条件。
+见`proofs/seven_gate_repair.md`和`proofs/geometric_repair_hypergraph.md`。
+下面T040的七个门槛是此前检查点，已由T042加强。
+
 v3重审后的优先切入：constant-pair activation须逃过T038三点/临界点
 修复与T039共同色Property-B修复；Parts单模块路线已被T026关闭。
 指定21点gate几何还受T040约束：四色宿主的每份四色染色必须至少
