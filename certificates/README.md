@@ -22,6 +22,29 @@
   permutation and edge constraint; the normalization and completeness argument
   is in `docs/proofs/translated_seam.md`. This is a restricted-family theorem,
   not an activation theorem for arbitrary plane colorings.
+- `long_chain_invariant.json`: 36 nonempty frame sets closed under all 416
+  admissible transition obligations. Reproduce with
+  `python3 research/long_chain.py --output certificates/long_chain_invariant.json`.
+  `verify_long_chain.py` independently rebuilds relations in global coordinates;
+  this is an all-length inductive certificate, not a bounded-length experiment.
+- `snail_replay.json`: exact independent replay summary and source archive hash
+  for the external G29 geometric fractional dual. Reproduce with
+  `python3 research/snail_replay.py --output certificates/snail_replay.json`;
+  the downloaded archive belongs in ignored `references/cache/`.
+- `joint_face_experiment.json`: numerical LP experiment restricted to the
+  supplied 168-atom support of G27. Neither support completeness nor numerical
+  negative claims are certified by this historical experiment file; superseded
+  for positive-law conclusions by the exact artifacts below.
+- `g27_replay.json`: original G27 dual replay summary, source hashes and exact
+  168 zero-slack masks. Reproduce with `python3 research/g27_replay.py --output
+  certificates/g27_replay.json` using the three documented cached source files.
+  Source replay is separate from the offline positive-law checks.
+- `joint_face_exact.json`: exact full-partition invariant laws: a three-atom
+  non-deterministic extreme law and a strictly positive law on all 348 candidate
+  covers. `verify_joint_face.py` independently checks all congruences using
+  integer geometry and three-anchor reconstruction, without the search code.
+  The optional stored 72-column kernel is search-side algebra, not independently
+  certified by `make check`; only the stated positive laws are checked there.
 
 `make check` uses only the Python standard library. It checks all saved positive
 SAT models without importing the SAT solver or search encoder. It also compares

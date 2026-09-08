@@ -9,6 +9,10 @@ import hashlib
 from verify_search_models import verify as verify_search_models
 from itertools import permutations
 from verify_translated_seam import verify as verify_translated_seam
+from verify_long_chain import verify as verify_long_chain
+from fractional_ceiling import verify as verify_fractional_ceiling
+from joint_moment_gap import verify as verify_joint_moment_gap
+from verify_joint_face import verify as verify_joint_face
 
 
 def main():
@@ -65,6 +69,11 @@ def main():
                 assert count == seam['allowed_relative_permutation_counts'][i][j] == 53
     print('PASS: exact Moser-angle seam relations, 128 word pairs, 120 relative frames each')
     print(json.dumps(verify_translated_seam(root / 'certificates/translated_seam.json'), indent=2))
+    print(json.dumps(verify_long_chain(root / 'certificates/long_chain_invariant.json'), indent=2))
+    print(json.dumps(verify_fractional_ceiling(), indent=2))
+    print(json.dumps(verify_joint_moment_gap(), indent=2))
+    print(json.dumps(verify_joint_face(root / 'certificates/joint_face_exact.json'), indent=2))
+    print(json.dumps(verify_joint_face(root / 'certificates/joint_face_exact.json',interior=True), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

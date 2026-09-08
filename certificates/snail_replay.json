@@ -1,0 +1,21 @@
+{
+  "status": "VERIFIED_EXTERNAL_GFCN_LOWER_BOUND",
+  "archive_sha256": "ff6c9fc9df606ee15be9b4e3d14e7144e3d829fbd7fbeca3bc21bdd50e43667c",
+  "source": "https://users.renyi.hu/~akos/ep1070/data/snail.zip",
+  "vertices": 29,
+  "induced_edges": 51,
+  "all_pairs_checked": 406,
+  "independent_sets": 498168,
+  "congruences": 16859,
+  "distinct_congruence_pair_checks": 2042,
+  "dual_inequalities": 498168,
+  "dual_numerator": 4000716307,
+  "dual_denominator": 1000000018,
+  "minimum_integer_slack": 0,
+  "zero_slack_atoms": 1,
+  "bound": "4000716307/1000000018",
+  "ordinary_graph_chromatic_claim": "not inferred",
+  "author_scripts_executed": false,
+  "pickled_vertex_array_loaded": false,
+  "cached_iec_matrix_used": false
+}

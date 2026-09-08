@@ -21,9 +21,9 @@
 | Exoo–Ismailescu | https://arxiv.org/abs/1805.00157 | 另一五色证明，待深入比较 |
 | Parts | https://arxiv.org/abs/2010.12661 | human-verifiable proof；509纪录另由Haugland近期正文支持 |
 | Haugland v4 (2026) | https://arxiv.org/html/2608.04542v4 | 正文核验740点 DIFF4(sqrt3) 到2131点构造；509仍是文中纪录。不是无spindle最小纪录，已有1441点 |
-| Matolcsi et al. | https://arxiv.org/abs/2311.10069 | geometric fractional 与27点系统；需区别普通 χ_f |
+| Matolcsi et al. | https://arxiv.org/abs/2311.10069 | G27原对偶已独立重放：182304个整数不等式、168紧项；支持约束只适用于总权4的geometric fractional律，不是任意四色划分 |
 | Dúcz (2026) | https://arxiv.org/html/2606.12325v1 | 已读4色公式与模4证明；Moser lattice/ring 确有普通4染色 |
-| Dúcz–Varga (2026) | https://arxiv.org/html/2606.28157v1 | 原文确认29点 geometric fractional >4.0007；两新点在普通图只是叶子。全等约束与blow-up不可省略；原始LP证书尚未本地重放 |
+| Dúcz–Varga (2026) | https://arxiv.org/html/2606.28157v1 | 原始G29 LP证书已独立精确重放：406对距离、16859条全等、498168条整数不等式；界4000716307/1000000018。两新点仍只是普通图叶子，未重放blow-up |
 | Eng et al. | https://arxiv.org/html/2511.10813v1 | 4指定生成方向的Cayley图3染；不声称任意Abelian宿主全部单位边3染 |
 | Voronov v3 | https://arxiv.org/abs/2304.10163 | 正厚度禁止距离区间需7色；不适用于只有精确距离1的直接结论 |
 | Sokolov–Voronov | https://arxiv.org/abs/2502.01958 | 论文列明map边界条件，并给polygonal corollary；不排除所有可测六染色 |
@@ -41,6 +41,17 @@
 - Kiss–Laczkovich，[离散Pompeiu与有限Steinhaus](https://arxiv.org/html/2403.01279v3)：
   已读主要定理与推论。任意有限加权配置总权重非零时，所有刚体副本上的
   零和方程迫使函数恒零；不需可测性。零总权重的copier差分不在该定理范围内。
+- De Wulf–Doyen–Henzinger–Raskin，[Antichains for Verification作者资料页](https://lsv.ens-paris-saclay.fr/~doyen/antichains/antichains.html)：
+  核验自动机universality/包含关系剪枝的成熟背景；原CAV论文旧下载链接
+  未成功打开，未声称全文已读。T021自身证明与检查不依赖外部算法定理。
+
+Dúcz–Varga原始校准包入口已定位：
+`https://users.renyi.hu/~akos/ep1070/`，下载`data/snail.zip`。
+已完成独立精确重放，结果与下载包SHA256见`certificates/snail_replay.json`。
+G27原论文补充页为 `https://static.renyi.hu/ai-shared/daniel/fcn-4/`。
+其坐标、全等映射、对偶已下载并独立精确重放；168紧项与此前支持一致。
+结果和三个文件SHA256在`certificates/g27_replay.json`；随后T025独立
+验证完整joint律的可出现划分恰348个，不把这解释为全部普通四色划分。
 
 ## 容易误读的地方
 

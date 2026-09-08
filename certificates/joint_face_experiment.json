@@ -1,0 +1,25 @@
+{
+  "status": "RESTRICTED_SUPPORT_NUMERICAL_EXPERIMENT",
+  "support_atoms": 168,
+  "candidate_partitions": 348,
+  "results": [
+    {
+      "stage": "all_supplied_monochromatic_congruences",
+      "rows": 1283,
+      "columns": 348,
+      "individually_geometric_columns": 2,
+      "max_nongeometric_mass": 0.9999999999999996,
+      "positive_columns": 25
+    },
+    {
+      "stage": "plus_all_quartet_2plus2_congruences",
+      "rows": 8697,
+      "columns": 348,
+      "individually_geometric_columns": 2,
+      "max_nongeometric_mass": 1.0000000000000686,
+      "positive_columns": 12
+    }
+  ],
+  "support_completeness_verified": false,
+  "negative_claims_certified": false
+}
