@@ -45,6 +45,10 @@
 | C004 | 不平衡Galois符号三环仍完全可染 | 显式七点反例，全部21点对检查 | 旋转正六边形＋原点；符号+,+,−，五色延伸成立；不是颜色frame holonomy |
 | T035 | 固定√3的实共轭双菱形/三角形结构不可实现 | 已证，平方和矛盾 | 共轭距离平均迫使实向量平方长度为−1；不宣称任意抽象图无普通单位实现 |
 | T036 | 六个锚定二点轨道的共同三名单全部延伸 | 已证，独立完整分类 | 14348907关系→460728规范模型；240003正词、4656菱形碰撞、90个T035；不含非均匀名单结论 |
+| T037 | spindle名单大小≥3时唯一坏情况为七份相同三名单；21点NAE_10 gate | 历史逻辑重证，独立新几何 | 任意总调色板的短证明；21点32诱导边、210点对、10816局部名单校准；不是原28点Galois几何 |
+| T038 | 三点全异或边界顶点唯一第五色阻止constant-pair模块activation | 已证，新联合推论 | Parts509由T026不能单独激活；顶点5-critical宿主亦不行；无额外跨内部边是必要假设 |
+| T039 | 共同坏palette含同色时，多NAE gate的第五色修复归约为Property B | 已证，局部精确校准 | 边界必须是单位边；坏gate≤63自动可修复；一般情形须超图可二染；不是所有多模块无条件延伸 |
+| T040 | 指定21点gate网络，边界四色染色下至多六坏gate均可同时修复 | 已证，独立精确几何 | 全部364个边界三点不共单位圆，任意平面点至多邻接2端口；独立集击中≤6点，不制造新坏gate；不需共同坏颜色，要求无跨内部边 |
 | Q001 | 什么真实单位距离约束能压缩接缝自由度？ | 开放 | 不能假设 activation |
 | Q002 | 超越小分离集的柔性 palette 编码是否存在？ | 开放 | 先证明必要条件，再搜 |
 | Q003 | 任意长层链是否恰由禁止连续三个全覆盖接口刻画？ | 已解决：是 | T021，包括双向无限非周期词 |
@@ -70,6 +74,7 @@
 | E018 | 历史五轨道可约性恢复 | 完成，新生成证书独立检查 | 8832个K2,3、840个K4、192菱形矛盾、49185正类图及四种名单模式；不借用未恢复旧包 |
 | E019 | 多中心/Galois符号与颜色frame区分，平移层算术试探 | 几何校准完成；算术搜索UNKNOWN | C004全部21点对及K1,5预染色量词校准；F11²×周期1–4各10000冲突预算未判定，不作负结论 |
 | E020 | 六点对共同名单及实共轭几何筛选 | 完成，独立认证T036 | 210849个K2,3、5130个K4、240003正词、4656碰撞、90平方和矛盾；不恢复历史六轨道全名单声明 |
+| E021 | v3重读、spindle完整名单与pair-gate修复 | 完成 | 3380行完整阅读；T037–T040；证书spindle_pair_gate.json及独立verify_spindle_gate.py；历史28点/六轨道全名单仍待重放 |
 
 证明入口：[phase_structure](proofs/phase_structure.md)、
 [transport_obstructions](proofs/transport_obstructions.md)、
@@ -81,7 +86,9 @@
 [第9轮结构重审](proofs/research_synthesis.md)、
 [历史资产重新映射](proofs/history_frontier_remap.md)、
 [锚定点对与五轨道](proofs/anchored_pair_reduction.md)、
-[六轨道与实共轭平方和](proofs/six_pair_trace.md)。
+[六轨道与实共轭平方和](proofs/six_pair_trace.md)、
+[spindle名单与activation修复](proofs/spindle_activation_repair.md)、
+[v3路线融合重审](proofs/v3_route_reassessment.md)。
 
 三类状态限制已被反例排除：最小defect→matching、对径重复→matching、
 伙伴支持→二分。没有排除带额外真实单位距离gadget的更强reduction。

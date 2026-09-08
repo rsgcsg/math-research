@@ -80,6 +80,13 @@ DRAT→LRAT转换工具来自 `https://github.com/marijnheule/drat-trim`，固�
 
 ## 本轮历史与列表染色补充
 
+v3综合历史主文档已完整阅读3380行并原样归档，哈希纳入SHA256检查。
+其中six-orbit arbitrary-list、28点Galois几何及pair detector仍按历史
+未重放处理。T037是本轮独立短证明与21点新见证，不冒称原package恢复。
+另查看[Cranston–Rabern, Beyond Degree Choosability](https://arxiv.org/html/1511.00350)
+引言及Theorem A作为Gallai树背景；T037本身用初等三角形恒等式证明，
+不依赖未完整读取的分类定理。
+
 本轮历史恢复：`references/history/`新增原样历史总账、finite-Abelian
 及mature-reducibility报告，SHA256纳入现行检查。原五/六/七轨道ZIP
 均未恢复；T033及T036是新生成证书，不是给历史计算标签自动升级。

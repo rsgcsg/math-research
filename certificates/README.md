@@ -1,5 +1,13 @@
 # Evidence
 
+- `spindle_pair_gate.json`: reconstructed 21-point, 32-edge Moser NAE_10
+  unit-edge gate. `verify_spindle_gate.py` checks all 210 pairs, a four-coloring,
+  10816 local triangle-list identities and the local fresh-color repair rule.
+  All 364 boundary triples are checked to exclude any unit circumcircle,
+  establishing the geometric hypothesis of the T040 sparse repair theorem.
+  T037's proof supplies complete boundary classification; this is NOT the
+  missing historical 28-point anchored Galois module.
+
 - `phase_checks.json`: fully reproducible exact finite tables and small
   calibrations. Regenerate with `python3 research/export_certificates.py`.
 - `search_models.json`: bounded SAT runs plus full positive models. Reproduce
