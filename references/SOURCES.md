@@ -78,6 +78,19 @@ DRAT→LRAT转换工具来自 `https://github.com/marijnheule/drat-trim`，固�
   已读有限Euclidean图定义与构造。这里只引用研究背景，不依赖正文中
   渐近谱界的常数；F11的726条边和五染色均由本地整数检查独立给出。
 
+## 本轮历史与列表染色补充
+
+本轮历史恢复：`references/history/`新增原样历史总账、finite-Abelian
+及mature-reducibility报告，SHA256纳入现行检查。原五/六/七轨道ZIP
+均未恢复；T033及T036是新生成证书，不是给历史计算标签自动升级。
+
+- Landon Rabern, [A different short proof of Brooks' theorem, v5](https://arxiv.org/html/1205.3253)：
+  本轮已读ordinary版本及Theorem2列表版本和证明。T034使用
+  χ_l≤max{3,ω,Δ}，不能以ordinary三色性替代非均匀名单延伸。
+- Atserias–Kolaitis, [Consistency, Acyclicity, and Positive Semirings](https://arxiv.org/abs/2009.09488)：
+  本轮核验摘要入口，作为布尔/概率关系连接的背景；没有宣称全文重读，
+  新T032–T036不依赖其未读取正文定理。
+
 ## 容易误读的地方
 
 1. 局部满射(每邻域看到其余全部色)并不等于equitable(颜色级邻数固定)。

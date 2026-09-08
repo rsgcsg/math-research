@@ -73,6 +73,21 @@
   induced core doubles. `verify_parts_escape.py` squares all 1032256 noncommon
   cross-pair displacements in 16-dimensional exact fields, independently of the
   search's radial pruning. These do not color the entire extended fields.
+- `pair_orbits_five.json.gz`: newly rebuilt historical five-orbit census,
+  all 59049 labelled matching graphs, geometric exclusion witnesses and 245925
+  full coloring words (including 196740 nonuniform-list words). Generate with
+  `python3 research/pair_orbit_census.py`; independently check with
+  `python3 research/verify_pair_orbits.py`. The old ZIP was not recovered.
+- `pair_orbits_six_uniform.json.gz`: all 460728 forest-normalized six-pair
+  models, covering 14348907 raw sign assignments. Positives are explicit
+  three-colorings; negatives are K2,3/K4, rational rhombus implications, or the
+  T035 real-conjugation trace obstruction. Generate with
+  `python3 research/six_pair_uniform.py`; check with
+  `python3 research/verify_six_pair_uniform.py`. Common three-lists ONLY:
+  this does not certify the historical arbitrary-list six-orbit claim.
+- `layer_residue_probe.json`: four bounded UNKNOWN observations for a periodic
+  F11 layer quotient; no negative claim. Probe with
+  `.venv/bin/python research/layer_residue_probe.py`; not a proof certificate.
 
 `make check` uses only the Python standard library. It checks all saved positive
 SAT models without importing the SAT solver or search encoder. It also compares

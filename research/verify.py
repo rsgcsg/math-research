@@ -19,6 +19,9 @@ from verify_parts_parallelograms import verify as verify_parts_parallelograms
 from verify_residue11 import verify as verify_residue11
 from verify_parts_escape import verify as verify_parts_escape
 from valuation_escape import verify as verify_valuation_escape
+from verify_pair_orbits import verify as verify_pair_orbits
+from verify_anchored_geometry import verify as verify_anchored_geometry
+from verify_six_pair_uniform import verify as verify_six_pair_uniform
 
 
 def main():
@@ -86,6 +89,9 @@ def main():
     print(json.dumps(verify_residue11(root), indent=2))
     print(json.dumps(verify_parts_escape(root), indent=2))
     print(json.dumps(verify_valuation_escape(), indent=2))
+    print(json.dumps(verify_pair_orbits(root), indent=2))
+    print(json.dumps(verify_anchored_geometry(), indent=2))
+    print(json.dumps(verify_six_pair_uniform(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

@@ -1,0 +1,14 @@
+{
+  "status": "SEARCH_OBSERVATIONS_ONLY",
+  "source": "research/layer_residue_probe.py",
+  "solver": "cadical195 via python-sat 1.9.dev15",
+  "graph": "F11^2 unit graph per layer; consecutive layers have horizontal displacements +/-2",
+  "cases": [
+    {"period": 1, "vertices": 121, "edges": 847, "conflict_budget": 10000, "status": "UNKNOWN"},
+    {"period": 2, "vertices": 242, "edges": 1694, "conflict_budget": 10000, "status": "UNKNOWN"},
+    {"period": 3, "vertices": 363, "edges": 2904, "conflict_budget": 10000, "status": "UNKNOWN"},
+    {"period": 4, "vertices": 484, "edges": 3872, "conflict_budget": 10000, "status": "UNKNOWN"}
+  ],
+  "negative_conclusion": null,
+  "scope": "No non-five-colorability claim for the finite quotients or infinite real host."
+}
