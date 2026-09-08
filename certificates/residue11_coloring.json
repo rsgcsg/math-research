@@ -1,0 +1,20 @@
+{
+  "field_order": 11,
+  "vertex_order": "(x,y) lexicographic; index = 11*x+y, x,y=0,...,10",
+  "colors": 5,
+  "rows": [
+    "01340301341",
+    "32413032430",
+    "04130321213",
+    "43403434031",
+    "10324140302",
+    "03030423424",
+    "21214202140",
+    "02143041403",
+    "14010324212",
+    "41302140321",
+    "13034213212"
+  ],
+  "provenance": "Local CaDiCaL 1.9.5 SAT search on all 726 norm-one edges; independently checked by verify_residue11.py. The existence of such a table was already proved by Madore (2015), Lemma 4.5; this is a separately generated witness.",
+  "scope": "Finite quadrance graph, not a Euclidean realization on 121 points. Pullback theorem applies to the stated number fields."
+}

@@ -68,6 +68,16 @@ DRAT→LRAT转换工具来自 `https://github.com/marijnheule/drat-trim`，固�
 标准库检查器逐提示传播认证，不依赖该C程序的“VERIFIED”字符串作为最终
 逻辑证据；没有声称支持一般RAT/LRAT，也没有声称正式验证此Python程序。
 
+## 本轮数论收敛补充
+
+- David A. Madore, [The Hadwiger-Nelson problem over certain fields](https://arxiv.org/html/1509.07023v1)：
+  已读§3的赋值约化证明、Lemma4.5的F11²五色表、Proposition4.6及
+  §5实闭域讨论。T028采用其成熟机制，独立生成有限表并核验√5扩域，
+  结合Parts下界；不宣称该约化方法或有限表存在性为新成果。
+- Le Anh Vinh, [On chromatic number of unit-quadrance graphs](https://arxiv.org/html/math/0510092)：
+  已读有限Euclidean图定义与构造。这里只引用研究背景，不依赖正文中
+  渐近谱界的常数；F11的726条边和五染色均由本地整数检查独立给出。
+
 ## 容易误读的地方
 
 1. 局部满射(每邻域看到其余全部色)并不等于equitable(颜色级邻数固定)。

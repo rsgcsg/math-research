@@ -61,6 +61,18 @@
 - `parts509_triples.json.gz`: 1744 full five-colorings cover every proper
   precoloring of all 21849334 vertex triples. `verify_parts_triples.py` uses
   witness-index intersections to independently check 106793611 legal patterns.
+- `parts509_parallelograms.json.gz`: 3807 full colorings cover all 10725867
+  legal partitions of 794256 equal-midpoint quadruples, including collinear ones.
+  Search groups diagonals; `verify_parts_parallelograms.py` independently groups
+  opposite directed sides and checks all witness intersections (T027).
+- `residue11_coloring.json`: independently generated 121-vertex five-color table
+  for the F11 unit-quadrance graph. `verify_residue11.py` checks all 726 finite
+  edges, basis products and four exact Parts pullbacks. The extension to the
+  entire number field K uses the written valuation proof (T028), not finite tests.
+- `parts509_escape_rotations.json`: complete five-colorings for four 1017-vertex
+  induced core doubles. `verify_parts_escape.py` squares all 1032256 noncommon
+  cross-pair displacements in 16-dimensional exact fields, independently of the
+  search's radial pruning. These do not color the entire extended fields.
 
 `make check` uses only the Python standard library. It checks all saved positive
 SAT models without importing the SAT solver or search encoder. It also compares

@@ -15,6 +15,10 @@ from joint_moment_gap import verify as verify_joint_moment_gap
 from verify_joint_face import verify as verify_joint_face
 from verify_parts_core import verify as verify_parts_core
 from verify_parts_triples import verify as verify_parts_triples
+from verify_parts_parallelograms import verify as verify_parts_parallelograms
+from verify_residue11 import verify as verify_residue11
+from verify_parts_escape import verify as verify_parts_escape
+from valuation_escape import verify as verify_valuation_escape
 
 
 def main():
@@ -78,6 +82,10 @@ def main():
     print(json.dumps(verify_joint_face(root / 'certificates/joint_face_exact.json',interior=True), indent=2))
     print(json.dumps(verify_parts_core(root), indent=2))
     print(json.dumps(verify_parts_triples(root), indent=2))
+    print(json.dumps(verify_parts_parallelograms(root), indent=2))
+    print(json.dumps(verify_residue11(root), indent=2))
+    print(json.dumps(verify_parts_escape(root), indent=2))
+    print(json.dumps(verify_valuation_escape(), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))
