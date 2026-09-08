@@ -54,6 +54,8 @@
 | T043 | 固定四色底色下的一次独立集第五色repair精确CNF | 已证，封闭自动机独立检查 | 正击中、七元负全选、单位边独立性；30状态闭合；不等价于无条件五染色 |
 | T044 | 指定gate同色Property-B超边交叠≤2，点对复用≤16 | 已证，独立几何筛选 | 四点交叠为两完整单位边；非单位距离重数≤4；不保证候选超图可实现或不可修复 |
 | T045 | 无额外跨内部边的指定gate网络，同色点对复用≤8 | 已证，独立互斥配对证书 | 两例外距离全部24姿态、每姿态210点对；12个互斥对由实际跨内部单位边证明；不依赖最大团搜索结果 |
+| T046 | spindle根点两失败刚性与完整唯一根色判据 | 已证，任意有限调色板 | 两个根色不延伸迫使两半齐次三名单S,T，根支持O\(S∩T)；五色三名单10000000份独立压缩覆盖 |
+| T047 | 真实双gate耦合的边界关系严格强于两个单模块NAE关系合取 | 显式构造与独立正反检查 | 40点81诱导边、780点对；合法三色边界各24延伸，576个组合均违反强制根色跨边；全图χ=4、仍在安全域；非完整26点边界分类 |
 | C005 | 真实七旧坏gate→新坏gate cascade仍可一步换点修复 | 独立精确构造 | 161点256诱导边，12880点对，完整五色修复及无条件四色见证；不是feedback障碍 |
 | Q001 | 什么真实单位距离约束能压缩接缝自由度？ | 开放 | 不能假设 activation |
 | Q002 | 超越小分离集的柔性 palette 编码是否存在？ | 开放 | 先证明必要条件，再搜 |
@@ -82,6 +84,7 @@
 | E020 | 六点对共同名单及实共轭几何筛选 | 完成，独立认证T036 | 210849个K2,3、5130个K4、240003正词、4656碰撞、90平方和矛盾；不恢复历史六轨道全名单声明 |
 | E021 | v3重读、spindle完整名单与pair-gate修复 | 完成 | 3380行完整阅读；T037–T040；证书spindle_pair_gate.json及独立verify_spindle_gate.py；历史28点/六轨道全名单仍待重放 |
 | E022 | 七gate cascade、刚体重合与完整repair编译 | 完成，独立认证 | T041–T045/C005；gate_repair_cascade.json及repair_pair_fan.json；36⁷局部输入由30状态封闭归纳覆盖，不是逐输入遍历 |
+| E023 | 根点支持与受控跨内部耦合 | 完成，独立认证T046有限校准及T047 | 1000三角形输入→110签名，121000压缩输入；40点完整诱导几何与四色见证；不引用初步探针中已修复的名单初始化负返回 |
 
 证明入口：[phase_structure](proofs/phase_structure.md)、
 [transport_obstructions](proofs/transport_obstructions.md)、
@@ -97,7 +100,9 @@
 [spindle名单与activation修复](proofs/spindle_activation_repair.md)、
 [v3路线融合重审](proofs/v3_route_reassessment.md)、
 [七gate修复与完整编译](proofs/seven_gate_repair.md)、
-[修复超图几何筛选](proofs/geometric_repair_hypergraph.md)。
+[修复超图几何筛选](proofs/geometric_repair_hypergraph.md)、
+[根点支持与联合耦合](proofs/rooted_coupled_gate.md)、
+[整体框架重审](proofs/interface_synthesis_v2.md)。
 
 三类状态限制已被反例排除：最小defect→matching、对径重复→matching、
 伙伴支持→二分。没有排除带额外真实单位距离gadget的更强reduction。

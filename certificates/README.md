@@ -1,5 +1,17 @@
 # Evidence
 
+- `rooted_spindle.json`: all 1000 ordered three-list triangle inputs,
+  partitioned into 110 exact tip-support signatures, covering 10^7 spindle
+  list assignments. `verify_rooted_spindle.py` checks every member by direct
+  color enumeration, all weighted cases and both directions of the singleton
+  root criterion. T046's arbitrary-palette result uses its written proof.
+- `coupled_gate.json`: a 40-point, 81-edge induced graph made of two gates,
+  with all 780 exact pair quadrances. A proper three-color boundary extends
+  to each gate separately but not their union. `verify_coupled_gate.py`
+  independently rebuilds 24 extensions per gate, checks all 576 pairs and
+  the conflicting root edge, plus an unrestricted four-coloring. This proves
+  T047's strict boundary inclusion, NOT a full boundary census or new HN bound.
+
 - `repair_pair_fan.json`: all 24 poses for the two exceptional nonunit
   boundary distances, covered by 12 disjoint incompatible pairs. Each pair
   has an explicit extra cross-interior unit edge. The independent checker

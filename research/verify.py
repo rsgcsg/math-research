@@ -25,6 +25,8 @@ from verify_six_pair_uniform import verify as verify_six_pair_uniform
 from verify_spindle_gate import verify as verify_spindle_gate
 from verify_repair_cascade import verify as verify_repair_cascade
 from verify_repair_pair_fan import verify as verify_repair_pair_fan
+from verify_rooted_spindle import verify as verify_rooted_spindle
+from verify_coupled_gate import verify as verify_coupled_gate
 
 
 def main():
@@ -98,6 +100,8 @@ def main():
     print(json.dumps(verify_spindle_gate(root), indent=2))
     print(json.dumps(verify_repair_cascade(root), indent=2))
     print(json.dumps(verify_repair_pair_fan(root), indent=2))
+    print(json.dumps(verify_rooted_spindle(root), indent=2))
+    print(json.dumps(verify_coupled_gate(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

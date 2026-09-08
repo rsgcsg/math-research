@@ -100,6 +100,21 @@ v3综合历史主文档已完整阅读3380行并原样归档，哈希纳入SHA25
 
 ## 容易误读的地方
 
+本轮框架参考全文2213行已读，未作为强制路线。新增外部核验：
+
+- [Madore, §5.4](https://arxiv.org/html/1509.07023)：重新阅读实闭域转移，
+  `χ(R²)=χ(A²)`（A为实代数数）是外部成熟结论；本轮重述有限配置
+  保留互异与非边的公式，不将它登记为新的本地发现。
+- [Loh–Sudakov, Independent transversals in locally sparse graphs](https://arxiv.org/html/0706.2124)：
+  已核对引言及Theorem1.1，局部度界不替代全局Δ与分块大小条件；
+  不能由14端口/局部度2直接增强T042，也不能省掉T043负约束。
+- [Atserias–Kolaitis](https://arxiv.org/html/2009.09488)：本轮进一步阅读
+  §§4.1–4.3的running-intersection、join-tree与关系/概率一致性定理，
+  用于框架重审；不将仅单点边际一致当作全局染色证据。
+- [Sokolov–Voronov, On the chromatic number of the plane for map-type colorings](https://arxiv.org/abs/2502.01958)：
+  只核对摘要中的map-type与边界附加条件；其七色结果不适用于任意
+  普通平面染色，未重放全文证明。
+
 本轮Property-B资产：完整阅读Downloads中的
 `HN_round_conclusions_propertyB_repair_cascade_2026-09-08 (1).md`；
 参考但不作为路线指令，未为归档完整性重复复制历史文件。

@@ -6,6 +6,9 @@
 开始阅读：[当前工作](docs/CURRENT.md) · [路线与关系图](docs/ROUTES.md) ·
 [结果和实验账本](docs/RESULTS.md) · [外部资料](references/SOURCES.md)。
 
+最新整体重审：[接口、上下界与5/6/7](docs/proofs/interface_synthesis_v2.md)；
+新结果：[根点支持与真实双gate耦合](docs/proofs/rooted_coupled_gate.md)。
+
 ```text
 references/       外部论文索引、原始历史资料
 docs/            当前状态、研究路线、结果账本、完整证明
@@ -29,4 +32,3 @@ make explore
 约定见 [AGENTS.md](AGENTS.md)。研究允许发散，但每约三轮实验做一次收敛：
 问具体例子是否有更简单的机制、成熟理论是否已覆盖它、哪些分支应该合并。
 本仓库不维护额外的任务系统；以上三个研究文档就是小型项目记忆。
-

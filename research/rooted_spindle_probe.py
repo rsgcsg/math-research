@@ -8,6 +8,8 @@ kept as explicit metadata because it is part of the claimed singleton iff.
 
 from collections import Counter, defaultdict
 from itertools import combinations, product
+from pathlib import Path
+import json
 
 PALETTE = range(5)
 LISTS = tuple(sum(1 << c for c in choice) for choice in combinations(PALETTE, 3))
@@ -81,19 +83,16 @@ def main():
                 total += multiplicity
                 support = support_for(root_list, left_sig, right_sig)
                 support_sizes[popcount(support)] += multiplicity
-                if popcount(support) != 1:
-                    continue
-                singleton_checks += multiplicity
+                if popcount(support) == 1:
+                    singleton_checks += multiplicity
                 left_h = homogeneous[left_sig]
                 right_h = homogeneous[right_sig]
-                z = next(x for x in PALETTE if support & (1 << x))
                 # This is the conjectured right-hand side, evaluated on the
                 # representative triples (and therefore on every member).
                 la = left_triples[0][0]
                 ld = right_triples[0][0]
-                rhs = (popcount(root_list & ~(la & ld)) == 1 and
-                       bool(root_list & ~(la & ld) & (1 << z)))
-                if (left_h and right_h and rhs) is not True:
+                rhs = left_h and right_h and popcount(root_list & ~(la & ld)) == 1
+                if (popcount(support) == 1) != rhs:
                     singleton_iff_failures.append((root_list, left_sig, right_sig))
                 if left_h and right_h and support != (root_list & ~(la & ld)):
                     homogeneous_support_failures.append((root_list, la, ld))
@@ -115,6 +114,20 @@ def main():
     assert support == 1
     print("forcing example: Lo={0,1,2}, La=Lb=Lc=Ld=Le=Lf={1,2,3}")
     print("forcing example support:", [x for x in PALETTE if support & (1 << x)])
+    certificate = {
+        "schema": 1,
+        "palette_size": 5,
+        "list_size": 3,
+        "groups": [{"signature": list(sig), "triples": [list(t) for t in triples]}
+                   for sig, triples in sorted(groups.items())],
+        "support_size_counts": dict(sorted(support_sizes.items())),
+        "weighted_assignments": total,
+        "compressed_cases": 10 * len(groups) ** 2,
+        "forcing_lists": [forced] + [triangle[0]] * 6,
+        "forcing_support": support,
+    }
+    target = Path(__file__).resolve().parents[1] / "certificates/rooted_spindle.json"
+    target.write_text(json.dumps(certificate, indent=2) + "\n")
 
 
 if __name__ == "__main__":

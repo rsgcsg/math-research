@@ -133,7 +133,11 @@ def main():
             boundary_occurrence_colors[(pose, right)] = values[1]
     boundary_colors = {}
     for pose_local, c in boundary_occurrence_colors.items():
-        boundary_colors[vertex_of[poses[pose_local[0]][pose_local[1]]]] = c
+        vertex = vertex_of[poses[pose_local[0]][pose_local[1]]]
+        if vertex in boundary_colors:
+            assert boundary_colors[vertex] == c
+        else:
+            boundary_colors[vertex] = c
     assert len(boundary_colors) == 26
     assert boundary_colors[vertex_of[poses[0][9]]] == boundary_colors[vertex_of[poses[1][10]]]
     assert boundary_colors[vertex_of[poses[0][15]]] == boundary_colors[vertex_of[poses[1][16]]]
@@ -161,7 +165,7 @@ def main():
     # The requested coupled list instance fixes the boundary colors and uses
     # the corresponding spindle lists on both gates.  Its two roots are
     # joined by the genuine cross edge (0,0), so it has no extension.
-    joint_lists = {v: tuple(range(4)) for v in range(len(union_vertices))}
+    joint_lists = {v: tuple(range(5)) for v in range(len(union_vertices))}
     for pose in range(2):
         for local, values in spindle_lists.items():
             joint_lists[vertex_of[poses[pose][local]]] = values
@@ -179,7 +183,8 @@ def main():
     certificate = {
         "schema": 1,
         "case": "squared_anchor_distance_1/3_pose_pair_0_4",
-        "coordinate_scale_squared": field_text(d),
+        "coordinate_scale_factor": field_text(d),
+        "unit_quadrance_scaled": field_text(unit_scaled),
         "coordinate_scale": "anchor quadrance d=1/3; stored coordinates are d times actual coordinates",
         "vertices": [coordinate_text(p) for p in union_vertices],
         "occurrences": occurrences,
