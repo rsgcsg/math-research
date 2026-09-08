@@ -1,5 +1,12 @@
 # Evidence
 
+- `pose_field_lock.json`: all 58 noncommon contact rows of the four E016
+  escaped Parts doubles. An independent checker reconstructs the rows and
+  rank-one minors, also checking the two-pin formula on all 24 T045 poses
+  (504 points) and an actual rank-two example. Contact completeness still
+  comes from E016's independent all-pairs check. T051/T052 are written field
+  proofs, not extrapolations from this finite calibration.
+
 - `spindle_joint_support.json.gz`: T049's exact same-list matching-double
   classification. 32371 disjoint-color word pairs cover 999915 normalized
   inputs; 85 negative inputs are independently enumerated. Root-list color

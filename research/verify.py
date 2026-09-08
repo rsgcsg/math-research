@@ -29,6 +29,7 @@ from verify_rooted_spindle import verify as verify_rooted_spindle
 from verify_coupled_gate import verify as verify_coupled_gate
 from verify_root_contact_repair import verify as verify_root_contact_repair
 from verify_spindle_joint_support import verify as verify_spindle_joint_support
+from verify_pose_field_lock import verify as verify_pose_field_lock
 
 
 def main():
@@ -106,6 +107,7 @@ def main():
     print(json.dumps(verify_coupled_gate(root), indent=2))
     print(json.dumps(verify_root_contact_repair(root), indent=2))
     print(json.dumps(verify_spindle_joint_support(root), indent=2))
+    print(json.dumps(verify_pose_field_lock(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

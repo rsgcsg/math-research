@@ -10,6 +10,7 @@
 新结果：[根点支持与真实双gate耦合](docs/proofs/rooted_coupled_gate.md)。
 接续：[根接触同步修复与域外校准](docs/proofs/root_contact_repair.md)。
 新分类：[七匹配与二接触完整关系](docs/proofs/spindle_joint_support.md)。
+几何筛选：[两锚锁域与跨边约束秩](docs/proofs/pose_field_lock.md)。
 
 ```text
 references/       外部论文索引、原始历史资料
