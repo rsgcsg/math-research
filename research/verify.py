@@ -13,6 +13,8 @@ from verify_long_chain import verify as verify_long_chain
 from fractional_ceiling import verify as verify_fractional_ceiling
 from joint_moment_gap import verify as verify_joint_moment_gap
 from verify_joint_face import verify as verify_joint_face
+from verify_parts_core import verify as verify_parts_core
+from verify_parts_triples import verify as verify_parts_triples
 
 
 def main():
@@ -74,6 +76,8 @@ def main():
     print(json.dumps(verify_joint_moment_gap(), indent=2))
     print(json.dumps(verify_joint_face(root / 'certificates/joint_face_exact.json'), indent=2))
     print(json.dumps(verify_joint_face(root / 'certificates/joint_face_exact.json',interior=True), indent=2))
+    print(json.dumps(verify_parts_core(root), indent=2))
+    print(json.dumps(verify_parts_triples(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

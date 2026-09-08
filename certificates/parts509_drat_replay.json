@@ -1,0 +1,43 @@
+{
+  "status": "VERIFIED_EXTERNAL_FIVE_CHROMATIC_CORE",
+  "vertices": 509,
+  "induced_edges": 2442,
+  "certified_nonfour_subgraph_edges": 2259,
+  "source_commit": "6d5ac08491f7cadbebd7d5b79e3f825d08eedf7b",
+  "inputs_sha256": {
+    "parts509.vtx": "9e2cc20364b3db2b4a032bfec2c89ea6791ddb6d80379df2de659536be6624ae",
+    "parts509_reduced.json": "99b8ca39503a33c692bed66e45afcc7e8b67bec0870253c53b097836fbbbe3b2",
+    "parts509_reduced.cnf": "9bcea2812e5c95e3ccdc9a4e3a2b6c96234cd86dacdecdc9ac2e0c26b05a65db",
+    "parts509_reduced.drat": "2c64344e3137c95db53f23ff9e9490034a210d214e3ce7805eafbf1d53c25930"
+  },
+  "checker_repository": "https://github.com/marijnheule/drat-trim",
+  "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "checker_source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+  "checker_binary_sha256": "ebf53476748574a057367ff7c199002ce0d54e457a37044118d545495c641f54",
+  "command": [
+    "/Users/fire/Desktop/math-research/references/cache/drat-trim",
+    "/Users/fire/Desktop/math-research/references/cache/parts509_reduced.cnf",
+    "/Users/fire/Desktop/math-research/references/cache/parts509_reduced.drat",
+    "-L",
+    "/Users/fire/Desktop/math-research/references/cache/parts509_reduced.lrat",
+    "-t",
+    "120"
+  ],
+  "stdout": "\nc parsing input formula with 2036 variables and 9548 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 8644 of 9548 clauses in core                            \n\nc 92649 of 228706 lemmas in core using 5813255 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 7.478 seconds\n",
+  "stderr": "",
+  "exit_code": 0,
+  "cnf_correspondence_verified": true,
+  "all_induced_edges_verified": true,
+  "five_coloring_verified": true,
+  "lrat_sha256": "10be66f59b066f8ce57d6676c6dcd2986f10f0f4ad4561cf8c6dbf418d07d17e",
+  "packed_lrat_sha256": "a262ce090e6d69b10cd04ac5f76dff12f652467a8b30ed65c2357659e03b604b",
+  "independent_rup_check": {
+    "status": "VERIFIED_RUP_REFUTATION",
+    "initial_clauses": 9548,
+    "additions": 92649,
+    "deletions": 102118,
+    "hinted_propagations": 5813255,
+    "empty_clause_id": 238254,
+    "rat_steps_accepted": 0
+  }
+}

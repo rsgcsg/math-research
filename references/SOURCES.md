@@ -20,6 +20,7 @@
 | de Grey (2018) | https://arxiv.org/abs/1804.02385 | 五色下界原论文入口已核验；没有重跑整套4色否定证书 |
 | Exoo–Ismailescu | https://arxiv.org/abs/1805.00157 | 另一五色证明，待深入比较 |
 | Parts | https://arxiv.org/abs/2010.12661 | human-verifiable proof；509纪录另由Haugland近期正文支持 |
+| Parts 509 / edge-reduced certificate | https://arxiv.org/abs/2010.12665 ; https://github.com/md-amer/hadwiger-nelson-e5 | 固定6d5ac084的509坐标与2259边子图否定证明已重放；独立重建2442诱导边，并用标准库RUP检查器离线重证χ=5；不声称边纪录新颖性 |
 | Haugland v4 (2026) | https://arxiv.org/html/2608.04542v4 | 正文核验740点 DIFF4(sqrt3) 到2131点构造；509仍是文中纪录。不是无spindle最小纪录，已有1441点 |
 | Matolcsi et al. | https://arxiv.org/abs/2311.10069 | G27原对偶已独立重放：182304个整数不等式、168紧项；支持约束只适用于总权4的geometric fractional律，不是任意四色划分 |
 | Dúcz (2026) | https://arxiv.org/html/2606.12325v1 | 已读4色公式与模4证明；Moser lattice/ring 确有普通4染色 |
@@ -52,6 +53,20 @@ G27原论文补充页为 `https://static.renyi.hu/ai-shared/daniel/fcn-4/`。
 其坐标、全等映射、对偶已下载并独立精确重放；168紧项与此前支持一致。
 结果和三个文件SHA256在`certificates/g27_replay.json`；随后T025独立
 验证完整joint律的可出现划分恰348个，不把这解释为全部普通四色划分。
+
+Parts509输入来自
+`https://raw.githubusercontent.com/md-amer/hadwiger-nelson-e5/6d5ac08491f7cadbebd7d5b79e3f825d08eedf7b/`：
+`v509e2442.vtx`、`FINAL_reduced.json`、`FINAL2.cnf`、`FINAL2_proof.drat`，
+缓存名分别为`parts509.vtx`、`parts509_reduced.json`、`parts509_reduced.cnf`、
+`parts509_reduced.drat`。SHA256在核心及重放证书中。
+未执行数据作者的Python脚本；其“嵌套根号不在多二次域”的注释不被采用，
+本地用显式根式恒等式化入八维多二次域。
+
+DRAT→LRAT转换工具来自 `https://github.com/marijnheule/drat-trim`，固定提交
+`2e3b2dc0ecf938addbd779d42877b6ed69d9a985`。已读该仓库DRAT格式/检查说明，
+使用其`drat-trim.c`检查并输出RUP-only LRAT。最终负证明另由本地独立
+标准库检查器逐提示传播认证，不依赖该C程序的“VERIFIED”字符串作为最终
+逻辑证据；没有声称支持一般RAT/LRAT，也没有声称正式验证此Python程序。
 
 ## 容易误读的地方
 

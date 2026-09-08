@@ -33,6 +33,7 @@
 | T023 | 所有阶单色全等矩放松统一存在总权8/√3<5的可行解 | 已证，显式构造 | 随机刚体移动周期十二边形独立集；不排除完整多色joint |
 | T024 | 单色矩秩2^n-n；四点首次缺失2+2 joint信息 | 已证与精确校准 | 单色矩相同的两种正方形染色分布；n≤5独立行秩计算 |
 | T025 | G27内部完整全等不变四色分布的可出现划分恰348个；存在非确定性三项极点 | 已证，计算机辅助支持分类 | 原对偶168紧项；全支持正见证分母566；独立完整事件检查8078个映射；非平面染色 |
+| T026 | Parts509任意三端口的合法五色预染色均延伸；指定双六边形边界亦全部延伸 | 已证，独立穷尽覆盖 | 1744见证覆盖106793611个三点划分；22327个13点边界见证；满足无额外跨边条件的低交叠有序粘合仍五色 |
 | Q001 | 什么真实单位距离约束能压缩接缝自由度？ | 开放 | 不能假设 activation |
 | Q002 | 超越小分离集的柔性 palette 编码是否存在？ | 开放 | 先证明必要条件，再搜 |
 | Q003 | 任意长层链是否恰由禁止连续三个全覆盖接口刻画？ | 已解决：是 | T021，包括双向无限非周期词 |
@@ -50,13 +51,14 @@
 | E011 | 单色/多色矩区别与分数上限 | 完成 | T023/T024；标准库精确几何与有理行秩 |
 | E012 | G27/G29原始对偶证书重放 | 完成 | G29的498168条及G27的182304条整数不等式通过；G27恰168紧项；未重放G29 blow-up |
 | E013 | G27所有阶完整划分分布校准 | 完成并饱和 | T025的348项与3项正见证独立通过；搜索侧另有秩276/零空间72参数化，未独立认证该秩 |
+| E014 | 真实五色核心资格与端口关系 | 完成 | Parts509全部129286点对精确重建，χ=5两侧离线标准库检查；两点与三点关系无额外限制；四端口尚未检查 |
 
 证明入口：[phase_structure](proofs/phase_structure.md)、
 [transport_obstructions](proofs/transport_obstructions.md)、
 [balanced_mass](proofs/balanced_mass.md)、[Moser接缝](proofs/moser_angle_seam.md)、
 [平移接缝与五格关系](proofs/translated_seam.md)、[长链](proofs/long_chain.md)、
 [单色分数上限](proofs/fractional_ceiling.md)、[joint信息缺口](proofs/joint_moment_gap.md)、
-[G27完整joint支持](proofs/g27_joint_laws.md)。
+[G27完整joint支持](proofs/g27_joint_laws.md)、[五色核心与端口](proofs/parts_core_ports.md)。
 
 三类状态限制已被反例排除：最小defect→matching、对径重复→matching、
 伙伴支持→二分。没有排除带额外真实单位距离gadget的更强reduction。

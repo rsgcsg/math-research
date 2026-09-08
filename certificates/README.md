@@ -45,6 +45,22 @@
   integer geometry and three-anchor reconstruction, without the search code.
   The optional stored 72-column kernel is search-side algebra, not independently
   certified by `make check`; only the stated positive laws are checked there.
+- `parts509_core.json`: exact eight-component integer coordinates, all 2442
+  induced unit edges, the public 2259-edge subgraph, and a full five-coloring.
+  Independently reconstructed by `verify_parts_core.py` without SAT/search code.
+- `parts509_reduced.lrat.gz`, `parts509_drat_replay.json`: saved RUP-only clausal
+  refutation and provenance. The standard-library `verify_rup_lrat.py` rebuilds
+  the 9548-clause formula and checks all 92649 derived clauses, including the
+  empty clause. This is a replayed negative proof, not a solver-status label.
+  The original public 46MB DRAT stays in ignored cache; the compressed LRAT is
+  retained so `make check` can independently establish the five-chromatic core.
+- `parts509_pairs.json`: 253 full five-colorings covering every nonunit pair's
+  equality request and every distinct pair's inequality request (T026).
+- `parts509_ports.json.gz`: all 22327 proper five-color boundary patterns on
+  the specified central double hexagon, with a complete extension for each.
+- `parts509_triples.json.gz`: 1744 full five-colorings cover every proper
+  precoloring of all 21849334 vertex triples. `verify_parts_triples.py` uses
+  witness-index intersections to independently check 106793611 legal patterns.
 
 `make check` uses only the Python standard library. It checks all saved positive
 SAT models without importing the SAT solver or search encoder. It also compares
