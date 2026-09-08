@@ -9,6 +9,7 @@
 最新整体重审：[接口、上下界与5/6/7](docs/proofs/interface_synthesis_v2.md)；
 新结果：[根点支持与真实双gate耦合](docs/proofs/rooted_coupled_gate.md)。
 接续：[根接触同步修复与域外校准](docs/proofs/root_contact_repair.md)。
+新分类：[七匹配与二接触完整关系](docs/proofs/spindle_joint_support.md)。
 
 ```text
 references/       外部论文索引、原始历史资料

@@ -1,5 +1,13 @@
 # Evidence
 
+- `spindle_joint_support.json.gz`: T049's exact same-list matching-double
+  classification. 32371 disjoint-color word pairs cover 999915 normalized
+  inputs; 85 negative inputs are independently enumerated. Root-list color
+  symmetry covers all 10^7 inputs. Also stores C007's asymmetric proper
+  boundary, seven separate cross-edge witnesses, and a one-point repair.
+  The independent checker validates T050's two local relation factors and
+  all 240 asymmetric word pairs; no random-search or solver status is used.
+
 - `root_contact_repair.json`: all 52 single-vertex unused-color changes of
   T047's specified boundary (48 repairable), plus an exact 42-point escaped
   realization with only a root-to-root cross edge. The independent verifier
