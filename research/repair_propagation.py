@@ -2,9 +2,12 @@
 from collections import defaultdict, deque
 from pathlib import Path
 import gzip
+import hashlib
 import json
 
 from finite_background_repair import prepare, ROOT
+from multicenter_cores import transform, induced
+from parts_core import clauses
 
 
 def certificate(layers=2):
@@ -41,8 +44,26 @@ def certificate(layers=2):
     order=sorted(needed);remap={old:new for new,old in enumerate(order)}
     proof=[dict(vertex=v,color=c,kind=kind,neighbor=w,parents=[remap[p] for p in deps])
            for i in order for v,c,kind,w,deps in (events[i],)]
+    # A separate, unrestricted coloring establishes what this conditioned
+    # obstruction does NOT say about the actual finite unit-distance graph.
+    from pysat.solvers import Solver
+    labels=sorted({v for row in proof for v in (row['vertex'],row['neighbor'])})
+    points=[];point_ids={};aliases=[]
+    for s,m,n,q in labels:
+        p=transform(core['points'][q],((16*(2*m+n),)+(0,)*7,(0,16*n)+(0,)*6),s)
+        if p not in point_ids:point_ids[p]=len(points);points.append(p)
+        aliases.append(point_ids[p])
+    edges,_=induced(points,768)
+    with Solver(name='cadical195',bootstrap_with=clauses(len(points),edges,3)) as solver:
+        solver.conf_budget(100000);status=solver.solve_limited()
+        assert status is True,'The diagnostic graph was not certified three-colorable'
+        model=set(solver.get_model())
+        word=''.join(str(next(c for c in range(3) if 3*v+c+1 in model)) for v in range(len(points)))
     return dict(schema=1,layers=layers,background_words=words,patch_vertices=len(patch),
+                input_sha256={name:hashlib.sha256((ROOT/'certificates'/name).read_bytes()).hexdigest()
+                              for name in ('parts509_core.json','refined_center_arrays.json.gz','multicenter_cores.json')},
                 conclusion_vertex=contradiction,proof=proof,
+                finite_graph=dict(labels=labels,aliases=aliases,vertices=len(points),edges=len(edges),three_coloring=word),
                 scope='No five-coloring equal to this background outside this specified patch; not a host lower bound')
 
 

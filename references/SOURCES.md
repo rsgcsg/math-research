@@ -105,6 +105,13 @@ v3综合历史主文档已完整阅读3380行并原样归档，哈希纳入SHA25
 
 ## 容易误读的地方
 
+2026-09-09有限背景修复对照：Alon–Briceño–Chandgotia–Magazinov–Spinka，
+[Mixing properties of colorings of the Z^d lattice，作者PDF](https://web.math.princeton.edu/~nalon/PDFS/mixing4.pdf)。
+已检查§1冻结定义、§2 Proposition2.1的极大位置证明及Proposition2.4
+的双色分量计数证明、单点冻结区别。仅作为成熟概念/方法对照，未把
+其标准整数格延伸定理套到Parts阵列；C010/C011依靠本地精确证明。
+线上作者稿访问于2026-09-09，不对网站抓取日期赋予论文发表含义。
+
 2026-09-09高阶剩余环续研：Medrano–Myers–Stark–Terras,
 [Finite Euclidean graphs over rings, 作者上传全文](https://www.researchgate.net/publication/246193320_Finite_Euclidean_graphs_over_rings)，
 Proc. AMS 126(3), 701–710 (1998)，DOI 10.1090/S0002-9939-98-04294-4。

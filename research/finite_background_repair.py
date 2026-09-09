@@ -3,7 +3,6 @@
 SAT is only a candidate until an independent checker verifies the overrides.
 An UNSAT search result excludes this fixed patch/background, not the host.
 """
-from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
 import argparse
@@ -111,14 +110,25 @@ def experiment(layers=0,budget=100000,root=ROOT,free_background=False):
     result['elapsed_seconds']=round(time.monotonic()-start,3)
     result['input_sha256']={name:hashlib.sha256((root/'certificates'/name).read_bytes()).hexdigest()
                             for name in ('parts509_core.json','refined_center_arrays.json.gz','multicenter_cores.json')}
-    result['scope']='Fixed finite patch and fixed background only; no negative host-colorability claim.'
+    result['scope']=('Fixed finite patch with jointly variable three-state backgrounds' if free_background else
+                     'Fixed finite patch and fixed background')+' only; no negative host-colorability claim.'
     return result
 
 
 if __name__ == '__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--layers',type=int,default=0)
     parser.add_argument('--free-background',action='store_true')
+    parser.add_argument('--batch',action='store_true')
     parser.add_argument('--budget',type=int,default=100000);parser.add_argument('--output',type=Path,required=True)
-    args=parser.parse_args();result=experiment(args.layers,args.budget,free_background=args.free_background)
+    args=parser.parse_args()
+    if args.batch:
+        cases=[experiment(layer,args.budget) for layer in range(3)]
+        cases.append(experiment(0,args.budget,free_background=True))
+        result=dict(schema=1,cases=cases)
+    else:result=experiment(args.layers,args.budget,free_background=args.free_background)
     args.output.write_bytes(gzip.compress(json.dumps(result,separators=(',',':')).encode(),mtime=0))
-    print(json.dumps({k:v for k,v in result.items() if k not in ('overrides','background_words')}),flush=True)
+    if args.batch:
+        print(json.dumps([dict(layers=r['layers'],free_background=r['free_background'],status=r['status'])
+                          for r in result['cases']]),flush=True)
+    else:
+        print(json.dumps({k:v for k,v in result.items() if k not in ('overrides','background_words','patch_coloring','background_phase_words')}),flush=True)

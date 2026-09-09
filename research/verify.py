@@ -34,6 +34,8 @@ from verify_residue_method_obstruction import verify as verify_residue_method_ob
 from verify_higher_residue_precision import verify as verify_higher_residue_precision
 from verify_multicenter_cores import verify as verify_multicenter_cores
 from verify_refined_centers import verify as verify_refined_centers, verify_finite as verify_refined_finite
+from verify_background_repair import verify as verify_background_repair
+from verify_palette_activation import verify as verify_palette_activation
 
 
 def main():
@@ -117,6 +119,8 @@ def main():
     print(json.dumps(verify_multicenter_cores(root), indent=2))
     print(json.dumps(verify_refined_centers(root), indent=2))
     print(json.dumps(verify_refined_finite(root), indent=2))
+    print(json.dumps(verify_background_repair(root), indent=2))
+    print(json.dumps(verify_palette_activation(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

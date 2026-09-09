@@ -16,6 +16,7 @@
 最新推进：[任意有限精度仍不能绕过谱限制](docs/proofs/higher_residue_precision.md)。
 最新几何：[无限三角格中心与双共轭阵列恰五色](docs/proofs/multicenter_arrays.md)。
 最新续研：[细分中心的三状态定理与完整接触编译](docs/proofs/refined_center_arrays.md)。
+最新收敛：[有限修复反例与全调色板拆分](docs/proofs/background_repair_obstruction.md)。
 
 ```text
 references/       外部论文索引、原始历史资料
