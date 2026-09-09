@@ -1,5 +1,17 @@
 # Evidence
 
+- `refined_center_arrays.json.gz`: complete actual center-coordinate contact
+  tables for Lambda and Lambda/3, independently reconstructed by positive
+  trace spheres with a different pair-sum decomposition and gcd geometry.
+  Lambda/3 has 1335/23020 unit instances and 43/463 coincidences. The same
+  checker proves the finite obligations for T060's infinite one-orientation
+  coloring and C009's m-only-code obstruction. The nine-state and two
+  asymmetric three-state searches are UNKNOWN, not negative proofs;
+  their quotient constraints and equality-closure loop absence are checked.
+- `refined_center_finite.json.gz`: three complete finite five-colorings,
+  up to 9661 vertices/47534 induced edges; 55052504 pairs independently
+  checked. These positives do not resolve the infinite two-orientation host.
+
 - `multicenter_cores.json`: three full finite five-colorings (up to 7621
   vertices/39960 induced edges), a five-edge obstruction to fixed-word frames,
   and two/three core words coloring the specified infinite triangular-center

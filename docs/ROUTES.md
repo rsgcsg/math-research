@@ -66,6 +66,11 @@ flowchart TD
   FIN --> ARR5[三份核心表: 整个无限阵列五色]
   ARR5 --> REFINE[Lambda/3出现同标签单位边: 须保留中心状态]
   REFINE --> GEO
+  REFINE --> SAME5[Lambda/3同向阵列三状态五色: T060]
+  REFINE --> TRCOMP[正定迹枚举全部真实接触: T061]
+  TRCOMP --> JOINT3[九状态UNKNOWN; m-only规则已反证C009]
+  JOINT3 --> LOCALREPAIR[有限异常中心与无限背景的共同延伸]
+  LOCALREPAIR --> GEO
   Q5 --> PAIR[锚定点对正规形: 同名单与符号匹配]
   PAIR --> RED5[五轨道任意名单可约: 已重新认证]
   PAIR --> DEG3[任意规模subcubic可约]
@@ -77,6 +82,12 @@ flowchart TD
 ```
 
 ## 当前最多三个活跃方向
+
+T060关闭`Λ/3`单取向阵列：其全部跨边可投影到P□K3，三状态
+即五染。真正未决的是双取向合并；T061已认证所有接触坐标，
+不用再猜边集。C009排除丢掉n信息的m mod3规则，九状态搜索仍
+UNKNOWN，三个有限探针均五色。下一个具体攻击是有限异常中心的
+修复能否接到远处三状态背景，见`proofs/refined_center_arrays.md`。
 
 T058/T059关闭给定Parts、角度cosθ=5/8和**全部三角格中心**的
 单/双共轭阵列，不再增加这个宿主的半径或副本数。实共轭使异向
