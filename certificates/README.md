@@ -1,5 +1,19 @@
 # Evidence
 
+- `multicenter_cores.json`: three full finite five-colorings (up to 7621
+  vertices/39960 induced edges), a five-edge obstruction to fixed-word frames,
+  and two/three core words coloring the specified infinite triangular-center
+  arrays. The independent checker uses gcd radical products, certified rational
+  interval buckets, all 29036010 finite pairs, 287/418 contact types and 13/25
+  coincidence types. Infinite completeness uses written T058/T059; this is not
+  a whole-number-field or plane coloring. Lambda/3 is explicitly not covered.
+
+- `higher_residue_precision.json`: ten local-ring circle fingerprints exported
+  by projective charts and independently rebuilt from squares. Checks 17848
+  directions, 32328 primitive characters by cyclotomic integer cancellation,
+  2265120 leading-frequency stationary tests and 672 prime-power CRT lifts.
+  Arbitrary precision and ramification follow from written T056/T057, not samples.
+
 - `residue_method_obstruction.json`: finite arithmetic calibration for
   T053/T054 and the T055 palette-split application. Independently rebuilds
   all 14 small anisotropic prime powers, 624 conic points, 64944 simultaneous

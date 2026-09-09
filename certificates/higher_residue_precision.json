@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "p": 3,
+      "precision": 2,
+      "ramification": 1,
+      "ring_size": 9,
+      "circle_size": 12,
+      "circle_sha256": "6a0c33de096d50732a6a979aa66a1082c20e80fe228fad006e80c28a77cf3861",
+      "verification_mode": "all_primitive_characters"
+    },
+    {
+      "p": 3,
+      "precision": 3,
+      "ramification": 1,
+      "ring_size": 27,
+      "circle_size": 36,
+      "circle_sha256": "a9ae4555086bbc2b7c608a628115f47d6a7754b696539a056e7396254aaf0a8a",
+      "verification_mode": "all_primitive_characters"
+    },
+    {
+      "p": 3,
+      "precision": 4,
+      "ramification": 1,
+      "ring_size": 81,
+      "circle_size": 108,
+      "circle_sha256": "e95af863018d04bfc172316aa056562c032f2379781d1fe632d1929e1ab0bcee",
+      "verification_mode": "all_primitive_characters"
+    },
+    {
+      "p": 7,
+      "precision": 2,
+      "ramification": 1,
+      "ring_size": 49,
+      "circle_size": 56,
+      "circle_sha256": "a24debb779f296339f702e3e4693fad5f40640831573a6a242a868673f20b5bd",
+      "verification_mode": "all_primitive_characters"
+    },
+    {
+      "p": 11,
+      "precision": 2,
+      "ramification": 1,
+      "ring_size": 121,
+      "circle_size": 132,
+      "circle_sha256": "ac6cdeb1c3744ee276c7d7e82e20ba91a1d541dea6021c4384e46744a04b6836",
+      "verification_mode": "all_primitive_characters"
+    },
+    {
+      "p": 131,
+      "precision": 2,
+      "ramification": 1,
+      "ring_size": 17161,
+      "circle_size": 17292,
+      "circle_sha256": "02a914d24a159a45a9561217961cd487396558d9a213b8ccfc4bea5769a2124d",
+      "verification_mode": "symbolic_last_layer"
+    },
+    {
+      "p": 3,
+      "precision": 2,
+      "ramification": 2,
+      "ring_size": 9,
+      "circle_size": 12,
+      "circle_sha256": "4fc0508d768ec0858dd8d43bb2c60cd29b28f01e3651ace0439251e755cedfc9",
+      "verification_mode": "all_primitive_characters"
+    },
+    {
+      "p": 3,
+      "precision": 3,
+      "ramification": 2,
+      "ring_size": 27,
+      "circle_size": 36,
+      "circle_sha256": "d2d00d06702e73f7ea791c0d70f7a4baf42371d33402771a060c0c76b6be6aa9",
+      "verification_mode": "all_primitive_characters"
+    },
+    {
+      "p": 3,
+      "precision": 4,
+      "ramification": 2,
+      "ring_size": 81,
+      "circle_size": 108,
+      "circle_sha256": "62ff006d42a693872a98afccbe8fc86e69a48252bcd13efdebe910e3aca6d080",
+      "verification_mode": "all_primitive_characters"
+    },
+    {
+      "p": 7,
+      "precision": 2,
+      "ramification": 2,
+      "ring_size": 49,
+      "circle_size": 56,
+      "circle_sha256": "ecaf5124986151c605c122c7ba1b9e0d70cb737fe64d88acbbd5b6fa6daf4104",
+      "verification_mode": "all_primitive_characters"
+    }
+  ],
+  "rational_crt_moduli": [
+    9,
+    49
+  ],
+  "rational_crt_direction_pairs": 672,
+  "scope": "Finite mixed-characteristic calibrations; general q and arbitrary precision follow from the written tangent-cancellation proof"
+}

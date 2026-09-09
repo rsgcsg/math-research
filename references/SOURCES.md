@@ -33,6 +33,11 @@
 
 ## 补入的成熟理论
 
+- Andrew Sutherland，[2015 Lecture 13，§13.2](https://math.mit.edu/classes/18.785/2015fa/LectureNotes13.pdf)：
+  2026-09-09核对第4–5页原文及本地渲染，了解多嵌入与典范正定内积。
+  T059的显式二次共轭半径界独立推导，不依赖Minkowski体积下界，
+  不宣称共轭嵌入技巧首创。缓存`sutherland-2015-lecture13.pdf`，SHA256
+  `af2e21a451c16ac9f6742891375322111c0173570f82bb31dd9bebb967e04e24`。
 - Peter Cameron，[S6的经典构造](https://cameroncounts.wordpress.com/2010/05/11/the-symmetric-group-3/)：
   duad/syntheme/total及外自同构。普通同一颜色作用与outer-twisted作用必须区别。
 - Puzynina，[三角/六角格perfect coloring周期代表](https://www.mathnet.ru/eng/smj2182)：
@@ -99,6 +104,14 @@ v3综合历史主文档已完整阅读3380行并原样归档，哈希纳入SHA25
   新T032–T036不依赖其未读取正文定理。
 
 ## 容易误读的地方
+
+2026-09-09高阶剩余环续研：Medrano–Myers–Stark–Terras,
+[Finite Euclidean graphs over rings, 作者上传全文](https://www.researchgate.net/publication/246193320_Finite_Euclidean_graphs_over_rings)，
+Proc. AMS 126(3), 701–710 (1998)，DOI 10.1090/S0002-9939-98-04294-4。
+已核对Theorem2.1/2.3及其度数、旧谱递推证明。出版社PDF请求403，
+未完成PDF视觉核验；没有依赖未读的高阶Kloosterman精确公式。
+本轮一般DVR的末层相消证明写在higher_residue_precision.md，
+不宣称有限环Euclidean谱方法新颖，也不将非Ramanujan性等同于低色数。
 
 2026-09-09新增pair-interface参考：
 `/Users/fire/Downloads/Hadwiger_Nelson_pair_interface_generalization_5_6_framework_2026-09-09.md`，

@@ -13,6 +13,8 @@
 几何筛选：[两锚锁域与跨边约束秩](docs/proofs/pose_field_lock.md)。
 最新重审：[pair推广与终局优先级](docs/proofs/pair_framework_priority_v4.md)；
 新限制：[单模与有限多模首层编码的上限](docs/proofs/residue_method_obstruction.md)。
+最新推进：[任意有限精度仍不能绕过谱限制](docs/proofs/higher_residue_precision.md)。
+最新几何：[无限三角格中心与双共轭阵列恰五色](docs/proofs/multicenter_arrays.md)。
 
 ```text
 references/       外部论文索引、原始历史资料
