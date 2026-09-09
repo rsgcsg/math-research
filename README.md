@@ -21,6 +21,7 @@
 最新收敛：[完整三角格平移层的五染色](docs/proofs/triangular_field_stacks.md)。
 几何归约：[二次旋转的虚拟原域枢轴](docs/proofs/quadratic_virtual_pivot.md)。
 最新推进：[双壳平移层的六色上界与编码目标](docs/proofs/mixed_shell_stack.md)。
+最新收敛：[无限接触闭包的分离定理与分母13新共振](docs/proofs/contact_translation_closure.md)。
 
 ```text
 references/       外部论文索引、原始历史资料
