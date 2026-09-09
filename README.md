@@ -20,6 +20,7 @@
 最新推进：[无锚姿态秩与整个数域的无限平移层](docs/proofs/free_pose_and_field_stacks.md)。
 最新收敛：[完整三角格平移层的五染色](docs/proofs/triangular_field_stacks.md)。
 几何归约：[二次旋转的虚拟原域枢轴](docs/proofs/quadratic_virtual_pivot.md)。
+最新推进：[双壳平移层的六色上界与编码目标](docs/proofs/mixed_shell_stack.md)。
 
 ```text
 references/       外部论文索引、原始历史资料

@@ -40,6 +40,7 @@ from verify_free_pose_rank import verify as verify_free_pose_rank
 from verify_translated_field_stack import verify as verify_translated_field_stack
 from verify_triangular_field_stack import verify as verify_triangular_field_stack
 from verify_quadratic_virtual_pivot import verify as verify_quadratic_virtual_pivot
+from verify_mixed_shell_stack import verify as verify_mixed_shell_stack
 
 
 def main():
@@ -129,6 +130,7 @@ def main():
     print(json.dumps(verify_translated_field_stack(root), indent=2))
     print(json.dumps(verify_triangular_field_stack(root), indent=2))
     print(json.dumps(verify_quadratic_virtual_pivot(), indent=2))
+    print(json.dumps(verify_mixed_shell_stack(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))
