@@ -15,8 +15,8 @@ def determinant(matrix):
     return answer
 
 
-def verify(root):
-    data=json.loads((root/'certificates/free_pose_rank.json').read_text())
+def verify(root,data_override=None):
+    data=data_override if data_override is not None else json.loads((root/'certificates/free_pose_rank.json').read_text())
     assert data['schema']==1 and data['variables']==['T','tx','ty','ux','uy','c','s']
     decode=lambda seq:[F(*a) for a in seq]
     mul=lambda a,b:(a[0]*b[0]+2*a[1]*b[1],a[0]*b[1]+a[1]*b[0])

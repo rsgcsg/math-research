@@ -105,6 +105,13 @@ v3综合历史主文档已完整阅读3380行并原样归档，哈希纳入SHA25
 
 ## 容易误读的地方
 
+2026-09-09无锚姿态/完整片层续研：重新直接阅读
+[Madore，Proposition3.2及证明](https://arxiv.org/html/1509.07023)，
+特别核对单位向量积分与加法陪集代表机制。T063在此基础上加入
+整数层奇偶及全部121种跨位移有限目标；不把有限表用于满扩域。
+自由姿态的七列提升和实直线二次论证在本地完整证明，不声称
+刚体运动代数或距离方程线性化方法的文献优先权。
+
 2026-09-09有限背景修复对照：Alon–Briceño–Chandgotia–Magazinov–Spinka，
 [Mixing properties of colorings of the Z^d lattice，作者PDF](https://web.math.princeton.edu/~nalon/PDFS/mixing4.pdf)。
 已检查§1冻结定义、§2 Proposition2.1的极大位置证明及Proposition2.4
