@@ -18,6 +18,8 @@
 最新续研：[细分中心的三状态定理与完整接触编译](docs/proofs/refined_center_arrays.md)。
 最新收敛：[有限修复反例与全调色板拆分](docs/proofs/background_repair_obstruction.md)。
 最新推进：[无锚姿态秩与整个数域的无限平移层](docs/proofs/free_pose_and_field_stacks.md)。
+最新收敛：[完整三角格平移层的五染色](docs/proofs/triangular_field_stacks.md)。
+几何归约：[二次旋转的虚拟原域枢轴](docs/proofs/quadratic_virtual_pivot.md)。
 
 ```text
 references/       外部论文索引、原始历史资料

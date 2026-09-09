@@ -38,6 +38,8 @@ from verify_background_repair import verify as verify_background_repair
 from verify_palette_activation import verify as verify_palette_activation
 from verify_free_pose_rank import verify as verify_free_pose_rank
 from verify_translated_field_stack import verify as verify_translated_field_stack
+from verify_triangular_field_stack import verify as verify_triangular_field_stack
+from verify_quadratic_virtual_pivot import verify as verify_quadratic_virtual_pivot
 
 
 def main():
@@ -125,6 +127,8 @@ def main():
     print(json.dumps(verify_palette_activation(root), indent=2))
     print(json.dumps(verify_free_pose_rank(root), indent=2))
     print(json.dumps(verify_translated_field_stack(root), indent=2))
+    print(json.dumps(verify_triangular_field_stack(root), indent=2))
+    print(json.dumps(verify_quadratic_virtual_pivot(), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))
