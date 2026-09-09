@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "vertices": 484,
+  "edges": 4356,
+  "conflict_budget": 200000,
+  "solver": "cadical195",
+  "status": "UNKNOWN",
+  "scope": "Parity quotient of K^2+(2sqrt(2)/3)Lambda only; no negative infinite claim"
+}
