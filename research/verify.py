@@ -161,6 +161,7 @@ def main():
     verify_cm_density_coloring()
     print(json.dumps(verify_invariant_joint_ceiling(root), indent=2))
     print(json.dumps(verify_quintic_core_probe(root), indent=2))
+    print(json.dumps(verify_quintic_core_probe(root, root/'certificates/quintic_mixed_angle_probe.json'), indent=2))
     print(json.dumps(verify_dense_five_color_tower(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],

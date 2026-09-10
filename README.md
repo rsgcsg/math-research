@@ -1,55 +1,42 @@
 # Hadwiger–Nelson research
 
-目标是决定欧氏平面的单位距离色数。当前没有解决原问题；项目中的局部
-六染色、条件不可满足和结构类比都不等于新的平面上下界。
+目标：突破原始 Hadwiger–Nelson，或证明足以决定它的结构定理。
+当前普通平面单位距离色数仍为 **5 到 7**；本项目没有新平面上下界。
 
-开始阅读：[当前工作](docs/CURRENT.md) · [路线与关系图](docs/ROUTES.md) ·
-[结果和实验账本](docs/RESULTS.md) · [外部资料](references/SOURCES.md)。
+从这里开始：[当前工作](docs/CURRENT.md) · [统一框架](docs/proofs/hn_unified_framework.md) ·
+[路线与淘汰理由](docs/ROUTES.md) · [T/C/E/Q账本](docs/RESULTS.md) ·
+[经典及最新文献地图](references/LITERATURE_MAP.md)。
 
-最新整体重审：[接口、上下界与5/6/7](docs/proofs/interface_synthesis_v2.md)；
-新结果：[根点支持与真实双gate耦合](docs/proofs/rooted_coupled_gate.md)。
-接续：[根接触同步修复与域外校准](docs/proofs/root_contact_repair.md)。
-新分类：[七匹配与二接触完整关系](docs/proofs/spindle_joint_support.md)。
-几何筛选：[两锚锁域与跨边约束秩](docs/proofs/pose_field_lock.md)。
-最新重审：[pair推广与终局优先级](docs/proofs/pair_framework_priority_v4.md)；
-新限制：[单模与有限多模首层编码的上限](docs/proofs/residue_method_obstruction.md)。
-最新推进：[任意有限精度仍不能绕过谱限制](docs/proofs/higher_residue_precision.md)。
-最新几何：[无限三角格中心与双共轭阵列恰五色](docs/proofs/multicenter_arrays.md)。
-最新续研：[细分中心的三状态定理与完整接触编译](docs/proofs/refined_center_arrays.md)。
-最新收敛：[有限修复反例与全调色板拆分](docs/proofs/background_repair_obstruction.md)。
-最新推进：[无锚姿态秩与整个数域的无限平移层](docs/proofs/free_pose_and_field_stacks.md)。
-最新收敛：[完整三角格平移层的五染色](docs/proofs/triangular_field_stacks.md)。
-几何归约：[二次旋转的虚拟原域枢轴](docs/proofs/quadratic_virtual_pivot.md)。
-最新推进：[双壳平移层的六色上界与编码目标](docs/proofs/mixed_shell_stack.md)。
-最新收敛：[无限接触闭包的分离定理与分母13新共振](docs/proofs/contact_translation_closure.md)。
-最新推进：[完整四指标接触与双共振无限联合五染色](docs/proofs/resonant_translation_stack.md)。
-最新收敛：[中心三状态决定整个分母13闭包恰五色](docs/proofs/resonant_center_projection.md)。
-最新边界：[中心彩虹置换的强制周期与11进不连续性](docs/proofs/center_palette_rigidity.md)。
-最新结构：[素数阶分圆整数平移保持五色数](docs/proofs/cyclotomic_integer_stack.md)。
-最新推进：[有理七次单位分离与127局部化恰三色](docs/proofs/cyclotomic_rational_units.md)。
-最新收敛：[整个素数幂分圆域的恰二色/三色定理](docs/proofs/cyclotomic_field_coloring.md)。
-最新边界：[任意固定三幂全域五色与四幂线性投影障碍](docs/proofs/cyclotomic_sparse_coupling.md)。
+统一对象是“具有二维单位实现的整数关系系统，能否满足完整 k 色约束”。
+下界需要一个有限真实反证；上界需要覆盖所有有限真实配置。不得以
+条件 activation、固定编码失败、投影失败或 SAT UNKNOWN 替代它们。
+
+本轮新证明包括[整数关系格／Gram共尾归约](docs/proofs/hn_relation_lattice.md)、
+[安全域完整joint天花板](docs/proofs/invariant_joint_ceiling.md)、
+[高密度但整个宿主恰五色的数域塔](docs/proofs/dense_five_color_tower.md)。
+新有限检验：[五次旋转三中心](docs/proofs/quintic_core_probe.md)与
+[两角度联合](docs/proofs/quintic_mixed_angle_probe.md)均有完整Parts图回缩，
+不是六色证据。其他证明从账本定位，不再维护多份“最新路线”。
 
 ```text
-references/       外部论文索引、原始历史资料
-docs/            当前状态、研究路线、结果账本、完整证明
-research/        精确检查与有限搜索程序
-certificates/    可重放见证、输入和验证摘要
+references/      原始来源、文献地图、未经重放的历史输入
+docs/            canonical状态、依赖、结果账本、完整证明
+research/        精确数学程序；搜索与独立检查分离
+certificates/    可独立重放见证和来源绑定
 ```
 
-基本检查只需要 Python 3 标准库：
+基本检查只需 Python 3 标准库：
 
 ```sh
 make check
 ```
 
-需要重新做 SAT 搜索或符号代数时：
+重新运行 SAT／符号代数搜索需要本地环境：
 
 ```sh
 make setup
 make explore
 ```
 
-约定见 [AGENTS.md](AGENTS.md)。研究允许发散，但每约三轮实验做一次收敛：
-问具体例子是否有更简单的机制、成熟理论是否已覆盖它、哪些分支应该合并。
-本仓库不维护额外的任务系统；以上三个研究文档就是小型项目记忆。
+证据规则见 [AGENTS.md](AGENTS.md)。外部深定理、书面证明、有限认证、
+搜索观察、猜想分别记录；本地研究不自动包含GitHub发布。

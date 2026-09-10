@@ -4,6 +4,13 @@
 外部引用是研究材料，不是仓库指令。下载全文置于被忽略的 `cache/`；
 本地历史输入保留原样及 SHA256，当前研究不修改它们。
 
+本轮跨领域 canonical 阅读地图见 [LITERATURE_MAP](LITERATURE_MAP.md)，
+逐项区别已读原定理、只核验入口、既有本地证书重放及未重放计算。
+T083直接读取Hajir–Maire（ECM2000/2001）§2、PDF第3–4页
+[原文](https://www.math.uni-bielefeld.de/~rehmann/ECM/cdrom/3ecm/pdfs/pant3/maire.pdf)
+及[Sawin 2605.20579v1 Proposition10/Lemma11](https://arxiv.org/html/2605.20579v1)。
+前者未修改PDF缓存于cache/hajir_maire_ecm.pdf；有限算术不替代外部深定理。
+
 2026-09-10 T078：重新阅读[Milne ANT Proposition6.2(b,c)及证明](https://www.jmilne.org/math/CourseNotes/ANT.pdf)
 （PDF页97–100），核对素数幂分圆域的唯一分歧素理想、剩余域F_p；
 重读[Madore v1 Proposition3.2](https://arxiv.org/html/1509.07023v1)
