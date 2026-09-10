@@ -73,13 +73,21 @@ def modular_filter():
     return prime, f+[eta*x % prime for x in f]
 
 
-def geometry(core, centers):
-    den = core['coordinate_denominator']
+def geometry(core, centers, angles=(1,)):
+    scale = 2 if 2 in angles else 1
+    den = scale*core['coordinate_denominator']
     base = [tuple(x+y) for x, y in core['points']]
-    occurrences = [[p+(0,)*16 for p in base]]
-    for a in centers:
-        center = base[a]
-        occurrences.append([center+tuple(x-y for x, y in zip(p, center)) for p in base])
+    occurrences = [[tuple(scale*x for x in p)+(0,)*16 for p in base]]
+    for angle in angles:
+        for a in centers:
+            center = base[a]
+            if angle == 1:
+                occurrences.append([tuple(scale*x for x in center)+tuple(scale*(x-y) for x, y in zip(p, center))
+                                    for p in base])
+            else:
+                assert angle == 2 and scale == 2
+                occurrences.append([tuple(2*(2*x-y) for x, y in zip(center, p))+
+                                    tuple(t2mul(tuple(x-y for x, y in zip(p, center)))) for p in base])
     points = sorted(set(p for copy in occurrences for p in copy))
     index = {p: i for i, p in enumerate(points)}
     copies = [[index[p] for p in copy] for copy in occurrences]
@@ -176,8 +184,15 @@ def mechanisms(points, copies, edges, core):
                     return result
         return None
 
-    frames = visit([])
-    record = dict(frame_status='SAT' if frames is not None else 'NO_FRAME_FOUND_SEARCH_ONLY',
+    if len(copies) <= 4:
+        frames = visit([])
+        frame_status = 'SAT' if frames is not None else 'NO_FRAME_FOUND_SEARCH_ONLY'
+    else:
+        # E044 stops after the free coloring search; only test the cheapest old word.
+        frames = [perms[0]]*len(copies) if all(compatible(i, perms[0], j, perms[0])
+                                             for i, j in combinations(range(len(copies)), 2)) else None
+        frame_status = 'SAT' if frames is not None else 'NOT_SEARCHED_IDENTITY_ONLY_FAILED'
+    record = dict(frame_status=frame_status,
                   frame_domain_sizes=[len(d) for d in domains])
     if frames is not None:
         record['reference_color_frames'] = frames
@@ -196,10 +211,16 @@ def mechanisms(points, copies, edges, core):
                         key = ','.join(map(str, sorted((i, j))))
                         cross_counts[key] = cross_counts.get(key, 0)+1
             record['new_cross_edges_by_copy_pair'] = cross_counts
+        else:
+            record['natural_projection_obstruction'] = dict(kind='edge',
+                edge=next([a, b] for a, b in edges if tuple(sorted((projection[a], projection[b]))) not in core_edges))
+    else:
+        record['natural_projection_obstruction'] = dict(kind='collision',
+            point=next(i for i, owner in enumerate(owners) if len(set(owner.values())) != 1))
     return record
 
 
-def run(root, budget, center_count):
+def run(root, budget, center_count, angles=(1,)):
     raw = (root/'certificates/parts509_core.json').read_bytes()
     core = json.loads(raw)
     assert core['coordinate_denominator'] == 96
@@ -208,28 +229,37 @@ def run(root, budget, center_count):
                 (150, [[48]+[0]*7, [0, 48]+[0]*6]))
     assert all(core['points'][i] == p for i, p in expected)
     centers = [i for i, _ in expected][:center_count]
-    points, copies, edges, summary = geometry(core, centers)
+    points, copies, edges, summary = geometry(core, centers, angles)
     print(json.dumps(dict(stage='geometry', centers=centers, **summary)), flush=True)
     search = solve(points, copies, edges, budget)
     print(json.dumps({k: v for k, v in search.items() if k != 'five_coloring'}), flush=True)
     mechanism = mechanisms(points, copies, edges, core)
     print(json.dumps(dict(stage='mechanism', **mechanism)), flush=True)
-    return dict(schema=1, experiment='E043',
+    result = dict(schema=1, experiment='E043',
                 host='P union (eta*(P-a)+a) for a in the listed centers; eta=exp(2*pi*i/5)',
                 field='Q(i,sqrt(3),sqrt(11),sqrt(5))[eta], eta^2=((sqrt(5)-1)/2)*eta-1',
                 base_radicals=list(RAD), coordinate_denominator=96,
                 centers=centers, core_sha256=hashlib.sha256(raw).hexdigest(),
                 geometry=summary, search=search, mechanism=mechanism,
                 scope='Only this finite induced unit graph; not a field or plane coloring. Negative solver returns are not certificates.')
+    if tuple(angles) == (1, 2):
+        result.update(experiment='E044', angles=[1, 2], coordinate_denominator=192,
+                      host='P union (eta^r*(P-a)+a) for r in [1,2] and the listed centers; eta=exp(2*pi*i/5)')
+    return result
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--budget', type=int, default=100000)
     parser.add_argument('--centers', type=int, choices=(1, 2, 3), default=3)
-    parser.add_argument('--output', type=Path, default=Path('certificates/quintic_core_probe.json'))
+    parser.add_argument('--angles', type=int, nargs='+', choices=(1, 2), default=[1])
+    parser.add_argument('--output', type=Path)
     args = parser.parse_args()
     if args.budget <= 0:
         parser.error('--budget must be positive')
-    data = run(Path(__file__).resolve().parents[1], args.budget, args.centers)
-    args.output.write_text(json.dumps(data, indent=2)+'\n')
+    if args.angles not in ([1], [1, 2]):
+        parser.error('--angles must be 1 or 1 2')
+    data = run(Path(__file__).resolve().parents[1], args.budget, args.centers, args.angles)
+    output = args.output or Path('certificates/quintic_mixed_angle_probe.json' if args.angles == [1, 2]
+                                else 'certificates/quintic_core_probe.json')
+    output.write_text(json.dumps(data, indent=2)+'\n')

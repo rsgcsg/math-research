@@ -104,19 +104,24 @@ def filter_map(table):
     return prime, images, bars
 
 
-def geometry(core, centers, table):
-    den = core['coordinate_denominator']
+def geometry(core, centers, table, angles=(1,)):
+    scale = 2 if 2 in angles else 1
+    den = scale*core['coordinate_denominator']
     base = [tuple(x+y+[0]*16) for x, y in core['points']]
-    copies_raw = [base]
+    copies_raw = [[tuple(scale*x for x in point) for point in base]]
     eta = [int(j == 16) for j in range(32)]
-    for center in centers:
-        copy = []
-        for point in base:
-            shifted = [x-y for x, y in zip(point, base[center])]
-            doubled = product_twice(eta, shifted, table)
-            assert all(x % 2 == 0 for x in doubled)
-            copy.append(tuple(x//2+y for x, y in zip(doubled, base[center])))
-        copies_raw.append(copy)
+    for angle in angles:
+        rotation_twice = [2*x for x in eta] if angle == 1 else product_twice(eta, eta, table)
+        assert angle in (1, 2)
+        for center in centers:
+            copy = []
+            for point in base:
+                shifted = [x-y for x, y in zip(point, base[center])]
+                fourfold = product_twice(rotation_twice, shifted, table)
+                divisor = 4//scale
+                assert all(x % divisor == 0 for x in fourfold)
+                copy.append(tuple(x//divisor+scale*y for x, y in zip(fourfold, base[center])))
+            copies_raw.append(copy)
     points = sorted(set(point for copy in copies_raw for point in copy))
     index = {point: i for i, point in enumerate(points)}
     copies = [[index[point] for point in copy] for copy in copies_raw]
@@ -150,9 +155,11 @@ def verify(root, certificate=None):
         raise RuntimeError('Verification requires assertions; do not use python -O')
     path = certificate or root/'certificates/quintic_core_probe.json'
     data = json.loads(path.read_text())
-    assert data['schema'] == 1 and data['experiment'] == 'E043'
+    assert data['schema'] == 1 and data['experiment'] in ('E043', 'E044')
     assert data['base_radicals'] == list(RAD)
-    assert data['coordinate_denominator'] == 96
+    angles = data.get('angles', [1])
+    assert (data['experiment'], angles, data['coordinate_denominator']) in (
+        ('E043', [1], 96), ('E044', [1, 2], 192))
     centers = data['centers']
     assert centers in ([0], [0, 153], [0, 153, 150])
     raw = (root/'certificates/parts509_core.json').read_bytes()
@@ -165,10 +172,11 @@ def verify(root, certificate=None):
     assert core['points'][153] == [[96]+[0]*7, zero]
     assert core['points'][150] == [[48]+[0]*7, [0, 48]+[0]*6]
     table = multiplication_twice()
-    points, copies, owners, edges, summary, prime, survivors = geometry(core, centers, table)
+    points, copies, owners, edges, summary, prime, survivors = geometry(core, centers, table, angles)
     assert all(data['geometry'][key] == value for key, value in summary.items())
-    assert summary['vertices'] == 509+508*len(centers)
-    assert summary['copy_edges'] == 2442*len(copies)
+    if angles == [1]:
+        assert summary['vertices'] == 509+508*len(centers)
+        assert summary['copy_edges'] == 2442*len(copies)
     edge_set = set(edges)
     base_edges = {tuple(sorted((owners[a][0], owners[b][0]))) for a, b in edges
                   if 0 in owners[a] and 0 in owners[b]}
@@ -212,6 +220,17 @@ def verify(root, certificate=None):
                     counts[key] = counts.get(key, 0)+1
         assert mechanism['new_cross_edges_by_copy_pair'] == counts
         projection_checked = True
+    if 'natural_projection_obstruction' in mechanism:
+        obstruction = mechanism['natural_projection_obstruction']
+        if obstruction['kind'] == 'collision':
+            assert len(set(owners[obstruction['point']].values())) > 1
+        else:
+            assert obstruction['kind'] == 'edge'
+            assert all(len(set(owner.values())) == 1 for owner in owners)
+            a, b = obstruction['edge']
+            assert (a, b) in edge_set
+            pi, pj = next(iter(owners[a].values())), next(iter(owners[b].values()))
+            assert tuple(sorted((pi, pj))) not in base_edges
     return dict(status='VERIFIED_FINITE_QUINTIC_CORE_FIVE_COLORING' if status == 'SAT' else
                        'VERIFIED_GEOMETRY_ONLY_NO_NEGATIVE_COLORING_CERTIFICATE',
                 **summary, verification_filter_prime=prime, exact_filter_survivors=survivors,
