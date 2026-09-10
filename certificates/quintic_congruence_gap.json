@@ -1,0 +1,190 @@
+{
+  "schema": 1,
+  "results": [
+    "C017",
+    "T085",
+    "E045"
+  ],
+  "core_sha256": "6110b6574055b4daf2c10d0bb13267d1adefc7218c3586c096430309a8cee2b9",
+  "source_sha256": "7d720cfc3380c69e90018f7814f0d627fde406d71a23ed0440024fa540f07b0e",
+  "first_congruence": [
+    [
+      0,
+      337
+    ],
+    [
+      15,
+      242
+    ]
+  ],
+  "first_projected_pairs": [
+    [
+      322,
+      64
+    ],
+    [
+      211,
+      409
+    ]
+  ],
+  "fiber_congruences": [
+    {
+      "pair": [
+        27,
+        101
+      ],
+      "collapsed_pair": [
+        84,
+        337
+      ],
+      "owners": [
+        332,
+        451
+      ],
+      "collapsed_owners": [
+        64,
+        64
+      ]
+    },
+    {
+      "pair": [
+        51,
+        182
+      ],
+      "collapsed_pair": [
+        84,
+        337
+      ],
+      "owners": [
+        133,
+        377
+      ],
+      "collapsed_owners": [
+        64,
+        64
+      ]
+    },
+    {
+      "pair": [
+        179,
+        208
+      ],
+      "collapsed_pair": [
+        84,
+        337
+      ],
+      "owners": [
+        379,
+        129
+      ],
+      "collapsed_owners": [
+        64,
+        64
+      ]
+    },
+    {
+      "pair": [
+        565,
+        584
+      ],
+      "collapsed_pair": [
+        84,
+        337
+      ],
+      "owners": [
+        330,
+        449
+      ],
+      "collapsed_owners": [
+        64,
+        64
+      ]
+    },
+    {
+      "pair": [
+        581,
+        709
+      ],
+      "collapsed_pair": [
+        84,
+        337
+      ],
+      "owners": [
+        447,
+        328
+      ],
+      "collapsed_owners": [
+        64,
+        64
+      ]
+    },
+    {
+      "pair": [
+        647,
+        726
+      ],
+      "collapsed_pair": [
+        84,
+        337
+      ],
+      "owners": [
+        381,
+        131
+      ],
+      "collapsed_owners": [
+        64,
+        64
+      ]
+    }
+  ],
+  "repairing_core_word": "34440444444224423443434343140042021344031330141331334200022324413013234024441042221421010000430430222403333432021110221133100112031313110321341222122100012221410224110002121100210300003333033313330331100112101102001432101233111202123100222004144211241212024042022444310014423231313401221331030213314343432340434224320321324324331404243032314444144433433433404444444444444444233333333021144420414011244112044000301040441014020111010021212120120100010022232100210120020113244443333333332333322323333444444444444",
+  "fiber_anchor_candidates": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "quadrance_walks": {
+    "2": [
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "7": [
+      [
+        0,
+        0
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "search_stats": {
+    "restarts": 2,
+    "conflicts": 54,
+    "decisions": 730,
+    "propagations": 11280
+  },
+  "scope": "Specified retraction and residue-isometry averaged law family only; explicit repair satisfies seven selected two-point congruences, not all joint constraints."
+}

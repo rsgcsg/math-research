@@ -56,6 +56,8 @@ from verify_cm_density_coloring import verify as verify_cm_density_coloring
 from verify_invariant_joint_ceiling import verify as verify_invariant_joint_ceiling
 from verify_quintic_core_probe import verify as verify_quintic_core_probe
 from verify_dense_five_color_tower import verify as verify_dense_five_color_tower
+from verify_quintic_congruence import verify as verify_quintic_congruence
+from verify_quintic_anchor_bridge import verify as verify_quintic_anchor_bridge
 
 
 def main():
@@ -163,6 +165,8 @@ def main():
     print(json.dumps(verify_quintic_core_probe(root), indent=2))
     print(json.dumps(verify_quintic_core_probe(root, root/'certificates/quintic_mixed_angle_probe.json'), indent=2))
     print(json.dumps(verify_dense_five_color_tower(root), indent=2))
+    print(json.dumps(verify_quintic_congruence(root), indent=2))
+    print(json.dumps(verify_quintic_anchor_bridge(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

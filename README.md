@@ -18,6 +18,13 @@
 [两角度联合](docs/proofs/quintic_mixed_angle_probe.md)均有完整Parts图回缩，
 不是六色证据。其他证明从账本定位，不再维护多份“最新路线”。
 
+接续结果：[回缩的全等缺口与剩余平均模型的统一排除](docs/proofs/quintic_congruence_gap.md)。
+已找到精确部分全等反例；全部11进剩余平均模型都失败，但新自由色词
+仍满足本轮七个联合约束，尚未形成原始HN反证。
+随后已实做[跨纤维两锚Parts桥](docs/proofs/quintic_anchor_bridge.md)：2540点
+仍五色，五份完整509点副本分布也有正修复；当前瓶颈是接口关系的
+真正不相容，而不是事件或副本大小。
+
 ```text
 references/      原始来源、文献地图、未经重放的历史输入
 docs/            canonical状态、依赖、结果账本、完整证明
