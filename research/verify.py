@@ -42,6 +42,14 @@ from verify_triangular_field_stack import verify as verify_triangular_field_stac
 from verify_quadratic_virtual_pivot import verify as verify_quadratic_virtual_pivot
 from verify_mixed_shell_stack import verify as verify_mixed_shell_stack
 from verify_contact_translation_closure import verify as verify_contact_translation_closure
+from verify_resonant_translation_stack import verify as verify_resonant_translation_stack
+from verify_resonant_center_projection import verify as verify_resonant_center_projection
+from verify_resonant_twist_obstruction import verify as verify_resonant_twist_obstruction
+from verify_center_palette_rigidity import verify as verify_center_palette_rigidity
+from verify_cyclotomic_integer_stack import verify as verify_cyclotomic_integer_stack
+from verify_cyclotomic_127 import verify as verify_cyclotomic_127
+from verify_cyclotomic_field import verify as verify_cyclotomic_field
+from verify_cyclotomic_sparse_coupling import verify as verify_cyclotomic_sparse_coupling
 
 
 def main():
@@ -133,6 +141,14 @@ def main():
     print(json.dumps(verify_quadratic_virtual_pivot(), indent=2))
     print(json.dumps(verify_mixed_shell_stack(root), indent=2))
     print(json.dumps(verify_contact_translation_closure(root), indent=2))
+    print(json.dumps(verify_resonant_translation_stack(root), indent=2))
+    print(json.dumps(verify_resonant_center_projection(root), indent=2))
+    print(json.dumps(verify_resonant_twist_obstruction(root), indent=2))
+    print(json.dumps(verify_center_palette_rigidity(), indent=2))
+    print(json.dumps(verify_cyclotomic_integer_stack(root), indent=2))
+    print(json.dumps(verify_cyclotomic_127(root), indent=2))
+    print(json.dumps(verify_cyclotomic_field(root), indent=2))
+    print(json.dumps(verify_cyclotomic_sparse_coupling(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

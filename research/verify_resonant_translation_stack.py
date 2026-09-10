@@ -194,6 +194,14 @@ def check_cluster(rows, steps, cluster):
             delta = (phase[s]-phase[t]) % 5
             constraints.update(tuple(sorted((-5*u-c-1, -5*v-(c+delta) % 5-1))) for c in range(5))
     assert len(constraints) == cluster['constraint_count'] == 70760
+    parity_words = {}
+    T, U = cluster['generators']
+    for a, b in product(range(2), repeat=2):
+        for s, offset in enumerate(S):
+            label = tuple((x+a*y+b*z) % 2 for x, y, z in zip(offset, T, U))
+            word = ''.join(str((int(v)+phase[s]) % 5) for v in words[2*a+b])
+            parity_words.setdefault(label, set()).add(word)
+    assert len(parity_words) == 16 and all(len(v) > 1 for v in parity_words.values())
     return dict(complete_relations=len(relation), phase_edge_checks=checks,
                 free_core_words=4, phase_offsets=16, infinite_two_generator_array_five_colored=True)
 
@@ -214,9 +222,19 @@ def verify(root, data_override=None):
     assert len(rows) == 8008 and len({r[2:] for r in rows}) == 49
     assert sum(any(r[2:]) for r in rows) == 3124
     assert sum(r[4] != 0 or r[5] != 0 for r in rows) == 1508
+    core_edges = set(map(tuple, core['induced_edges']))
+    assert all((r[4] != 0 or r[5] != 0) == (tuple(sorted(r[:2])) not in core_edges) for r in rows)
+    basis = data['full_lattice_basis']
+    assert basis == [[3, 0, 4, 0], [-4, 1, -1, -3], [-4, 3, 0, 0], [-3, 4, 4, -1]]
+    assert all(tuple(v) in {r[2:] for r in rows} for v in basis)
+    determinant = 0
+    for p in permutations(range(4)):
+        sign = (-1)**sum(p[i] > p[j] for i in range(4) for j in range(i+1, 4))
+        determinant += sign*math.prod(basis[i][p[i]] for i in range(4))
+    assert abs(determinant) == 1
     steps = check_cross_and_uniqueness(core)
     return dict(contacts=8008, shifts=49, ordered_core_pairs=509**2,
-                statistics=stats, shell_transports=len(steps),
+                statistics=stats, shell_transports=len(steps), full_basis_determinant=determinant,
                 frame=check_frame_obstruction(root, core, rows, data['frame_obstruction']),
                 cluster=check_cluster(rows, steps, data['cluster']),
                 scope='Complete geometry of the four-index closure; five coloring only of the stated two-generator subarray; no new plane bound')

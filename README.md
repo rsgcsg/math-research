@@ -22,6 +22,13 @@
 几何归约：[二次旋转的虚拟原域枢轴](docs/proofs/quadratic_virtual_pivot.md)。
 最新推进：[双壳平移层的六色上界与编码目标](docs/proofs/mixed_shell_stack.md)。
 最新收敛：[无限接触闭包的分离定理与分母13新共振](docs/proofs/contact_translation_closure.md)。
+最新推进：[完整四指标接触与双共振无限联合五染色](docs/proofs/resonant_translation_stack.md)。
+最新收敛：[中心三状态决定整个分母13闭包恰五色](docs/proofs/resonant_center_projection.md)。
+最新边界：[中心彩虹置换的强制周期与11进不连续性](docs/proofs/center_palette_rigidity.md)。
+最新结构：[素数阶分圆整数平移保持五色数](docs/proofs/cyclotomic_integer_stack.md)。
+最新推进：[有理七次单位分离与127局部化恰三色](docs/proofs/cyclotomic_rational_units.md)。
+最新收敛：[整个素数幂分圆域的恰二色/三色定理](docs/proofs/cyclotomic_field_coloring.md)。
+最新边界：[任意固定三幂全域五色与四幂线性投影障碍](docs/proofs/cyclotomic_sparse_coupling.md)。
 
 ```text
 references/       外部论文索引、原始历史资料

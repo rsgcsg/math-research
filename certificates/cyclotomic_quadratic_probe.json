@@ -1,0 +1,47 @@
+{
+  "experiment": "E040",
+  "solver": "cadical195",
+  "colors": 5,
+  "scope": "F11 core reduction with prescribed center period; not the source graph",
+  "cases": [
+    {
+      "period": 2,
+      "vertices": 242,
+      "edges": 1694,
+      "conflict_budget": 10000,
+      "status": "UNKNOWN",
+      "stats": {
+        "restarts": 838,
+        "conflicts": 10000,
+        "decisions": 31684,
+        "propagations": 1452669
+      }
+    },
+    {
+      "period": 3,
+      "vertices": 363,
+      "edges": 2904,
+      "conflict_budget": 100000,
+      "status": "UNKNOWN",
+      "stats": {
+        "restarts": 4466,
+        "conflicts": 100001,
+        "decisions": 215802,
+        "propagations": 15107190
+      }
+    },
+    {
+      "period": 11,
+      "vertices": 1331,
+      "edges": 10648,
+      "conflict_budget": 100000,
+      "status": "UNKNOWN",
+      "stats": {
+        "restarts": 5368,
+        "conflicts": 100002,
+        "decisions": 241414,
+        "propagations": 18472455
+      }
+    }
+  ]
+}

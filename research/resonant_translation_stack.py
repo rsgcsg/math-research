@@ -139,6 +139,7 @@ def build():
                 seed_sha256=hashlib.sha256(seed_raw).hexdigest(),
                 parameter=dict(beta=[40, 169], first=7, second=3, denominator=13),
                 contacts=rows, statistics=statistics,
+                full_lattice_basis=[[3, 0, 4, 0], [-4, 1, -1, -3], [-4, 3, 0, 0], [-3, 4, 4, -1]],
                 frame_obstruction=dict(shift=[3, 0, 4, 0], forbidden_color_pairs=frame_pairs),
                 cluster=dict(generators=[[3, 0, 4, 0], [-4, 1, -1, -3]],
                              shifts=seed['shifts'], phase_offsets=phases,

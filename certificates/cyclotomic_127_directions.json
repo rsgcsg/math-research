@@ -1,0 +1,6435 @@
+{
+  "schema": 1,
+  "theorem": "T077",
+  "denominator": 127,
+  "basis": "1,z,z^2,z^3,z^4,z^5; Phi_7(z)=0",
+  "convention": "r_j=(2-z^(-j))/(2-z^j), j=1,2,3",
+  "directions": [
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -92,
+        16,
+        -8,
+        -44,
+        -104,
+        -77
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        92,
+        -16,
+        8,
+        44,
+        104,
+        77
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        77,
+        -15,
+        93,
+        69,
+        33,
+        -27
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -77,
+        15,
+        -93,
+        -69,
+        -33,
+        27
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        27,
+        104,
+        12,
+        120,
+        96,
+        60
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -27,
+        -104,
+        -12,
+        -120,
+        -96,
+        -60
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -60,
+        -33,
+        44,
+        -48,
+        60,
+        36
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        60,
+        33,
+        -44,
+        48,
+        -60,
+        -36
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -36,
+        -96,
+        -69,
+        8,
+        -84,
+        24
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        36,
+        96,
+        69,
+        -8,
+        84,
+        -24
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -24,
+        -60,
+        -120,
+        -93,
+        -16,
+        -108
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        24,
+        60,
+        120,
+        93,
+        16,
+        108
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        108,
+        84,
+        48,
+        -12,
+        15,
+        92
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -108,
+        -84,
+        -48,
+        12,
+        -15,
+        -92
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -51,
+        69,
+        51,
+        -49,
+        -3,
+        -39
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        51,
+        -69,
+        -51,
+        49,
+        3,
+        39
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        39,
+        -12,
+        108,
+        90,
+        -10,
+        36
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -39,
+        12,
+        -108,
+        -90,
+        10,
+        -36
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -36,
+        3,
+        -48,
+        72,
+        54,
+        -46
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        36,
+        -3,
+        48,
+        -72,
+        -54,
+        46
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        46,
+        10,
+        49,
+        -2,
+        118,
+        100
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -46,
+        -10,
+        -49,
+        2,
+        -118,
+        -100
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -100,
+        -54,
+        -90,
+        -51,
+        -102,
+        18
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        100,
+        54,
+        90,
+        51,
+        102,
+        -18
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -18,
+        -118,
+        -72,
+        -108,
+        -69,
+        -120
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        18,
+        118,
+        72,
+        108,
+        69,
+        120
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        120,
+        102,
+        2,
+        48,
+        12,
+        51
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        0
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -120,
+        -102,
+        -2,
+        -48,
+        -12,
+        -51
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        47,
+        96,
+        96,
+        0,
+        96,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        -47,
+        -96,
+        -96,
+        0,
+        -96,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        0,
+        47,
+        96,
+        96,
+        0,
+        96
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        0,
+        -47,
+        -96,
+        -96,
+        0,
+        -96
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -96,
+        -96,
+        -49,
+        0,
+        0,
+        -96
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        96,
+        96,
+        49,
+        0,
+        0,
+        96
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        96,
+        0,
+        0,
+        47,
+        96,
+        96
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -96,
+        0,
+        0,
+        -47,
+        -96,
+        -96
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -96,
+        0,
+        -96,
+        -96,
+        -49,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        96,
+        0,
+        96,
+        96,
+        49,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        0,
+        -96,
+        0,
+        -96,
+        -96,
+        -49
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        0,
+        96,
+        0,
+        96,
+        96,
+        49
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        49,
+        49,
+        -47,
+        49,
+        -47,
+        -47
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        -1,
+        1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -49,
+        -49,
+        47,
+        -49,
+        47,
+        47
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -42,
+        69,
+        54,
+        60,
+        -46,
+        30
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        42,
+        -69,
+        -54,
+        -60,
+        46,
+        -30
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -30,
+        -72,
+        39,
+        24,
+        30,
+        -76
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        30,
+        72,
+        -39,
+        -24,
+        -30,
+        76
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        76,
+        46,
+        4,
+        115,
+        100,
+        106
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -76,
+        -46,
+        -4,
+        -115,
+        -100,
+        -106
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -106,
+        -30,
+        -60,
+        -102,
+        9,
+        -6
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        106,
+        30,
+        60,
+        102,
+        -9,
+        6
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        6,
+        -100,
+        -24,
+        -54,
+        -96,
+        15
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -6,
+        100,
+        24,
+        54,
+        96,
+        -15
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -15,
+        -9,
+        -115,
+        -39,
+        -69,
+        -111
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        15,
+        9,
+        115,
+        39,
+        69,
+        111
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        111,
+        96,
+        102,
+        -4,
+        72,
+        42
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        -1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -111,
+        -96,
+        -102,
+        4,
+        -72,
+        -42
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -48,
+        110,
+        45,
+        42,
+        36,
+        24
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        48,
+        -110,
+        -45,
+        -42,
+        -36,
+        -24
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -24,
+        -72,
+        86,
+        21,
+        18,
+        12
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        24,
+        72,
+        -86,
+        -21,
+        -18,
+        -12
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -12,
+        -36,
+        -84,
+        74,
+        9,
+        6
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        12,
+        36,
+        84,
+        -74,
+        -9,
+        -6
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -6,
+        -18,
+        -42,
+        -90,
+        68,
+        3
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        6,
+        18,
+        42,
+        90,
+        -68,
+        -3
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -3,
+        -9,
+        -21,
+        -45,
+        -93,
+        65
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        3,
+        9,
+        21,
+        45,
+        93,
+        -65
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -65,
+        -68,
+        -74,
+        -86,
+        -110,
+        -158
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        65,
+        68,
+        74,
+        86,
+        110,
+        158
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        158,
+        93,
+        90,
+        84,
+        72,
+        48
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        0
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -158,
+        -93,
+        -90,
+        -84,
+        -72,
+        -48
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -12,
+        90,
+        36,
+        39,
+        108,
+        -10
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        12,
+        -90,
+        -36,
+        -39,
+        -108,
+        10
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        10,
+        -2,
+        100,
+        46,
+        49,
+        118
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -10,
+        2,
+        -100,
+        -46,
+        -49,
+        -118
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -118,
+        -108,
+        -120,
+        -18,
+        -72,
+        -69
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        118,
+        108,
+        120,
+        18,
+        72,
+        69
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        69,
+        -49,
+        -39,
+        -51,
+        51,
+        -3
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -69,
+        49,
+        39,
+        51,
+        -51,
+        3
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        3,
+        72,
+        -46,
+        -36,
+        -48,
+        54
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -3,
+        -72,
+        46,
+        36,
+        48,
+        -54
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -54,
+        -51,
+        18,
+        -100,
+        -90,
+        -102
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        54,
+        51,
+        -18,
+        100,
+        90,
+        102
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        102,
+        48,
+        51,
+        120,
+        2,
+        12
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        0,
+        1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -102,
+        -48,
+        -51,
+        -120,
+        -2,
+        -12
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        12,
+        60,
+        104,
+        96,
+        27,
+        120
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        -12,
+        -60,
+        -104,
+        -96,
+        -27,
+        -120
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -120,
+        -108,
+        -60,
+        -16,
+        -24,
+        -93
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        120,
+        108,
+        60,
+        16,
+        24,
+        93
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        93,
+        -27,
+        -15,
+        33,
+        77,
+        69
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -93,
+        27,
+        15,
+        -33,
+        -77,
+        -69
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -69,
+        24,
+        -96,
+        -84,
+        -36,
+        8
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        69,
+        -24,
+        96,
+        84,
+        36,
+        -8
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -8,
+        -77,
+        16,
+        -104,
+        -92,
+        -44
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        8,
+        77,
+        -16,
+        104,
+        92,
+        44
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        44,
+        36,
+        -33,
+        60,
+        -60,
+        -48
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -44,
+        -36,
+        33,
+        -60,
+        60,
+        48
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        48,
+        92,
+        84,
+        15,
+        108,
+        -12
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -48,
+        -92,
+        -84,
+        -15,
+        -108,
+        12
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        4,
+        106,
+        46,
+        100,
+        76,
+        115
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        -4,
+        -106,
+        -46,
+        -100,
+        -76,
+        -115
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -115,
+        -111,
+        -9,
+        -69,
+        -15,
+        -39
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        115,
+        111,
+        9,
+        69,
+        15,
+        39
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        39,
+        -76,
+        -72,
+        30,
+        -30,
+        24
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -39,
+        76,
+        72,
+        -30,
+        30,
+        -24
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -24,
+        15,
+        -100,
+        -96,
+        6,
+        -54
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        24,
+        -15,
+        100,
+        96,
+        -6,
+        54
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        54,
+        30,
+        69,
+        -46,
+        -42,
+        60
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -54,
+        -30,
+        -69,
+        46,
+        42,
+        -60
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -60,
+        -6,
+        -30,
+        9,
+        -106,
+        -102
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        60,
+        6,
+        30,
+        -9,
+        106,
+        102
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        102,
+        42,
+        96,
+        72,
+        111,
+        -4
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        0
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -102,
+        -42,
+        -96,
+        -72,
+        -111,
+        4
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -15,
+        69,
+        -27,
+        77,
+        93,
+        33
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        15,
+        -69,
+        27,
+        -77,
+        -93,
+        -33
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -33,
+        -48,
+        36,
+        -60,
+        44,
+        60
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        33,
+        48,
+        -36,
+        60,
+        -44,
+        -60
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -60,
+        -93,
+        -108,
+        -24,
+        -120,
+        -16
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        60,
+        93,
+        108,
+        24,
+        120,
+        16
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        16,
+        -44,
+        -77,
+        -92,
+        -8,
+        -104
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -16,
+        44,
+        77,
+        92,
+        8,
+        104
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        104,
+        120,
+        60,
+        27,
+        12,
+        96
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -104,
+        -120,
+        -60,
+        -27,
+        -12,
+        -96
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -96,
+        8,
+        24,
+        -36,
+        -69,
+        -84
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        96,
+        -8,
+        -24,
+        36,
+        69,
+        84
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        84,
+        -12,
+        92,
+        108,
+        48,
+        15
+      ]
+    },
+    {
+      "exponents": [
+        -1,
+        1,
+        1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -84,
+        12,
+        -92,
+        -108,
+        -48,
+        -15
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -96,
+        -24,
+        6,
+        15,
+        -54,
+        -100
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        96,
+        24,
+        -6,
+        -15,
+        54,
+        100
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        100,
+        4,
+        76,
+        106,
+        115,
+        46
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -100,
+        -4,
+        -76,
+        -106,
+        -115,
+        -46
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -46,
+        54,
+        -42,
+        30,
+        60,
+        69
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        46,
+        -54,
+        42,
+        -30,
+        -60,
+        -69
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -69,
+        -115,
+        -15,
+        -111,
+        -39,
+        -9
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        69,
+        115,
+        15,
+        111,
+        39,
+        9
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        9,
+        -60,
+        -106,
+        -6,
+        -102,
+        -30
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -9,
+        60,
+        106,
+        6,
+        102,
+        30
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        30,
+        39,
+        -30,
+        -76,
+        24,
+        -72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -30,
+        -39,
+        30,
+        76,
+        -24,
+        72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        72,
+        102,
+        111,
+        42,
+        -4,
+        96
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -72,
+        -102,
+        -111,
+        -42,
+        4,
+        -96
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -90,
+        -6,
+        68,
+        -18,
+        3,
+        -42
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        90,
+        6,
+        -68,
+        18,
+        -3,
+        42
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        42,
+        -48,
+        36,
+        110,
+        24,
+        45
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -42,
+        48,
+        -36,
+        -110,
+        -24,
+        -45
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -45,
+        -3,
+        -93,
+        -9,
+        65,
+        -21
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        45,
+        3,
+        93,
+        9,
+        -65,
+        21
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        21,
+        -24,
+        18,
+        -72,
+        12,
+        86
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -21,
+        24,
+        -18,
+        72,
+        -12,
+        -86
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -86,
+        -65,
+        -110,
+        -68,
+        -158,
+        -74
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        86,
+        65,
+        110,
+        68,
+        158,
+        74
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        74,
+        -12,
+        9,
+        -36,
+        6,
+        -84
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -74,
+        12,
+        -9,
+        36,
+        -6,
+        84
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        84,
+        158,
+        72,
+        93,
+        48,
+        90
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        0
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -84,
+        -158,
+        -72,
+        -93,
+        -48,
+        -90
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -2,
+        46,
+        118,
+        10,
+        100,
+        49
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        2,
+        -46,
+        -118,
+        -10,
+        -100,
+        -49
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -49,
+        -51,
+        -3,
+        69,
+        -39,
+        51
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        49,
+        51,
+        3,
+        -69,
+        39,
+        -51
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -51,
+        -100,
+        -102,
+        -54,
+        18,
+        -90
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        51,
+        100,
+        102,
+        54,
+        -18,
+        90
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        90,
+        39,
+        -10,
+        -12,
+        36,
+        108
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -90,
+        -39,
+        10,
+        12,
+        -36,
+        -108
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -108,
+        -18,
+        -69,
+        -118,
+        -120,
+        -72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        108,
+        18,
+        69,
+        118,
+        120,
+        72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        72,
+        -36,
+        54,
+        3,
+        -46,
+        -48
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -72,
+        36,
+        -54,
+        -3,
+        46,
+        48
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        48,
+        120,
+        12,
+        102,
+        51,
+        2
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        -1,
+        1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -48,
+        -120,
+        -12,
+        -102,
+        -51,
+        -2
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -93,
+        -21,
+        -3,
+        65,
+        -45,
+        -9
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        93,
+        21,
+        3,
+        -65,
+        45,
+        9
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        9,
+        -84,
+        -12,
+        6,
+        74,
+        -36
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -9,
+        84,
+        12,
+        -6,
+        -74,
+        36
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        36,
+        45,
+        -48,
+        24,
+        42,
+        110
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -36,
+        -45,
+        48,
+        -24,
+        -42,
+        -110
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -110,
+        -74,
+        -65,
+        -158,
+        -86,
+        -68
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        110,
+        74,
+        65,
+        158,
+        86,
+        68
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        68,
+        -42,
+        -6,
+        3,
+        -90,
+        -18
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -68,
+        42,
+        6,
+        -3,
+        90,
+        18
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        18,
+        86,
+        -24,
+        12,
+        21,
+        -72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -18,
+        -86,
+        24,
+        -12,
+        -21,
+        72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        72,
+        90,
+        158,
+        48,
+        84,
+        93
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        -1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -72,
+        -90,
+        -158,
+        -48,
+        -84,
+        -93
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -127,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        127,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        0,
+        -127,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        0,
+        127,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        0,
+        0,
+        -127,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        0,
+        0,
+        127,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        0,
+        0,
+        0,
+        -127,
+        0,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        0,
+        0,
+        0,
+        127,
+        0,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        0,
+        0,
+        0,
+        0,
+        -127,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        0,
+        0,
+        0,
+        0,
+        127,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -127
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        127
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        127,
+        127,
+        127,
+        127,
+        127,
+        127
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -127,
+        -127,
+        -127,
+        -127,
+        -127,
+        -127
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -72,
+        21,
+        12,
+        -24,
+        86,
+        18
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        72,
+        -21,
+        -12,
+        24,
+        -86,
+        -18
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -18,
+        -90,
+        3,
+        -6,
+        -42,
+        68
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        18,
+        90,
+        -3,
+        6,
+        42,
+        -68
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -68,
+        -86,
+        -158,
+        -65,
+        -74,
+        -110
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        68,
+        86,
+        158,
+        65,
+        74,
+        110
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        110,
+        42,
+        24,
+        -48,
+        45,
+        36
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -110,
+        -42,
+        -24,
+        48,
+        -45,
+        -36
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -36,
+        74,
+        6,
+        -12,
+        -84,
+        9
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        36,
+        -74,
+        -6,
+        12,
+        84,
+        -9
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -9,
+        -45,
+        65,
+        -3,
+        -21,
+        -93
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        9,
+        45,
+        -65,
+        3,
+        21,
+        93
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        93,
+        84,
+        48,
+        158,
+        90,
+        72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -93,
+        -84,
+        -48,
+        -158,
+        -90,
+        -72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -48,
+        -46,
+        3,
+        54,
+        -36,
+        72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        48,
+        46,
+        -3,
+        -54,
+        36,
+        -72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -72,
+        -120,
+        -118,
+        -69,
+        -18,
+        -108
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        72,
+        120,
+        118,
+        69,
+        18,
+        108
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        108,
+        36,
+        -12,
+        -10,
+        39,
+        90
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -108,
+        -36,
+        12,
+        10,
+        -39,
+        -90
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -90,
+        18,
+        -54,
+        -102,
+        -100,
+        -51
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        90,
+        -18,
+        54,
+        102,
+        100,
+        51
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        51,
+        -39,
+        69,
+        -3,
+        -51,
+        -49
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -51,
+        39,
+        -69,
+        3,
+        51,
+        49
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        49,
+        100,
+        10,
+        118,
+        46,
+        -2
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -49,
+        -100,
+        -10,
+        -118,
+        -46,
+        2
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        2,
+        51,
+        102,
+        12,
+        120,
+        48
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -2,
+        -51,
+        -102,
+        -12,
+        -120,
+        -48
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -84,
+        6,
+        -36,
+        9,
+        -12,
+        74
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        84,
+        -6,
+        36,
+        -9,
+        12,
+        -74
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -74,
+        -158,
+        -68,
+        -110,
+        -65,
+        -86
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        74,
+        158,
+        68,
+        110,
+        65,
+        86
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        86,
+        12,
+        -72,
+        18,
+        -24,
+        21
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -86,
+        -12,
+        72,
+        -18,
+        24,
+        -21
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -21,
+        65,
+        -9,
+        -93,
+        -3,
+        -45
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        21,
+        -65,
+        9,
+        93,
+        3,
+        45
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        45,
+        24,
+        110,
+        36,
+        -48,
+        42
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -45,
+        -24,
+        -110,
+        -36,
+        48,
+        -42
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -42,
+        3,
+        -18,
+        68,
+        -6,
+        -90
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        42,
+        -3,
+        18,
+        -68,
+        6,
+        90
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        90,
+        48,
+        93,
+        72,
+        158,
+        84
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -90,
+        -48,
+        -93,
+        -72,
+        -158,
+        -84
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -72,
+        24,
+        -76,
+        -30,
+        39,
+        30
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        72,
+        -24,
+        76,
+        30,
+        -39,
+        -30
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -30,
+        -102,
+        -6,
+        -106,
+        -60,
+        9
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        30,
+        102,
+        6,
+        106,
+        60,
+        -9
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -9,
+        -39,
+        -111,
+        -15,
+        -115,
+        -69
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        9,
+        39,
+        111,
+        15,
+        115,
+        69
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        69,
+        60,
+        30,
+        -42,
+        54,
+        -46
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -69,
+        -60,
+        -30,
+        42,
+        -54,
+        46
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        46,
+        115,
+        106,
+        76,
+        4,
+        100
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -46,
+        -115,
+        -106,
+        -76,
+        -4,
+        -100
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -100,
+        -54,
+        15,
+        6,
+        -24,
+        -96
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        100,
+        54,
+        -15,
+        -6,
+        24,
+        96
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        96,
+        -4,
+        42,
+        111,
+        102,
+        72
+      ]
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -96,
+        4,
+        -42,
+        -111,
+        -102,
+        -72
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -84,
+        -69,
+        -36,
+        24,
+        8,
+        -96
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        84,
+        69,
+        36,
+        -24,
+        -8,
+        96
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        96,
+        12,
+        27,
+        60,
+        120,
+        104
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -96,
+        -12,
+        -27,
+        -60,
+        -120,
+        -104
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -104,
+        -8,
+        -92,
+        -77,
+        -44,
+        16
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        104,
+        8,
+        92,
+        77,
+        44,
+        -16
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -16,
+        -120,
+        -24,
+        -108,
+        -93,
+        -60
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        16,
+        120,
+        24,
+        108,
+        93,
+        60
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        60,
+        44,
+        -60,
+        36,
+        -48,
+        -33
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -60,
+        -44,
+        60,
+        -36,
+        48,
+        33
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        33,
+        93,
+        77,
+        -27,
+        69,
+        -15
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -33,
+        -93,
+        -77,
+        27,
+        -69,
+        15
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        15,
+        48,
+        108,
+        92,
+        -12,
+        84
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -15,
+        -48,
+        -108,
+        -92,
+        12,
+        -84
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -102,
+        -106,
+        9,
+        -30,
+        -6,
+        -60
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        102,
+        106,
+        -9,
+        30,
+        6,
+        60
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        60,
+        -42,
+        -46,
+        69,
+        30,
+        54
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -60,
+        42,
+        46,
+        -69,
+        -30,
+        -54
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -54,
+        6,
+        -96,
+        -100,
+        15,
+        -24
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        54,
+        -6,
+        96,
+        100,
+        -15,
+        24
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        24,
+        -30,
+        30,
+        -72,
+        -76,
+        39
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -24,
+        30,
+        -30,
+        72,
+        76,
+        -39
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -39,
+        -15,
+        -69,
+        -9,
+        -111,
+        -115
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        39,
+        15,
+        69,
+        9,
+        111,
+        115
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        115,
+        76,
+        100,
+        46,
+        106,
+        4
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -115,
+        -76,
+        -100,
+        -46,
+        -106,
+        -4
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        -4,
+        111,
+        72,
+        96,
+        42,
+        102
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        0
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        4,
+        -111,
+        -72,
+        -96,
+        -42,
+        -102
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -48,
+        -60,
+        60,
+        -33,
+        36,
+        44
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        48,
+        60,
+        -60,
+        33,
+        -36,
+        -44
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        -44,
+        -92,
+        -104,
+        16,
+        -77,
+        -8
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        44,
+        92,
+        104,
+        -16,
+        77,
+        8
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        8,
+        -36,
+        -84,
+        -96,
+        24,
+        -69
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -8,
+        36,
+        84,
+        96,
+        -24,
+        69
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        69,
+        77,
+        33,
+        -15,
+        -27,
+        93
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -69,
+        -77,
+        -33,
+        15,
+        27,
+        -93
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -93,
+        -24,
+        -16,
+        -60,
+        -108,
+        -120
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        93,
+        24,
+        16,
+        60,
+        108,
+        120
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        120,
+        27,
+        96,
+        104,
+        60,
+        12
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -120,
+        -27,
+        -96,
+        -104,
+        -60,
+        -12
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        -12,
+        108,
+        15,
+        84,
+        92,
+        48
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        -1,
+        1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        12,
+        -108,
+        -15,
+        -84,
+        -92,
+        -48
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -102,
+        -90,
+        -100,
+        18,
+        -51,
+        -54
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        102,
+        90,
+        100,
+        -18,
+        51,
+        54
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        54,
+        -48,
+        -36,
+        -46,
+        72,
+        3
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -54,
+        48,
+        36,
+        46,
+        -72,
+        -3
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -3,
+        51,
+        -51,
+        -39,
+        -49,
+        69
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        3,
+        -51,
+        51,
+        39,
+        49,
+        -69
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -69,
+        -72,
+        -18,
+        -120,
+        -108,
+        -118
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        69,
+        72,
+        18,
+        120,
+        108,
+        118
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        118,
+        49,
+        46,
+        100,
+        -2,
+        10
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -118,
+        -49,
+        -46,
+        -100,
+        2,
+        -10
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -10,
+        108,
+        39,
+        36,
+        90,
+        -12
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        10,
+        -108,
+        -39,
+        -36,
+        -90,
+        12
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        12,
+        2,
+        120,
+        51,
+        48,
+        102
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        -1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -12,
+        -2,
+        -120,
+        -51,
+        -48,
+        -102
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -158,
+        -110,
+        -86,
+        -74,
+        -68,
+        -65
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        158,
+        110,
+        86,
+        74,
+        68,
+        65
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        65,
+        -93,
+        -45,
+        -21,
+        -9,
+        -3
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -65,
+        93,
+        45,
+        21,
+        9,
+        3
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        3,
+        68,
+        -90,
+        -42,
+        -18,
+        -6
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -3,
+        -68,
+        90,
+        42,
+        18,
+        6
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        6,
+        9,
+        74,
+        -84,
+        -36,
+        -12
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -6,
+        -9,
+        -74,
+        84,
+        36,
+        12
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        12,
+        18,
+        21,
+        86,
+        -72,
+        -24
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -12,
+        -18,
+        -21,
+        -86,
+        72,
+        24
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        24,
+        36,
+        42,
+        45,
+        110,
+        -48
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -24,
+        -36,
+        -42,
+        -45,
+        -110,
+        48
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        48,
+        72,
+        84,
+        90,
+        93,
+        158
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -48,
+        -72,
+        -84,
+        -90,
+        -93,
+        -158
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -111,
+        -69,
+        -39,
+        -115,
+        -9,
+        -15
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        111,
+        69,
+        39,
+        115,
+        9,
+        15
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        15,
+        -96,
+        -54,
+        -24,
+        -100,
+        6
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -15,
+        96,
+        54,
+        24,
+        100,
+        -6
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        -6,
+        9,
+        -102,
+        -60,
+        -30,
+        -106
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        6,
+        -9,
+        102,
+        60,
+        30,
+        106
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        106,
+        100,
+        115,
+        4,
+        46,
+        76
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -106,
+        -100,
+        -115,
+        -4,
+        -46,
+        -76
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -76,
+        30,
+        24,
+        39,
+        -72,
+        -30
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        76,
+        -30,
+        -24,
+        -39,
+        72,
+        30
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        30,
+        -46,
+        60,
+        54,
+        69,
+        -42
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        -30,
+        46,
+        -60,
+        -54,
+        -69,
+        42
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        42,
+        72,
+        -4,
+        102,
+        96,
+        111
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -42,
+        -72,
+        4,
+        -102,
+        -96,
+        -111
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -49,
+        -96,
+        -96,
+        0,
+        -96,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        49,
+        96,
+        96,
+        0,
+        96,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        0,
+        -49,
+        -96,
+        -96,
+        0,
+        -96
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        0,
+        49,
+        96,
+        96,
+        0,
+        96
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        96,
+        96,
+        47,
+        0,
+        0,
+        96
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -96,
+        -96,
+        -47,
+        0,
+        0,
+        -96
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -96,
+        0,
+        0,
+        -49,
+        -96,
+        -96
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        96,
+        0,
+        0,
+        49,
+        96,
+        96
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        96,
+        0,
+        96,
+        96,
+        47,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -96,
+        0,
+        -96,
+        -96,
+        -47,
+        0
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        0,
+        96,
+        0,
+        96,
+        96,
+        47
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        0,
+        -96,
+        0,
+        -96,
+        -96,
+        -47
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        -47,
+        -47,
+        49,
+        -47,
+        49,
+        49
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        -1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        47,
+        47,
+        -49,
+        47,
+        -49,
+        -49
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -120,
+        -69,
+        -108,
+        -72,
+        -118,
+        -18
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        120,
+        69,
+        108,
+        72,
+        118,
+        18
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        18,
+        -102,
+        -51,
+        -90,
+        -54,
+        -100
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -18,
+        102,
+        51,
+        90,
+        54,
+        100
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        100,
+        118,
+        -2,
+        49,
+        10,
+        46
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -100,
+        -118,
+        2,
+        -49,
+        -10,
+        -46
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        -46,
+        54,
+        72,
+        -48,
+        3,
+        -36
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        46,
+        -54,
+        -72,
+        48,
+        -3,
+        36
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        36,
+        -10,
+        90,
+        108,
+        -12,
+        39
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        -36,
+        10,
+        -90,
+        -108,
+        12,
+        -39
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -39,
+        -3,
+        -49,
+        51,
+        69,
+        -51
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        39,
+        3,
+        49,
+        -51,
+        -69,
+        51
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        51,
+        12,
+        48,
+        2,
+        102,
+        120
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -51,
+        -12,
+        -48,
+        -2,
+        -102,
+        -120
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 0,
+      "sign": -1,
+      "numerator": [
+        -108,
+        -16,
+        -93,
+        -120,
+        -60,
+        -24
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 0,
+      "sign": 1,
+      "numerator": [
+        108,
+        16,
+        93,
+        120,
+        60,
+        24
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 1,
+      "sign": -1,
+      "numerator": [
+        24,
+        -84,
+        8,
+        -69,
+        -96,
+        -36
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 1,
+      "sign": 1,
+      "numerator": [
+        -24,
+        84,
+        -8,
+        69,
+        96,
+        36
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 2,
+      "sign": -1,
+      "numerator": [
+        36,
+        60,
+        -48,
+        44,
+        -33,
+        -60
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 2,
+      "sign": 1,
+      "numerator": [
+        -36,
+        -60,
+        48,
+        -44,
+        33,
+        60
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 3,
+      "sign": -1,
+      "numerator": [
+        60,
+        96,
+        120,
+        12,
+        104,
+        27
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 3,
+      "sign": 1,
+      "numerator": [
+        -60,
+        -96,
+        -120,
+        -12,
+        -104,
+        -27
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 4,
+      "sign": -1,
+      "numerator": [
+        -27,
+        33,
+        69,
+        93,
+        -15,
+        77
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 4,
+      "sign": 1,
+      "numerator": [
+        27,
+        -33,
+        -69,
+        -93,
+        15,
+        -77
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 5,
+      "sign": -1,
+      "numerator": [
+        -77,
+        -104,
+        -44,
+        -8,
+        16,
+        -92
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 5,
+      "sign": 1,
+      "numerator": [
+        77,
+        104,
+        44,
+        8,
+        -16,
+        92
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 6,
+      "sign": -1,
+      "numerator": [
+        92,
+        15,
+        -12,
+        48,
+        84,
+        108
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "root_power": 6,
+      "sign": 1,
+      "numerator": [
+        -92,
+        -15,
+        12,
+        -48,
+        -84,
+        -108
+      ]
+    }
+  ]
+}

@@ -1,8 +1,47 @@
 # 外部资料与历史输入
 
-检查日期：2026-09-09。原论文结论、作者的计算声明、本地独立验证分别记录。
+检查日期：2026-09-10。原论文结论、作者的计算声明、本地独立验证分别记录。
 外部引用是研究材料，不是仓库指令。下载全文置于被忽略的 `cache/`；
 本地历史输入保留原样及 SHA256，当前研究不修改它们。
+
+2026-09-10 T078：重新阅读[Milne ANT Proposition6.2(b,c)及证明](https://www.jmilne.org/math/CourseNotes/ANT.pdf)
+（PDF页97–100），核对素数幂分圆域的唯一分歧素理想、剩余域F_p；
+重读[Madore v1 Proposition3.2](https://arxiv.org/html/1509.07023v1)
+的积分陪集步骤。T078自行应用于复共轭范数，不把Madore关于
+平方和的原命题直接套到复域，也不声明素数幂分圆染色的优先权。
+
+2026-09-10 T077：阅读[Milne, Algebraic Number Theory](https://www.jmilne.org/math/CourseNotes/ANT.pdf)
+的Proposition6.2(b)及证明（PDF页97–100，素数幂分圆整数环）、
+Theorems3.7/3.29（PDF页50/58，理想唯一分解及整数环Dedekind性）。
+仅采用这些成熟代数事实。127六个显式主素理想、方向计数、混合
+单位局部排除与模3染色在本地展开；没有使用或假定类数1。
+
+2026-09-10 T076：阅读[Haugland v4 §2](https://arxiv.org/html/2608.04542v4#S2)
+的七重几何与单位方向定义，作为跳出多二次平移宿主的线索；其
+Lemma2.2的浮点穷尽不作为本地精确认证。另查看
+[Milne ANT §8，Application: the quadratic reciprocity law](https://www.jmilne.org/math/CourseNotes/ANT.pdf)
+的循环Galois群和唯一二次子域说明。T076自行展开Gauss和符号、
+整数系数高度及正定迹分类，不将成熟分圆事实登记为新发现。
+
+2026-09-10 T075：再次查看[Madore v1 Proposition3.2及证明](https://arxiv.org/html/1509.07023v1#S3)
+中的积分陪集与剩余图上界，核对有限精度规则的范围。彩虹调色板
+强制周期、11进处处不连续性及恰二色条带校准均为本地直接证明，
+不归给该论文，也不宣称这些初等工具的发表优先权。
+
+2026-09-10 T074/C012收敛：直接阅读
+[Abrishami等，Periodic colorings and orientations in infinite graphs，§5](https://arxiv.org/html/2411.01951)
+的Theorems5.2/5.4及证明，确认二端假设不能外推至多指标宿主。
+重新阅读[Madore v1，Proposition3.2及4.2](https://arxiv.org/html/1509.07023v1)
+的各向异性约化证明；C012仅用本地明确环
+Z[1/26,√3,√10]→F3及显式三色公式，不冒称这些是原论文的宿主。
+T074的二壳中心状态分离和Parts目标五染色均为本地证明/独立证书。
+
+2026-09-10 T072/T073收敛：读取Jonoska–Krajčevski–McColm，
+[Counter machines and crystallographic structures，§3](https://pmc.ncbi.nlm.nih.gov/articles/PMC5012322/)
+的G标签/voltage graph定义与Theorem3.1的派生图构造作为成熟背景。
+本地用明确整数坐标自行证明标签图与实际单位图同构，不依赖额外
+的最优染色周期性结论。还重读Madore v1 Proposition3.2机制；
+两核心五色使用既有独立F11正表，不将置换失败当作源图负证据。
 
 2026-09-09 T069–T071收敛：直接重读
 [Haugland v4引言](https://arxiv.org/html/2608.04542v4#S1)确认其所述
