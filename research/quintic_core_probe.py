@@ -4,7 +4,7 @@ Search-side exact algebra uses F=Q(i,sqrt(3),sqrt(11),sqrt(5)), and eta
 satisfies eta^2=((sqrt(5)-1)/2)*eta-1. This is not a periodic quotient.
 The independent verifier does not import this module or a SAT solver.
 """
-from itertools import combinations
+from itertools import combinations, permutations
 from pathlib import Path
 import argparse
 import hashlib
@@ -70,7 +70,7 @@ def modular_filter():
     assert pow(eta, 5, prime) == 1 and eta != 1
     assert all(f[i]*f[j] % prime == RAD[(i & j) % 8]*(-1 if i & j & 8 else 1)*f[i ^ j] % prime
                for i, j in combinations(range(16), 2))
-    return prime, f+[eta*x % prime for x in f], f+[(t-eta)*(-x if i & 8 else x) % prime for i, x in enumerate(f)]
+    return prime, f+[eta*x % prime for x in f]
 
 
 def geometry(core, centers):
@@ -83,7 +83,7 @@ def geometry(core, centers):
     points = sorted(set(p for copy in occurrences for p in copy))
     index = {p: i for i, p in enumerate(points)}
     copies = [[index[p] for p in copy] for copy in occurrences]
-    prime, images, _ = modular_filter()
+    prime, images = modular_filter()
     # Conjugate the F coefficient and replace eta by t-eta before evaluation.
     f = images[:16]
     eta = images[16]
@@ -135,7 +135,68 @@ def solve(points, copies, edges, budget):
             coloring = [next(c for c in range(k) if k*v+c+1 in positive) for v in range(len(points))]
             assert all(coloring[a] != coloring[b] for a, b in edges)
             record['five_coloring'] = ''.join(map(str, coloring))
-        return record
+    return record
+
+
+def mechanisms(points, copies, edges, core):
+    """A positive construction diagnostic, independent of the free SAT word."""
+    owners = [{} for _ in points]
+    for j, copy in enumerate(copies):
+        for i, p in enumerate(copy):
+            owners[p][j] = i
+    word = core['five_coloring']
+    constraints = {ij: [set(), set()] for ij in combinations(range(len(copies)), 2)}
+    for owner in owners:
+        for i, j in combinations(owner, 2):
+            constraints[i, j][0].add((word[owner[i]], word[owner[j]]))
+    for a, b in edges:
+        for i, pi in owners[a].items():
+            for j, pj in owners[b].items():
+                if i < j:
+                    constraints[i, j][1].add((word[pi], word[pj]))
+                elif j < i:
+                    constraints[j, i][1].add((word[pj], word[pi]))
+
+    def compatible(i, p, j, q):
+        equal, different = constraints[i, j]
+        return all(p[a] == q[b] for a, b in equal) and all(p[a] != q[b] for a, b in different)
+
+    perms = list(permutations(range(5)))
+    domains = [[perms[0]]]+[[p for p in perms if compatible(0, perms[0], j, p)]
+                          for j in range(1, len(copies))]
+
+    def visit(frames):
+        j = len(frames)
+        if j == len(copies):
+            return frames
+        for p in domains[j]:
+            if all(compatible(i, q, j, p) for i, q in enumerate(frames)):
+                result = visit(frames+[p])
+                if result is not None:
+                    return result
+        return None
+
+    frames = visit([])
+    record = dict(frame_status='SAT' if frames is not None else 'NO_FRAME_FOUND_SEARCH_ONLY',
+                  frame_domain_sizes=[len(d) for d in domains])
+    if frames is not None:
+        record['reference_color_frames'] = frames
+    core_edges = set(map(tuple, core['induced_edges']))
+    well_defined = all(len(set(owner.values())) == 1 for owner in owners)
+    if well_defined:
+        projection = [next(iter(owner.values())) for owner in owners]
+        if all(tuple(sorted((projection[a], projection[b]))) in core_edges for a, b in edges):
+            record['unit_graph_projection'] = 'Every occurrence maps to its original Parts vertex index'
+            cross_counts = {}
+            for a, b in edges:
+                if owners[a].keys() & owners[b].keys():
+                    continue
+                for i in owners[a]:
+                    for j in owners[b]:
+                        key = ','.join(map(str, sorted((i, j))))
+                        cross_counts[key] = cross_counts.get(key, 0)+1
+            record['new_cross_edges_by_copy_pair'] = cross_counts
+    return record
 
 
 def run(root, budget, center_count):
@@ -151,12 +212,14 @@ def run(root, budget, center_count):
     print(json.dumps(dict(stage='geometry', centers=centers, **summary)), flush=True)
     search = solve(points, copies, edges, budget)
     print(json.dumps({k: v for k, v in search.items() if k != 'five_coloring'}), flush=True)
+    mechanism = mechanisms(points, copies, edges, core)
+    print(json.dumps(dict(stage='mechanism', **mechanism)), flush=True)
     return dict(schema=1, experiment='E043',
                 host='P union (eta*(P-a)+a) for a in the listed centers; eta=exp(2*pi*i/5)',
                 field='Q(i,sqrt(3),sqrt(11),sqrt(5))[eta], eta^2=((sqrt(5)-1)/2)*eta-1',
                 base_radicals=list(RAD), coordinate_denominator=96,
                 centers=centers, core_sha256=hashlib.sha256(raw).hexdigest(),
-                geometry=summary, search=search,
+                geometry=summary, search=search, mechanism=mechanism,
                 scope='Only this finite induced unit graph; not a field or plane coloring. Negative solver returns are not certificates.')
 
 

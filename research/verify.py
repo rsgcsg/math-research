@@ -50,6 +50,12 @@ from verify_cyclotomic_integer_stack import verify as verify_cyclotomic_integer_
 from verify_cyclotomic_127 import verify as verify_cyclotomic_127
 from verify_cyclotomic_field import verify as verify_cyclotomic_field
 from verify_cyclotomic_sparse_coupling import verify as verify_cyclotomic_sparse_coupling
+from verify_cyclotomic_direction_parity import verify as verify_cyclotomic_direction_parity
+from verify_quintic_projection import verify as verify_quintic_projection
+from verify_cm_density_coloring import verify as verify_cm_density_coloring
+from verify_invariant_joint_ceiling import verify as verify_invariant_joint_ceiling
+from verify_quintic_core_probe import verify as verify_quintic_core_probe
+from verify_dense_five_color_tower import verify as verify_dense_five_color_tower
 
 
 def main():
@@ -58,7 +64,8 @@ def main():
         sys.exit('Do not disable assertions when verifying mathematical certificates.')
     root = Path(__file__).resolve().parents[1]
     for p in ('README.md', 'AGENTS.md', 'docs/CURRENT.md', 'docs/ROUTES.md',
-              'docs/RESULTS.md', 'references/SOURCES.md'):
+              'docs/RESULTS.md', 'references/SOURCES.md',
+              'docs/proofs/hn_unified_framework.md', 'references/LITERATURE_MAP.md'):
         assert (root / p).is_file(), p
     result = run()
     result['relation_calibration'] = calibrate()
@@ -149,6 +156,12 @@ def main():
     print(json.dumps(verify_cyclotomic_127(root), indent=2))
     print(json.dumps(verify_cyclotomic_field(root), indent=2))
     print(json.dumps(verify_cyclotomic_sparse_coupling(root), indent=2))
+    print(json.dumps(verify_cyclotomic_direction_parity(root), indent=2))
+    print(json.dumps(verify_quintic_projection(root), indent=2))
+    verify_cm_density_coloring()
+    print(json.dumps(verify_invariant_joint_ceiling(root), indent=2))
+    print(json.dumps(verify_quintic_core_probe(root), indent=2))
+    print(json.dumps(verify_dense_five_color_tower(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))
