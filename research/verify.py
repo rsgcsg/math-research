@@ -58,6 +58,10 @@ from verify_quintic_core_probe import verify as verify_quintic_core_probe
 from verify_dense_five_color_tower import verify as verify_dense_five_color_tower
 from verify_quintic_congruence import verify as verify_quintic_congruence
 from verify_quintic_anchor_bridge import verify as verify_quintic_anchor_bridge
+from verify_quintic_bridge_family import verify as verify_quintic_bridge_family
+from verify_quintic_bridge_contacts import verify as verify_quintic_bridge_contacts
+from verify_quintic_second_host import verify as verify_quintic_second_host
+from verify_quintic_root_spectrum import verify as verify_quintic_root_spectrum
 
 
 def main():
@@ -167,6 +171,11 @@ def main():
     print(json.dumps(verify_dense_five_color_tower(root), indent=2))
     print(json.dumps(verify_quintic_congruence(root), indent=2))
     print(json.dumps(verify_quintic_anchor_bridge(root), indent=2))
+    print(json.dumps(verify_quintic_bridge_family(root), indent=2))
+    print(json.dumps(verify_quintic_bridge_contacts(root), indent=2))
+    print(json.dumps(verify_quintic_second_host(root), indent=2))
+    print(json.dumps(verify_quintic_second_host(root,root/'certificates/quintic_nontorsion_host.json'), indent=2))
+    print(json.dumps(verify_quintic_root_spectrum(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))
