@@ -14,6 +14,9 @@ from fractional_ceiling import verify as verify_fractional_ceiling
 from joint_moment_gap import verify as verify_joint_moment_gap
 from verify_joint_face import verify as verify_joint_face
 from verify_parts_core import verify as verify_parts_core
+from verify_quintic_shifted_spectrum import verify as verify_quintic_shifted_spectrum
+from verify_quintic_radial_escape import verify as verify_quintic_radial_escape
+from verify_quintic_parametric_contacts import verify as verify_quintic_parametric_contacts
 from verify_parts_triples import verify as verify_parts_triples
 from verify_parts_parallelograms import verify as verify_parts_parallelograms
 from verify_residue11 import verify as verify_residue11
@@ -176,6 +179,9 @@ def main():
     print(json.dumps(verify_quintic_second_host(root), indent=2))
     print(json.dumps(verify_quintic_second_host(root,root/'certificates/quintic_nontorsion_host.json'), indent=2))
     print(json.dumps(verify_quintic_root_spectrum(root), indent=2))
+    print(json.dumps(verify_quintic_shifted_spectrum(root), indent=2))
+    print(json.dumps(verify_quintic_radial_escape(root), indent=2))
+    print(json.dumps(verify_quintic_parametric_contacts(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))
