@@ -67,6 +67,8 @@ from verify_quintic_second_host import verify as verify_quintic_second_host
 from verify_quintic_root_spectrum import verify as verify_quintic_root_spectrum
 from verify_quintic_independent_center import verify as verify_quintic_independent_center
 from verify_quintic_translated_orbit import verify as verify_quintic_translated_orbit
+from verify_quintic_joint_ports import verify as verify_quintic_joint_ports
+from verify_joint_column_pricing import verify as verify_joint_column_pricing
 
 
 def main():
@@ -186,6 +188,9 @@ def main():
     print(json.dumps(verify_quintic_parametric_contacts(root), indent=2))
     print(json.dumps(verify_quintic_independent_center(root), indent=2))
     print(json.dumps(verify_quintic_translated_orbit(root), indent=2))
+    print(json.dumps(verify_quintic_joint_ports(root), indent=2))
+    print(json.dumps(verify_quintic_joint_ports(root, root/'certificates/quintic_joint_translations.json'), indent=2))
+    print(json.dumps(verify_joint_column_pricing(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))
