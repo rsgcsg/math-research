@@ -77,6 +77,19 @@ T095/E064补齐14对，认证X上任意合法两点预染色均可延伸；随�
 当前有限方向群内，真正全词joint反证能显式生成实际有限NON5图；
 现有库内分离不满足输入条件，真正反证仍未找到。
 
+本次接续：[E065十个最大域](docs/proofs/quintic_full_translation_laws.md)
+仍被同一完整正词修复，停止该事件族加预算。
+[T097–T098](docs/proofs/near_unit_obstruction_compactness.md)证明固定规模
+近单位反例可压成真正单位反例，并排除对Parts/Moser等含三角形
+种子直接Mycielski升色的整条路线。点数、边数、高度、证明长度与
+外部局部一致性结论分开计量；普通HN仍没有新界。
+再换到无三角升色候选后，[T099/E066](docs/proofs/mycielski_collision_refutation.md)
+用3208节点有理证书排除Grötzsch的所有碰撞分支，继而排除47点
+六色Mycielski图的单位同态及任意精度逼近。小型几何反证已实做，
+它淘汰候选，不是给原始HN提高下界。
+进一步由一个显式五圈推广：任意带边种子的两次及以上Mycielski
+迭代都被同一个障碍关闭，不只是47点单例。
+
 ```text
 references/      原始来源、文献地图、未经重放的历史输入
 docs/            canonical状态、依赖、结果账本、完整证明

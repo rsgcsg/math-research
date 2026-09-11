@@ -70,6 +70,8 @@ from verify_quintic_translated_orbit import verify as verify_quintic_translated_
 from verify_quintic_joint_ports import verify as verify_quintic_joint_ports
 from verify_joint_column_pricing import verify as verify_joint_column_pricing
 from verify_quintic_pair_completion import verify as verify_quintic_pair_completion
+from verify_quintic_full_translation_laws import verify as verify_quintic_full_translation_laws
+from verify_mycielski_collision_refutation import verify as verify_mycielski_collision_refutation
 
 
 def main():
@@ -193,6 +195,8 @@ def main():
     print(json.dumps(verify_quintic_joint_ports(root, root/'certificates/quintic_joint_translations.json'), indent=2))
     print(json.dumps(verify_joint_column_pricing(root), indent=2))
     print(json.dumps(verify_quintic_pair_completion(root), indent=2))
+    print(json.dumps(verify_quintic_full_translation_laws(root), indent=2))
+    print(json.dumps(verify_mycielski_collision_refutation(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

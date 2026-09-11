@@ -5,6 +5,13 @@
 来源文件、固定提交、缓存哈希及较早阅读记录见 [SOURCES](SOURCES.md)。
 普通欧氏 HN 的已知范围仍是 `5 ≤ χ(R²) ≤ 7`。
 
+2026-09-11定向补充：本轮原文阅读版本与范围列于[SOURCES](SOURCES.md)。
+近单位区间的零厚度量词、一般CSP宽度与平面单位输入的区别，见
+[T097–098](../docs/proofs/near_unit_obstruction_compactness.md)；Mycielski
+嵌入维数的单射假设与允许碰撞的本地反证，见
+[T099/E066](../docs/proofs/mycielski_collision_refutation.md)。
+这次补充没有重新宣称整张地图完成新的全面审计。
+
 ## 怎么读这张地图
 
 这里按可迁移的数学机制组织，而非按“看起来接近突破”的标题排序。
