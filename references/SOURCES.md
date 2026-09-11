@@ -240,6 +240,12 @@ Proc. AMS 126(3), 701–710 (1998)，DOI 10.1090/S0002-9939-98-04294-4。
   已读§1及Theorems 1.1/1.2；D≤22以x=1/23的精确有理不等式校准。
   不宣称本文后续算法分析已全部独立重证。
 
+- Abramsky–Brandenburger，[The Sheaf-Theoretic Structure of Non-Locality
+  and Contextuality, v7](https://arxiv.org/html/1102.0264v7)，2011-11-29，
+  New J. Phys. 13 (2011) 113036。2026-09-11阅读§§2.2–2.5、4.3及§6
+  的强contextuality定义，用作局部／全局分布区分的成熟参照；不声称
+  本轮验证其量子表示或得到HN所需的几何约束。T093不依赖该外部定理。
+
 1. 局部满射(每邻域看到其余全部色)并不等于equitable(颜色级邻数固定)。
 2. 7色 affine 三角格覆盖不是全平面7色铺砌本身。
 3. 普通单位距离图允许边交叉；若“planar gadget”指平面图，会被四色定理
