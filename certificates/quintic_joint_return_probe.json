@@ -1,0 +1,491 @@
+{
+  "experiment": "E081",
+  "source_experiment": "E080",
+  "probes": [
+    {
+      "motion": "H30_0_0_1_0",
+      "domain": 10077,
+      "mapping_sha256": "fa04931f56e3d3001346acb97853c589a0a3715f12513f572425a92bec55881f",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_0_1_1",
+      "domain": 1895,
+      "mapping_sha256": "fd24ff5d17f06ae7da4863520e08e0df1e7811b9238650c3dddaec2b44bd704e",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_0_-1_0",
+      "domain": 3191,
+      "mapping_sha256": "1672e9bdc65ca2d5155e1d0e227ab65e445f1cc8315404878672c0c76a1061f3",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_0_-1_1",
+      "domain": 1866,
+      "mapping_sha256": "b706ea770abe09c3082c4fb47b020ee1bf749b037c8d01cce702f5142bfe03bd",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_1_1_0",
+      "domain": 4671,
+      "mapping_sha256": "108cba6231df0b85ebad6a9f22591fd6372f0f677bccc9a6dffa6c471486920d",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_1_1_1",
+      "domain": 1051,
+      "mapping_sha256": "4fcf78f207d7eff999bd0307c6deb3e4534bb0c7fd5945cc3b232d2378c2a14d",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_1_-1_0",
+      "domain": 3181,
+      "mapping_sha256": "2bba11b80206f9cb80b8c0920daa34e3adb8a39dc18055743837d5f0efb0004f",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_1_-1_1",
+      "domain": 1786,
+      "mapping_sha256": "72f9539f25cf0cdcece27770c525aafb27915556c8642ced18a7253e8392eae4",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_2_1_0",
+      "domain": 4671,
+      "mapping_sha256": "b82b6241e9e89c0e1544793292cbf56451e70d0a4c4ca8d7fd15ac29f2f0dd0d",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_2_1_1",
+      "domain": 1051,
+      "mapping_sha256": "22a4b9c65e8aa32dedde056a81b5b205d8d13d17d72856be8478a968f8b7553c",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_2_-1_0",
+      "domain": 3181,
+      "mapping_sha256": "23aa407745e1455013266d744ca2f2a77aff043487180ec8daae83ddecc14cbe",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_0_2_-1_1",
+      "domain": 1786,
+      "mapping_sha256": "d810a6433ffce158e119aa5bd6846a1d46a25e9c577ee3347886460885013ddd",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_0_1_0",
+      "domain": 5289,
+      "mapping_sha256": "36167c82bd8d25a31ce47f0feea41fc80feda11cb84085f1243b94c758a82c46",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_0_1_1",
+      "domain": 1588,
+      "mapping_sha256": "b76f8aaacb21621103fd45828082535813128f844bc7033cc7fe620cf311c4ad",
+      "full_partition_equal": false,
+      "pair_witness": {
+        "pairs": [
+          [
+            31,
+            474
+          ],
+          [
+            1377,
+            4272
+          ]
+        ],
+        "same_counts": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "motion": "H30_1_0_-1_0",
+      "domain": 4359,
+      "mapping_sha256": "185c161caa9d378a2da8591112d5c45b25b27e4e2cbeb421d85803f01fc26035",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_0_-1_1",
+      "domain": 1801,
+      "mapping_sha256": "0392dc587b36ea01930794ced09e072bd70226947a4ff03fb1304a0a0c13c6d5",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_1_1_0",
+      "domain": 4075,
+      "mapping_sha256": "587328c1eb725fe678a965739cdf8d6ad4741cfe093dfae9f82007f547113f1a",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_1_1_1",
+      "domain": 1346,
+      "mapping_sha256": "c13b1277e46c31123ba1fffc991374b9772a19d5f9b3c502a31570c0b5d28189",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_1_-1_0",
+      "domain": 3777,
+      "mapping_sha256": "e0ed462b9017668f746ebf4dc56fbe99f703d16886959c9c1b4c39d9d11ccc10",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_1_-1_1",
+      "domain": 1493,
+      "mapping_sha256": "ecbc02002a8691b6fc29e08d2762bc1c9e9165652ee18c15352293df30c55dcc",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_2_1_0",
+      "domain": 4075,
+      "mapping_sha256": "65a0c8ce447f4cc66aa7470277d4f0ee9019e3be69e7c8a28f1b2ef48336821b",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_2_1_1",
+      "domain": 1346,
+      "mapping_sha256": "48fe053d3a5a94777e78c8d1da3f46470279af3408f774e3fe5e6bab446803f0",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_2_-1_0",
+      "domain": 3777,
+      "mapping_sha256": "d3edb059a28f85be963f789dc85f347c37f6ad4a8a4bb746b9b498999fcc4281",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_1_2_-1_1",
+      "domain": 1493,
+      "mapping_sha256": "1bebe84de50f5cb22bdb4c71545fa48a8b3724c286a50b92b2ba82f4e2db9de4",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_0_1_0",
+      "domain": 5289,
+      "mapping_sha256": "bdcd34b0a73d0f03d2946c0b1c7d0f5cfb62014cd8bfb61a72bd103b680c70b6",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_0_1_1",
+      "domain": 1588,
+      "mapping_sha256": "8af94894d5d9d11182cf1e707e841ae19e5d195f664c0b667803d456e6dae3a8",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_0_-1_0",
+      "domain": 4359,
+      "mapping_sha256": "5cb3705a48a0dd8f61e490f9088511ffe68bbf6b4e85ca813563c8bc90f40aca",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_0_-1_1",
+      "domain": 1800,
+      "mapping_sha256": "66f01150eae2cd78ff28590140c3f19b4ec9d0474f7d593569f2c72434c6ec06",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_1_1_0",
+      "domain": 4075,
+      "mapping_sha256": "150cfa1153eca552ade3f7c8cf91850d9d4fab3e7659e2cd2124b80638ce71bc",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_1_1_1",
+      "domain": 1345,
+      "mapping_sha256": "7ef655029a0862ff879c8d07cc368d851f7a245c9aa8e22af756efd7237fd755",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_1_-1_0",
+      "domain": 3777,
+      "mapping_sha256": "2b0a9df5962a7f2e68df5cd69ed536fb6792a44e67b2ba33d1f9d6672c898dd4",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_1_-1_1",
+      "domain": 1492,
+      "mapping_sha256": "a30e2d1dafa80dea578a8bb8af6fd9d3fc432d9b6209c3da137cb93f39097e77",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_2_1_0",
+      "domain": 4075,
+      "mapping_sha256": "58302eb15697d8f5c41f047db7bd1efa78ca5445dc01ac762a3c67baff38b126",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_2_1_1",
+      "domain": 1345,
+      "mapping_sha256": "43cc0cd5364277d21e2a9931b78a02703c9db8d1d9effdd0472ef068e65c2df2",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_2_-1_0",
+      "domain": 3777,
+      "mapping_sha256": "4d56d8fd64481dfe7a429d075866845f94ca8f5afb3ec22edf0f0d00d31a6073",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_2_2_-1_1",
+      "domain": 1492,
+      "mapping_sha256": "a74cfb6859c26ba70c1e8b8391279dcfc39b83e7aa73ba574a16be6c6467e411",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_0_1_0",
+      "domain": 5289,
+      "mapping_sha256": "4e6adf992b52c75bd967148f19d23fcaedea922031825097da92db7c8f9bdcc4",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_0_1_1",
+      "domain": 1588,
+      "mapping_sha256": "b21ce34bbcc977f710d4203250ea4feec5e832b257a097268475a0829a227b43",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_0_-1_0",
+      "domain": 4359,
+      "mapping_sha256": "6439a059b2af27aa2dc9729251771e1e3ff0a7cefbb26b1e76abb635b4d67a41",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_0_-1_1",
+      "domain": 1800,
+      "mapping_sha256": "fd6174f2a4f040abf62c8debbb1bf461f58512094d1bcce8372677c53c1da26b",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_1_1_0",
+      "domain": 4075,
+      "mapping_sha256": "e4d2506f77f05619d87be64238d36b0414c8312d10ae9cc63864adfd6ea120b1",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_1_1_1",
+      "domain": 1345,
+      "mapping_sha256": "20dfb59b918238d18b58097941a1b2b159dab76fe211cbcba939aa8421e99388",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_1_-1_0",
+      "domain": 3777,
+      "mapping_sha256": "57204feea606ab820f1cd18f62418a4f08679a4c37814088478c58004a1afef3",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_1_-1_1",
+      "domain": 1492,
+      "mapping_sha256": "28ec88f24e3eca208cb65591eab54a1ee1ed90106f138d1653c7d264c4e9c4d3",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_2_1_0",
+      "domain": 4075,
+      "mapping_sha256": "02c5234f62ac12b8a0e52e80c131c1761b6e5f94aa2a5049e936698360f877aa",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_2_1_1",
+      "domain": 1345,
+      "mapping_sha256": "2831e26171f35aee1a24ca6c53e3f80e751c14f892eb428f8ea06aec6ab08bda",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_2_-1_0",
+      "domain": 3777,
+      "mapping_sha256": "27cd3371634fea99b6cacfafb91186154d6bb4165dd6c24638ede98210450044",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_3_2_-1_1",
+      "domain": 1492,
+      "mapping_sha256": "c7ae33b6eb7033cd65d81b5dd8cb165a7df1cd2e7152c5c076aa0cff43b3680f",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_0_1_0",
+      "domain": 5289,
+      "mapping_sha256": "f01d5948f49da2227db71f42733ac830864638a15fb1e42b42ed54541cd80739",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_0_1_1",
+      "domain": 1588,
+      "mapping_sha256": "7fb97630496e0ba16f4814b95d9cf4a7cc3041263b0e8373e51af443bb3086b1",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_0_-1_0",
+      "domain": 4359,
+      "mapping_sha256": "a04c3c85d457ad670eddb60a25f8efae9f94f35d02f27c68c9f17f37bfcb7f67",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_0_-1_1",
+      "domain": 1800,
+      "mapping_sha256": "bac1aaa29b85c8c8d2f5f156be29a4968a78fbf58eee5f90bcb1270800f6512c",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_1_1_0",
+      "domain": 4075,
+      "mapping_sha256": "881a3a1a051c0fba5f6a63f3c790c41bfd1c65f04cb059fca1567963e66271ab",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_1_1_1",
+      "domain": 1345,
+      "mapping_sha256": "1fa6ba2707ca33ff419ad9534703974896899abbc514f8072b7f9779d3c6ea51",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_1_-1_0",
+      "domain": 3777,
+      "mapping_sha256": "7a5f075889875a860faaf401313964ad11a96a460d626ec6add082c8f35436ef",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_1_-1_1",
+      "domain": 1492,
+      "mapping_sha256": "534ba0ef8865ca41df90c3ec6bb203103db79c59db33a0bd46c4ecbfe0cc9347",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_2_1_0",
+      "domain": 4075,
+      "mapping_sha256": "26c787188bb646e4ea7de2c3ecc7d833c4cbec1a94ce3b346a252a67af12f865",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_2_1_1",
+      "domain": 1345,
+      "mapping_sha256": "4c9ec593652e47720be0873aedcca3f6b2f2ba9085d3c68479a0f72f7e56ca02",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_2_-1_0",
+      "domain": 3777,
+      "mapping_sha256": "42b6ce9471e8a138e678b141519eeedfa5f6d040afbf4512cbedfdd5de137064",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "H30_4_2_-1_1",
+      "domain": 1492,
+      "mapping_sha256": "d5ea5b8723005f53f607056ee29b8b286283f4dfe034d4bb263af84ce1d03086",
+      "full_partition_equal": false,
+      "pair_witness": null
+    },
+    {
+      "motion": "nu_squared",
+      "domain": 1,
+      "mapping_sha256": "01318145744ffbaacaae98a75d79e24694e345e425bdec80c86d304dea21bda7",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "tau_squared",
+      "domain": 91,
+      "mapping_sha256": "57ca8ba86e1c00993347d559b910c3b5cee591dcd45b40d06e4ef84520353b7f",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "nu_eta",
+      "domain": 638,
+      "mapping_sha256": "fc70d8d6dffd35a02eb0e2834b57fbc87301a1bdcbefe4efca70d792c1e91ace",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "nu_omega",
+      "domain": 556,
+      "mapping_sha256": "9f3c1af97eeb4a1359f553504999ae2867b16243392a346293b227274404881e",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "tau_eta",
+      "domain": 2690,
+      "mapping_sha256": "a37322dd5c6f1ca9d92ac0e8748175f38086ae9e2461b37cb6b5a53aed1a1b94",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "tau_omega",
+      "domain": 2381,
+      "mapping_sha256": "dd1e8d7cd415ae43fd295eafc0077ff2b4016999adfd580f97b0605241b4b504",
+      "full_partition_equal": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "translation_eta_z",
+      "domain": 600,
+      "mapping_sha256": "f32e761324594b49dc7ba6b26fe58a29ef300f59f0a2cb029616b6ca180d6554",
+      "full_partition_equal": true,
+      "pair_witness": null
+    }
+  ],
+  "scope": "Diagnostics of this saved law only; no all-word obstruction or infinite extension claim"
+}

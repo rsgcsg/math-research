@@ -1,0 +1,62 @@
+{
+  "experiment": "E080",
+  "scope": "Uncertified fixed-support solver observations only",
+  "probes": [
+    {
+      "experiment": "E080",
+      "support": 2,
+      "geometry": {
+        "vertices": 10077,
+        "actual_pairs": 50767926,
+        "induced_edges": 49858,
+        "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+        "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+        "overlap": 91,
+        "new_cross_edges": 170
+      },
+      "history": [
+        {
+          "motion": "one_plus_eta_1",
+          "status": "UNSAT_FIXED_SUPPORT_ONLY",
+          "domains": 9,
+          "stats": {
+            "restarts": 415,
+            "conflicts": 5318,
+            "decisions": 48876,
+            "propagations": 5664742
+          }
+        }
+      ],
+      "result": null,
+      "scope": "Positive listed full domains only; bounded-support UNSAT or UNKNOWN is not a full-joint obstruction"
+    },
+    {
+      "experiment": "E080",
+      "support": 3,
+      "geometry": {
+        "vertices": 10077,
+        "actual_pairs": 50767926,
+        "induced_edges": 49858,
+        "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+        "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+        "overlap": 91,
+        "new_cross_edges": 170
+      },
+      "history": [
+        {
+          "motion": "one_plus_eta_1",
+          "status": "UNSAT_FIXED_SUPPORT_ONLY",
+          "domains": 9,
+          "stats": {
+            "restarts": 700,
+            "conflicts": 20690,
+            "decisions": 175599,
+            "propagations": 32196518
+          }
+        }
+      ],
+      "result": null,
+      "scope": "Positive listed full domains only; bounded-support UNSAT or UNKNOWN is not a full-joint obstruction"
+    }
+  ]
+}

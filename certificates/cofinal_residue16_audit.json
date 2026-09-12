@@ -1,0 +1,519 @@
+{
+  "status": "PASS",
+  "target": "HG(F16)",
+  "target_chromatic": 4,
+  "vertices": 256,
+  "pairs": 32640,
+  "edges": 1920,
+  "unit_directions": 15,
+  "field_modulus_bits": 19,
+  "linear_color_masks": [
+    17,
+    143
+  ],
+  "proper_linear_pairs": 240,
+  "quotient_algebra": "F16^4",
+  "quotient_binary_rank": 16,
+  "paired_components": [
+    0,
+    3
+  ],
+  "conjugation_power": 4,
+  "basis_products_checked": 256,
+  "discriminant": "52333711181640625/282429536481",
+  "spindle_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "spindle_four_word": [
+    0,
+    2,
+    3,
+    1,
+    1,
+    2,
+    3
+  ],
+  "membership": [
+    {
+      "name": "P",
+      "vertices": 509,
+      "depth_histogram": {
+        "0": 374,
+        "1": 15,
+        "2": 120
+      },
+      "first_index_by_depth": {
+        "0": 0,
+        "1": 409,
+        "2": 374
+      }
+    },
+    {
+      "name": "X",
+      "vertices": 5084,
+      "depth_histogram": {
+        "0": 3734,
+        "1": 150,
+        "2": 1200
+      },
+      "first_index_by_depth": {
+        "0": 0,
+        "1": 56,
+        "2": 111
+      }
+    },
+    {
+      "name": "Y",
+      "vertices": 10077,
+      "depth_histogram": {
+        "0": 7407,
+        "1": 300,
+        "2": 2370
+      },
+      "first_index_by_depth": {
+        "0": 0,
+        "1": 26,
+        "2": 24
+      }
+    }
+  ],
+  "tau_dyadic_integral": true,
+  "parts_valuation_witnesses": [
+    {
+      "component": 0,
+      "parts_index": 374,
+      "residue_of_four_p": 6,
+      "valuation_information": "exactly_minus_two"
+    },
+    {
+      "component": 1,
+      "parts_index": 374,
+      "residue_of_four_p": 7,
+      "valuation_information": "exactly_minus_two"
+    },
+    {
+      "component": 2,
+      "parts_index": null,
+      "residue_of_four_p": null,
+      "valuation_information": "at_least_minus_one"
+    },
+    {
+      "component": 3,
+      "parts_index": null,
+      "residue_of_four_p": null,
+      "valuation_information": "at_least_minus_one"
+    }
+  ],
+  "parts_prime_valuation_minima": [
+    -2,
+    -2,
+    0,
+    0
+  ],
+  "parts_prime_minimum_witnesses": [
+    {
+      "component": 0,
+      "parts_index": 374,
+      "valuation": -2,
+      "residue_of_four_p": [
+        6,
+        3,
+        5,
+        2
+      ]
+    },
+    {
+      "component": 1,
+      "parts_index": 374,
+      "valuation": -2,
+      "residue_of_four_p": [
+        3,
+        3,
+        5,
+        2
+      ]
+    },
+    {
+      "component": 2,
+      "parts_index": 1,
+      "valuation": 0,
+      "residue_of_four_p": [
+        4,
+        4,
+        4,
+        0
+      ]
+    },
+    {
+      "component": 3,
+      "parts_index": 1,
+      "valuation": 0,
+      "residue_of_four_p": [
+        4,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "balancing_rotation_formula": "conjugate((1+3*(eta+eta^-1+1)*z)/2)",
+  "balancing_rotation_coefficients": [
+    "1/2",
+    "0",
+    "3/2",
+    "3/2",
+    "0",
+    "0",
+    "3/2",
+    "3/2",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "balancing_rotation_membership": [
+    {
+      "name": "P",
+      "vertices": 509,
+      "depth_histogram": {
+        "0": 58,
+        "1": 451
+      }
+    },
+    {
+      "name": "Y",
+      "vertices": 10077,
+      "depth_histogram": {
+        "0": 771,
+        "1": 9306
+      }
+    }
+  ],
+  "parts_isometry_minimum_dyadic_depth": 1,
+  "fixed_four_palette_extension_gadget": {
+    "vertices": 10,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "neighbors_four_colors": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "second_neighbors_four_colors": [
+      2,
+      1,
+      0,
+      3
+    ],
+    "boundary_colors": {
+      "0": 0,
+      "1": 3,
+      "2": 2,
+      "3": 1,
+      "4": 2,
+      "5": 1,
+      "6": 0,
+      "7": 3
+    },
+    "center_ids": [
+      8,
+      9
+    ],
+    "rejected_center_assignments": 25,
+    "free_two_word": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "coordinates": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "31/19",
+        "0",
+        "-9/19",
+        "-9/19",
+        "51/19",
+        "0",
+        "-24/19",
+        "-24/19",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1180/2371",
+        "1767/2371",
+        "333/2371",
+        "2067/2371",
+        "-192/2371",
+        "5427/2371",
+        "-1308/2371",
+        "2967/2371",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "8803/30631",
+        "-37545/30631",
+        "-27000/30631",
+        "-5502/30631",
+        "36411/30631",
+        "-35289/30631",
+        "-40944/30631",
+        "-28029/30631",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "50/19",
+        "0",
+        "-9/19",
+        "-9/19",
+        "51/19",
+        "0",
+        "-24/19",
+        "-24/19",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "3551/2371",
+        "1767/2371",
+        "333/2371",
+        "2067/2371",
+        "-192/2371",
+        "5427/2371",
+        "-1308/2371",
+        "2967/2371",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "39434/30631",
+        "-37545/30631",
+        "-27000/30631",
+        "-5502/30631",
+        "36411/30631",
+        "-35289/30631",
+        "-40944/30631",
+        "-28029/30631",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3/2",
+        "-3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3/2",
+        "-3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "scope": "The entire 2-integral order has chromatic number 4. Original-frame P/X/Y have depth 2, while an exact rotation puts P/Y in depth 1. Only the specified four-color marginal extension is excluded; no five-color law on either layer or whole field is certified."
+}

@@ -316,3 +316,52 @@ Proc. AMS 126(3), 701–710 (1998)，DOI 10.1090/S0002-9939-98-04294-4。
   coind B₀(G)≥t−1。T102 加入物理点颜色与投影顺序，得平面单位
   同态的 coindex 天花板。外部拓扑定理未由有限证书独立重放，
   推论不声称发表优先权，亦不排除其他拓扑方法。
+
+2026-09-12 完整联合／有效见证／算术共尾复核：
+
+- Chazottes–Gambaudo–Hochman–Ugalde,
+  [On the finite-dimensional marginals of shift-invariant measures, 1011.2442v2](https://arxiv.org/html/1011.2442v2)：
+  主代理已读 Theorems 1–3、Theorem 1证明、§3 Markov延拓与循环流、
+  §4第一项不延拓论证。完整整数窗口条件保留，不套到稀疏Y。
+- Atserias–Dalmau, [Promise Constraint Satisfaction and Width, 2107.05886](https://arxiv.org/pdf/2107.05886)：
+  主代理核对定义及 Corollary 1 的完整量词；一般PCSP(Kp,Kq)，
+  不是二维单位图的宽度下界。未重证整篇分类。
+- Schaefer, [Realizability of Graphs and Linkages](https://ovid.cs.depaul.edu/documents/realizability.pdf)，
+  2013作者稿：主代理读§§2.2–2.3、§3.1定理与精度／碰撞相关证明。
+  Corollary2.9是单射实现的精度；Theorem3.1允许碰撞。不是最小NON5
+  见证高度下界，也不是不可判定性。
+- de Grey–Parts, [2303.14714v1](https://arxiv.org/html/2303.14714v1)，2023-03-26：
+  主代理读完正文。v5≥28/e5≥99、v6≥42/e6≥182及v7>6992按原文报告；
+  NIntegrate部分没有本地独立区间证书，不提升为本项目认证数值。
+- Jeronimo–Perrucci–Tsigaridas,
+  [On the minimum of a polynomial function on a basic closed semialgebraic set and applications, 1112.0544](https://arxiv.org/pdf/1112.0544)：
+  主代理核对Theorem1及§2假设，整数系数、偶数次数界、紧连通分支；
+  作者镜像访问一次失败后改读arXiv PDF。未实现长常数界。
+- Bucić–Davies, [2312.06898v3](https://arxiv.org/html/2312.06898v3)，2024-10-17：
+  主代理核对§3 Proposition6／Theorem8与§4限制；子代理读完整相关证明。
+  固定(G,g,k)量词保留，推出等色数时取k=χ(G)−1；不将维数翻倍
+  或列边高围长误写为二维诱导单位图结论。
+- Wood, [Applications of finite Frobenius rings to the foundations of algebraic coding theory](https://ring-theory-japan.com/ring/oldmeeting/2011/report2011/27WOOD.pdf)，
+  2011会议作者稿：主代理读§5.1 Definitions27–29/Theorem30与§5.2字符证明。
+  本项目仅用有限域线性码的MacWilliams延拓；未声称读完1962原博士论文。
+  Greferath等[1309.3292v1](https://arxiv.org/html/1309.3292v1)及
+  Dyshko[1504.01355v1](https://arxiv.org/html/1504.01355v1)由子代理核对
+  定义／加性反例，作为旁证，不替代这里的自足有限域证明。
+- Milne, [Algebraic Number Theory](https://www.jmilne.org/math/CourseNotes/ANT.pdf)：
+  本轮主代理核对Propositions8.10/8.13与Examples8.18–8.19及相关证明。
+  用于分解群、Frobenius在合成域的限制、二次／分圆局部分类。
+- Madore, [1509.07023v1](https://arxiv.org/html/1509.07023v1)：
+  本轮主代理重读Proposition3.2完整陪集证明、§5.4；其原文已指出
+  真下界可证及真实HN若为7则可证。T115不声明这一观察首创。
+
+上述读取范围与新结论的完整依赖见文献地图及T114–116证明。
+本轮未下载或改写外部论文原件，搜索观察和独立有限验证分别归档。
+## 收口补充：O'Donnell 原始论文
+
+- Paul O'Donnell，1999 博士论文扫描，UMI 9947882，65页；
+  [原扫描公开镜像](https://jakemallen.com/papers/odonnell1999.pdf)。
+  本轮主代理读印刷p.5、pp.13–15、25–26、31–32，并视觉核对p.26；
+  子代理另读pp.1–15。Theorem28为任意围长的四色、单射、列边单位图。
+  p.5定义与Theorem11不提供无额外单位边保证；不升级为诱导图版本。
+  仅内存读取，未新增或改写原PDF。与期刊2000年两篇论文版本区分：
+  [期刊作者目录](https://geombina.uccs.edu/author-index/paul-odonnell)。

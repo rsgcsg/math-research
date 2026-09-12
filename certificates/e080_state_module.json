@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "experiment": "E080_STATE_MODULE_AUDIT",
+  "source_sha256": "3b9b7f893bb2d0b31bfc72d645924858d84961b33b56706f40498251a5663b00",
+  "states": 25,
+  "permutation_sha256": "34ef65e92665e19923cb90d337fd9846625d62ddfec878a4d6a3b17df47b248c",
+  "translation_group_size": 256,
+  "binary_rank": 8,
+  "distinct_singer_conjugates": 15,
+  "additive_group_sha256": "b5c7e2ecdeeda4ede3964a8848c3d8944c294e086f78d5e6694791da96319744",
+  "basis_sha256": "b8dcd0134afc6faf7d9f9d0bf7cf9ff878aaf82b7a2ef62d93d0e0c2b26c4974",
+  "cyclic_module": "F2[v,e]/(v^2+v+1,Phi5(e)) = F16 x F16",
+  "scalar_polynomial_and_cyclotomic_relations": true,
+  "basis_images_checked": 256,
+  "addition_pairs_checked": 65536,
+  "irreducible_quadratic_factorization_over_F4": true,
+  "blocks": [
+    {
+      "support": 0,
+      "fixed_color": 3,
+      "orbit_sizes": [
+        1,
+        4
+      ],
+      "kernel_size": 64
+    },
+    {
+      "support": 1,
+      "fixed_color": 3,
+      "orbit_sizes": [
+        1,
+        4
+      ],
+      "kernel_size": 64
+    },
+    {
+      "support": 2,
+      "fixed_color": 4,
+      "orbit_sizes": [
+        1,
+        4
+      ],
+      "kernel_size": 64
+    },
+    {
+      "support": 3,
+      "fixed_color": 4,
+      "orbit_sizes": [
+        1,
+        4
+      ],
+      "kernel_size": 64
+    },
+    {
+      "support": 4,
+      "fixed_color": 3,
+      "orbit_sizes": [
+        1,
+        4
+      ],
+      "kernel_size": 64
+    }
+  ],
+  "normalizes_group": {
+    "tau": true,
+    "nu": true,
+    "eta": true,
+    "omega": true,
+    "bar": true,
+    "bridge": false,
+    "translation_one": true,
+    "translation_z": false,
+    "one_plus_eta_1": true,
+    "one_plus_eta_2": true,
+    "one_plus_eta_3": true,
+    "one_plus_eta_4": true,
+    "bridge_shift": false
+  },
+  "bridge_order": 12,
+  "bridge_tenth_power_moved_states": 23,
+  "scope": "The supplied finite permutations only; not a global geometric group action, a residue map on Y, proper coloring of HG(F16), or an HN bound"
+}

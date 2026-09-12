@@ -1,0 +1,230 @@
+{
+  "provenance": {
+    "schema": 1,
+    "experiment": "E081",
+    "diagnostic": "minus_bar_full_pair_and_event",
+    "source_experiment": "E080",
+    "source_sha256": "3b9b7f893bb2d0b31bfc72d645924858d84961b33b56706f40498251a5663b00",
+    "geometry": {
+      "vertices": 10077,
+      "actual_pairs": 50767926,
+      "induced_edges": 49858,
+      "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+      "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+      "overlap": 91,
+      "new_cross_edges": 170
+    },
+    "motion": "minus_bar",
+    "domain": 1866,
+    "mapping_sha256": "b706ea770abe09c3082c4fb47b020ee1bf749b037c8d01cce702f5142bfe03bd",
+    "word_indices": 5,
+    "full_partition_equal": false
+  },
+  "all_pairs": {
+    "checked": 1740045,
+    "mismatch_count": 25380,
+    "first_mismatch": {
+      "pairs": [
+        [
+          31,
+          475
+        ],
+        [
+          1377,
+          7023
+        ]
+      ],
+      "same_counts": [
+        1,
+        2
+      ]
+    }
+  },
+  "event": {
+    "predicates": [
+      {
+        "source": [
+          31,
+          1377
+        ],
+        "image": [
+          475,
+          7023
+        ],
+        "equal": true
+      }
+    ],
+    "counts": [
+      1,
+      2
+    ],
+    "source_points": [
+      31,
+      1377
+    ],
+    "image_points": [
+      475,
+      7023
+    ],
+    "point_coordinates": [
+      {
+        "index": 31,
+        "coordinates": [
+          "-3/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-3/4",
+          "0",
+          "0",
+          "0",
+          "3/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "index": 475,
+        "coordinates": [
+          "-3/4",
+          "0",
+          "0",
+          "0",
+          "3/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "0",
+          "-3/4",
+          "0",
+          "0",
+          "0",
+          "3/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "index": 1377,
+        "coordinates": [
+          "-1/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "5/6",
+          "-1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "index": 7023,
+        "coordinates": [
+          "1/3",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "5/6",
+          "-1/6",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ]
+  },
+  "repair": {
+    "experiment": "E083",
+    "source_sha256": "e4ae7e9355783ee7606711ace881faba0353cbd01bef30c36b338dc3d3a844f9",
+    "event_counts": [
+      3,
+      3
+    ],
+    "word_indices": 5
+  },
+  "scope": "Saved-law discrepancy and its later repair only; not an all-word obstruction"
+}

@@ -82,6 +82,15 @@ from verify_quintic_residue5_ring import verify as verify_quintic_residue5_ring
 from verify_quintic_tau_union import verify as verify_quintic_tau_union
 from verify_tau_localization_joint import verify as verify_tau_localization_joint
 from verify_quintic_free_tau_joint import verify as verify_quintic_free_tau_joint
+from verify_finite_joint_support import verify as verify_finite_joint_support
+from verify_finite_joint_compression import verify as verify_finite_joint_compression
+from verify_quintic_joint_return import verify as verify_quintic_joint_return
+from verify_e080_state_module import verify as verify_e080_state_module
+from verify_dyadic_norm_target import verify as verify_dyadic_norm_target
+from verify_dyadic_liftable_target import verify as verify_dyadic_liftable_target
+from verify_quintic_multiword_joint import verify as verify_quintic_multiword_joint
+from cofinal_residue29_verify import verify as verify_cofinal_residue29
+from cofinal_residue16_verify import verify as verify_cofinal_residue16
 
 
 def main():
@@ -218,6 +227,20 @@ def main():
     print(json.dumps(verify_quintic_tau_union(root), indent=2))
     print(json.dumps(verify_tau_localization_joint(root), indent=2))
     print(json.dumps(verify_quintic_free_tau_joint(root), indent=2))
+    print(json.dumps(verify_finite_joint_support(), indent=2))
+    print(json.dumps(verify_finite_joint_compression(), indent=2))
+    print(json.dumps(verify_quintic_multiword_joint(root), indent=2))
+    print(json.dumps(verify_quintic_multiword_joint(root, root / 'certificates/quintic_multiword_return_joint.json'), indent=2))
+    print(json.dumps(verify_cofinal_residue29(root), indent=2))
+    dyadic_report = verify_cofinal_residue16(root)
+    assert json.loads((root / 'certificates/cofinal_residue16_audit.json').read_text()) == json.loads(json.dumps(dyadic_report))
+    print(json.dumps(dyadic_report, indent=2))
+    print(json.dumps(verify_quintic_joint_return(root), indent=2))
+    state_report = verify_e080_state_module(root)
+    assert json.loads((root / 'certificates/e080_state_module.json').read_text()) == json.loads(json.dumps(state_report))
+    print(json.dumps(state_report, indent=2))
+    print(json.dumps(verify_dyadic_norm_target(), indent=2))
+    print(json.dumps(verify_dyadic_liftable_target(), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

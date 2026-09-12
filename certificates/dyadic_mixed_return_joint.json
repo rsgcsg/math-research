@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "experiment": "E084",
+  "support": 5,
+  "source_sha256": "e4ae7e9355783ee7606711ace881faba0353cbd01bef30c36b338dc3d3a844f9",
+  "geometry": {
+    "vertices": 10077,
+    "actual_pairs": 50767926,
+    "induced_edges": 49858,
+    "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+    "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+    "overlap": 91,
+    "new_cross_edges": 170
+  },
+  "history": [
+    {
+      "motion": "dyadic_u",
+      "domains": 15,
+      "domain": 29,
+      "status": "UNKNOWN",
+      "conflict_budget": 150000,
+      "conflicts_this_call": 150000,
+      "cumulative_stats": {
+        "restarts": 3531,
+        "conflicts": 150000,
+        "decisions": 652479,
+        "propagations": 263302119
+      }
+    }
+  ],
+  "result": null,
+  "scope": "Only listed full domains; fixed support UNSAT/UNKNOWN is not an all-word obstruction"
+}
