@@ -1,5 +1,11 @@
 # Hadwiger–Nelson 文献地图：机制、量词与迁移边界
 
+2026-09-12 定向补充：[环/模局部化](https://stacks.math.columbia.edu/tag/00CM)
+统一解释 [T111–T113](../docs/proofs/tau_localization_joint.md) 的分母层：
+单位方向的迹迫使素分母可逆，双向平移模闭包成为整个固定数域。
+有限群作用则量化不变律支持增长；它在二色图上也出现，不能借此
+推断 non-5 见证或证明复杂度。这不是新一轮全面文献审计。
+
 审查日期：2026-09-10。本文是跨领域重审的 canonical 文献地图，不是成果账本；
 本地定理与实验以 [RESULTS](../docs/RESULTS.md)、证明文件和独立检查器为准，
 来源文件、固定提交、缓存哈希及较早阅读记录见 [SOURCES](SOURCES.md)。
@@ -11,6 +17,13 @@
 嵌入维数的单射假设与允许碰撞的本地反证，见
 [T099/E066](../docs/proofs/mycielski_collision_refutation.md)。
 这次补充没有重新宣称整张地图完成新的全面审计。
+
+同日继续：[T101–T102](../docs/proofs/kneser_zigzag_ceiling.md)阅读
+Matoušek 的 Kneser 原始组合证明与 Simonyi–Tardos 的 Zig-zag 原文。
+迁移结果不是“拓扑六色图提供 HN 六色候选”，而是相反：任意有序
+染色强迫的交替四色 K₂,₂ 与单位菱形等中点冲突，故 coind B₀≥3
+的图没有平面单位同态，允许碰撞。该具体拓扑下界连已知单位图
+的普通五色性也不能捕获；不把此天花板推广到所有拓扑工具。
 
 ## 怎么读这张地图
 
@@ -477,6 +490,17 @@ E061–E062的新增收敛见[完整划分与色框天花板](../docs/proofs/joi
 加法关系和可控制的几何端口，而不是因为计数纪录更新了。
 
 ## 收敛后的成熟问题与下一次证据门槛
+
+2026-09-12 接续：[T108–T109](../docs/proofs/quintic_residue5_ring.md)的
+625 点范数图经 `B≅F₂₅×F₂₅` 与共轭交换两分量，恰化为 HG(F₂₅)。
+已对照 [Iosevich–Murphy–Pakianathan](https://arxiv.org/html/1405.7657v1)
+的 hyperbola / Kloosterman 语言与
+[Bardestani–Mallahi-Karai §2.4](https://arxiv.org/html/1507.05300v2#S2.SS4)
+的二次型图。这里的 12 个字符是精确有限结构，不是待相信的新机制名。
+后者 Theorem1.9 的局部域结论含 Borel 限制；不能拿局部 split 范数
+的 Borel 障碍充当普通欧氏非五染。具体版本和阅读层级见 SOURCES。
+新的真实缺口在 5 分母跨层：环 R 内已全体五染，τ∉R 的第一有限
+并集也正修复；接下来须获得跨层全词证据或无条件延伸定理。
 
 当前唯一优先级以[CURRENT](../docs/CURRENT.md)和[统一框架](../docs/proofs/hn_unified_framework.md)
 为准。下列是文献提供的工具门槛，不另设四条活动分支：

@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "experiment": "E073",
+  "geometry": {
+    "vertices": 5084,
+    "actual_pairs": 12920986,
+    "induced_edges": 24844,
+    "point_sha256": "ca0fe68c0398dee5b61eb0acb278196fb6b54f9f2b462bd6c17fa0be7f201375",
+    "edge_sha256": "3c45b20c312afd0cdcb700316a9aa78a6ac29fc9d4920c7b50867faa4eefe8b3"
+  },
+  "module_cosets": 646,
+  "basis_pivots": [
+    0,
+    3,
+    4,
+    7,
+    9,
+    10,
+    13,
+    14,
+    16,
+    19,
+    20,
+    23,
+    25,
+    26,
+    29,
+    30
+  ],
+  "stages": [
+    {
+      "stage": "all_N_translations",
+      "status": "UNSAT_SIX_CHARACTER_MODEL_ONLY"
+    }
+  ],
+  "scope": "Sufficient six-character ansatz only; generator checks not full infinite orientation closure"
+}

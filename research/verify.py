@@ -72,6 +72,16 @@ from verify_joint_column_pricing import verify as verify_joint_column_pricing
 from verify_quintic_pair_completion import verify as verify_quintic_pair_completion
 from verify_quintic_full_translation_laws import verify as verify_quintic_full_translation_laws
 from verify_mycielski_collision_refutation import verify as verify_mycielski_collision_refutation
+from verify_kneser_obstruction_transfer import verify as verify_kneser_obstruction_transfer
+from verify_quintic_module_law import verify as verify_quintic_module_law
+from verify_quintic_three_character_law import verify as verify_quintic_three_character_law
+from verify_affine_joint_compiler import verify as verify_affine_joint_compiler
+from verify_nu_localized_module import verify as verify_nu_localized_module
+from verify_quintic_localized_characters import verify as verify_quintic_localized_characters
+from verify_quintic_residue5_ring import verify as verify_quintic_residue5_ring
+from verify_quintic_tau_union import verify as verify_quintic_tau_union
+from verify_tau_localization_joint import verify as verify_tau_localization_joint
+from verify_quintic_free_tau_joint import verify as verify_quintic_free_tau_joint
 
 
 def main():
@@ -191,12 +201,23 @@ def main():
     print(json.dumps(verify_quintic_parametric_contacts(root), indent=2))
     print(json.dumps(verify_quintic_independent_center(root), indent=2))
     print(json.dumps(verify_quintic_translated_orbit(root), indent=2))
+    print(json.dumps(verify_quintic_translated_orbit(root, root/'certificates/quintic_host_union.json', union=True), indent=2))
     print(json.dumps(verify_quintic_joint_ports(root), indent=2))
     print(json.dumps(verify_quintic_joint_ports(root, root/'certificates/quintic_joint_translations.json'), indent=2))
     print(json.dumps(verify_joint_column_pricing(root), indent=2))
     print(json.dumps(verify_quintic_pair_completion(root), indent=2))
     print(json.dumps(verify_quintic_full_translation_laws(root), indent=2))
     print(json.dumps(verify_mycielski_collision_refutation(root), indent=2))
+    print(json.dumps(verify_kneser_obstruction_transfer(root), indent=2))
+    print(json.dumps(verify_quintic_module_law(root), indent=2))
+    print(json.dumps(verify_quintic_three_character_law(root), indent=2))
+    print(json.dumps(verify_affine_joint_compiler(), indent=2))
+    print(json.dumps(verify_nu_localized_module(), indent=2))
+    print(json.dumps(verify_quintic_localized_characters(root), indent=2))
+    print(json.dumps(verify_quintic_residue5_ring(root), indent=2))
+    print(json.dumps(verify_quintic_tau_union(root), indent=2))
+    print(json.dumps(verify_tau_localization_joint(root), indent=2))
+    print(json.dumps(verify_quintic_free_tau_joint(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

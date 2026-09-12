@@ -7,7 +7,7 @@ from verify_quintic_joint_ports import verify as parent_geometry
 from verify_quintic_core_probe import multiplication_twice,product_twice
 
 
-def verify(root,certificate=None):
+def verify(root,certificate=None,geometry_context=False):
     if not __debug__:raise RuntimeError('Verification requires assertions')
     data=json.loads((certificate or root/'certificates/quintic_full_translation_laws.json').read_text())
     assert data['schema']==1 and data['experiment']=='E065'
@@ -51,9 +51,11 @@ def verify(root,certificate=None):
         name=e['motion'] if e['translation'] is None else e['translation_label']
         assert all(tuple(p) in maps[name] for p in e['pairs'])
         assert pattern([i for i,j in e['pairs']])==pattern([j for i,j in e['pairs']])
-    return dict(experiment='E065',geometry=parent['geometry'],maximal_domains=[len(m['mapping']) for m in motions],
+    report=dict(experiment='E065',geometry=parent['geometry'],maximal_domains=[len(m['mapping']) for m in motions],
                 full_maximal_partition_laws=10,retained_quartets=len(events),
                 scope='One S5-averaged proper word; selected ten maps and internal common words only, not all congruences or HN')
+    if geometry_context:return report,pts,edges,base
+    return report
 
 
 if __name__=='__main__':print(json.dumps(verify(Path(__file__).resolve().parents[1]),indent=2))

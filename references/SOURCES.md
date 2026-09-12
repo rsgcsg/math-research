@@ -1,5 +1,27 @@
 # 外部资料与历史输入
 
+2026-09-12 T111 定向语言核对：
+[Stacks Project §10.9 Localization](https://stacks.math.columbia.edu/tag/00CM)，
+已读定义10.9.2、命题10.9.3及其证明、模版本10.9.6–7。
+用于局部化的成熟表述；具体 τ 模闭包等式由项目自包含证明，
+不将一般局部化事实或有限支持天花板当作 HN 新界。
+
+2026-09-12 T108–T109 定向收敛阅读（非新一轮全面文献审计）：
+
+- [Iosevich–Murphy–Pakianathan 1405.7657v1](https://arxiv.org/html/1405.7657v1)，
+  已读 §1.1 的 hyperbola graph 定义及 §5 的谱/独立集界表述。
+  本地有限范数图另证同构 HG(F₂₅)，625点五染由本地整数核验，
+  不将一般谱下界倒用为欧氏下界。v2 HTML 返回404，实际使用v1。
+- [Bardestani–Mallahi-Karai 1507.05300v2](https://arxiv.org/html/1507.05300v2)，
+  已读 §2.4 的二次型/双曲线图与矩阵嵌入证明，以及 Theorem1.9 的
+  完整假设与命题（未重放其全部调和分析证明）。Borel 色数结论
+  不代替普通 HN。v2 标题为 *Chromatic number of singular and quadratic graphs*。
+- [同作者 1511.02427v3 §4](https://arxiv.org/html/1511.02427v3#S4)，
+  已读 Proposition4.1 的显式 HG(R) 嵌入与 Lemma4.3 的约化命题。
+  本轮只用来识别成熟语言；T108 源环映射与 T109 概率律另有完整本地证明。
+
+无新论文原始计算证书重放；这些外部资料不是 T108/T109 的未检验假设。
+
 2026-09-11 E065/T097–098定向接续阅读（不是新的全面文献审计）：
 
 - [Currie–Eggleton 1509.03667v1 §1](https://arxiv.org/html/1509.03667v1)：
@@ -278,3 +300,19 @@ Proc. AMS 126(3), 701–710 (1998)，DOI 10.1090/S0002-9939-98-04294-4。
 4. escape state 的凸包不自动是某既定多面体的face；使用face术语要给支持超平面。
 5. 临界feasible face技术可借鉴，但普通fractional chromatic有<4.36的上界，
    无法单凭普通χ_f>5推进到六色下界。
+
+2026-09-11 T101–T102 定向原文核对：
+
+- Jiří Matoušek, *A Combinatorial Proof of Kneser's Conjecture*,
+  Combinatorica 24(1) (2004), 163–170，
+  [作者论文镜像](https://kam.mff.cuni.cz/~ksemweb//clanky/Matousek-Kneser_comb_proof.pdf)。
+  已读 §§1–3 的定理、Tucker 推导与组合证明；用于确认 KG(n,k) 的
+  n−2k+2 色数。未把作者组合证明转换为本项目机器证书。
+- Gábor Simonyi and Gábor Tardos, *Local chromatic number, Ky Fan's theorem,
+  and circular colorings*, [arXiv:math/0407075v3](https://arxiv.org/html/math/0407075v3)，
+  2004-11-26。已读 Definition 3、Proposition 8 及证明、§3.3 的
+  Zig-zag 定理及证明。使用的是任意数量有序 proper 颜色的结论，
+  不是仅最优染色版本；topologically t-chromatic 精确指
+  coind B₀(G)≥t−1。T102 加入物理点颜色与投影顺序，得平面单位
+  同态的 coindex 天花板。外部拓扑定理未由有限证书独立重放，
+  推论不声称发表优先权，亦不排除其他拓扑方法。

@@ -10,10 +10,10 @@ from verify_quintic_bridge_contacts import km,RAD
 from verify_quintic_independent_center import verify as predecessor
 
 
-def verify(root,certificate=None):
+def verify(root,certificate=None,union=False):
     if not __debug__:raise RuntimeError('Verification requires assertions; do not use python -O')
     data=json.loads((certificate or root/'certificates/quintic_translated_orbit.json').read_text())
-    assert data['schema']==1 and data['experiments']==['E058','E059','E060'] and data['center']==64
+    assert data['schema']==(2 if union else 1) and data['experiments']==(['E067'] if union else ['E058','E059','E060']) and data['center']==64
     raw=(root/'certificates/parts509_core.json').read_bytes()
     assert hashlib.sha256(raw).hexdigest()==data['core_sha256']
     assert hashlib.sha256((root/'certificates/quintic_independent_center.json').read_bytes()).hexdigest()==data['predecessor_sha256']
@@ -64,11 +64,12 @@ def verify(root,certificate=None):
         a,b=[sum(x.numerator*pow(x.denominator,-1,11)*y for x,y in zip(axis,f11))%11 for axis in (p[:8],p[8:16])]
         return 11*a+b
     target_edges=[(i,j) for i,j in combinations(range(121),2) if ((i//11-j//11)**2+(i%11-j%11)**2)%11==1]
-    reports=[];assert [(row['extra_powers'],row['offset']) for row in data['cases']]==[([1],0),([1,2,3,4],0),([1],1)]
+    reports=[];assert [(row['extra_powers'],row['offset']) for row in data['cases']]==([([1,2,3,4,1],0)] if union else [([1],0),([1,2,3,4],0),([1],1)])
     for row in data['cases']:
         extra=row['extra_powers'];offset=row['offset'];anchor=one if offset else zero
-        bs=blocks+[[add(anchor,mul(rotations[j-1],p)) for p in shifted] for j in extra]
-        ns=neighbors+[{i:[anchor,add(anchor,mul(centers[j-1],shifted[i]))] for i in units} for j in extra]
+        anchors=[zero,zero,zero,zero,one] if union else [anchor]*len(extra)
+        bs=blocks+[[add(a,mul(rotations[j-1],p)) for p in shifted] for j,a in zip(extra,anchors)]
+        ns=neighbors+[{i:[a,add(a,mul(centers[j-1],shifted[i]))] for i in units} for j,a in zip(extra,anchors)]
         den=math.lcm(*(x.denominator for b in bs for p in b for x in p));assert den==row['denominator']==96
         ibs=[[tuple(int(x*den) for x in p) for p in b] for b in bs]
         pts=sorted({p for b in ibs for p in b});index={p:i for i,p in enumerate(pts)};ids=[[index[p] for p in b] for b in ibs]
@@ -84,10 +85,14 @@ def verify(root,certificate=None):
         cross=sum(any((i in a and j in b) or (j in a and i in b) for a,b in boundaries) for i,j in edges)
         summary=dict(vertices=len(pts),actual_pairs=len(pts)*(len(pts)-1)//2,induced_edges=len(edges),point_sha256=digest(pts),edge_sha256=digest(edges),
                      new_vertices=len(new),new_outside_H=len(outside),overlap=len(set(sum(ids[4:],[]))&old),new_to_other_old_blocks=cross)
-        assert summary==row['geometry'] and cross==(7 if offset else 0)
+        if union:
+            host0=set().union(*(set(b) for b in ids[:8]));host1=set().union(*(set(b) for b in ids[:4]),set(ids[8]))
+            summary['new_union_edges']=sum(not (i in host0 and j in host0) and not (i in host1 and j in host1) for i,j in edges)
+        assert summary==row['geometry']
+        if not union:assert cross==(7 if offset else 0)
         expected=(4577,22403,508) if offset else (4378,21316,309) if len(extra)==1 else (5305,26588,1236)
-        assert (len(pts),len(edges),len(new))==expected
-        contacts=set();interface={zero,anchor}
+        if not union:assert (len(pts),len(edges),len(new))==expected
+        contacts=set();interface={zero,*anchors}
         for b,nn in enumerate(ns):
             for i,pp in nn.items():
                 for p in pp:
@@ -95,7 +100,7 @@ def verify(root,certificate=None):
                     contacts.add((ids[b][i],label(p)));interface.add(p)
         assert len(contacts)==row['contact_edges']
         assert len(interface)==row['interface_points']
-        if not offset:
+        if not offset and not union:
             assert len(contacts)==(300 if len(extra)==1 else 312)
             assert len(interface)==(76 if len(extra)==1 else 78)
         search=row['search'];assert search['status']=='SAT'
@@ -106,17 +111,17 @@ def verify(root,certificate=None):
         assert all(target[i]!=target[j] for i,j in target_edges)
         assert word[origin]==target[0] and all(word[i]!=target[j] for i,j in contacts)
         inside=[i for i,p in enumerate(pts) if not any(p[16:])]
-        assert len(inside)==(2 if offset else 1)
+        assert len(inside)==(2 if offset or union else 1)
         assert all(word[i]==target[label(tuple(Q(x,den) for x in pts[i]))] for i in inside)
         # Orientation groups are vertex sets, not disjoint affine lines when
         # offset=1. Their overlap can reclassify old edges; do not interpret
         # that case's count as the number of newly created geometric contacts.
         same_direction=[set(ids[j]+ids[4+extra.index(j+1)]) if j+1 in extra else set(ids[j]) for j in range(4)]
         cross_all=[(i,j) for i,j in edges if not any(i in b and j in b for b in same_direction)]
-        if not offset:assert len(cross_all)==16
+        if not offset and not union:assert len(cross_all)==16
         reports.append(dict(**summary,interface_points=len(interface),contact_edges=len(contacts),edges_outside_orientation_groups=len(cross_all)))
-    return dict(status='PASS',theorem='T093',experiments=data['experiments'],cases=reports,
-                scope='Specified finite additions to the entire F; moved-pivot case is separate from the four-root case; not E or full joint')
+    return dict(status='PASS',theorem='T100' if union else 'T093',experiments=data['experiments'],cases=reports,
+                scope='Specified finite additions to the entire F; union of the two T093 hosts' if union else 'Specified finite additions to the entire F; moved-pivot case is separate from the four-root case; not E or full joint')
 
 
 if __name__=='__main__':
