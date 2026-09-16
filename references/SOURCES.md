@@ -365,3 +365,78 @@ Proc. AMS 126(3), 701–710 (1998)，DOI 10.1090/S0002-9939-98-04294-4。
   p.5定义与Theorem11不提供无额外单位边保证；不升级为诱导图版本。
   仅内存读取，未新增或改写原PDF。与期刊2000年两篇论文版本区分：
   [期刊作者目录](https://geombina.uccs.edu/author-index/paul-odonnell)。
+
+## 2026-09-16：有限补全与有限域来源审核
+
+- Bradley-Williams、Cameron、Hubička、Konečný，
+  [EPPA numbers of graphs, 2311.07995v2](https://arxiv.org/html/2311.07995v2)，
+  2023-12-10版本。主代理读§§1–2.3与§3相关部分，特别是一般图的
+  补全构造及诱导嵌入约定。T120两向证明独立给出；不把原文EPPA
+  存在性换成保k可染性，不把其规模界当HN见证规模界。
+- Schneider–Silva，
+  [Cliques and colorings in generalized Paley graphs and an approach to synchronization,
+  1306.6050v1](https://arxiv.org/pdf/1306.6050v1)，2013-06-25。
+  主、子代理核对§3定义及Theorem4.7(3)与证明。T121的范数坐标对应
+  独立证明；当前指数28不整除30，普通Paley公式不适用。
+- Vinh，[math/0510092v1](https://arxiv.org/pdf/math/0510092v1)，2005-10-05；
+  [math/0606482v1](https://arxiv.org/pdf/math/0606482v1)，2006-06-20。
+  主、子代理分别视觉复核2005稿p.3 Lemma4、p.4 Table1及2006稿p.2
+  Theorem1、p.3 Lemma2。原件未改动，保存于忽略的cache目录。
+  两稿正文确实印√q，E087的D5特征值与D7四色是独立小反例；这是对
+  T053已有警告的补强，不是新发现或对后续版本的断言。
+- Harcos，[Weil's bound for Kloosterman sums](https://users.renyi.hu/~gharcos/weil.pdf)，
+  作者站点获取于2026-09-16。主、子代理核对p.1 Theorem1（主代理视觉复核），
+  素数p>2、a,b均非零时2√p，未重新检查全部曲线证明。
+  一般素数幂仍沿用T053已核读的Conrad Theorem3，不偷换√q常数。
+- Terras，[Finite Models for Arithmetical Quantum Chaos](https://mathweb.ucsd.edu/~aterras/newchaos.pdf)，
+  作者站点获取于2026-09-16，子代理读pp.14–16定义／Kloosterman公式。
+  主代理未复读该段；不作为T121独立证明的前提。1996期刊原文访问失败，
+  未声称读到该版本。
+
+阅读层级、原件SHA与定位详见[审核记录](residue29_structure_review_20260916.md)。
+新原件存于`references/cache/`，不加入Git；普通HN状态另重新核对
+[Haugland v4](https://arxiv.org/html/2608.04542v4)，未找到改变5–7的原始来源。
+
+## 2026-09-16 恢复研究：有限距离强迫与域外名单
+
+- Tyszka，*Discrete versions of the Beckman–Quarles theorem*，
+  [math/9904047v2](https://arxiv.org/html/math/9904047v2)，1999-04-13；
+  期刊 *Aequationes Mathematicae* 59 (2000),124–133。
+  主、子代理读Theorem1及证明：任意代数距离可由有限单位图对所有
+  保单位映射强迫，未要求单射。T122的共尾等价是本项目给出的推论。
+  Theorem2尺规坐标保证有版本差异，
+  [版本页](https://arxiv.org/abs/math/9904047)说明未收入期刊版；
+  T122不依赖它。子代理另以PDF核对Figure1；T123只用已完整重证的
+  七点√3杆，不依赖一般Maehara构造，也不把外部存在性当枚举证书。
+- Rabern，*A different short proof of Brooks' theorem*，
+  [1205.3253v5](https://arxiv.org/html/1205.3253v5)，2013-06-25。
+  主、子代理重新读Theorem2及完整证明，χ_l≤max{3,ω,Δ}。
+  T123将旧T034所用机制推广到任意实域外的二邻接上限；不是新证
+  list-Brooks。子代理另读Krivelevich作者站点
+  [短证明](https://www.math.tau.ac.il/~krivelev/Brooks-choosability.pdf)，
+  主代理未逐页复读，主证明只需前一个已读版本。
+- Fiorenzi，*Periodic configurations of subshifts on groups*，
+  [作者稿](https://www.lri.fr/~fiorenzi/Publications/fiorenzi09.pdf)，
+  子代理读§4.1、§9.1；主代理未逐页复读。E090单运动模式图／条带
+  等价在项目中另有完整初等证明，不依赖该外部版本；不声称一般SFT
+  的周期点都稠密，更不把条带正染色下降到实际几何轨道。
+- 普通HN状态又核对[Haugland v4 §1](https://arxiv.org/html/2608.04542v4)：
+  5–7界未变；509纪录和spindle-free结果沿用原文范围，未新增外部
+  搜索证书重放，不把九点非CM例误称六色下界。
+
+- Radchenko，*Unit distance graphs and algebraic integers*，
+  [1807.03726v1](https://arxiv.org/html/1807.03726v1)，2018-07-10。
+  主、子代理完整阅读HTML；使用Theorem1的四次多项式构造，不依赖
+  Theorem2的rank≤3证明。T124独立给该整个四次数域的三染、五圈
+  下界及共轭剩余点一般机制；不是原文色数结论，也不声称文献首创。
+  五点十对有两个独立整数商环校准；全域上界有完整显式赋值证明。
+- Milne，*Algebraic Number Theory*，[作者现行PDF](https://www.jmilne.org/math/CourseNotes/ANT.pdf)，
+  下载版本3.08（2020-07-19），2026-09-16再次读取Theorem3.34及完整证明
+  （印刷pp.59–60）、7.58／8.10–8.11的定义与证明段。T124先用二次扩张efg=2，
+  推出有限分歧点给共轭稳定且剩余作用平凡的赋值；不是全部高色数
+  宿主的充分分类，扩大数域后须重查。
+  六次续例另逐页对照原PDF图像与文本读完Theorem3.35、辅助引理及证明
+  （印刷pp.60–62，PDF pp.62–64），使用单位判别式的不分歧判据；
+  相对整基假设由本项目迹对偶证明核实。原件保持未修改，缓存
+  `references/cache/milne_ant_20260916.pdf`（ignored），SHA-256
+  `24b83c789a89f25aebffb3cbe4ae5ca29edd0075acc072de093d140770630847`。

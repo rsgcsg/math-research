@@ -2,6 +2,13 @@
 import json
 from pathlib import Path
 from phase_checks import run
+from joint_package_symmetry_probe import verify as verify_joint_package_symmetry
+from verify_dyadic_fixed_representation import verify as verify_dyadic_fixed_representation
+from dyadic_return_boundary_probe import verify as verify_dyadic_return_boundary
+from verify_cm_escape_nine import verify as verify_cm_escape_nine
+from verify_dyadic_identity_extension import verify as verify_dyadic_identity_extension
+from verify_operator_release import verify as verify_operator_release
+from verify_eta_release import verify as verify_eta_release
 from relations import calibrate
 from exact_geometry import check_geometry
 from balanced_weights import run as check_balanced_weights
@@ -91,6 +98,11 @@ from verify_dyadic_liftable_target import verify as verify_dyadic_liftable_targe
 from verify_quintic_multiword_joint import verify as verify_quintic_multiword_joint
 from cofinal_residue29_verify import verify as verify_cofinal_residue29
 from cofinal_residue16_verify import verify as verify_cofinal_residue16
+from cofinal_residue16_marginal_verify import verify as verify_cofinal_residue16_marginal
+from verify_dyadic_mixed_return_joint import verify_probe as verify_dyadic_mixed_probe
+from verify_dyadic_joint_column_pricing import verify as verify_dyadic_column_pricing
+from verify_finite_joint_completion import verify as verify_finite_joint_completion
+from verify_residue29_structure import verify as verify_residue29_structure
 
 
 def main():
@@ -241,6 +253,18 @@ def main():
     print(json.dumps(state_report, indent=2))
     print(json.dumps(verify_dyadic_norm_target(), indent=2))
     print(json.dumps(verify_dyadic_liftable_target(), indent=2))
+    print(json.dumps(verify_cofinal_residue16_marginal(), indent=2))
+    print(json.dumps(verify_dyadic_mixed_probe(root), indent=2))
+    print(json.dumps(verify_dyadic_column_pricing(root), indent=2))
+    print(json.dumps(verify_finite_joint_completion(), indent=2))
+    print(json.dumps(verify_residue29_structure(), indent=2))
+    print(json.dumps(verify_joint_package_symmetry(root), indent=2))
+    print(json.dumps(verify_dyadic_fixed_representation(root), indent=2))
+    print(json.dumps(verify_dyadic_return_boundary(root), indent=2))
+    print(json.dumps(verify_cm_escape_nine(root), indent=2))
+    print(json.dumps(verify_dyadic_identity_extension(root), indent=2))
+    print(json.dumps(verify_operator_release(root), indent=2))
+    print(json.dumps(verify_eta_release(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

@@ -1,0 +1,146 @@
+{
+  "schema": 1,
+  "experiment": "E086",
+  "pricing_source_sha256": "fb9a52f9d4fc79cd70361e13d985da0e1ac0f8db40ce17a1225aefc928108fbc",
+  "geometry": {
+    "vertices": 10077,
+    "actual_pairs": 50767926,
+    "induced_edges": 49858,
+    "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+    "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+    "overlap": 91,
+    "new_cross_edges": 170
+  },
+  "mapping": [
+    [
+      233,
+      5557
+    ],
+    [
+      239,
+      238
+    ],
+    [
+      2046,
+      2040
+    ],
+    [
+      2047,
+      2041
+    ],
+    [
+      2312,
+      3148
+    ],
+    [
+      2313,
+      3147
+    ],
+    [
+      2321,
+      3089
+    ],
+    [
+      3171,
+      2322
+    ],
+    [
+      3172,
+      2321
+    ],
+    [
+      3451,
+      6036
+    ],
+    [
+      3662,
+      4660
+    ],
+    [
+      3671,
+      3666
+    ],
+    [
+      4641,
+      4641
+    ],
+    [
+      4655,
+      3660
+    ],
+    [
+      4666,
+      4832
+    ],
+    [
+      4822,
+      4628
+    ],
+    [
+      4824,
+      4830
+    ],
+    [
+      5552,
+      229
+    ],
+    [
+      5557,
+      305
+    ],
+    [
+      5574,
+      6081
+    ],
+    [
+      6067,
+      3451
+    ],
+    [
+      6070,
+      6076
+    ],
+    [
+      7466,
+      9425
+    ],
+    [
+      7467,
+      9424
+    ],
+    [
+      9425,
+      8157
+    ],
+    [
+      9434,
+      7471
+    ],
+    [
+      9435,
+      7470
+    ],
+    [
+      9950,
+      9956
+    ],
+    [
+      9951,
+      9957
+    ]
+  ],
+  "mapping_sha256": "2a6684e9346370cc37ee5bbdae8ea82e292e13b05ff7812c63f61c9b4391ddbf",
+  "old_pool_index": 8,
+  "query": {
+    "status": "UNSAT_FIXED_CYCLE_UNCERTIFIED",
+    "conflict_budget": 20000,
+    "stats": {
+      "restarts": 0,
+      "conflicts": 0,
+      "decisions": 0,
+      "propagations": 1099
+    }
+  },
+  "result": null,
+  "scope": "Only the complete u domain; no assertion about the old fourteen domains or HN."
+}

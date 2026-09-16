@@ -1,0 +1,1615 @@
+{
+  "status": "PASS_BOUNDARY_AND_RETURN_PROBE",
+  "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+  "pricing_sha256": "fb9a52f9d4fc79cd70361e13d985da0e1ac0f8db40ce17a1225aefc928108fbc",
+  "sources": [
+    {
+      "file": "quintic_multiword_joint.json",
+      "sha256": "3b9b7f893bb2d0b31bfc72d645924858d84961b33b56706f40498251a5663b00",
+      "count": 5
+    },
+    {
+      "file": "quintic_multiword_return_joint.json",
+      "sha256": "e4ae7e9355783ee7606711ace881faba0353cbd01bef30c36b338dc3d3a844f9",
+      "count": 5
+    },
+    {
+      "file": "quintic_tau_union.json",
+      "sha256": "398d8490ee040ee29b93e4f9f3f6637f41ea45a3f2d8d6e5e47a70879e8a44f1",
+      "count": 1
+    }
+  ],
+  "boundary": {
+    "vertices": 53,
+    "actual_pairs": 1378,
+    "edges": [
+      [
+        238,
+        305
+      ],
+      [
+        238,
+        5552
+      ],
+      [
+        239,
+        5557
+      ],
+      [
+        2040,
+        2312
+      ],
+      [
+        2040,
+        3089
+      ],
+      [
+        2041,
+        2313
+      ],
+      [
+        2046,
+        2321
+      ],
+      [
+        2047,
+        2322
+      ],
+      [
+        3451,
+        6070
+      ],
+      [
+        3666,
+        4655
+      ],
+      [
+        3671,
+        4660
+      ],
+      [
+        4628,
+        4824
+      ],
+      [
+        4666,
+        4830
+      ],
+      [
+        5574,
+        6076
+      ],
+      [
+        6036,
+        6076
+      ],
+      [
+        8157,
+        9957
+      ],
+      [
+        9424,
+        9950
+      ],
+      [
+        9425,
+        9951
+      ],
+      [
+        9434,
+        9956
+      ],
+      [
+        9435,
+        9957
+      ]
+    ],
+    "overlap": [
+      2321,
+      3451,
+      4641,
+      5557,
+      9425
+    ],
+    "components": [
+      [
+        229
+      ],
+      [
+        233
+      ],
+      [
+        238,
+        305,
+        5552
+      ],
+      [
+        239,
+        5557
+      ],
+      [
+        2040,
+        2312,
+        3089
+      ],
+      [
+        2041,
+        2313
+      ],
+      [
+        2046,
+        2321
+      ],
+      [
+        2047,
+        2322
+      ],
+      [
+        3147
+      ],
+      [
+        3148
+      ],
+      [
+        3171
+      ],
+      [
+        3172
+      ],
+      [
+        3451,
+        6070
+      ],
+      [
+        3660
+      ],
+      [
+        3662
+      ],
+      [
+        3666,
+        4655
+      ],
+      [
+        3671,
+        4660
+      ],
+      [
+        4628,
+        4824
+      ],
+      [
+        4641
+      ],
+      [
+        4666,
+        4830
+      ],
+      [
+        4822
+      ],
+      [
+        4832
+      ],
+      [
+        5574,
+        6036,
+        6076
+      ],
+      [
+        6067
+      ],
+      [
+        6081
+      ],
+      [
+        7466
+      ],
+      [
+        7467
+      ],
+      [
+        7470
+      ],
+      [
+        7471
+      ],
+      [
+        8157,
+        9435,
+        9957
+      ],
+      [
+        9424,
+        9950
+      ],
+      [
+        9425,
+        9951
+      ],
+      [
+        9434,
+        9956
+      ]
+    ],
+    "quotient_vertices": 25,
+    "quotient_edges": [
+      [
+        233,
+        239
+      ],
+      [
+        239,
+        5552
+      ],
+      [
+        2046,
+        2312
+      ],
+      [
+        2046,
+        3172
+      ],
+      [
+        2047,
+        2313
+      ],
+      [
+        2047,
+        3171
+      ],
+      [
+        3662,
+        3671
+      ],
+      [
+        3671,
+        4655
+      ],
+      [
+        4666,
+        4824
+      ],
+      [
+        4822,
+        4824
+      ],
+      [
+        5574,
+        6070
+      ],
+      [
+        6067,
+        6070
+      ],
+      [
+        7466,
+        9951
+      ],
+      [
+        7467,
+        9950
+      ],
+      [
+        9434,
+        9950
+      ],
+      [
+        9435,
+        9951
+      ]
+    ],
+    "identity_u_proper_two_coloring": {
+      "229": 0,
+      "233": 0,
+      "238": 1,
+      "239": 1,
+      "305": 0,
+      "2040": 0,
+      "2041": 0,
+      "2046": 0,
+      "2047": 0,
+      "2312": 1,
+      "2313": 1,
+      "2321": 1,
+      "2322": 1,
+      "3089": 1,
+      "3147": 1,
+      "3148": 1,
+      "3171": 1,
+      "3172": 1,
+      "3451": 0,
+      "3660": 0,
+      "3662": 0,
+      "3666": 1,
+      "3671": 1,
+      "4628": 0,
+      "4641": 0,
+      "4655": 0,
+      "4660": 0,
+      "4666": 0,
+      "4822": 0,
+      "4824": 1,
+      "4830": 1,
+      "4832": 0,
+      "5552": 0,
+      "5557": 0,
+      "5574": 0,
+      "6036": 0,
+      "6067": 0,
+      "6070": 1,
+      "6076": 1,
+      "6081": 0,
+      "7466": 0,
+      "7467": 0,
+      "7470": 0,
+      "7471": 0,
+      "8157": 0,
+      "9424": 0,
+      "9425": 0,
+      "9434": 0,
+      "9435": 0,
+      "9950": 1,
+      "9951": 1,
+      "9956": 1,
+      "9957": 1
+    },
+    "saved_pattern_states": 22,
+    "states": [
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        4,
+        1,
+        3,
+        3,
+        4,
+        1,
+        2,
+        1,
+        1,
+        1,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        0,
+        0,
+        1,
+        3,
+        4,
+        4,
+        2,
+        2,
+        2,
+        0,
+        0,
+        2,
+        3,
+        2,
+        1,
+        1,
+        0,
+        4,
+        4,
+        2,
+        2,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        0,
+        1,
+        2,
+        3,
+        3,
+        2,
+        2,
+        2,
+        0,
+        0,
+        2,
+        2,
+        2,
+        1,
+        1,
+        0,
+        3,
+        2,
+        2,
+        2,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        3,
+        3
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        3,
+        2,
+        2,
+        4,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        2,
+        1,
+        3,
+        4,
+        4,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        3,
+        0,
+        0,
+        0,
+        4,
+        1,
+        0,
+        0,
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        3,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        4,
+        4,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        3,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        3,
+        2,
+        1,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        4,
+        4,
+        1,
+        3,
+        1,
+        2,
+        2,
+        1,
+        0,
+        3,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        1,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        2,
+        1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        2,
+        3,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        1,
+        2,
+        3,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        1,
+        0,
+        1,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        2,
+        3,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        3,
+        0,
+        4,
+        0,
+        3,
+        1,
+        1,
+        3,
+        3,
+        4,
+        3,
+        0,
+        2,
+        2,
+        3,
+        4,
+        1,
+        0,
+        4,
+        4,
+        4,
+        3,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        2,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0,
+        3,
+        1,
+        0,
+        1,
+        1,
+        3,
+        2,
+        0,
+        2,
+        0,
+        0,
+        3,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        2,
+        0,
+        2,
+        2,
+        0,
+        0,
+        3,
+        0,
+        3,
+        0,
+        3,
+        1,
+        0,
+        1,
+        1,
+        2,
+        2,
+        0,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        1,
+        3,
+        3,
+        3,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        3,
+        0,
+        3,
+        1,
+        2,
+        3,
+        0,
+        3,
+        0,
+        0,
+        2,
+        0,
+        3,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        2,
+        0,
+        3,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        3,
+        0,
+        3,
+        1,
+        2,
+        3,
+        0,
+        3,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        3,
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        3,
+        1,
+        2,
+        0,
+        0,
+        3,
+        4,
+        4,
+        1,
+        3,
+        4,
+        0,
+        0,
+        1,
+        4,
+        2,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        1,
+        3,
+        4,
+        1,
+        0,
+        4,
+        0,
+        2,
+        4,
+        1,
+        1,
+        2,
+        3,
+        3,
+        4,
+        0,
+        0,
+        2,
+        2,
+        3,
+        4,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        2,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        3,
+        0,
+        3,
+        1,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        3,
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        2,
+        3,
+        1,
+        0,
+        0,
+        3,
+        0,
+        2,
+        0,
+        2,
+        3,
+        0,
+        3,
+        1,
+        2,
+        2,
+        0,
+        2,
+        0,
+        0,
+        3,
+        2,
+        1,
+        2,
+        1
+      ]
+    ],
+    "state_sha256": "e2337cf85effb332ad26616ab054a79b5ee2a84a8fca1de6594aa369c934e207",
+    "boundary_compatible_pairs": 31,
+    "allowed_pattern_arcs": [
+      [
+        3,
+        20
+      ],
+      [
+        3,
+        21
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        12,
+        2
+      ],
+      [
+        12,
+        3
+      ],
+      [
+        13,
+        0
+      ],
+      [
+        13,
+        1
+      ],
+      [
+        14,
+        7
+      ],
+      [
+        14,
+        8
+      ],
+      [
+        15,
+        6
+      ],
+      [
+        16,
+        2
+      ],
+      [
+        16,
+        3
+      ],
+      [
+        17,
+        4
+      ],
+      [
+        17,
+        5
+      ],
+      [
+        18,
+        11
+      ],
+      [
+        19,
+        9
+      ],
+      [
+        19,
+        10
+      ],
+      [
+        19,
+        12
+      ],
+      [
+        19,
+        13
+      ],
+      [
+        19,
+        14
+      ],
+      [
+        19,
+        15
+      ],
+      [
+        19,
+        16
+      ],
+      [
+        19,
+        17
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        19,
+        21
+      ],
+      [
+        20,
+        6
+      ],
+      [
+        21,
+        4
+      ],
+      [
+        21,
+        5
+      ]
+    ],
+    "strict_pattern_potential": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      3,
+      1,
+      1,
+      1,
+      3,
+      1,
+      1,
+      4,
+      1,
+      1
+    ],
+    "boundary_compatible_self_loops": []
+  },
+  "powers": [
+    {
+      "power": 1,
+      "complete_domain": 29,
+      "common_one_step_domain": 29,
+      "skipped_returns": 0,
+      "first_skipped_returns": [],
+      "mapping_sha256": "2a6684e9346370cc37ee5bbdae8ea82e292e13b05ff7812c63f61c9b4391ddbf",
+      "non_F_sources": 28,
+      "laws": {
+        "quintic_multiword_joint.json": {
+          "words": 5,
+          "full_joint_equal": false,
+          "distinct_source": 5,
+          "distinct_image": 5,
+          "source_image_intersection": 0,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                233,
+                5557
+              ],
+              [
+                239,
+                238
+              ]
+            ],
+            "same_counts": [
+              1,
+              5
+            ]
+          }
+        },
+        "quintic_multiword_return_joint.json": {
+          "words": 5,
+          "full_joint_equal": false,
+          "distinct_source": 5,
+          "distinct_image": 5,
+          "source_image_intersection": 0,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                233,
+                5557
+              ],
+              [
+                239,
+                238
+              ]
+            ],
+            "same_counts": [
+              1,
+              5
+            ]
+          }
+        },
+        "quintic_tau_union.json": {
+          "words": 1,
+          "full_joint_equal": false,
+          "distinct_source": 1,
+          "distinct_image": 1,
+          "source_image_intersection": 0,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                233,
+                5557
+              ],
+              [
+                2046,
+                2040
+              ]
+            ],
+            "same_counts": [
+              0,
+              1
+            ]
+          }
+        },
+        "all_twelve_saved_words_uniform": {
+          "words": 12,
+          "full_joint_equal": false,
+          "distinct_source": 12,
+          "distinct_image": 11,
+          "source_image_intersection": 1,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                233,
+                5557
+              ],
+              [
+                239,
+                238
+              ]
+            ],
+            "same_counts": [
+              2,
+              10
+            ]
+          }
+        }
+      }
+    },
+    {
+      "power": 2,
+      "complete_domain": 805,
+      "common_one_step_domain": 5,
+      "skipped_returns": 800,
+      "first_skipped_returns": [
+        [
+          4,
+          3449
+        ],
+        [
+          5,
+          3450
+        ],
+        [
+          6,
+          501
+        ],
+        [
+          7,
+          502
+        ],
+        [
+          8,
+          51
+        ]
+      ],
+      "mapping_sha256": "a05df3eed9be692ae6a8e124829cbcfc6216efbe4661c802a430e6e2973452ee",
+      "non_F_sources": 644,
+      "laws": {
+        "quintic_multiword_joint.json": {
+          "words": 5,
+          "full_joint_equal": false,
+          "distinct_source": 5,
+          "distinct_image": 5,
+          "source_image_intersection": 0,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                4,
+                3449
+              ],
+              [
+                233,
+                305
+              ]
+            ],
+            "same_counts": [
+              0,
+              4
+            ]
+          }
+        },
+        "quintic_multiword_return_joint.json": {
+          "words": 5,
+          "full_joint_equal": false,
+          "distinct_source": 5,
+          "distinct_image": 5,
+          "source_image_intersection": 0,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                4,
+                3449
+              ],
+              [
+                233,
+                305
+              ]
+            ],
+            "same_counts": [
+              3,
+              4
+            ]
+          }
+        },
+        "quintic_tau_union.json": {
+          "words": 1,
+          "full_joint_equal": false,
+          "distinct_source": 1,
+          "distinct_image": 1,
+          "source_image_intersection": 0,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                4,
+                3449
+              ],
+              [
+                9,
+                52
+              ]
+            ],
+            "same_counts": [
+              0,
+              1
+            ]
+          }
+        },
+        "all_twelve_saved_words_uniform": {
+          "words": 12,
+          "full_joint_equal": false,
+          "distinct_source": 12,
+          "distinct_image": 12,
+          "source_image_intersection": 0,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                4,
+                3449
+              ],
+              [
+                23,
+                5611
+              ]
+            ],
+            "same_counts": [
+              9,
+              8
+            ]
+          }
+        }
+      }
+    },
+    {
+      "power": 3,
+      "complete_domain": 5,
+      "common_one_step_domain": 1,
+      "skipped_returns": 4,
+      "first_skipped_returns": [
+        [
+          2313,
+          3106
+        ],
+        [
+          4655,
+          4652
+        ],
+        [
+          4666,
+          4698
+        ],
+        [
+          9434,
+          7842
+        ]
+      ],
+      "mapping_sha256": "89a59578a85be460ae53a469e212125fc7d219052559ed099c875b419e8d8108",
+      "non_F_sources": 4,
+      "laws": {
+        "quintic_multiword_joint.json": {
+          "words": 5,
+          "full_joint_equal": false,
+          "distinct_source": 5,
+          "distinct_image": 3,
+          "source_image_intersection": 0,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                2313,
+                3106
+              ],
+              [
+                4641,
+                4641
+              ]
+            ],
+            "same_counts": [
+              1,
+              4
+            ]
+          }
+        },
+        "quintic_multiword_return_joint.json": {
+          "words": 5,
+          "full_joint_equal": false,
+          "distinct_source": 5,
+          "distinct_image": 4,
+          "source_image_intersection": 1,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                2313,
+                3106
+              ],
+              [
+                4655,
+                4652
+              ]
+            ],
+            "same_counts": [
+              1,
+              2
+            ]
+          }
+        },
+        "quintic_tau_union.json": {
+          "words": 1,
+          "full_joint_equal": false,
+          "distinct_source": 1,
+          "distinct_image": 1,
+          "source_image_intersection": 0,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                2313,
+                3106
+              ],
+              [
+                4655,
+                4652
+              ]
+            ],
+            "same_counts": [
+              1,
+              0
+            ]
+          }
+        },
+        "all_twelve_saved_words_uniform": {
+          "words": 12,
+          "full_joint_equal": false,
+          "distinct_source": 6,
+          "distinct_image": 7,
+          "source_image_intersection": 2,
+          "first_pair_mismatch": {
+            "pairs": [
+              [
+                2313,
+                3106
+              ],
+              [
+                4641,
+                4641
+              ]
+            ],
+            "same_counts": [
+              2,
+              5
+            ]
+          }
+        }
+      }
+    },
+    {
+      "power": 4,
+      "complete_domain": 1,
+      "common_one_step_domain": 1,
+      "skipped_returns": 0,
+      "first_skipped_returns": [],
+      "mapping_sha256": "01318145744ffbaacaae98a75d79e24694e345e425bdec80c86d304dea21bda7",
+      "non_F_sources": 0,
+      "laws": {
+        "quintic_multiword_joint.json": {
+          "words": 5,
+          "full_joint_equal": true,
+          "distinct_source": 1,
+          "distinct_image": 1,
+          "source_image_intersection": 1,
+          "first_pair_mismatch": null
+        },
+        "quintic_multiword_return_joint.json": {
+          "words": 5,
+          "full_joint_equal": true,
+          "distinct_source": 1,
+          "distinct_image": 1,
+          "source_image_intersection": 1,
+          "first_pair_mismatch": null
+        },
+        "quintic_tau_union.json": {
+          "words": 1,
+          "full_joint_equal": true,
+          "distinct_source": 1,
+          "distinct_image": 1,
+          "source_image_intersection": 1,
+          "first_pair_mismatch": null
+        },
+        "all_twelve_saved_words_uniform": {
+          "words": 12,
+          "full_joint_equal": true,
+          "distinct_source": 1,
+          "distinct_image": 1,
+          "source_image_intersection": 1,
+          "first_pair_mismatch": null
+        }
+      }
+    }
+  ],
+  "star_calibration": {
+    "vertices": 6,
+    "induced_graph": "K_1,5",
+    "leaves": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "-3/5",
+        "4/5"
+      ],
+      [
+        "-4/5",
+        "3/5"
+      ],
+      [
+        "-15/17",
+        "8/17"
+      ]
+    ]
+  },
+  "scope": "Exact coordinate and boundary/power-return checks only; no new full-Y coloring, joint law, negative all-word certificate, or HN bound."
+}
