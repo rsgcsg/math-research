@@ -1,0 +1,47 @@
+name: Research certificate replay
+
+on:
+  push:
+    branches: [research/full-joint-20260919]
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Fetch the exact public commit without persisted credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --depth=1 origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          python3 --version
+          git archive --format=zip HEAD -o "$RUNNER_TEMP/research-source.zip"
+          sha256sum "$RUNNER_TEMP/research-source.zip"
+      - name: Export the exact tracked source tree
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: research-source-${{ github.sha }}
+          path: ${{ runner.temp }}/research-source.zip
+          retention-days: 7
+          if-no-files-found: error
+      - name: Replay the new Salem certificates
+        run: make check-salem
+      - name: Replay the complete repository
+        run: |
+          set -o pipefail
+          make check 2>&1 | tee "$RUNNER_TEMP/research-check.log"
+      - name: Save the full regression log
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: research-regression-${{ github.sha }}
+          path: ${{ runner.temp }}/research-check.log
+          retention-days: 7
+          if-no-files-found: warn
