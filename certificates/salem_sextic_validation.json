@@ -1,0 +1,68 @@
+{
+  "byte_identical_rebuild": true,
+  "graph": {
+    "branches": 410,
+    "chromatic_number": 4,
+    "deletion_witnesses": 114,
+    "exact_pairs": 6441,
+    "leaves": 411,
+    "nodes": 821,
+    "status": "PASS",
+    "triangles": 0,
+    "unit_edges": 267,
+    "vertices": 114
+  },
+  "height": {
+    "direction_colors_mod3": [
+      2,
+      1,
+      2,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      1,
+      2,
+      1,
+      0
+    ],
+    "minimum_strict_margin": 2,
+    "relation_norms": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      10,
+      10,
+      10,
+      7,
+      10
+    ],
+    "scope": "finite certificate for the proved 12/13-direction threshold",
+    "separators": 10,
+    "sign_patterns": 128,
+    "status": "PASS"
+  },
+  "mutations_rejected": [
+    "coordinate",
+    "missing-unit-edge",
+    "field-polynomial",
+    "four-colouring",
+    "false-conflict-leaf",
+    "omitted-colour-branch",
+    "nonedge-palette-anchor",
+    "deletion-colouring",
+    "relation-norm",
+    "no-sign-separation",
+    "relation-dimension",
+    "linear-three-colouring",
+    "direction-thirteen",
+    "height-polynomial"
+  ],
+  "optimized_mode_rejections": 2,
+  "scope": "new Salem checks only; not the full repository regression",
+  "status": "PASS"
+}
