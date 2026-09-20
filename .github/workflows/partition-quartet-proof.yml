@@ -7,7 +7,7 @@ permissions:
   contents: write
 jobs:
   verify:
-    if: ${{ !startsWith(github.event.head_commit.message, 'T127–128 / E098: certify') }}
+    if: ${{ !startsWith(github.event.head_commit.message, 'T127–128 / E098') }}
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
