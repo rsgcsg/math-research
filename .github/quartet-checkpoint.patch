@@ -1,0 +1,191 @@
+diff --git a/Makefile b/Makefile
+index 650532d..54862eb 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,12 +1,16 @@
+-.PHONY: check check-salem setup explore
++.PHONY: check check-salem check-quartet setup explore
+ 
+ check:
+ 	python3 research/verify.py
+ 	$(MAKE) check-salem
++	$(MAKE) check-quartet
+ 
+ check-salem:
+ 	python3 research/test_salem_sextic_certificates.py
+ 
++check-quartet:
++	python3 research/test_partition_quartet_completeness.py
++
+ setup:
+ 	uv venv --allow-existing .venv
+ 	uv pip install --python .venv/bin/python -r requirements-research.txt
+diff --git a/README.md b/README.md
+index 4075dad..3b7a5ed 100644
+--- a/README.md
++++ b/README.md
+@@ -7,6 +7,18 @@
+ [路线与淘汰理由](docs/ROUTES.md) · [历史T/C/E/Q账本](docs/RESULTS.md) ·
+ [文献地图](references/LITERATURE_MAP.md)
+ 
++## 2026-09-20：完整五词律的尖锐四点／五点判据
++
++[T127–128 / E098](docs/proofs/five_word_quartet_completeness.md)：
++同一 m≤5 的等权五色划分，单个及两个同色事件的联合计数精确决定完整律，
++四点足够且必要；任意权、每份≤5支持时，五点足够且必要。
++后者有4135节点独立反证，前者给出任意域大小的完整数学证明。
++这是固定小支持的结构结果，不是全部proper空间的四点完备性。
++
++已把新定理用于无需猜支持匹配的E099搜索；旧14域＋u的五词查询仍UNKNOWN，
++没有新15域正律或HN新界。`make check-quartet` 重放新增证明证据和篡改测试。
++最新实验范围和全仓回归记录见 [CURRENT](docs/CURRENT.md)。
++
+ ## 2026-09-19：六次宿主的精确答案与三色结构定理
+ 
+ [T125–126 / E095–096：完整证明与证据](docs/proofs/salem_sextic_four_coloring.md)
+diff --git a/docs/CURRENT.md b/docs/CURRENT.md
+index 34a74e7..f478410 100644
+--- a/docs/CURRENT.md
++++ b/docs/CURRENT.md
+@@ -1,12 +1,45 @@
+ # 当前研究状态
+ 
+-2026-09-19；远端基准 `efd931eeac7c04cff167eaca544cd96ab501b702`。
++2026-09-20；本轮接续 `research/full-joint-20260919` 的 `fcea973…`，
++研究分支 `research/joint-pair-cegar-20260920`；未改动 main。
+ **原始 Hadwiger–Nelson 未解决；普通界仍为 5≤χ(R²)≤7。**
+ 本页区分本次已认证结果、继承的有效基础和真正剩余的终局义务。
+ [统一框架](proofs/hn_unified_framework.md) · [路线](ROUTES.md) ·
+ [历史结果账本](RESULTS.md) · [文献地图](../references/LITERATURE_MAP.md)。
+ 
+-## 本次新增：六次宿主精确关闭，不是原始HN突破
++## 本次新增：小支持完整律的尖锐四点／五点结构定理
++
++[T127–128 / E098 完整证明](proofs/five_word_quartet_completeness.md)。
++
++**T127：两份同为 m≤5 个等权、至多五块的划分多重集，完整律相同，
++恰等价于所有单个同色事件及两个同色事件的联合计数相同。**
++因此所有至多四点的限制已经完备，且四点不能降到三点。
++证明把低阶矩相消化为二阶整数 trade；最小奇偶立方体若全是划分，
++必出现六个不同颜色块，故被五色假设排除。不是只给小点数枚举。
++
++**T128：每份至多五个支持划分、任意实正权时，五点限制恰好完备。**
++T114先压到六点；E098对202种至多五块划分、10个对称根给出4135节点
++完整支持覆盖反证。独立检查4135节点、4125弧和全部叶矛盾。
++权重 (1,1,1,1,2)/6 的显式反例说明四点不够；把末项重复后，也表明
++六个等权词不再有T127的四点完备性。六颜色的独立点对开关反例另列。
++
++**已经实际应用，不把编码变小当作HN结果。**
++E097自由词匹配CEGAR在300001实际冲突后UNKNOWN（预算300000有单步过冲），
++生成558个点对约束，无15域正见证。随后由T127改成无需猜支持／颜色置换
++的联合事件计数编码E099，实际加入387个至多四点事件，300000冲突后仍
++UNKNOWN；两个独立正入口均返回NO_POSITIVE_WITNESS，不是负证书。
++所有旧14域保留，新u域为第15域；u²与33点反射域均未进入成功阶段。
++
++本次改进的是完整五词模型的精确语言和尖锐辨识界。
++没有证明任意可行full-joint都能用五个支持；T114只保证某个有限支持数。
++所以固定五词的任何失败仍不能送入T105充当全部proper空间的分离。
++
++新增重放：`make check-quartet`。独立反证、15503个四点多重集校准、
++151组事件抽取测试、14种实际篡改拒绝、两个-O拒绝及逐字节重建均已通过。
++本轮还恢复了完整仓库源快照（不再只有上一轮增量），正在对本轮最终
++研究源码进行全仓回归；最终收据另明确记录，不借用历史通过状态。
++
++## 继承的上一个成果：六次宿主精确关闭
+ 
+ 完整证明及全部证据入口：
+ [T125–126 / E095–096](proofs/salem_sextic_four_coloring.md)。
+diff --git a/docs/RESULTS.md b/docs/RESULTS.md
+index 4b1ab36..dc9fdde 100644
+--- a/docs/RESULTS.md
++++ b/docs/RESULTS.md
+@@ -305,3 +305,19 @@ E003负周期结果没有DRAT检查，不能标作CERTIFIED-UNSAT。其正见证
+ 
+ 外部定理另见 [SOURCES](../references/SOURCES.md)，不得用这里的状态代替
+ 对外部计算 certificate 的实际重放。
++
++## 2026-09-19–20 接续：新定理与新实验
++
++历史条目保留当时的范围；以下编号明确补入上一PR和本轮接续结果。
++
++| ID | 内容 | 状态 | 证据/范围 |
++|---|---|---|---|
++| T125 | 六次Salem宿主整个U(Z[α])、U(Q(α))恰四色且无三角形 | 完整证明；两种非实嵌入均适用 | [证明](proofs/salem_sextic_four_coloring.md)；把T124六次区间精确化，不是K²或HN新界 |
++| T126 | 阿贝尔Cayley三染的高度周期充要判据；指定连续幂方向1–6/7–12/≥13恰2/3/4色 | 完整两向证明 | [证明](proofs/salem_sextic_four_coloring.md)；真实关系格，不限周期或线性 |
++| E095 | 114点267条全实际边、无三角形、顶点临界四色见证 | 821节点非三染树＋114删点词独立核验 | [证据](proofs/salem_sextic_four_coloring.md)；不主张最小或边临界 |
++| E096 | 13方向的七条关系及十个整数式排除全部128符号；12方向有三染 | 整数证书独立核验 | [证据](proofs/salem_sextic_four_coloring.md) |
++| T127 | 两侧同m≤5、等权、每划分≤5块，完整律相同 iff 全部一次/二次相等矩相同 iff 所有≤4点限制相同；四点尖锐 | 任意标号域的完整数学证明 | [证明](proofs/five_word_quartet_completeness.md)；不是任意权五支持，也不覆盖任意支持数 |
++| T128 | 任意实正权、每份≤5支持、每划分≤5块的完整律由全部≤5点限制精确决定；五点尖锐 | T114压缩＋E098独立有限反证 | [证明](proofs/five_word_quartet_completeness.md)；不把支持数与等权分母混同 |
++| E097 | 自由五词及匹配的完整划分点对CEGAR，旧14＋u | UNKNOWN；无数学负证书 | 558生成点对，预算300000、实际300001冲突；[档案](../certificates/joint_pair_cegar.json)，独立入口NO_POSITIVE_WITNESS |
++| E098 | 六点五块的5/5支持覆盖不可能；四点/五点/六颜色尖锐例 | 4135节点/4125弧完整独立检查；14篡改拒绝 | [证明与入口](proofs/five_word_quartet_completeness.md)；15503小多重集校准不代替T127全尺寸证明 |
++| E099 | T127联合事件计数CEGAR，五词全自由且不猜算子，旧14＋u | UNKNOWN；无数学负证书 | 387至多四点事件，300000冲突；[档案](../certificates/joint_moment_cegar.json)，未取得15域正律 |
+diff --git a/docs/ROUTES.md b/docs/ROUTES.md
+index 2a38814..3cf64ac 100644
+--- a/docs/ROUTES.md
++++ b/docs/ROUTES.md
+@@ -1,5 +1,12 @@
+ # 路线与依赖：原始 HN 的收敛图
+ 
++2026-09-20 接续修订：[T127–128](proofs/five_word_quartet_completeness.md)
++把固定小支持完整律压成尖锐四点（同m≤5等权）／五点（任意权≤5支持）判据。
++E097点对匹配与E099事件计数两次有界查询都仍UNKNOWN，没有15域正律。
++不继续把同族加预算当成数学推进；下一次须利用新的计数结构、更多支持的
++受控表示或真正全词分离。该小支持定理不撤销T114的未知支持数缺口。
++T125–126已精确关闭六次Salem宿主χ4，旧T124区间仅为历史状态。
++
+ 2026-09-16 canonical 更新。当前目标、证明、文献各只有一个入口：
+ [CURRENT](CURRENT.md) · [统一框架](proofs/hn_unified_framework.md) ·
+ [RESULTS](RESULTS.md) · [文献地图](../references/LITERATURE_MAP.md)。
+diff --git a/docs/proofs/hn_unified_framework.md b/docs/proofs/hn_unified_framework.md
+index 9760ea5..9d49436 100644
+--- a/docs/proofs/hn_unified_framework.md
++++ b/docs/proofs/hn_unified_framework.md
+@@ -1,5 +1,10 @@
+ # 原始 HN 的统一框架：从宿主、投影和密度，回到完整颜色关系
+ 
++2026-09-20 新的限定完备性：[T127–128](five_word_quartet_completeness.md)
++区分等权词数与任意权支持数；前者同m≤5时四点／二次相等矩精确，后者
++每份≤5支持时五点精确。这只缩小固定小支持模型的语言，不把有限支持
++存在性改写为五支持存在性，也不把E097/E099的UNKNOWN改写为全词障碍。
++
+ 2026-09-16更新，canonical 综合重审。目标始终是决定通常欧氏平面的
+ 单位距离色数；不额外假设可测、周期、最小 defect、等分颜色类或
+ palette activation。本文件取代旧 synthesis 文档的**当前优先级**，
+diff --git a/references/LITERATURE_MAP.md b/references/LITERATURE_MAP.md
+index 2ef2080..ce5c48d 100644
+--- a/references/LITERATURE_MAP.md
++++ b/references/LITERATURE_MAP.md
+@@ -786,3 +786,13 @@ p₆=X⁶−X⁴−X³−X²+1。迹对偶和已核读Milne判别式判据证明
+ 独立核验。1081子句核心不引用η义务，严格关闭全部单算子修补。
+ 这体现证明复杂度与搜索状态的区别：短受限反证仍不是HN下界，
+ 不再以更多同型局部修补消耗主线预算。
++
++
++## 小支持完整律：2026-09-20接入trade理论
++
++Ghorbani–Kamali–Khosrovshahi–Krotov的二进制[t]-trade（含重数）把
++“低阶矩一致但完整分布不同”变成整数抵消系统。已核读的最小体积乘积
++结构与二阶体积5空隙，结合划分传递性，导出本仓库[T127](../docs/proofs/five_word_quartet_completeness.md)：
++同m≤5、等权、≤5颜色的完整律由二次相等矩精确决定。六颜色奇偶开关
++解释颜色假设为什么特殊；六词反例解释词数为什么特殊。
++任意权的五支持版本另由有限支持覆盖反证得到尖锐五点T128，不能用T127替代。
+diff --git a/references/SOURCES.md b/references/SOURCES.md
+index b1c7db6..040cdc2 100644
+--- a/references/SOURCES.md
++++ b/references/SOURCES.md
+@@ -440,3 +440,15 @@ Proc. AMS 126(3), 701–710 (1998)，DOI 10.1090/S0002-9939-98-04294-4。
+   相对整基假设由本项目迹对偶证明核实。原件保持未修改，缓存
+   `references/cache/milne_ant_20260916.pdf`（ignored），SHA-256
+   `24b83c789a89f25aebffb3cbe4ae5ca29edd0075acc072de093d140770630847`。
++
++
++## 2026-09-20：二阶trade与T127
++
++- E. Ghorbani, S. Kamali, G. B. Khosrovshahi, D. S. Krotov,
++  *On the volumes and affine types of trades*, arXiv:1810.02296v2 (2020-01-11),
++  Electronic Journal of Combinatorics 27(1), P1.29, DOI 10.37236/8367.
++  https://arxiv.org/abs/1810.02296v2
++  原PDF已读取：§2.1整数重数定义、Lemma4最小体积结构、Theorem37及其体积5
++  排除结论。正文另给小体积二阶trade的自足图论证明；不依赖simple版本
++  的一般谱定理。网页PDF截图服务两次返回内部错误，未据截图推断任何图表。
++  应用：[T127–128](../docs/proofs/five_word_quartet_completeness.md)。
