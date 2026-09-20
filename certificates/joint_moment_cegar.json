@@ -1,0 +1,305 @@
+{
+  "schema": 1,
+  "experiment": "E099",
+  "support": 5,
+  "colors": 5,
+  "geometry": {
+    "vertices": 10077,
+    "actual_pairs": 50767926,
+    "induced_edges": 49858,
+    "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+    "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+    "overlap": 91,
+    "new_cross_edges": 170
+  },
+  "result": null,
+  "search": {
+    "status": "UNKNOWN",
+    "checkpoints": [],
+    "history": [
+      {
+        "round": 0,
+        "active_domains": 15,
+        "new_events": 3,
+        "events": 3,
+        "variables": 252125,
+        "conflicts": 0
+      },
+      {
+        "round": 1,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 3,
+        "variables": 252125,
+        "conflicts": 10000
+      },
+      {
+        "round": 2,
+        "active_domains": 15,
+        "new_events": 21,
+        "events": 24,
+        "variables": 253380,
+        "conflicts": 18748
+      },
+      {
+        "round": 3,
+        "active_domains": 15,
+        "new_events": 33,
+        "events": 57,
+        "variables": 255500,
+        "conflicts": 26762
+      },
+      {
+        "round": 4,
+        "active_domains": 15,
+        "new_events": 27,
+        "events": 84,
+        "variables": 257220,
+        "conflicts": 27023
+      },
+      {
+        "round": 5,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 84,
+        "variables": 257220,
+        "conflicts": 37025
+      },
+      {
+        "round": 6,
+        "active_domains": 15,
+        "new_events": 30,
+        "events": 114,
+        "variables": 259000,
+        "conflicts": 45104
+      },
+      {
+        "round": 7,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 114,
+        "variables": 259000,
+        "conflicts": 55105
+      },
+      {
+        "round": 8,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 114,
+        "variables": 259000,
+        "conflicts": 65105
+      },
+      {
+        "round": 9,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 114,
+        "variables": 259000,
+        "conflicts": 75107
+      },
+      {
+        "round": 10,
+        "active_domains": 15,
+        "new_events": 30,
+        "events": 144,
+        "variables": 260740,
+        "conflicts": 83402
+      },
+      {
+        "round": 11,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 144,
+        "variables": 260740,
+        "conflicts": 93404
+      },
+      {
+        "round": 12,
+        "active_domains": 15,
+        "new_events": 43,
+        "events": 187,
+        "variables": 263330,
+        "conflicts": 101535
+      },
+      {
+        "round": 13,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 187,
+        "variables": 263330,
+        "conflicts": 111535
+      },
+      {
+        "round": 14,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 187,
+        "variables": 263330,
+        "conflicts": 121535
+      },
+      {
+        "round": 15,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 187,
+        "variables": 263330,
+        "conflicts": 131537
+      },
+      {
+        "round": 16,
+        "active_domains": 15,
+        "new_events": 38,
+        "events": 225,
+        "variables": 265555,
+        "conflicts": 139414
+      },
+      {
+        "round": 17,
+        "active_domains": 15,
+        "new_events": 42,
+        "events": 267,
+        "variables": 268050,
+        "conflicts": 148469
+      },
+      {
+        "round": 18,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 267,
+        "variables": 268050,
+        "conflicts": 158469
+      },
+      {
+        "round": 19,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 267,
+        "variables": 268050,
+        "conflicts": 168469
+      },
+      {
+        "round": 20,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 267,
+        "variables": 268050,
+        "conflicts": 178469
+      },
+      {
+        "round": 21,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 267,
+        "variables": 268050,
+        "conflicts": 188470
+      },
+      {
+        "round": 22,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 267,
+        "variables": 268050,
+        "conflicts": 198472
+      },
+      {
+        "round": 23,
+        "active_domains": 15,
+        "new_events": 42,
+        "events": 309,
+        "variables": 270595,
+        "conflicts": 206738
+      },
+      {
+        "round": 24,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 309,
+        "variables": 270595,
+        "conflicts": 216740
+      },
+      {
+        "round": 25,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 309,
+        "variables": 270595,
+        "conflicts": 226740
+      },
+      {
+        "round": 26,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 309,
+        "variables": 270595,
+        "conflicts": 236740
+      },
+      {
+        "round": 27,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 309,
+        "variables": 270595,
+        "conflicts": 246741
+      },
+      {
+        "round": 28,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 309,
+        "variables": 270595,
+        "conflicts": 256742
+      },
+      {
+        "round": 29,
+        "active_domains": 15,
+        "new_events": 37,
+        "events": 346,
+        "variables": 272785,
+        "conflicts": 265918
+      },
+      {
+        "round": 30,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 346,
+        "variables": 272785,
+        "conflicts": 275919
+      },
+      {
+        "round": 31,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 346,
+        "variables": 272785,
+        "conflicts": 285919
+      },
+      {
+        "round": 32,
+        "active_domains": 15,
+        "new_events": 41,
+        "events": 387,
+        "variables": 275240,
+        "conflicts": 294475
+      },
+      {
+        "round": 33,
+        "active_domains": 15,
+        "new_events": 0,
+        "events": 387,
+        "variables": 275240,
+        "conflicts": 300000
+      }
+    ],
+    "stats": {
+      "restarts": 13647,
+      "conflicts": 300000,
+      "decisions": 9147016,
+      "propagations": 165503080
+    },
+    "events": 387,
+    "variables": 275240,
+    "elapsed_seconds": 65.753
+  },
+  "scope": "T127 quadratic counts exactly enforce each chosen equal-weight-five full law; no all-support or HN negative claim",
+  "source_commit": "a6f8bd6af14068f230c0a840f42621ffa1b63bd3"
+}

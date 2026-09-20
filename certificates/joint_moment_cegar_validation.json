@@ -1,0 +1,7 @@
+{
+  "status": "NO_POSITIVE_WITNESS",
+  "search_status": "UNKNOWN",
+  "scope": "Search did not certify a positive law or a mathematical negative result",
+  "certificate_sha256": "4cddb58eaea6037d5f8e714be9fe395f3ab559174b556412595c1d9c23171a08",
+  "source_commit": "a6f8bd6af14068f230c0a840f42621ffa1b63bd3"
+}
