@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "experiment": "E098",
+  "partition_count": 202,
+  "roots": 10,
+  "support_cover_nodes": 4135,
+  "support_cover_branches": 2016,
+  "support_cover_leaves": 2119,
+  "support_cover_arcs": 4125,
+  "exact_sharpness": {
+    "four_points_necessary": {
+      "points": 4,
+      "equal_restrictions_through": 3,
+      "total_integer_mass": 5
+    },
+    "six_colors_defeat_four_points": {
+      "points": 6,
+      "equal_restrictions_through": 5,
+      "total_integer_mass": 5
+    },
+    "unequal_weights_need_five": {
+      "points": 5,
+      "equal_restrictions_through": 4,
+      "total_integer_mass": 6
+    }
+  },
+  "four_point_multisets_checked": 15503,
+  "scope": "DAG proves the finite six-point lemma used by T128; T127 uses the written arbitrary-size proof",
+  "byte_identical_rebuild": true,
+  "mutations_rejected": [
+    "support_limit",
+    "block_limit",
+    "duplicate_partition",
+    "omitted_root",
+    "wrong_root",
+    "omitted_branch",
+    "false_leaf",
+    "cyclic_child",
+    "wrong_child_state",
+    "invalid_selected_atom",
+    "false_deletion",
+    "unequal_total_mass",
+    "false_sharpness_word",
+    "false_six_color_cap"
+  ],
+  "optimized_modes_rejected": [
+    "verify_partition_quartet_completeness.py",
+    "test_partition_quartet_completeness.py"
+  ],
+  "event_extractor_pairs_tested": 151,
+  "genuine_quadratic_events_tested": 67,
+  "certificate_sha256": "4021f7cd2ac3674caa0a5a631c7df00537c7a57b59f3d2dd21838bb5a5848332"
+}

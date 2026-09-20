@@ -305,3 +305,19 @@ E003负周期结果没有DRAT检查，不能标作CERTIFIED-UNSAT。其正见证
 
 外部定理另见 [SOURCES](../references/SOURCES.md)，不得用这里的状态代替
 对外部计算 certificate 的实际重放。
+
+## 2026-09-19–20 接续：新定理与新实验
+
+历史条目保留当时的范围；以下编号明确补入上一PR和本轮接续结果。
+
+| ID | 内容 | 状态 | 证据/范围 |
+|---|---|---|---|
+| T125 | 六次Salem宿主整个U(Z[α])、U(Q(α))恰四色且无三角形 | 完整证明；两种非实嵌入均适用 | [证明](proofs/salem_sextic_four_coloring.md)；把T124六次区间精确化，不是K²或HN新界 |
+| T126 | 阿贝尔Cayley三染的高度周期充要判据；指定连续幂方向1–6/7–12/≥13恰2/3/4色 | 完整两向证明 | [证明](proofs/salem_sextic_four_coloring.md)；真实关系格，不限周期或线性 |
+| E095 | 114点267条全实际边、无三角形、顶点临界四色见证 | 821节点非三染树＋114删点词独立核验 | [证据](proofs/salem_sextic_four_coloring.md)；不主张最小或边临界 |
+| E096 | 13方向的七条关系及十个整数式排除全部128符号；12方向有三染 | 整数证书独立核验 | [证据](proofs/salem_sextic_four_coloring.md) |
+| T127 | 两侧同m≤5、等权、每划分≤5块，完整律相同 iff 全部一次/二次相等矩相同 iff 所有≤4点限制相同；四点尖锐 | 任意标号域的完整数学证明 | [证明](proofs/five_word_quartet_completeness.md)；不是任意权五支持，也不覆盖任意支持数 |
+| T128 | 任意实正权、每份≤5支持、每划分≤5块的完整律由全部≤5点限制精确决定；五点尖锐 | T114压缩＋E098独立有限反证 | [证明](proofs/five_word_quartet_completeness.md)；不把支持数与等权分母混同 |
+| E097 | 自由五词及匹配的完整划分点对CEGAR，旧14＋u | UNKNOWN；无数学负证书 | 558生成点对，预算300000、实际300001冲突；[档案](../certificates/joint_pair_cegar.json)，独立入口NO_POSITIVE_WITNESS |
+| E098 | 六点五块的5/5支持覆盖不可能；四点/五点/六颜色尖锐例 | 4135节点/4125弧完整独立检查；14篡改拒绝 | [证明与入口](proofs/five_word_quartet_completeness.md)；15503小多重集校准不代替T127全尺寸证明 |
+| E099 | T127联合事件计数CEGAR，五词全自由且不猜算子，旧14＋u | UNKNOWN；无数学负证书 | 387至多四点事件，300000冲突；[档案](../certificates/joint_moment_cegar.json)，未取得15域正律 |

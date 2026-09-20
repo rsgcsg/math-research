@@ -1,5 +1,12 @@
 # 路线与依赖：原始 HN 的收敛图
 
+2026-09-20 接续修订：[T127–128](proofs/five_word_quartet_completeness.md)
+把固定小支持完整律压成尖锐四点（同m≤5等权）／五点（任意权≤5支持）判据。
+E097点对匹配与E099事件计数两次有界查询都仍UNKNOWN，没有15域正律。
+不继续把同族加预算当成数学推进；下一次须利用新的计数结构、更多支持的
+受控表示或真正全词分离。该小支持定理不撤销T114的未知支持数缺口。
+T125–126已精确关闭六次Salem宿主χ4，旧T124区间仅为历史状态。
+
 2026-09-16 canonical 更新。当前目标、证明、文献各只有一个入口：
 [CURRENT](CURRENT.md) · [统一框架](proofs/hn_unified_framework.md) ·
 [RESULTS](RESULTS.md) · [文献地图](../references/LITERATURE_MAP.md)。

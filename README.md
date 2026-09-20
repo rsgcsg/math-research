@@ -7,6 +7,18 @@
 [路线与淘汰理由](docs/ROUTES.md) · [历史T/C/E/Q账本](docs/RESULTS.md) ·
 [文献地图](references/LITERATURE_MAP.md)
 
+## 2026-09-20：完整五词律的尖锐四点／五点判据
+
+[T127–128 / E098](docs/proofs/five_word_quartet_completeness.md)：
+同一 m≤5 的等权五色划分，单个及两个同色事件的联合计数精确决定完整律，
+四点足够且必要；任意权、每份≤5支持时，五点足够且必要。
+后者有4135节点独立反证，前者给出任意域大小的完整数学证明。
+这是固定小支持的结构结果，不是全部proper空间的四点完备性。
+
+已把新定理用于无需猜支持匹配的E099搜索；旧14域＋u的五词查询仍UNKNOWN，
+没有新15域正律或HN新界。`make check-quartet` 重放新增证明证据和篡改测试。
+最新实验范围和全仓回归记录见 [CURRENT](docs/CURRENT.md)。
+
 ## 2026-09-19：六次宿主的精确答案与三色结构定理
 
 [T125–126 / E095–096：完整证明与证据](docs/proofs/salem_sextic_four_coloring.md)

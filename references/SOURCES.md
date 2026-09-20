@@ -440,3 +440,15 @@ Proc. AMS 126(3), 701–710 (1998)，DOI 10.1090/S0002-9939-98-04294-4。
   相对整基假设由本项目迹对偶证明核实。原件保持未修改，缓存
   `references/cache/milne_ant_20260916.pdf`（ignored），SHA-256
   `24b83c789a89f25aebffb3cbe4ae5ca29edd0075acc072de093d140770630847`。
+
+
+## 2026-09-20：二阶trade与T127
+
+- E. Ghorbani, S. Kamali, G. B. Khosrovshahi, D. S. Krotov,
+  *On the volumes and affine types of trades*, arXiv:1810.02296v2 (2020-01-11),
+  Electronic Journal of Combinatorics 27(1), P1.29, DOI 10.37236/8367.
+  https://arxiv.org/abs/1810.02296v2
+  原PDF已读取：§2.1整数重数定义、Lemma4最小体积结构、Theorem37及其体积5
+  排除结论。正文另给小体积二阶trade的自足图论证明；不依赖simple版本
+  的一般谱定理。网页PDF截图服务两次返回内部错误，未据截图推断任何图表。
+  应用：[T127–128](../docs/proofs/five_word_quartet_completeness.md)。
