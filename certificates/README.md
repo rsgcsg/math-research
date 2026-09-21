@@ -186,3 +186,11 @@ The three recorded UNSAT torus results are **uncertified search observations**;
 the verifier deliberately does not turn them into negative mathematical claims.
 No stored artifact is a certificate that the plane requires six or seven colors.
 No Lean/Coq formalization is claimed.
+
+## 2026-09-21：T129–130 / E100
+
+`dyadic_cyclic_orbit_probe.json.gz` 保存全部精确返回、63129个非原点接触代表、360个原点邻接和三份10077字符五色词。
+独立入口 `python3 research/verify_dyadic_cyclic_orbit.py`；结果为 `dyadic_cyclic_orbit_validation.json`。
+`dyadic_cyclic_orbit_summary.json` 是搜索摘要，不代替独立检查。
+证书SHA256：79d1448921c3d66604d847d617dec496245e82393a3b7a8ea373ae2c9af3a172。
+`cyclic_orbit_full_regression.json` 仅在本次完整make check成功后生成，绑定受检提交与源码指纹。
