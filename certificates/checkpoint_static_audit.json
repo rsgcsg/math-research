@@ -1,0 +1,37 @@
+{
+  "schema": "hn-checkpoint-static-audit-v1",
+  "date": "2026-09-21",
+  "status": "PASS",
+  "base_commit": "04afb89ff47ccb7c50227121474b10c591c7fe30",
+  "python_syntax_files": 223,
+  "json_files": 138,
+  "markdown_file_references": 493,
+  "ledger_ids": {
+    "T": 134,
+    "E": 104,
+    "C": 23,
+    "Q": 10
+  },
+  "source_manifest_sha256": "808ddfc9e67c0b7094e99d1c1d6049370fbd29213bde7d5f963d388dc45d4564",
+  "runtime_only_test_outputs_restored": [
+    {
+      "path": "certificates/dyadic_cyclic_orbit_validation.json",
+      "fields": [
+        "elapsed_seconds"
+      ]
+    },
+    {
+      "path": "certificates/finite_frame_validation.json",
+      "fields": [
+        "python"
+      ]
+    }
+  ],
+  "reviewed_documents": {
+    "README.md": "5667b314d2e60c163d7d6a5027b2f8409e3508510dfb4489ccdddab2e539a7dc",
+    "docs/CURRENT.md": "9f498ea7647523c179268f506fd218d04eec69ce41db783449f94ad90a23a371",
+    "docs/ROUTES.md": "a756b29b687b6f9ad4776a0d812c15a1f217d3bb386da847145791c24e408ba8",
+    "docs/proofs/hn_unified_framework.md": "bac1af92bdef711c1d79bf4c868fd6cefb76651be92b237141b21e50b4036880"
+  },
+  "scope": "Syntax, JSON parseability, local Markdown file targets and exact ledger ID coverage. Not a proof of theorems, exhaustive heading-anchor audit, new search result, or recovery of missing historical evidence."
+}

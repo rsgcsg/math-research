@@ -1,4 +1,4 @@
-.PHONY: check check-salem check-quartet check-orbit check-covers check-frames setup explore
+.PHONY: check check-salem check-quartet check-orbit check-covers check-frames check-preparation setup explore
 
 check:
 	python3 research/verify.py
@@ -7,6 +7,7 @@ check:
 	$(MAKE) check-orbit
 	$(MAKE) check-covers
 	$(MAKE) check-frames
+	$(MAKE) check-preparation
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -23,6 +24,9 @@ check-covers:
 
 check-frames:
 	python3 research/test_finite_frame_certificates.py
+
+check-preparation:
+	python3 research/audit_full_law_preparation.py --self-test
 
 setup:
 	uv venv --allow-existing .venv
