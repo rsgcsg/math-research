@@ -1,0 +1,371 @@
+{
+  "schema": 1,
+  "experiment": "E097",
+  "support": 5,
+  "colors": 5,
+  "geometry": {
+    "vertices": 10077,
+    "actual_pairs": 50767926,
+    "induced_edges": 49858,
+    "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+    "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+    "overlap": 91,
+    "new_cross_edges": 170
+  },
+  "search": {
+    "status": "UNKNOWN",
+    "history": [
+      {
+        "round": 0,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 568,
+          "conflicts": 10003,
+          "decisions": 414292,
+          "propagations": 7898864
+        }
+      },
+      {
+        "round": 1,
+        "active_domains": 15,
+        "new_pairs": 146,
+        "total_pairs": 0,
+        "equality_variables": 0,
+        "variables": 252350,
+        "conflicts": 18644,
+        "elapsed_seconds": 11.055
+      },
+      {
+        "round": 2,
+        "active_domains": 15,
+        "new_pairs": 201,
+        "total_pairs": 146,
+        "equality_variables": 1235,
+        "variables": 253585,
+        "conflicts": 26726,
+        "elapsed_seconds": 12.388
+      },
+      {
+        "round": 3,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 2475,
+          "conflicts": 36726,
+          "decisions": 1204759,
+          "propagations": 24596090
+        }
+      },
+      {
+        "round": 4,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 2900,
+          "conflicts": 46726,
+          "decisions": 1446632,
+          "propagations": 28284978
+        }
+      },
+      {
+        "round": 5,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 3407,
+          "conflicts": 56726,
+          "decisions": 1677134,
+          "propagations": 33553626
+        }
+      },
+      {
+        "round": 6,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 3937,
+          "conflicts": 66726,
+          "decisions": 1868587,
+          "propagations": 38317228
+        }
+      },
+      {
+        "round": 7,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 4516,
+          "conflicts": 76726,
+          "decisions": 2093717,
+          "propagations": 43663688
+        }
+      },
+      {
+        "round": 8,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 4855,
+          "conflicts": 86726,
+          "decisions": 2265816,
+          "propagations": 46684881
+        }
+      },
+      {
+        "round": 9,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 5369,
+          "conflicts": 96729,
+          "decisions": 2495667,
+          "propagations": 50531808
+        }
+      },
+      {
+        "round": 10,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 5799,
+          "conflicts": 106729,
+          "decisions": 2682617,
+          "propagations": 55321163
+        }
+      },
+      {
+        "round": 11,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 6304,
+          "conflicts": 116729,
+          "decisions": 2896816,
+          "propagations": 59029117
+        }
+      },
+      {
+        "round": 12,
+        "active_domains": 15,
+        "new_pairs": 211,
+        "total_pairs": 347,
+        "equality_variables": 2910,
+        "variables": 255260,
+        "conflicts": 125812,
+        "elapsed_seconds": 32.561
+      },
+      {
+        "round": 13,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 7035,
+          "conflicts": 135812,
+          "decisions": 3255030,
+          "propagations": 65354780
+        }
+      },
+      {
+        "round": 14,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 7391,
+          "conflicts": 145812,
+          "decisions": 3397866,
+          "propagations": 69610850
+        }
+      },
+      {
+        "round": 15,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 7891,
+          "conflicts": 155813,
+          "decisions": 3550271,
+          "propagations": 72656629
+        }
+      },
+      {
+        "round": 16,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 8340,
+          "conflicts": 165813,
+          "decisions": 3725356,
+          "propagations": 76071180
+        }
+      },
+      {
+        "round": 17,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 8724,
+          "conflicts": 175815,
+          "decisions": 3869252,
+          "propagations": 79061865
+        }
+      },
+      {
+        "round": 18,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 8880,
+          "conflicts": 185816,
+          "decisions": 3971133,
+          "propagations": 87658581
+        }
+      },
+      {
+        "round": 19,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 9185,
+          "conflicts": 195820,
+          "decisions": 4129105,
+          "propagations": 90709169
+        }
+      },
+      {
+        "round": 20,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 9516,
+          "conflicts": 205821,
+          "decisions": 4280649,
+          "propagations": 93677258
+        }
+      },
+      {
+        "round": 21,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 9889,
+          "conflicts": 215824,
+          "decisions": 4430877,
+          "propagations": 96767868
+        }
+      },
+      {
+        "round": 22,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 10058,
+          "conflicts": 225825,
+          "decisions": 4541526,
+          "propagations": 100713140
+        }
+      },
+      {
+        "round": 23,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 10238,
+          "conflicts": 235827,
+          "decisions": 4641881,
+          "propagations": 103087489
+        }
+      },
+      {
+        "round": 24,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 10459,
+          "conflicts": 245827,
+          "decisions": 4766374,
+          "propagations": 105708103
+        }
+      },
+      {
+        "round": 25,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 10966,
+          "conflicts": 255827,
+          "decisions": 4947646,
+          "propagations": 109196296
+        }
+      },
+      {
+        "round": 26,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 11324,
+          "conflicts": 265827,
+          "decisions": 5100221,
+          "propagations": 112275033
+        }
+      },
+      {
+        "round": 27,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 11580,
+          "conflicts": 275827,
+          "decisions": 5225285,
+          "propagations": 116333110
+        }
+      },
+      {
+        "round": 28,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 11821,
+          "conflicts": 285828,
+          "decisions": 5337491,
+          "propagations": 118835655
+        }
+      },
+      {
+        "round": 29,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 12183,
+          "conflicts": 295830,
+          "decisions": 5468900,
+          "propagations": 121672417
+        }
+      },
+      {
+        "round": 30,
+        "active_domains": 15,
+        "solver_status": "UNKNOWN",
+        "stats": {
+          "restarts": 12299,
+          "conflicts": 300001,
+          "decisions": 5519042,
+          "propagations": 122781421
+        }
+      }
+    ],
+    "stats": {
+      "restarts": 12299,
+      "conflicts": 300001,
+      "decisions": 5519042,
+      "propagations": 122781421
+    },
+    "checkpoints": [],
+    "generated_pairs": 558,
+    "equality_variables": 4735,
+    "elapsed_seconds": 55.345
+  },
+  "result": null,
+  "scope": "Exact full-partition CEGAR at fixed support five; no plane bound or all-support negative claim",
+  "source_commit": "dcfdea27543e829d11ae4500d736ae6db8e5ef64"
+}

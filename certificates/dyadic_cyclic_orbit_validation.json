@@ -1,0 +1,190 @@
+{
+  "status": "PASS",
+  "scope": "Entire actual union over all integer u powers; no old-14 common-law or plane claim",
+  "certificate_sha256": "79d1448921c3d66604d847d617dec496245e82393a3b7a8ea373ae2c9af3a172",
+  "geometry": {
+    "vertices": 10077,
+    "actual_pairs": 50767926,
+    "induced_edges": 49858,
+    "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+    "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+    "overlap": 91,
+    "new_cross_edges": 170
+  },
+  "local_bits": 24,
+  "local_polynomial": [
+    1,
+    0,
+    0,
+    1,
+    1
+  ],
+  "split_prime": 10531,
+  "return_bound": 6,
+  "complete_returns": [
+    [
+      1,
+      29
+    ],
+    [
+      2,
+      805
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      6,
+      1
+    ]
+  ],
+  "cross_edges": 63129,
+  "cross_histogram": [
+    [
+      0,
+      49498
+    ],
+    [
+      1,
+      938
+    ],
+    [
+      2,
+      12379
+    ],
+    [
+      3,
+      126
+    ],
+    [
+      4,
+      188
+    ]
+  ],
+  "origin_neighbors": 360,
+  "period": 3,
+  "minimum_period_witness": {
+    "power": 2,
+    "point_index": 597,
+    "coordinates": [
+      "0",
+      "-1",
+      "-2/3",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "quotient_vertices": 27745,
+  "quotient_edges": 143817,
+  "mutations_rejected": [
+    "source",
+    "geometry",
+    "valuation",
+    "return-bound",
+    "missing-return",
+    "false-return",
+    "missing-fourth-layer-edge",
+    "invented-fifth-layer-edge",
+    "missing-origin-edge",
+    "changed-fixed-origin",
+    "monochromatic-unit-edge",
+    "sixth-color",
+    "quotient-size",
+    "false-period"
+  ],
+  "optimized_mode_rejections": 1,
+  "edge_color_checks": 190467,
+  "old_14_audit": [
+    {
+      "motion": "tau",
+      "domain": 5084,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "nu",
+      "domain": 556,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "eta",
+      "domain": 5289,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "omega",
+      "domain": 4671,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "bar",
+      "domain": 1895,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "bridge",
+      "domain": 513,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "translation_one",
+      "domain": 333,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "translation_z",
+      "domain": 200,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "one_plus_eta_1",
+      "domain": 573,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "one_plus_eta_2",
+      "domain": 513,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "one_plus_eta_3",
+      "domain": 513,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "one_plus_eta_4",
+      "domain": 512,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "bridge_shift",
+      "domain": 511,
+      "full_partition_law_equal": false
+    },
+    {
+      "motion": "minus_bar",
+      "domain": 1866,
+      "full_partition_law_equal": false
+    }
+  ],
+  "elapsed_seconds": 55.70494061799991
+}

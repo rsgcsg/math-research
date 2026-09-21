@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "command": "make check",
+  "checked_commit": "395cea780b617775f4ef48ada637e090b201b4ee",
+  "source_manifest_sha256": "d0a8d7c13c888cd66de9310a3f4832c57e9096c3232d95a2ffd7a11f6e8f002b",
+  "cyclic_certificate_sha256": "79d1448921c3d66604d847d617dec496245e82393a3b7a8ea373ae2c9af3a172",
+  "log_sha256": "c3b96e7648ca1bf6c416acd36b68a19c35c01e8d0106e49e3626a952beadcd29",
+  "python": "3.12.3",
+  "source_unchanged": true,
+  "scope": "All original verify.py checks plus Salem, quartet and complete cyclic-orbit checks; mathematical general theorem uses its written proof",
+  "worktree_outputs": [
+    "certificates/dyadic_cyclic_orbit_validation.json"
+  ]
+}
