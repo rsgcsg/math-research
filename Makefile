@@ -1,15 +1,20 @@
-.PHONY: check check-salem check-quartet setup explore
+.PHONY: check check-salem check-quartet check-orbit setup explore
 
 check:
 	python3 research/verify.py
 	$(MAKE) check-salem
 	$(MAKE) check-quartet
+	$(MAKE) check-orbit
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
 
 check-quartet:
 	python3 research/test_partition_quartet_completeness.py
+
+check-orbit:
+	python3 research/test_cyclic_valuation_sieve.py
+	python3 research/verify_dyadic_cyclic_orbit.py
 
 setup:
 	uv venv --allow-existing .venv
