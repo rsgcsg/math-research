@@ -7,9 +7,16 @@
 [路线与淘汰理由](docs/ROUTES.md) · [结果账本](docs/RESULTS.md) ·
 [文献地图](references/LITERATURE_MAP.md) · [证据规则](AGENTS.md)
 
-## 2026-09-21：历史收敛与成果整合
+## 2026-09-21：归并后的再次核对与准备收尾
 
-归并至T134/E104，不新增定理编号，不把文档、验证或固定模型失败称为HN突破。
+PR #2已合并；归并至T134/E104的数学成果不重复计数。
+新`full-law-pricing`分支仅完成输入准备，尚未执行全词定价。
+本次补齐[独立输入验收与可重建收据](certificates/full_law_preparation_audit.json)，
+`make check-preparation`重建全部15域并明确识别旧14正种子仍未满足u。
+没有新15域正律、全词分离或HN新界；不增加T/E编号。
+[CURRENT](docs/CURRENT.md)集中说明历史成果、未完工程、三层量词、三项真实难点和突破验收标准。
+
+## 已有成果（归并至T134/E104）
 
 - **已决定的宿主与有限关系：** R₂恰4色、R₅恰5色；六次Salem宿主恰4色；
   实际无限单u轨道∪uⁿY恰5色。Y的五词旧14完整域共同律已认证。
@@ -17,7 +24,7 @@
 - **方法边界：** 幂零覆盖不能修复指定旧表示；但任意有限部分运动都有等式分离覆盖，
   当前实例有限可解群已足够。等式分离不等于合法染色，更不等于完整共同律。
 
-[最新两轮证明：T131–132](docs/proofs/joint_cover_monodromy.md) · [T133–134](docs/proofs/finite_frame_separation.md)
+[覆盖方法相关证明：T131–132](docs/proofs/joint_cover_monodromy.md) · [T133–134](docs/proofs/finite_frame_separation.md)
 
 ## 现在到底缺什么
 
@@ -37,6 +44,7 @@ certificates/    可独立重放的见证、来源绑定与验证收据
 
 Python 3.10+标准库独立检查：`make check`。
 `check-salem`、`check-quartet`、`check-orbit`、`check-covers`、`check-frames`分别重放对应证据。
+`check-preparation`仅验收并重建全词定价输入，不执行数学搜索。
 `make setup`只用于重跑需要额外库的搜索。验证范围与发布状态以CURRENT和本次收据为准。
 
-本次整合的发布与完整回归记录见 [PR #2](https://github.com/rsgcsg/math-research/pull/2) 和 [CURRENT](docs/CURRENT.md)。原研究分支与历史证据保留。
+此前成果归并记录见 [PR #2](https://github.com/rsgcsg/math-research/pull/2)；本次输入审计、验证和研究缺口以[CURRENT](docs/CURRENT.md)为准。原研究分支与历史证据保留。

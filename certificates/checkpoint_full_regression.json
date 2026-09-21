@@ -1,0 +1,27 @@
+{
+  "schema": "hn-checkpoint-replay-v1",
+  "status": "PASS",
+  "date": "2026-09-21",
+  "command": "make check",
+  "returncode": 0,
+  "python": "3.13.5",
+  "base_commit": "04afb89ff47ccb7c50227121474b10c591c7fe30",
+  "base_tree": "7f551a11cbd675257f3009d6f8cf34b37f316361",
+  "source_file_count": 225,
+  "source_manifest_sha256": "808ddfc9e67c0b7094e99d1c1d6049370fbd29213bde7d5f963d388dc45d4564",
+  "source_unchanged": true,
+  "source_manifest_rule": "SHA256 of compact, sorted-key JSON mapping Makefile, requirements-research.txt and all research/*.py relative paths to file SHA256",
+  "checker_sha256": "fdd3043fea0211e50bac93906d8346fb6282113dffb1225301251709052d1498",
+  "log_sha256": "6e3dc24602535ec82e0caf9c8c193c7738461768ba562c93f5a3a1f3c68d14e3",
+  "entrypoints": [
+    "research/verify.py",
+    "check-salem",
+    "check-quartet",
+    "check-orbit",
+    "check-covers",
+    "check-frames",
+    "check-preparation"
+  ],
+  "elapsed_seconds": 2198.27,
+  "scope": "One complete execution on the frozen research source, including the new input audit. Input audit is not a full-law search. General mathematical claims rely on written proofs; no new HN bound or independent peer review is claimed."
+}
