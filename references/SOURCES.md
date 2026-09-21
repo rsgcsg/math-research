@@ -458,3 +458,101 @@ Proc. AMS 126(3), 701–710 (1998)，DOI 10.1090/S0002-9939-98-04294-4。
 主要输入为仓库T116/E077/E090/E092，新增赋值和有限状态论证均在proof中完整证明。
 2026-09-21读取 https://arxiv.org/abs/2608.04542 可见版本为2026-08-06 v2（2131点spindle-free五色），不作为普通六色界。
 Ville Salo, DOI 10.1112/plms.12567：本轮可读摘要/索引，出版社全文403；不把该文主定理列为已读证明输入。
+
+## 2026-09-21：有限覆盖与幂零群的参照
+
+- J. L. Gross, T. W. Tucker (1977), *Generating all graph coverings by permutation voltage assignments*, Discrete Mathematics 18, 273–283. DOI: 10.1016/0012-365X(77)90131-5. 出版摘要已核对：任意覆盖的置换电压表示、正规覆盖的群电压表示。T132使用自行给出的有限颜色坐标公式，不把摘要当成保色数存在定理。
+- E. I. Khukhro, *p-Automorphisms of Finite p-Groups*, Chapter 4, pp.51–56. DOI: 10.1017/CBO9780511526008.006. 出版章节说明已核对；本轮不声称阅读全文。T131需要的极大子群引理已在本仓库证明中从中心与Sylow直积重新证明。
+
+对应本地新结论：[joint_cover_monodromy.md](../docs/proofs/joint_cover_monodromy.md)。
+
+- Almeida, Shahzamanian, Steinberg, *The pro-nilpotent group topology on a free group*,
+  Journal of Algebra 480 (2017), 332–345, DOI `10.1016/j.jalgebra.2017.03.009`.
+  https://doi.org/10.1016/j.jalgebra.2017.03.009
+  2026-09-21核对出版网页可见§2.1正文、Proposition 2.2与Corollary 2.3；
+  部分行内公式解析缺失，不据此声称重放全篇。作为T131的nil-稠密性成熟
+  背景；本仓库所需特例另给自足证明。
+
+## 2026-09-21：T133–134 的交叉审计与来源范围
+
+本次不是把历史地图中的每篇文章都重新读了一遍。以下明确区分原文相关部分、
+作者摘要、代码命题审计；本地T133–134给出自足证明，不依赖未经阅读的外部定理。
+
+- de Grey, arXiv:1804.02385v3，作者摘要和版本页复核；普通五色下界，不是六色。
+  https://arxiv.org/abs/1804.02385
+- Haugland, arXiv:2608.04542，当前可读作者页显示2026-08-06 v2；读取对应HTML
+  引言与构造定位，2131点无spindle五色图。此前地图记录的v4本轮未能复核，
+  不据本次v2页面确认旧v4的细节或纪录更正。不是宣称v4不存在。
+  https://arxiv.org/abs/2608.04542 ； https://arxiv.org/html/2608.04542v2
+- Dúcz–Varga, *A unit-distance graph in the plane with independence ratio below 1/4*,
+  arXiv:2606.28157，核验作者摘要。独立比／分数色数进展不自动给普通六色下界。
+  https://arxiv.org/abs/2606.28157
+- Sokolov–Voronov, *On the chromatic number of the plane for map-type colorings*,
+  arXiv:2502.01958，作者摘要核验；有限局部地图、边界与顶点条件是额外假设。
+  https://arxiv.org/abs/2502.01958
+- Guzmán-Pro–Martin, *Restricted CSPs and F-Free Digraph Algorithmics*, ICALP2025,
+  LIPIcs334,158。读取原始HTML定义及Theorem18和其后无限restriction讨论；
+  其有限结构二分法不能直接把无限单位图U(R²)作为已满足的有限restriction。
+  https://drops.dagstuhl.de/storage/00lipics/lipics-vol334-icalp2025/html/LIPIcs.ICALP.2025.158/LIPIcs.ICALP.2025.158.html
+- Lichter–Pago, *Limitations of Affine Integer Relaxations for Solving Constraint
+  Satisfaction Problems*, ICALP2025, LIPIcs334,166。读取原始HTML引言、相关
+  放松方法及coset-CSP/Maltsev讨论；一般CSP算法的反例不等于HN承诺类的障碍。
+  https://drops.dagstuhl.de/storage/00lipics/lipics-vol334-icalp2025/html/LIPIcs.ICALP.2025.166/LIPIcs.ICALP.2025.166.html
+- Vontobel, *Counting in Graph Covers: A Combinatorial Characterization of the Bethe
+  Entropy Function*, arXiv:1012.0065v2；本轮核验作者摘要和2013期刊信息，不声称
+  阅读全文证明。迁移语言是有限覆盖和局部概率因子；要在本项目精确使用，
+  不可删除“完整Y词必须proper”的全局因子。
+  https://arxiv.org/abs/1012.0065
+- Markus-Epstein, *Stallings' Foldings and Subgroups of Amalgams of Finite Groups*,
+  arXiv:0705.0754；本轮核验作者摘要的有限逆自动机解释，未重读43页全文。
+  T133改用初等的部分置换完成，不调用该文更强的算法定理。
+  https://arxiv.org/abs/0705.0754
+
+搜索还发现高维上界的arXiv:2609.20436摘要索引；此次原页读取失败，
+未列为已读证明输入，未将其中较高维的记录改写为二维普通HN结果。
+
+### 外部“形式化χ=7”声明的最小命题审计
+
+读取外部库 `AEjonanonymous/Hadwiger-Nelson` 的 `Hadwiger_Nelson_Final.lean`，
+固定blob为 `486a081475619aaa5b0d01aec01680bd741ddd19`（4366字节）。
+这是公开声明的原始代码，不是经本仓库验证的成果。没有执行其Lean编译。
+https://github.com/AEjonanonymous/Hadwiger-Nelson/blob/main/Hadwiger_Nelson_Final.lean
+
+该文件最终 `coloring_collision` 明确带有额外参数
+`h_safe : ∀ i, SafeDensity r (C.color i)`；`SafeDensity`只是一个定义，
+要求每个单位安全颜色集的角度测度小于π/3。定理据此把六个上界相加，
+结论是测度和小于2π，而不是无条件的六染色不存在。未在该文件中证明h_safe。
+
+这个无条件密度断言有直接反例：r=1/4时整个圆的任意弦长≤1/2，故单位安全，
+角度原像却有测度2π。即使采用文件强调的r=1/√3，半开角区间[0,2π/3)
+对应的弦长严格小于1，仍是单位安全集，其角度测度为2π/3>π/3；三个这样的
+半开区间实际给该圆三染。因而不能把 `SafeDensity` 补成对任意安全颜色集的定理。
+这项审计只否定将已读条件定理当作原始HN解答，不对未读PDF或其他未来版本作结论。
+
+## 2026-09-21：历史收敛审计的本次复核范围
+
+此节是本次实际读取，不把早先“已读”记录一律升级为重复全文复核。
+
+- de Grey, arXiv:1804.02385，作者摘要与版本页，普通下界5：
+  https://arxiv.org/abs/1804.02385 。没有重放其整套原始1581点外部证书；项目的Parts核心另有本地证据。
+- Parts, arXiv:2010.12665，作者摘要，509点2442边的五色最小化构造：
+  https://arxiv.org/abs/2010.12665 。外部“当前纪录”另由Haugland v2的引言核对，不把最小已知说成已证最小。
+- Haugland, arXiv:2608.04542v2，作者版本历史与HTML引言、构造命题：
+  https://arxiv.org/abs/2608.04542 和 https://arxiv.org/html/2608.04542v2 。
+  可见版本为2026-08-06的v2；2131点无Moser spindle五色图，不是六色下界。
+- Dúcz–Varga, arXiv:2606.28157v1，作者摘要、引言和主要命题的HTML：
+  https://arxiv.org/html/2606.28157v1 。给有限独立比<1/4及分数色数>4；未冒称本次重放外部全部计算。
+- Dúcz, arXiv:2606.12325，作者摘要与版本页：
+  https://arxiv.org/abs/2606.12325 。Moser lattice/ring的几何四色，不是整个平面的上界。
+- Sokolov–Voronov, arXiv:2502.01958，作者摘要与版本页：
+  https://arxiv.org/abs/2502.01958 。地图型七色结论带局部有限和边界条件；普通HN不加入这些条件。
+- Matolcsi–Ruzsa–Varga–Zsámboki, arXiv:2311.10069v4，HTML定义、引言及amenability归约：
+  https://arxiv.org/html/2311.10069v4 。用于分清分数/几何分数与普通色数；本项目T023另有<5的单色方法上界证明。
+
+本次未重读134条本地定理的每个外部依赖证明；核心新增T131–134及主线接口T105/T114/E085的书面范围已逐项审查。
+本次完整make check只复核所有已纳入入口的有限证书，不能代替所有一般定理的形式化或独立同行审查。
+
+### 验证可移植性：Python官方gzip文档
+
+- https://docs.python.org/3/library/gzip.html ：本轮核读gzip.compress版本说明；3.11的mtime=0分支可能返回平台OS字节，3.13保证255。
+- build_finite_frame_certificates.py只规范化gzip头第9字节，压缩正文和证书JSON不变；test_finite_frame_certificates.py校准输入OS=0、3、255并验证解压同一正文。

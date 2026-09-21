@@ -1,46 +1,40 @@
 # Hadwiger–Nelson research
 
-目标：解决原始 Hadwiger–Nelson，或证明足以决定它的结构定理。
-**原始问题未解决；本轮没有普通平面色数新界。**
+目标：决定普通欧氏平面的单位距离色数，或证明足以决定它的结构定理。
+**普通界仍为5≤χ(R²)≤7；本项目尚未改变这两个界。**
 
-[当前研究状态](docs/CURRENT.md) · [统一框架](docs/proofs/hn_unified_framework.md) ·
+[当前进度与真实瓶颈](docs/CURRENT.md) · [统一框架](docs/proofs/hn_unified_framework.md) ·
 [路线与淘汰理由](docs/ROUTES.md) · [结果账本](docs/RESULTS.md) ·
-[文献地图](references/LITERATURE_MAP.md)
+[文献地图](references/LITERATURE_MAP.md) · [证据规则](AGENTS.md)
 
-## 2026-09-21：完整无限旋转轨道恰五色
+## 2026-09-21：历史收敛与未发布成果整合
 
-[T129–130 / E100：完整证明](docs/proofs/dyadic_cyclic_orbit.md)。
-对既有10077点Y，实际无限点集 `O=∪_(n∈Z)uⁿY` 的全部单位距离图恰五色。
-三个完整词给出最小标号周期3；一条可手算的实际单位边排除周期1和2。
-所有高次返回、所有跨层边和原点的无限星均已覆盖，不是抽象一步条带。
+归并至T134/E104，不新增定理编号，不把文档、验证或固定模型失败称为HN突破。
 
-一般的两候选赋值判据把无限指数核验压成有限运算；结合一维有限状态，
-得到给定代数单旋转实际轨道的可计算染色判定。新证书由不同数域算术独立重放，
-190467项边颜色义务、14种篡改拒绝和原有14域完整审计均已执行。
-**新三相律的旧14域全部失配；旧14+u仍未知，不是HN新界。**
+- **已决定的宿主与有限关系：** R₂恰4色、R₅恰5色；六次Salem宿主恰4色；
+  实际无限单u轨道∪uⁿY恰5色。Y的五词旧14完整域共同律已认证。
+- **严格工具：** 全词分离的有限几何编译、有限支持/组合补全等价、小支持四/五点辨识、有限覆盖正规形。
+- **方法边界：** 幂零覆盖不能修复指定旧表示；但任意有限部分运动都有等式分离覆盖，
+  当前实例有限可解群已足够。等式分离不等于合法染色，更不等于完整共同律。
 
-## 继承的近期结果，不重复记作本轮成果
+[最新两轮证明：T131–132](docs/proofs/joint_cover_monodromy.md) · [T133–134](docs/proofs/finite_frame_separation.md)
 
-[T127–128 / E098](docs/proofs/five_word_quartet_completeness.md)：
-同m≤5等权五色划分的完整律由四点信息决定；任意权、每份≤5支持时五点恰好足够。
-E097/E099两个新编码仍未决定旧14+u，固定支持失败也不是全部proper空间的负证据。
+## 现在到底缺什么
 
-[T125–126 / E095–096](docs/proofs/salem_sextic_four_coloring.md)：
-六次Salem整个数域恰四色，114点267边的无三角形顶点临界见证；
-一般阿贝尔Cayley三色高度判据及连续幂方向的2/3/4色完整阈值。
+旧14域＋u的**全部合法五色划分上的同一个概率律**仍未知。E084/E097/E099的UNKNOWN保持原样。
+不能合并分别成立的子系统正律，不能把固定支持或群类的失败送进全词反证。
+主攻是保留所有实际边和完整模式行的全词定价/分离闭环；几何与全局上界各保留一条备线。
+精确判据和停止条件见[CURRENT](docs/CURRENT.md)。
 
-此前的E083已给Y上五词共同满足旧14完整域；T116–118给R₂整环四色、
-真实最小分母层与有限精度天花板；T122–124给共尾量词、非CM几何与低色宿主筛选。
-详细证明、历史UNKNOWN与退出条件保持在上述canonical入口。
+原始答案不预定为6：答案5需全局≤5；答案6需有限NON5和全局≤6；答案7需有限NON6。
 
 ```text
 references/      原始来源、文献地图、未经重放的历史输入
-docs/            canonical 状态、依赖、结果账本、完整证明
+docs/            当前状态、依赖、账本与完整证明
 research/        精确数学程序；搜索与独立检查分离
-certificates/    可独立重放见证和来源绑定
+certificates/    可独立重放的见证、来源绑定与验证收据
 ```
 
-标准库独立验证：`make check`。只重放本次入口：`make check-orbit`。
-其他近期入口：`make check-salem`、`make check-quartet`。
-SAT／NumPy仅用于搜索生产器，不属于本次独立检查器的依赖。
-证据规则见 [AGENTS.md](AGENTS.md)。GitHub研究分支发布不等于自动合并main。
+Python 3.10+标准库独立检查：`make check`。
+`check-salem`、`check-quartet`、`check-orbit`、`check-covers`、`check-frames`分别重放对应证据。
+`make setup`只用于重跑需要额外库的搜索。验证范围与发布状态以CURRENT和本次收据为准。

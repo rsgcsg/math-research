@@ -194,3 +194,13 @@ No Lean/Coq formalization is claimed.
 `dyadic_cyclic_orbit_summary.json` 是搜索摘要，不代替独立检查。
 证书SHA256：79d1448921c3d66604d847d617dec496245e82393a3b7a8ea373ae2c9af3a172。
 `cyclic_orbit_full_regression.json` 仅在本次完整make check成功后生成，绑定受检提交与源码指纹。
+
+
+## T133–134 / E103–104：有限坐标分离
+
+`finite_frame_separator.json.gz` 是一个指定S₃覆盖和整个关键组件的等变标号。
+`arithmetic_frame_separation.json` 是模5701双嵌入、完整15域仿射作用和S₄调色板证书。
+独立入口 `make check-frames` 重建全部实际几何、全组件、完整proper子句推导、
+有限域单射和群结构；`finite_frame_validation.json` 保存本轮新入口收据。
+一般路径不变量依赖完整数学证明，不由小模型或有限搜索代替。
+这两份证书均不是旧14＋u完整共同律的正证书，更不是NON5或全平面上界。

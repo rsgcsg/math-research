@@ -1,0 +1,1604 @@
+{
+  "schema": "joint-cover-validation-v1",
+  "status": "PASS",
+  "date": "2026-09-21",
+  "theorems": [
+    "T131",
+    "T132"
+  ],
+  "experiments": [
+    "E101",
+    "E102"
+  ],
+  "base_commit": "395cea780b617775f4ef48ada637e090b201b4ee",
+  "base_tree": "c3819a8c94c258fa29d7f806bc57cb22ca8712ea",
+  "initial_research_base": "5cd6b56373e9e92d686101a87028e213747feaf2",
+  "python_version": "3.13.5",
+  "execution_layout": "Full pre-integration make check, then final-tree check-orbit and check-covers; preserved core sources and inputs compared byte-for-byte.",
+  "final_tree_single_full_make_check_run": false,
+  "all_final_check_entrypoints_covered": true,
+  "pre_integration_full_make_check": {
+    "command": "make check",
+    "exit_code": 0,
+    "research_source_sha256": "9018c66952efd15481f05f396d38f632b9d8e70581a14db1cb7bfb33a1d4a1e3",
+    "log_sha256": "0224984c2587cd88d329fa815b19fbba572aa8e581131421d9cd2d1362ed6ead",
+    "initial_cover_ids": [
+      "E100",
+      "E101"
+    ],
+    "note": "These provisional cover IDs were renumbered after discovering concurrent remote T129/T130/E100. Final IDs and code were independently replayed below."
+  },
+  "final_tree_added_and_synchronized_entries": {
+    "command": "make check-orbit check-covers",
+    "exit_code": 0,
+    "research_source_sha256": "1cd356d04f246b27488a80f20c7da1ac1273925a4563f896cde9c0ef2511f7a7",
+    "log_sha256": "c37e19db8f9fb38ceefff50653cd16a4921f9b423de322a9ec92a96b91fd8b0c",
+    "cover_checks": {
+      "status": "PASS",
+      "checks": [
+        {
+          "status": "PASS",
+          "experiment": "E101",
+          "geometry": {
+            "vertices": 10077,
+            "actual_pairs": 50767926,
+            "induced_edges": 49858,
+            "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+            "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+            "overlap": 91,
+            "new_cross_edges": 170
+          },
+          "integral_cycle_rank": 66,
+          "minor_determinants": [
+            [
+              8991,
+              6016
+            ],
+            [
+              -135,
+              1280,
+              3072
+            ],
+            [
+              -135,
+              1280,
+              3072
+            ]
+          ],
+          "checked_closed_walks": 222,
+          "checked_path_steps": 5860,
+          "checked_transports": 106,
+          "forced_colors": [
+            [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                3
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          ],
+          "unequal_counts": [
+            4,
+            0
+          ],
+          "toy": {
+            "base_vertices": 1,
+            "base_edges": 2,
+            "cover_sheets": 3,
+            "minor_determinants": [
+              2,
+              3
+            ],
+            "pullback_components": [
+              3,
+              6
+            ],
+            "scope": "Combinatorial S3 counterexample, not a unit-distance obstruction"
+          },
+          "scope": "All finite nilpotent-monodromy covers of the exact E083 word/palette actions; not arbitrary full-joint.",
+          "mutations_rejected": [
+            "source",
+            "geometry",
+            "tree",
+            "seed",
+            "walk",
+            "determinant",
+            "missing_saturation",
+            "minor_dimension",
+            "transport",
+            "event",
+            "color"
+          ]
+        },
+        {
+          "status": "PASS",
+          "experiment": "E102",
+          "vertices": 10077,
+          "edges": 49858,
+          "words": 15,
+          "distinct_partitions": 15,
+          "full_old_domains": 14,
+          "checked_word_edges": 747870,
+          "positive_event_counts": [
+            12,
+            0
+          ],
+          "analysis": {
+            "classes": 2123,
+            "base_clauses": 15481,
+            "classes_sha256": "7f2d20b442e0634ace62046e4d6ec988abd236d6f8793f0eeaf5fcd57fb4b5ef",
+            "formula_sha256": "3bd9c400b6e316953ca1c93590fd1feb8989662c6fa2d8b8c9c61b9389b01085",
+            "forced_variables": 12,
+            "unit_trace": [
+              [
+                -1352,
+                6271
+              ],
+              [
+                -1253,
+                6696
+              ],
+              [
+                -1075,
+                8338
+              ],
+              [
+                -1072,
+                8355
+              ],
+              [
+                -831,
+                10257
+              ],
+              [
+                -830,
+                10262
+              ],
+              [
+                -317,
+                13764
+              ],
+              [
+                -314,
+                13802
+              ],
+              [
+                -58,
+                14851
+              ],
+              [
+                -57,
+                14856
+              ],
+              [
+                -9,
+                15028
+              ],
+              [
+                -6,
+                15040
+              ]
+            ],
+            "source_unequal_forced_atoms": [
+              0,
+              1,
+              3,
+              4,
+              6,
+              8,
+              9,
+              11
+            ],
+            "image_unequal_count": 0,
+            "denominator": 15,
+            "monodromy_order": 6
+          },
+          "scope": "Specified affine F3/S3 cover only: positive old14, but every proper word selection has source unequal mass >=8/15 and image mass 0. Not all S3 covers or full-joint.",
+          "mutations_rejected": [
+            "source",
+            "negative_event",
+            "unit_derivation",
+            "word_edge",
+            "missing_word",
+            "positive_event"
+          ]
+        },
+        {
+          "status": "PASS",
+          "theorem": "T132",
+          "states": 24,
+          "points": 3,
+          "old_and_new_domain_obligations": 144,
+          "scope": "Finite calibration; arbitrary-size statement is proved in joint_cover_monodromy.md"
+        }
+      ],
+      "optimized_mode_rejections": [
+        "verify_joint_nilpotent_cover.py",
+        "verify_joint_s3_cover.py",
+        "verify_joint_cover_normal_form.py"
+      ],
+      "scope": "New cover certificate regression only; not the entire repository regression"
+    },
+    "cyclic_sieve_status": "PASS",
+    "cyclic_orbit_status": "PASS"
+  },
+  "unchanged_inherited_inputs_count": 331,
+  "unchanged_inherited_inputs": [
+    {
+      "path": "certificates/background_repair_experiments.json.gz",
+      "sha256": "5b78a91467f050509b37fe8a80247e21285007fbab70613a8b0d1d5b73f5de5d"
+    },
+    {
+      "path": "certificates/cm_escape_nine.json",
+      "sha256": "5cb34790d1cb6c20afee3970fed21ad2b4939b99977b6218da7d53f50be5caaf"
+    },
+    {
+      "path": "certificates/cofinal_residue16_audit.json",
+      "sha256": "f455c426701e3d963dd8bab8f27599a407ae27bd8aca512afe0a44cc8c8ecd51"
+    },
+    {
+      "path": "certificates/cofinal_residue29_k5_probe.json",
+      "sha256": "d3d380f946ff384bf14b27ec9fa477c5b495c2c0f1dcfce65a42142337fb00c5"
+    },
+    {
+      "path": "certificates/cofinal_residue29_k6_probe.json",
+      "sha256": "90db4d2bca92d7bc1e386a9309c6f653ad2259eefce130275d566dfdb8147932"
+    },
+    {
+      "path": "certificates/contact_translation_closure.json",
+      "sha256": "fdd043d50be5c595d9b049d3174d5de147e5bb4bd2eca86c07258587cb77f0f3"
+    },
+    {
+      "path": "certificates/coupled_gate.json",
+      "sha256": "6e5b1870cb15e2d5caa82145da021eec50c5947dbba3153ad35bcd1da31a4811"
+    },
+    {
+      "path": "certificates/cyclotomic_127_directions.json",
+      "sha256": "3a2e99e40c252c0b40ea59ae95813a70ee4bdc7f5a8de22009b7d20828c0baf7"
+    },
+    {
+      "path": "certificates/cyclotomic_direction_parity.json",
+      "sha256": "b8474659af0e4f0e6a88277bad5c8913cbd0fb53797bf3a875a51a97ccc1061f"
+    },
+    {
+      "path": "certificates/cyclotomic_field_coloring.json",
+      "sha256": "b4fdaa1cce8616d661d3e3ef03b87fba4c00bb9038b070cc542231cc78bb7b4f"
+    },
+    {
+      "path": "certificates/cyclotomic_quadratic_probe.json",
+      "sha256": "5f8fc4af9ff7ed200720378ade1deb95d4a9cd8b856ad278d7286f6e8c076244"
+    },
+    {
+      "path": "certificates/cyclotomic_sparse_coupling.json",
+      "sha256": "904ae303962705ef44da417572f744b643aa184db38e9bd17bae486caa72a837"
+    },
+    {
+      "path": "certificates/dyadic_eta_release.json",
+      "sha256": "e2c64742920b383b293a720b9e1c685e7600c77ac2114ff6da61b0f86afac217"
+    },
+    {
+      "path": "certificates/dyadic_eta_release_proof_attempt.json",
+      "sha256": "33517a8424fa372f59e812373be03ab24b86421452af05e3b4ff41925539c46f"
+    },
+    {
+      "path": "certificates/dyadic_fixed_representation.json",
+      "sha256": "88f638dc5da870906b69b0b447766362653804d83a10d525cead005d3b0b3237"
+    },
+    {
+      "path": "certificates/dyadic_identity_extension.json",
+      "sha256": "0bacd6819a04ae990b3d798e59413fed5c31ce6e0b4c0d092032ab4f5aaba18f"
+    },
+    {
+      "path": "certificates/dyadic_joint_column_pricing.json",
+      "sha256": "fb9a52f9d4fc79cd70361e13d985da0e1ac0f8db40ce17a1225aefc928108fbc"
+    },
+    {
+      "path": "certificates/dyadic_joint_cycle_close.json",
+      "sha256": "f0e571f1f509c7f0365ae8f05c98932b1f068ae9dc58ebcb6d29d60ad532f9a7"
+    },
+    {
+      "path": "certificates/dyadic_mixed_return_joint.json",
+      "sha256": "de5de4ea12dfbabc6d82389999811f8c273de60671c2c194f22c64c6aab29b9a"
+    },
+    {
+      "path": "certificates/dyadic_mixed_return_probe.json",
+      "sha256": "ef19da362d822bbafa6038fd70a3aec789269e6fe7d09a108ac6925defc53c6d"
+    },
+    {
+      "path": "certificates/dyadic_return_boundary_probe.json",
+      "sha256": "c43d6c0f68c1aa08453005fde7be3357d91f68466c22e0c93d667713e4aaa102"
+    },
+    {
+      "path": "certificates/e080_state_module.json",
+      "sha256": "e88abbbbb1f5bd2610e0c27dbc444a7f05896ac38fd699a81824427292d59300"
+    },
+    {
+      "path": "certificates/finite_background_obstruction.json.gz",
+      "sha256": "591ec03dffc89f680815984c1495188fb0bd4f91f51d9a5833cc348015261f37"
+    },
+    {
+      "path": "certificates/free_pose_rank.json",
+      "sha256": "d526443de68e81e7a84d9157587c9045d65e474627d248b1034a0b874bb5f550"
+    },
+    {
+      "path": "certificates/g27_replay.json",
+      "sha256": "6bb186fe6bd20d42ec95667e4be9a8d417d1ebe1bb6f2aa4cd7d45f34b68e213"
+    },
+    {
+      "path": "certificates/gate_repair_cascade.json",
+      "sha256": "3a8e3c25fce1f720815f7f53dad0b65dc0b5ca7ad4b9042e9ed62b218cf4eeb9"
+    },
+    {
+      "path": "certificates/higher_residue_precision.json",
+      "sha256": "e353633d3c7abf7757fa9e1d518ae606f60a26a79aed02846d8159662ecd52a8"
+    },
+    {
+      "path": "certificates/joint_column_pricing.json",
+      "sha256": "7195f5452af95e083b552768d717f35689fa46da0b016bcd4f1b389b57e7d6bb"
+    },
+    {
+      "path": "certificates/joint_face_exact.json",
+      "sha256": "9296a9b3351e695901616964b2743be3b2617a795473a74dcb47e54bcc8501b4"
+    },
+    {
+      "path": "certificates/joint_face_experiment.json",
+      "sha256": "141be6c1465c005d8d5dcd4858fc7bdcc022cbdb72ec261288b6d951bf45766c"
+    },
+    {
+      "path": "certificates/joint_moment_cegar.json",
+      "sha256": "4cddb58eaea6037d5f8e714be9fe395f3ab559174b556412595c1d9c23171a08"
+    },
+    {
+      "path": "certificates/joint_moment_cegar_validation.json",
+      "sha256": "326a8e121fe1844a3a361941ebf96f0a53e45a40dcb5479b6459f51e34ce2185"
+    },
+    {
+      "path": "certificates/joint_package_symmetry_probe.json",
+      "sha256": "0a53ece9e224f8140611bdd6c32be27aab00f2d2704122caff2c11c7dc8c8184"
+    },
+    {
+      "path": "certificates/joint_pair_cegar.json",
+      "sha256": "81441108318746534d67fbca0998f24c4f9fc24ac9607dae2fea47ff035705a7"
+    },
+    {
+      "path": "certificates/joint_pair_cegar_validation.json",
+      "sha256": "a094eca9aa64a166afa0e8709768c7eba03c5eb82aed7fd77f3d70b953300011"
+    },
+    {
+      "path": "certificates/kempe_background.json.gz",
+      "sha256": "35b45084008946188fc3b03057071c1ef4212ff3a98a2bc877690be73ffd3705"
+    },
+    {
+      "path": "certificates/kempe_double_background.json.gz",
+      "sha256": "3cba33753eb54a4b4598f43d3a95a62a4ac1343dadfab16cac504a14dac56915"
+    },
+    {
+      "path": "certificates/kneser_obstruction_transfer.json",
+      "sha256": "5354a52df693b75a2de5420c02dc58cc9080b998d17eed9d012d5d9a14914a57"
+    },
+    {
+      "path": "certificates/layer_extension.json",
+      "sha256": "c1ddb62d8c3404b87174cba78e011e789055e981d95196cba238a9f6bfb03723"
+    },
+    {
+      "path": "certificates/layer_relations.json",
+      "sha256": "9fa8832c117da66614c3b85faceba1e4443039725b8f9a022f1ac152521af96b"
+    },
+    {
+      "path": "certificates/layer_residue_probe.json",
+      "sha256": "12b32953634ab2cba33b43df59b739b316cc1bc0a3d5e89ab2d82cc303b22a47"
+    },
+    {
+      "path": "certificates/long_chain_invariant.json",
+      "sha256": "fe393bc0960257a0277a977cf67dbe9746b11ca91ac9ea76caaf9cf6f101952a"
+    },
+    {
+      "path": "certificates/mixed_shell_stack.json",
+      "sha256": "e039f27c47950048da036332e5d7663e9a18e0a96f9f256cc98900eec79858b2"
+    },
+    {
+      "path": "certificates/multicenter_cores.json",
+      "sha256": "d7794d898bb9c5ab2cce80b46046322424237fe8a43ed6ac661fb3bad860bf1f"
+    },
+    {
+      "path": "certificates/mycielski_collision_refutation.json.gz",
+      "sha256": "e8408e7b70d18230adb5517e7430ad87435a19b35c04c84e8d19a7fe206294f1"
+    },
+    {
+      "path": "certificates/operator_release.json",
+      "sha256": "973e35be52a4b14ef45c22379e28a5bd5bdb9b360fabb36d6fe85121a6826191"
+    },
+    {
+      "path": "certificates/pair_orbits_five.json.gz",
+      "sha256": "2b22bffd5ca3f31473200119bebaa6d95bc4be3da49ab1672fbc87ed44356f0b"
+    },
+    {
+      "path": "certificates/pair_orbits_six_uniform.json.gz",
+      "sha256": "fa910c39d39a2acb79e535dc80a6ba62b672e83a287e80cc30df0e91a9bcb8b6"
+    },
+    {
+      "path": "certificates/palette_activation_obstruction.json",
+      "sha256": "b91a05b23013413944f08e4f871982db774f965b17f414533e0e480953f52ea6"
+    },
+    {
+      "path": "certificates/partition_quartet_completeness.json.gz",
+      "sha256": "4021f7cd2ac3674caa0a5a631c7df00537c7a57b59f3d2dd21838bb5a5848332"
+    },
+    {
+      "path": "certificates/partition_quartet_validation.json",
+      "sha256": "2790ab3a3dad599e687ce0ad3cb9e18429ff3715b2e0c17a16a959e70848ac89"
+    },
+    {
+      "path": "certificates/parts509_core.json",
+      "sha256": "6110b6574055b4daf2c10d0bb13267d1adefc7218c3586c096430309a8cee2b9"
+    },
+    {
+      "path": "certificates/parts509_drat_replay.json",
+      "sha256": "31c3b6fb075822378ded96b654c5bbde9426daa1bb4db470a6ee9adeda35a5f8"
+    },
+    {
+      "path": "certificates/parts509_escape_rotations.json",
+      "sha256": "2d54fdc64d299a2569c70a8d3ba96ef12343f9a0f199cd961822827339af922f"
+    },
+    {
+      "path": "certificates/parts509_pairs.json",
+      "sha256": "3bcb709ead8276df9b70e21722f5bdc5e2cc86fd3ef28e30b3ce3ed49d7231c6"
+    },
+    {
+      "path": "certificates/parts509_parallelograms.json.gz",
+      "sha256": "014b71fc9b594f91e218c8098e9265beec43c53fef17a4d4413641511f42478b"
+    },
+    {
+      "path": "certificates/parts509_ports.json.gz",
+      "sha256": "636ac6fafd2f7d7aedea247d257d9d7a312d0f4e63fac860c7865aeaa0016ef5"
+    },
+    {
+      "path": "certificates/parts509_reduced.lrat.gz",
+      "sha256": "a262ce090e6d69b10cd04ac5f76dff12f652467a8b30ed65c2357659e03b604b"
+    },
+    {
+      "path": "certificates/parts509_triples.json.gz",
+      "sha256": "d6b8ef5e8752c65d4660f8af7c1e766cdb507e4443a0fd1a25739ab93f3fdfa0"
+    },
+    {
+      "path": "certificates/phase_checks.json",
+      "sha256": "a32eae3f26c49c02f5f32b3f3227ae959b43d6678f7a9b6320cabbb24d489c35"
+    },
+    {
+      "path": "certificates/pose_field_lock.json",
+      "sha256": "42ab7875d8552901e4a281383fd801821d91987ad84c22a4813e13547acd29bf"
+    },
+    {
+      "path": "certificates/quintic_anchor_bridge.json",
+      "sha256": "dbab145a5fce196614f97c644826a905a00e5dff41c302855a8e62da8961b86c"
+    },
+    {
+      "path": "certificates/quintic_bridge_contacts.json",
+      "sha256": "d4cb6fab21981fe5a78546e6e01591049d2b8aacb78d8da43df43e9ba5837bee"
+    },
+    {
+      "path": "certificates/quintic_bridge_family.json",
+      "sha256": "4582b5f1f66093b14f3dee20b00973a5e1d4e2257851af061f11336a4faab9bd"
+    },
+    {
+      "path": "certificates/quintic_congruence_gap.json",
+      "sha256": "c907fc0601d429d7c41a1a08c0707dbfa5963e0cace038125688bdbbc9511ad4"
+    },
+    {
+      "path": "certificates/quintic_core_probe.json",
+      "sha256": "7d720cfc3380c69e90018f7814f0d627fde406d71a23ed0440024fa540f07b0e"
+    },
+    {
+      "path": "certificates/quintic_free_tau_joint.json",
+      "sha256": "6a34de41f5acc911a1fee6cb2d4bbb8243e0aa71c4554461b8fe1143c93f1f20"
+    },
+    {
+      "path": "certificates/quintic_full_translation_laws.json",
+      "sha256": "f04895e4ce19f0be9762feb8237dfb6374facf238e2c65113c1f680bc9143787"
+    },
+    {
+      "path": "certificates/quintic_host_union.json",
+      "sha256": "1cba1a7342c176361e880347ac16c539fb36ddf7dfaa0b4b8f4f4d9d5e297e21"
+    },
+    {
+      "path": "certificates/quintic_independent_center.json",
+      "sha256": "ecbb505ac1df4c33b38e086ff84329de58179f2daabebbd0a1688677b8caf19c"
+    },
+    {
+      "path": "certificates/quintic_joint_ports.json",
+      "sha256": "1a2cf616f9d5c69b6262b3c267a379b98972a35b94cade02d831becce883ad98"
+    },
+    {
+      "path": "certificates/quintic_joint_return_probe.json",
+      "sha256": "ad56f66857aea9d27b4e6e2cda7cf61d52e5f21da9d95cbf838771d5abc905b2"
+    },
+    {
+      "path": "certificates/quintic_joint_return_witness.json",
+      "sha256": "80b4acc6ed32e65846bf9222dad0848b060e1a33678ebc023a65f884c20f11b7"
+    },
+    {
+      "path": "certificates/quintic_joint_translations.json",
+      "sha256": "22475a00b1261970b9d8478234274d90c9189ddfe54444d5066ae3484bf4c5e6"
+    },
+    {
+      "path": "certificates/quintic_localized_character_screen.json",
+      "sha256": "ac25003a9412deffd3e29d2699199e3a81486d93bb0047c4db5972a0caca7184"
+    },
+    {
+      "path": "certificates/quintic_localized_characters.json",
+      "sha256": "84dd2c75d3b38f251e7710f8a5823648c621d7ec16986e066cabf4bc40049a64"
+    },
+    {
+      "path": "certificates/quintic_mixed_angle_probe.json",
+      "sha256": "f550f60046e16a150f487875b3847891f62a200d52639a5ad32b583978454c52"
+    },
+    {
+      "path": "certificates/quintic_module_law.json",
+      "sha256": "7b77306b1027462799f6e3ebeb5f194a78e9c82af292537e5010f9c36092c25d"
+    },
+    {
+      "path": "certificates/quintic_multiword_joint.json",
+      "sha256": "3b9b7f893bb2d0b31bfc72d645924858d84961b33b56706f40498251a5663b00"
+    },
+    {
+      "path": "certificates/quintic_multiword_probe_history.json",
+      "sha256": "29e518fa6c12e485937ed220364d190c516a7064532a298e8bc16a768bea6e9d"
+    },
+    {
+      "path": "certificates/quintic_multiword_return_joint.json",
+      "sha256": "e4ae7e9355783ee7606711ace881faba0353cbd01bef30c36b338dc3d3a844f9"
+    },
+    {
+      "path": "certificates/quintic_nontorsion_host.json",
+      "sha256": "69c1eed288192e80227eddcc0a8501d4dcadcd4404229b200c3308862ac72638"
+    },
+    {
+      "path": "certificates/quintic_nu_joint_law.json",
+      "sha256": "cc3d6c65b598abfefda07496534fc76c884bcd0ef59725ebfc77cf9deb83b4a8"
+    },
+    {
+      "path": "certificates/quintic_pair_completion.json",
+      "sha256": "11cab11d27cca015b939779fa36d3b66deddeab65dfc8e32c409698fe881d604"
+    },
+    {
+      "path": "certificates/quintic_parametric_contacts.json",
+      "sha256": "568e2113397f65beec9389f43d88ef4644ecdb45288a7345ca92543c588a4847"
+    },
+    {
+      "path": "certificates/quintic_radial_escape.json",
+      "sha256": "1ef976aca83a98a95ebdda5b0eb550cdd45c9af23809e01abe97a244f7ad7ad6"
+    },
+    {
+      "path": "certificates/quintic_root_spectrum.json",
+      "sha256": "807b6d6b37e163b8d15aae93b16dffb8b8f991ab1ada04f14ad40cb719cdfdb4"
+    },
+    {
+      "path": "certificates/quintic_second_host.json",
+      "sha256": "83af66186078ebf28ff5bd74d6121d41ed3abda30dc50fea23aefd44a426ceb3"
+    },
+    {
+      "path": "certificates/quintic_shifted_spectrum.json",
+      "sha256": "3476de458707ffe715f72efc1e2d1ba6a0353e164b8006f878572ccb0b05b4b0"
+    },
+    {
+      "path": "certificates/quintic_tau_union.json",
+      "sha256": "398d8490ee040ee29b93e4f9f3f6637f41ea45a3f2d8d6e5e47a70879e8a44f1"
+    },
+    {
+      "path": "certificates/quintic_three_character_law.json",
+      "sha256": "b83104c8249a23c074af7cb7791b62c2d42c2e6bdcc1f41077c23a08cb8423ac"
+    },
+    {
+      "path": "certificates/quintic_translated_orbit.json",
+      "sha256": "31104568ea83329cee2bf5516fd75edb916610be0968f507d399994c78df67f7"
+    },
+    {
+      "path": "certificates/quintic_twelve_characters.json",
+      "sha256": "6df7c748f93455fab6054fd0de92cfbc3b6d0c2a18a1fb7787f18600af3eb6ee"
+    },
+    {
+      "path": "certificates/refined_center_arrays.json.gz",
+      "sha256": "2792e61153d6b0c0a08b3ed1889f569e28da67a6fd0ed1e873d0eb49368dbafe"
+    },
+    {
+      "path": "certificates/refined_center_finite.json.gz",
+      "sha256": "eb359aff26432fca99a0d8ee7b05e2b2c0bafa1b9e0c9809359b81ea377bf905"
+    },
+    {
+      "path": "certificates/refined_warm_cadical195.json",
+      "sha256": "95ee7f5d0684ce48bb0e083aa4dc4ce8bfc60102707b80868b098d311ffaacfe"
+    },
+    {
+      "path": "certificates/refined_warm_glucose42.json",
+      "sha256": "bd00b043a5b41082603c1b024033f1305b47e1c738070edc152fde2cf9096664"
+    },
+    {
+      "path": "certificates/repair_pair_fan.json",
+      "sha256": "1f88cafbb2d4bc7c1605384e525c62bfe8490a1454e34459bd55e17fcd8ea14d"
+    },
+    {
+      "path": "certificates/residue11_coloring.json",
+      "sha256": "ae2fc6b4d66911ce16cc5bafc5199836ae8745e0c53e76249060417a01485d7c"
+    },
+    {
+      "path": "certificates/residue_method_obstruction.json",
+      "sha256": "ffe2cc92de54a9348cceced818638343f4a5d6516b61727b855bf49cb5bfd189"
+    },
+    {
+      "path": "certificates/resonant_center_linear.json",
+      "sha256": "0995bb0d9412c9cdbe6543366f61f55ffbc58c2e4d9370544f63680a445f68b3"
+    },
+    {
+      "path": "certificates/resonant_saturated_projection.json",
+      "sha256": "79e1237d6bd5e1ce1c4311bd0df3dc7f17ad119eb89f2a95aaa3448c09629719"
+    },
+    {
+      "path": "certificates/resonant_three_direction_w.json",
+      "sha256": "16c75ec75442234f1801a4fa2232c8afb90c9862d333e91cdf2684c1efaa8973"
+    },
+    {
+      "path": "certificates/resonant_translation_stack.json.gz",
+      "sha256": "941892474f4bd3adfe45c6cd5a9dbaaac2734f13ed5ff9bb342894bdfa375bae"
+    },
+    {
+      "path": "certificates/resonant_twist_obstruction.json",
+      "sha256": "aa2590bc83b979685eac77d566c541f1b7b0bd93b99db9c66fd55b38ea0b388b"
+    },
+    {
+      "path": "certificates/root_contact_repair.json",
+      "sha256": "a8ca450e68e8bee6fd1c9052317ab8f357e1949b2e8743256dd73f0a3017c166"
+    },
+    {
+      "path": "certificates/rooted_spindle.json",
+      "sha256": "e76da197416d1b200301eeedb94fb0ae6b250db0251ba91491851636f8f4d89d"
+    },
+    {
+      "path": "certificates/salem_sextic_four.json.gz",
+      "sha256": "99adf5bcb1948e0a1193f1dd4cbe7234f6e1115be7fa1160f4c1fe1bd5d63045"
+    },
+    {
+      "path": "certificates/salem_sextic_height.json",
+      "sha256": "39ce2fb4fbef92ffca29a934506e0250db79d272be589d9064103a0df1664c99"
+    },
+    {
+      "path": "certificates/salem_sextic_validation.json",
+      "sha256": "458dad3230a0d35100726d7cff6fa6986d02ef8dfed8ee27c3ce09d3b2da56fa"
+    },
+    {
+      "path": "certificates/seam_radius3.json",
+      "sha256": "a60683c4570a05f1a4bf1f41517bfe7c52e9d6b18470b3d790074b01889989f8"
+    },
+    {
+      "path": "certificates/seam_radius4.json",
+      "sha256": "6997f2413ee844425a102eb08468cf35acb7be51a21987cd3d8aa52d5589d439"
+    },
+    {
+      "path": "certificates/search_models.json",
+      "sha256": "ef794abd5e93360fdc20651846579cbdf35c105b53129256a83db905922782dd"
+    },
+    {
+      "path": "certificates/snail_replay.json",
+      "sha256": "4213df6d858db4115e478ff50380291429f7a5d1234a6596a4403ea6a54d1bba"
+    },
+    {
+      "path": "certificates/spindle_joint_support.json.gz",
+      "sha256": "8825f3ac111a1003acaa32f1bdc6e7080ff523de2ba11d147b1f7e33510d38b7"
+    },
+    {
+      "path": "certificates/spindle_pair_gate.json",
+      "sha256": "2f632132eb77b490110a2062042eb16fc9b49b2ff7c482eeb04b95411a254bb2"
+    },
+    {
+      "path": "certificates/tau_localization_joint.json",
+      "sha256": "b63ed647dab3d25585fbec2437e5fa855178f41a4def200be401a982aacd0b88"
+    },
+    {
+      "path": "certificates/translated_field_stack.json",
+      "sha256": "faa66387cfe812170f64c19194fc0b8f77253bbb3c71d388c0aba432bce0e622"
+    },
+    {
+      "path": "certificates/translated_field_triangular.json",
+      "sha256": "751bdd590db9aa70a7f23cbff70117870127825c0b72a78d138f85a1deaa75dd"
+    },
+    {
+      "path": "certificates/translated_seam.json",
+      "sha256": "fa43934e4d91c6145dbd5612bd122686972de5c23c108103e61826cd45bf707e"
+    },
+    {
+      "path": "certificates/triangular_field_stack.json",
+      "sha256": "cd0e1b9e278b675ed5a51a2c03f2d64d01b94103e699f478f5b8ac55243cea04"
+    },
+    {
+      "path": "research/balanced_weights.py",
+      "sha256": "cc7819b2703d4ab80806c62b9fc2efce3e0656f62149ef63e61d4318ed8be0b7"
+    },
+    {
+      "path": "research/build_partition_quartet_certificate.py",
+      "sha256": "b5cf60b5ed267f2a8f2461922b98f54f80d6def924186588a7e3cbddfd3279ff"
+    },
+    {
+      "path": "research/build_salem_sextic_four.py",
+      "sha256": "6ced3e4233d08deae04f88aeb7b6a30b6b33cb8c6ece151552203724705c863f"
+    },
+    {
+      "path": "research/cm_escape_nine_probe.py",
+      "sha256": "b1609206f32d89c8ec61d549131ca141e2a142140938c1a920e01319e23b13b6"
+    },
+    {
+      "path": "research/cofinal_residue16_marginal_verify.py",
+      "sha256": "3279a6a6782e0c4180977f78bdc7b5bc3c9c2bd6730202fe1e706f524b971d2b"
+    },
+    {
+      "path": "research/cofinal_residue16_verify.py",
+      "sha256": "1a3ff6b8f52cff3f2549eb4ffe09a0746c6ad33c85ef7fce562ce136dfb8ff0c"
+    },
+    {
+      "path": "research/cofinal_residue29_probe.py",
+      "sha256": "b2138299f9363129c3496cb0490427ed7c1cff12b1d9fceec68f8873832c1560"
+    },
+    {
+      "path": "research/cofinal_residue29_verify.py",
+      "sha256": "6ca05522d0d646376e1c81beab54247bd7a44b61a62067efdd9c3c5ff2d84d31"
+    },
+    {
+      "path": "research/contact_translation_closure.py",
+      "sha256": "166fa02ca9c226e53e68cbc158b999efda91bf7631ed5d9ee85703a2926a1504"
+    },
+    {
+      "path": "research/coupled_gate_probe.py",
+      "sha256": "cb487dfa6719864ac643cc1967ca4ae926e14746ce4dbec1e3334898b83a55b3"
+    },
+    {
+      "path": "research/cyclotomic_127_directions.py",
+      "sha256": "daf7b3bc3b9f5214ccf9ef205f65f05c089630ff5297baf0bac925cbb972c8db"
+    },
+    {
+      "path": "research/cyclotomic_direction_parity.py",
+      "sha256": "47fa6ce71d3c74104887ba5642c3ca6b063b056a514f078360eb4c0277bc801f"
+    },
+    {
+      "path": "research/cyclotomic_field_coloring.py",
+      "sha256": "609dd7ba2154441bfe36e9f1db5c9d6c4f5a1796964383457cab5602c0c5d36e"
+    },
+    {
+      "path": "research/cyclotomic_quadratic_probe.py",
+      "sha256": "2cc1eb687e27fc71d91eb63409440b1cb74de9b982307144b1f32d4fc620b286"
+    },
+    {
+      "path": "research/cyclotomic_sparse_coupling.py",
+      "sha256": "2e5057caa177c00ecc9c80b976a5f473ed911b0c439aa789cd7ddd40432a0447"
+    },
+    {
+      "path": "research/dyadic_eta_release.py",
+      "sha256": "6d32d40b81aa9ae58cd86010943036b784c3a5dbf8ae88f8f6a0580d92b199f4"
+    },
+    {
+      "path": "research/dyadic_fixed_representation.py",
+      "sha256": "05a9203c813418ac90681b2f18ce9ac2dc79300a057df268105e12eca1e0ac2f"
+    },
+    {
+      "path": "research/dyadic_identity_extension.py",
+      "sha256": "f740bfcb9ed917b2ee7a41813fdbb4415debaa335cdca194ad22d9a967bd8241"
+    },
+    {
+      "path": "research/dyadic_joint_column_pricing.py",
+      "sha256": "76db0e797aa5ad8e352f99f7989050e89310339563ed4d74f7613db2f347c6b3"
+    },
+    {
+      "path": "research/dyadic_joint_cycle_close.py",
+      "sha256": "42472f842f80397ecc6f49c17fe28afa931f84cc379b0cdbfad4fafcdc599a81"
+    },
+    {
+      "path": "research/dyadic_mixed_return_joint.py",
+      "sha256": "4297c2fdbafce5a509390fa4a1431434ad36db17c984524a8102c98eaa54ace8"
+    },
+    {
+      "path": "research/dyadic_return_boundary_probe.py",
+      "sha256": "c7e9347f114c054af4b6f4f48547c515cc5b605d631a46e4f286292c75eb0c25"
+    },
+    {
+      "path": "research/exact_geometry.py",
+      "sha256": "6474c775bdd71bc8b7d70afbd64419c77c6b174cfd7a32c5bdc4775192bee400"
+    },
+    {
+      "path": "research/export_certificates.py",
+      "sha256": "491407db6a485c831f895665a81fe401aad230004ebec5a0f12ba2a1b94ac97a"
+    },
+    {
+      "path": "research/fetch_references.py",
+      "sha256": "742c9585db15e199fbd84cb678746c231b2ad014f7ec81f5767422dedf91ad9f"
+    },
+    {
+      "path": "research/finite_background_repair.py",
+      "sha256": "1c8b87981192b49226b07cf066ce5b73d58b9492bbbb33838b514fd6b091579e"
+    },
+    {
+      "path": "research/fractional_ceiling.py",
+      "sha256": "573e1ce91af926ea01bbeec1d66152b1967335c174e2e00aa3cbb7b159d840d5"
+    },
+    {
+      "path": "research/free_pose_rank.py",
+      "sha256": "b0dd7c6d6200bff200c6f0c0a823142ad438798984bae07d9eeb378142ce6319"
+    },
+    {
+      "path": "research/g27_replay.py",
+      "sha256": "ad68fe8f961b9b5c503a4f6a490d213ab87e4a06f8746651e0e69987555f7991"
+    },
+    {
+      "path": "research/higher_residue_precision.py",
+      "sha256": "386faf73e5031e9ba41c9fc857a81d13307d8fc712cbbf55c01359966c8ef24d"
+    },
+    {
+      "path": "research/joint_center_shears.py",
+      "sha256": "be0bfc8b26369c89bd7424579a0079115c7bdb54c9c684a5efca36bf22e69748"
+    },
+    {
+      "path": "research/joint_column_pricing.py",
+      "sha256": "e47b6a7fe0e183cb038889e47d5d05b0ad1875092847a6f8ed600a90178dc354"
+    },
+    {
+      "path": "research/joint_face.py",
+      "sha256": "ec5d03d9f29a9155bf5d55bf4f7714556a554e38501d912f087cab6550f9546c"
+    },
+    {
+      "path": "research/joint_isometries.py",
+      "sha256": "c14a83dd12c7e44a81763bc78400f9adf116bdf5ac75b268d3bc27235e09ab9a"
+    },
+    {
+      "path": "research/joint_moment_cegar.py",
+      "sha256": "8e9a1899ff22f5b8be11e4204338d1e6e4ad3cb5caa7fde69604fb09901c8130"
+    },
+    {
+      "path": "research/joint_moment_gap.py",
+      "sha256": "0bc29273e208dbdb3a20e27c941ec6aa6b94e018037a2421f0811c6fd72cb033"
+    },
+    {
+      "path": "research/joint_package_symmetry_probe.py",
+      "sha256": "22ba23ee6fbf2463cd1df9cf928857f5e0ec39b7fd231222da47b69c02baf041"
+    },
+    {
+      "path": "research/joint_pair_cegar.py",
+      "sha256": "46fad5cdb09d566950db281153232c1d8ffc860fe9e7f43c168087618bb567e5"
+    },
+    {
+      "path": "research/kempe_background.py",
+      "sha256": "1a8cfff9a4e9f0aed4777fb7ad158a401ff271adf0ff9fded4f1ba626b2b278e"
+    },
+    {
+      "path": "research/kneser_obstruction_transfer.py",
+      "sha256": "b8a162c131fef30564046c50f7a2ca7f2346a8b8997e7172ace0c45f72fd4a8b"
+    },
+    {
+      "path": "research/layer_extension.py",
+      "sha256": "4f8e81b6c5c0639f6b91a115a153a16a8136c50c2756f85b33bfa0bd189228ea"
+    },
+    {
+      "path": "research/layer_relations.py",
+      "sha256": "3adcf358330cd7bd584340e0ba4d0857937e0f72c071e76bf27e01b1b458f21b"
+    },
+    {
+      "path": "research/layer_residue_probe.py",
+      "sha256": "06ea01384d3f5924b9ccfab1da03a3821f3442575676401e8a39c7eb9e10edd8"
+    },
+    {
+      "path": "research/long_chain.py",
+      "sha256": "4dea3af7d659daf8170e3c3a17da7d4694ad812cb610cb0db448b480681ff77f"
+    },
+    {
+      "path": "research/mixed_shell_stack.py",
+      "sha256": "338693aae585ab1595d399f711d830d3d322a5460591063deb662d3985831d91"
+    },
+    {
+      "path": "research/multicenter_cores.py",
+      "sha256": "7a888f4448b2ab70f245e4c06072139c9817ff0d37a1e98796bf4d96a98ce07d"
+    },
+    {
+      "path": "research/mycielski_collision_refutation.py",
+      "sha256": "00c2ce16203a262ba133b733a9dcc4d64a71db5eab20121ac12dfa191b8db5f7"
+    },
+    {
+      "path": "research/pair_orbit_census.py",
+      "sha256": "c9e0d0edc223cdfb12fde3d4831f1900a7998e07ed585993ce4e21fcc5aa0713"
+    },
+    {
+      "path": "research/palette_activation_obstruction.py",
+      "sha256": "a7da017239854cd1fb7f90b63951cab0cd17f000c12a27dc09fc5dd7db909b39"
+    },
+    {
+      "path": "research/parts_core.py",
+      "sha256": "286317d608745a46c1c1b5b6305d3d40801efecb8704cbbd74b22b4b14af38d9"
+    },
+    {
+      "path": "research/parts_escape_rotations.py",
+      "sha256": "625761ea003ccb852fa83ab59fdc9c31bef2cce4b21e3f9ab28ff85f97c63941"
+    },
+    {
+      "path": "research/parts_pair_relation.py",
+      "sha256": "2bf866170e08dc8b83ed16237208a73847e7c3ab83de3d8ec1e4d4ab8e516f81"
+    },
+    {
+      "path": "research/parts_parallelograms.py",
+      "sha256": "bfd3eff0c46a199bd685a902489e489e66bff5fcdd774154364090393ed74931"
+    },
+    {
+      "path": "research/parts_ports.py",
+      "sha256": "5377dab00a2d3ba6897f11dc3845be8cca40953273361eac75f456d54ba6ba22"
+    },
+    {
+      "path": "research/parts_triple_relation.py",
+      "sha256": "95f5d2fce88f94943bfaaaf76fa36a1976f41b3bfb4a7a7079fb22bb038f3666"
+    },
+    {
+      "path": "research/phase_checks.py",
+      "sha256": "c9ec0f31c3bda44822fba1fb30710e1fd74f96cdc538293f48a64a61143b1708"
+    },
+    {
+      "path": "research/pose_field_lock.py",
+      "sha256": "1de12fcb9d2e0f5e06ab0322392fdda82d5ac3bbeb9381ae191278ff421a3ca3"
+    },
+    {
+      "path": "research/quintic_anchor_bridge.py",
+      "sha256": "0f71348bc6ac679af6221858af917678d7e7b123134d1137d5f794e3018cd9c9"
+    },
+    {
+      "path": "research/quintic_bridge_contacts.py",
+      "sha256": "56b1bb17b5aab4ecbef4dab600b498c22b0861ee6b71fb1545921489b7d84247"
+    },
+    {
+      "path": "research/quintic_bridge_family.py",
+      "sha256": "73ded6aad8dddf348320e67eee6a081c331b7db908cbfc84437c30bfc386669b"
+    },
+    {
+      "path": "research/quintic_congruence_probe.py",
+      "sha256": "adea770d0c26b33d28339cf9735bb39d2fbd9c130e1e91ef55cc82f1079f76a9"
+    },
+    {
+      "path": "research/quintic_core_probe.py",
+      "sha256": "efecd817185cbe64560934da9dd62c0964c3e212f0578f1ee02fa85ed4c16d62"
+    },
+    {
+      "path": "research/quintic_free_tau_joint.py",
+      "sha256": "ed4fdb2f336c4f3ce83c8a7dacfbb0a3cea7308bf24e64797473932ac3b27738"
+    },
+    {
+      "path": "research/quintic_full_translation_laws.py",
+      "sha256": "befc90b48474b064ef9333f8f46337c3fc0ca588b6d8df20b403975b881eb427"
+    },
+    {
+      "path": "research/quintic_independent_center.py",
+      "sha256": "6f72340e4e32bac54358a89e8652e55a145939fa92b9f7abd42a46daea83733f"
+    },
+    {
+      "path": "research/quintic_joint_ports.py",
+      "sha256": "6313208eb3fc6deb254674c24fec4c603f06ca5a285b752ce3d6e686e2ea146e"
+    },
+    {
+      "path": "research/quintic_joint_return_probe.py",
+      "sha256": "3f2d236c1b81d1a553c55d2f81eb295a8f0114ab9b813a21492957c7ec55a269"
+    },
+    {
+      "path": "research/quintic_joint_return_witness.py",
+      "sha256": "ca83800d58b03fddb2a03f0ce210fe38b6f69d00fcfa44ecc0402c5b923be658"
+    },
+    {
+      "path": "research/quintic_localized_characters.py",
+      "sha256": "c7f93578eac9f11d9d4256f47d8ff1b7737dfb1015dd5afab1a0bb117f7f8cd6"
+    },
+    {
+      "path": "research/quintic_mixed_congruence_probe.py",
+      "sha256": "c75aedd70899b89dcf3d951334023d64438df9e7d8165d19dec3f4fd881a72d8"
+    },
+    {
+      "path": "research/quintic_module_law.py",
+      "sha256": "5f4223bc6835ceb62234e53d465dc9f59b0df0d53dc682020e882bd886cc81fb"
+    },
+    {
+      "path": "research/quintic_multiword_joint.py",
+      "sha256": "6e89d2383145b290d284d198bb83a96d6f64b52593274239f6ba05696cf65dc7"
+    },
+    {
+      "path": "research/quintic_pair_completion.py",
+      "sha256": "65c179d9cf1298e706b7ca7203de6ba0689b5b602ba5522c8769736b3b786d46"
+    },
+    {
+      "path": "research/quintic_parametric_contacts.py",
+      "sha256": "934059b94b9043dc30834b82764be4153f76b9be374fb7d28f5d4ae5c208ac94"
+    },
+    {
+      "path": "research/quintic_radial_escape.py",
+      "sha256": "ba9e5acd958a497eebee1a32b6c744bb7d9e09c72f9f5e746ff02a94ef656ca1"
+    },
+    {
+      "path": "research/quintic_root_spectrum.py",
+      "sha256": "026d33fce5cf3b4b9c967a1c32f15623109c27397200c280f6e9726478316836"
+    },
+    {
+      "path": "research/quintic_second_host.py",
+      "sha256": "2c4ff7ea51d83c06397e95ed3a804720552bb51e26c9de520f5d045f351d18a7"
+    },
+    {
+      "path": "research/quintic_shifted_spectrum.py",
+      "sha256": "ca1622ba9abf1be1d24019626f88292b4f71c74222d94b3f261d9d0068d2ce5b"
+    },
+    {
+      "path": "research/quintic_tau_joint_probe.py",
+      "sha256": "a339d57d3bbef950e430769083ece07b83088b8c093a3437377a459c4765382e"
+    },
+    {
+      "path": "research/quintic_tau_union.py",
+      "sha256": "4355de1c77b1e2216c5ac6eca4c397c75278638175d07c69cee5cecf1b75869a"
+    },
+    {
+      "path": "research/quintic_three_character_law.py",
+      "sha256": "0e259aaf994b5bbca43d1d735c2ab6043bb4cfc00b5c64bd821678ae239ad193"
+    },
+    {
+      "path": "research/quintic_translated_orbit.py",
+      "sha256": "c00a66595e359608ea828451f11b3769a96f66f6ffa515666e2db1a09a44583e"
+    },
+    {
+      "path": "research/refined_center_arrays.py",
+      "sha256": "2857c621ef879c34b70639f052ce2eeca14982aee4a20f00e4b0168dd7de0d71"
+    },
+    {
+      "path": "research/relations.py",
+      "sha256": "bd681da1f7dec4d3e3753816dc08a177c8af885772b3d75f68594e0d60831e44"
+    },
+    {
+      "path": "research/repair_cascade.py",
+      "sha256": "3dc39f8d10a8a843a77d65313467dc89fdca5c3dd7b0e7e6ae17f969575e3b22"
+    },
+    {
+      "path": "research/repair_pair_fan.py",
+      "sha256": "eae33aaedac866bb9f27319425dc51d60fff2569560f58390f51dbe5e16520ac"
+    },
+    {
+      "path": "research/repair_propagation.py",
+      "sha256": "7c2bed130441d2fcf0e2d9fd71e07f5f76739e95ac6823b94377d84036dbd67d"
+    },
+    {
+      "path": "research/replay_parts_drat.py",
+      "sha256": "54df3e266f5db1a4846c9bf554397d8aee55b2fde261b3d1cba6297bc5f58477"
+    },
+    {
+      "path": "research/replay_searches.py",
+      "sha256": "5685a2dff538445883e29a942fc5d43ef387977e0c0c6c76a6324e0cc34b0fa6"
+    },
+    {
+      "path": "research/residue29_rotation_probe.py",
+      "sha256": "5cbaa5778a7dedb9f5c0d21d6a03a865661f10446fcaec92f66807cee38153f2"
+    },
+    {
+      "path": "research/residue29_tabu_probe.py",
+      "sha256": "b76a33b44763cec8b3dcb1caa93775a250917c2fa9c25a2fa0ad02d0ea21b4b4"
+    },
+    {
+      "path": "research/residue_method_obstruction.py",
+      "sha256": "374aeea1bab5434a82b627d2f774a0c8f76664d286b8ad77a17095d44b383f23"
+    },
+    {
+      "path": "research/resonant_center_projection.py",
+      "sha256": "cfb45a24fb1f511e95e9c38c973f90fd7ff00bbff98f46244ced4863d0ddad22"
+    },
+    {
+      "path": "research/resonant_direction_extension.py",
+      "sha256": "9a6afe13125dbfed1858bc7eeece762ff8c5ef8f8652d498cef9f5eff85fb514"
+    },
+    {
+      "path": "research/resonant_saturated_projection.py",
+      "sha256": "9d8f9b8e9ee49a7b6e5717f2a7c665f647b8538f9635d5917cca90d18ab07ced"
+    },
+    {
+      "path": "research/resonant_translation_stack.py",
+      "sha256": "95e2c9cca28e924640e09334377dcaccac966f67b2fa5f9c08cacef0f51d3e52"
+    },
+    {
+      "path": "research/resonant_twist_obstruction.py",
+      "sha256": "5cccee0629adc24b665eafa4a2741daf986d5a6dd7100b7ba27013c569a83778"
+    },
+    {
+      "path": "research/root_contact_repair.py",
+      "sha256": "c9c0955cca066b7d45dcaece364bd95340260588b140c99b2a2576517a193494"
+    },
+    {
+      "path": "research/rooted_spindle_probe.py",
+      "sha256": "1ee2d2c25b7eb7db22aa1a0d50a9aa4e797526532e8904fa1b0dc7aa06bcd340"
+    },
+    {
+      "path": "research/seam_relations.py",
+      "sha256": "4755d4bffe0317d1dde3cb0bd8fa1803f9df429d52b8850822c7f0b14a2cf0d8"
+    },
+    {
+      "path": "research/search_phases.py",
+      "sha256": "d2e82bf0f581af16c61eed656a735c646233e71a5a10d0f46a863714dc0655c1"
+    },
+    {
+      "path": "research/search_triangle_defect_patch.py",
+      "sha256": "e3c8b6b01291073d1e2697619c64b21ef5b2dd70c57facc6aaf5375a639a7947"
+    },
+    {
+      "path": "research/six_pair_uniform.py",
+      "sha256": "130466b82ff0d28158ff70dfdd7bd326df62f6242f574587f252015526a1bbdc"
+    },
+    {
+      "path": "research/snail_geometry.py",
+      "sha256": "a3855bea60409e78f9c589c2c253d687bae9c5166eff6494ac7726cd9daa197f"
+    },
+    {
+      "path": "research/snail_replay.py",
+      "sha256": "4534a1a04509ae7a41627ba0851058073f30e88b6a9639dbdb32e270983cd2be"
+    },
+    {
+      "path": "research/spindle_gate.py",
+      "sha256": "ac50e131af62fcb128e6b4a2150fa8de0b04169f85478b29331d91d7a55b5df1"
+    },
+    {
+      "path": "research/spindle_joint_support.py",
+      "sha256": "1f96c87269f00a6007c1674a39faaa1591251c74edc9f4b5a8c7e5b92aa3cde2"
+    },
+    {
+      "path": "research/test_partition_quartet_completeness.py",
+      "sha256": "b80fda26f3ff6dbf593361e1a2082bc708246b3f6708d415417641bc229b09c4"
+    },
+    {
+      "path": "research/test_salem_sextic_certificates.py",
+      "sha256": "0b078847715f5ebd2645b13675755ac6286c239e844855905eca55fdeaef66e1"
+    },
+    {
+      "path": "research/translated_field_stack.py",
+      "sha256": "9d662d4a9c16d42b34a51b9204bf4fa90994f7305bb731d801153ebecf41210d"
+    },
+    {
+      "path": "research/translated_seam.py",
+      "sha256": "5aa46478c4cb2b9fe5d4109cc898d576639e26590759d68e081e60c2484e9afc"
+    },
+    {
+      "path": "research/triangular_field_stack.py",
+      "sha256": "d0690e60740be51cda0753caaa02bb4c1b708ceb2179099dbfd5eb8c8f5ba18a"
+    },
+    {
+      "path": "research/valuation_escape.py",
+      "sha256": "f67414cd693fd0cf778b43b96ddf7af0344456c90db9358f38ce22cb3a03d4e3"
+    },
+    {
+      "path": "research/verify.py",
+      "sha256": "af404d5235c4babc74a395e3b52dcd3f25fccf810db0bb0460e50ef7f736efe5"
+    },
+    {
+      "path": "research/verify_affine_joint_compiler.py",
+      "sha256": "9cb9de032e4243e6521b27989295fa673063b38153ac248137878a1ea6d3cb20"
+    },
+    {
+      "path": "research/verify_anchored_geometry.py",
+      "sha256": "e214039527f12dcee3b23748831a054b4b92afc99141ed59f026d86ef0f58175"
+    },
+    {
+      "path": "research/verify_background_repair.py",
+      "sha256": "914d87367770e51a4441d99a4d4a50a9587d9629a3db8e384bc15bc2ab87dc92"
+    },
+    {
+      "path": "research/verify_center_palette_rigidity.py",
+      "sha256": "a439739b572c981a6e2c0e61f28b0ecd4c74c655d1b3a93cf0975d82abc962b7"
+    },
+    {
+      "path": "research/verify_cm_density_coloring.py",
+      "sha256": "7de8e06ed1524d7ef0b38f2c1d60137c3f79a69a3c3ec9e0563cbb892f36bbba"
+    },
+    {
+      "path": "research/verify_cm_escape_nine.py",
+      "sha256": "e550475dc747856b00902217e8f30942240daee0d1c0dbee91f859362c63fec6"
+    },
+    {
+      "path": "research/verify_contact_translation_closure.py",
+      "sha256": "58d790e24553e3f5e912ff3ef9500be360a20b5e4a194476449d58600f2a49f1"
+    },
+    {
+      "path": "research/verify_coupled_gate.py",
+      "sha256": "13eea6b5a3d9bfaef882a0d9e225b116fdcd77fd199b291bb0a4fc032cdf8979"
+    },
+    {
+      "path": "research/verify_cyclotomic_127.py",
+      "sha256": "3f897aa0ed1f915197c6f881563bc1d9641f82670f17f72591c5abc468712cef"
+    },
+    {
+      "path": "research/verify_cyclotomic_direction_parity.py",
+      "sha256": "28b387c5fa5616384c029494d1196b4ff331b60c326d83a4e9738e9286f43276"
+    },
+    {
+      "path": "research/verify_cyclotomic_field.py",
+      "sha256": "1071dc15303c4e87e4a4a0c1a7802284a0128a9c94178b13d04fa6c9d579b8ae"
+    },
+    {
+      "path": "research/verify_cyclotomic_integer_stack.py",
+      "sha256": "9df91a7289db301ab20c0b92ce57eb576020558f1d19d92107770c6fe8826dce"
+    },
+    {
+      "path": "research/verify_cyclotomic_sparse_coupling.py",
+      "sha256": "dd27bab41fecfd07741b14c66fe58657b80c78a42828c956fa2c32c64a13301c"
+    },
+    {
+      "path": "research/verify_dense_five_color_tower.py",
+      "sha256": "029208fa5623675445058e181eda32dbfee45586dc415186e172bb1d4032814c"
+    },
+    {
+      "path": "research/verify_dyadic_fixed_representation.py",
+      "sha256": "9f7c2d9f12f3b099b96b8dfb908707bbac117472ce009b57e8d7faefa4634203"
+    },
+    {
+      "path": "research/verify_dyadic_identity_extension.py",
+      "sha256": "c40163801c976b9f075e9bcbc6beefb4b7f341100cf7354336256ad4739fde87"
+    },
+    {
+      "path": "research/verify_dyadic_joint_column_pricing.py",
+      "sha256": "610402b58201fe9832ccce363e367c44b938d2994c8e2b514316b6b0562d195f"
+    },
+    {
+      "path": "research/verify_dyadic_liftable_target.py",
+      "sha256": "558126897a5d2e6179728abd58283221bc6fa36bb16378fa9770094ca32bddeb"
+    },
+    {
+      "path": "research/verify_dyadic_mixed_return_joint.py",
+      "sha256": "36ae6db15c1bee94abec18f19dc23413efc5a6b5cc762a778ffa8fe36a109c7a"
+    },
+    {
+      "path": "research/verify_dyadic_norm_target.py",
+      "sha256": "8be0f6da9aa70972feb9d0ee9465ca7936e9ac22a864dec25be0ac7826d9c872"
+    },
+    {
+      "path": "research/verify_e080_state_module.py",
+      "sha256": "5929301eb16eae9600ca0aac0336f860211fcf0d09cab04cc9a3e58ac89191e5"
+    },
+    {
+      "path": "research/verify_eta_release.py",
+      "sha256": "269090198b733c11c3a17b215e78e36c8286a8566ada32258a965c2014caa784"
+    },
+    {
+      "path": "research/verify_finite_joint_completion.py",
+      "sha256": "3e591c7fa01815511617f961365633fc170a82cb1920101056a81f6e16f21039"
+    },
+    {
+      "path": "research/verify_finite_joint_compression.py",
+      "sha256": "4ef61328d2dc28b18053a3fdfdf4b0e93e1e948c87ca38e53dc1b2a790413d2a"
+    },
+    {
+      "path": "research/verify_finite_joint_support.py",
+      "sha256": "b1668a1b96b7a8ee28fdf9f08099c3391d3c487208b8239426bb182ed6feec04"
+    },
+    {
+      "path": "research/verify_free_pose_rank.py",
+      "sha256": "441ec34d1e7aeefb82a1bec31619a49fc9e21616d20609f662690d0c46ae3e8e"
+    },
+    {
+      "path": "research/verify_higher_residue_precision.py",
+      "sha256": "680885406546ed800d08cb6b14d233d77065f06b135dfd77f7676a93587f82ee"
+    },
+    {
+      "path": "research/verify_invariant_joint_ceiling.py",
+      "sha256": "f157a0ec0fcbe828919d0982e1335399c33cb6d166fd009f1d9714e9e3a00745"
+    },
+    {
+      "path": "research/verify_joint_column_pricing.py",
+      "sha256": "a82f9fa8d9d75730e7b24005b7aaab24251662f31fd1eb3a10630c525881f792"
+    },
+    {
+      "path": "research/verify_joint_face.py",
+      "sha256": "13bdbe856fc072fb457b4270ff8b0012e72f7143eaed287fbd0f22f22de8f8de"
+    },
+    {
+      "path": "research/verify_joint_moment_cegar.py",
+      "sha256": "aae416444b3f92be9dd2c6b0b2b47136318ec6d4daebbd3b1f19e1092510816d"
+    },
+    {
+      "path": "research/verify_joint_pair_cegar.py",
+      "sha256": "2ff04c571edcbadcff12b1fde1a19031e267ffdee105ad4dbf2db70226e3225f"
+    },
+    {
+      "path": "research/verify_kneser_obstruction_transfer.py",
+      "sha256": "3f4d76e8fa099bd29ebaa7e6ae15118823ba4b38b737b2fd0a7bcca31a00d859"
+    },
+    {
+      "path": "research/verify_long_chain.py",
+      "sha256": "103acce8c7b098c804e6e213cbb3f744a98056982140ca4a8387f1634601302c"
+    },
+    {
+      "path": "research/verify_mixed_shell_stack.py",
+      "sha256": "3ed8cca53792db9a6b96c30ea4e1c0a2644b9a309378c704bcb95044ab027643"
+    },
+    {
+      "path": "research/verify_multicenter_cores.py",
+      "sha256": "d07c5ce2ee6f04778dd6fc07327d3e774d66278428fef5da9d64a40b18c03d43"
+    },
+    {
+      "path": "research/verify_mycielski_collision_refutation.py",
+      "sha256": "da456c19713a5fc942adf5d584e99f4a7351451562033fe1cfd877ee01deb328"
+    },
+    {
+      "path": "research/verify_nu_localized_module.py",
+      "sha256": "f9a858676b94e338e20f0cd0456be2862b3978db08dc948be1d24b40ebbb3c2a"
+    },
+    {
+      "path": "research/verify_operator_release.py",
+      "sha256": "eb0df03a6eb7db018f21f74f9485d5b1d7602610dcc29cac83468d09c38b7478"
+    },
+    {
+      "path": "research/verify_pair_orbits.py",
+      "sha256": "728c3cd666559f2ed6c322c6a8b2d85fa48b5cd19ca2c9fc391a17b8bca14e54"
+    },
+    {
+      "path": "research/verify_palette_activation.py",
+      "sha256": "ed41209001a215c920ede2a1f07806d87b5349140f246d4ba501eff40337009d"
+    },
+    {
+      "path": "research/verify_partition_quartet_completeness.py",
+      "sha256": "2e2dc3c7bfca8eb57abcd5f091aa1c6008508f5dfa70ec065c7945d545c74411"
+    },
+    {
+      "path": "research/verify_parts_core.py",
+      "sha256": "a7a1dd091102323aeb2b3dd3ea09c0d6e0be4621990c315002d92c89bfc278cd"
+    },
+    {
+      "path": "research/verify_parts_escape.py",
+      "sha256": "32606d35948facc086ccfa81823bbc757af4ec72b43cbc2e87481f2cec901031"
+    },
+    {
+      "path": "research/verify_parts_parallelograms.py",
+      "sha256": "8d860ac55c8d3f8d51f359ecb1529ed6898a8a55d0cd08467a84aeca6db3914a"
+    },
+    {
+      "path": "research/verify_parts_triples.py",
+      "sha256": "eb723da51fbf5f2dca4183242ca6007c30c88a4ddf351e0e9e3eae4680debd64"
+    },
+    {
+      "path": "research/verify_pose_field_lock.py",
+      "sha256": "fb0237493e16fab2ec56aa9e5a71dc8d544c3589a53be42f2e2937830783b5c7"
+    },
+    {
+      "path": "research/verify_quadratic_virtual_pivot.py",
+      "sha256": "db7436fd510f798af4f9398d6f569e77d4b164f86b89d338e65dcc110d314247"
+    },
+    {
+      "path": "research/verify_quintic_anchor_bridge.py",
+      "sha256": "7cbddcbfe750e33dff8da2a6bbe91b0779e43a394b50260915cfd8ccb1a84ca1"
+    },
+    {
+      "path": "research/verify_quintic_bridge_contacts.py",
+      "sha256": "97831c63a5d0ec1bb75e15e9664ec7e4cbb57b479549b8e0f13e89e0f1e1c478"
+    },
+    {
+      "path": "research/verify_quintic_bridge_family.py",
+      "sha256": "8103b8b30c35d017c058f146236834deb756b40235ec4fa909697b1fac989a85"
+    },
+    {
+      "path": "research/verify_quintic_congruence.py",
+      "sha256": "2c4178e5ce194d15c217556e3e823244ec03e0aaa866841dd23aa6a67b3c741a"
+    },
+    {
+      "path": "research/verify_quintic_core_probe.py",
+      "sha256": "a1cbf10385a59c0a6d6e7254a8f74a178e53234a5fb45221ed090c890f72623b"
+    },
+    {
+      "path": "research/verify_quintic_free_tau_joint.py",
+      "sha256": "7f20b731bd5aeb230ef96e0e9220c9c0082349fcc46806049943d9bc5caeb0d0"
+    },
+    {
+      "path": "research/verify_quintic_full_translation_laws.py",
+      "sha256": "dcf3f9488781bab205d6b32442ffdbb8565e209500c5f6d78aa585cfc5ba11b4"
+    },
+    {
+      "path": "research/verify_quintic_independent_center.py",
+      "sha256": "59a6b51bd75dbe0b3fcaa777e58ebd55891ba61af94b6e68fc3f5ea18f2e516f"
+    },
+    {
+      "path": "research/verify_quintic_joint_ports.py",
+      "sha256": "1134490ccec43b82f612e81ed2e4913abd3b44c66a8e8e914f748dc52d49c81a"
+    },
+    {
+      "path": "research/verify_quintic_joint_return.py",
+      "sha256": "21e0598f4f1bd6ab281a9c31751c50f6836428e97e1e6fc98383602fd934b9e9"
+    },
+    {
+      "path": "research/verify_quintic_localized_characters.py",
+      "sha256": "3ab67abbe3fec12785c6cf1a4757d17b07d99a4721f041855a45e47a5fe8ce3f"
+    },
+    {
+      "path": "research/verify_quintic_module_law.py",
+      "sha256": "4d7fb93101c65601bc9fe4823c0b6c40e8a9bea63ae39cd0067faccacd42e37a"
+    },
+    {
+      "path": "research/verify_quintic_multiword_joint.py",
+      "sha256": "6c20609e5f1f10bafed5b89b1bab21c439303a6d0b245fe5a01ee4cf341d0d28"
+    },
+    {
+      "path": "research/verify_quintic_nu_joint_law.py",
+      "sha256": "84cfcb2bbe1725db370c3cdfa0497aed00a6e82a94d2d066ea492cedfeda94bf"
+    },
+    {
+      "path": "research/verify_quintic_pair_completion.py",
+      "sha256": "444c2d2f099579d78d4bf1ef73a1328d0cdf69c2a4aea5b50ea140b57c231041"
+    },
+    {
+      "path": "research/verify_quintic_parametric_contacts.py",
+      "sha256": "e40f6db92fa1f47bf12b14c3e091e8d0ef7570fe4e6d845b5ff2fa0779b86542"
+    },
+    {
+      "path": "research/verify_quintic_projection.py",
+      "sha256": "b6a15baf6ab345652f7649f7e7f6ca844ac6e1d49f1fdaaf87aa8bedba7dc515"
+    },
+    {
+      "path": "research/verify_quintic_radial_escape.py",
+      "sha256": "fe45882a8808609443a047c0d4a45fcafd9d8350eecfc1005c2ecb6109275dae"
+    },
+    {
+      "path": "research/verify_quintic_residue5_ring.py",
+      "sha256": "6d794387d0d588215c2ad32b85aca07aef863bb8d2cbd05f31541a3aa6efc006"
+    },
+    {
+      "path": "research/verify_quintic_root_spectrum.py",
+      "sha256": "28689829d221f2dc7b103f8eebb27ed600b323e5064bba0676a7f9ccc35b0b3e"
+    },
+    {
+      "path": "research/verify_quintic_second_host.py",
+      "sha256": "66a01e4210b537cbae4cd920a31598b18cd96be0dfc575b7db90f52876e46c7e"
+    },
+    {
+      "path": "research/verify_quintic_shifted_spectrum.py",
+      "sha256": "459463a22a9344cc368b67108be550618eaebcf28161774fab3478a8aaa70589"
+    },
+    {
+      "path": "research/verify_quintic_tau_union.py",
+      "sha256": "a7d813b3b349ba09fcb4d45ac49933e34047bef03191bedaa25eacdb17b122d3"
+    },
+    {
+      "path": "research/verify_quintic_three_character_law.py",
+      "sha256": "493f75e123814fe286cb27715c533d7cf5f34e3cda8bf1d91f078f506b35cce8"
+    },
+    {
+      "path": "research/verify_quintic_translated_orbit.py",
+      "sha256": "c609bc376dbe051ce68e29dcd910687d662c29c9562a3aaaac1fbb90778d6b77"
+    },
+    {
+      "path": "research/verify_refined_centers.py",
+      "sha256": "50706bec9cbf4508c09104cf0907e950c2550d8a38151c921e0e8b04fd640b77"
+    },
+    {
+      "path": "research/verify_repair_cascade.py",
+      "sha256": "a4afd2202703c92258d79903ac101b09361a1cd11446223a1f3acb4ee8ac509a"
+    },
+    {
+      "path": "research/verify_repair_pair_fan.py",
+      "sha256": "d136c50bc73939b1a571390c860f48323122e66bb94b7c9794fc6c5e8197f689"
+    },
+    {
+      "path": "research/verify_residue11.py",
+      "sha256": "94b133b3bb77f227adee79f71ce7ec6c0310100dc611c6635b1bd0fcdd1645bb"
+    },
+    {
+      "path": "research/verify_residue29_structure.py",
+      "sha256": "73f151d6f48993c99218ad30683e7f56bfd7c76995195655aa1d96adedd1f3cb"
+    },
+    {
+      "path": "research/verify_residue_method_obstruction.py",
+      "sha256": "92609f5b8c410e8bc6d186ef3758b91a1a09abee25fcf860eb11a9d2b705f9f0"
+    },
+    {
+      "path": "research/verify_resonant_center_projection.py",
+      "sha256": "6ee7c0163b91c1ae032971d75a3ae292b72f5a3265077df953ddb0ef79b5ac60"
+    },
+    {
+      "path": "research/verify_resonant_translation_stack.py",
+      "sha256": "bb8e020ab7d18d71489da7e50399006f16c185eede847f44cf64e79319ce28d5"
+    },
+    {
+      "path": "research/verify_resonant_twist_obstruction.py",
+      "sha256": "270faaa81065bbb252e7159b7b91a36527177c42d533feb99b822ed02a3342d7"
+    },
+    {
+      "path": "research/verify_root_contact_repair.py",
+      "sha256": "bd67b0d0b11e7c66d45c105aaca1ee81e6ef84a5e5bb70deb6d2b276a7a2003f"
+    },
+    {
+      "path": "research/verify_rooted_spindle.py",
+      "sha256": "a83e9268910886935c1e88bc6db3dc984b34816ac5fe37359b0d4d112a6cbc54"
+    },
+    {
+      "path": "research/verify_rup_lrat.py",
+      "sha256": "0136d8cd620b902cce972794bc7b753786ec536bf72e2d416341ee62ff984158"
+    },
+    {
+      "path": "research/verify_salem_height_obstruction.py",
+      "sha256": "6eec5cc724b04e39c15d776f092debf6e5ad805bbd36ce1090abc6372e60803b"
+    },
+    {
+      "path": "research/verify_salem_sextic_four.py",
+      "sha256": "78b31101b17afd7602e0f6c0d0297f142e902eda65c9b197b4034bd5a691f3ae"
+    },
+    {
+      "path": "research/verify_search_models.py",
+      "sha256": "9019e6b10632afa0111c8a8836cde6898bb2fc2e92b3f6ad4ee828d170b68282"
+    },
+    {
+      "path": "research/verify_six_pair_uniform.py",
+      "sha256": "f07da35c68d65298c5d0a328436831a082c85622a6cb0c186f78c2e5e71d66e9"
+    },
+    {
+      "path": "research/verify_spindle_gate.py",
+      "sha256": "8edacb87e35649a0209383a524fe5a18222dc330da1a5a45d321000ac3dcfe76"
+    },
+    {
+      "path": "research/verify_spindle_joint_support.py",
+      "sha256": "1c6817dcf9d2e00ae4996220ec3523b7339068b18243a14647abd1479104a450"
+    },
+    {
+      "path": "research/verify_tau_localization_joint.py",
+      "sha256": "ce8ad399810b5a9ef458167ad7af68101dfdd87e847fe4218b2a08d1b7c174ea"
+    },
+    {
+      "path": "research/verify_translated_field_stack.py",
+      "sha256": "85af3bb193f14281f1bdc9d36f57ac63b412f4cbfffa79d5e99ecdd8c0d7a40b"
+    },
+    {
+      "path": "research/verify_translated_seam.py",
+      "sha256": "7547375b5f80142c67a23f455f0beac9b3d115a7923114362498c62e46a03039"
+    },
+    {
+      "path": "research/verify_triangular_field_stack.py",
+      "sha256": "2741c4b5815da20980ef7c884c9e8a9d8fc4b927b76bacd8f7a42e8b308078b4"
+    },
+    {
+      "path": "research/warm_refined_quotient.py",
+      "sha256": "d055813baab7760ac61acb0948cb4df51385c6ae831aa01c52eb435176a52abe"
+    }
+  ],
+  "certificates": {
+    "joint_nilpotent_cover.json": "19fce728ea29fa81322dc5bd2ead94c41be84a8859d810972eaa52ec06030e26",
+    "joint_s3_cover.json": "533b3b2bc8513ca507072511b2936eeee6832230c494515ec46b1152a1d8b903"
+  },
+  "nilpotent_certificate_byte_identical_rebuild": true,
+  "s3_positive_words_byte_identical_search_replay": true,
+  "solver_negative_claims_used_as_proof": false,
+  "github_published": false,
+  "scope": "T131 needs the included nilpotent-group and pullback proof; T132 needs the explicit construction. Exact checks do not prove a new HN bound or decide unrestricted old14+u full-joint."
+}

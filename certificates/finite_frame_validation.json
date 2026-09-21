@@ -1,0 +1,206 @@
+{
+  "schema": "finite-frame-validation-v1",
+  "status": "PASS",
+  "date": "2026-09-21",
+  "python": "3.13.5",
+  "theorems": [
+    "T133",
+    "T134"
+  ],
+  "experiments": [
+    "E103",
+    "E104"
+  ],
+  "separator": {
+    "structure": {
+      "component_vertices": 24235,
+      "directed_component_edges": 117150,
+      "root_fiber": 0,
+      "target_fiber": 1,
+      "monodromy_order": 6
+    },
+    "proper_consequence": {
+      "literal_classes": 2048,
+      "proper_clauses": 14563,
+      "forced_literals": 195,
+      "unequal_counts": [
+        12,
+        0
+      ],
+      "support": 15,
+      "forced_colors": [
+        [
+          0,
+          3,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "clause_sha256": "88590919567386ca3c076c5693ea4a80d08e298d4997c5ed8dda7c67c43703d6",
+      "unit_trace_sha256": "1ce4d489d9409b74cf6b4c53df85895906805706007947cbf76cffee6d4ae125",
+      "independently_replayed_unit_steps": 195,
+      "repeated_old_word_edge_checks": 747870
+    }
+  },
+  "arithmetic_frame": {
+    "prime": 5701,
+    "injective_points": 10077,
+    "field_product_checks": 2048,
+    "full_motion_checks": 23058,
+    "motion_domains": [
+      5084,
+      556,
+      5289,
+      4671,
+      1895,
+      513,
+      333,
+      200,
+      573,
+      513,
+      513,
+      512,
+      511,
+      1866,
+      29
+    ],
+    "unit_edge_residue_checks": 49858,
+    "palette_group_order": 24,
+    "palette_fixed_colors": [
+      4
+    ],
+    "derived_orders": [
+      24,
+      12,
+      4,
+      1
+    ],
+    "symbolic_cover_states": 44461916568000,
+    "scope": "All 15 equation systems admit an injective same-state invariant; no 15-domain proper coloring is supplied."
+  },
+  "calibrations": {
+    "frame_edges": 432,
+    "triangle_frames": 6,
+    "triangle_exact_distances": 3,
+    "affine_group_order": 200,
+    "affine_products": 40000
+  },
+  "mutations_rejected": [
+    "separator-source-hash",
+    "separator-omitted-node",
+    "separator-wrong-root-label",
+    "separator-duplicate-fiber-image",
+    "separator-target-not-separated",
+    "separator-false-edge-count",
+    "separator-false-proper-class-count",
+    "separator-false-unit-count",
+    "separator-false-event-count",
+    "frame-composite-prime",
+    "frame-bad-field-image",
+    "frame-bad-conjugate-image",
+    "frame-zero-linear-scale",
+    "frame-wrong-translation",
+    "frame-missing-u",
+    "frame-noninjective-claim",
+    "frame-wrong-coordinate-hash",
+    "frame-bad-tree-gauge",
+    "frame-incomplete-palette-group",
+    "frame-false-solvable-length",
+    "frame-false-state-bound"
+  ],
+  "optimized_rejections": [
+    "verify_finite_frame_separation.py",
+    "test_finite_frame_certificates.py",
+    "build_finite_frame_certificates.py"
+  ],
+  "byte_identical_rebuild": true,
+  "certificates": {
+    "finite_frame_separator.json.gz": "29c566e9d0070fc60f8f114e8c1abe16271dd6785ba721dd40c11be5a9c7bd37",
+    "arithmetic_frame_separation.json": "fcc63a9da89447eb6814ed38caffdcade787c6fb48954997ffb9bc3edbbc4f2a"
+  },
+  "scope": "New finite certificates only. General infinite-path claims use the written proof; no HN bound or 15-domain positive law."
+}
