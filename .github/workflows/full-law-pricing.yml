@@ -1,0 +1,49 @@
+name: Full law pricing research
+on:
+  push:
+    branches: [research/full-law-pricing-20260921]
+    paths: [.github/workflows/full-law-pricing.yml]
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Fetch exact public source
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --depth=1 origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+      - name: Prepare pinned search-only dependency and exact geometry cache
+        run: |
+          mkdir -p "$RUNNER_TEMP/full-law"
+          python3 -m pip download --dest "$RUNNER_TEMP/full-law" --only-binary=:all: --python-version=313 --implementation=cp --abi=cp313 --no-deps python-sat==1.9.dev15
+          python3 - <<'PY'
+          import sys,os,json,gzip,math,hashlib
+          from pathlib import Path
+          sys.path.insert(0,'research')
+          from dyadic_mixed_return_joint import prepare
+          from verify_quintic_core_probe import digest
+          root=Path.cwd()
+          parent,c,old,algebra,mapping,definitions,maps=prepare(root)
+          den=math.lcm(*(x.denominator for p in c['points'] for x in p))
+          points=[[int(x*den) for x in p] for p in c['points']]
+          assert digest(points)==parent['geometry']['point_sha256']
+          data=dict(schema='full-law-search-cache-v1',geometry=parent['geometry'],denominator=den,points=points,edges=c['edges'],words=old['result']['words'],motions=[d[0] for d in definitions[:15]],mappings=maps[:15])
+          out=Path(os.environ['RUNNER_TEMP'])/'full-law'/'geometry.json.gz'
+          out.write_bytes(gzip.compress(json.dumps(data,separators=(',',':')).encode(),mtime=0))
+          print(json.dumps(dict(geometry=parent['geometry'],domains=list(map(len,maps[:15])),cache_sha256=hashlib.sha256(out.read_bytes()).hexdigest())))
+          PY
+          sha256sum "$RUNNER_TEMP/full-law"/*
+      - name: Export source-bound research inputs
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: full-law-inputs
+          path: ${{ runner.temp }}/full-law/*
+          retention-days: 7
+          if-no-files-found: error
