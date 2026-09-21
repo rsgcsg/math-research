@@ -1,0 +1,274 @@
+{
+  "status": "PASS",
+  "experiment": "E105",
+  "geometry": {
+    "vertices": 10077,
+    "actual_pairs": 50767926,
+    "induced_edges": 49858,
+    "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+    "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+    "overlap": 91,
+    "new_cross_edges": 170
+  },
+  "runs": [
+    {
+      "strategy": "dense",
+      "proper_words": 11,
+      "new_words": 6,
+      "whole_edge_checks": 548438,
+      "pricing_steps": 6,
+      "strict_pool_cuts": 7,
+      "final_rows": 256,
+      "new_rows": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "pricing_values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "unseen_sides": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "final_pool_status": "EXACT_POOL_SEPARATOR",
+      "status": "ROUND_LIMIT_UNKNOWN"
+    },
+    {
+      "strategy": "sparse",
+      "proper_words": 21,
+      "new_words": 16,
+      "whole_edge_checks": 1047018,
+      "pricing_steps": 16,
+      "strict_pool_cuts": 17,
+      "final_rows": 540,
+      "new_rows": [
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "pricing_values": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -2,
+        -2
+      ],
+      "unseen_sides": [
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "final_pool_status": "EXACT_POOL_SEPARATOR",
+      "status": "ROUND_LIMIT_UNKNOWN"
+    },
+    {
+      "strategy": "reuse8",
+      "proper_words": 13,
+      "new_words": 8,
+      "whole_edge_checks": 648154,
+      "pricing_steps": 8,
+      "strict_pool_cuts": 9,
+      "final_rows": 135,
+      "new_rows": [
+        7,
+        8,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "pricing_values": [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "unseen_sides": [
+        7,
+        8,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "final_pool_status": "EXACT_POOL_SEPARATOR",
+      "status": "ROUND_LIMIT_UNKNOWN"
+    }
+  ],
+  "counterexample": {
+    "status": "PASS",
+    "counterexample": "C024",
+    "vertices": 4,
+    "actual_pairs": 6,
+    "unit_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "maximal_domains": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    ],
+    "proper_labeled_two_colorings": 4,
+    "proper_partitions": 2,
+    "individual_witnesses": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "same_event_difference_columns": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "uniform_strict_gap": 1,
+    "compiled_vertices": 5,
+    "compiled_actual_pairs": 10,
+    "compiled_unit_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "scope": "Actual minimal four-point input: individual full-domain two-color laws exist, but no common law. Not a five-color HN obstruction."
+  },
+  "calibrated_pricing_queries": 405,
+  "full_fifteen_domain_law_found": false,
+  "all_word_obstruction_certified": false,
+  "scope": "All saved finite-pool inequalities and counterexample columns checked exactly. Search costs are observations; neither stopped pricing nor a final pool cut is an all-word obstruction.",
+  "certificate_sha256": "c9de7e35464a7538ff2129a30a1335dc1b8669e870b541b070bba55d44dded12",
+  "mutations_rejected": [
+    "base",
+    "input-binding",
+    "geometry",
+    "missing-motion",
+    "improper-word",
+    "false-cut",
+    "false-price",
+    "future-word",
+    "dropped-rows",
+    "wrong-index",
+    "boolean-margin",
+    "fake-global-unsat",
+    "fake-full-law",
+    "hidden-reuse",
+    "toy-gap",
+    "final-pool-cut"
+  ],
+  "optimized_mode_rejections": 3,
+  "encoding": {
+    "auxiliary_flip_checks": 1851,
+    "omitted_new_row_counterexample": true
+  }
+}
