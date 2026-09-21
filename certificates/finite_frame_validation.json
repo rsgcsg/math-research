@@ -2,7 +2,7 @@
   "schema": "finite-frame-validation-v1",
   "status": "PASS",
   "date": "2026-09-21",
-  "python": "3.13.5",
+  "python": "3.12.3",
   "theorems": [
     "T133",
     "T134"
@@ -198,6 +198,11 @@
     "build_finite_frame_certificates.py"
   ],
   "byte_identical_rebuild": true,
+  "gzip_header_inputs_normalized": [
+    0,
+    3,
+    255
+  ],
   "certificates": {
     "finite_frame_separator.json.gz": "29c566e9d0070fc60f8f114e8c1abe16271dd6785ba721dd40c11be5a9c7bd37",
     "arithmetic_frame_separation.json": "fcc63a9da89447eb6814ed38caffdcade787c6fb48954997ffb9bc3edbbc4f2a"

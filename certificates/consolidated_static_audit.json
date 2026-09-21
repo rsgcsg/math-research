@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "python_syntax_files": 222,
+  "json_files": 135,
+  "markdown_file_references": 472,
+  "ledger_ids": {
+    "T": 134,
+    "E": 104,
+    "C": 23,
+    "Q": 10
+  },
+  "scope": "Syntax, parseability, exact ID coverage and local file targets; not a new proof of theorems or an exhaustive Markdown-anchor audit."
+}
