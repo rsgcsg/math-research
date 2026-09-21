@@ -1,0 +1,92 @@
+{
+  "geometry": {
+    "vertices": 10077,
+    "actual_pairs": 50767926,
+    "induced_edges": 49858,
+    "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+    "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+    "overlap": 91,
+    "new_cross_edges": 170
+  },
+  "bits": 16,
+  "return_bound": 6,
+  "returns": [
+    [
+      1,
+      29
+    ],
+    [
+      2,
+      805
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      6,
+      1
+    ]
+  ],
+  "cross_edges": 63129,
+  "cross_histogram": [
+    [
+      0,
+      49498
+    ],
+    [
+      1,
+      938
+    ],
+    [
+      2,
+      12379
+    ],
+    [
+      3,
+      126
+    ],
+    [
+      4,
+      188
+    ]
+  ],
+  "origin_neighbors": 360,
+  "search": [
+    {
+      "period": 1,
+      "vertices": 9249,
+      "edges": 47899,
+      "status": "LOOP_RESTRICTED_PERIOD"
+    },
+    {
+      "period": 2,
+      "vertices": 18497,
+      "edges": 95814,
+      "status": "LOOP_RESTRICTED_PERIOD"
+    },
+    {
+      "period": 3,
+      "vertices": 27745,
+      "edges": 143817,
+      "status": "SAT",
+      "stats": {
+        "restarts": 587,
+        "conflicts": 8506,
+        "decisions": 410296,
+        "propagations": 9544017
+      }
+    }
+  ],
+  "result": true,
+  "certificate_sha256": "79d1448921c3d66604d847d617dec496245e82393a3b7a8ea373ae2c9af3a172",
+  "elapsed_seconds": 96.54294645499999
+}
