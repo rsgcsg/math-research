@@ -7,7 +7,7 @@
 [路线与淘汰理由](docs/ROUTES.md) · [结果账本](docs/RESULTS.md) ·
 [文献地图](references/LITERATURE_MAP.md) · [证据规则](AGENTS.md)
 
-## 2026-09-21：历史收敛与未发布成果整合
+## 2026-09-21：历史收敛与成果整合
 
 归并至T134/E104，不新增定理编号，不把文档、验证或固定模型失败称为HN突破。
 
@@ -38,3 +38,5 @@ certificates/    可独立重放的见证、来源绑定与验证收据
 Python 3.10+标准库独立检查：`make check`。
 `check-salem`、`check-quartet`、`check-orbit`、`check-covers`、`check-frames`分别重放对应证据。
 `make setup`只用于重跑需要额外库的搜索。验证范围与发布状态以CURRENT和本次收据为准。
+
+本次整合的发布与完整回归记录见 [PR #2](https://github.com/rsgcsg/math-research/pull/2) 和 [CURRENT](docs/CURRENT.md)。原研究分支与历史证据保留。
