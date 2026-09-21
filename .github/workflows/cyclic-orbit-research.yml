@@ -32,30 +32,33 @@ jobs:
         run: |
           set -o pipefail
           python3 -u research/dyadic_cyclic_orbit_probe.py 2>&1 | tee "$RUNNER_TEMP/cyclic-orbit.log"
-      - name: Replay independent checker when present
+      - name: Replay independent checker and mutation rejection
         run: |
-          if test -f research/verify_dyadic_cyclic_orbit.py; then
-            python3 -u research/verify_dyadic_cyclic_orbit.py
-          fi
+          set -o pipefail
+          python3 -u research/verify_dyadic_cyclic_orbit.py 2>&1 | tee "$RUNNER_TEMP/cyclic-orbit-verification.log"
       - name: Save explicitly scoped research output
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add certificates/dyadic_cyclic_orbit_probe.json.gz certificates/dyadic_cyclic_orbit_summary.json
-          if test -f certificates/dyadic_cyclic_orbit_validation.json; then
-            git add certificates/dyadic_cyclic_orbit_validation.json
-          fi
+          git add certificates/dyadic_cyclic_orbit_probe.json.gz certificates/dyadic_cyclic_orbit_summary.json certificates/dyadic_cyclic_orbit_validation.json
           if ! git diff --cached --quiet; then
-            git commit -m 'research: record cyclic-orbit experiment with explicit verification scope'
-            git -c "http.https://github.com/.extraheader=AUTHORIZATION: bearer $GH_TOKEN" push origin "HEAD:$GITHUB_REF_NAME"
+            git commit -m 'E100: independently certify all-power actual orbit and period-three five-color witness'
+            AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            echo "::add-mask::$AUTH"
+            git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin "HEAD:$GITHUB_REF_NAME"
           fi
-      - name: Retain experiment log
+      - name: Retain experiment, independent validation and certificates
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
-          name: cyclic-orbit-log-${{ github.sha }}
-          path: ${{ runner.temp }}/cyclic-orbit.log
+          name: cyclic-orbit-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/cyclic-orbit.log
+            ${{ runner.temp }}/cyclic-orbit-verification.log
+            certificates/dyadic_cyclic_orbit_probe.json.gz
+            certificates/dyadic_cyclic_orbit_summary.json
+            certificates/dyadic_cyclic_orbit_validation.json
           retention-days: 7
           if-no-files-found: warn
