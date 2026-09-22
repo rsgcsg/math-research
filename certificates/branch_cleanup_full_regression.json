@@ -1,9 +1,90 @@
 {
   "schema": "hn-branch-cleanup-replay-v1",
-  "status": "RUNNING_NOT_YET_VERIFIED",
+  "status": "PASS",
   "date": "2026-09-22",
   "source_base_commit": "bc1ac3a1bb486f0b17a495b48c385c9711b5ea46",
+  "source_file_count": 230,
   "source_manifest_sha256": "132c7c30a8b067fabf054510598d3b2e39f8f737b9736d43d5439ac6383c03a5",
+  "source_unchanged": true,
+  "source_manifest_rule": "SHA256 of compact sorted-key JSON mapping Makefile, requirements-research.txt and all research/*.py paths to file SHA256",
   "command": "make check",
-  "scope": "Temporary status on maintenance branch; do not merge before full exit code and source hash check."
+  "returncode": 0,
+  "python": "3.13.5",
+  "started_utc": "2026-09-22T01:37:47.949744+00:00",
+  "completed_utc": "2026-09-22T02:23:53.541464+00:00",
+  "elapsed_seconds": 2765.59,
+  "log_sha256": "5360cdf4c1860748bbde4bf2c8fdf4d8ddcd65aa49603e588156078472b8c953",
+  "entrypoints": [
+    "research/verify.py",
+    "check-salem",
+    "check-quartet",
+    "check-orbit",
+    "check-covers",
+    "check-frames",
+    "check-preparation",
+    "check-pricing"
+  ],
+  "runtime_only_outputs_restored": [
+    {
+      "path": "certificates/dyadic_cyclic_orbit_validation.json",
+      "changed_runtime_fields": [
+        "elapsed_seconds"
+      ]
+    },
+    {
+      "path": "certificates/finite_frame_validation.json",
+      "changed_runtime_fields": [
+        "python"
+      ]
+    }
+  ],
+  "separate_support_audit": {
+    "status": "PASS",
+    "script_sha256": "b94dbb13b3a8d1354c3dadd16b31a3389efdaccf4cb53bf3ecf40335844b22d2",
+    "log_sha256": "6e649b6cb44ed717d5a0357dbac16c42638e43ebc3d9249c151ecebdc708733e",
+    "pools": [
+      {
+        "strategy": "dense",
+        "eliminated_per_round": [
+          11
+        ],
+        "survivors": 0
+      },
+      {
+        "strategy": "sparse",
+        "eliminated_per_round": [
+          17,
+          4
+        ],
+        "survivors": 0
+      },
+      {
+        "strategy": "reuse8",
+        "eliminated_per_round": [
+          13
+        ],
+        "survivors": 0
+      }
+    ],
+    "scope": "Separately executed documentation snippet reconstructs geometry, validates the complete E105 certificate and diagnoses only its three stored pools; not part of make check and not an all-word obstruction."
+  },
+  "branch_cleanup_guard_tests": {
+    "status": "PASS",
+    "receipt_sha256": "e0708727101f5c94f2f8a47073b4ce86086480fa288c52e30e3e2ac4933ece68",
+    "scope": "Local disposable Git repository and guard unit tests, not evidence of remote branch deletion."
+  },
+  "static_audit": {
+    "python_syntax_files": 228,
+    "json_certificate_files": 142,
+    "markdown_file_targets": 490,
+    "ledger_ids": {
+      "T": 134,
+      "E": 105,
+      "C": 24,
+      "Q": 10
+    },
+    "manual_workflow_permissions": "contents: read",
+    "scope": "Syntax, parseability, local file links and workflow configuration; not exhaustive Markdown anchors or a run of the new manual workflow."
+  },
+  "scope": "One complete execution on unchanged E105 research source, including all eight Makefile groups. Source and mathematical certificate bytes match the archived research commit. Documentation support audit was separately executed. No new HN bound, general theorem formalization, or full-law UNSAT backend is claimed."
 }
