@@ -1,0 +1,39 @@
+name: Independent research verification
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Fetch the selected public commit without persisted credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --depth=1 origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Replay all independent checks without search dependencies
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: |
+          set -o pipefail
+          git rev-parse HEAD > "$RUNNER_TEMP/checked-commit.txt"
+          make check 2>&1 | tee "$RUNNER_TEMP/research-check.log"
+      - name: Save the checked commit and complete output
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: independent-replay-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/checked-commit.txt
+            ${{ runner.temp }}/research-check.log
+          retention-days: 7
+          if-no-files-found: error

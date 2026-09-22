@@ -1,0 +1,67 @@
+{
+  "schema": "hn-branch-archive-v1",
+  "date": "2026-09-22",
+  "status": "PLANNED_NOT_YET_DELETED",
+  "baseline_main": "53feae233ab7d781b3ca32242fabfabfb9cde3d4",
+  "integrated_research_tip": "bc1ac3a1bb486f0b17a495b48c385c9711b5ea46",
+  "scope": "Repository reference maintenance only. Not a mathematical certificate; no UNKNOWN is promoted.",
+  "branches": [
+    {
+      "branch": "research/birank-rotation-20260921",
+      "expected_sha": "a658761d00ce0395242faace7e8e0db9a1bb16ee",
+      "archive_tag": "archive/2026-09-22/research/birank-rotation-20260921",
+      "disposition": "merged_before_deletion"
+    },
+    {
+      "branch": "research/checkpoint-audit-20260921",
+      "expected_sha": "a61cdfce8f93878c300718f1a8fe806d60e8ca11",
+      "archive_tag": "archive/2026-09-22/research/checkpoint-audit-20260921",
+      "disposition": "merged_before_deletion"
+    },
+    {
+      "branch": "research/consolidated-20260921",
+      "expected_sha": "00c43b5f6e9a3af06ac3e9e5263b1c27a6026ed8",
+      "archive_tag": "archive/2026-09-22/research/consolidated-20260921",
+      "disposition": "merged_before_deletion"
+    },
+    {
+      "branch": "research/cyclic-orbit-20260921",
+      "expected_sha": "a658761d00ce0395242faace7e8e0db9a1bb16ee",
+      "archive_tag": "archive/2026-09-22/research/cyclic-orbit-20260921",
+      "disposition": "merged_before_deletion"
+    },
+    {
+      "branch": "research/full-joint-20260919",
+      "expected_sha": "fcea973ad8c05b4b5f2d3fa28ed7977aebf645ae",
+      "archive_tag": "archive/2026-09-22/research/full-joint-20260919",
+      "disposition": "merged_before_deletion"
+    },
+    {
+      "branch": "research/full-law-loop-20260922",
+      "expected_sha": "bc1ac3a1bb486f0b17a495b48c385c9711b5ea46",
+      "archive_tag": "archive/2026-09-22/research/full-law-loop-20260922",
+      "disposition": "merged_before_deletion"
+    },
+    {
+      "branch": "research/full-law-pricing-20260921",
+      "expected_sha": "5cd52cea0bfa5ac8ed25e1e1ca04e8b7654cdc7b",
+      "archive_tag": "archive/2026-09-22/research/full-law-pricing-20260921",
+      "disposition": "archive_only_preparation",
+      "allowed_unmerged_paths": [
+        ".github/workflows/full-law-pricing.yml"
+      ]
+    },
+    {
+      "branch": "research/joint-pair-cegar-20260920",
+      "expected_sha": "5cd6b56373e9e92d686101a87028e213747feaf2",
+      "archive_tag": "archive/2026-09-22/research/joint-pair-cegar-20260920",
+      "disposition": "merged_before_deletion"
+    },
+    {
+      "branch": "research/sextic-four-color-20260919",
+      "expected_sha": "404dd1d1965f31f5bba3dbab8fea44e51d2fce73",
+      "archive_tag": "archive/2026-09-22/research/sextic-four-color-20260919",
+      "disposition": "merged_before_deletion"
+    }
+  ]
+}

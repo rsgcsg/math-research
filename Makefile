@@ -1,4 +1,4 @@
-.PHONY: check check-salem check-quartet check-orbit check-covers check-frames check-preparation setup explore
+.PHONY: check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing setup explore
 
 check:
 	python3 research/verify.py
@@ -8,6 +8,7 @@ check:
 	$(MAKE) check-covers
 	$(MAKE) check-frames
 	$(MAKE) check-preparation
+	$(MAKE) check-pricing
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -35,3 +36,6 @@ setup:
 explore:
 	.venv/bin/python research/search_phases.py --width 6 --height 6 --opposite-only
 
+
+check-pricing:
+	python3 research/test_full_law_pricing.py

@@ -831,3 +831,24 @@ Ghorbani–Kamali–Khosrovshahi–Krotov的二进制[t]-trade（含重数）把
 同m≤5、等权、≤5颜色的完整律由二次相等矩精确决定。六颜色奇偶开关
 解释颜色假设为什么特殊；六词反例解释词数为什么特殊。
 任意权的五支持版本另由有限支持覆盖反证得到尖锐五点T128，不能用T127替代。
+
+## 2026-09-22：E105 / C024来源与阅读层级
+
+- Haugland，arXiv:2608.04542v2，作者页及HTML第1–3节重新阅读：普通界5/7、2131点spindle-free构造。
+  本次作者页仍只显示2026-08-06 v2；第三方v4索引不代替作者版本表。不重新宣称其数值/求解器证据已被本库重放。
+  https://arxiv.org/abs/2608.04542 · https://arxiv.org/html/2608.04542v2
+- de Grey，arXiv:1804.02385v3：重新读取作者摘要，明确有限非四染图的下界5；不作为六色证据。
+  https://arxiv.org/abs/1804.02385
+- SCIP官方《How to add variable pricers》：读取官方索引返回的定价定义、Farkas/约化费用区别、
+  新变量须加入全部相关约束的说明；随后全文请求429/超时。未以未读取的实现细节为证明。
+  https://www.scipopt.org/doc/html/PRICER.php
+- Chazottes–Gambaudo–Hochman–Ugalde，*On the finite-dimensional marginals of shift-invariant measures*，
+  arXiv:1011.2442v2，作者摘要已读；HTML未取得、未读全文证明。摘要区分一维局部不变与高维延拓，
+  仅作结构对照，不据此推断当前有限单位几何共同律不可行。
+  https://arxiv.org/abs/1011.2442
+- *Restricted CSPs and F-Free Digraph Algorithmics*，ICALP2025第158篇，HTML再核对。
+  有限模板/限制类的假设不自动适用于无限单位图承诺；本轮不将其算法分类当作新HN定理。
+  https://drops.dagstuhl.de/storage/00lipics/lipics-vol334-icalp2025/html/LIPIcs.ICALP.2025.158/LIPIcs.ICALP.2025.158.html
+
+本轮新增C024的几何、最小性、严格分离及五点编译均有自足证明；E105依赖的是完整列线性系统、
+精确整数复核及全域proper检查，不依赖一般格系统的不可延拓定理。
