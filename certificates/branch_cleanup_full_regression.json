@@ -1,0 +1,9 @@
+{
+  "schema": "hn-branch-cleanup-replay-v1",
+  "status": "RUNNING_NOT_YET_VERIFIED",
+  "date": "2026-09-22",
+  "source_base_commit": "bc1ac3a1bb486f0b17a495b48c385c9711b5ea46",
+  "source_manifest_sha256": "132c7c30a8b067fabf054510598d3b2e39f8f737b9736d43d5439ac6383c03a5",
+  "command": "make check",
+  "scope": "Temporary status on maintenance branch; do not merge before full exit code and source hash check."
+}
