@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "experiment": "E095",
+  "source_sha256": "398d8490ee040ee29b93e4f9f3f6637f41ea45a3f2d8d6e5e47a70879e8a44f1",
+  "source_geometry": {
+    "vertices": 10077,
+    "actual_pairs": 50767926,
+    "induced_edges": 49858,
+    "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+    "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+    "overlap": 91,
+    "new_cross_edges": 170
+  },
+  "geometry": {
+    "vertices": 29669,
+    "denominator": 7680,
+    "actual_pairs": 440109946,
+    "point_sha256": "d8ddf15562b6db32ce235037823a9f20861935e790fd9ae1d72595b910dead3e",
+    "copies_sha256": "e18ad9ce40de08bf0c0c732232ad780cc1d1d6368f25d6ced3d4ed061732a6b6",
+    "copy_labels": [
+      "Y",
+      "eta_Y",
+      "u_Y",
+      "eta_u_Y"
+    ],
+    "listed_edges": 149822,
+    "listed_edge_sha256": "f430a07a7c5b5edb24b69ca5ed5f4c41c15c48ced1daeaa73fd131c173116339",
+    "pairwise_copy_intersections": [
+      [
+        0,
+        1,
+        5289
+      ],
+      [
+        0,
+        2,
+        29
+      ],
+      [
+        0,
+        3,
+        29
+      ],
+      [
+        1,
+        2,
+        29
+      ],
+      [
+        1,
+        3,
+        29
+      ],
+      [
+        2,
+        3,
+        5289
+      ]
+    ]
+  },
+  "enumeration": null,
+  "stages": [
+    {
+      "status": "UNKNOWN",
+      "word": null,
+      "conflict_budget": 20000,
+      "stats": {
+        "restarts": 1321,
+        "conflicts": 20002,
+        "decisions": 273082,
+        "propagations": 12316343
+      },
+      "name": "transported_edges_with_all_physical_identifications"
+    }
+  ],
+  "scope": "Exactly the finite physical commuting patch; listed-edge SAT alone is not induced-graph SAT. No invariant joint law, whole-host coloring, all-support obstruction or HN bound follows from UNKNOWN."
+}

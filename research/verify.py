@@ -9,6 +9,10 @@ from verify_cm_escape_nine import verify as verify_cm_escape_nine
 from verify_dyadic_identity_extension import verify as verify_dyadic_identity_extension
 from verify_operator_release import verify as verify_operator_release
 from verify_eta_release import verify as verify_eta_release
+from verify_dyadic_commuting_patch import verify as verify_dyadic_commuting_patch
+from verify_rational_rotation_orbit import verify as verify_rational_rotation_orbit
+from verify_rotation_offset_bound import verify as verify_rotation_offset_bound
+from verify_rotation_orbit_colorings import verify as verify_rotation_orbit_colorings
 from relations import calibrate
 from exact_geometry import check_geometry
 from balanced_weights import run as check_balanced_weights
@@ -265,6 +269,10 @@ def main():
     print(json.dumps(verify_dyadic_identity_extension(root), indent=2))
     print(json.dumps(verify_operator_release(root), indent=2))
     print(json.dumps(verify_eta_release(root), indent=2))
+    print(json.dumps(verify_dyadic_commuting_patch(root), indent=2))
+    print(json.dumps(verify_rational_rotation_orbit(root), indent=2))
+    print(json.dumps(verify_rotation_offset_bound(root), indent=2))
+    print(json.dumps(verify_rotation_orbit_colorings(root), indent=2))
     print(json.dumps(dict(status='PASS', checks=list(result),
                           row_transitions=result['row_transitions'],
                           symmetry=result['symmetry']), indent=2))

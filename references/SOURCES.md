@@ -1,5 +1,46 @@
 # 外部资料与历史输入
 
+## 2026-09-26：本轮来源复核与非结论
+
+- Tara Abrishami、Louis Esperet、Ugo Giocanti、Matthias Hamann、Paul Knappe、
+  Rögnvaldur G. Möller，[Periodic colorings and orientations in infinite graphs,
+  2411.01951v2](https://arxiv.org/html/2411.01951v2#S5)，2024-11-27。
+  主代理读Theorem5.4及完整证明，子代理另读§5.1。
+  二端、连通、局部有限、拟传递图有最优周期染色；对应成熟语言，
+  不保证小周期。本项目原点有无限度，先化名单再用本地SFT证明，
+  不直接把整图套进原文假设。T127的具体五染另经完整独立证书证明。
+- Raphael M. Robinson，[Undecidability and Nonperiodicity for Tilings of the
+  Plane](https://lipn.univ-paris13.fr/~fernique/qc/robinson.pdf)，Inventiones
+  Mathematicae 12 (1971),177–209；
+  [出版页](https://link.springer.com/article/10.1007/BF01418780)。
+  子代理读§1及§3构造结尾，主代理读原PDF第186页§3开头的非周期
+  命题；未重新实现瓦片证明。仅作一般二维SFT不能保证周期点的
+  范围警告，不声称本项目单位图SFT通用、非周期或不可判定。
+  未修改原PDF缓存于`cache/robinson_1971.pdf`，SHA256
+  `9a97f3d21f6ba954610120cd1f36db2e0b0f30faa79b80d2ad7db89f6efc1fc7`。
+
+- Haugland，[A Moser-spindle-free 5-chromatic unit distance graph on
+  2131 vertices in the plane，2608.04542v4](https://arxiv.org/html/2608.04542v4)，
+  2026-08-17。主、子代理重读引言、构造与§4；仍报告普通5–7界，
+  没有给non-5或全平面≤6。接续重读引言发现原文明确引用Heule的
+  1441点spindle-free构造，不把2131当作该类别当前最小纪录。
+  原图SAT证书本轮未另行本地重放。
+- Maxim Didin、Vsevolod Voronov，[The chromatic number of Euclidean space
+  with dense color classes，2607.19946v1](https://arxiv.org/html/2607.19946v1)，
+  2026-07-22。主代理读HTML正文§§1–5及Theorem1/Claim2证明。
+  稠密色类≤12与普通≤6不是同一问题；本文不把其额外拓扑量词带回HN。
+- 对公开“χ=7”形式化声称，检查
+  [Hadwiger_Nelson_Final.lean固定源码](https://raw.githubusercontent.com/AEjonanonymous/Hadwiger-Nelson/b3366b52fe56d9ea55242b1b41cca5aab70b4f34/Hadwiger_Nelson_Final.lean)，
+  commit `b3366b52fe56d9ea55242b1b41cca5aab70b4f34`。
+  主代理读全部93行，未编译Lean。`coloring_collision`显式假设
+  `h_safe`，未证明它；[地图中的圆弧反例](LITERATURE_MAP.md#sep26)
+  直接否定所需无条件密度引理。因此不登记为外部HN突破，
+  也不把“有Lean文本”当作内核已验的正确终局命题。
+
+T125的Kronecker有限系数论证、有限程SFT有圈等价均在本地完整重证；
+本轮不借未读来源补足这些步骤。T126/E096以系数消元和独立证书为依据。
+文献搜索未发现已核实的新普通上下界，不声称穷尽所有在审／未公开工作。
+
 2026-09-12 T111 定向语言核对：
 [Stacks Project §10.9 Localization](https://stacks.math.columbia.edu/tag/00CM)，
 已读定义10.9.2、命题10.9.3及其证明、模版本10.9.6–7。
