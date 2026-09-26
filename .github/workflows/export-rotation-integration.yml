@@ -1,0 +1,33 @@
+name: Export frozen rotation integration sources
+on:
+  push:
+    branches: [research/rotation-integration-20260926]
+    paths: [.github/workflows/export-rotation-integration.yml]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Fetch exact public histories and export immutable evidence
+        run: |
+          git init sources
+          cd sources
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin ca2d4874781d3dd3520302f180014546031bc7e9 482b53020f36900ab2fcceff801ee2eb84893d94
+          git update-ref refs/heads/frozen-main ca2d4874781d3dd3520302f180014546031bc7e9
+          git update-ref refs/heads/frozen-rotation 482b53020f36900ab2fcceff801ee2eb84893d94
+          git bundle create "$RUNNER_TEMP/frozen-research.bundle" --branches
+          git archive --format=zip 482b53020f36900ab2fcceff801ee2eb84893d94 -o "$RUNNER_TEMP/rotation-source.zip"
+          sha256sum "$RUNNER_TEMP/frozen-research.bundle" "$RUNNER_TEMP/rotation-source.zip" > "$RUNNER_TEMP/source-sha256.txt"
+      - name: Preserve the exact sources
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: frozen-rotation-integration
+          path: |
+            ${{ runner.temp }}/frozen-research.bundle
+            ${{ runner.temp }}/rotation-source.zip
+            ${{ runner.temp }}/source-sha256.txt
+          retention-days: 7
+          if-no-files-found: error
