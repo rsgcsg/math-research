@@ -1,0 +1,37 @@
+{
+  "schema": "rotation-integration-provenance-v1",
+  "date": "2026-09-26",
+  "main_base": "ca2d4874781d3dd3520302f180014546031bc7e9",
+  "imported_commit": "482b53020f36900ab2fcceff801ee2eb84893d94",
+  "common_base": "efd931eeac7c04cff167eaca544cd96ab501b702",
+  "legacy_to_canonical": {
+    "T125": "T129",
+    "T126": "T135",
+    "T127": "T136",
+    "T128": "T137",
+    "E095": "E106",
+    "E096": "E107",
+    "E097": "E108",
+    "E098": "E109"
+  },
+  "duplicate_theorem": "Legacy T125 is an alternative proof of existing T129, not a new numbered result.",
+  "preserved_source_files": {
+    "certificates/dyadic_commuting_patch.json": "a746fa9cf3c4feddf919ca80055dbabdd6bc075442bc566203bf61ec4d4384d7",
+    "certificates/rational_rotation_orbit.json": "93ea9e43076d80195aad92d6a2790a267cc77bd988d6a89478aa0b2bb43a770a",
+    "certificates/rotation_orbit_colorings.json": "716c49299627bc279399820170dab11f3da4873f8aaf920d1bfedcf6016aa3d8",
+    "certificates/rotation_orbit_contacts.json": "909fbb3f4bb687537259044425a45993710a0f81a251a77de3939ea913c5da20",
+    "certificates/rotation_orbit_equalities.json": "f0dd38c932cbf89fcb618db9b4c55411202da7a08d4bda5dc7ffe203ff0a31de",
+    "research/dyadic_commuting_patch.py": "c7ad1d3d1b3eb3883f2a32bf682e2571bedb015e547878cda5ebabad92bdce8b",
+    "research/rational_rotation_orbit.py": "8048c18e5835f76eb30f73e04bd22557f2214770d5c3c50fdc5817b1d0db83f4",
+    "research/rotation_orbit_coloring.py": "b1609ebb0c9c61957ecf6701ec28e9c69415e0a2cd9a48aca3fc2535185d7245",
+    "research/rotation_orbit_contacts.py": "7e9912933cb8bc546b0046427cf665b0ca3c8703d39f1fa9bebf215b62e55711",
+    "research/rotation_orbit_equalities.py": "6433d1854a5a03c35d6a01871f13b5bf06876e9076c30614f52e47b7cb9e5160",
+    "research/verify_dyadic_commuting_patch.py": "ec0baf381945a35f60d0a76ea6e913cad76df0b45c62e0df94c71dffd9784f7d",
+    "research/verify_rational_rotation_orbit.py": "e4c5de7e4d884ccdf74cce69b96062202927c4f639b7647fd84ed57c0bd4c167",
+    "research/verify_rotation_offset_bound.py": "e71899be820ea6c28ec34695d7a2579bb46b6f6786dd311db2e36bbdbf7515ce",
+    "research/verify_rotation_orbit_colorings.py": "decf677b684ac1a9b12b2889cddefe352e9b8f2866170d729116af383ba55b42",
+    "research/verify_rotation_orbit_contacts.py": "5b25d9377b23383711e50069ee6ccd93525317c9abb79842900599af71cc158d",
+    "research/verify_rotation_orbit_equalities.py": "fa67edc53be221f30ecd2c018783dc5b11dd5eb0b6a22e7dbd2fa03439b860b7"
+  },
+  "scope": "Imported Python and JSON keep exact original bytes and local legacy IDs. New proof IDs use main namespace. No historical run or independent-agent claim is asserted as performed in this integration."
+}

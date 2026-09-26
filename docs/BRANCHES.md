@@ -1,5 +1,14 @@
 # 分支、历史归档与恢复
 
+## 2026-09-26 新分支对齐
+
+此前“只保留main”是2026-09-22清理快照，不是永远不允许新研究分支。
+新`research/rotation-rank2-20260926`从旧基准发展，来源头482b530…；本次整合到
+`research/rotation-integration-20260926`，保持main原有成果并解决编号冲突。
+它不是当年被删除的空`birank-rotation`分支的新增结果，不混写归档清单。
+本次新T138/E110解决来源Q011；真实发布/合并状态以新提交与PR为准，不能借用旧清理收据。
+
+
 2026-09-22。研究进度只看 [CURRENT](CURRENT.md)，分支不是待办事项清单。
 本页记录本次整理规则；最终执行状态、精确SHA与归档标签见 [branch_archive.json](branch_archive.json)。
 

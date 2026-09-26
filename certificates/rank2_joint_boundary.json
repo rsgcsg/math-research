@@ -1,0 +1,142 @@
+{
+  "schema": "rank2-joint-boundary-v1",
+  "input_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "motions": [
+    {
+      "motion": "tau",
+      "equal_partition": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "nu",
+      "equal_partition": false,
+      "pair_witness": [
+        4,
+        8,
+        22,
+        18
+      ]
+    },
+    {
+      "motion": "eta",
+      "equal_partition": true,
+      "pair_witness": null
+    },
+    {
+      "motion": "omega",
+      "equal_partition": false,
+      "pair_witness": [
+        4,
+        7,
+        9920,
+        8328
+      ]
+    },
+    {
+      "motion": "bar",
+      "equal_partition": false,
+      "pair_witness": [
+        31,
+        32,
+        8149,
+        38
+      ]
+    },
+    {
+      "motion": "bridge",
+      "equal_partition": false,
+      "pair_witness": [
+        32,
+        34,
+        9071,
+        9070
+      ]
+    },
+    {
+      "motion": "translation_one",
+      "equal_partition": false,
+      "pair_witness": [
+        32,
+        119,
+        876,
+        1718
+      ]
+    },
+    {
+      "motion": "translation_z",
+      "equal_partition": false,
+      "pair_witness": [
+        230,
+        236,
+        32,
+        38
+      ]
+    },
+    {
+      "motion": "one_plus_eta_1",
+      "equal_partition": false,
+      "pair_witness": [
+        231,
+        232,
+        5173,
+        5412
+      ]
+    },
+    {
+      "motion": "one_plus_eta_2",
+      "equal_partition": false,
+      "pair_witness": [
+        232,
+        3534,
+        231,
+        3504
+      ]
+    },
+    {
+      "motion": "one_plus_eta_3",
+      "equal_partition": false,
+      "pair_witness": [
+        232,
+        467,
+        7468,
+        8158
+      ]
+    },
+    {
+      "motion": "one_plus_eta_4",
+      "equal_partition": false,
+      "pair_witness": [
+        31,
+        37,
+        237,
+        240
+      ]
+    },
+    {
+      "motion": "bridge_shift",
+      "equal_partition": false,
+      "pair_witness": [
+        231,
+        3534,
+        3666,
+        8563
+      ]
+    },
+    {
+      "motion": "minus_bar",
+      "equal_partition": false,
+      "pair_witness": [
+        31,
+        32,
+        475,
+        9755
+      ]
+    },
+    {
+      "motion": "dyadic_u",
+      "equal_partition": true,
+      "pair_witness": null
+    }
+  ],
+  "scope": "Only the saved T138 coloring and its global group/palette shifts; not all colorings of the host or Y."
+}
