@@ -1,0 +1,127 @@
+name: Integrate and independently replay complete rank-two rotation result
+on:
+  push:
+    branches: [research/rotation-integration-20260926]
+    paths: [.github/workflows/rotation-integration-replay.yml]
+permissions:
+  contents: write
+jobs:
+  integrate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Fetch exact public histories without saved credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin "$SOURCE_SHA" 482b53020f36900ab2fcceff801ee2eb84893d94
+          git checkout --detach "$SOURCE_SHA"
+          git merge-base --is-ancestor ca2d4874781d3dd3520302f180014546031bc7e9 HEAD
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Restore lossless reviewed edits and preserve imported evidence bytes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,hashlib,json,lzma,os,shutil,subprocess
+          H=lambda x:hashlib.sha256(x).hexdigest()
+          raw=base64.b64decode(''.join(p.read_text() for p in sorted(Path('.research-rotation').glob('part*.b64'))))
+          assert H(raw)=='580555c0e32ca4efcf87815ca53c53a3e0ed370f1693ee4f18a3faae50f91d2d'
+          data=json.loads(lzma.decompress(raw));assert data['schema']=='rotation-integration-delta-v1'
+          assert data['base']=='ca2d4874781d3dd3520302f180014546031bc7e9'
+          assert data['imported']=='482b53020f36900ab2fcceff801ee2eb84893d94'
+          def target(name):
+              p=Path(name)
+              assert not p.is_absolute() and '..' not in p.parts and '.git' not in p.parts
+              assert p.parts[0] in {'research','certificates','docs','references','README.md','Makefile'}
+              return p
+          for item in data['imports']:
+              p=target(item['path']);assert not p.exists(),str(p)
+              content=subprocess.check_output(['git','show',data['imported']+':'+str(p)])
+              assert H(content)==item['sha256']
+              p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(content)
+          for item in data['changes']:
+              p=target(item['path']);old=p.read_bytes() if p.exists() else b''
+              assert H(old)==item['old_sha256'],str(p)
+              lines=old.decode().splitlines(True);end=0
+              for a,b,text in item['edits']:
+                  assert end<=a<=b<=len(lines);end=b
+              for a,b,text in reversed(item['edits']):lines[a:b]=text.splitlines(True)
+              new=''.join(lines).encode();assert H(new)==item['new_sha256'],str(p)
+              p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(new)
+          paths=[Path('Makefile'),Path('requirements-research.txt'),*sorted(Path('research').glob('*.py'))]
+          manifest={str(p):H(p.read_bytes()) for p in paths}
+          assert len(manifest)==244
+          assert H(json.dumps(manifest,sort_keys=True,separators=(',',':')).encode())==data['source_manifest_sha256']=='6f4debc921058294c024d65c5f89e84584e4c18a3b7fd13cf48c61034cf636cb'
+          Path(os.environ['RUNNER_TEMP'],'source-manifest.json').write_text(json.dumps(manifest,sort_keys=True,indent=2)+'\n')
+          shutil.rmtree('.research-rotation')
+          print('RESTORED',len(data['imports']),len(data['changes']))
+          PY
+      - name: Reconstruct the certificate using the saved positive word, without SAT
+        run: |
+          python research/build_rank2_rotation.py --progress > "$RUNNER_TEMP/rank2-rebuild.log"
+          echo 'fd7f8025dea2eb3b87e7e8901e659c9d2411d3d911881833e693b676d1c33f90  certificates/rank2_rotation_coloring.json.gz' | sha256sum -c -
+      - name: Replay the imported complete rotation evidence
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: |
+          set -o pipefail
+          make check-rotations 2>&1 | tee "$RUNNER_TEMP/imported-rotation-checks.log"
+      - name: Independent 16-dimensional rebuild, all fifteen domains, and mutation tests
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: python research/test_rank2_rotation.py > "$RUNNER_TEMP/rank2-tests.json"
+      - name: Record the exact checked sources and explicit validation scope
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,os,platform
+          H=lambda b:hashlib.sha256(b).hexdigest();tmp=Path(os.environ['RUNNER_TEMP'])
+          manifest=json.loads((tmp/'source-manifest.json').read_text())
+          assert all(H(Path(p).read_bytes())==h for p,h in manifest.items())
+          report=json.loads((tmp/'rank2-tests.json').read_text());assert report['status']=='PASS'
+          assert report['nonzero_orbits']==2082 and report['unit_contact_orbits']==11261
+          assert report['producer_rebuild']=='BYTE_IDENTICAL' and not report['joint_boundary']['full_joint_satisfied']
+          receipt=dict(schema='rotation-integration-validation-v1',date='2026-09-26',status='NEW_CHECKS_PASS',
+              main_base='ca2d4874781d3dd3520302f180014546031bc7e9',imported_commit='482b53020f36900ab2fcceff801ee2eb84893d94',
+              ci_run=os.environ['GITHUB_RUN_ID'],checked_trigger_commit=os.environ['GITHUB_SHA'],python=platform.python_version(),
+              source_file_count=len(manifest),source_manifest_sha256=H(json.dumps(manifest,sort_keys=True,separators=(',',':')).encode()),
+              source_unchanged=True,new_checks=report,
+              imported_checks=dict(command='make check-rotations',returncode=0,log_sha256=H((tmp/'imported-rotation-checks.log').read_bytes())),
+              log_sha256={p.name:H(p.read_bytes()) for p in [tmp/'rank2-rebuild.log',tmp/'rank2-tests.json']},
+              full_main_regression='Awaiting separate current-turn local record; this CI is not the old full repository regression.',
+              scope='Imported rotation checks plus new complete rank2 geometry, coloring, boundary and byte-identical rebuild. No new ordinary HN bound or general periodicity theorem.')
+          Path('certificates/rotation_integration_validation.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n')
+          PY
+      - name: Preserve both parents and publish only the integration branch
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add -A
+          git diff --cached --check
+          NEW="$(git commit-tree "$(git write-tree)" -p "$SOURCE_SHA" -p 482b53020f36900ab2fcceff801ee2eb84893d94 -m 'research: integrate canonical rotation results and certify complete rank-two host is five-colorable')"
+          AUTH="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          echo "::add-mask::$AUTH"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin "$NEW:refs/heads/research/rotation-integration-20260926"
+          git archive --format=zip "$NEW" -o "$RUNNER_TEMP/rotation-integrated-source.zip"
+          printf '%s\n' "$NEW" > "$RUNNER_TEMP/published-commit.txt"
+      - name: Export replay evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: rotation-integrated-source-and-evidence
+          path: |
+            ${{ runner.temp }}/rotation-integrated-source.zip
+            ${{ runner.temp }}/published-commit.txt
+            ${{ runner.temp }}/source-manifest.json
+            ${{ runner.temp }}/rank2-rebuild.log
+            ${{ runner.temp }}/rank2-tests.json
+            ${{ runner.temp }}/imported-rotation-checks.log
+          retention-days: 7
+          if-no-files-found: error
