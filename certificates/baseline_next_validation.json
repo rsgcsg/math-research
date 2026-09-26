@@ -1,0 +1,49 @@
+{
+  "schema": "hn-baseline-next-validation-v1",
+  "date": "2026-09-27",
+  "status": "BASELINE_PASS",
+  "checked_commit": "82a39606d926cc204a084761755db10a56c8dccc",
+  "checked_tree": "4107429efd0d5b6819ecd01fcdbfcf6fa0d74301",
+  "baseline_command": "make check",
+  "baseline": {
+    "status": "PASS",
+    "returncode": 0,
+    "started_utc": "2026-09-26T14:07:41.822883+00:00",
+    "completed_utc": "2026-09-26T14:45:38.980070+00:00",
+    "seconds": 2277.157359817,
+    "source_manifest_sha256": "16dd5bb317191526ad067771b73e02230bbf6749b8041612665a12798c0398fa",
+    "source_unchanged": true,
+    "log_sha256": "44285eb65075559ba582a56d7a7bc815d8aa6df422396b6fc6fa0f9586fb04a5"
+  },
+  "baseline_source_file_count": 244,
+  "baseline_entrypoints": [
+    "research/verify.py",
+    "check-salem",
+    "check-quartet",
+    "check-orbit",
+    "check-covers",
+    "check-frames",
+    "check-preparation",
+    "check-pricing",
+    "check-rotations",
+    "check-rank2"
+  ],
+  "baseline_runtime_outputs": [
+    {
+      "path": "certificates/dyadic_cyclic_orbit_validation.json",
+      "changed_runtime_fields": [
+        "elapsed_seconds"
+      ]
+    },
+    {
+      "path": "certificates/finite_frame_validation.json",
+      "changed_runtime_fields": [
+        "python"
+      ]
+    }
+  ],
+  "source_archive_sha256": "6967427db2ddcde86e50d0eba86727bacddae4f637d3ca9ffd9924a05893ad8d",
+  "source_manifest_rule": "SHA256 of compact sorted-key JSON for Makefile, requirements-research.txt and research/*.py",
+  "remote_write_performed": false,
+  "scope": "One complete inherited-source replay on frozen 82a396; not a claim about future additions or external theorem formalization."
+}
