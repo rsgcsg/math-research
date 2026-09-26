@@ -1,0 +1,1349 @@
+{
+  "schema": 1,
+  "experiment": "E096",
+  "source_sha256": "5cb34790d1cb6c20afee3970fed21ad2b4939b99977b6218da7d53f50be5caaf",
+  "rotation": {
+    "real": "3/5",
+    "imaginary": "4/5",
+    "gaussian_prime": [
+      2,
+      1
+    ],
+    "valuation_of_rotation": 1
+  },
+  "seed_count": 9,
+  "all_ordered_pairs": 81,
+  "contacts": [
+    {
+      "pair": [
+        0,
+        0
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ],
+      "equality_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ]
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        },
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        0,
+        8
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        1,
+        0
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ]
+    },
+    {
+      "pair": [
+        1,
+        1
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ],
+      "equality_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ]
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        },
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        1,
+        4
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        1,
+        5
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        1,
+        6
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        1,
+        7
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        1,
+        8
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        2,
+        0
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        2,
+        1
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        2,
+        2
+      ],
+      "unit_angles": [],
+      "equality_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ]
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        2,
+        8
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        3,
+        0
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        },
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        3,
+        1
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        },
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        3,
+        2
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        3,
+        3
+      ],
+      "unit_angles": [],
+      "equality_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ]
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        3,
+        5
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        3,
+        6
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        3,
+        7
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        3,
+        8
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        4,
+        0
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        4,
+        1
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        4,
+        2
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        4,
+        3
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        4,
+        4
+      ],
+      "unit_angles": [],
+      "equality_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ]
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        4,
+        6
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        4,
+        7
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        4,
+        8
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        5,
+        0
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        5,
+        1
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        5,
+        2
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        5,
+        3
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        5,
+        4
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        5,
+        5
+      ],
+      "unit_angles": [],
+      "equality_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ]
+    },
+    {
+      "pair": [
+        5,
+        6
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        5,
+        7
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        5,
+        8
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        6,
+        0
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        6,
+        1
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        6,
+        2
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        6,
+        3
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        6,
+        4
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        6,
+        5
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        6,
+        6
+      ],
+      "unit_angles": [],
+      "equality_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ]
+    },
+    {
+      "pair": [
+        6,
+        7
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        6,
+        8
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        7,
+        0
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        7,
+        1
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        7,
+        2
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        7,
+        3
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        7,
+        4
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        7,
+        5
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        7,
+        6
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        7,
+        7
+      ],
+      "unit_angles": [],
+      "equality_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ]
+    },
+    {
+      "pair": [
+        7,
+        8
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        8,
+        0
+      ],
+      "unit_angles": [
+        {
+          "c": "-1",
+          "s": "0",
+          "exponent": null
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        8,
+        1
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        8,
+        2
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        8,
+        3
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        8,
+        4
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        8,
+        5
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        8,
+        6
+      ],
+      "unit_angles": [],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        8,
+        7
+      ],
+      "unit_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ],
+      "equality_angles": []
+    },
+    {
+      "pair": [
+        8,
+        8
+      ],
+      "unit_angles": [],
+      "equality_angles": [
+        {
+          "c": "1",
+          "s": "0",
+          "exponent": 0
+        }
+      ]
+    }
+  ],
+  "unit_offsets": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      5,
+      0
+    ],
+    [
+      0,
+      6,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      3,
+      0
+    ],
+    [
+      1,
+      7,
+      0
+    ],
+    [
+      1,
+      8,
+      0
+    ],
+    [
+      2,
+      4,
+      0
+    ],
+    [
+      2,
+      5,
+      0
+    ],
+    [
+      2,
+      6,
+      0
+    ],
+    [
+      2,
+      7,
+      0
+    ],
+    [
+      2,
+      8,
+      0
+    ],
+    [
+      3,
+      0,
+      0
+    ],
+    [
+      3,
+      1,
+      0
+    ],
+    [
+      3,
+      4,
+      0
+    ],
+    [
+      4,
+      2,
+      0
+    ],
+    [
+      4,
+      3,
+      0
+    ],
+    [
+      5,
+      0,
+      0
+    ],
+    [
+      5,
+      2,
+      0
+    ],
+    [
+      5,
+      6,
+      0
+    ],
+    [
+      6,
+      0,
+      0
+    ],
+    [
+      6,
+      2,
+      0
+    ],
+    [
+      6,
+      5,
+      0
+    ],
+    [
+      7,
+      1,
+      0
+    ],
+    [
+      7,
+      2,
+      0
+    ],
+    [
+      7,
+      8,
+      0
+    ],
+    [
+      8,
+      1,
+      0
+    ],
+    [
+      8,
+      2,
+      0
+    ],
+    [
+      8,
+      7,
+      0
+    ]
+  ],
+  "equality_offsets": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      2,
+      2,
+      0
+    ],
+    [
+      3,
+      3,
+      0
+    ],
+    [
+      4,
+      4,
+      0
+    ],
+    [
+      5,
+      5,
+      0
+    ],
+    [
+      6,
+      6,
+      0
+    ],
+    [
+      7,
+      7,
+      0
+    ],
+    [
+      8,
+      8,
+      0
+    ]
+  ],
+  "periodic_certificate": {
+    "period": 1,
+    "colors": 4,
+    "word": [
+      0,
+      1,
+      0,
+      2,
+      1,
+      1,
+      2,
+      2,
+      3
+    ]
+  },
+  "rational_rotation_saturation": {
+    "block": "S union -S",
+    "vertices": 16,
+    "all_pairs": 120,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        15
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        15
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        8,
+        14
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        15
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        11,
+        15
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        13,
+        15
+      ],
+      [
+        14,
+        15
+      ]
+    ],
+    "colors": 4,
+    "word": [
+      0,
+      1,
+      1,
+      2,
+      2,
+      1,
+      2,
+      0,
+      0,
+      2,
+      1,
+      2,
+      2,
+      3,
+      3,
+      1
+    ]
+  },
+  "scope": "All integer powers, not a finite exponent scan. Exact chi=4 also for all rational norm-one rotations, only if the independent complete-angle and antipodal-block checks pass; no coloring of the whole coordinate field or HN bound."
+}

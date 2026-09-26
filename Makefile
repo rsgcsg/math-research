@@ -1,4 +1,4 @@
-.PHONY: check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing setup explore
+.PHONY: check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 setup explore
 
 check:
 	python3 research/verify.py
@@ -9,6 +9,8 @@ check:
 	$(MAKE) check-frames
 	$(MAKE) check-preparation
 	$(MAKE) check-pricing
+	$(MAKE) check-rotations
+	$(MAKE) check-rank2
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -39,3 +41,11 @@ explore:
 
 check-pricing:
 	python3 research/test_full_law_pricing.py
+
+check-rotations:
+	python3 research/verify_dyadic_commuting_patch.py --mutations
+	python3 research/verify_rational_rotation_orbit.py --mutations
+	python3 research/verify_rotation_orbit_colorings.py --mutation-tests
+
+check-rank2:
+	python3 research/test_rank2_rotation.py

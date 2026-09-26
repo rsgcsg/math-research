@@ -1,0 +1,280 @@
+{
+  "schema": "rotation-integration-validation-v1",
+  "date": "2026-09-26",
+  "status": "NEW_CHECKS_PASS",
+  "main_base": "ca2d4874781d3dd3520302f180014546031bc7e9",
+  "imported_commit": "482b53020f36900ab2fcceff801ee2eb84893d94",
+  "ci_run": "36245243086",
+  "checked_trigger_commit": "8c249afeaa0e01e486f1de3ff410860a50dddec0",
+  "python": "3.13.5",
+  "source_file_count": 244,
+  "source_manifest_sha256": "16dd5bb317191526ad067771b73e02230bbf6749b8041612665a12798c0398fa",
+  "source_unchanged": true,
+  "new_checks": {
+    "status": "PASS",
+    "canonical_result": "T138/E110",
+    "nonzero_orbits": 2082,
+    "unit_contact_orbits": 11261,
+    "origin_neighbor_orbits": 30,
+    "self_contacts": [
+      [
+        464,
+        464,
+        0,
+        -2,
+        0
+      ],
+      [
+        699,
+        699,
+        0,
+        -2,
+        0
+      ],
+      [
+        1969,
+        1969,
+        0,
+        -2,
+        0
+      ]
+    ],
+    "certified_upper_bound": 5,
+    "minimal_positive_u_label_period": 3,
+    "eta_and_tau_label_invariant": true,
+    "lower_bound_source": "Y contains the separately certified Parts509 graph",
+    "independent_rebuild": {
+      "bounds": {
+        "u": {
+          "types": 17,
+          "unit_bound": 9,
+          "equality_bound": 6,
+          "rows_sha256": "1b2d008b0799760e15f6f87651cb0c0ca073f9866e7c602c2f3b2341e5204d51"
+        },
+        "tau": {
+          "types": 17,
+          "unit_bound": 4,
+          "equality_bound": 2,
+          "rows_sha256": "3bafba7ce838135f01a5ce3ff8076138df6b254dde67764a85c86b065df6d1c0"
+        }
+      },
+      "primes": [
+        300151,
+        500041
+      ],
+      "algebra_dimension": 16,
+      "unordered_representative_pairs": 2168403,
+      "exact_contact_checks": 11261,
+      "degenerate_polynomials": 0,
+      "nonzero_returns": 81410,
+      "source_edge_checks": 49858
+    },
+    "mutation_rejections": [
+      "bad_color",
+      "boolean_edge_index",
+      "boolean_palette",
+      "constant_coloring",
+      "float_palette",
+      "identity_u",
+      "missing_origin_neighbor",
+      "removed_edge",
+      "short_coloring",
+      "wrong_contact_hash",
+      "wrong_gain",
+      "wrong_origin",
+      "wrong_point_coordinate",
+      "wrong_returns",
+      "wrong_source",
+      "duplicate_keys",
+      "optimized_mode"
+    ],
+    "seconds": 75.914,
+    "scope": "Entire induced <eta,u,tau>Y orbit graph, not the fifteen-domain full joint or the plane.",
+    "joint_boundary": {
+      "status": "PASS",
+      "motions": [
+        {
+          "motion": "tau",
+          "domain_size": 5084,
+          "equal_partition": true,
+          "pair_witness": null
+        },
+        {
+          "motion": "nu",
+          "domain_size": 556,
+          "equal_partition": false,
+          "pair_witness": [
+            4,
+            8,
+            22,
+            18
+          ]
+        },
+        {
+          "motion": "eta",
+          "domain_size": 5289,
+          "equal_partition": true,
+          "pair_witness": null
+        },
+        {
+          "motion": "omega",
+          "domain_size": 4671,
+          "equal_partition": false,
+          "pair_witness": [
+            4,
+            7,
+            9920,
+            8328
+          ]
+        },
+        {
+          "motion": "bar",
+          "domain_size": 1895,
+          "equal_partition": false,
+          "pair_witness": [
+            31,
+            32,
+            8149,
+            38
+          ]
+        },
+        {
+          "motion": "bridge",
+          "domain_size": 513,
+          "equal_partition": false,
+          "pair_witness": [
+            32,
+            34,
+            9071,
+            9070
+          ]
+        },
+        {
+          "motion": "translation_one",
+          "domain_size": 333,
+          "equal_partition": false,
+          "pair_witness": [
+            32,
+            119,
+            876,
+            1718
+          ]
+        },
+        {
+          "motion": "translation_z",
+          "domain_size": 200,
+          "equal_partition": false,
+          "pair_witness": [
+            230,
+            236,
+            32,
+            38
+          ]
+        },
+        {
+          "motion": "one_plus_eta_1",
+          "domain_size": 573,
+          "equal_partition": false,
+          "pair_witness": [
+            231,
+            232,
+            5173,
+            5412
+          ]
+        },
+        {
+          "motion": "one_plus_eta_2",
+          "domain_size": 513,
+          "equal_partition": false,
+          "pair_witness": [
+            232,
+            3534,
+            231,
+            3504
+          ]
+        },
+        {
+          "motion": "one_plus_eta_3",
+          "domain_size": 513,
+          "equal_partition": false,
+          "pair_witness": [
+            232,
+            467,
+            7468,
+            8158
+          ]
+        },
+        {
+          "motion": "one_plus_eta_4",
+          "domain_size": 512,
+          "equal_partition": false,
+          "pair_witness": [
+            31,
+            37,
+            237,
+            240
+          ]
+        },
+        {
+          "motion": "bridge_shift",
+          "domain_size": 511,
+          "equal_partition": false,
+          "pair_witness": [
+            231,
+            3534,
+            3666,
+            8563
+          ]
+        },
+        {
+          "motion": "minus_bar",
+          "domain_size": 1866,
+          "equal_partition": false,
+          "pair_witness": [
+            31,
+            32,
+            475,
+            9755
+          ]
+        },
+        {
+          "motion": "dyadic_u",
+          "domain_size": 29,
+          "equal_partition": true,
+          "pair_witness": null
+        }
+      ],
+      "source_edge_checks": 49858,
+      "full_joint_satisfied": false,
+      "scope": "Saved infinite coloring and its global group/palette shifts only; not all proper colorings."
+    },
+    "boundary_mutation_rejections": [
+      "boolean_truth",
+      "false_negative",
+      "false_positive",
+      "missing_motion",
+      "wrong_input",
+      "wrong_map",
+      "optimized_mode"
+    ],
+    "producer_rebuild": "BYTE_IDENTICAL",
+    "certificate_sha256": "fd7f8025dea2eb3b87e7e8901e659c9d2411d3d911881833e693b676d1c33f90"
+  },
+  "stdlib_isolation": "python -S for reconstruction and independent tests",
+  "repaired_attempt": {
+    "run": 36244895864,
+    "cause": "Indirect NumPy import in the new reconstruction wrapper; no mathematical assertion failed.",
+    "repair": "Use the existing standard-library split-map helper; source fingerprints changed and complete new checks rerun."
+  },
+  "imported_checks": {
+    "command": "make check-rotations",
+    "returncode": 0,
+    "log_sha256": "99599d1062ff8aabe11391204d53d03f7f2fa3430c05dd17c743f7403fa7cd3d"
+  },
+  "log_sha256": {
+    "rank2-rebuild.log": "e4b5130a68a083b7e3562aeeb2482377ddd6e0e985ae6a42e302c2b80e677d91",
+    "rank2-tests.json": "e89469d404dc762b315b7d2c8e69c66e6cacdac4dc85e9e206bc9cf6bde24ca1"
+  },
+  "full_main_regression": "Awaiting separate current-turn local record; this CI is not the old full repository regression.",
+  "scope": "Imported rotation checks plus new complete rank2 geometry, coloring, boundary and byte-identical rebuild. No new ordinary HN bound or general periodicity theorem."
+}
