@@ -1,0 +1,36 @@
+{
+  "schema": "hn-cyclic-translate-remote-replay-v1",
+  "status": "PASS",
+  "date": "2026-09-28",
+  "started_utc": "2026-09-27T15:50:00.598372+00:00",
+  "completed_utc": "2026-09-27T15:50:55.909503+00:00",
+  "python": "3.13.5",
+  "run_id": "36330980735",
+  "transport_commit": "50866eabd271e238f665a7893c50e95ed38fca5a",
+  "reviewed_research_tree": "ad5fd3f24eb084c440f836c690586b81e88169b6",
+  "source_manifest_sha256": "a99b88c8ce687423b344a39f8f7c903866f7553181f80d15058be4916b980bc7",
+  "source_file_count": 259,
+  "research_sources_unchanged": true,
+  "commands": [
+    {
+      "command": [
+        "make",
+        "check-cyclic-translates"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 53.36,
+      "log_sha256": "038ba945e9b05fc61878b05979ce2191fe85b488bf80faed0abf3994c6007500"
+    },
+    {
+      "command": [
+        "python3",
+        "-S",
+        "/home/runner/work/_temp/moser-kernel-replay.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.925,
+      "log_sha256": "537ed717f58bc1aaef06950c1ecad8f43fa1ec0a2aff429d1ba93df09e58f4d4"
+    }
+  ],
+  "scope": "Actual remote targeted independent replay and separately executed Moser-kernel documentation calibration. Not a full make check; the local full regression is recorded separately. T140 concerns a finite-valued single-generator subclass; E112 does not give an HN bound or a full fifteen-domain law."
+}

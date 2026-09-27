@@ -1,0 +1,905 @@
+{
+  "schema": "cyclic-translate-research-v1",
+  "experiment": "E112",
+  "base_commit": "ed4cfb044164b5d88413a2d53c7e030274d04bb8",
+  "geometry": {
+    "vertices": 10077,
+    "actual_pairs": 50767926,
+    "induced_edges": 49858,
+    "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+    "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+    "overlap": 91,
+    "new_cross_edges": 170
+  },
+  "u": [
+    "1/2",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "-3/2",
+    "-3/2",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "valuation_u": -1,
+  "cases": [
+    {
+      "source_indices": [
+        233,
+        239
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 13,
+        "tested_parameters": 33,
+        "root_degree_budget": 38
+      }
+    },
+    {
+      "source_indices": [
+        233,
+        239
+      ],
+      "kind": "forced_one_contact",
+      "power": 1,
+      "translation": [
+        "-1",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            1,
+            0
+          ]
+        ],
+        "tested_lines": 15,
+        "tested_parameters": 39,
+        "root_degree_budget": 42
+      }
+    },
+    {
+      "source_indices": [
+        5557,
+        238
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 13,
+        "tested_parameters": 33,
+        "root_degree_budget": 38
+      }
+    },
+    {
+      "source_indices": [
+        5557,
+        238
+      ],
+      "kind": "forced_one_contact",
+      "power": 2,
+      "translation": [
+        "-1",
+        "7/4",
+        "7/4",
+        "7/4",
+        "0",
+        "9/4",
+        "7/2",
+        "9/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            2,
+            0
+          ]
+        ],
+        "tested_lines": 15,
+        "tested_parameters": 42,
+        "root_degree_budget": 42
+      }
+    },
+    {
+      "source_indices": [
+        31,
+        193
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 12,
+        "tested_parameters": 24,
+        "root_degree_budget": 30
+      }
+    },
+    {
+      "source_indices": [
+        31,
+        193
+      ],
+      "kind": "forced_one_contact",
+      "power": 7,
+      "translation": [
+        "-1",
+        "39/128",
+        "-357/128",
+        "39/128",
+        "0",
+        "117/128",
+        "33/64",
+        "117/128",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "-3",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            7,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 21,
+        "root_degree_budget": 34
+      }
+    },
+    {
+      "source_indices": [
+        32,
+        36
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 12,
+        "tested_parameters": 38,
+        "root_degree_budget": 30
+      }
+    },
+    {
+      "source_indices": [
+        32,
+        36
+      ],
+      "kind": "forced_one_contact",
+      "power": 37,
+      "translation": [
+        "34593899/34359738368",
+        "0",
+        "-212311208049/137438953472",
+        "-212311208049/137438953472",
+        "-212172832453/137438953472",
+        "0",
+        "-636933624147/137438953472",
+        "-636933624147/137438953472",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            37,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 26,
+        "root_degree_budget": 34
+      }
+    },
+    {
+      "source_indices": [
+        0,
+        2
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 12,
+        "tested_parameters": 26,
+        "root_degree_budget": 30
+      }
+    },
+    {
+      "source_indices": [
+        0,
+        2
+      ],
+      "kind": "forced_one_contact",
+      "power": 1,
+      "translation": [
+        "-1",
+        "7/5",
+        "-3",
+        "7/5",
+        "0",
+        "9",
+        "24/5",
+        "9",
+        "0",
+        "3/10",
+        "3/2",
+        "3/10",
+        "0",
+        "-9/2",
+        "-27/5",
+        "-9/2"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            1,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 24,
+        "root_degree_budget": 34
+      }
+    },
+    {
+      "source_indices": [
+        119,
+        161
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 12,
+        "tested_parameters": 32,
+        "root_degree_budget": 34
+      }
+    },
+    {
+      "source_indices": [
+        119,
+        161
+      ],
+      "kind": "forced_one_contact",
+      "power": 2,
+      "translation": [
+        "7/3",
+        "0",
+        "1/4",
+        "1/4",
+        "1/4",
+        "0",
+        "3/4",
+        "3/4",
+        "-11/4",
+        "0",
+        "-3/2",
+        "-3/2",
+        "3/2",
+        "0",
+        "-9/4",
+        "-9/4"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            2,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 35,
+        "root_degree_budget": 34
+      }
+    },
+    {
+      "source_indices": [
+        230,
+        232
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 12,
+        "tested_parameters": 25,
+        "root_degree_budget": 32
+      }
+    },
+    {
+      "source_indices": [
+        230,
+        232
+      ],
+      "kind": "forced_one_contact",
+      "power": 7,
+      "translation": [
+        "33/16",
+        "0",
+        "13/64",
+        "13/64",
+        "145/64",
+        "0",
+        "39/64",
+        "39/64",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [
+          [
+            1,
+            0,
+            7
+          ]
+        ],
+        "points": [],
+        "tested_lines": 18,
+        "tested_parameters": 45,
+        "root_degree_budget": 44
+      }
+    },
+    {
+      "source_indices": [
+        467,
+        468
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 12,
+        "tested_parameters": 25,
+        "root_degree_budget": 34
+      }
+    },
+    {
+      "source_indices": [
+        467,
+        468
+      ],
+      "kind": "forced_one_contact",
+      "power": 37,
+      "translation": [
+        "-43715933345/68719476736",
+        "358092240905/274877906944",
+        "358092240905/274877906944",
+        "25003543391/68719476736",
+        "-982697614609/274877906944",
+        "-104231706293/137438953472",
+        "-104231706293/137438953472",
+        "-982697614609/274877906944",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            37,
+            0
+          ]
+        ],
+        "tested_lines": 17,
+        "tested_parameters": 65,
+        "root_degree_budget": 46
+      }
+    },
+    {
+      "source_indices": [
+        3533,
+        3535
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 12,
+        "tested_parameters": 38,
+        "root_degree_budget": 30
+      }
+    },
+    {
+      "source_indices": [
+        3533,
+        3535
+      ],
+      "kind": "forced_one_contact",
+      "power": 1,
+      "translation": [
+        "-3/2",
+        "2",
+        "-1/2",
+        "0",
+        "-3",
+        "1/2",
+        "-3",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            1,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 24,
+        "root_degree_budget": 34
+      }
+    },
+    {
+      "source_indices": [
+        4,
+        5
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 18,
+        "tested_parameters": 52,
+        "root_degree_budget": 46
+      }
+    },
+    {
+      "source_indices": [
+        4,
+        5
+      ],
+      "kind": "forced_one_contact",
+      "power": 2,
+      "translation": [
+        "-1",
+        "-11/10",
+        "-22/5",
+        "-11/10",
+        "-22/5",
+        "0",
+        "-77/10",
+        "0",
+        "0",
+        "3/10",
+        "6/5",
+        "3/10",
+        "6/5",
+        "0",
+        "21/10",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            2,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 29,
+        "root_degree_budget": 34
+      }
+    },
+    {
+      "source_indices": [
+        31,
+        118
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 12,
+        "tested_parameters": 29,
+        "root_degree_budget": 34
+      }
+    },
+    {
+      "source_indices": [
+        31,
+        118
+      ],
+      "kind": "forced_one_contact",
+      "power": 7,
+      "translation": [
+        "-1",
+        "39/128",
+        "-229/128",
+        "39/128",
+        "0",
+        "117/128",
+        "-31/64",
+        "117/128",
+        "0",
+        "0",
+        "-3",
+        "0",
+        "0",
+        "0",
+        "-3",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            7,
+            0
+          ]
+        ],
+        "tested_lines": 15,
+        "tested_parameters": 45,
+        "root_degree_budget": 42
+      }
+    },
+    {
+      "source_indices": [
+        232,
+        900
+      ],
+      "kind": "unit_translation",
+      "translation": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [],
+        "tested_lines": 12,
+        "tested_parameters": 26,
+        "root_degree_budget": 30
+      }
+    },
+    {
+      "source_indices": [
+        232,
+        900
+      ],
+      "kind": "forced_one_contact",
+      "power": 37,
+      "translation": [
+        "-20763315901/137438953472",
+        "1",
+        "1",
+        "1",
+        "-34325144469/34359738368",
+        "0",
+        "-212311208049/137438953472",
+        "-212311208049/137438953472",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "result": {
+        "all_integer_pairs": false,
+        "lines": [],
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            37,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 21,
+        "root_degree_budget": 34
+      }
+    }
+  ],
+  "scope": "Complete translated cyclic contacts for twelve selected actual Y seed pairs, each at two specified translations; not all Y pairs, not rank-two H-prime, and not a coloring obstruction."
+}

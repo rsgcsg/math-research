@@ -5,6 +5,16 @@
 [统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md) ·
 [分支与恢复](docs/BRANCHES.md)。
 
+## 2026-09-28：T140/E112，单旋转平移的有效有限化
+
+[T140完整证明与校准](docs/proofs/cyclic_translate_effective.md)把T139的一个严格循环子类从
+“例外有限”推进到完整可执行枚举：一个有效有限赋值ν(u)≠0时，每对非零平移轨道至多三类无限族及54个例外。
+有限多个平移单u轨道的k染色可有效化为有限实例；不同中心且无无限接触族时，k≥3直接检查有限接触核。
+E112已完整重建24个实际Y轨道对，并验证一个七轨道无限图恰等于Moser核加孤立点、色数4。
+**不是H′双自由旋转的一般平移算法，也不是普通HN新界。**
+`make check-cyclic-translates`重放新主入口；状态与范围以[CURRENT](docs/CURRENT.md)及验证收据为准。
+
+
 ## 2026-09-27：成果已入主线，分支与文档收尾
 
 PR #5已合并为 `4a11fe3f4a957b166fd8f340d950a2a9563a5cec`。

@@ -612,3 +612,17 @@ Annals of Mathematics 155 (2002), 807–836，https://arxiv.org/abs/math/0409604
 LRAT参照：https://arxiv.org/abs/1612.02353v2 。本轮读取作者摘要；
 新通道仅认证positive-hinted RUP，保留一般RAT不支持与资源超限的明确状态。
 Haugland作者页/v2引言、de Grey作者页本轮再次复核，不扩大为外部构造全部计算重放。
+
+
+## 2026-09-28：T140 的热带最小值语言与本地证明范围
+
+Diane Maclagan, *Polyhedral structures on tropical varieties*, arXiv:1302.5372v1（2013）。
+[作者页](https://arxiv.org/abs/1302.5372)、[PDF](https://arxiv.org/pdf/1302.5372)。
+本轮实际读取PDF第1–2页：Definition1.1、Definition1.3及Remark1.7，核对最小值至少二次达到的判据；
+第1页亦截图检查。它解释T140第一层有限直线覆盖的成熟语言。
+本地只用非阿基米德三角不等式自足证明必要条件，不套用需要代数闭包的Theorem1.2作充分性，
+也不宣称重放了该文后续全部证明。单底数ν(u)≠0才使第二层筛选成为有限算法。
+
+T140的有限缺陷条带/有限颜色核均附本地完整证明；一般思想不主张原创优先权。
+本轮重开Haugland v2 HTML引言与de Grey作者页，普通5/7界没有变化。
+广泛检索所得三维六色、分数指标和未认证仓库声明没有作为二维HN新界使用。

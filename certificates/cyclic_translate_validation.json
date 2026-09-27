@@ -1,0 +1,508 @@
+{
+  "schema": "cyclic-translates-validation-v1",
+  "research_date": "2026-09-28",
+  "base_commit": "ed4cfb044164b5d88413a2d53c7e030274d04bb8",
+  "status": "TARGETED_PASS_FULL_REGRESSION_RUNNING",
+  "source_file_count": 259,
+  "source_manifest_sha256": "a99b88c8ce687423b344a39f8f7c903866f7553181f80d15058be4916b980bc7",
+  "targeted": {
+    "schema": "cyclic-translates-targeted-replay-v1",
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "make",
+          "check-cyclic-translates"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 36.956,
+        "log_sha256": "038ba945e9b05fc61878b05979ce2191fe85b488bf80faed0abf3994c6007500"
+      },
+      {
+        "command": [
+          "python3",
+          "-S",
+          "research/build_cyclic_translate_research.py",
+          "--output",
+          "/mnt/data/hn-research-20260928/verification/cyclic_translate_rebuilt.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 33.648,
+        "log_sha256": "cf795ce998d4fa51b44d31bef163807c1a1e06fb8f01cc74c97f19d62055bb17"
+      },
+      {
+        "command": [
+          "python3",
+          "-S",
+          "/mnt/data/hn-research-20260928/verification/replay-moser-kernel.py"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 1.307,
+        "log_sha256": "537ed717f58bc1aaef06950c1ecad8f43fa1ec0a2aff429d1ba93df09e58f4d4"
+      }
+    ],
+    "deterministic_actual_certificate_sha256": "d69caf5b4942c0ff824cc4955c71d85f664d5de642ba57999ee999e18a5a9e87",
+    "moser_certificate_sha256": "8a00a87e47bdba0acec8b12398c0bc437e5a2eb7b346a33e4adbe0743777f3cb",
+    "moser_code_sha256": "30d6d97e5c4abb6a77eeb2348ac0fd8b0c6e722d06af402cf4dcd5664d9ad0c0",
+    "moser_optimized_mode_rejected": true,
+    "scope": "New Makefile target plus separately run producer reconstruction and embedded Moser-kernel calibration. Not a new ordinary HN bound; full regression status separately recorded."
+  },
+  "gaussian_calibration": {
+    "status": "PASS",
+    "finite_automaton_graph_checks": 530,
+    "case_count": 216,
+    "brute_force_point_checks": 17496,
+    "nonzero_test_values": 48,
+    "valuation_multiplicativity_checks": 2304,
+    "maximum_actual_exceptional_contacts": 2,
+    "cases_with_infinite_families": 35,
+    "complete_case_table_sha256": "dda9671210306dea8e31f5ba16ae9973b4cb8596c64aa8cbd6f310a1bb13ba54",
+    "late_contacts": [
+      {
+        "N": 1,
+        "points": [
+          [
+            1,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 21
+      },
+      {
+        "N": 7,
+        "points": [
+          [
+            7,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 21
+      },
+      {
+        "N": 31,
+        "points": [
+          [
+            31,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 21
+      },
+      {
+        "N": 101,
+        "points": [
+          [
+            101,
+            0
+          ]
+        ],
+        "tested_lines": 12,
+        "tested_parameters": 21
+      }
+    ],
+    "degree_bound": 54,
+    "directions": [
+      {
+        "normal": [
+          0,
+          1
+        ],
+        "pairs": 5,
+        "degree": 2
+      },
+      {
+        "normal": [
+          1,
+          -2
+        ],
+        "pairs": 2,
+        "degree": 4
+      },
+      {
+        "normal": [
+          1,
+          -1
+        ],
+        "pairs": 5,
+        "degree": 2
+      },
+      {
+        "normal": [
+          1,
+          0
+        ],
+        "pairs": 5,
+        "degree": 2
+      },
+      {
+        "normal": [
+          1,
+          1
+        ],
+        "pairs": 2,
+        "degree": 4
+      },
+      {
+        "normal": [
+          2,
+          -1
+        ],
+        "pairs": 2,
+        "degree": 4
+      }
+    ],
+    "rejected_inputs": [
+      "zero-translation",
+      "zero-radius",
+      "nonunit-rotation",
+      "invisible-base",
+      "boolean-exponent",
+      "boolean-valuation"
+    ],
+    "scope": "Exact Q(i) finite calibration and complete symbolic output from the proved cyclic algorithm; not an HN coloring obstruction.",
+    "optimized_mode_rejected": true
+  },
+  "actual_contacts": {
+    "status": "PASS",
+    "geometry": {
+      "vertices": 10077,
+      "actual_pairs": 50767926,
+      "induced_edges": 49858,
+      "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+      "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+      "overlap": 91,
+      "new_cross_edges": 170
+    },
+    "cases": [
+      {
+        "source_indices": [
+          233,
+          239
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 33
+      },
+      {
+        "source_indices": [
+          233,
+          239
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            1,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 39
+      },
+      {
+        "source_indices": [
+          5557,
+          238
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 33
+      },
+      {
+        "source_indices": [
+          5557,
+          238
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            2,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 42
+      },
+      {
+        "source_indices": [
+          31,
+          193
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 24
+      },
+      {
+        "source_indices": [
+          31,
+          193
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            7,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 21
+      },
+      {
+        "source_indices": [
+          32,
+          36
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 38
+      },
+      {
+        "source_indices": [
+          32,
+          36
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            37,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 26
+      },
+      {
+        "source_indices": [
+          0,
+          2
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 26
+      },
+      {
+        "source_indices": [
+          0,
+          2
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            1,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 24
+      },
+      {
+        "source_indices": [
+          119,
+          161
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 32
+      },
+      {
+        "source_indices": [
+          119,
+          161
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            2,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 35
+      },
+      {
+        "source_indices": [
+          230,
+          232
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 25
+      },
+      {
+        "source_indices": [
+          230,
+          232
+        ],
+        "kind": "forced_one_contact",
+        "points": [],
+        "lines": [
+          [
+            1,
+            0,
+            7
+          ]
+        ],
+        "independent_parameter_checks": 45
+      },
+      {
+        "source_indices": [
+          467,
+          468
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 25
+      },
+      {
+        "source_indices": [
+          467,
+          468
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            37,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 65
+      },
+      {
+        "source_indices": [
+          3533,
+          3535
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 38
+      },
+      {
+        "source_indices": [
+          3533,
+          3535
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            1,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 24
+      },
+      {
+        "source_indices": [
+          4,
+          5
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 52
+      },
+      {
+        "source_indices": [
+          4,
+          5
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            2,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 29
+      },
+      {
+        "source_indices": [
+          31,
+          118
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 29
+      },
+      {
+        "source_indices": [
+          31,
+          118
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            7,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 45
+      },
+      {
+        "source_indices": [
+          232,
+          900
+        ],
+        "kind": "unit_translation",
+        "points": [],
+        "lines": [],
+        "independent_parameter_checks": 26
+      },
+      {
+        "source_indices": [
+          232,
+          900
+        ],
+        "kind": "forced_one_contact",
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            37,
+            0
+          ]
+        ],
+        "lines": [],
+        "independent_parameter_checks": 21
+      }
+    ],
+    "checked_cases": 24,
+    "unit_translation_empty": 12,
+    "guided_exceptional_contacts": 12,
+    "scope": "Twenty-four complete single-u, two-track contact sets. No claim about all Y pairs, H-prime, colorability, or ordinary HN bounds.",
+    "rejection_tests": [
+      "wrong-geometry",
+      "missing-case",
+      "missing-contact",
+      "fake-line",
+      "wrong-translation",
+      "boolean-power",
+      "boolean-point-index",
+      "wrong-base-valuation",
+      "optimized-mode"
+    ]
+  },
+  "full_regression": {
+    "status": "RUNNING_NOT_YET_VERIFIED",
+    "command": "make check",
+    "scope": "The present commit does not claim a completed full regression. An actual exit-code/source-binding receipt is to be recorded separately."
+  },
+  "scope": "T140 depends on its written proof. E112 finite data are independently replayed. No new ordinary HN bound, complete H-prime translate compiler, or implemented general finite-state compiler is claimed."
+}
