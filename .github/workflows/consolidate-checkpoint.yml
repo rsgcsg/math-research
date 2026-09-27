@@ -40,9 +40,9 @@ jobs:
           PY
           set -o pipefail
           python -S "$RUNNER_TEMP/restore.py" "$RUNNER_TEMP/objects.json.xz" 2>&1 | tee "$RUNNER_TEMP/restoration.log"
-          # The contents-only CI token leaves its own workflow unchanged.
-          # The authorized connector removes it after the successful replay.
+          # Retain and stage the exact workflow until the connector removes it.
           git restore --source="$SOURCE_SHA" -- .github/workflows/consolidate-checkpoint.yml
+          git add .github/workflows/consolidate-checkpoint.yml
           python - <<'PY'
           import hashlib,json,os
           from pathlib import Path
