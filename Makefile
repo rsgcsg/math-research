@@ -1,4 +1,4 @@
-.PHONY: check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 setup explore
+.PHONY: check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next setup explore
 
 check:
 	python3 research/verify.py
@@ -11,6 +11,7 @@ check:
 	$(MAKE) check-pricing
 	$(MAKE) check-rotations
 	$(MAKE) check-rank2
+	$(MAKE) check-next
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -49,3 +50,6 @@ check-rotations:
 
 check-rank2:
 	python3 research/test_rank2_rotation.py
+
+check-next:
+	python3 -S research/test_research_checkpoint.py

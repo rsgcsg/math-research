@@ -590,3 +590,15 @@ https://github.com/AEjonanonymous/Hadwiger-Nelson/blob/main/Hadwiger_Nelson_Fina
 
 本轮新增C024的几何、最小性、严格分离及五点编译均有自足证明；E105依赖的是完整列线性系统、
 精确整数复核及全域proper检查，不依赖一般格系统的不可延拓定理。
+
+## 2026-09-27 本轮来源补充
+
+ESS原文：J.-H. Evertse, H. P. Schlickewei, W. M. Schmidt,
+*Linear equations in variables which lie in a multiplicative group*,
+Annals of Mathematics 155 (2002), 807–836，https://arxiv.org/abs/math/0409604 。
+本轮读取/截图PDF第1–2页的定义和Theorem1.1，作为T139的唯一深层外部输入。
+有限程序只校准Laurent支撑及例子；外部定理不是靠本地有限运算“重证”的。
+
+LRAT参照：https://arxiv.org/abs/1612.02353v2 。本轮读取作者摘要；
+新通道仅认证positive-hinted RUP，保留一般RAT不支持与资源超限的明确状态。
+Haugland作者页/v2引言、de Grey作者页本轮再次复核，不扩大为外部构造全部计算重放。
