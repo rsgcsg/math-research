@@ -1,0 +1,109 @@
+name: Finalize verified checkpoint documentation once
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/finalize-checkpoint-docs.yml]
+permissions:
+  contents: write
+jobs:
+  document:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Load exact public history
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Apply exact reviewed text, replay its calibration, and publish audit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import ast,base64,gzip,hashlib,json,lzma,os,re,subprocess,sys
+          from pathlib import Path
+          from urllib.parse import unquote
+          BASE='147d1b02aad00e48bb8315c817b2134f97990f90'
+          EXPECTED='c999ebc1ee5607ad7432075176f6ff9f0a0b980dd4c5e7652e314f033c2a962d'
+          ALLOWED={'README.md','docs/BRANCHES.md','docs/CURRENT.md','docs/ROUTES.md','docs/proofs/hn_unified_framework.md','docs/proofs/next_attack_gate.md','references/LITERATURE_MAP.md','references/SOURCES.md'}
+          temp=Path(os.environ['RUNNER_TEMP'])
+          def git(*a):return subprocess.check_output(['git',*a],text=True).strip()
+          def h(b):return hashlib.sha256(b).hexdigest()
+          def manifest(paths):return {str(p):h(p.read_bytes()) for p in paths}
+          if os.environ.get('GITHUB_REPOSITORY')!='rsgcsg/math-research' or os.environ.get('GITHUB_REF')!='refs/heads/main':raise RuntimeError('wrong target')
+          if git('rev-parse','HEAD^')!=BASE:raise RuntimeError('base changed')
+          src=manifest([Path('Makefile'),Path('requirements-research.txt'),*sorted(Path('research').glob('*.py'))])
+          sh=h(json.dumps(src,sort_keys=True,separators=(',',':')).encode())
+          if sh!='a7cf5abec5fffbe332a588f88f3d028da8c5264e389962b9e1d5b29e087a3eaa':raise RuntimeError('source mismatch')
+          cert_before=manifest(sorted(Path('certificates').glob('*.*')))
+          packed=Path('.documentation-delta.xz').read_bytes()
+          if h(packed)!=EXPECTED:raise RuntimeError('payload integrity')
+          d=json.loads(lzma.decompress(packed))
+          if d['schema']!='hn-documentation-delta-v1' or d['base']!=BASE or {e['path'] for e in d['changes']}!=ALLOWED or len(d['changes'])!=len(ALLOWED):raise RuntimeError('delta scope')
+          targets={}
+          for e in d['changes']:
+              p=Path(e['path']);old=p.read_text() if p.exists() else ''
+              if h(old.encode())!=e['old_sha256']:raise RuntimeError('old file differs: '+str(p))
+              a,b=e['prefix'],e['suffix']
+              if type(a)!=int or type(b)!=int or min(a,b)<0 or a+b>len(old):raise RuntimeError('invalid delta')
+              new=old[:a]+e['middle']+(old[-b:] if b else '')
+              if h(new.encode())!=e['new_sha256']:raise RuntimeError('new file differs: '+str(p))
+              p.parent.mkdir(parents=True,exist_ok=True);p.write_text(new);targets[str(p)]=e['new_sha256']
+          code=Path('docs/proofs/next_attack_gate.md').read_text().split('```python\n')[1].split('```')[0]
+          result=subprocess.check_output([sys.executable,'-S','-c',code],text=True,timeout=30)
+          calibration=json.loads(result)
+          if calibration['status']!='PASS' or calibration['exact_roots']!=92 or sum(calibration['forbidden_color_matrices'].values())!=16024:raise RuntimeError('calibration mismatch')
+          (temp/'attack-gate-calibration.json').write_text(result)
+          audit_path=Path('certificates/consolidation_audit_20260927.json');audit_path.write_text('{"status":"VALIDATING"}\n')
+          syntax=0;json_count=0;link_count=0;errors=[]
+          for p in sorted(Path('research').glob('*.py')):ast.parse(p.read_text(),filename=str(p));syntax+=1
+          for p in sorted(Path('certificates').iterdir()):
+              if p.name.endswith(('.json','.json.gz')):
+                  raw=p.read_bytes();json.loads(gzip.decompress(raw) if p.name.endswith('.gz') else raw);json_count+=1
+          for p in [Path('README.md'),Path('AGENTS.md'),*sorted(Path('docs').rglob('*.md')),*sorted(Path('references').rglob('*.md'))]:
+              for target in re.findall(r'\]\(([^\s)]+)\)',p.read_text()):
+                  if re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:',target) or target.startswith('#'):continue
+                  target=unquote(target.split('#',1)[0].split('?',1)[0]);link_count+=1
+                  if target and not (p.parent/target).exists():errors.append([str(p),target])
+          if errors:raise RuntimeError(str(errors))
+          ledger=Path('docs/RESULTS.md').read_text();counts={}
+          for kind,last in [('T',139),('E',111),('C',24),('Q',11)]:
+              ids={int(x) for x in re.findall(r'^\|\s*'+kind+r'(\d{3})\s*\|',ledger,re.M)}
+              if ids!=set(range(1,last+1)):raise RuntimeError('ledger mismatch '+kind)
+              counts[kind]=len(ids)
+          if manifest([Path(p) for p in src])!=src or manifest([Path(p) for p in cert_before])!=cert_before:raise RuntimeError('inherited research/evidence changed')
+          report={'schema':'hn-consolidation-audit-v1','date':'2026-09-27','status':'PASS','source_manifest_sha256':sh,'source_file_count':len(src),'research_sources_unchanged':True,'inherited_certificate_files_unchanged':len(cert_before),'documentation_files':targets,'python_syntax_files':syntax,'json_files':json_count,'markdown_file_targets':link_count,'ledger_ids':counts,'separate_documentation_calibration':calibration,'calibration_code_sha256':h(code.encode()),'calibration_output_sha256':h(result.encode()),'run_id':os.environ['GITHUB_RUN_ID'],'scope':'Reviewed documentation delta, unchanged research/evidence bytes, syntax/JSON/file-target audit and executed elementary calibration. Not a fresh full make check, exhaustive Markdown-anchor check, new Y search, or HN breakthrough. Temporary workflows are removed separately after this run.'}
+          audit_path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          subprocess.run(['git','rm','.documentation-delta.xz'],check=True)
+          subprocess.run(['git','add',*sorted(ALLOWED),str(audit_path)],check=True)
+          subprocess.run(['git','diff','--cached','--check'],check=True)
+          subprocess.run(['git','commit','-m','docs: converge published research, distinguish finite lower-bound and infinite upper-bound obligations'],check=True)
+          auth=base64.b64encode(('x-access-token:'+os.environ['GH_TOKEN']).encode()).decode();print('::add-mask::'+auth,flush=True)
+          env=os.environ.copy();env.update(GIT_CONFIG_COUNT='1',GIT_CONFIG_KEY_0='http.https://github.com/.extraheader',GIT_CONFIG_VALUE_0='AUTHORIZATION: basic '+auth)
+          subprocess.run(['git','push','origin','HEAD:refs/heads/main'],env=env,check=True)
+          sha=git('rev-parse','HEAD')
+          if git('ls-remote','origin','refs/heads/main').split()[0]!=sha:raise RuntimeError('published main differs')
+          subprocess.run(['git','bundle','create',str(temp/'finalized-history.bundle'),'HEAD'],check=True)
+          (temp/'finalized-commit.txt').write_text(sha+'\n')
+          print(json.dumps({'status':'PASS','main':sha,'documentation_files':len(targets),'links':link_count,'source_unchanged':True}),flush=True)
+          PY
+      - name: Retain published history and documentation evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: finalized-checkpoint-history-and-audit
+          path: |
+            ${{ runner.temp }}/finalized-history.bundle
+            ${{ runner.temp }}/finalized-commit.txt
+            ${{ runner.temp }}/attack-gate-calibration.json
+            certificates/consolidation_audit_20260927.json
+          retention-days: 30
+          if-no-files-found: error
