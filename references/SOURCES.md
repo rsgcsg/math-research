@@ -1,5 +1,18 @@
 # 外部资料与历史输入
 
+## 2026-09-26 对齐与完整双旋转研究
+
+原始来源本轮读取范围：
+
+* https://arxiv.org/abs/2608.04542 及其v2 HTML引言：作者页显示2026-08-06 v2，普通五色无spindle构造。
+* https://arxiv.org/abs/2411.01951 ：作者摘要/版本记录；此前本轮读取v2 HTML，当前作者页最新为2025-06-17 v3。局部有限与有界pathwidth的周期结论仅作结构参照，不作为新rank2上界的外部输入。
+* https://arxiv.org/abs/2511.03028 ：只读作者摘要；rank是关系矩阵列数，未读取完整证明，不当成当前乘法rank2对象的分类。
+
+来源分支482b530…的T125–128/E095–098按主线映射清单整合；原16份Python/JSON保留字节。
+本轮新T138/E110完全重建H′Y的非零返回与单位接触，得到独立五色正证书和15域边界记录。
+没有重放外部作者论文全部计算，也没有把旧代理审读记录冒称本轮外部审稿。
+
+
 2026-09-12 T111 定向语言核对：
 [Stacks Project §10.9 Localization](https://stacks.math.columbia.edu/tag/00CM)，
 已读定义10.9.2、命题10.9.3及其证明、模版本10.9.6–7。
@@ -577,3 +590,15 @@ https://github.com/AEjonanonymous/Hadwiger-Nelson/blob/main/Hadwiger_Nelson_Fina
 
 本轮新增C024的几何、最小性、严格分离及五点编译均有自足证明；E105依赖的是完整列线性系统、
 精确整数复核及全域proper检查，不依赖一般格系统的不可延拓定理。
+
+## 2026-09-27 本轮来源补充
+
+ESS原文：J.-H. Evertse, H. P. Schlickewei, W. M. Schmidt,
+*Linear equations in variables which lie in a multiplicative group*,
+Annals of Mathematics 155 (2002), 807–836，https://arxiv.org/abs/math/0409604 。
+本轮读取/截图PDF第1–2页的定义和Theorem1.1，作为T139的唯一深层外部输入。
+有限程序只校准Laurent支撑及例子；外部定理不是靠本地有限运算“重证”的。
+
+LRAT参照：https://arxiv.org/abs/1612.02353v2 。本轮读取作者摘要；
+新通道仅认证positive-hinted RUP，保留一般RAT不支持与资源超限的明确状态。
+Haugland作者页/v2引言、de Grey作者页本轮再次复核，不扩大为外部构造全部计算重放。

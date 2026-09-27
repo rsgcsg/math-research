@@ -1,5 +1,15 @@
 # Hadwiger–Nelson 文献地图：机制、量词与迁移边界
 
+## 2026-09-26 本轮原始来源复核与迁移范围
+
+- Haugland，arXiv:2608.04542：本轮作者页为2026-08-06 v2，无spindle的2131点五色例；不改变普通5/7界。
+- Abrishami–Esperet–Giocanti–Hamann–Knappe–Möller，arXiv:2411.01951：作者页最新为2025-06-17 v3；此前本轮读取的v2不是最新版。已读作者摘要和所注明HTML范围，局部有限、拟传递、有界pathwidth条件不能省略。这里原点是无限度顶点，先单列名单；新rank2结果由显式正词证明，不引用一般周期存在。
+- Krebs–Leyva，arXiv:2511.03028：本轮只读作者摘要，rank指Heuberger矩阵列数，不是两个乘法旋转生成元；不将其染色公式套用于H′Y。
+
+[T138/E110](../docs/proofs/rank2_rotation_five_coloring.md)采用自足赋值范围和精确有限证据，不依赖上述文献给未核验的rank2判定。
+两条分支的旧阅读声明只按原身份保留，来源提交482b530…可恢复其原始引用列表。
+
+
 ## 2026-09-21 收敛复核：本次读取与继承记录分开
 
 本次重新读取de Grey 1804.02385、Parts 2010.12665、Haugland 2608.04542v2、
@@ -852,3 +862,20 @@ Ghorbani–Kamali–Khosrovshahi–Krotov的二进制[t]-trade（含重数）把
 
 本轮新增C024的几何、最小性、严格分离及五点编译均有自足证明；E105依赖的是完整列线性系统、
 精确整数复核及全域proper检查，不依赖一般格系统的不可延拓定理。
+
+## 2026-09-27：用于本轮推进的来源与阅读边界
+
+- Evertse–Schlickewei–Schmidt, *Linear equations in variables which lie in a multiplicative group*,
+  Annals of Mathematics 155 (2002), 807–836；[arXiv math/0409604](https://arxiv.org/abs/math/0409604)。
+  本轮读PDF第1–2页并截图核对有限秩定义、非退化定义与Theorem1.1的数量界。
+  [T139](../docs/proofs/translated_rotation_contacts.md)使用该已发表定理，再完整分类六/七项Laurent接触的退化族。
+  不宣称重新证明整个ESS论文，也不把数量上界当作有效指数上界。
+- Cruz-Filipe–Heule–Hunt–Kaufmann–Schneider-Kamp, *Efficient Certified RAT Verification*,
+  [arXiv 1612.02353v2](https://arxiv.org/abs/1612.02353v2)。本轮读取作者页摘要，了解LRAT提示与形式化检查器的关系；
+  自身实现采用仓库既有RUP子集检查器，其正确性由逐步蕴含论证承担，不冒称实现了论文全部RAT或Coq/ACL2认证。
+- Haugland [2608.04542v2](https://arxiv.org/html/2608.04542v2)本轮复核作者页及引言，仍为2131点无spindle五色构造，
+  与de Grey [1804.02385v3](https://arxiv.org/abs/1804.02385v3)的普通五色下界分开记录；没有据此取得普通新界。
+
+新桥接对象是“乘法群方程的退化分类—有限平移接口—完整颜色关系”，
+不是群阶、数域次数或样本密度。T139先解决接触的结构有限性，E111给共享事件的具体失败证据；
+两者均未闭合原始HN的全自由染色量词。
