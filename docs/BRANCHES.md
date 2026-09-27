@@ -1,64 +1,40 @@
-## 2026-09-27 当前远端快照
+# 分支、成果与恢复
 
-下文“仅保留main”是2026-09-22清理完成时的历史记录，不是现在的分支列表。
-本轮读取到main=ca2d487…，另有rotation-rank2=482b530…和rotation-integration=82a396…；
-PR #5仍打开。当前连接未提供远端写入动作，本轮没有合并、删除或改名这些分支。
-本地成果保存在从82a396…接续的research/baseline-next-20260927，并提供完整Git历史与补丁。
-当前数学与验证状态只看[CURRENT](CURRENT.md)。
+## 当前：2026-09-27收尾完成
 
-# 分支、历史归档与恢复
+两条旋转研究分支的全部提交均已进入main，包括原本地d5ef85a…与875c4f8…的完整Git对象历史。
+PR #5的合并提交为4a11fe3f4a957b166fd8f340d950a2a9563a5cec。
+本次运行36304515525验证后按精确头SHA归档并删除两条分支，回读只保留main、无待合并PR。
 
-## 2026-09-26 新分支对齐
+| 原分支 | 精确归档头 | 标签 |
+|---|---|---|
+| research/rotation-integration-20260926 | 3af5a63622185c1393f8e30efda41609ea223230 | archive/2026-09-27/research/rotation-integration-20260926 |
+| research/rotation-rank2-20260926 | 482b53020f36900ab2fcceff801ee2eb84893d94 | archive/2026-09-27/research/rotation-rank2-20260926 |
 
-此前“只保留main”是2026-09-22清理快照，不是永远不允许新研究分支。
-新`research/rotation-rank2-20260926`从旧基准发展，来源头482b530…；本次整合到
-`research/rotation-integration-20260926`，保持main原有成果并解决编号冲突。
-它不是当年被删除的空`birank-rotation`分支的新增结果，不混写归档清单。
-本次新T138/E110解决来源Q011；真实发布/合并状态以新提交与PR为准，不能借用旧清理收据。
+[实际清单](branch_archive_20260927.json)记录的是归档操作时的main快照；后续文档提交会推进main，
+但不改变归档标签。先查精确头、祖先、打开PR及运行任务，再原子建标签/删分支并回读；
+旧2026-09-22标签与清单不覆盖，未触碰任何未知并行分支。
+本次已移除consolidate-checkpoint与archive-rotation-checkpoints一次性流程，常规verify.yml保留。
+历史工作流失败保留在GitHub运行历史，不通过删除日志制造全绿记录。
 
+## 维护约定
 
-2026-09-22。研究进度只看 [CURRENT](CURRENT.md)，分支不是待办事项清单。
-本页记录本次整理规则；最终执行状态、精确SHA与归档标签见 [branch_archive.json](branch_archive.json)。
+main保留已验收代码、证据及真实状态；只为正在执行的代码改动建立短期分支，开放数学问题记录在CURRENT。
+已合并分支可归档/删除；独有未合并工作不能静默丢弃。未来新研究仍可正常开分支，
+“当前只有main”是时间快照，不是禁止新分支。T/E编号、UNKNOWN和历史收据不因归档改写。
 
-本次实际执行已完成：原9个研究分支和1个临时维护分支均已归档并删除，远端仅保留main。
-10个归档标签已逐项回读，其提交SHA与删除前完全相同。清单记录归档操作时的main快照；
-后续回写本页和清单的文档提交会前移main，但不改变任何归档目标。
-
-## 本次处理
-
-开始时有10个分支（main加9个研究分支）。其中7个旧研究分支的提交已进入main；
-`full-law-loop-20260922`另有E105/C024实质增量，先验收并合并；
-`full-law-pricing-20260921`仅有一次输入导出的工作流，保留原提交归档，不并入失效的恢复流程。
-`birank-rotation`与`cyclic-orbit`指向同一旧提交，没有额外双旋转成果。
-
-原研究代码、数学证明和证书不因分支清理而删除。每个拟删除分支先保留
-`archive/2026-09-22/<完整原分支名>`标签，SHA必须等于核对的分支头。
-归档标签保留完整Git历史，与会到期的Actions artifact不同。
-新归并的E105仍是ROUND_LIMIT_UNKNOWN；合并不是宣称15域可行或不可行。
-
-删除只作用于明确白名单内的分支，不触碰main、不遍历删除未知分支：
-检查精确头SHA、合并祖先关系（准备分支须核对唯一文件增量）、打开的PR和未完成的工作流；
-归档创建与删除使用原子push和逐引用的expected-SHA lease。任一分支被并行更新即停止，
-不以强制覆盖继续。执行后再读取远端引用核对。临时维护分支也在合并后按相同规则归档。
-
-## 今后的最小约定
-
-main保存已验收的程序、证据和真实状态；一项正在执行的研究最多开一个短期分支。
-没有正在进行的代码改动时，不为开放数学问题预先保留空分支。
-已合并分支验收后归档/删除；未完成但有独有工作则保留活动分支，或明确标注后归档，不能静默丢弃。
-最多三条活动研究路线是研究上的默认收敛习惯，不是自动删除条件。
-历史失败和UNKNOWN继续保存在账本，不因分支删除而重写。
-
-## 恢复旧工作
-
-从清单选一个标签，例如：
+## 恢复一个归档
 
 ```sh
-git fetch origin 'refs/tags/archive/2026-09-22/research/full-law-pricing-20260921:refs/tags/archive/2026-09-22/research/full-law-pricing-20260921'
-git switch -c research/revisit-pricing archive/2026-09-22/research/full-law-pricing-20260921
+git fetch origin 'refs/tags/archive/2026-09-27/research/rotation-integration-20260926:refs/tags/archive/2026-09-27/research/rotation-integration-20260926'
+git switch -c research/revisit-rotation archive/2026-09-27/research/rotation-integration-20260926
 ```
 
-上述命令恢复当时的整个提交，不表示其一次性工作流现在仍能运行。
-新E105搜索使用 `research/build_full_law_pricing.py`；独立证据重放使用 `make check-pricing`。
-全仓验收使用 `make check`。保留的 `verify.yml` 是手动触发、只读、无自动提交的验收流程，
-不重新执行昂贵SAT搜索，也不把运行成功称作HN新界。
+这会恢复当时的整个提交，而非保证其一次性工作流还适用。
+最新研究从当前main开始，不需重新应用旧补丁。数学状态只见[CURRENT](CURRENT.md)。
+
+## 2026-09-22历史清理
+
+当时的9条研究分支及1条维护分支均保存在archive/2026-09-22下；
+[原清单](branch_archive.json)原样保留。旧准备分支只有输入导出工作流，其唯一内容仍由标签保留。
+9月26日重新建立的旋转分支与当时无增量的birank-rotation分支不是同一新增工作，不能混写成果。

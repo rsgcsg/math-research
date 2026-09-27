@@ -1,30 +1,42 @@
 # Hadwiger–Nelson research
 
-目标是决定普通平面的单位距离色数；目前本项目没有改变 `5≤χ(R²)≤7`。
-[当前状态](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线](docs/ROUTES.md) ·
-[统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md)。
+目标：决定普通欧氏平面的单位距离色数。**本项目尚未改变 `5≤χ(R²)≤7`。**
+[当前状态与突破入口](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线](docs/ROUTES.md) ·
+[统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md) ·
+[分支与恢复](docs/BRANCHES.md)。
 
-## 2026-09-27：准确基线及两项实际推进
+## 2026-09-27：成果已入主线，分支与文档收尾
 
-接续远端归并分支82a396…，保留两条原始Git历史与主线全部证据。
-基线完整回归、新增隔离检查、源码绑定和实际发布范围见[本轮收据](certificates/baseline_next_validation.json)。
-本轮连接仅可读；本地Git提交、完整bundle和补丁不冒称已推送或已合并PR #5。
+PR #5已合并为 `4a11fe3f4a957b166fd8f340d950a2a9563a5cec`。
+原本地提交 `d5ef85a…`、`875c4f8…` 均保留为真实祖先；无需再次导入旧补丁。
+两条旋转研究分支已由运行36304515525按精确SHA归档并删除；本次回读仅有main。
+归档标签保留全部历史，旧2026-09-22归档不改动。状态见[本次清单](docs/branch_archive_20260927.json)。
+账本至 **T139 / E111 / C024 / Q011**，本次整理不增加数学编号、不改写UNKNOWN。
 
-- **T138收尾：** 全部双旋转宿主已知恰五色，现补齐整个非零图及含原点图的连通性证书；不是染色唯一性。
-- **T139：** 任意有限秩单位旋转群的两副本非零平移接触，除两类中心星及单位平移匹配外只有有限多解。
-  [完整证明](docs/proofs/translated_rotation_contacts.md)使用ESS定理并分类全部退化；没有给出有效指数窗口或五色延拓。
-- **E111：** 一份完整Y五色词同时满足u全部29点划分事件及12个具体二点失配事件，
-  关闭这一共享势族的全词严格分离。[证明与可重放整数定价](docs/proofs/shared_event_pricing.md)。
+## 最新成果的准确意义
 
-全15域共同律仍未决定。旧UNKNOWN不变，更多同旋转宿主指数层已不是NON5路线。
-主攻须引入其他运动的真正联合颜色信息，或有效确定非零平移例外并检查自由端口关系。
+- **T138/E110：** 整个双自由旋转宿主 `H′Y` 恰五色；Q011已解决，连通性证据已补齐。
+- **T139：** 非零平移的单位接触除三类明确无限族外只有有限例外；不是有效指数界，也不是五色延拓。
+- **E111：** 一份完整合法Y词使u全部域事件和12个指定二点事件差同时为零，排除这一明确势族的严格分离。
+- **认证工具：** 精确二进制整数定价与独立hinted-RUP子集已可运行；不支持任意RAT，也没有15域全词反证。
+
+[平移接触证明](docs/proofs/translated_rotation_contacts.md) ·
+[事件反例与认证](docs/proofs/shared_event_pricing.md) ·
+[下一构造入口及小例自检](docs/proofs/next_attack_gate.md)。
+
+当前主攻仍是全15域共同律或全词严格分离；几何备线改为可立即验证的有限异中心构造。
+**有限下界只需认证所列单位边，不必先穷尽无限宿主的所有例外；正染色结论则须覆盖其声称对象的全部边。**
+纯同中心加层、调已被E111排除事件族的权重不再作为独立主攻。
+
+## 重放与范围
 
 ```sh
-make check        # 旧全部检查与新增check-next
-make check-next   # 无site packages的独立证据、语义编码与篡改检查
+make check        # 全部独立检查入口；不执行新的昂贵搜索
+make check-next   # 最新证据、完整几何重建、编码与篡改检查；python3 -S
 ```
 
-独立检查仅使用Python标准库；新增目标显式使用 `python3 -S`。
-`run_event_pricing.py`的搜索另需python-sat，否定结果须完成独立RUP重放才获得认证。
-旧E105主循环未被静默替换；一般RAT、不受资源约束的证明搜索和HN终局均不因此完成。
-两份一次性导出/恢复工作流从本地候选树移除；常规只读 `verify.yml` 保留。
+本次新运行通过的是check-next，并确认254份研究源码及继承证书与原检查点逐字节一致；
+不是又一次完整make check。历史完整基线及分阶段验证见[原收据](certificates/baseline_next_validation.json)，
+本次实际运行见[新收据](certificates/publication_cleanup_20260927.json)。一般定理仍依赖书面证明。
+最后移除已完成的一次性传输/归档工作流，仅保留常规只读verify.yml。
+搜索与独立认证分离；先阅读[AGENTS.md](AGENTS.md)。

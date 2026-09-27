@@ -1,0 +1,75 @@
+{
+  "schema": "hn-consolidation-audit-v1",
+  "date": "2026-09-27",
+  "status": "PASS",
+  "source_manifest_sha256": "a7cf5abec5fffbe332a588f88f3d028da8c5264e389962b9e1d5b29e087a3eaa",
+  "source_file_count": 254,
+  "research_sources_unchanged": true,
+  "inherited_certificate_files_unchanged": 158,
+  "documentation_files": {
+    "README.md": "0bf5abc60d9703801567cc064e73bdd87dfad82aa2e9bead95d2f55013958162",
+    "docs/BRANCHES.md": "082e43f4c37c5af4b0f22b0f5c7cca0b9bd33225e0dae27acf8a473556fe7294",
+    "docs/CURRENT.md": "b59be5a9fea13f08225f09869aebbef1225c4d4301adde9451629b771ba7ca15",
+    "docs/ROUTES.md": "71fb5711af1b4903a534f9c4647cacb391884cbc5c9a9da7fd677d1af580bf15",
+    "docs/proofs/hn_unified_framework.md": "fb3dbf90eb2672daedce145ea9815bcb9ca83e503f7d98bb864f1826b0261de4",
+    "docs/proofs/next_attack_gate.md": "6777d221c182eb23c24ae506a5389f45af41f60748edbbd3109a4e983935505b",
+    "references/LITERATURE_MAP.md": "0fb70d819cbce17c525ae0707e41e8db1816402d1afe80911bb6cfb7f3a61cbd",
+    "references/SOURCES.md": "d9f97481ee89d021e4401c13ccedcf87bdf453be78532cba38933dababf1a344"
+  },
+  "python_syntax_files": 252,
+  "json_files": 157,
+  "markdown_file_targets": 566,
+  "ledger_ids": {
+    "T": 139,
+    "E": 111,
+    "C": 24,
+    "Q": 11
+  },
+  "separate_documentation_calibration": {
+    "status": "PASS",
+    "double_contact_centers": 121,
+    "exact_roots": 92,
+    "tangent_centers": 4,
+    "separated_centers": 72,
+    "coincident_centers": 1,
+    "diamond_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "diamond_proper_colors": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "forbidden_color_matrices": {
+      "2": 5,
+      "3": 46,
+      "4": 697,
+      "5": 15276
+    },
+    "scope": "Elementary construction and disjoint-copy rejection calibration, not a Y experiment or an HN obstruction."
+  },
+  "calibration_code_sha256": "3a2144c5bb32b25f4620e7167b12c077cf4313a7606b7bc4aa12827e82d614b1",
+  "calibration_output_sha256": "606c5a95c208e65ff03f028aa4ec9253b5b25f9ad17b943d990a5a98ca62d4b4",
+  "run_id": "36305214443",
+  "scope": "Reviewed documentation delta, unchanged research/evidence bytes, syntax/JSON/file-target audit and executed elementary calibration. Not a fresh full make check, exhaustive Markdown-anchor check, new Y search, or HN breakthrough. Temporary workflows are removed separately after this run."
+}
