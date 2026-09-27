@@ -1,4 +1,4 @@
-.PHONY: check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates check-packet setup explore
+.PHONY: check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates check-packet check-cycle-descent setup explore
 
 check:
 	python3 research/verify.py
@@ -14,6 +14,7 @@ check:
 	$(MAKE) check-next
 	$(MAKE) check-cyclic-translates
 	$(MAKE) check-packet
+	$(MAKE) check-cycle-descent
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -62,3 +63,6 @@ check-cyclic-translates:
 
 check-packet:
 	python3 -S research/test_motion_packet.py
+
+check-cycle-descent:
+	python3 -S research/test_cycle_descent.py

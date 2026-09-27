@@ -1,66 +1,39 @@
 # Hadwiger–Nelson research
 
-目标：决定普通欧氏平面的单位距离色数。**本项目尚未改变 `5≤χ(R²)≤7`。**
-[当前状态与突破入口](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线](docs/ROUTES.md) ·
-[统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md) ·
-[分支与恢复](docs/BRANCHES.md)。
+目标：决定普通欧氏平面的单位距离色数。**本项目尚未改变5≤χ(R²)≤7。**
+[当前状态](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线与淘汰理由](docs/ROUTES.md) ·
+[统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md) · [证据规则](AGENTS.md)。
 
-## 2026-09-28：两词修复、三原子极点与真实旋转闭环
+## 2026-09-28：原Y内循环边际的精确答案，T143/E114/C026
 
-新增T141–T142/E113/C025：Y上六个完整运动的最小五色划分支持恰2，删任一运动即可单词满足。
-更小的29点实际核心普通χ3，单一不变划分却恰需6色；两份五色划分的均匀混合满足其全部15个局部域。
-该核心在六运动单词要求下删任一顶点均可修复，且给Y共同律一个无固定支持的29点柱事件质量≤1/2约束。
-**局部15域不是10077点Y的15域；没有HN新界。**
-同一个29点系统还存在三原子极点，不能由两词共同律混合得到；这份局部全15域正律却不能延拓至真实五次η轨道。
-补齐的86点轨道给三种局部划分总质量的尖锐4/5界，并有达到该界的五色旋转平均。
-该轨道有30点不在Y，不宣称已取得原Y15域的新独立分离。
-[两词/29点证明](docs/proofs/two_atom_motion_packet.md) · [极点与循环延拓证明](docs/proofs/cyclic_pattern_extension.md) · [当前状态](docs/CURRENT.md)。
-`make check-packet`独立重放全Y、29点及86点全部证据；快速小检查为
-`python3 -S research/verify_localized_motion_packet.py`。
-本轮新提交仍为本地保存，连接未提供远端写入能力；不会把本地提交冒称已推送。
+五点事件的η闭包只有11点且全部在原Y；三个模式概率的精确k≥3可行域为
+`([0,1]^3+conv(0,e0,e1,e2))/5`，13个顶点均由真实三色旋转律实现。
+原Y完整η约束已排除上轮C025三原子边际，无须为这条4/5界新增30点。
+122位置传播的计数最优98亦三色可达；全Y正词让该观察族的完整五点划分全部恒定，
+因此继续只在这个族内调势无效。联合位置产生真实相关差，整体核观察的单词有独立RUP反证，
+随后五词混合已正解决该28项F共同律，且是五原子极点；原Y全15域仍未判定。
+[完整证明与实验](docs/proofs/original_Y_cycle_descent.md) · [有限证书](certificates/original_Y_cycle_descent.json) ·
+[单词反证](certificates/joined_kernel_singleton.json.gz) · [五词共同正律](certificates/joined_kernel_five_law.json)。
 
+## 已继承的最近成果
 
-## 2026-09-28：T140/E112，单旋转平移的有效有限化
+T138整个双旋转宿主恰五色；T139有限秩平移接触分类；远端T140有效单旋转平移子类。
+T141六完整域最小支持恰2；C025局部三原子极点不属于两词包凸包；T142真实五阶循环延拓界。
+这些结论均保留原范围。原来的UNKNOWN不因为后续受限反证而改写。
+[两词及29点核心](docs/proofs/two_atom_motion_packet.md) · [局部极点与86点循环](docs/proofs/cyclic_pattern_extension.md) ·
+[单旋转平移](docs/proofs/cyclic_translate_effective.md) · [有限几何构造入口](docs/proofs/next_attack_gate.md)。
 
-[T140完整证明与校准](docs/proofs/cyclic_translate_effective.md)把T139的一个严格循环子类从
-“例外有限”推进到完整可执行枚举：一个有效有限赋值ν(u)≠0时，每对非零平移轨道至多三类无限族及54个例外。
-有限多个平移单u轨道的k染色可有效化为有限实例；不同中心且无无限接触族时，k≥3直接检查有限接触核。
-E112已完整重建24个实际Y轨道对，并验证一个七轨道无限图恰等于Moser核加孤立点、色数4。
-**不是H′双自由旋转的一般平移算法，也不是普通HN新界。**
-`make check-cyclic-translates`重放新主入口；状态与范围以[CURRENT](docs/CURRENT.md)及验证收据为准。
-
-## 2026-09-27：成果已入主线，分支与文档收尾
-
-PR #5已合并为 `4a11fe3f4a957b166fd8f340d950a2a9563a5cec`。
-原本地提交 `d5ef85a…`、`875c4f8…` 均保留为真实祖先；无需再次导入旧补丁。
-两条旋转研究分支已由运行36304515525按精确SHA归档并删除；本次回读仅有main。
-归档标签保留全部历史，旧2026-09-22归档不改动。状态见[本次清单](docs/branch_archive_20260927.json)。
-账本至 **T139 / E111 / C024 / Q011**，本次整理不增加数学编号、不改写UNKNOWN。
-
-## 最新成果的准确意义
-
-- **T138/E110：** 整个双自由旋转宿主 `H′Y` 恰五色；Q011已解决，连通性证据已补齐。
-- **T139：** 非零平移的单位接触除三类明确无限族外只有有限例外；不是有效指数界，也不是五色延拓。
-- **E111：** 一份完整合法Y词使u全部域事件和12个指定二点事件差同时为零，排除这一明确势族的严格分离。
-- **认证工具：** 精确二进制整数定价与独立hinted-RUP子集已可运行；不支持任意RAT，也没有15域全词反证。
-
-[平移接触证明](docs/proofs/translated_rotation_contacts.md) ·
-[事件反例与认证](docs/proofs/shared_event_pricing.md) ·
-[下一构造入口及小例自检](docs/proofs/next_attack_gate.md)。
-
-当前主攻仍是全15域共同律或全词严格分离；几何备线改为可立即验证的有限异中心构造。
-**有限下界只需认证所列单位边，不必先穷尽无限宿主的所有例外；正染色结论则须覆盖其声称对象的全部边。**
-纯同中心加层、调已被E111排除事件族的权重不再作为独立主攻。
-
-## 重放与范围
+## 重放
 
 ```sh
-make check        # 全部独立检查入口；不执行新的昂贵搜索
-make check-next   # 最新证据、完整几何重建、编码与篡改检查；python3 -S
+make check                       # 全部标准库独立检查，不是新的昂贵搜索
+make check-cycle-descent         # 本轮完整Y重建、循环多面体、零词、联合核RUP与篡改
+python3 -S research/verify_cycle_descent.py
+python3 -S research/verify_joined_kernel.py
 ```
 
-本次新运行通过的是check-next，并确认254份研究源码及继承证书与原检查点逐字节一致；
-不是又一次完整make check。历史完整基线及分阶段验证见[原收据](certificates/baseline_next_validation.json)，
-本次实际运行见[新收据](certificates/publication_cleanup_20260927.json)。一般定理仍依赖书面证明。
-最后移除已完成的一次性传输/归档工作流，仅保留常规只读verify.yml。
-搜索与独立认证分离；先阅读[AGENTS.md](AGENTS.md)。
+研究基准为本地b532e714，保留远端09926d59的真实祖先。完整基线与新增入口的实际验证范围
+见[本轮收据](certificates/cycle_descent_validation.json)。分阶段覆盖不冒称最终树单次全量运行。
+一般数学命题依赖完整证明，不因检查器通过就成为已形式化或同行评审结果。
+当前连接未提供写入动作，新提交及上轮未发布成果保存在本地Git与累计补丁，不冒称远端main已更新。
+历史归档恢复说明见[BRANCHES](docs/BRANCHES.md)。

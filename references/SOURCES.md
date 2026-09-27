@@ -645,3 +645,17 @@ T142的有限阶兼容图循环界及C025的极点结论采用正文中的自足
 没有把支持匹配视作自动满足几何群关系，也不宣称这些一般线性/循环思想的文献优先权。
 同日远端T140/E112的热带来源记录按其原提交保留；本轮读取其仓库书面证明并重放新增入口，
 不冒称重新阅读了该并行轮次所引外部PDF。
+
+
+## 2026-09-28：T143/E114 的边际延拓参照（仅摘要层）
+
+- J.-R. Chazottes, J.-M. Gambaudo, M. Hochman, E. Ugalde,
+  [On the finite-dimensional marginals of shift-invariant measures, v2](https://arxiv.org/abs/1011.2442v2).
+  本轮读取作者页摘要及版本信息，区分局部不变多面体和全局可延拓边际；未读全篇，未用其高维结论判断HN。
+- Marcus Pivato,
+  [Building a Stationary Stochastic Process From a Finite-dimensional Marginal](https://arxiv.org/abs/math/0108081).
+  作者页摘要作为平稳边际延拓的结构参照，不把一般不可判定性搬到当前有限几何问题。
+- [Haugland 2608.04542v2 引言](https://arxiv.org/html/2608.04542v2)重新核对普通5/7界。
+
+T143的实际11点构造、十个半空间、13个三色见证、任意权支撑函数和原Y下降均在本库自足证明。
+新编号不宣称文献优先权；上述摘要参照不是未读定理的黑箱输入。
