@@ -1,369 +1,23 @@
 {
-  "schema": "motion-packet-validation-v1",
+  "schema": "motion-packet-validation-v2",
   "date": "2026-09-28",
-  "status": "REPLAYED_BEFORE_PARALLEL_INTEGRATION",
-  "source_base": "ed4cfb044164b5d88413a2d53c7e030274d04bb8",
-  "new_target": {
-    "schema": "motion-packet-fresh-replay-v1",
-    "status": "PASS",
-    "command": "make check-packet",
-    "returncode": 0,
-    "python": "3.13.5",
-    "started_utc": "2026-09-27T16:25:10.385500+00:00",
-    "elapsed_seconds": 79.05670859100064,
-    "source_unchanged": true,
-    "source_manifest_sha256": "e7dffec83013e08305e342f4cd7ecc3cca09ee88f767f74b787b9886f48238da",
-    "log_sha256": "9dc7a1eca9e9c841167f42645896c111258a8f3bd74feb0ccfc43d188897a419",
-    "result": {
-      "status": "PASS",
-      "packet": {
-        "status": "PASS",
-        "result": "MINIMUM_PARTITION_SUPPORT_EXACTLY_TWO",
-        "maximum_atom_mass": "1/2",
-        "motions": [
-          5,
-          6,
-          9,
-          11,
-          13,
-          14
-        ],
-        "input_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
-        "negative_proof": {
-          "status": "VERIFIED_RUP_REFUTATION",
-          "initial_clauses": 21366,
-          "additions": 6521,
-          "deletions": 0,
-          "hinted_propagations": 3993681,
-          "empty_clause_id": 27887,
-          "rat_steps_accepted": 0
-        },
-        "full_domain_checks": [
-          {
-            "motion": 0,
-            "domain_size": 5084,
-            "complete_law": false
-          },
-          {
-            "motion": 1,
-            "domain_size": 556,
-            "complete_law": false
-          },
-          {
-            "motion": 2,
-            "domain_size": 5289,
-            "complete_law": false
-          },
-          {
-            "motion": 3,
-            "domain_size": 4671,
-            "complete_law": false
-          },
-          {
-            "motion": 4,
-            "domain_size": 1895,
-            "complete_law": false
-          },
-          {
-            "motion": 5,
-            "domain_size": 513,
-            "complete_law": true
-          },
-          {
-            "motion": 6,
-            "domain_size": 333,
-            "complete_law": true
-          },
-          {
-            "motion": 7,
-            "domain_size": 200,
-            "complete_law": false
-          },
-          {
-            "motion": 8,
-            "domain_size": 573,
-            "complete_law": false
-          },
-          {
-            "motion": 9,
-            "domain_size": 513,
-            "complete_law": true
-          },
-          {
-            "motion": 10,
-            "domain_size": 513,
-            "complete_law": false
-          },
-          {
-            "motion": 11,
-            "domain_size": 512,
-            "complete_law": true
-          },
-          {
-            "motion": 12,
-            "domain_size": 511,
-            "complete_law": false
-          },
-          {
-            "motion": 13,
-            "domain_size": 1866,
-            "complete_law": true
-          },
-          {
-            "motion": 14,
-            "domain_size": 29,
-            "complete_law": true
-          }
-        ],
-        "singleton_passed": [
-          [
-            5,
-            6,
-            11,
-            13,
-            14
-          ],
-          [
-            5,
-            6,
-            11,
-            13,
-            14
-          ]
-        ],
-        "two_word_edge_checks": 99716,
-        "omit_one_edge_checks": 299148,
-        "full_fifteen_domain_law": false,
-        "scope": "The specified six-motion subsystem only. Each deletion permits a singleton. The atom-mass statement additionally uses the written majority-atom proof; no new HN bound."
-      },
-      "localized_packet": {
-        "status": "PASS",
-        "vertices": 29,
-        "actual_pairs": 406,
-        "induced_edges": 30,
-        "ordinary_chromatic_number": 3,
-        "invariant_single_partition_colors": 6,
-        "minimum_five_color_partition_support": 2,
-        "full_local_domains_passed": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14
-        ],
-        "local_domain_sizes": [
-          1,
-          1,
-          13,
-          4,
-          15,
-          9,
-          10,
-          5,
-          4,
-          7,
-          3,
-          5,
-          4,
-          13,
-          2
-        ],
-        "three_atom_extreme_law": true,
-        "extremality_determinant": -3,
-        "three_atom_full_domains": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14
-        ],
-        "eta_unique_support_matching": [
-          2,
-          0,
-          1
-        ],
-        "two_atom_hull_counterexample": true,
-        "order_five_support_lift_counterexample": true,
-        "six_motion_vertex_deletion_witnesses": 29,
-        "six_motion_deletion_witnesses": 6,
-        "negative_proof": {
-          "status": "VERIFIED_RUP_REFUTATION",
-          "initial_clauses": 2271,
-          "additions": 1549,
-          "deletions": 0,
-          "hinted_propagations": 187737,
-          "empty_clause_id": 3820,
-          "rat_steps_accepted": 0
-        },
-        "embedded_in_full_Y": true,
-        "scope": "The explicit 29-point induced subconfiguration and its own maximal domains. Vertex/motion criticality is relative to the six-motion singleton-five-color requirement. All15 here does not mean all15 on the original 10077-point Y. No minimum-size or HN claim."
-      },
-      "localized_mutation_rejections": [
-        "local-coordinate",
-        "local-denominator",
-        "local-missing-edge",
-        "local-missing-mapping",
-        "local-nonunit-normalization",
-        "local-wrong-cnf",
-        "local-proof-no-empty",
-        "local-unbalanced-pair",
-        "local-broadened-positive",
-        "local-duplicate-partition",
-        "local-missing-vertex-witness",
-        "local-bad-vertex-witness",
-        "local-bad-motion-witness",
-        "local-bad-ordinary-coloring",
-        "local-even-cycle",
-        "local-bad-six-colors",
-        "local-three-word",
-        "local-three-weights",
-        "local-extremality-rank",
-        "local-geometric-order-assumption",
-        "local-wrong-Y-embedding"
-      ],
-      "hint_free_proof": {
-        "status": "PASS_HINT_FREE_RUP",
-        "initial_clauses": 2271,
-        "steps": 1549,
-        "propagated_assignments": 196146,
-        "cnf_sha256": "d52d1850bb8f094696f0cb997285af108ef868ddc41b185b948def670d066355",
-        "scope": "Second propagation algorithm on the local semantic CNF; all supplied hints ignored. Not a second independent geometry derivation or ordinary NON5 proof."
-      },
-      "cyclic_extension": {
-        "status": "PASS",
-        "vertices": 86,
-        "actual_pairs": 3655,
-        "induced_edges": 110,
-        "coordinate_denominator": 12,
-        "rotation_order": 5,
-        "pattern_cycle_length": 3,
-        "compatibility_matrix": [
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            0,
-            1
-          ],
-          [
-            1,
-            0,
-            0
-          ]
-        ],
-        "checked_label_cycles": 243,
-        "admissible_five_label_cycles": 0,
-        "maximum_membership_hits": 4,
-        "sharp_invariant_mass": "4/5",
-        "proper_five_edge_checks": 550,
-        "orbit_points_in_Y": 56,
-        "local_three_atom_mass": 1,
-        "local_extreme_law_has_no_cyclic_extension": true,
-        "scope": "Sharp inequality for the explicit 86-point geometric order-five extension. The local 29-point three-atom law is a valid full15 law but does not extend to an eta-invariant law on this orbit. Does not decide the full-Y15 problem."
-      },
-      "cyclic_mutation_rejections": [
-        "cyclic-binding",
-        "cyclic-order",
-        "cyclic-sharp-mass",
-        "cyclic-improper-word",
-        "cyclic-missing-edge",
-        "cyclic-missing-copy"
-      ],
-      "individual_Y_extensions": {
-        "status": "PASS",
-        "separate_full_Y_extensions": 3,
-        "proper_edge_checks": 149574,
-        "scope": "Separate proper extensions only; no common motion law."
-      },
-      "individual_extension_rejections": [
-        "individual-wrong-word",
-        "individual-wrong-restriction",
-        "individual-binding"
-      ],
-      "exploration": {
-        "pricing_counterexamples": 58,
-        "pricing_words_checked": 94,
-        "pricing_largest_coefficient_bits": 485,
-        "zero_refinement_steps": 120,
-        "zero_event_records": 2112,
-        "zero_final_full_domains": [
-          14
-        ],
-        "scope": "Exact finite exploration prefixes and restricted-event counterexamples only; not all-word separation, event independence, or a full 15-domain law."
-      },
-      "cnf_calibration": {
-        "cases": 4,
-        "color_and_permutation_assignments": 570,
-        "one_bit_rejections": 11414,
-        "abstract_two_packet_hull_counterexample": true
-      },
-      "mutation_rejections": [
-        "base-sha",
-        "geometry-binding",
-        "wrong-motion-set",
-        "improper-first-word",
-        "duplicate-partition",
-        "unbalanced-weights",
-        "missing-deletion-word",
-        "wrong-deletion-scope",
-        "improper-deletion-word",
-        "no-proof",
-        "broadened-denial",
-        "wrong-cnf-hash",
-        "wrong-subformula-hash",
-        "wrong-nv",
-        "out-of-range-initial-clause",
-        "duplicate-initial-clause",
-        "boolean-initial-clause",
-        "missing-empty",
-        "negative-hint",
-        "forward-hint",
-        "verify_motion_packet.py:optimized-mode",
-        "test_motion_packet.py:optimized-mode",
-        "search_motion_packet.py:optimized-mode",
-        "verify_localized_motion_packet.py:optimized-mode",
-        "build_localized_motion_packet.py:optimized-mode",
-        "verify_localized_hintfree.py:optimized-mode",
-        "verify_cyclic_pattern_extension.py:optimized-mode",
-        "build_cyclic_pattern_extension.py:optimized-mode"
-      ],
-      "certificate_sha256": "64a9fd98f35c610df7d893926e67632f3bca47290474c6aadaf3e0e4fe15ab52",
-      "elapsed_seconds": 78.7936301210002,
-      "scope": "Fresh complete geometry/domain reconstruction and new certificates. Not an assertion that the original HN problem or all 15-domain laws are solved."
-    }
-  },
-  "publication": {
-    "remote_written": false,
-    "reason": "No connector write actions exposed; direct git push attempt failed DNS."
-  },
-  "scope": "Provisional local receipt; final status waits for the separate baseline runner.",
-  "label_mapping": {
-    "T140": "T141",
-    "T141": "T142",
-    "E112": "E113"
+  "status": "PASS_PHASED_FINAL_ENTRYPOINT_COVERAGE",
+  "base_commit": "ed4cfb044164b5d88413a2d53c7e030274d04bb8",
+  "integrated_remote_commit": "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa",
+  "own_results": [
+    "T141",
+    "T142",
+    "E113",
+    "C025"
+  ],
+  "parallel_results_preserved": [
+    "T140",
+    "E112"
+  ],
+  "label_collision_resolution": {
+    "provisional_T140": "T141",
+    "provisional_T141": "T142",
+    "provisional_E112": "E113"
   },
   "baseline": {
     "status": "PASS",
@@ -376,5 +30,419 @@
     "scope": "Frozen inherited baseline only; the new packet entry is checked separately.",
     "source_manifest_sha256": "a7cf5abec5fffbe332a588f88f3d028da8c5264e389962b9e1d5b29e087a3eaa",
     "log_sha256": "1f4e7637b54f600992ca3485253f424183dc4c542b2285108862d516ea266b9c"
-  }
+  },
+  "final_increment_replay": {
+    "schema": "integrated-increments-replay-v1",
+    "status": "PASS",
+    "source_manifest_sha256": "fc3f1ebee3c91ad88345cbe0558eda454fdea49f788a6e92d90b7e87eb340026",
+    "source_unchanged": true,
+    "source_files": 269,
+    "python": "3.13.5",
+    "started_utc": "2026-09-27T16:29:59.192228+00:00",
+    "commands": [
+      {
+        "name": "integrated-cyclic",
+        "command": [
+          "make",
+          "check-cyclic-translates"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 57.135747308000646,
+        "log_sha256": "038ba945e9b05fc61878b05979ce2191fe85b488bf80faed0abf3994c6007500"
+      },
+      {
+        "name": "integrated-moser",
+        "command": [
+          "python",
+          "-S",
+          "/mnt/data/hn-progress-20260928/parallel-moser-check.py"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 2.0950969630002874,
+        "log_sha256": "537ed717f58bc1aaef06950c1ecad8f43fa1ec0a2aff429d1ba93df09e58f4d4"
+      },
+      {
+        "name": "integrated-packet",
+        "command": [
+          "make",
+          "check-packet"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 78.12499125000068,
+        "log_sha256": "9729a644e70fa68b2d102a7d61c4024723bef8f078b49c4c40afd3891794e248"
+      }
+    ],
+    "scope": "Final integrated new targets and separately executed parallel Moser calibration. The original 11 targets were replayed on frozen ed4 earlier; not a single final-tree full make check."
+  },
+  "final_source_manifest_sha256": "fc3f1ebee3c91ad88345cbe0558eda454fdea49f788a6e92d90b7e87eb340026",
+  "final_source_files": 269,
+  "baseline_recipe_groups": 11,
+  "final_recipe_groups": 13,
+  "inherited_target_recipes_unchanged": true,
+  "inherited_remote_research_and_certificate_files_unchanged": 420,
+  "certificates": {
+    "two_atom_motion_packet.json.gz": "64a9fd98f35c610df7d893926e67632f3bca47290474c6aadaf3e0e4fe15ab52",
+    "motion_packet_exploration.json.gz": "dcfc8d6b04f4a04f16cf65aa82b72ffb69dba915438e8066b259b4770c192b63",
+    "localized_motion_packet.json": "9e26b24ef6c578cddf38113f3f3f1d2ed8bb34aae8c8c707693dd994a0cf7b09",
+    "cyclic_pattern_extension.json": "6ca0e87017f62aa68d54b665e565b686340ee96cb03687eeaf583ccf5df33116",
+    "cyclic_pattern_Y_extensions.json": "f76ee13754fe9041ecbe82f098f66fc8b532013af630cc7846fc93ebd0e2c0cd"
+  },
+  "new_target_results": {
+    "status": "PASS",
+    "packet": {
+      "status": "PASS",
+      "result": "MINIMUM_PARTITION_SUPPORT_EXACTLY_TWO",
+      "maximum_atom_mass": "1/2",
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14
+      ],
+      "input_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+      "negative_proof": {
+        "status": "VERIFIED_RUP_REFUTATION",
+        "initial_clauses": 21366,
+        "additions": 6521,
+        "deletions": 0,
+        "hinted_propagations": 3993681,
+        "empty_clause_id": 27887,
+        "rat_steps_accepted": 0
+      },
+      "full_domain_checks": [
+        {
+          "motion": 0,
+          "domain_size": 5084,
+          "complete_law": false
+        },
+        {
+          "motion": 1,
+          "domain_size": 556,
+          "complete_law": false
+        },
+        {
+          "motion": 2,
+          "domain_size": 5289,
+          "complete_law": false
+        },
+        {
+          "motion": 3,
+          "domain_size": 4671,
+          "complete_law": false
+        },
+        {
+          "motion": 4,
+          "domain_size": 1895,
+          "complete_law": false
+        },
+        {
+          "motion": 5,
+          "domain_size": 513,
+          "complete_law": true
+        },
+        {
+          "motion": 6,
+          "domain_size": 333,
+          "complete_law": true
+        },
+        {
+          "motion": 7,
+          "domain_size": 200,
+          "complete_law": false
+        },
+        {
+          "motion": 8,
+          "domain_size": 573,
+          "complete_law": false
+        },
+        {
+          "motion": 9,
+          "domain_size": 513,
+          "complete_law": true
+        },
+        {
+          "motion": 10,
+          "domain_size": 513,
+          "complete_law": false
+        },
+        {
+          "motion": 11,
+          "domain_size": 512,
+          "complete_law": true
+        },
+        {
+          "motion": 12,
+          "domain_size": 511,
+          "complete_law": false
+        },
+        {
+          "motion": 13,
+          "domain_size": 1866,
+          "complete_law": true
+        },
+        {
+          "motion": 14,
+          "domain_size": 29,
+          "complete_law": true
+        }
+      ],
+      "singleton_passed": [
+        [
+          5,
+          6,
+          11,
+          13,
+          14
+        ],
+        [
+          5,
+          6,
+          11,
+          13,
+          14
+        ]
+      ],
+      "two_word_edge_checks": 99716,
+      "omit_one_edge_checks": 299148,
+      "full_fifteen_domain_law": false,
+      "scope": "The specified six-motion subsystem only. Each deletion permits a singleton. The atom-mass statement additionally uses the written majority-atom proof; no new HN bound."
+    },
+    "localized_packet": {
+      "status": "PASS",
+      "vertices": 29,
+      "actual_pairs": 406,
+      "induced_edges": 30,
+      "ordinary_chromatic_number": 3,
+      "invariant_single_partition_colors": 6,
+      "minimum_five_color_partition_support": 2,
+      "full_local_domains_passed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "local_domain_sizes": [
+        1,
+        1,
+        13,
+        4,
+        15,
+        9,
+        10,
+        5,
+        4,
+        7,
+        3,
+        5,
+        4,
+        13,
+        2
+      ],
+      "three_atom_extreme_law": true,
+      "extremality_determinant": -3,
+      "three_atom_full_domains": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "eta_unique_support_matching": [
+        2,
+        0,
+        1
+      ],
+      "two_atom_hull_counterexample": true,
+      "order_five_support_lift_counterexample": true,
+      "six_motion_vertex_deletion_witnesses": 29,
+      "six_motion_deletion_witnesses": 6,
+      "negative_proof": {
+        "status": "VERIFIED_RUP_REFUTATION",
+        "initial_clauses": 2271,
+        "additions": 1549,
+        "deletions": 0,
+        "hinted_propagations": 187737,
+        "empty_clause_id": 3820,
+        "rat_steps_accepted": 0
+      },
+      "embedded_in_full_Y": true,
+      "scope": "The explicit 29-point induced subconfiguration and its own maximal domains. Vertex/motion criticality is relative to the six-motion singleton-five-color requirement. All15 here does not mean all15 on the original 10077-point Y. No minimum-size or HN claim."
+    },
+    "localized_mutation_rejections": [
+      "local-coordinate",
+      "local-denominator",
+      "local-missing-edge",
+      "local-missing-mapping",
+      "local-nonunit-normalization",
+      "local-wrong-cnf",
+      "local-proof-no-empty",
+      "local-unbalanced-pair",
+      "local-broadened-positive",
+      "local-duplicate-partition",
+      "local-missing-vertex-witness",
+      "local-bad-vertex-witness",
+      "local-bad-motion-witness",
+      "local-bad-ordinary-coloring",
+      "local-even-cycle",
+      "local-bad-six-colors",
+      "local-three-word",
+      "local-three-weights",
+      "local-extremality-rank",
+      "local-geometric-order-assumption",
+      "local-wrong-Y-embedding"
+    ],
+    "hint_free_proof": {
+      "status": "PASS_HINT_FREE_RUP",
+      "initial_clauses": 2271,
+      "steps": 1549,
+      "propagated_assignments": 196146,
+      "cnf_sha256": "d52d1850bb8f094696f0cb997285af108ef868ddc41b185b948def670d066355",
+      "scope": "Second propagation algorithm on the local semantic CNF; all supplied hints ignored. Not a second independent geometry derivation or ordinary NON5 proof."
+    },
+    "cyclic_extension": {
+      "status": "PASS",
+      "vertices": 86,
+      "actual_pairs": 3655,
+      "induced_edges": 110,
+      "coordinate_denominator": 12,
+      "rotation_order": 5,
+      "pattern_cycle_length": 3,
+      "compatibility_matrix": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "checked_label_cycles": 243,
+      "admissible_five_label_cycles": 0,
+      "maximum_membership_hits": 4,
+      "sharp_invariant_mass": "4/5",
+      "proper_five_edge_checks": 550,
+      "orbit_points_in_Y": 56,
+      "local_three_atom_mass": 1,
+      "local_extreme_law_has_no_cyclic_extension": true,
+      "scope": "Sharp inequality for the explicit 86-point geometric order-five extension. The local 29-point three-atom law is a valid full15 law but does not extend to an eta-invariant law on this orbit. Does not decide the full-Y15 problem."
+    },
+    "cyclic_mutation_rejections": [
+      "cyclic-binding",
+      "cyclic-order",
+      "cyclic-sharp-mass",
+      "cyclic-improper-word",
+      "cyclic-missing-edge",
+      "cyclic-missing-copy"
+    ],
+    "individual_Y_extensions": {
+      "status": "PASS",
+      "separate_full_Y_extensions": 3,
+      "proper_edge_checks": 149574,
+      "scope": "Separate proper extensions only; no common motion law."
+    },
+    "individual_extension_rejections": [
+      "individual-wrong-word",
+      "individual-wrong-restriction",
+      "individual-binding"
+    ],
+    "exploration": {
+      "pricing_counterexamples": 58,
+      "pricing_words_checked": 94,
+      "pricing_largest_coefficient_bits": 485,
+      "zero_refinement_steps": 120,
+      "zero_event_records": 2112,
+      "zero_final_full_domains": [
+        14
+      ],
+      "scope": "Exact finite exploration prefixes and restricted-event counterexamples only; not all-word separation, event independence, or a full 15-domain law."
+    },
+    "cnf_calibration": {
+      "cases": 4,
+      "color_and_permutation_assignments": 570,
+      "one_bit_rejections": 11414,
+      "abstract_two_packet_hull_counterexample": true
+    },
+    "mutation_rejections": [
+      "base-sha",
+      "geometry-binding",
+      "wrong-motion-set",
+      "improper-first-word",
+      "duplicate-partition",
+      "unbalanced-weights",
+      "missing-deletion-word",
+      "wrong-deletion-scope",
+      "improper-deletion-word",
+      "no-proof",
+      "broadened-denial",
+      "wrong-cnf-hash",
+      "wrong-subformula-hash",
+      "wrong-nv",
+      "out-of-range-initial-clause",
+      "duplicate-initial-clause",
+      "boolean-initial-clause",
+      "missing-empty",
+      "negative-hint",
+      "forward-hint",
+      "verify_motion_packet.py:optimized-mode",
+      "test_motion_packet.py:optimized-mode",
+      "search_motion_packet.py:optimized-mode",
+      "verify_localized_motion_packet.py:optimized-mode",
+      "build_localized_motion_packet.py:optimized-mode",
+      "verify_localized_hintfree.py:optimized-mode",
+      "verify_cyclic_pattern_extension.py:optimized-mode",
+      "build_cyclic_pattern_extension.py:optimized-mode"
+    ],
+    "certificate_sha256": "64a9fd98f35c610df7d893926e67632f3bca47290474c6aadaf3e0e4fe15ab52",
+    "elapsed_seconds": 77.89647698099998,
+    "scope": "Fresh complete geometry/domain reconstruction and new certificates. Not an assertion that the original HN problem or all 15-domain laws are solved."
+  },
+  "mutation_and_optimized_mode_rejections": 58,
+  "optional_research_replays": [
+    {
+      "command": "build_localized_motion_packet.py (local proper words, singleton proof and deletion witnesses)",
+      "log_sha256": "0fbb1c42ab0881926bd578686c3b84efdb2c538abb58c491da7e40109d14ff0d"
+    },
+    {
+      "command": "build_cyclic_pattern_extension.py (sharpness witness)",
+      "log_sha256": "8cf094263a1e0f8ca269a4a6c6f2759dc69fd8b191af489fef327e185fcceae4"
+    }
+  ],
+  "remote_publication": {
+    "performed": false,
+    "last_read_head": "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa",
+    "tool_surface": "Read-only GitHub actions; no write action returned by discovery.",
+    "cli_attempt": "git push --dry-run failed with DNS resolution error; no remote write attempted successfully."
+  },
+  "scope": "Fresh full ed4 baseline replay plus final integrated parallel and new targets. This covers every final Makefile check entry without claiming a single full execution on the final tree. General propositions rely on written proofs and validated finite certificates, not peer review or formalization. No new ordinary HN bound and no full-Y15 solution."
 }

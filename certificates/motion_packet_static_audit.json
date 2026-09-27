@@ -2,19 +2,20 @@
   "schema": "motion-packet-static-audit-v1",
   "status": "PASS",
   "date": "2026-09-28",
-  "python_syntax_files": 259,
-  "json_files": 163,
-  "markdown_local_file_targets": 577,
+  "python_syntax_files": 266,
+  "json_files": 169,
+  "markdown_local_file_targets": 602,
   "ledger_ids": {
-    "T": 140,
-    "E": 112,
-    "C": 24,
+    "T": 142,
+    "E": 113,
+    "C": 25,
     "Q": 11
   },
   "documents": {
-    "README.md": "3eda69a0289cac6c7038a33ec06677ffb943db2f36a50b8d17bdc065c16cbc60",
-    "docs/CURRENT.md": "978cf03295d7e1ec6aa2c9e3ca790ab01e7900570bb273279bfdb505fa01b522",
-    "docs/proofs/two_atom_motion_packet.md": "57c5550b65b2913077c485167a3685cdd17438d1889c3f2d6dcf0e0e3435ec0f"
+    "README.md": "bf2a60cc5bc3cdf5bd6cab8fa432cc2b057943596027bffaee20828514dcf0af",
+    "docs/CURRENT.md": "05c54b39444d1d798c7a13635e302ba099af28a9a8942620c3ea317f77a2236b",
+    "docs/proofs/two_atom_motion_packet.md": "5c3b0a72b42476f252dd38a17e70c056a30dabc7107551dde3d98b2283f110fd",
+    "docs/proofs/cyclic_pattern_extension.md": "21056e33e335b2125d78ca7f1be9844010d10332b4adf04ec65e8bfd1f5bd272"
   },
   "scope": "Syntax, JSON parseability, local file links and exact ledger counts. Not exhaustive Markdown anchors, peer review, or mathematical theorem formalization."
 }
