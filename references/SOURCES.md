@@ -612,3 +612,17 @@ Annals of Mathematics 155 (2002), 807–836，https://arxiv.org/abs/math/0409604
 LRAT参照：https://arxiv.org/abs/1612.02353v2 。本轮读取作者摘要；
 新通道仅认证positive-hinted RUP，保留一般RAT不支持与资源超限的明确状态。
 Haugland作者页/v2引言、de Grey作者页本轮再次复核，不扩大为外部构造全部计算重放。
+
+
+## 2026-09-28：T141/E112来源与证据层级
+
+- PySAT官方`pysat.solvers`文档：本轮读取proof logging、`solve_limited`及冲突预算接口；
+  https://pysathq.github.io/docs/html/api/solvers.html 。当前页面标题版本与本轮安装的
+  python-sat 1.9.dev15未必相同，实际版本由搜索记录给出。只把官方接口解释作为来源，不以文档认证求解结果。
+- Cruz-Filipe等，Efficient Certified RAT Verification，https://arxiv.org/abs/1612.02353 ：
+  本轮重新打开作者摘要页作证明格式来源参照；本轮未重新逐页阅读或重放其形式化开发。
+  本库仍只接受明确支持的hinted-RUP子集，独立重放自己保存的反证。
+- Haugland，https://arxiv.org/abs/2608.04542 ：本轮重新核对作者页；
+  不是新的普通六色下界。本轮不重复扩大此前v2的阅读声明，也不重放外部完整构造。
+- T140多数原子引理和指定Γ的两原子结论在本库完整证明/证书中处理，不依赖未经读取的外部数学定理，
+  不主张这些一般思想的文献首创。
