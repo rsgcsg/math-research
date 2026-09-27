@@ -1,0 +1,18 @@
+{
+  "schema": "hn-publication-cleanup-replay-v1",
+  "date": "2026-09-27",
+  "status": "PASS_TARGETED_UNCHANGED_SOURCE",
+  "checked_commit": "bc71fe48b90e57efb62120f302acf4add2d7e306",
+  "original_checkpoint": "875c4f802125f804039ae43586d3c2a8caa19b3d",
+  "source_file_count": 254,
+  "source_manifest_sha256": "a7cf5abec5fffbe332a588f88f3d028da8c5264e389962b9e1d5b29e087a3eaa",
+  "source_unchanged": true,
+  "command": "make check-next",
+  "returncode": 0,
+  "python": "3.13.5",
+  "started_utc": "2026-09-27T07:54:08.871217+00:00",
+  "completed_utc": "2026-09-27T07:56:16.251130+00:00",
+  "log_sha256": "721a5a02d780ea3cfe832c280b7be4d128744d4f8e6bdcd8735a28753b8a2833",
+  "run_id": "36304515525",
+  "scope": "Fresh independent check-next plus byte identity of all inherited research and certificates to checkpoint 875c4f8. Not a fresh full make check, formalization, or new HN bound. Existing full-baseline and staged evidence remain in baseline_next_validation.json."
+}

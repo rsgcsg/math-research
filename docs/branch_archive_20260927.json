@@ -1,0 +1,41 @@
+{
+  "schema": "hn-branch-archive-v1",
+  "date": "2026-09-27",
+  "status": "PASS",
+  "checked_main": "bc71fe48b90e57efb62120f302acf4add2d7e306",
+  "prior_main": "4a11fe3f4a957b166fd8f340d950a2a9563a5cec",
+  "cleanup_run": "36304515525",
+  "timestamp_utc": "2026-09-27T07:56:19.626831+00:00",
+  "branches": [
+    {
+      "branch": "research/rotation-integration-20260926",
+      "expected_sha": "3af5a63622185c1393f8e30efda41609ea223230",
+      "archive_tag": "archive/2026-09-27/research/rotation-integration-20260926",
+      "ancestor_of_main": true,
+      "result": "ARCHIVED_AND_DELETED"
+    },
+    {
+      "branch": "research/rotation-rank2-20260926",
+      "expected_sha": "482b53020f36900ab2fcceff801ee2eb84893d94",
+      "archive_tag": "archive/2026-09-27/research/rotation-rank2-20260926",
+      "ancestor_of_main": true,
+      "result": "ARCHIVED_AND_DELETED"
+    }
+  ],
+  "branches_after": {
+    "main": "bc71fe48b90e57efb62120f302acf4add2d7e306"
+  },
+  "guards": [
+    "explicit-two-branch-whitelist",
+    "exact-branch-heads",
+    "merged-ancestry",
+    "no-open-PR",
+    "no-active-branch-run",
+    "no-conflicting-archive",
+    "atomic-tag-and-delete",
+    "per-ref-expected-SHA-lease",
+    "remote-readback",
+    "unrelated-refs-unchanged"
+  ],
+  "scope": "Branch pointers only; full history retained by exact tags. Old archive tags are unchanged."
+}
