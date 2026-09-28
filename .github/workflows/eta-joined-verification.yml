@@ -1,0 +1,42 @@
+name: Verify anchored eta and exact three-atom joint law
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/joint-continuation-20260928]
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Fetch the exact public source commit without saved credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --depth=1 origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Independently reconstruct geometry and replay both RUP cases
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: |
+          set -o pipefail
+          git rev-parse HEAD > "$RUNNER_TEMP/checked-commit.txt"
+          make check-eta-support 2>&1 | tee "$RUNNER_TEMP/eta-support-check.log"
+          git diff --exit-code
+      - name: Save the exact checked commit and complete output
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: eta-support-independent-replay
+          path: |
+            ${{ runner.temp }}/checked-commit.txt
+            ${{ runner.temp }}/eta-support-check.log
+          retention-days: 30
+          if-no-files-found: error

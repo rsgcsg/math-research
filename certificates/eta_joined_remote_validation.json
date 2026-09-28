@@ -1,0 +1,20 @@
+{
+  "schema": "eta-joined-remote-replay-v1",
+  "status": "PASS",
+  "date": "2026-09-28",
+  "run_id": 36374324777,
+  "job_id": 108776931026,
+  "checked_commit": "6ff96a8a7d489be7594adb68bb987b33b466eaff",
+  "checked_tree": "f31090e45738f1e35f114499f9143b38352da61e",
+  "command": "make check-eta-support",
+  "python": "3.13.5",
+  "returncode": 0,
+  "post_replay_git_diff_empty": true,
+  "artifact_id": 10950412614,
+  "artifact_sha256": "a98b0a512e3b075cc069142de9c19809e98ecaf6e50c12fd4799842df09570cd",
+  "complete_output_sha256": "d9ed7c32d2da774a26e5c59a2ae9a368ef8b3dab11e263314ed6761a2548d5d6",
+  "output_equals_clean_local_replay": true,
+  "source_file_count": 264,
+  "source_manifest_sha256": "2f338d97ebad788f3806bac43732087fa63581689489de82d235da98062d1978",
+  "scope": "Actual independent remote replay of the new feature from the published Git commit, not a fresh full make check. Geometry is rebuilt, all three words and 34 laws checked, both two-state CNFs rebuilt and refuted by hint-free RUP. Later documentation-only commits do not change this source manifest. General normal-form and arbitrary-weight conclusions rely on their full written proofs. No HN bound or full fifteen-domain solution is claimed."
+}
