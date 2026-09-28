@@ -1,0 +1,50 @@
+name: Full-domain coupling verification
+on:
+  push:
+    branches: [research/full15-coupling-20260928]
+    paths: [.github/workflows/full15-coupling.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Fetch exact source without stored credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          git branch export-snapshot HEAD
+          git bundle create "$RUNNER_TEMP/source.bundle" export-snapshot
+          git archive --format=zip HEAD > "$RUNNER_TEMP/source.zip"
+          git rev-parse HEAD > "$RUNNER_TEMP/checked-commit.txt"
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Independent feature replay
+        run: |
+          set -o pipefail
+          make check-eta-support 2>&1 | tee "$RUNNER_TEMP/feature-check.log"
+          if test -f research/test_full15_coupling.py; then
+            python3 -S research/test_full15_coupling.py 2>&1 | tee "$RUNNER_TEMP/coupling-check.log"
+          fi
+          git diff --exit-code
+      - name: Preserve source and actual output
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: full15-coupling-source-and-replay
+          path: |
+            ${{ runner.temp }}/source.bundle
+            ${{ runner.temp }}/source.zip
+            ${{ runner.temp }}/checked-commit.txt
+            ${{ runner.temp }}/feature-check.log
+            ${{ runner.temp }}/coupling-check.log
+          retention-days: 30
+          if-no-files-found: error
