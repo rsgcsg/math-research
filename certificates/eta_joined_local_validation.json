@@ -1,0 +1,26 @@
+{
+  "schema": "eta-joined-local-replay-v1",
+  "date": "2026-09-28",
+  "status": "PASS",
+  "base_commit": "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa",
+  "isolated_from_unpublished_checkpoint": true,
+  "command": "make check-eta-support",
+  "python": "3.13.5",
+  "returncode": 0,
+  "started_utc": "2026-09-28T03:32:10.665391+00:00",
+  "finished_utc": "2026-09-28T03:32:49.699336+00:00",
+  "log_sha256": "d9ed7c32d2da774a26e5c59a2ae9a368ef8b3dab11e263314ed6761a2548d5d6",
+  "research_source_count": 264,
+  "source_manifest_sha256": "2f338d97ebad788f3806bac43732087fa63581689489de82d235da98062d1978",
+  "source_manifest_rule": "SHA256 of compact sorted-key JSON mapping Makefile, requirements-research.txt and all research/*.py relative paths to byte SHA256",
+  "whole_Y_word_edge_checks": 149574,
+  "separately_checked_observations": 34,
+  "two_state_cases": [
+    {"eta_support": [0,1], "full_variables": 95854, "full_clauses": 764438, "initial_clause_subset": 2695, "rup_additions": 882},
+    {"eta_support": [1,0], "full_variables": 92659, "full_clauses": 744526, "initial_clause_subset": 3537, "rup_additions": 511}
+  ],
+  "malformed_input_and_optimization_rejections": 40,
+  "two_variable_CNF_truth_table_calibrations": 255,
+  "finite_palette_gauge_cases": 120,
+  "scope": "A fresh complete replay of the new feature on a clean checkout of the actual remote baseline, using only Python standard-library modules and previously published geometry checkers. The arbitrary-weight minimum-three conclusion also uses the written normal-form and majority-atom proofs. Not a fresh single full make check, not the original fifteen-domain joint law, and not a new ordinary Hadwiger-Nelson bound."
+}
