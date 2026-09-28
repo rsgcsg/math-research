@@ -1,0 +1,86 @@
+{
+  "schema": "pinned-native-proof-export-reproducer-v1",
+  "python_sat": "1.9.dev15",
+  "solver": "CaDiCaL 1.9.5",
+  "wrapper_source_sha256": "253654d8efabae650a0d136ad2f2e6d30b57206b1fb70846c714197468a28f7e",
+  "tests": [
+    {
+      "cnf": [
+        [
+          1
+        ],
+        [
+          -1
+        ]
+      ],
+      "early_get_proof": [],
+      "flushed_snapshot": [
+        "0",
+        "d -1 0"
+      ],
+      "stream": {
+        "bytes_before_native_flush": 0,
+        "bytes_after_native_flush": 5,
+        "bytes_after_teardown": 5,
+        "teardown_parse_complete": true,
+        "prefix_unchanged": true,
+        "before_parse_complete": true,
+        "after_parse_complete": true
+      },
+      "independent_check": {
+        "status": "VERIFIED_RUP_REFUTATION",
+        "initial_clauses": 2,
+        "additions": 1,
+        "final_empty": true,
+        "solver_imports": false
+      }
+    },
+    {
+      "cnf": [
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          -2
+        ],
+        [
+          -1,
+          -2
+        ]
+      ],
+      "early_get_proof": [],
+      "flushed_snapshot": [
+        "-2 0",
+        "1 0",
+        "0"
+      ],
+      "stream": {
+        "bytes_before_native_flush": 0,
+        "bytes_after_native_flush": 8,
+        "bytes_after_teardown": 8,
+        "teardown_parse_complete": true,
+        "prefix_unchanged": true,
+        "before_parse_complete": true,
+        "after_parse_complete": true
+      },
+      "independent_check": {
+        "status": "VERIFIED_RUP_REFUTATION",
+        "initial_clauses": 4,
+        "additions": 3,
+        "final_empty": true,
+        "solver_imports": false
+      }
+    }
+  ],
+  "header_only_old_parser": [
+    "0"
+  ],
+  "header_only_strict_parser_rejected": true,
+  "scope": "Observed on the archived Linux wheel only. A truncated export is not a logical UNSAT certificate; existing independently verified proofs are not invalidated."
+}

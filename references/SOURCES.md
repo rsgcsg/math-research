@@ -626,3 +626,11 @@ Diane Maclagan, *Polyhedral structures on tropical varieties*, arXiv:1302.5372v1
 T140的有限缺陷条带/有限颜色核均附本地完整证明；一般思想不主张原创优先权。
 本轮重开Haugland v2 HTML引言与de Grey作者页，普通5/7界没有变化。
 广泛检索所得三维六色、分数指标和未认证仓库声明没有作为二维HN新界使用。
+
+
+## 2026-09-28：全15域支持认证的外部输入范围
+
+- PySAT官方API：https://pysathq.github.io/docs/html/api/solvers.html 。本次打开页面标题为1.9.dev12；实际搜索使用既有来源绑定轮子1.9.dev15，二者不混同。证明导出问题另由安装源码和本地最小例证实，不把在线文档视作该特定缺陷的声明。
+- Efficient Certified RAT Verification：https://arxiv.org/abs/1612.02353 。本次只使用RUP思想及既有独立检查器，不声称完整RAT实现或形式化验证。
+- Haugland：https://arxiv.org/html/2608.04542v2 。本次重新打开的2026无Moser-spindle五色构造来源，用于核对普通5/7范围；不把其他染色指标混同为普通新界。
+- 远端4c3e2313902b40bbfbf63cbc673a45e2951f991f的加权η正规形已阅读；新全15域证明自足重述其所需部分。未称该分支已经合并。

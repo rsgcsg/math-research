@@ -1,0 +1,193 @@
+{
+  "schema": "full15-further-search-observations-v1",
+  "base_commit": "a885b67c172726e14884cb43cd37b965dbb32575",
+  "records": [
+    {
+      "schema": "full15-finite-support-search-v1",
+      "kind": "uniform",
+      "eta_case": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "eta_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "m": 4,
+      "input_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+      "nv": 293484,
+      "clauses": 3181304,
+      "cnf_sha256": "a202708264728265cd0a0ffd864a610eafc903701462bb6d0875bd7d83c24816",
+      "budget": 100000,
+      "initial_hint": "published three-word S packet; not a constraint",
+      "solver": "cadical195",
+      "status": "UNSAT_UNCERTIFIED",
+      "solve_seconds": 13.096006123999985,
+      "stats": {
+        "restarts": 382,
+        "conflicts": 18746,
+        "decisions": 92005,
+        "propagations": 26561078
+      },
+      "elapsed_seconds": 21.262209079
+    },
+    {
+      "schema": "full15-finite-support-search-v1",
+      "kind": "uniform",
+      "eta_case": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "eta_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "m": 5,
+      "input_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+      "nv": 366925,
+      "clauses": 4435490,
+      "cnf_sha256": "bb4ed15f4ff48ae4dffbcb1013063be29970120fa6bfe45de660c95ab52679f3",
+      "budget": 40000,
+      "initial_hint": "published three-word S packet; not a constraint",
+      "solver": "cadical195",
+      "status": "UNSAT_UNCERTIFIED",
+      "solve_seconds": 30.03377896400002,
+      "stats": {
+        "restarts": 711,
+        "conflicts": 32648,
+        "decisions": 114488,
+        "propagations": 41577143
+      },
+      "elapsed_seconds": 42.03620181499997
+    },
+    {
+      "schema": "full15-finite-support-search-v1",
+      "kind": "uniform",
+      "eta_case": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "eta_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "m": 6,
+      "input_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+      "nv": 440394,
+      "clauses": 5873388,
+      "cnf_sha256": "4cded2ff37f8c3422cd8e1f90ae9a5e30288a14270c7f64f800cd3c572fe18fa",
+      "budget": 40000,
+      "initial_hint": "published three-word S packet; not a constraint",
+      "solver": "cadical195",
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "solve_seconds": 42.76553973699998,
+      "stats": {
+        "restarts": 606,
+        "conflicts": 40001,
+        "decisions": 182032,
+        "propagations": 77238568
+      },
+      "elapsed_seconds": 57.890007379
+    },
+    {
+      "schema": "old14-three-query-v1",
+      "full_motion_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "eta_support": [
+        0,
+        1,
+        2
+      ],
+      "conflict_budget": 100000,
+      "status": "UNSAT_UNCERTIFIED",
+      "stats": {
+        "restarts": 184,
+        "conflicts": 5973,
+        "decisions": 22431,
+        "propagations": 6590028
+      },
+      "seconds": 8.373149680999859,
+      "nv": 219672,
+      "clauses": 2106927,
+      "cnf_sha256": "2321263d5e7837d7f2ed049a08ab9e5f66b8f7cd7d8ccb82a7676508e123b172"
+    }
+  ],
+  "scope": "Budgeted finite-support observations only. No independent negative proof and no claim of completeness for these larger-support or reduced-motion searches."
+}

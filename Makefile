@@ -1,4 +1,4 @@
-.PHONY: check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore
+.PHONY: check-translate-kernel check-unit-translate check-full15-support check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore
 
 check:
 	python3 research/verify.py
@@ -14,6 +14,9 @@ check:
 	$(MAKE) check-next
 	$(MAKE) check-cyclic-translates
 	$(MAKE) check-eta-support
+	$(MAKE) check-full15-support
+	$(MAKE) check-unit-translate
+	$(MAKE) check-translate-kernel
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -62,3 +65,12 @@ check-cyclic-translates:
 
 check-eta-support:
 	python3 -S research/test_eta_joined_support.py
+
+check-full15-support:
+	python3 -S research/test_full15_support.py
+
+check-unit-translate:
+	python3 -S research/verify_unit_translate.py
+
+check-translate-kernel:
+	python3 -S research/verify_integer_translate_kernel.py
