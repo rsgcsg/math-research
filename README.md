@@ -4,6 +4,21 @@
 [当前状态](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线](docs/ROUTES.md) ·
 [统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md)。
 
+## 2026-09-29 第二轮：从七重几何得到无限宿主定理
+
+- **T150：** Haugland的整个84方向加法宿主**恰四色**，原表六种标号均已全局延拓。
+  赋值＋CM/Kronecker证明其全部实际单位方向恰是这84个，不是假定没有隐藏跨边。
+  下界由21点核的完整三色排除树独立验证。
+- 继续扩到`L_m=Σr^j O`，完整方向恰有`42(m+1)`个。第二层的模2商
+  **T151严格至少六色**，关闭该商的所有五色公式；这不是实际单位图或平面的六色下界。
+- 随后实际检查729点的另一剩余域目标，五/六色查询仍UNKNOWN，没有新全域上界。
+  第二层7939点的实际单位图也已独立重建，五色查询UNKNOWN，不构成下界。
+  full15任意支持问题仍未决；错误的跨运动同步乘积推论已剔除。
+
+[完整证明与执行结果](docs/proofs/heptagon_cm_module.md) ·
+[六份全局公式](certificates/heptagon_table_extensions.json)。
+**这是严格的局部研究进展，不是原始HN突破。**
+
 ## 2026-09-29：远端归并、完整三原子排除与方法边界
 
 - 原Y的**全部15个完整域不存在至多三原子共同律**，允许任意实权重。
@@ -27,6 +42,7 @@ T138的整个同中心双自由旋转宿主仍恰五色。
 source .venv/bin/activate  # make setup可准备环境；全仓检查要求Python≥3.10，CI固定3.13.5
 make check-full15-support
 make check-eta-support
+make check-heptagon-module
 make check
 ```
 

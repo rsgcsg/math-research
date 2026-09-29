@@ -1,0 +1,53 @@
+{
+  "schema": "heptagon-round-verification-v1",
+  "date": "2026-09-29",
+  "base_commit": "4e2b3b506e3fbcf2c4ee28d8e6d296fcf5ca4fbc",
+  "python": "3.14.6",
+  "platform": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
+  "command": "env PATH=/Users/fire/Desktop/math-research/.venv/bin:$PATH make check",
+  "exit_code": 0,
+  "full_log": "certificates/heptagon_round_20260929_full_check.log.gz",
+  "scope": "Full local regression including final recursive check-heptagon-module with the actual-patch verifier. Not hosted CI, formal proof, peer review, or an HN resolution.",
+  "checks": {
+    "source_patterns_extended": 6,
+    "direction_value_checks": 504,
+    "three_color_tree_branches": 193,
+    "three_color_tree_blocked_leaves": 22,
+    "mutation_rejections": 24,
+    "finite_quotient_chromatic_lower_bound": 6,
+    "actual_patch_vertices": 7939,
+    "actual_patch_edges": 38682,
+    "actual_patch_five_coloring_status": "UNKNOWN"
+  },
+  "notes": [
+    "The running top-level make invoked the final recursive heptagon target; its full log contains all three final verification commands.",
+    "Only two auto-generated historical runtime fields were restored after replay: dyadic elapsed_seconds and finite_frame python.",
+    "Bounded SAT queries are provenance, not negative mathematical certificates; the actual patch has two equivalent triangle-color-normalization executions.",
+    "All new search/check modules passed py_compile; git diff --check passed."
+  ],
+  "sha256": {
+    "Makefile": "c786ebaebdcbe8e3058d7b5156cf548ab18aaab14a97a6401e65456fbf2ff217",
+    "README.md": "bf0dfc91fe5d7edbe1422222ccce8249be8fb3295fbbd88a453dccf07caf4e52",
+    "certificates/heptagon_actual_patch.json.gz": "2cb651dad0c9ca4a55271b292f0da3df80a71befe59598ca58e37e03cd6bb819",
+    "certificates/heptagon_module.json": "91ae18a3443cb0c4a7f45ddee4883e1a17f4291db13e74c6126ea2318b26556a",
+    "certificates/heptagon_residue27_probe.json": "9c1135d10edff9168090d6f4ceed8230c89417520285e2300ec8ab4a5b9c3e2e",
+    "certificates/heptagon_round_20260929_full_check.log.gz": "7704054582ee4b3cfe93c03b24e0b8a5fd586bd1dbe42e076cb449e774bedbb1",
+    "certificates/heptagon_table_extensions.json": "b02b115dbe60eab02e6ae3a3401c2346ef6ecff9570c06cbf3d8c15a65ba8fa0",
+    "certificates/heptagon_three_tree.json": "e66c0a3d7a915c68870928c67fa6368f5517f103874d620069136b25c597a922",
+    "docs/CURRENT.md": "762583e2e3e8eb1dafa118b5dd15b0969a9a1ea476da46303c0163e7996781d3",
+    "docs/RESULTS.md": "ee37c43667b8c12fb0c4e35117e59c44705e7421b362967e3eb840bb3a026a49",
+    "docs/ROUTES.md": "1d80ff7a410e67bfbb40058f427ff538cf4cad34083e2f6fcfe39cdf6a36e4a5",
+    "docs/proofs/heptagon_cm_module.md": "2d9d681cf5b1b3575a7091257fba612ea137226e242ab7408ff76c58944f68cf",
+    "docs/proofs/hn_unified_framework.md": "7380c0b4d49d74eb564c22e5f219fdd9fddbd917e3310b55850a46de4267976d",
+    "references/LITERATURE_MAP.md": "1edb2f71fd87fdcbc0833814813af0c7677265f0b42dbc0b4d397d5bfeb80a11",
+    "references/SOURCES.md": "b3478635bae632480dacb54d243645a132b3a6d911fdafc563056b940432090a",
+    "research/search_heptagon_actual_patch.py": "ef8cff6f54f215b35e1a1e34f43e448a15fe55858aab3236fd6a29fcb021a916",
+    "research/search_heptagon_module.py": "4f2468a5cce4ed854464ccfabe2fe90ea42ead682ba6aadbf505c4450fa1cec7",
+    "research/search_heptagon_residue27.py": "eeca6de975c5c9ada2603b2cb4ac358d3cd326933442af2ab75404ebd6634610",
+    "research/search_heptagon_three_tree.py": "a701a06f24e189dc9814f14102eb2e412b00960db96e8d9cf3058280141a434a",
+    "research/test_heptagon_module.py": "67b23d050275a15afb23d776c43ad4d6ee7931ac9ba0f3c82fc8baaa544fac4d",
+    "research/verify_heptagon_actual_patch.py": "55241bcc85fafe1d45d7fc09504accd6ea51746fe2169a474a46f9470b27bba8",
+    "research/verify_heptagon_module.py": "45d4f19ef88c1cd2c93d54a03f595ef4d5612ba8e34cf3e9c3ea551922bdd56f",
+    "research/verify_heptagon_residue27.py": "e7c5fb70b80d502652a2f28c09e52360e83213c0ee88cd4c0f1cffe87bcfb8db"
+  }
+}

@@ -1,4 +1,4 @@
-.PHONY: check-python check-joined-pricing check-full15-support check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore
+.PHONY: check-heptagon-module check-python check-joined-pricing check-full15-support check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore
 .DEFAULT_GOAL := check
 
 check-python:
@@ -19,6 +19,7 @@ check: check-python
 	$(MAKE) check-cyclic-translates
 	$(MAKE) check-eta-support
 	$(MAKE) check-full15-support
+	$(MAKE) check-heptagon-module
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -80,3 +81,8 @@ check-joined-pricing:
 	python3 -S research/verify_joined_seed_pricing.py
 	python3 -S research/test_joined_seed_pricing.py
 	python3 -S research/verify_joined_negative_probe.py
+
+check-heptagon-module:
+	python3 -S research/test_heptagon_module.py
+	python3 -S research/verify_heptagon_residue27.py
+	python3 -S research/verify_heptagon_actual_patch.py

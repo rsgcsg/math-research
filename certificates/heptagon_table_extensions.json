@@ -1,0 +1,18 @@
+{
+  "schema": "heptagon-table2-extensions-v1",
+  "source_url": "https://arxiv.org/html/2608.04542v4",
+  "raw_html_sha256": "c538a20c2c840b30c48f0b9cf822224053dddd6c93bc2b6fc1a74e266a1c9245",
+  "source_table": "S4.T2, application/x-tex annotations, retrieved 2026-09-29",
+  "basis": "1,X,...,X^11; X=zeta21, z=X^3,w=X^7",
+  "color_labels": {"A": 1, "B": 2, "C": 3},
+  "shift": "u_(j+14) cycles A to B to C to A",
+  "extensions": [
+    {"row": 1, "first14": "AAAAACAABABBCB", "masks": [3019, 1532]},
+    {"row": 2, "first14": "AAAACAABCCABBC", "masks": [3207, 1022]},
+    {"row": 3, "first14": "AAABBCBBAACAAB", "masks": [4077, 1714]},
+    {"row": 4, "first14": "AAACBBACBBACCC", "masks": [2953, 1278]},
+    {"row": 5, "first14": "ABABABBAACACCB", "masks": [2991, 2040]},
+    {"row": 6, "first14": "ABACACCBCBABCA", "masks": [2479, 2012]}
+  ],
+  "scope": "Six specific source labellings each have a global additive four-color extension on L1. No classification of every global coloring is claimed."
+}

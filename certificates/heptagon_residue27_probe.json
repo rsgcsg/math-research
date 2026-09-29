@@ -1,0 +1,96 @@
+{
+  "claim_scope": "Cayley graph of additive F_729 with all 28 solutions of d^28=1 as directions",
+  "field": {
+    "characteristic": 3,
+    "degree": 6,
+    "size": 729,
+    "defining_polynomial": "1+X+X^2+X^3+X^4+X^5+X^6",
+    "irreducible_check": "Phi_7 has order(3 mod 7)=6, hence is irreducible over F_3",
+    "conjugation": "a -> a^27",
+    "unit_difference_equation": "Relative norm F_729/F_27: d^(3^3+1)=d^28=1; kernel has 28 elements"
+  },
+  "exact_graph_checks": {
+    "vertices": 729,
+    "directions_d28_eq_1": 28,
+    "all_28_roots_enumerated_exactly": true,
+    "regular_degree": 28,
+    "edges": 10206,
+    "sorted_edge_list_sha256": "0e26cd12fd5fe98a8be273c994613d214cb9cc06e860af97cf968c029d06cf2d",
+    "clique_vertices": [
+      0,
+      1,
+      2
+    ]
+  },
+  "sat": [
+    {
+      "colors": 5,
+      "status": "UNKNOWN",
+      "wall_seconds": 0.795,
+      "conflicts": 20363,
+      "wall_timeout": false,
+      "coloring": null
+    },
+    {
+      "colors": 6,
+      "status": "UNKNOWN",
+      "wall_seconds": 1.267,
+      "conflicts": 23030,
+      "wall_timeout": false,
+      "coloring": null
+    }
+  ],
+  "interpretation": "Finite graph results do not alone establish a plane coloring or plane lower bound.",
+  "symmetry_normalized_sat": [
+    {
+      "colors": 5,
+      "solver": "Glucose3",
+      "conflict_budget": 150000,
+      "wall_time_limit_seconds": 20,
+      "symmetry_normalized": true,
+      "symmetry_breaking_unit_clauses": [
+        [
+          1
+        ],
+        [
+          7
+        ],
+        [
+          13
+        ]
+      ],
+      "cnf_clause_count": 59052,
+      "cnf_sha256": "9e4b8e5b88755127ff6638a7455520c1a4485b65cc5f94da8f7253ea5aa5819d",
+      "status": "UNKNOWN",
+      "wall_seconds": 9.255,
+      "conflicts": 150176,
+      "wall_timeout": false,
+      "coloring": null
+    },
+    {
+      "colors": 6,
+      "solver": "Glucose3",
+      "conflict_budget": 150000,
+      "wall_time_limit_seconds": 20,
+      "symmetry_normalized": true,
+      "symmetry_breaking_unit_clauses": [
+        [
+          1
+        ],
+        [
+          8
+        ],
+        [
+          15
+        ]
+      ],
+      "cnf_clause_count": 72903,
+      "cnf_sha256": "9f7c6ffdae8ccb633d2c4530743506ffbf0343a26168cf11a9e293a1498b85cc",
+      "status": "UNKNOWN",
+      "wall_seconds": 10.056,
+      "conflicts": 150355,
+      "wall_timeout": false,
+      "coloring": null
+    }
+  ]
+}

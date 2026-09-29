@@ -656,3 +656,24 @@ T140的有限缺陷条带/有限颜色核均附本地完整证明；一般思想
 Petri T-invariant、边际多面体及gain graph在[本轮重审](../docs/proofs/research_reassessment_20260929.md)
 用作明确线性代数/群论对应，不借名称声称新的外部定理或HN结论。
 T144/T146/T148和C025的证明在本地自足，独立有限检查范围另见各文件。
+
+## 2026-09-29 第二轮：从原始七重构造到完整CM模
+
+- Haugland，[arXiv:2608.04542v4](https://arxiv.org/html/2608.04542v4)，2026-08-17。
+  主代理重读§2–4、Table1/2；随后直接抓取原始HTML，按`S4.T2`中
+  `application/x-tex`注释提取六行，避免检索摘要/表格转写的差异。
+  原件置于忽略的`references/cache/heptagon-v4-round2.html`，SHA256
+  `c538a20c2c840b30c48f0b9cf822224053dddd6c93bc2b6fc1a74e266a1c9245`。
+  [六行及延拓证书](../certificates/heptagon_table_extensions.json)保留版本、原件哈希、输入与公式。
+  本轮独立重建21点完整几何和六种方向标号延拓，不冒称重放740点四色反证、
+  2131点全部性质或83581点局部分类；历史读到的v2记录不改写。
+- J. S. Milne，[Algebraic Number Theory](https://www.jmilne.org/math/CourseNotes/ANT.pdf)，
+  实际读Theorem6.4及证明、Lemma6.5、Remark6.6(b)，PDF页100–102附近。
+  用于混合分圆域的整数环、分歧指数、互素判别式整数基和μ(Qζ21)=μ42；
+  不是把仅素数幂Proposition6.2直接套到21。
+- Ben Lynn，[Kummer's Lemma](https://crypto.stanford.edu/pbc/notes/numberfield/kummerlemma.html)，
+  读其幂的最小多项式系数有界论证。这里只借用Kronecker步骤的成熟证明，
+  本地完整重写；不使用后面的奇素数Kummer结论。
+
+[T150–T151](../docs/proofs/heptagon_cm_module.md)的方向穷尽与谱界为本地证明，
+E116为独立有限检查；E117的四次UNKNOWN只是搜索记录，不是文献或数学下界。
