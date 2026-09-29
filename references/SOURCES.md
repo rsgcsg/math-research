@@ -626,3 +626,33 @@ Diane Maclagan, *Polyhedral structures on tropical varieties*, arXiv:1302.5372v1
 T140的有限缺陷条带/有限颜色核均附本地完整证明；一般思想不主张原创优先权。
 本轮重开Haugland v2 HTML引言与de Grey作者页，普通5/7界没有变化。
 广泛检索所得三维六色、分数指标和未认证仓库声明没有作为二维HN新界使用。
+
+## 2026-09-29：跨领域复核与精确阅读范围
+
+- Albert Atserias、Phokion G. Kolaitis，*Consistency, Acyclicity, and Positive Semirings*，
+  [arXiv:2009.09488v1](https://arxiv.org/html/2009.09488v1)，2020-09。
+  实际读取Theorem3及§4.2有关定义；保留“固定positive semiring、所有相容关系、超图无环”的量词。
+  未为HN十五域构造join tree，不作为新联合正解。
+- Albert Atserias、Víctor Dalmau，*Promise Constraint Satisfaction and Width*，
+  [arXiv:2107.05886v1 PDF](https://arxiv.org/pdf/2107.05886)，2021-07。
+  HTML访问不稳定，改读PDF摘要及引言第1–4页；只使用其中固定3≤p≤q近似图染色无次线性width的陈述。
+  任意图结果没有自动转移到平面单位图，不据此断言HN的最小见证规模。
+- Tara Abrishami等，*Periodic colorings and orientations in infinite graphs*，
+  [arXiv:2411.01951v3](https://arxiv.org/html/2411.01951v3)，2025-06-17。
+  本轮读引言及§5的Theorem5.2/5.4和证明；两端/局部有限/拟传递条件明确保留，不外推二维SFT。
+- Jan Kristian Haugland，*A Moser-spindle-free 5-chromatic unit distance graph on 2131 vertices in the plane*，
+  [arXiv:2608.04542v2](https://arxiv.org/html/2608.04542v2)，2026-08-06。
+  本轮读引言、Proposition2.1、Lemma2.2与§3；Lemma2.2明确包含双精度穷举。
+  外部构造提供七重几何线索，本仓未重放全部精确几何及负证书，不升级为本轮认证。
+  收尾再次打开作者页发现最新已为[2026-08-17 v4](https://arxiv.org/html/2608.04542v4)，
+  不能再把历史“v2仍最新”当现状。主代理读v4引言、Lemma2.2、§3–4；Luna对照v2/v4。
+  上述几何/负证明的证据边界未变；新§4给局部四色差标签分类，明确未证明全格延伸。
+  文中还引用Heule 2021的更小无spindle例，但本轮未读该原文，不单独采纳精确纪录声明。
+- Aubrey de Grey，*The chromatic number of the plane is at least 5*，
+  [arXiv:1804.02385](https://arxiv.org/abs/1804.02385)，作者页/摘要再次复核。
+  Ágoston，[arXiv:2112.07665](https://arxiv.org/abs/2112.07665)，本轮只读作者摘要作为概率语言线索，
+  没有引用未读正文的精确定理。
+
+Petri T-invariant、边际多面体及gain graph在[本轮重审](../docs/proofs/research_reassessment_20260929.md)
+用作明确线性代数/群论对应，不借名称声称新的外部定理或HN结论。
+T144/T146/T148和C025的证明在本地自足，独立有限检查范围另见各文件。

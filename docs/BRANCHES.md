@@ -1,6 +1,30 @@
 # 分支、成果与恢复
 
-## 当前：2026-09-27收尾完成
+## 当前审计：2026-09-29
+
+起点`research/rotation-rank2-20260926`的482b530已是远端main祖先，
+本地main先快进到`a885b67c172726e14884cb43cd37b965dbb32575`。
+本轮在`research/consolidation-20260929`吸收4c3e231并开展新工作，不覆盖独有历史。
+
+| 远端分支 | 本轮回读的精确头 | 处理与数学状态 |
+|---|---|---|
+| main | a885b67c172726e14884cb43cd37b965dbb32575 | 本轮起点，不代表后续发布头 |
+| research/full15-coupling-20260928 | 4c3e2313902b40bbfbf63cbc673a45e2951f991f | 加权正规形并入本轮，证明编为T144；旧一次性工作流不是新反证 |
+| research/intrinsic-eta-cycle-20260928 | 09926d59b176c1f649aa30f7ec397fb8fa9ef9fa | 已是main祖先，未重造结果 |
+| research/joint-continuation-20260928 | b1e4aa8f307010fb7e5322a6cec6403665e32d0e | 已是main祖先，未重造结果 |
+| research/triangular-lattice-20260928 | 578bd83c3a47d9a2b9eeed6dc6cbd2651c0f1793 | 独有三角格文稿保留，尚缺下列证据 |
+| research/mixed-motion-20260929 | 384275f1c655794b8efccfd75dfd31a8bc2d03d2 | 在三角格文稿上增加工作流，没有新的数学证据 |
+
+三角格文稿声称9624代表、79007接触及Y+Λ恰五色，但这两个分支均不存在文中引用的
+`certificates/triangular_lattice_five_coloring.json`、`research/verify_triangular_lattice.py`、
+`research/search_triangular_lattice.py`。登记为未独立重放的历史主张，不作为本轮定理或退休平移路线的依据。
+未合并该主张进主结果，也未删除远端分支。历史未发布f986eb0a对象不在本地，T141–T143仅留占位。
+
+本轮移除已被标准Makefile替代的`full15-coupling.yml`一次性工作流；原内容可从4c3e231恢复。
+常规verify.yml保留；本地验证与远端CI状态分别记录。最终发布以Git头与验证收据为准。
+[本轮本地验证收据](../certificates/consolidation_20260929_verification.json)保留完整及补充运行的准确范围。
+
+## 2026-09-27历史快照：当时收尾完成
 
 两条旋转研究分支的全部提交均已进入main，包括原本地d5ef85a…与875c4f8…的完整Git对象历史。
 PR #5的合并提交为4a11fe3f4a957b166fd8f340d950a2a9563a5cec。

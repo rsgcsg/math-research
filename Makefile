@@ -1,6 +1,10 @@
-.PHONY: check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore
+.PHONY: check-python check-joined-pricing check-full15-support check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore
+.DEFAULT_GOAL := check
 
-check:
+check-python:
+	python3 -c 'import sys; sys.exit("Python >=3.10 required; activate .venv before make check" if sys.version_info < (3, 10) else 0)'
+
+check: check-python
 	python3 research/verify.py
 	$(MAKE) check-salem
 	$(MAKE) check-quartet
@@ -14,6 +18,7 @@ check:
 	$(MAKE) check-next
 	$(MAKE) check-cyclic-translates
 	$(MAKE) check-eta-support
+	$(MAKE) check-full15-support
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -62,3 +67,16 @@ check-cyclic-translates:
 
 check-eta-support:
 	python3 -S research/test_eta_joined_support.py
+
+check-full15-support:
+	python3 -S research/test_palette_difference.py
+	python3 -S research/test_connected_partition_marginals.py
+	python3 -S research/test_weighted_transport.py
+	python3 -S research/verify_three_atom_mass.py
+	python3 -S research/test_full15_support.py
+	$(MAKE) check-joined-pricing
+
+check-joined-pricing:
+	python3 -S research/verify_joined_seed_pricing.py
+	python3 -S research/test_joined_seed_pricing.py
+	python3 -S research/verify_joined_negative_probe.py

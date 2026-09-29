@@ -1,39 +1,35 @@
 # Hadwiger–Nelson research
 
-目标：决定普通欧氏平面的单位距离色数。**本项目尚未改变5≤χ(R²)≤7。**
-[当前状态](docs/CURRENT.md) · [已有编号账本](docs/RESULTS.md) · [历史路线](docs/ROUTES.md) ·
+目标：决定普通欧氏平面的单位距离色数。**尚未改变5≤χ(R²)≤7。**
+[当前状态](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线](docs/ROUTES.md) ·
 [统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md)。
 
-## 2026-09-28：共同观察系统被三词精确修复
+## 2026-09-29：远端归并、完整三原子排除与方法边界
 
-本轮证明：`S=F∪Γ∪完整η域` 的五色共同律**最小划分支持数恰为3，允许任意实权重**。
-三份完整10077点五色词通过149574项实际边检查和34项明确的分布义务；
-两种η支持匹配的二词情形由独立RUP反证全部排除。
-三词律还是整个S可行多面体的极点。**它只满足原15个完整域中的7个，不是15域正解。**
+- 原Y的**全部15个完整域不存在至多三原子共同律**，允许任意实权重。
+  六种完备情形已有独立重建、RUP反证；不是把求解器UNSAT直接当定理。
+- 一般尖锐质量界：无三原子律时，任意三个完整划分至多占9/10。
+  另给真实平面构造，说明五色η正规形不能直接推广到六色。
+- 继续证明：连通实际χ5单位图仍不能用统一固定阶边际识别任意支持划分律；
+  [核心接树的奇偶构造](docs/proofs/connected_partition_marginal_ceiling.md)明确保留其非结论。
+- **这些都不是原问题突破。** 任意支持的共同律仍未知；主攻转向跨支持的全词严格势，
+  不把m=4、5、6的枚举自动当作下一研究路线。
 
-- [完整定义、正负证明和质量界](docs/proofs/eta_joined_minimum_three.md)
-- [固定点有限阶运动的调色板正规形](docs/proofs/anchored_eta_normalization.md)：保留支持数和支持匹配，不偷加σ⁵=id。
-- [三原子权重分类](docs/proofs/three_atom_weight_types.md)：无二原子解时，只可能等权或1/2、1/4、1/4。
+[完整反证](docs/proofs/full15_three_atom_exclusion.md) · [9/10定理](docs/proofs/three_atom_mass_gap.md) ·
+[五/六色正规形区别](docs/proofs/anchored_palette_threshold.md) ·
+[本轮结构重审](docs/proofs/research_reassessment_20260929.md)。
 
-上述结果直接使用已发布09926d59基线的精确几何，**不依赖尚未全部发布的T141–T143代码**。
-本轮采用描述性文件名登记，避免与本地历史检查点的既有T/E编号冲突；没有覆盖旧编号或历史UNKNOWN。
+已有S子系统仍最少三原子；其正律只通过原15域中的7个。
+T138的整个同中心双自由旋转宿主仍恰五色。
+远端三角格/混合运动文稿缺失所引用证据，未提升为已验证定理；见[分支审计](docs/BRANCHES.md)。
 
 ```sh
-make check-eta-support    # 标准库：真实几何、三词正例、两种反证和40项拒绝测试
-make check                # 包含新增入口；不重新执行搜索
+source .venv/bin/activate  # make setup可准备环境；全仓检查要求Python≥3.10，CI固定3.13.5
+make check-full15-support
+make check-eta-support
+make check
 ```
 
-本地干净基线和GitHub Actions运行36374324777均完成新增入口，退出0，输出逐字节相同。
-[本地收据](certificates/eta_joined_local_validation.json) · [远端收据](certificates/eta_joined_remote_validation.json)。
-不冒称本轮在最终树上重新完成单次全仓回归；一般结论仍依赖完整书面证明，不是形式化或同行评审声明。
-
-## 已有资产及其边界
-
-T138的整个双自由旋转宿主H′Y恰五色；T139分类平移接触，但不自动给有效窗口或五色延拓。
-T140/E112对具有非零有限赋值的共同单旋转底数完成有效接触枚举与有限核校准；
-不是一般双旋转平移算法，也不证明所有这些核都可五染。
-E111已经排除指定事件势族的严格分离；本轮S正律进一步关闭S内部的全词负搜索。
-
-主攻必须使用尚未修复的八个原始完整域的联合信息；几何备线寻找真实自由五色关系收缩。
-有限下界只需认证所列单位边，不必先穷尽无限宿主；诱导图或无限宿主的正结论才需要相应完整覆盖。
-整个平面上界另需全配置论证。研究时先读[AGENTS.md](AGENTS.md)，不要将固定支持失败当成任意支持反证。
+独立检查仅需Python标准库；搜索另用固定研究依赖。先读[AGENTS.md](AGENTS.md)。
+真实有限NON5需要精确单位边与完整不可五染证据；全平面六色上界需要全配置量词。
+UNKNOWN、固定词库/周期失败、缺证书的文稿和漂亮新几何都不代替这些义务。
