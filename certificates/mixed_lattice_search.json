@@ -1,0 +1,171 @@
+{
+  "schema": "mixed-lattice-search-record-v1",
+  "date": "2026-09-29",
+  "input_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "queries": [
+    {
+      "file": "lattice5/slope2.json",
+      "result": {
+        "schema": "mixed-triangular-clock-v1",
+        "levels": 5,
+        "slope": 2,
+        "status": "UNKNOWN_AFFINE_MODEL",
+        "budget": 50000,
+        "stats": {
+          "restarts": 1800,
+          "conflicts": 50002,
+          "decisions": 264791,
+          "propagations": 19340570
+        },
+        "seconds": 8.620571090999874,
+        "representative_sha256": "26f4eca9dab3f0fa919e064033a2c5dc0c1300967a0e3e972ca420239c81e13b",
+        "gain_sha256": "801062025ca2af14bb640d904770768515fe53e399492ac13770f7ab38b18c0f"
+      }
+    },
+    {
+      "file": "lattice5/slope3.json",
+      "result": {
+        "schema": "mixed-triangular-clock-v1",
+        "levels": 5,
+        "slope": 3,
+        "status": "UNKNOWN_AFFINE_MODEL",
+        "budget": 50000,
+        "stats": {
+          "restarts": 2183,
+          "conflicts": 50001,
+          "decisions": 277364,
+          "propagations": 19600378
+        },
+        "seconds": 7.747540086000072,
+        "representative_sha256": "26f4eca9dab3f0fa919e064033a2c5dc0c1300967a0e3e972ca420239c81e13b",
+        "gain_sha256": "801062025ca2af14bb640d904770768515fe53e399492ac13770f7ab38b18c0f"
+      }
+    },
+    {
+      "file": "lattice5/slope4.json",
+      "result": {
+        "schema": "mixed-triangular-clock-v1",
+        "levels": 5,
+        "slope": 4,
+        "status": "UNKNOWN_AFFINE_MODEL",
+        "budget": 50000,
+        "stats": {
+          "restarts": 1487,
+          "conflicts": 50000,
+          "decisions": 239854,
+          "propagations": 18730436
+        },
+        "seconds": 8.243493103999981,
+        "representative_sha256": "26f4eca9dab3f0fa919e064033a2c5dc0c1300967a0e3e972ca420239c81e13b",
+        "gain_sha256": "801062025ca2af14bb640d904770768515fe53e399492ac13770f7ab38b18c0f"
+      }
+    },
+    {
+      "file": "multiphase/period2-B1.json",
+      "result": {
+        "schema": "mixed-triangular-multiphase-v1",
+        "levels": 5,
+        "period": 2,
+        "increment": 1,
+        "representative_sha256": "26f4eca9dab3f0fa919e064033a2c5dc0c1300967a0e3e972ca420239c81e13b",
+        "gain_sha256": "801062025ca2af14bb640d904770768515fe53e399492ac13770f7ab38b18c0f",
+        "variables": 204610,
+        "clauses": 2183423,
+        "budget": 60000,
+        "stats": {
+          "restarts": 2340,
+          "conflicts": 60000,
+          "decisions": 266788,
+          "propagations": 23430155
+        },
+        "seconds": 15.213331119000031,
+        "status": "UNKNOWN_MULTIPHASE_MODEL"
+      }
+    },
+    {
+      "file": "multiphase/period2-B0.json",
+      "result": {
+        "schema": "mixed-triangular-multiphase-v1",
+        "levels": 5,
+        "period": 2,
+        "increment": 0,
+        "representative_sha256": "26f4eca9dab3f0fa919e064033a2c5dc0c1300967a0e3e972ca420239c81e13b",
+        "gain_sha256": "801062025ca2af14bb640d904770768515fe53e399492ac13770f7ab38b18c0f",
+        "variables": 204610,
+        "clauses": 2183423,
+        "budget": 60000,
+        "stats": {
+          "restarts": 2119,
+          "conflicts": 60000,
+          "decisions": 410621,
+          "propagations": 27428900
+        },
+        "seconds": 20.026364424999883,
+        "status": "UNKNOWN_MULTIPHASE_MODEL"
+      }
+    },
+    {
+      "file": "multiphase/period2-B2.json",
+      "result": {
+        "schema": "mixed-triangular-multiphase-v1",
+        "levels": 5,
+        "period": 2,
+        "increment": 2,
+        "representative_sha256": "26f4eca9dab3f0fa919e064033a2c5dc0c1300967a0e3e972ca420239c81e13b",
+        "gain_sha256": "801062025ca2af14bb640d904770768515fe53e399492ac13770f7ab38b18c0f",
+        "variables": 204610,
+        "clauses": 2183423,
+        "budget": 60000,
+        "stats": {
+          "restarts": 3192,
+          "conflicts": 60000,
+          "decisions": 416253,
+          "propagations": 31954955
+        },
+        "seconds": 20.72268667200001,
+        "status": "UNKNOWN_MULTIPHASE_MODEL"
+      }
+    }
+  ],
+  "free_finite_patch": {
+    "schema": "finite-mixed-lattice-patch-v1",
+    "window": 2,
+    "seed_levels": 5,
+    "vertices": 84901,
+    "edges": 557038,
+    "vertex_gain_sha256": "5408c3a874a44fc4891772b154dc898c0c780c1b958f9b1c0add505eb9594218",
+    "edges_sha256": "479dc2941eba169f58a3407d9b6057143bab847004890103a8af14dc9ffe9343",
+    "source_geometry_sha256": "801062025ca2af14bb640d904770768515fe53e399492ac13770f7ab38b18c0f",
+    "status": "UNKNOWN_FREE_COLORING",
+    "budget": 30000,
+    "stats": {
+      "restarts": 2453,
+      "conflicts": 30002,
+      "decisions": 301668,
+      "propagations": 20215347
+    },
+    "seconds": 21.472191999000188
+  },
+  "scope": "Raw bounded searches only. Every UNKNOWN and uncertified negative remains nonconclusive; the mixed infinite host has not been colored or refuted here.",
+  "free_finite_patch_additional_query": {
+    "schema": "free-mixed-patch-warm-query-v1",
+    "backend": "glucose42",
+    "vertices": 84901,
+    "actual_edges": 557038,
+    "triangle": [
+      0,
+      1,
+      2
+    ],
+    "budget": 750000,
+    "status": "UNKNOWN_FREE_COLORING",
+    "stats": {
+      "restarts": 2436,
+      "conflicts": 750744,
+      "decisions": 1769921,
+      "propagations": 176672385
+    },
+    "seconds": 71.42976447199999
+  },
+  "local_search_scope": "A native local search reached 119 conflicting edges on the finite 84901-point patch; this is not a proper coloring. Its assignment was only a phase hint for the subsequent unrestricted query."
+}

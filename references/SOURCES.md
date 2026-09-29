@@ -626,3 +626,18 @@ Diane Maclagan, *Polyhedral structures on tropical varieties*, arXiv:1302.5372v1
 T140的有限缺陷条带/有限颜色核均附本地完整证明；一般思想不主张原创优先权。
 本轮重开Haugland v2 HTML引言与de Grey作者页，普通5/7界没有变化。
 广泛检索所得三维六色、分数指标和未认证仓库声明没有作为二维HN新界使用。
+
+
+## 2026-09-29：本轮跨结构参照与实际阅读范围
+
+- [Alon–Alweiss, arXiv:1905.10483v2](https://arxiv.org/abs/1905.10483v2)：
+  本次打开作者摘要，使用proper coloring portfolio/product dimension术语；未依赖渐近定理。
+  本轮另需单射签名且每个因子固定K5，由56份实际全Y词独立认证。
+- [Bradley-Williams–Cameron–Hubička–Konečný, arXiv:2311.07995v3](https://arxiv.org/abs/2311.07995v3)：
+  本次阅读作者摘要的普通图EPPA定义及版本/发表信息（JCTB170,2025），没有调用其规模界。
+  64点单位Q6的颜色/概率矛盾是本库自足证明，不将图部分同构冒充真实部分等距。
+- [Abrishami等, arXiv:2411.01951v3](https://arxiv.org/abs/2411.01951v3)：
+  本次打开作者摘要与HTML，当前新增论证不调用其条件定理。周期性不能无条件假设；
+  本库三角格公式仅作为有明确全边证书的正构造，三个斜率的失败不否定全部五染色。
+
+原5/7界仍据已核对的普通HN来源。2026年高维覆盖/分数或地图型结果不被混记为平面普通新界。

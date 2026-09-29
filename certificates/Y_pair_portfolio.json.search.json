@@ -1,0 +1,1196 @@
+{
+  "status": "POSITIVE_CANDIDATE_REQUIRES_INDEPENDENT_CHECK",
+  "word_count": 56,
+  "seed": 20260929,
+  "python_sat": "1.9.dev15",
+  "solver": "cadical195",
+  "queries": [
+    {
+      "stage": "different",
+      "pair": [
+        8160,
+        9428
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 58174,
+        "propagations": 779183
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        8170,
+        9098
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 63145,
+        "propagations": 829570
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        104,
+        2011
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 68117,
+        "propagations": 879958
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        107,
+        188
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 73091,
+        "propagations": 930347
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        237,
+        5554
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 78065,
+        "propagations": 980737
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        525,
+        7142
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 83039,
+        "propagations": 1031128
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        927,
+        1252
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 88011,
+        "propagations": 1081520
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        1308,
+        1891
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 92984,
+        "propagations": 1131913
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        1312,
+        1915
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 97954,
+        "propagations": 1182307
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        1699,
+        7391
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 102925,
+        "propagations": 1232702
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        3104,
+        5902
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 107897,
+        "propagations": 1283098
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        3320,
+        7800
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 112871,
+        "propagations": 1333495
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        4199,
+        4207
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 117845,
+        "propagations": 1383893
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        4213,
+        8587
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 122821,
+        "propagations": 1434292
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        4708,
+        4817
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 127806,
+        "propagations": 1484692
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        5875,
+        8492
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 132790,
+        "propagations": 1535093
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        8168,
+        9134
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 137772,
+        "propagations": 1585495
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        8433,
+        9428
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 142754,
+        "propagations": 1635898
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        8512,
+        9367
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 147734,
+        "propagations": 1686302
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        8541,
+        9098
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 152721,
+        "propagations": 1736707
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        8680,
+        8882
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 157708,
+        "propagations": 1787113
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        9185,
+        9189
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 162689,
+        "propagations": 1837520
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        9289,
+        9461
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 167668,
+        "propagations": 1887928
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        9295,
+        9463
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 172646,
+        "propagations": 1938337
+      }
+    },
+    {
+      "stage": "different",
+      "pair": [
+        9410,
+        9942
+      ],
+      "result": "True",
+      "stats": {
+        "restarts": 33,
+        "conflicts": 578,
+        "decisions": 177622,
+        "propagations": 1988747
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        6269,
+        10032
+      ],
+      "pending": 864654,
+      "result": "True",
+      "stats": {
+        "restarts": 36,
+        "conflicts": 2339,
+        "decisions": 46325,
+        "propagations": 767629
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        5434,
+        9771
+      ],
+      "pending": 691128,
+      "result": "True",
+      "stats": {
+        "restarts": 74,
+        "conflicts": 3767,
+        "decisions": 85265,
+        "propagations": 1352899
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        6197,
+        6559
+      ],
+      "pending": 552613,
+      "result": "True",
+      "stats": {
+        "restarts": 135,
+        "conflicts": 5383,
+        "decisions": 123842,
+        "propagations": 2738336
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        285,
+        3372
+      ],
+      "pending": 442653,
+      "result": "True",
+      "stats": {
+        "restarts": 349,
+        "conflicts": 6733,
+        "decisions": 168241,
+        "propagations": 4392971
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        3386,
+        3605
+      ],
+      "pending": 354192,
+      "result": "True",
+      "stats": {
+        "restarts": 578,
+        "conflicts": 7943,
+        "decisions": 216638,
+        "propagations": 4987952
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        4033,
+        5068
+      ],
+      "pending": 283199,
+      "result": "True",
+      "stats": {
+        "restarts": 789,
+        "conflicts": 9392,
+        "decisions": 264178,
+        "propagations": 5618225
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        7487,
+        7575
+      ],
+      "pending": 226366,
+      "result": "True",
+      "stats": {
+        "restarts": 991,
+        "conflicts": 11152,
+        "decisions": 320101,
+        "propagations": 6389554
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        6333,
+        8010
+      ],
+      "pending": 181059,
+      "result": "True",
+      "stats": {
+        "restarts": 1159,
+        "conflicts": 12616,
+        "decisions": 372450,
+        "propagations": 7088096
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        1773,
+        3544
+      ],
+      "pending": 144896,
+      "result": "True",
+      "stats": {
+        "restarts": 1296,
+        "conflicts": 13808,
+        "decisions": 416535,
+        "propagations": 7643986
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        7811,
+        7832
+      ],
+      "pending": 115886,
+      "result": "True",
+      "stats": {
+        "restarts": 1483,
+        "conflicts": 15371,
+        "decisions": 466636,
+        "propagations": 8882192
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        5530,
+        8626
+      ],
+      "pending": 92696,
+      "result": "True",
+      "stats": {
+        "restarts": 1639,
+        "conflicts": 16675,
+        "decisions": 509434,
+        "propagations": 9440461
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        7150,
+        9837
+      ],
+      "pending": 74295,
+      "result": "True",
+      "stats": {
+        "restarts": 1825,
+        "conflicts": 18054,
+        "decisions": 556559,
+        "propagations": 11198778
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        6026,
+        7101
+      ],
+      "pending": 59802,
+      "result": "True",
+      "stats": {
+        "restarts": 1980,
+        "conflicts": 20012,
+        "decisions": 602646,
+        "propagations": 11897750
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        5486,
+        5795
+      ],
+      "pending": 47930,
+      "result": "True",
+      "stats": {
+        "restarts": 2125,
+        "conflicts": 21189,
+        "decisions": 652672,
+        "propagations": 12495856
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        5276,
+        7519
+      ],
+      "pending": 38377,
+      "result": "True",
+      "stats": {
+        "restarts": 2230,
+        "conflicts": 22563,
+        "decisions": 700030,
+        "propagations": 13049983
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        5450,
+        6276
+      ],
+      "pending": 30794,
+      "result": "True",
+      "stats": {
+        "restarts": 2326,
+        "conflicts": 23821,
+        "decisions": 744797,
+        "propagations": 13585210
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        6087,
+        8807
+      ],
+      "pending": 24653,
+      "result": "True",
+      "stats": {
+        "restarts": 2463,
+        "conflicts": 25210,
+        "decisions": 799663,
+        "propagations": 14257161
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        8483,
+        9190
+      ],
+      "pending": 19776,
+      "result": "True",
+      "stats": {
+        "restarts": 2577,
+        "conflicts": 26941,
+        "decisions": 843117,
+        "propagations": 14852323
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        3320,
+        8470
+      ],
+      "pending": 15806,
+      "result": "True",
+      "stats": {
+        "restarts": 2644,
+        "conflicts": 28281,
+        "decisions": 885444,
+        "propagations": 15367001
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        4233,
+        5132
+      ],
+      "pending": 12564,
+      "result": "True",
+      "stats": {
+        "restarts": 2737,
+        "conflicts": 29629,
+        "decisions": 925301,
+        "propagations": 15869068
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        2002,
+        6278
+      ],
+      "pending": 10076,
+      "result": "True",
+      "stats": {
+        "restarts": 2844,
+        "conflicts": 30933,
+        "decisions": 965366,
+        "propagations": 16940809
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        145,
+        8163
+      ],
+      "pending": 8066,
+      "result": "True",
+      "stats": {
+        "restarts": 2967,
+        "conflicts": 32679,
+        "decisions": 1012852,
+        "propagations": 17575078
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        210,
+        5929
+      ],
+      "pending": 6440,
+      "result": "True",
+      "stats": {
+        "restarts": 3092,
+        "conflicts": 33955,
+        "decisions": 1055976,
+        "propagations": 18096936
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        2014,
+        2086
+      ],
+      "pending": 5128,
+      "result": "True",
+      "stats": {
+        "restarts": 3204,
+        "conflicts": 35298,
+        "decisions": 1097486,
+        "propagations": 19786616
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        1919,
+        2320
+      ],
+      "pending": 4156,
+      "result": "True",
+      "stats": {
+        "restarts": 3292,
+        "conflicts": 36828,
+        "decisions": 1136630,
+        "propagations": 20310557
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        4538,
+        6211
+      ],
+      "pending": 3330,
+      "result": "True",
+      "stats": {
+        "restarts": 3397,
+        "conflicts": 38036,
+        "decisions": 1174284,
+        "propagations": 20815466
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        1715,
+        9576
+      ],
+      "pending": 2676,
+      "result": "True",
+      "stats": {
+        "restarts": 3522,
+        "conflicts": 39383,
+        "decisions": 1213990,
+        "propagations": 21363801
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        3715,
+        9295
+      ],
+      "pending": 2134,
+      "result": "True",
+      "stats": {
+        "restarts": 3609,
+        "conflicts": 40940,
+        "decisions": 1249423,
+        "propagations": 21871585
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        4095,
+        8369
+      ],
+      "pending": 1707,
+      "result": "True",
+      "stats": {
+        "restarts": 3731,
+        "conflicts": 42092,
+        "decisions": 1285088,
+        "propagations": 22341078
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        599,
+        9904
+      ],
+      "pending": 1380,
+      "result": "True",
+      "stats": {
+        "restarts": 3839,
+        "conflicts": 43560,
+        "decisions": 1325298,
+        "propagations": 22902043
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        772,
+        1596
+      ],
+      "pending": 1112,
+      "result": "True",
+      "stats": {
+        "restarts": 3956,
+        "conflicts": 45124,
+        "decisions": 1364412,
+        "propagations": 23450268
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        428,
+        3213
+      ],
+      "pending": 884,
+      "result": "True",
+      "stats": {
+        "restarts": 4043,
+        "conflicts": 46415,
+        "decisions": 1400240,
+        "propagations": 23914463
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        3626,
+        9201
+      ],
+      "pending": 719,
+      "result": "True",
+      "stats": {
+        "restarts": 4176,
+        "conflicts": 47769,
+        "decisions": 1440668,
+        "propagations": 24474023
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        3753,
+        4807
+      ],
+      "pending": 570,
+      "result": "True",
+      "stats": {
+        "restarts": 4288,
+        "conflicts": 49508,
+        "decisions": 1481180,
+        "propagations": 25083656
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        4209,
+        4218
+      ],
+      "pending": 450,
+      "result": "True",
+      "stats": {
+        "restarts": 4429,
+        "conflicts": 50780,
+        "decisions": 1521996,
+        "propagations": 26206579
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        534,
+        8483
+      ],
+      "pending": 365,
+      "result": "True",
+      "stats": {
+        "restarts": 4551,
+        "conflicts": 52108,
+        "decisions": 1559922,
+        "propagations": 26736106
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        1265,
+        1873
+      ],
+      "pending": 280,
+      "result": "True",
+      "stats": {
+        "restarts": 4643,
+        "conflicts": 53383,
+        "decisions": 1593567,
+        "propagations": 27207247
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        1603,
+        3964
+      ],
+      "pending": 224,
+      "result": "True",
+      "stats": {
+        "restarts": 4752,
+        "conflicts": 54841,
+        "decisions": 1634413,
+        "propagations": 27742896
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        275,
+        8349
+      ],
+      "pending": 177,
+      "result": "True",
+      "stats": {
+        "restarts": 4858,
+        "conflicts": 56207,
+        "decisions": 1673584,
+        "propagations": 28265411
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        6265,
+        6308
+      ],
+      "pending": 134,
+      "result": "True",
+      "stats": {
+        "restarts": 4967,
+        "conflicts": 57470,
+        "decisions": 1714030,
+        "propagations": 28803337
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        308,
+        3250
+      ],
+      "pending": 107,
+      "result": "True",
+      "stats": {
+        "restarts": 5074,
+        "conflicts": 58881,
+        "decisions": 1747851,
+        "propagations": 30483495
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        9872,
+        10068
+      ],
+      "pending": 95,
+      "result": "True",
+      "stats": {
+        "restarts": 5211,
+        "conflicts": 60149,
+        "decisions": 1783820,
+        "propagations": 31000179
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        243,
+        5775
+      ],
+      "pending": 81,
+      "result": "True",
+      "stats": {
+        "restarts": 5328,
+        "conflicts": 61454,
+        "decisions": 1818456,
+        "propagations": 31504951
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        188,
+        641
+      ],
+      "pending": 60,
+      "result": "True",
+      "stats": {
+        "restarts": 5439,
+        "conflicts": 62645,
+        "decisions": 1851448,
+        "propagations": 31966477
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        4429,
+        5240
+      ],
+      "pending": 45,
+      "result": "True",
+      "stats": {
+        "restarts": 5543,
+        "conflicts": 64087,
+        "decisions": 1886732,
+        "propagations": 32465756
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        5908,
+        8751
+      ],
+      "pending": 32,
+      "result": "True",
+      "stats": {
+        "restarts": 5625,
+        "conflicts": 65338,
+        "decisions": 1921375,
+        "propagations": 32925252
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        613,
+        8684
+      ],
+      "pending": 28,
+      "result": "True",
+      "stats": {
+        "restarts": 5732,
+        "conflicts": 66588,
+        "decisions": 1956021,
+        "propagations": 33396068
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        204,
+        1806
+      ],
+      "pending": 23,
+      "result": "True",
+      "stats": {
+        "restarts": 5834,
+        "conflicts": 67915,
+        "decisions": 1993030,
+        "propagations": 33903294
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        645,
+        1003
+      ],
+      "pending": 18,
+      "result": "True",
+      "stats": {
+        "restarts": 5912,
+        "conflicts": 69504,
+        "decisions": 2035363,
+        "propagations": 34483644
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        1549,
+        1888
+      ],
+      "pending": 11,
+      "result": "True",
+      "stats": {
+        "restarts": 6012,
+        "conflicts": 70762,
+        "decisions": 2069312,
+        "propagations": 34957518
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        768,
+        4634
+      ],
+      "pending": 8,
+      "result": "True",
+      "stats": {
+        "restarts": 6118,
+        "conflicts": 71974,
+        "decisions": 2105894,
+        "propagations": 35445007
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        120,
+        3890
+      ],
+      "pending": 6,
+      "result": "True",
+      "stats": {
+        "restarts": 6213,
+        "conflicts": 73266,
+        "decisions": 2143910,
+        "propagations": 35952052
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        2026,
+        8406
+      ],
+      "pending": 4,
+      "result": "True",
+      "stats": {
+        "restarts": 6297,
+        "conflicts": 74639,
+        "decisions": 2178184,
+        "propagations": 36429388
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        175,
+        843
+      ],
+      "pending": 2,
+      "result": "True",
+      "stats": {
+        "restarts": 6406,
+        "conflicts": 75908,
+        "decisions": 2212002,
+        "propagations": 37481810
+      }
+    },
+    {
+      "stage": "equal",
+      "pair": [
+        3081,
+        3693
+      ],
+      "pending": 1,
+      "result": "True",
+      "stats": {
+        "restarts": 6536,
+        "conflicts": 77129,
+        "decisions": 2246919,
+        "propagations": 37990485
+      }
+    },
+    {
+      "stage": "seed_removal",
+      "pairs": 246,
+      "result": "True",
+      "stats": {
+        "restarts": 90,
+        "conflicts": 2189,
+        "decisions": 96723,
+        "propagations": 1741419
+      }
+    }
+  ],
+  "seconds": 66.85167119100001
+}

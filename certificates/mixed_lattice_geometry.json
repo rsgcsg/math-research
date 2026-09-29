@@ -1,0 +1,16 @@
+{
+  "status": "GEOMETRY_PASS_COLORABILITY_UNDECIDED",
+  "input_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "seed_points": 22041,
+  "representatives": 20461,
+  "denominator": 480,
+  "contacts": 173328,
+  "representative_sha256": "26f4eca9dab3f0fa919e064033a2c5dc0c1300967a0e3e972ca420239c81e13b",
+  "gain_sha256": "801062025ca2af14bb640d904770768515fe53e399492ac13770f7ab38b18c0f",
+  "filters": {
+    "first_filter_candidates": 28906031,
+    "exact_norm_checks": 179336,
+    "basis_products_checked": 2048
+  },
+  "seconds": 72.63989426499984
+}

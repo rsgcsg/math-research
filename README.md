@@ -1,3 +1,16 @@
+# 2026-09-29：已验证的新研究入口
+
+普通Hadwiger–Nelson的新界仍未取得。本轮完成原10077点Y的全部二端口五色关系分类，
+补齐三角格无限宿主的缺失程序/证书，并用64点实际二色图分清几何共同律与过强的抽象图EPPA。
+[当前状态](docs/CURRENT.md) · [二端口定理](docs/proofs/Y_two_terminal_completion.md) ·
+[平移宿主](docs/proofs/triangular_lattice_saturation.md) · [对称性反例](docs/proofs/geometric_versus_graph_symmetry.md)。
+新增标准库独立检查：`make check-lattice-ports`；完整验收：`make check`。
+新混合宿主和84901点有限图仍未判定，UNKNOWN不是色数结论。
+
+以下历史入口及证据保留，当前优先级以CURRENT为准。
+
+---
+
 # Hadwiger–Nelson research
 
 目标：决定普通欧氏平面的单位距离色数。**本项目尚未改变5≤χ(R²)≤7。**

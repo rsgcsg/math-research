@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "parameters": [
+    2,
+    4,
+    6,
+    10,
+    14,
+    16
+  ],
+  "vertices": 64,
+  "unit_edges": 192,
+  "exact_pair_checks": 2016,
+  "nonedges": 1824,
+  "pair_extension_witnesses": 3840,
+  "class_size_cases": 9027,
+  "minimum_same_pairs": 378,
+  "probability_lower": "63/304",
+  "probability_upper": "1/5",
+  "ordinary_colors": 2,
+  "geometric_joint_support": 1,
+  "graph_partial_symmetry_five_law": false,
+  "points_sha256": "1ea5d860c64527fe78b14bd8770d092d7774489c3ed766719a8c48c2750f20aa",
+  "nongeometric_pair_map": {
+    "source": [
+      0,
+      3
+    ],
+    "target": [
+      0,
+      7
+    ],
+    "source_squared_length": "324/85",
+    "target_squared_length": "5309/629"
+  },
+  "scope": "Explicit induced rational planar Q6. Full Euclidean partial-isometry law exists; a five-color law invariant under all abstract graph partial isomorphisms does not. The latter is an intentionally stronger, invalid substitute for geometric symmetry. No ordinary six-color lower bound.",
+  "optimized_mode_rejected": true
+}
