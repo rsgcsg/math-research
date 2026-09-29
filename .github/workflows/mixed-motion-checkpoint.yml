@@ -5,11 +5,11 @@ on:
     paths: [.github/workflows/mixed-motion-checkpoint.yml]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   replay:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 120
     steps:
       - name: Fetch exact source without persisted credentials
         env:
@@ -21,22 +21,75 @@ jobs:
           git fetch --no-tags origin "$SOURCE_SHA"
           git checkout --detach FETCH_HEAD
           test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
-          git branch export-snapshot HEAD
-          git bundle create "$RUNNER_TEMP/source.bundle" export-snapshot
-          git archive --format=zip HEAD > "$RUNNER_TEMP/source.zip"
-          git rev-parse HEAD > "$RUNNER_TEMP/checked-commit.txt"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.13.5'
-      - name: Independent triangular-lattice and inherited eta checks
+      - name: Restore and hash-check the reviewed research sources
+        run: |
+          cp .research-transfer/restore.py "$RUNNER_TEMP/restore.py"
+          python3 "$RUNNER_TEMP/restore.py" restore
+      - name: Install only the pinned search dependency
+        run: |
+          mkdir "$RUNNER_TEMP/wheel"
+          python3 -m pip download --only-binary=:all: --no-deps --dest "$RUNNER_TEMP/wheel" 'python-sat==1.9.dev15'
+          python3 - <<'PY'
+          import hashlib, os
+          from pathlib import Path
+          files=list((Path(os.environ['RUNNER_TEMP'])/'wheel').glob('*.whl'))
+          if len(files)!=1 or hashlib.sha256(files[0].read_bytes()).hexdigest()!='fd55285f4ef679aaa62699660121423ec35b97324095ae34db4edb0356422a45':
+              raise SystemExit('Pinned wheel mismatch; do not substitute an unreviewed dependency')
+          PY
+          python3 -m pip install --no-deps "$RUNNER_TEMP"/wheel/*.whl
+      - name: Rebuild the exact full-Y positive portfolio
         env:
           PYTHONUNBUFFERED: '1'
         run: |
           set -o pipefail
-          python3 -S research/verify_triangular_lattice.py 2>&1 | tee "$RUNNER_TEMP/triangular-check.log"
-          make check-eta-support 2>&1 | tee "$RUNNER_TEMP/eta-check.log"
-          git diff --exit-code
-      - name: Preserve source and actual outputs
+          python3 research/build_Y_pair_portfolio.py --output certificates/Y_pair_portfolio.json.gz 2>&1 | tee "$RUNNER_TEMP/portfolio-search.log"
+          echo 'f068a4c099fa47a6950de3d7ef233d83692e98203ca9cc0356b9fd84f680fa94  certificates/Y_pair_portfolio.json.gz' | sha256sum --check
+      - name: One complete independent replay, including all new checks
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: |
+          set -o pipefail
+          make check 2>&1 | tee "$RUNNER_TEMP/full-check.log"
+      - name: Bind the actual successful replay and commit only reviewed changes
+        run: |
+          python3 "$RUNNER_TEMP/restore.py" seal
+          python3 - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          paths=list(json.loads((Path(os.environ['RUNNER_TEMP'])/'transport-source.json').read_text()))
+          paths+=['certificates/Y_pair_portfolio.json.gz','certificates/Y_pair_portfolio.json.search.json','certificates/lattice_ports_remote_validation.json']
+          subprocess.run(['git','add','--',*paths],check=True)
+          subprocess.run(['git','add','-u','--','.research-transfer'],check=True)
+          changed=subprocess.check_output(['git','diff','--cached','--name-only']).decode().splitlines()
+          if any(p not in paths and not p.startswith('.research-transfer/') for p in changed):
+              raise SystemExit('Unexpected staged modification')
+          subprocess.run(['git','diff','--exit-code'],check=True)
+          PY
+          git commit -m 'research: certify full-Y two-terminal extension, restore lattice evidence, and distinguish geometric symmetry'
+          git rev-parse HEAD > "$RUNNER_TEMP/published-commit.txt"
+      - name: Fast-forward only this dedicated research branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -eu
+          test "$(git ls-remote origin refs/heads/research/mixed-motion-20260929 | cut -f1)" = "$SOURCE_SHA"
+          AUTH="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          echo "::add-mask::$AUTH"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin HEAD:refs/heads/research/mixed-motion-20260929
+      - name: Preserve source, exact manifests and actual output
+        if: always()
+        run: |
+          git branch -f export-snapshot HEAD
+          git bundle create "$RUNNER_TEMP/source.bundle" export-snapshot
+          git archive --format=zip HEAD > "$RUNNER_TEMP/source.zip"
+          git rev-parse HEAD > "$RUNNER_TEMP/checked-commit.txt"
+      - name: Export replay evidence
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
@@ -45,7 +98,11 @@ jobs:
             ${{ runner.temp }}/source.bundle
             ${{ runner.temp }}/source.zip
             ${{ runner.temp }}/checked-commit.txt
-            ${{ runner.temp }}/triangular-check.log
-            ${{ runner.temp }}/eta-check.log
+            ${{ runner.temp }}/published-commit.txt
+            ${{ runner.temp }}/full-check.log
+            ${{ runner.temp }}/portfolio-search.log
+            ${{ runner.temp }}/frozen-source.json
+            ${{ runner.temp }}/transport-source.json
+            ${{ runner.temp }}/replay-start.json
           retention-days: 30
           if-no-files-found: error
