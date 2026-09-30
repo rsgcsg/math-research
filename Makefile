@@ -112,3 +112,39 @@ check-g14-port-or: check-y-full-geometry
 
 check-port4-exact-law: check-y-full-geometry
 	python3 -S research/verify_port4_exact_law.py --check-certificate certificates/port4_exact_law_verification.json
+
+.PHONY: check-joint-theory
+check: check-joint-theory
+
+check-joint-theory: check-y-full-geometry
+	python3 -S research/verify_scc_calibration.py
+	python3 -S research/verify_free_group_star_calibration.py
+	python3 -S research/verify_four_port_scc.py
+
+.PHONY: check-g14-pair-orbit
+check: check-g14-pair-orbit
+
+check-g14-pair-orbit: check-y-full-geometry
+	python3 -S research/verify_g14_pair_orbit_law.py
+	python3 -S research/test_g14_pair_orbit_forest.py
+
+.PHONY: check-g14-common-law check-cubic-unit-directions
+check: check-g14-common-law check-cubic-unit-directions
+
+check-g14-common-law: check-y-full-geometry
+	python3 -S research/verify_g14_pair_port4_common_law.py
+
+check-cubic-unit-directions:
+	python3 -S research/verify_cubic_unit_directions.py
+
+.PHONY: check-g14-pr-bound
+check: check-g14-pr-bound
+
+check-g14-pr-bound: check-y-full-geometry
+	python3 -S research/verify_g14_pr_transport_bound.py
+
+.PHONY: check-pentagon-partition-gap
+check: check-pentagon-partition-gap
+
+check-pentagon-partition-gap:
+	python3 -S research/verify_pentagon_cp_partition_gap.py

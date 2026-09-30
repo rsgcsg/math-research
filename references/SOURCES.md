@@ -695,3 +695,33 @@ E116为独立有限检查；E117的四次UNKNOWN只是搜索记录，不是文�
 ## 2026-09-30：G14 虚拟距离 OR
 
 - HeliCorgi，[`fourteen-points-six-colors`](https://github.com/HeliCorgi/fourteen-points-six-colors)，固定于[提交 `4c84e4d67522e644faef704694cd5ba7fc273abc`](https://github.com/HeliCorgi/fourteen-points-six-colors/commit/4c84e4d67522e644faef704694cd5ba7fc273abc)，尤其是该版本 [`proofs/PROOF_G14.md`](https://github.com/HeliCorgi/fourteen-points-six-colors/blob/4c84e4d67522e644faef704694cd5ba7fc273abc/proofs/PROOF_G14.md)。本轮读 README、G14/G15证明、clique-starvation引理及文献清单；独立转录并重放G14坐标、三距离分类、五色排除和显式六染。来源里的“最小14点/catalog/区间证书”等其它主张未在本轮核验；没有运行外部代码。该G14是距离集 $\{1,1/\sqrt3,2\}$ 的图，不能称作普通单位距离图。
+
+## 2026-09-30：共同律、完全正提升与群作用的范围校准
+
+- [Laurent–Piovesan, arXiv:1312.6643v6](https://arxiv.org/html/1312.6643v6)：读 §2.1 Theorem 2.3、§4.2 Proposition 4.11、Corollary 4.12、Remark 4.14 及证明。区分单集 n×n 完全正模型的分数色数，与颜色索引提升的普通色数；在新理论笔记中自足证明 CP 因子恢复同一个 proper 染色律。不援引该旧文中有关量子锥闭性、Connes/Tsirelson 问题的历史开放状态作为当前事实。
+- [DeCorte–de Oliveira Filho–Vallentin, *Complete positivity and distance-avoiding sets*](https://doi.org/10.1007/s10107-020-01562-6)，线上发表2020，卷191（2022）：读摘要及引言的完全正函数／最大避距密度对象。它不是多个颜色类共同覆盖的划分律定理；本仓库的有限独立集矩引理另给自足证明。
+- [Bram Bekker, *Optimization hierarchies for extremal geometry through complete positivity*, arXiv:2609.34845v1](https://arxiv.org/abs/2609.34845v1)，2026-09-28上传：只读摘要、引言与题名页。该学位论文预印本研究避距集／球堆积等优化层级，不据摘要认定能解 full15；题名页答辩日期在当前研究日之后，不称已经答辩通过。
+- [Frisch–Kechris–Shinko–Vidnyánszky, arXiv:2109.12486v10](https://arxiv.org/html/2109.12486v10)：核对 Theorem 1.6 及 §5.2 的“每个非空二进子移”量词，不外推为非 amenable 群的每个着色空间都无不变律。
+- [Lyons–Peres, *Probability on Trees and Networks*, 作者修订版](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)，19 Aug 2026：读 §8.1 质量运输原理及其可数群证明。新笔记中的自由群方向 CSP 例另给有限星的1024赋值枚举，仅作群作用边界，不当作二维单位图。
+- [Day, *Fixed-point theorems for compact convex sets*](https://doi.org/10.1215/ijm/1255631582)，1961：核对 amenable 群的紧凸仿射不动点表述。本文把平面等距群视作离散抽象群，不假设任意染色对通常 Lie 群拓扑联合连续。
+
+Vorob’ev、Atserias–Kolaitis、Abramsky–Brandenburger、Chazottes 等的对应定理与本题条件差异，连同 Deza–Grötschel–Laurent、Chopra–Rao、Borwein–Wolkowicz 的背景阅读范围，统一列于 [理论笔记 §6](../docs/proofs/full15_joint_event_theory.md#6-研究瓶颈与文献边界)。这是一轮结构复核，不声称文献穷尽或一般框架的原创性。
+
+## 2026-09-30：整方向群与整域二染色的成熟结果
+
+- [G. Eric Moorhouse, *On the Chromatic Numbers of Planes*](https://ericmoorhouse.org/pub/chromatic.pdf)，作者初步稿，修订2010-03-03：直接阅读 Theorem 7.1 及局部化／迹染色证明，确认“奇数次数域的二维单位图恰二色”已有先例。只作既有定理与本地另证的来源，不称新发现，也不把初步稿称作期刊论文。
+- [Will Sawin 对 MathOverflow 488036 的回答](https://mathoverflow.net/questions/488036/points-on-the-unit-circle-over-ring-extensions-of-mathbbz)，2025-02-17：阅读完整范数核与Dirichlet单位秩论证，确认实嵌入数域中整单位圆点有限 iff 全实的标准判据。本地补写模2同余幂保证 O_K 坐标的步骤。
+- [Milne, *Algebraic Number Theory*](https://www.jmilne.org/math/CourseNotes/ANT.pdf)，§5 Theorem 5.1：单位秩及单位根；与本仓库T124的分歧／剩余作用证明联用，不把无穷嵌入上的方向计数与有限素点上的色数上界混同。
+- [Anay Aggarwal, *Computer-Aided Discovery of Extremal Unit-Distance Graphs & Quantum Contextuality*](https://math.mit.edu/research/highschool/primes/materials/2025/Aggarwal.pdf)，文内日期2026-02-11：读引言及§2.2 Theorems2.6–2.8。有限方向论证须保留全实假设；本地三次例显示单个实嵌入不能替代全实。没有重放其机器学习、近似几何或量子构造。
+
+完整自足推导、两个算术机制的区别和三次域65点有限校准，见[方向／色数边界](../docs/proofs/arithmetic_direction_and_coloring_boundaries.md)。
+
+## 2026-09-30：P/R界的概率背景与匹配划分族
+
+- [Péter Ágoston，Polymath16第14线程](https://dustingmixon.wordpress.com/2019/08/05/polymath16-fourteenth-thread-automated-graph-minimization/)，2019-10-25 16:37评论：读其用 amenability、同色距离概率和六点计数讨论双禁距非五染的原说明。T157不把这个一般思想或双禁距结论称为新发现；本次独立给出原Y/原15运动的七点＋三点有理界与30行证书。评论所引更强全平面概率界未在本次机械照搬到固定Y。
+- De Neve、Vanden Kerchove、Colle、Tavernier、Pickavet，[双禁距论文作者PDF](https://backoffice.biblio.ugent.be/download/01K94Y89D25FFMV0FYQ44CTS2P/01K94YA8NYKGWB7A5CE3HMDXKV)，DOI 10.1080/00029890.2025.2559554：读摘要、§2相关工作、构造原理及坐标附录说明；区分已有{1,2}426点六色图与{1,√3}33点构造等。没有重放这些外部六色证书，任何双距离结果均不直接当成普通单位距离下界。
+- [Jack Edmonds, *Maximum Matching and a Polyhedron With 0,1-Vertices*](https://nvlpubs.nist.gov/nistpubs/jres/69B/jresv69Bn1-2p125_A1b.pdf)，1965：读§2 Theorem(P)及其非负、度数、奇集不等式。匹配／α≤2划分之间的对应以及整数总匹配数截断论证在本地另写；没有把整个匹配算法改称本项目成果。
+- Walter等，[基数约束运输的作者稿](https://www2.isye.gatech.edu/~sdey30/CCTPMCoo1.pdf)，*Operations Research Letters*44（2016），DOI 10.1016/j.orl.2015.12.001：核对总匹配数整数约束保持整性及严格边子集约束的区别。本地用交替分量给出所需的自足截断论证。
+- [Greenwood–Gleason, *Combinatorial Relations and Chromatic Graphs*](https://doi.org/10.4153/CJM-1955-001-4)，1955：读§3的R(3,4)=9及表1，仅用于α≤2平面单位图窗口至多8点的范围上限。
+
+[C027与精确匹配族](../docs/proofs/matching_partition_family.md)只提供局部划分多面体校准，不把一个特定CP矩的不可表示性外推为平稳打包矩失败或HN反证。

@@ -1,0 +1,168 @@
+{
+  "status": "PASS_C027_PENTAGON_CP_NOT_PARTITION",
+  "vertices": 5,
+  "actual_unit_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "allowed_pairs": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "exact_pair_distances": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "coefficients": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "coefficients": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "coefficients": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        1,
+        4
+      ],
+      "coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "coefficients": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "coefficients": [
+        "1",
+        "0"
+      ]
+    }
+  ],
+  "all_partitions": 52,
+  "proper_partitions": 11,
+  "complement_matchings": 11,
+  "candidate_sum": "5/2",
+  "maximum_partition_pairs": 2,
+  "degree_constraints": "PASS",
+  "triangle_constraints": "PASS",
+  "subset_k5_pigeonhole_constraints": "PASS",
+  "CP_representation": "5 E[XX^T]: each allowed pair mass1/10, empty mass1/2",
+  "shifted_matrix_integer_scale": 20,
+  "positive_leading_principal_minors": [
+    16,
+    240,
+    3200,
+    26000,
+    200000
+  ],
+  "scope": "A specific CP single-independent-set matrix on an exact unit pentagon is not any proper-partition pair-marginal matrix. No claim about stationary dodecagon moments or HN bounds."
+}

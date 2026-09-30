@@ -1,0 +1,821 @@
+{
+  "schema": "g14-pr-pair-component-face-separator-v1",
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "pair_components": {
+    "P": {
+      "distance_squared": "1/3",
+      "node_count": 1860,
+      "basis_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534"
+    },
+    "R": {
+      "distance_squared": "4/3",
+      "node_count": 1472,
+      "candidate_sha256": "f21599cb3ed6076e797f1fed319d5e8d4941c50b05fdaed12c6de218a6e9c976"
+    }
+  },
+  "local_hex": {
+    "vertices": [
+      4641,
+      877,
+      887,
+      3483,
+      5535,
+      7479,
+      7489
+    ],
+    "pair_tags": [
+      {
+        "pair": [
+          877,
+          4641
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          887,
+          4641
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          3483,
+          4641
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          4641,
+          5535
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          4641,
+          7479
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          4641,
+          7489
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          877,
+          887
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          877,
+          3483
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          877,
+          5535
+        ],
+        "tag": "unit",
+        "squared_distance": "1"
+      },
+      {
+        "pair": [
+          877,
+          7479
+        ],
+        "tag": "unit",
+        "squared_distance": "1"
+      },
+      {
+        "pair": [
+          877,
+          7489
+        ],
+        "tag": "R",
+        "squared_distance": "4/3"
+      },
+      {
+        "pair": [
+          887,
+          3483
+        ],
+        "tag": "unit",
+        "squared_distance": "1"
+      },
+      {
+        "pair": [
+          887,
+          5535
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          887,
+          7479
+        ],
+        "tag": "R",
+        "squared_distance": "4/3"
+      },
+      {
+        "pair": [
+          887,
+          7489
+        ],
+        "tag": "unit",
+        "squared_distance": "1"
+      },
+      {
+        "pair": [
+          3483,
+          5535
+        ],
+        "tag": "R",
+        "squared_distance": "4/3"
+      },
+      {
+        "pair": [
+          3483,
+          7479
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          3483,
+          7489
+        ],
+        "tag": "unit",
+        "squared_distance": "1"
+      },
+      {
+        "pair": [
+          5535,
+          7479
+        ],
+        "tag": "unit",
+        "squared_distance": "1"
+      },
+      {
+        "pair": [
+          5535,
+          7489
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      },
+      {
+        "pair": [
+          7479,
+          7489
+        ],
+        "tag": "P",
+        "squared_distance": "1/3"
+      }
+    ],
+    "tag_counts": {
+      "P": 12,
+      "unit": 6,
+      "R": 3
+    },
+    "unit_pairs": [
+      [
+        877,
+        5535
+      ],
+      [
+        877,
+        7479
+      ],
+      [
+        887,
+        3483
+      ],
+      [
+        887,
+        7489
+      ],
+      [
+        3483,
+        7489
+      ],
+      [
+        5535,
+        7479
+      ]
+    ],
+    "P_pairs": [
+      [
+        877,
+        887
+      ],
+      [
+        877,
+        3483
+      ],
+      [
+        877,
+        4641
+      ],
+      [
+        887,
+        4641
+      ],
+      [
+        887,
+        5535
+      ],
+      [
+        3483,
+        4641
+      ],
+      [
+        3483,
+        7479
+      ],
+      [
+        4641,
+        5535
+      ],
+      [
+        4641,
+        7479
+      ],
+      [
+        4641,
+        7489
+      ],
+      [
+        5535,
+        7489
+      ],
+      [
+        7479,
+        7489
+      ]
+    ],
+    "R_pairs": [
+      [
+        877,
+        7489
+      ],
+      [
+        887,
+        7479
+      ],
+      [
+        3483,
+        5535
+      ]
+    ],
+    "legal_proper_5_partition_count": 159,
+    "minimum_same_P_or_R_pairs": 2,
+    "minimizing_partition_examples": [
+      [
+        0,
+        0,
+        1,
+        2,
+        1,
+        3,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        3,
+        2,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        3
+      ]
+    ],
+    "pointwise_inequality": "sum_{12 P pairs} e_P + sum_{3 R pairs} e_R >= 2"
+  },
+  "local_triangle": {
+    "vertices": [
+      229,
+      4641,
+      305
+    ],
+    "P_pair": [
+      229,
+      305
+    ],
+    "R_pairs": [
+      [
+        229,
+        4641
+      ],
+      [
+        305,
+        4641
+      ]
+    ],
+    "all_Bell3_partitions": 5,
+    "maximum_2R_minus_P": 1,
+    "pointwise_inequality": "e_R(229,4641)+e_R(305,4641)-e_P(229,305) <= 1"
+  },
+  "local_P_upper_bound": {
+    "vertices": [
+      4641,
+      877,
+      5535,
+      7479
+    ],
+    "outer_unit_triangle": [
+      [
+        877,
+        5535
+      ],
+      [
+        877,
+        7479
+      ],
+      [
+        5535,
+        7479
+      ]
+    ],
+    "P_spokes": [
+      [
+        877,
+        4641
+      ],
+      [
+        4641,
+        5535
+      ],
+      [
+        4641,
+        7479
+      ]
+    ],
+    "proper_partitions_checked": 4,
+    "maximum_same_P_spokes": 1,
+    "pointwise_inequality": "sum_{3 P spokes} e_P <= 1"
+  },
+  "invariant_means": {
+    "p": "common same-color probability on P component",
+    "r": "common same-color probability on R component"
+  },
+  "expected_inequalities": [
+    "12p+3r >= 2",
+    "2r-p <= 1"
+  ],
+  "derived_inequality": "27p >= 1",
+  "necessary_interval": {
+    "lower": "1/27",
+    "upper": "1/3",
+    "scope": "Necessary only; not claimed sufficient or sharp."
+  },
+  "face_separator": {
+    "face": "p=0",
+    "event_potential": "F = 2*(e_R(877,7489)+e_R(887,7479)+e_R(3483,5535)) - 3*(e_R(229,4641)+e_R(305,4641))",
+    "zero_coefficient_sum": true,
+    "pointwise_on_face": "F >= 1",
+    "forest_row_decomposition": [
+      {
+        "row_id": 1,
+        "coefficient": "-2",
+        "motion": 2,
+        "source": [
+          233,
+          239
+        ],
+        "target": [
+          7466,
+          9951
+        ]
+      },
+      {
+        "row_id": 2,
+        "coefficient": "3",
+        "motion": 4,
+        "source": [
+          233,
+          239
+        ],
+        "target": [
+          7470,
+          9957
+        ]
+      },
+      {
+        "row_id": 3,
+        "coefficient": "-1",
+        "motion": 14,
+        "source": [
+          233,
+          239
+        ],
+        "target": [
+          238,
+          5557
+        ]
+      },
+      {
+        "row_id": 7,
+        "coefficient": "-2",
+        "motion": 14,
+        "source": [
+          7466,
+          9951
+        ],
+        "target": [
+          9425,
+          9957
+        ]
+      },
+      {
+        "row_id": 9,
+        "coefficient": "-3",
+        "motion": 14,
+        "source": [
+          9435,
+          9951
+        ],
+        "target": [
+          7470,
+          9957
+        ]
+      },
+      {
+        "row_id": 10,
+        "coefficient": "1",
+        "motion": 11,
+        "source": [
+          33,
+          887
+        ],
+        "target": [
+          238,
+          5557
+        ]
+      },
+      {
+        "row_id": 14,
+        "coefficient": "2",
+        "motion": 8,
+        "source": [
+          6655,
+          8153
+        ],
+        "target": [
+          9425,
+          9957
+        ]
+      },
+      {
+        "row_id": 16,
+        "coefficient": "-3",
+        "motion": 8,
+        "source": [
+          6665,
+          8151
+        ],
+        "target": [
+          9435,
+          9951
+        ]
+      },
+      {
+        "row_id": 18,
+        "coefficient": "1",
+        "motion": 2,
+        "source": [
+          5163,
+          5494
+        ],
+        "target": [
+          33,
+          887
+        ]
+      },
+      {
+        "row_id": 25,
+        "coefficient": "-2",
+        "motion": 2,
+        "source": [
+          6655,
+          8153
+        ],
+        "target": [
+          470,
+          1757
+        ]
+      },
+      {
+        "row_id": 30,
+        "coefficient": "3",
+        "motion": 2,
+        "source": [
+          6665,
+          8151
+        ],
+        "target": [
+          472,
+          1747
+        ]
+      },
+      {
+        "row_id": 37,
+        "coefficient": "4",
+        "motion": 2,
+        "source": [
+          7478,
+          9759
+        ],
+        "target": [
+          5163,
+          5494
+        ]
+      },
+      {
+        "row_id": 41,
+        "coefficient": "3",
+        "motion": 12,
+        "source": [
+          5163,
+          5494
+        ],
+        "target": [
+          8981,
+          9070
+        ]
+      },
+      {
+        "row_id": 60,
+        "coefficient": "-2",
+        "motion": 13,
+        "source": [
+          470,
+          1757
+        ],
+        "target": [
+          3534,
+          4109
+        ]
+      },
+      {
+        "row_id": 74,
+        "coefficient": "3",
+        "motion": 13,
+        "source": [
+          472,
+          1747
+        ],
+        "target": [
+          3533,
+          4114
+        ]
+      },
+      {
+        "row_id": 87,
+        "coefficient": "4",
+        "motion": 6,
+        "source": [
+          878,
+          7488
+        ],
+        "target": [
+          7478,
+          9759
+        ]
+      },
+      {
+        "row_id": 104,
+        "coefficient": "-3",
+        "motion": 8,
+        "source": [
+          3660,
+          4641
+        ],
+        "target": [
+          8981,
+          9070
+        ]
+      },
+      {
+        "row_id": 137,
+        "coefficient": "-2",
+        "motion": 8,
+        "source": [
+          3534,
+          4109
+        ],
+        "target": [
+          8821,
+          9055
+        ]
+      },
+      {
+        "row_id": 161,
+        "coefficient": "3",
+        "motion": 8,
+        "source": [
+          3533,
+          4114
+        ],
+        "target": [
+          8817,
+          9056
+        ]
+      },
+      {
+        "row_id": 182,
+        "coefficient": "-4",
+        "motion": 2,
+        "source": [
+          878,
+          7488
+        ],
+        "target": [
+          4109,
+          5168
+        ]
+      },
+      {
+        "row_id": 232,
+        "coefficient": "3",
+        "motion": 2,
+        "source": [
+          3660,
+          4641
+        ],
+        "target": [
+          4641,
+          9081
+        ]
+      },
+      {
+        "row_id": 277,
+        "coefficient": "2",
+        "motion": 6,
+        "source": [
+          4114,
+          5163
+        ],
+        "target": [
+          8821,
+          9055
+        ]
+      },
+      {
+        "row_id": 302,
+        "coefficient": "-3",
+        "motion": 12,
+        "source": [
+          4641,
+          5413
+        ],
+        "target": [
+          8817,
+          9056
+        ]
+      },
+      {
+        "row_id": 341,
+        "coefficient": "-4",
+        "motion": 2,
+        "source": [
+          4109,
+          5168
+        ],
+        "target": [
+          877,
+          7489
+        ]
+      },
+      {
+        "row_id": 472,
+        "coefficient": "3",
+        "motion": 3,
+        "source": [
+          4641,
+          9081
+        ],
+        "target": [
+          233,
+          4641
+        ]
+      },
+      {
+        "row_id": 517,
+        "coefficient": "-2",
+        "motion": 2,
+        "source": [
+          4114,
+          5163
+        ],
+        "target": [
+          887,
+          7479
+        ]
+      },
+      {
+        "row_id": 546,
+        "coefficient": "3",
+        "motion": 2,
+        "source": [
+          4641,
+          5413
+        ],
+        "target": [
+          229,
+          4641
+        ]
+      },
+      {
+        "row_id": 615,
+        "coefficient": "2",
+        "motion": 3,
+        "source": [
+          3483,
+          5535
+        ],
+        "target": [
+          877,
+          7489
+        ]
+      },
+      {
+        "row_id": 827,
+        "coefficient": "3",
+        "motion": 14,
+        "source": [
+          233,
+          4641
+        ],
+        "target": [
+          4641,
+          5557
+        ]
+      },
+      {
+        "row_id": 1174,
+        "coefficient": "3",
+        "motion": 14,
+        "source": [
+          4641,
+          5557
+        ],
+        "target": [
+          305,
+          4641
+        ]
+      }
+    ],
+    "nonzero_forest_rows": 30,
+    "verification": "The displayed integer coefficients times actual R-component spanning-forest transport-difference rows reconstruct F exactly at every R pair node. Any R-invariant law has E[F]=0, contradicting E[F]>=1 on p=0."
+  },
+  "scope": "Support-independent obstruction to extending p=0 into an invariant law balancing P and R pair-event components. It implies p>=1/27 for any such law; it is not full15 infeasibility and not an ordinary plane chromatic lower bound.",
+  "certificate_sha256": "dce2b97c1996be80b53f8fb24ad1756a7210304f61a2322b746c370de8bc325f"
+}

@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "field_polynomial_descending": [
+    1,
+    0,
+    1,
+    -1
+  ],
+  "coefficient_order": "constant,t,t^2",
+  "generator": [
+    [
+      -1,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      2
+    ]
+  ],
+  "unit_polynomial_descending": [
+    1,
+    6,
+    31,
+    -12,
+    31,
+    6,
+    1
+  ],
+  "exponents_checked": [
+    0,
+    64
+  ],
+  "distinct_integral_points": 65,
+  "point_sequence_sha256": "114bd45391b2096e3022a39f802a11341e2699b452d4c6a77fe001c38528436d",
+  "first_eight_points": [
+    [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        -8,
+        8
+      ],
+      [
+        8,
+        -8,
+        -4
+      ]
+    ],
+    [
+      [
+        31,
+        -14,
+        -48
+      ],
+      [
+        -32,
+        64,
+        -26
+      ]
+    ],
+    [
+      [
+        -255,
+        352,
+        32
+      ],
+      [
+        -48,
+        -144,
+        312
+      ]
+    ],
+    [
+      [
+        607,
+        -1838,
+        1392
+      ],
+      [
+        1376,
+        -1216,
+        -1174
+      ]
+    ],
+    [
+      [
+        4609,
+        184,
+        -10168
+      ],
+      [
+        -7400,
+        12776,
+        -2828
+      ]
+    ],
+    [
+      [
+        -50497,
+        60578,
+        19680
+      ],
+      [
+        2112,
+        -42624,
+        57934
+      ]
+    ]
+  ],
+  "mutation_rejected": "changed-generator-constant",
+  "scope": "Finite exact calibration only. Infinitude and density use the written non-torsion proof; no HN bound."
+}

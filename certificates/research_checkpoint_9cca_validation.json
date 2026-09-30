@@ -1,0 +1,45 @@
+{
+  "schema": "exact-tree-full-check-receipt-v1",
+  "source": {
+    "repository": "rsgcsg/math-research",
+    "remote_ref_at_start": "origin/main",
+    "commit": "9cca7e48b8ae270797dc1838457279cbc0396960",
+    "tree": "64f8485781156ee4a0f4342582e8c254069c0612",
+    "detached": true,
+    "environment": "isolated detached cloud Linux worktree"
+  },
+  "check": {
+    "command": "make check",
+    "exit_code": 0,
+    "status": "PASS",
+    "python": "3.12.14",
+    "started_utc": "2026-09-30T11:04:20Z",
+    "ended_utc": "2026-09-30T12:00:21Z",
+    "elapsed_seconds": 3361
+  },
+  "complete_log": {
+    "path": "certificates/research_checkpoint_9cca_full_check.log.gz",
+    "format": "UTF-8 plain text",
+    "bytes": 261224,
+    "sha256": "5df3b706f0aa7dc878a2c2f39194d3bcc89299251e78fc9bad9d02feebd08eed",
+    "begins_with_source_identity": true,
+    "contains_final_exit_marker": true,
+    "stored_format": "gzip of the complete plain-text stream",
+    "compressed_sha256": "10c2ad4f378fbe5c71bf1fd23b5c46f0e3be98a99df9d8c4b801208e214efc6f",
+    "compressed_bytes": 54312
+  },
+  "post_check_worktree": {
+    "head": "9cca7e48b8ae270797dc1838457279cbc0396960",
+    "tree": "64f8485781156ee4a0f4342582e8c254069c0612",
+    "tracked_runtime_metadata_changes": [
+      "certificates/dyadic_cyclic_orbit_validation.json",
+      "certificates/finite_frame_validation.json"
+    ],
+    "runtime_metadata_diff": {
+      "path": "certificates/research_checkpoint_9cca_runtime_metadata.patch",
+      "sha256": "0c70d8eb49b8bf159ff132d5e5efeb54af017d93dc7217458b8d861aebe16c27"
+    },
+    "no_other_worktree_changes": true
+  },
+  "scope": "Complete local make check of exact9cca source tree. Does not cover later T155\u2013T157, C027 or theory-note additions; no remote CI or HN breakthrough claim."
+}

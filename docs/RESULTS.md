@@ -467,4 +467,17 @@ E115收尾补充：第一份池内势的阈值−1查询给出全Y合法价格�
 | T154 | 冻结的4组四端口完整模式行存在47支持精确有理共同律，分母184246020；所选50行全部归零，故其张成空间不是全词严格分离势 | 75份全Y proper词和3,739,350条边义务；精确权重、模式映射、5类篡改均由独立标准库检查 | [四端口证明](proofs/port4_exact_rational_law.md)、[法律状态证书](../certificates/port4_exact_rational_law.json)、[检查报告](../certificates/port4_exact_law_verification.json)、[检查器](../research/verify_port4_exact_law.py)。不平衡任何原15完整域；不关闭其它行空间或full15 |
 | C026 | 实际全Y的一份五染色只触发G14 32个虚拟事件中的 $(a_2,i_4)$（距离2）；原 OR 的 $\ge1$ 达到尖锐，且省略该事件的任何子集 OR均被反例击破 | 完整检查Y 10077点/49858单位边及32事件；见证直接逐边验色。G14外部来源固定为 `4c84e4d…` | [证明、来源范围](proofs/g14_y_unique_or_witness.md)、[重放器](../research/verify_g14_port_or.py)＋[见证检查器](../research/verify_g14_unique_event_y.py)、[证书](../certificates/g14_port_or_certificate.json)、[染色与共享几何语料](../certificates/g14_unique_event_y_result.json)；不是单位图NON5，包含该触发事件的其它子集仍未决 |
 
-完整 `make check` 曾在精确发布树 `1bf57231b05730364372136c065e4f25bf3fdbef` / tree `0ecb82cd627823b3b25ef7be0206a0f775a79786` 通过（Python 3.12.14、3309秒、exit 0）；[收据](../certificates/mixed_motion_integrated_validation_20260930.json)与[日志](../certificates/mixed_motion_integrated_full_check_20260930.log.gz)只覆盖该树。后添的T152–T154/C026须以各自目标验收；其加入后的组合树完整 `make check` 尚待运行。
+完整 `make check` 曾在精确发布树 `1bf57231b05730364372136c065e4f25bf3fdbef` / tree `0ecb82cd627823b3b25ef7be0206a0f775a79786` 通过（Python 3.12.14、3309秒、exit 0）；[收据](../certificates/mixed_motion_integrated_validation_20260930.json)与[日志](../certificates/mixed_motion_integrated_full_check_20260930.log.gz)只覆盖该树。后添的T152–T154/C026须以各自目标验收；其发布树9cca的完整 `make check` 后续已通过，见下节精确收据；不覆盖后加成果。
+
+## 2026-09-30：共同律耦合、支持无关面排除与理论校准
+
+| ID | 内容 | 状态与范围 |
+|---|---|---|
+| T155 | P/Q两个实际成对运输分量共2640事件、2638森林行有一词精确律；对应同色收缩商有9577点、49486条冲突边 | [证明](proofs/g14_selected_pair_orbit_law.md)、[收据](../certificates/g14_pair_orbit_verification.json)。选定分量，不是相同距离所有点对；15完整域均不平衡 |
+| T156 | T155两成对分量与T154冻结50行由同一39原子律同时平衡，公分母300531 | [证明](proofs/g14_pair_port4_common_law.md)、[证书](../certificates/g14_pair_port4_common_law.json.gz)、[收据](../certificates/g14_pair_port4_common_verification.json)。81词／4038498次实际边检查；完整15域仍全失配，不声称支持最小 |
+| T157 | 平衡P及原u失配R分量的任意支持proper五色律须满足1/27≤p≤1/3；p=0面有30条真实运输行合成的严格势F≥1 | [证明](proofs/g14_pr_transport_bound.md)、[证书](../certificates/g14_pr_transport_bound.json)、[收据](../certificates/g14_pr_transport_verification.json)。仅必要界与构造面排除，不是full15全词反证；方法不作首创／最优主张 |
+| C027 | 实际单位五边形上的单独立集完全正矩满足PSD强化、三角、弱鸽巢界，却违反划分匹配奇集上界5/2>2 | [证明与成熟匹配族](proofs/matching_partition_family.md)、[检查器](../research/verify_pentagon_cp_partition_gap.py)、[证书](../certificates/pentagon_cp_partition_gap.json)。只反驳此具体矩的可表示性；不声称平稳十二边形矩被排除或HN新界 |
+
+标准结果的整理另见[完整理论笔记](proofs/full15_joint_event_theory.md)与[算术方向／色数边界](proofs/arithmetic_direction_and_coloring_boundaries.md)：CP颜色索引提升、匹配多面体、amenability边界、Dirichlet相对单位秩及Moorhouse奇数次二染色都有原来源，不重复编号为新发现。有限校准包括530个有向图、自由群星1024赋值、69词四端口SCC、三次域65个整方向点及五边形52划分。
+
+精确发布树9cca / `64f8485781156ee4a0f4342582e8c254069c0612` 的完整 `make check` 已通过，Python3.12.14，3361秒；[源绑定收据](../certificates/research_checkpoint_9cca_validation.json)及压缩日志保留。后来T155–T157/C027的新增目标分别通过，新增组合树完整验收不在9cca收据范围内。

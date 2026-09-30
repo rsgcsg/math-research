@@ -4,6 +4,12 @@
 [当前状态](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线](docs/ROUTES.md) ·
 [统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md)。
 
+## 2026-09-30：从局部正律提取真正的耦合限制
+
+T155的2638条成对行有单原子律；T156进一步给出与50条四端口行同时相容的39原子精确律。随后T157证明：原15运动中的另一成对分量迫使同色概率p≥1/27，从而支持无关地排除整个p=0构造面。**full15完整律仍未解决；没有HN新界。**
+
+[局部共同律](docs/proofs/g14_pair_port4_common_law.md) · [30行面排除证书](docs/proofs/g14_pr_transport_bound.md) · [理论脉络](docs/proofs/full15_joint_event_theory.md) · [C027匹配奇集反例](docs/proofs/matching_partition_family.md) · [算术方向／色数边界](docs/proofs/arithmetic_direction_and_coloring_boundaries.md)。
+
 ## 2026-09-30：恢复已有分支证据
 
 选择性恢复并独立重放 `research/mixed-motion-20260929` 已有结果，没有新编号，也没有改变普通HN的 `5≤χ(R²)≤7` 界或full15任意支持未决状态：原Y全部二端口关系已饱和；`Y+Z+Zω` 有完整的五色证书；64点有理 `Q₆` 说明抽象图部分同构不能替代真实几何；更大的混合宿主仍为 UNKNOWN。
@@ -14,7 +20,7 @@
 
 T152给出任意有限维奇分母有理诱导 $Q_d$ 平面实现；T153用T028/F11陪集表排除 $K^2$ 内距离2或 $1/\sqrt3$ 端口强制；C026在实际Y上使G14的32事件OR恰由 $(a_2,i_4)$ 单触发。T154另给出指定四端口事件行的精确47原子律，但不平衡任何原15完整域。它们都不改变普通 $5\le\chi(\mathbb R^2)\le7$ 界或全15域任意支持未决状态。
 
-完整 `make check` 已在精确发布基线 `1bf57231b05730364372136c065e4f25bf3fdbef` / tree `0ecb82cd627823b3b25ef7be0206a0f775a79786` 通过（Python 3.12.14，3309秒，见[收据与日志](certificates/mixed_motion_integrated_validation_20260930.json)）。后追加的 T152–T154/C026 目标已分别检查；当前组合树的完整 `make check` 尚未运行，不由旧基线收据覆盖。
+完整 `make check` 已在精确发布基线 `1bf57231b05730364372136c065e4f25bf3fdbef` / tree `0ecb82cd627823b3b25ef7be0206a0f775a79786` 通过（Python 3.12.14，3309秒，见[收据与日志](certificates/mixed_motion_integrated_validation_20260930.json)）。随后精确发布树 `9cca7e48b8ae270797dc1838457279cbc0396960` 也完整通过（3361秒，[收据](certificates/research_checkpoint_9cca_validation.json)）。新加入T155–T157/C027的目标已分别核验；它们不由9cca的旧树收据覆盖，新增组合树的完整检查另行进行。
 
 
 ## 2026-09-29 第二轮：从七重几何得到无限宿主定理

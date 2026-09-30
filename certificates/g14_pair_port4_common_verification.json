@@ -1,0 +1,63 @@
+{
+  "status": "PASS_EXACT_COMMON_LAW_ON_G14_FACE",
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "geometry_reconstructed": true,
+  "certificate_sha256": "fdc5f0eea829aca1b7f7ef424f312a5bf26191bc5f1025a66b81a3c4e5fd0984",
+  "pair_basis_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534",
+  "port4_basis_sha256": "67ed7b7ef19512bb7b917e1c611301cf42cc5819d8b19f8f0ccb6d0b115bb224",
+  "g14_legacy_source_sha256": "a31795df303c8dd3ff0719ab0d2ea470c28913f1c814c7e1fd29cfee1ee1f896",
+  "pair_orbit_nodes": {
+    "1/sqrt3": 1860,
+    "2": 780
+  },
+  "pair_orbit_forest_rows": 2638,
+  "pair_map_transitions_checked": 14248,
+  "whole_Y_words": 81,
+  "whole_Y_edge_checks": 4038498,
+  "support_size": 39,
+  "common_denominator": 300531,
+  "exact_port4_rows": 50,
+  "exact_pair_orbit_rows": 2638,
+  "mutation_tests_rejected": [
+    "negative-weight",
+    "changed-weight",
+    "missing-support-word",
+    "changed-source-image-map",
+    "altered-color-edge"
+  ],
+  "full15_domain_balance": {
+    "tau": "UNBALANCED",
+    "nu": "UNBALANCED",
+    "eta": "UNBALANCED",
+    "omega": "UNBALANCED",
+    "bar": "UNBALANCED",
+    "bridge": "UNBALANCED",
+    "translation_one": "UNBALANCED",
+    "translation_z": "UNBALANCED",
+    "one_plus_eta_1": "UNBALANCED",
+    "one_plus_eta_2": "UNBALANCED",
+    "one_plus_eta_3": "UNBALANCED",
+    "one_plus_eta_4": "UNBALANCED",
+    "bridge_shift": "UNBALANCED",
+    "minus_bar": "UNBALANCED",
+    "dyadic_u": "UNBALANCED"
+  },
+  "full15_first_residuals": {
+    "tau": "-9160/300531",
+    "nu": "2951/100177",
+    "eta": "-970/14311",
+    "omega": "2951/100177",
+    "bar": "-2809/100177",
+    "bridge": "5396/300531",
+    "translation_one": "2951/100177",
+    "translation_z": "-2951/100177",
+    "one_plus_eta_1": "-137/42933",
+    "one_plus_eta_2": "-861/14311",
+    "one_plus_eta_3": "-6775/300531",
+    "one_plus_eta_4": "4388/300531",
+    "bridge_shift": "-3/1301",
+    "minus_bar": "-970/14311",
+    "dyadic_u": "197/42933"
+  },
+  "scope": "Exact common law on proper whole-Y colorings restricted to the fixed p=0,q=1 face, balancing the fixed50 four-port complete-partition rows and the 2,638 pair-orbit rows. This is not a joint law balancing complete patterns on any of the original15 domains and not an HN bound."
+}
