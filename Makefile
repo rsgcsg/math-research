@@ -162,3 +162,10 @@ check: check-cyclic-interval-kernel
 
 check-cyclic-interval-kernel:
 	python3 -S research/verify_cyclic_interval_kernel.py
+
+.PHONY: check-bw-pr-odd-cycle-ceiling
+check: check-bw-pr-odd-cycle-ceiling
+
+check-bw-pr-odd-cycle-ceiling: check-pr-local-projection
+	python3 -S research/verify_star_odd_cycle_lemma.py
+	python3 -S research/verify_bw_pr_odd_cycle_ceiling.py

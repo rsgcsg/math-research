@@ -1,0 +1,147 @@
+{
+  "all_constructed_graphs": 9216,
+  "conflict_overlap_cases": 120,
+  "graphs_satisfying_all_hypotheses": 4708,
+  "hypothesis_counterexamples": [
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "excess": "2/5",
+      "missing_hypothesis": "A-independence",
+      "types": "AAC"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "excess": "1/5",
+      "missing_hypothesis": "AB-bipartiteness",
+      "types": "BBB"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "excess": "1/5",
+      "missing_hypothesis": "A-degree-to-B",
+      "types": "CABAB"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "excess": "1/5",
+      "missing_hypothesis": "forbidden-CAB-triangle",
+      "types": "CAB"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "excess": "1/5",
+      "missing_hypothesis": "forbidden-CABBA-five-cycle",
+      "types": "CABBA"
+    }
+  ],
+  "odd_cycle_templates": 92,
+  "parameter_samples": [
+    "0",
+    "1/27",
+    "1/5"
+  ],
+  "schema": "star-odd-cycle-lemma-calibration-v1",
+  "scope": "Small-graph calibration and hypothesis rejection examples only. The arbitrary-size theorem is proved by the A/B/C count argument and star path reduction, not inferred from this finite test.",
+  "sharp_parameter_boundary": {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "excess": "1/8",
+    "p": "1/4",
+    "types": "ACC"
+  },
+  "six_vertex_partitions_per_case": 203,
+  "status": "PASS_SMALL_GRAPH_CALIBRATION"
+}

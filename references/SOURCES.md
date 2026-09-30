@@ -733,3 +733,11 @@ Vorob’ev、Atserias–Kolaitis、Abramsky–Brandenburger、Chazottes 等的�
 - [Irmai–Naumann–Andres, *Chorded Cycle Facets of Clique Partitioning Polytopes*,2411.03407v1](https://arxiv.org/html/2411.03407v1)，2024-11-05：读§§3–4定义、Lemma2以及附录A.1完整有效性证明，确认同块变量、按循环位置计重的弦约定，以及该不等式作为box/triangle体系Chvátal–Gomory取整割的机制。C028是显式区间Gram核的自足推论；一般参数的平面单位实现未给出。后续期刊DOI为10.1016/j.dam.2025.09.020，精确读取版本仍为此v1。
 
 T158使用固定c36几何及P/R输入，不将相同距离自动当作运输分量相同。短圈的有限适用性扫描不代替所有长度的分离算法；原始full15和普通HN结论保持未决。
+
+## 2026-09-30：BW奇圈分离的原始范围与实际有限闭合
+
+- [Borndörfer–Weismantel, *Set Packing Relaxations of Some Integer Programs*](https://edocs.tib.eu/files/e001/247304964.pdf)，ZIB SC97-30（July1997）：读§1的odd-cycle前提及§§3.1–3.4，尤其lower-triangle冲突图、Theorem3.2和Corollary3.4。原文用cut坐标，本文换成q同块坐标；只保留逐节点可由实际E/P/R评价的诱导子图。原文明确是包含2-COC的合法超类，不把“超类可分离”偷换成所有未知项消去的受限分离也高效。
+- [Müller1996](https://doi.org/10.1007/BF02592097)及[Caprara–Fischetti1996](https://doi.org/10.1007/BF02592196)：核对成熟多项式分离归属与{0,1/2}-CG背景；本次实际验收采用自足星形结构证明，不声称重新实现或独立重证这些论文的全部算法。
+- [Letchford–Sørensen2024作者会议稿](https://eventos.ull.es/_files/_event/_111018/_editorFiles/file/ConferenceProgram/paper-010.pdf)及[2025更正](https://doi.org/10.1016/j.disopt.2024.100876)：核对half-chorded旧精确分离声明的修正和更大合法类的区别。本文q=2研究不把half-chorded的旧结论照搬过来；2411.03407v1仍只是这里采用的有效式／面分类来源，并非分离算法来源。
+
+T159的贡献范围是固定实际输入上的完整结构核查及明确行族的精确参数区域。通用星形引理、六点冲突校准和完整70350个C节点检查均在本地给出；未声称full15或HN突破。

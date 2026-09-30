@@ -1,0 +1,44 @@
+{
+  "schema": "exact-tree-full-check-receipt-v1",
+  "source": {
+    "repository": "rsgcsg/math-research",
+    "commit": "c36c1308112d37405354974837d2ad8a4e5bca47",
+    "tree": "67691cf2e2eb418e7a120f1f9b993ac7c812108d",
+    "parent": "9cca7e48b8ae270797dc1838457279cbc0396960",
+    "worktree": "isolated detached checkout of the exact source commit",
+    "detached": true
+  },
+  "check": {
+    "command": "make check",
+    "exit_code": 0,
+    "status": "PASS",
+    "python": "3.12.14",
+    "started_utc": "2026-09-30T12:14:57Z",
+    "ended_utc": "2026-09-30T13:15:54Z",
+    "elapsed_seconds": 3657
+  },
+  "complete_log": {
+    "path": "certificates/research_checkpoint_c36_full_check.log.gz",
+    "capture": "direct shell 2>&1 | tee from initial source/date/version markers",
+    "format": "UTF-8 plain text",
+    "bytes": 281386,
+    "sha256": "e384b4cc10a8d661ab1461c46560df354a719b101f0bd2878bd5292dcce48fdd",
+    "contains_final_exit_marker": true,
+    "storage_format": "gzip; byte count and sha256 above refer to the decompressed complete log",
+    "gzip_sha256": "4f210fd2a5e1ff44f4d86df313108f2acd50302697f60e8060d6cf50f1373320"
+  },
+  "post_check_worktree": {
+    "head": "c36c1308112d37405354974837d2ad8a4e5bca47",
+    "tree": "67691cf2e2eb418e7a120f1f9b993ac7c812108d",
+    "tracked_runtime_metadata_changes": [
+      "certificates/dyadic_cyclic_orbit_validation.json",
+      "certificates/finite_frame_validation.json"
+    ],
+    "runtime_metadata_diff": {
+      "path": "certificates/research_checkpoint_c36_runtime_metadata.patch",
+      "sha256": "64bbf13568cccc51e2f73d64771abaa2ae3883d2fbb8b4e9146f06d8a2d5274f"
+    },
+    "no_other_worktree_changes": true
+  },
+  "original_receipt_sha256": "f5677969263fa57cc3cfb95a2504161cdb778ceb540024f2f14863df87d1f3d8"
+}

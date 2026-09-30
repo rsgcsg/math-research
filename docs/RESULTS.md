@@ -489,4 +489,14 @@ E115收尾补充：第一份池内势的阈值−1查询给出全Y合法价格�
 | T158 | (a)固定九点、14个P/5个R事件的完整可行投影恰为五边形，p最小1/27；(b)原Y全部P/R-only且α≤2窗口的完整匹配条件不再缩小该区域 | [九点证明](proofs/nine_point_pr_polygon.md)、[五个顶点证书](../certificates/nine_point_pr_polygon.json)、[精确重放](../certificates/nine_point_pr_polygon_verification.json)、[匹配族证明](proofs/pr_matching_window_ceiling.md)、[双算法团枚举](../certificates/pr_matching_window_ceiling.json)。全部2277局部proper划分；最小点12原子、分母27。局部律不声称共同延拓到Y |
 | C028 | 长度q循环区间的标准化CP矩在n≤kq时有单独立集矩表示，但q∤n时没有任何块数的划分律；q\|n时显式偏移划分给出正律 | [自足推论](proofs/cyclic_interval_kernel_gap.md)、[81参数/78088划分评价校准](../certificates/cyclic_interval_kernel.json)。成熟chorded-cycle不等式的显式无限族，不主张首创；其普通图仍有ceil(n/q)染色，不能当成不可k染证明。除C027特例外无平面单位实现声明 |
 
-本轮默认检查均比较保存收据，显式写入选项才更新；本地精确目标重放与精确源树全仓验收分别报告。c36完整验收尚在进行，9cca旧树收据不覆盖这些新增文件。
+本轮默认检查均比较保存收据，显式写入选项才更新；本地精确目标重放与精确源树全仓验收分别报告。c36完整验收随后已通过；cccb仍独立重放，旧树收据不覆盖这些新增文件。
+
+## 2026-09-30：受限BW行族的全长度结构闭合
+
+| ID | 内容 | 状态与范围 |
+|---|---|---|
+| T159 | 逐节点仅使用E/P/R坐标的BW辅助图，其全部边及任意长度奇圈约束恰给3p≤1、2p+r≤1、2r−p≤1及非负性；加入七点五色计数后恰为T158的H | [完整证明](proofs/bw_pr_odd_cycle_ceiling.md)、[检查器](../research/verify_bw_pr_odd_cycle_ceiling.py)、[源绑定收据](../certificates/bw_pr_odd_cycle_ceiling.json)。A/B/C节点78142/20968/70350；星形／二部结构和全部C禁形检查通过。包括已知循环边／二阶弦的简单2-COC；不包括未知节点坐标只在总和中消去的组合，不是全Y划分律可行性定理 |
+
+通用星形引理由任意规模计数证明；[独立校准](../certificates/star_odd_cycle_lemma_calibration.json)检查9216个小图、五个缺假设反例和120种六点冲突重叠类型。C028另补自足割锥／ℓ₁嵌入公式，说明所有齐次割锥有效式也被单集矩满足；它不否定高阶度量或完整划分方法。
+
+精确发布提交c36 / tree `67691cf2e2eb418e7a120f1f9b993ac7c812108d` 完整`make check`已通过：12:14:57–13:15:54 UTC，3657秒，Python3.12.14，exit0。[收据](../certificates/research_checkpoint_c36_validation.json)只覆盖该源树；cccb独立重放仍进行，当前T159组合树的全仓状态另报。

@@ -41,6 +41,8 @@ def check_case(n,q):
             covariance=k*sum(w*(F(i in a)-F(1,k))*(F(j in a)-F(1,k))
                              for w,a in zip(weights,atoms))
             assert Q[i][j]-F(1,k)==covariance
+            cut_distance=F(k,2)*sum(w*abs(int(i in a)-int(j in a)) for w,a in zip(weights,atoms))
+            assert 1-Q[i][j]==cut_distance
     assert all(Q[i][j]==0 for i,j in edges)
     for i,j,h in combinations(range(n),3):
         assert Q[i][j]+Q[j][h]-Q[i][h]<=1
