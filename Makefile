@@ -1,4 +1,4 @@
-.PHONY: check-heptagon-module check-python check-joined-pricing check-full15-support check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore
+.PHONY: check-heptagon-module check-python check-joined-pricing check-full15-support check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore check-lattice-ports
 .DEFAULT_GOAL := check
 
 check-python:
@@ -20,6 +20,7 @@ check: check-python
 	$(MAKE) check-eta-support
 	$(MAKE) check-full15-support
 	$(MAKE) check-heptagon-module
+	$(MAKE) check-lattice-ports
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -86,3 +87,8 @@ check-heptagon-module:
 	python3 -S research/test_heptagon_module.py
 	python3 -S research/verify_heptagon_residue27.py
 	python3 -S research/verify_heptagon_actual_patch.py
+
+check-lattice-ports:
+	python3 -S research/test_lattice_mixed.py
+	python3 -S research/verify_Y_pair_portfolio.py --self-test
+	python3 -S research/verify_cube_symmetry_gap.py

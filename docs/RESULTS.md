@@ -425,7 +425,7 @@ T139一般有限秩的ESS输入、T138整个H′Y五色、E111已关闭事件族
 | E115 | 旧5词加入S的3词后做3轮不限模式复用定价，每轮获得合法价格0词及30新行 | 11词、235行，548438次实际边检查及11项篡改拒绝；最终池内分离，ROUND_LIMIT_UNKNOWN | [证书](../certificates/joined_seed_pricing.json.gz)、[结构分析](proofs/research_reassessment_20260929.md#5-没有停在路线图e115继续全支持证伪)；不能外推全词反证或列生成普遍失败 |
 
 普通HN仍为5≤χ(R²)≤7。下一关键缺口是支持无关全词严格势或完整共同正律，
-不自动把增加支持数、轮次或新几何外观视为推进。远端三角格主张的证据缺口见[BRANCHES](BRANCHES.md)。
+不自动把增加支持数、轮次或新几何外观视为推进。三角格分支的初次证据缺口及后续恢复见[BRANCHES](BRANCHES.md)。
 
 E115收尾补充：第一份池内势的阈值−1查询给出全Y合法价格−1词，独立重放全部49858边及精确目标；
 [证书](../certificates/joined_seed_negative_probe.json)关闭该势的全词非负/facial-cut解释，
@@ -443,3 +443,17 @@ E115收尾补充：第一份池内势的阈值−1查询给出全Y合法价格�
 
 本轮统一机制是“CM全嵌入有界→完整有限方向；赋值层→精确方向计数；有限商颜色→仅向上的拉回”。
 一个新几何宿主被整体关闭，并没有因此完成原始问题。任意支持full15仍是主攻。
+
+## 2026-09-30：混合运动分支证据恢复与选择性重放（描述性，不新增编号）
+
+以下是已存在分支成果的恢复与独立验收记录；保留主线 T144–T151、C025 及既有UNKNOWN，不重编号旧结果。普通HN仍为 `5≤χ(R²)≤7`，原Y的全15域任意支持共同律仍未决。
+
+| 名称 | 已证明/重放的范围 | 限制与证据 |
+|---|---|---|
+| Y 的完整二端口关系 | 56个合法全Y五色词：2792048次边检查、10077个互异颜色签名、全部50718068个非边均有同色见证。每个局部合法二点赋值可延拓至整个Y；R₅(Y,{x,y})只受真实邻接限制 | 不给15域共同律、不处理多端口。[证明](proofs/Y_two_terminal_completion.md) · [词证书](../certificates/Y_pair_portfolio.json.gz) · [搜索记录](../certificates/Y_pair_portfolio.json.search.json) |
+| `Y+Z+Zω` | 9624个平移陪集代表、79007类完整接触；公式 `c(q_i+m+nω)=a_i+m+2n mod 5` 通过全部边，且下界继承Y，故此宿主恰五色 | 独立精确重建代表、接触与色词；不是整个平面上界。[证明](proofs/triangular_lattice_saturation.md) · [色词](../certificates/triangular_lattice_five_coloring.json) |
+| 固定调色板平移形式 | 若三角格两个生成平移均由固定颜色置换实现，五色正规形仅有斜率 `2,3,4` | 只分类等变染色，不分类全部普通五染色。[证明](proofs/triangular_palette_normal_form.md) |
+| 几何/抽象图对称差异 | 64个有理单位点诱导 `Q₆`，χ=2，具有保持全部真实部分等距的一词律；若错误要求对所有抽象图部分同构不变，非边同色概率需同时 `≥63/304` 和 `≤1/5`，矛盾 | 额外的图EPPA色数代价不属于HN平面界。[证明](proofs/geometric_versus_graph_symmetry.md) · [重放记录](../certificates/cube_symmetry_gap.json) |
+| 混合宿主 `B+Λ` | `B=∪_{r=0}^4η^rY` 的22041点种子重建出20461个代表、173328类完整接触；完成三种斜率、二相位及84901点有限patch的有界查询 | 查询均为UNKNOWN；没有正染色或不可染证书。[几何记录](../certificates/mixed_lattice_geometry.json) · [搜索记录](../certificates/mixed_lattice_search.json) |
+
+独立验收：`make check-lattice-ports`；本地仅用Python标准库重建几何与复核证书。GitHub Actions完整验收由 [run 36576410262](https://github.com/rsgcsg/math-research/actions/runs/36576410262) 执行，checked commit 为 `efde4dc005bf897d120d717f46db4a497ccf00de`；运行时恢复的271个源文件哈希与最终分支提交 `fc6d2c2` 中对应文件逐一吻合。该历史收据不替代本次与T147–T151合并后的完整 `make check`。

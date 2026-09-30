@@ -677,3 +677,12 @@ T144/T146/T148和C025的证明在本地自足，独立有限检查范围另见�
 
 [T150–T151](../docs/proofs/heptagon_cm_module.md)的方向穷尽与谱界为本地证明，
 E116为独立有限检查；E117的四次UNKNOWN只是搜索记录，不是文献或数学下界。
+
+## 2026-09-30：恢复分支证据所用的结构参照
+
+- [Alon–Alweiss, *On the product dimension of clique factors*, arXiv:1905.10483v2](https://arxiv.org/abs/1905.10483v2)：只核对作者摘要中“颜色向量/团积因子”术语；Y的56词组合与全覆盖为本仓库自足构造，不援引其渐近结论。
+- Felix Joos、Letícia Mattos，[*On the Prague dimension of sparse random graphs*, arXiv:2512.08899v1](https://arxiv.org/abs/2512.08899)：只核对作者摘要中direct-product induced-subgraph术语；不使用其随机图界，Q₅^56的Y实例由本仓库证书检查。
+- [Bradley-Williams、Cameron、Hubička、Konečný, *EPPA numbers of graphs*, arXiv:2311.07995v3](https://arxiv.org/abs/2311.07995v3)：只核对普通图EPPA定义及发表版本；Q₆的有理坐标、概率上下界与非几何部分同构例均在本仓库自足证明，不用原文规模界。此前v2阅读记录保留，不被改写。
+- [Abrishami等, *Periodic colorings and orientations in infinite graphs*, arXiv:2411.01951v3](https://arxiv.org/abs/2411.01951v3)：三角格证明仅将文中周期性条件作为边界提醒；没有从其两端图定理外推到任意二维单位图。其早前阅读范围见上文历史来源记录。
+
+以上条目记录的是恢复成果所用术语及阅读范围，不宣称这些分支证明有外部文献优先权，也不将抽象图EPPA的色数结论记为普通HN界。

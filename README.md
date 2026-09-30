@@ -4,6 +4,13 @@
 [当前状态](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线](docs/ROUTES.md) ·
 [统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md)。
 
+## 2026-09-30：恢复已有分支证据
+
+选择性恢复并独立重放 `research/mixed-motion-20260929` 已有结果，没有新编号，也没有改变普通HN的 `5≤χ(R²)≤7` 界或full15任意支持未决状态：原Y全部二端口关系已饱和；`Y+Z+Zω` 有完整的五色证书；64点有理 `Q₆` 说明抽象图部分同构不能替代真实几何；更大的混合宿主仍为 UNKNOWN。
+[二端口证明](docs/proofs/Y_two_terminal_completion.md) · [平移宿主证明](docs/proofs/triangular_lattice_saturation.md) · [对称性边界](docs/proofs/geometric_versus_graph_symmetry.md) · [恢复记录](docs/BRANCHES.md)。
+`make check-lattice-ports` 将这些独立检查接入全仓检查；未把一次性自更新工作流并入主线。
+
+
 ## 2026-09-29 第二轮：从七重几何得到无限宿主定理
 
 - **T150：** Haugland的整个84方向加法宿主**恰四色**，原表六种标号均已全局延拓。
@@ -36,7 +43,7 @@
 
 已有S子系统仍最少三原子；其正律只通过原15域中的7个。
 T138的整个同中心双自由旋转宿主仍恰五色。
-远端三角格/混合运动文稿缺失所引用证据，未提升为已验证定理；见[分支审计](docs/BRANCHES.md)。
+9月29日初次分支审计时，三角格/混合运动文稿缺少所引用证据；9月30日恢复并独立重放，范围与非结论见[分支审计](docs/BRANCHES.md)。
 
 ```sh
 source .venv/bin/activate  # make setup可准备环境；全仓检查要求Python≥3.10，CI固定3.13.5

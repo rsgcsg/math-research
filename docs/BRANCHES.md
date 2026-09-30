@@ -1,6 +1,28 @@
 # 分支、成果与恢复
 
-## 当前审计：2026-09-29
+## 当前恢复审计：2026-09-30
+
+本次基线为main `b87a0d7a5dc62a4e13c2411ed09e2c162a36c664`；混合运动分支仍是从旧main `a885b67c172726e14884cb43cd37b965dbb32575` 分出的独立历史，不能整体合并覆盖主线。相关引用头：
+
+| 远端分支 | 精确头 | 当前关系 |
+|---|---|---|
+| main | `b87a0d7a5dc62a4e13c2411ed09e2c162a36c664` | 保留T147–T151/C025与当前主攻 |
+| research/full15-coupling-20260928 | `4c3e2313902b40bbfbf63cbc673a45e2951f991f` | 已为main祖先；T144加权η正规形已并入 |
+| research/intrinsic-eta-cycle-20260928 | `09926d59b176c1f649aa30f7ec397fb8fa9ef9fa` | 已为main祖先 |
+| research/joint-continuation-20260928 | `b1e4aa8f307010fb7e5322a6cec6403665e32d0e` | 已为main祖先 |
+| research/triangular-lattice-20260928 | `578bd83c3a47d9a2b9eeed6dc6cbd2651c0f1793` | 仍保留只有证明文稿的历史头；不含后续的独立证据 |
+| research/mixed-motion-20260929 | `fc6d2c2972f6c234f06112576610d26525795cf8` | 包含三角格正证据、Y二端口正证书、混合几何记录与Q₆对称性反例；选择性恢复，不整支合并 |
+
+### 恢复链与验收范围
+
+- `578bd83c` 首次只提交三角格证明，缺少文中引用的程序/证书；实际workflow run `36565505106` 因验证文件缺失失败。该失败保留为仓库历史，不是数学反证。
+- `384275f1` 尝试导出与重放；随后 `efde4dc0` 用受哈希绑定的研究源传输运行一次完整 `make check`，workflow run `36576410262` 全部步骤均成功，生成远端验收收据。该收据记录 checked commit `efde4dc005bf897d120d717f46db4a497ccf00de`、271个源文件和manifest SHA256 `72e9961694f4d21fcdabcd41be2eb9e276179395db0aba303e25ac0b0332b856`。最终 `fc6d2c2` 发布展开后的源文件；本地审计逐一重算271项哈希，与收据无一不符。GitHub留存的 [run 36576410262](https://github.com/rsgcsg/math-research/actions/runs/36576410262) 作业和各步骤均为success，完整source-and-replay artifact有效至2026-10-29。
+- 隔离审计worktree的 `make check-lattice-ports` 独立返回0：Y+Λ代表/完整接触、Y portfolio、Q₆坐标与对称界全通过。基于T147–T151主线的集成工作树完整 `make check` 当前为 **IN_PROGRESS**，尚无该整合版本的完成收据；分支历史run不能替代它。
+- 为避免混淆，`certificates/lattice_ports_remote_validation.json` 只记上述历史运行，不代表新集成版本全仓检查。一次性 `.github/workflows/mixed-motion-checkpoint.yml` 会自更新远端研究分支，未选择性恢复到主线。
+
+恢复结果的逐项数学边界见[CURRENT](CURRENT.md)及[RESULTS](RESULTS.md)。以下2026-09-29初次审计保留的是其当时掌握的信息，不表示缺失证据状态延续到现在。
+
+## 2026-09-29初次审计快照（证据恢复前）
 
 起点`research/rotation-rank2-20260926`的482b530已是远端main祖先，
 本地main先快进到`a885b67c172726e14884cb43cd37b965dbb32575`。
