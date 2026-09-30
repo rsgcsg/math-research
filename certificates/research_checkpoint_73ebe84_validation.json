@@ -1,0 +1,66 @@
+{
+  "schema": "composite-make-check-recovery-v1",
+  "claim": "Interrupted make check prefix plus successful resumed completion coverage; this is not evidence of one uninterrupted make check invocation.",
+  "source": {
+    "commit": "73ebe849758f36544ccd6a378b31f7383b0b7ac0",
+    "tree": "3d2bb2058d46981b62fd5b40e83a27dbe8fe1d16",
+    "python": "Python 3.12.14",
+    "recovery_checkout": "math-final-coupling-replay",
+    "post_run_tracked_diff": "clean",
+    "repository": "rsgcsg/math-research",
+    "prior_generated_metadata_patch": "certificates/research_checkpoint_73ebe84_runtime_metadata.patch",
+    "research_code_changed": false
+  },
+  "prior_prefix": {
+    "log": "certificates/research_checkpoint_73ebe84_interrupted_prefix.log.gz",
+    "sha256": "a3fc2342960ad0b0603ab17a0b8d29605f72438cb0629648ec67d1c83707b391",
+    "command": "make check",
+    "termination": "No exit status or aggregate completion; log ends during check-lattice-ports at python3 -S research/test_lattice_mixed.py.",
+    "coverage_evidence": "Prefix log records successful preparatory checks (including verify_bw_pr_odd_cycle_ceiling and verify_q_pr_coupling_audit), base verify.py and subsequent make targets through check-joined-pricing and check-heptagon-module; no error/failure traceback marker found before truncation.",
+    "start_utc": "2026-09-30T14:55:25Z (recorded in source log)",
+    "stop_utc": "unknown; log ends mid-target without terminal timestamp/status",
+    "uncompressed_bytes": 270098,
+    "gzip_sha256": "65745521d387bce57911baa44a3d2559db3e1799b788f7e3244bc68a68c875f5",
+    "started_utc": "2026-09-30T14:55:25Z",
+    "exit_status": null
+  },
+  "resumed_replay": {
+    "log": "certificates/research_checkpoint_73ebe84_resumed_check.log.gz",
+    "sha256": "449e86b420eb4244153920e17841ebf9107eed839f08b629703638a8fee0f1ba",
+    "command": "make check-lattice-ports check-qd-family check-t028-host-orbit check-g14-port-or check-port4-exact-law check-joint-theory check-g14-pair-orbit check-g14-common-law check-cubic-unit-directions check-g14-pr-bound check-pentagon-partition-gap check-pr-local-projection check-cyclic-interval-kernel check-bw-pr-odd-cycle-ceiling check-hidden-pair-elimination check-q-pr-coupling-audit",
+    "exit_status": 0,
+    "runtime_seconds_approx": 358,
+    "coverage": [
+      "check-lattice-ports",
+      "check-qd-family",
+      "check-t028-host-orbit",
+      "check-g14-port-or",
+      "check-port4-exact-law",
+      "check-joint-theory",
+      "check-g14-pair-orbit",
+      "check-g14-common-law",
+      "check-cubic-unit-directions",
+      "check-g14-pr-bound",
+      "check-pentagon-partition-gap",
+      "check-pr-local-projection",
+      "check-cyclic-interval-kernel",
+      "check-bw-pr-odd-cycle-ceiling",
+      "check-hidden-pair-elimination",
+      "check-q-pr-coupling-audit"
+    ],
+    "start_utc": "2026-09-30T16:03:46Z (approximate, invocation observed)",
+    "finish_utc": "2026-09-30T16:09:44Z (observed EXIT:0)",
+    "uncompressed_bytes": 49578,
+    "gzip_sha256": "c2152ef50dfb50ea25f177f09ba5a280ed08080dc9f4eae9d9a633143900d176",
+    "started_utc_approx": "2026-09-30T16:03:46Z",
+    "exit_zero_observed_utc": "2026-09-30T16:09:44Z"
+  },
+  "acceptance": {
+    "status": "PASS_COMPOSITE_TARGET_COVERAGE",
+    "reviewed_utc": "2026-09-30T16:10:52Z",
+    "unique_python_recipe_commands": 55,
+    "missing_recipe_commands": [],
+    "basis": "Same frozen source, sequential successful prefix evidenced by subsequent targets, plus interrupted and remaining targets rerun with exit 0. All 55 distinct Python recipe commands in make -n check occur in archived logs. Not an uninterrupted aggregate exit-zero claim.",
+    "scope": "Frozen research source only. This archive commit changes documentation and evidence only. No full15 solution or HN bound change."
+  }
+}

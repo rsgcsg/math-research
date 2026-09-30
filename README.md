@@ -1,5 +1,13 @@
 # Hadwiger–Nelson research
 
+## 最终验收与停止（2026-09-30 16:10 UTC）
+
+研究源冻结于 `73ebe849758f36544ccd6a378b31f7383b0b7ac0`，tree `3d2bb2058d46981b62fd5b40e83a27dbe8fe1d16`。本轮已完成并停止；下文历史待办仅记录当时状态，不再自动执行。
+
+完整 `make check` 在最后阶段中断，没有总退出码。保留其成功前缀后，在同一精确源树重跑中断目标及剩余目标，退出码0；独立比对覆盖 Makefile 中全部55条不同Python命令。验收结论为**完整目标覆盖通过（中断后续跑）**，不是一次连续 `make check` 成功。完整日志、哈希、覆盖范围与两项运行元数据差异见[验收收据](certificates/research_checkpoint_73ebe84_validation.json)。本次归档只修改文档和证据，不修改研究程序或数学结果。
+
+原始任意支持full15与普通Hadwiger–Nelson问题仍未解决，本轮没有新平面色数界。
+
 目标：决定普通欧氏平面的单位距离色数。**尚未改变5≤χ(R²)≤7。**
 [当前状态](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线](docs/ROUTES.md) ·
 [统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md)。
