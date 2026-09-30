@@ -1,0 +1,1798 @@
+{
+  "actual_Y_embedding": {
+    "edge_count": 49858,
+    "input_sha256": "7cbf9c71e1cd1aca64a1622ef9d6550cacbf40972547e89495993f58e4f6a436",
+    "no_extra_Y_unit_edges_among_14": true,
+    "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+    "semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+    "unit_edge_subgraph_matches_Y_induced_edges": true,
+    "vertex_indices": {
+      "O": 4641,
+      "a1": 9080,
+      "a2": 9083,
+      "a3": 7492,
+      "a4": 9759,
+      "a5": 9757,
+      "h0": 8986,
+      "h1": 7490,
+      "i0": 7488,
+      "i1": 5534,
+      "i2": 888,
+      "i3": 878,
+      "i4": 3484,
+      "i5": 7478
+    }
+  },
+  "external_attribution": {
+    "commit": "4c84e4d67522e644faef704694cd5ba7fc273abc",
+    "proof_file": "https://github.com/HeliCorgi/fourteen-points-six-colors/blob/4c84e4d67522e644faef704694cd5ba7fc273abc/proofs/PROOF_G14.md",
+    "read_scope": [
+      "README.md",
+      "proofs/PROOF_G14.md",
+      "proofs/PROOF_G15.md",
+      "proofs/LEMMA_CLIQUE_STARVATION.md",
+      "LITERATURE.md"
+    ],
+    "repository": "https://github.com/HeliCorgi/fourteen-points-six-colors",
+    "warning": "The separate minimum-14/catalog/interval-certificate claim was not audited here."
+  },
+  "independent_check": {
+    "Parts509_embedding": {
+      "Y_inheritance": "Parts509 is contained in X and Y=X union tau X; the independent Y-coordinate check below additionally matches all 14 physical points and the exact unit edge subgraph.",
+      "basis": [
+        "1",
+        "sqrt3",
+        "sqrt11",
+        "sqrt33",
+        "sqrt5",
+        "sqrt15",
+        "sqrt55",
+        "sqrt165"
+      ],
+      "coordinate_denominator": 96,
+      "input_sha256": "6110b6574055b4daf2c10d0bb13267d1adefc7218c3586c096430309a8cee2b9",
+      "no_extra_unit_edges_among_14": true,
+      "unit_edge_subgraph_matches_induced_edges": true,
+      "vertex_indices": {
+        "O": 0,
+        "a1": 202,
+        "a2": 275,
+        "a3": 274,
+        "a4": 276,
+        "a5": 277,
+        "h0": 153,
+        "h1": 150,
+        "i0": 55,
+        "i1": 52,
+        "i2": 67,
+        "i3": 64,
+        "i4": 61,
+        "i5": 58
+      }
+    },
+    "adjacent_poor_pair": {
+      "distance": "1/sqrt3",
+      "vertices": [
+        "i0",
+        "a1"
+      ]
+    },
+    "distance_counts": {
+      "1": 18,
+      "1/sqrt3": 27,
+      "2": 5
+    },
+    "distance_edges": [
+      {
+        "distance": "1",
+        "u": "O",
+        "v": "h0"
+      },
+      {
+        "distance": "1",
+        "u": "O",
+        "v": "h1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i0"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i2"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i3"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i4"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "a1",
+        "v": "a2"
+      },
+      {
+        "distance": "1",
+        "u": "a1",
+        "v": "a3"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "a1",
+        "v": "a4"
+      },
+      {
+        "distance": "1",
+        "u": "a1",
+        "v": "a5"
+      },
+      {
+        "distance": "1",
+        "u": "a1",
+        "v": "i5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "a2",
+        "v": "a3"
+      },
+      {
+        "distance": "1",
+        "u": "a2",
+        "v": "a4"
+      },
+      {
+        "distance": "2",
+        "u": "a2",
+        "v": "i4"
+      },
+      {
+        "distance": "2",
+        "u": "a3",
+        "v": "a5"
+      },
+      {
+        "distance": "2",
+        "u": "a3",
+        "v": "i3"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "a4",
+        "v": "a5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h0",
+        "v": "a1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h0",
+        "v": "a4"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h0",
+        "v": "a5"
+      },
+      {
+        "distance": "1",
+        "u": "h0",
+        "v": "h1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h0",
+        "v": "i0"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h0",
+        "v": "i5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h1",
+        "v": "a1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h1",
+        "v": "a2"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h1",
+        "v": "a3"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h1",
+        "v": "i1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i0",
+        "v": "a1"
+      },
+      {
+        "distance": "1",
+        "u": "i0",
+        "v": "a2"
+      },
+      {
+        "distance": "1",
+        "u": "i0",
+        "v": "a4"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i0",
+        "v": "h1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i0",
+        "v": "i1"
+      },
+      {
+        "distance": "1",
+        "u": "i0",
+        "v": "i2"
+      },
+      {
+        "distance": "1",
+        "u": "i0",
+        "v": "i4"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i0",
+        "v": "i5"
+      },
+      {
+        "distance": "1",
+        "u": "i1",
+        "v": "a1"
+      },
+      {
+        "distance": "1",
+        "u": "i1",
+        "v": "a3"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i1",
+        "v": "i2"
+      },
+      {
+        "distance": "1",
+        "u": "i1",
+        "v": "i3"
+      },
+      {
+        "distance": "1",
+        "u": "i1",
+        "v": "i5"
+      },
+      {
+        "distance": "2",
+        "u": "i2",
+        "v": "a4"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i2",
+        "v": "i3"
+      },
+      {
+        "distance": "1",
+        "u": "i2",
+        "v": "i4"
+      },
+      {
+        "distance": "2",
+        "u": "i3",
+        "v": "a5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i3",
+        "v": "i4"
+      },
+      {
+        "distance": "1",
+        "u": "i3",
+        "v": "i5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i4",
+        "v": "i5"
+      },
+      {
+        "distance": "1",
+        "u": "i5",
+        "v": "a5"
+      }
+    ],
+    "distinct_points": 14,
+    "event_deletion_witnesses": [
+      {
+        "colors": [
+          0,
+          2,
+          0,
+          3,
+          2,
+          1,
+          2,
+          3,
+          4,
+          1,
+          4,
+          4,
+          3,
+          0
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "O",
+          "i0"
+        ]
+      },
+      {
+        "colors": [
+          4,
+          3,
+          0,
+          2,
+          4,
+          1,
+          4,
+          1,
+          3,
+          0,
+          3,
+          2,
+          2,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "O",
+          "i1"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          2,
+          1,
+          3,
+          0,
+          4,
+          3,
+          3,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "O",
+          "i2"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          2,
+          3,
+          4,
+          1,
+          4,
+          4,
+          3,
+          0
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "O",
+          "i3"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          2,
+          4,
+          3,
+          0,
+          1,
+          3,
+          3,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "O",
+          "i4"
+        ]
+      },
+      {
+        "colors": [
+          4,
+          2,
+          0,
+          3,
+          2,
+          1,
+          2,
+          1,
+          4,
+          0,
+          3,
+          4,
+          4,
+          3
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "O",
+          "i5"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          1,
+          4,
+          3,
+          0,
+          2,
+          3,
+          3,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "a1",
+          "a2"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          2,
+          3,
+          3,
+          0,
+          4,
+          1,
+          3,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "a1",
+          "a4"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          3,
+          3,
+          3,
+          4,
+          2,
+          4,
+          3,
+          0
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "a2",
+          "a3"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          2,
+          4,
+          3,
+          0,
+          2,
+          3,
+          3,
+          4
+        ],
+        "distance": "2",
+        "omitted_event": [
+          "a2",
+          "i4"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          3,
+          3,
+          0,
+          4,
+          2,
+          4,
+          3,
+          0
+        ],
+        "distance": "2",
+        "omitted_event": [
+          "a3",
+          "a5"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          4,
+          4,
+          0,
+          0,
+          2,
+          3,
+          3,
+          4
+        ],
+        "distance": "2",
+        "omitted_event": [
+          "a3",
+          "i3"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          2,
+          3,
+          3,
+          0,
+          4,
+          4,
+          3,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "a4",
+          "a5"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          4,
+          0,
+          3,
+          2,
+          4,
+          2,
+          3,
+          1,
+          0,
+          4,
+          1,
+          3,
+          2
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "h0",
+          "a1"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          4,
+          0,
+          3,
+          2,
+          1,
+          2,
+          3,
+          4,
+          0,
+          4,
+          4,
+          3,
+          2
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "h0",
+          "a4"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          2,
+          3,
+          4,
+          0,
+          4,
+          4,
+          3,
+          2
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "h0",
+          "a5"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          0,
+          0,
+          3,
+          2,
+          1,
+          2,
+          3,
+          4,
+          0,
+          4,
+          4,
+          3,
+          2
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "h0",
+          "i0"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          4,
+          0,
+          3,
+          2,
+          1,
+          2,
+          4,
+          4,
+          0,
+          3,
+          3,
+          4,
+          2
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "h0",
+          "i5"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          4,
+          1,
+          4,
+          3,
+          0,
+          2,
+          3,
+          3,
+          1
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "h1",
+          "a1"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          4,
+          4,
+          3,
+          0,
+          2,
+          3,
+          3,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "h1",
+          "a2"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          4,
+          4,
+          3,
+          0,
+          2,
+          3,
+          3,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "h1",
+          "a3"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          3,
+          0,
+          4,
+          4,
+          1,
+          3,
+          3,
+          2,
+          0,
+          4,
+          2,
+          2,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "h1",
+          "i1"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          3,
+          2,
+          0,
+          2,
+          3,
+          1,
+          0,
+          4,
+          1,
+          3,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "i0",
+          "a1"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          0,
+          2,
+          1,
+          4,
+          4,
+          3,
+          0,
+          2,
+          3,
+          3,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "i0",
+          "h1"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          3,
+          0,
+          2,
+          0,
+          1,
+          3,
+          2,
+          4,
+          3,
+          4,
+          4,
+          2,
+          0
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "i0",
+          "i1"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          4,
+          4,
+          0,
+          3,
+          2,
+          3,
+          0,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "i0",
+          "i5"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          3,
+          0,
+          2,
+          4,
+          1,
+          4,
+          4,
+          3,
+          0,
+          3,
+          2,
+          2,
+          4
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "i1",
+          "i2"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          2,
+          3,
+          3,
+          0,
+          4,
+          3,
+          3,
+          4
+        ],
+        "distance": "2",
+        "omitted_event": [
+          "i2",
+          "a4"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          4,
+          0,
+          3,
+          2,
+          1,
+          4,
+          4,
+          0,
+          4,
+          2,
+          3,
+          3,
+          2
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "i2",
+          "i3"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          2,
+          3,
+          4,
+          0,
+          4,
+          4,
+          3,
+          0
+        ],
+        "distance": "2",
+        "omitted_event": [
+          "i3",
+          "a5"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          4,
+          2,
+          1,
+          2,
+          3,
+          3,
+          4,
+          4,
+          4,
+          3,
+          0
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "i3",
+          "i4"
+        ]
+      },
+      {
+        "colors": [
+          1,
+          2,
+          0,
+          3,
+          2,
+          1,
+          2,
+          3,
+          4,
+          0,
+          4,
+          4,
+          4,
+          3
+        ],
+        "distance": "1/sqrt3",
+        "omitted_event": [
+          "i4",
+          "i5"
+        ]
+      }
+    ],
+    "independence_number": 3,
+    "independent_triples": [
+      [
+        "O",
+        "a2",
+        "a5"
+      ],
+      [
+        "O",
+        "a3",
+        "a4"
+      ],
+      [
+        "h0",
+        "i1",
+        "a2"
+      ],
+      [
+        "h0",
+        "i1",
+        "i4"
+      ],
+      [
+        "h0",
+        "a2",
+        "i2"
+      ],
+      [
+        "h0",
+        "a2",
+        "i3"
+      ],
+      [
+        "h0",
+        "i2",
+        "a3"
+      ],
+      [
+        "h0",
+        "a3",
+        "i4"
+      ],
+      [
+        "h1",
+        "i2",
+        "i5"
+      ],
+      [
+        "h1",
+        "i2",
+        "a5"
+      ],
+      [
+        "h1",
+        "i3",
+        "a4"
+      ],
+      [
+        "h1",
+        "i4",
+        "a4"
+      ],
+      [
+        "h1",
+        "i4",
+        "a5"
+      ],
+      [
+        "h1",
+        "a4",
+        "i5"
+      ],
+      [
+        "i1",
+        "a2",
+        "a5"
+      ],
+      [
+        "i1",
+        "i4",
+        "a4"
+      ],
+      [
+        "i1",
+        "i4",
+        "a5"
+      ],
+      [
+        "a2",
+        "i2",
+        "i5"
+      ],
+      [
+        "a2",
+        "i2",
+        "a5"
+      ],
+      [
+        "i2",
+        "a3",
+        "i5"
+      ],
+      [
+        "a3",
+        "i4",
+        "a4"
+      ],
+      [
+        "a3",
+        "a4",
+        "i5"
+      ]
+    ],
+    "method": "Python standard library only: Fraction arithmetic in Q(sqrt(3)); exhaustive 91-pair classification and 4-subset independence enumeration; custom exhaustive DSATUR backtracking for witness colorings; no SAT package, external solver, or external project code.",
+    "port_or_inequality": "For every proper 5-coloring c of the 14-point unit-only core H, sum_{e in the 32 virtual pairs} 1[c(u)=c(v)] >= 1. Proof: a zero sum would make c proper on all 50 D-edges, contradicting the independently verified alpha/poor-vertex class-size argument.",
+    "six_color_classes": [
+      [
+        "i0",
+        "i3"
+      ],
+      [
+        "O",
+        "a1"
+      ],
+      [
+        "a2",
+        "h0",
+        "i1"
+      ],
+      [
+        "a3",
+        "i2",
+        "i5"
+      ],
+      [
+        "a5",
+        "h1",
+        "i4"
+      ],
+      [
+        "a4"
+      ]
+    ],
+    "source_coordinates": {
+      "O": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "a1": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      ],
+      "a2": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "a3": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      ],
+      "a4": [
+        [
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            6
+          ]
+        ]
+      ],
+      "a5": [
+        [
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            6
+          ]
+        ]
+      ],
+      "h0": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "h1": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "i0": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            6
+          ]
+        ]
+      ],
+      "i1": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      ],
+      "i2": [
+        [
+          [
+            -1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            6
+          ]
+        ]
+      ],
+      "i3": [
+        [
+          [
+            -1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            6
+          ]
+        ]
+      ],
+      "i4": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            3
+          ]
+        ]
+      ],
+      "i5": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            6
+          ]
+        ]
+      ]
+    },
+    "triple_free_vertices": [
+      "i0",
+      "a1"
+    ],
+    "unit_only_core": {
+      "edge_count": 18,
+      "edges": [
+        [
+          "O",
+          "h0"
+        ],
+        [
+          "O",
+          "h1"
+        ],
+        [
+          "a1",
+          "a3"
+        ],
+        [
+          "a1",
+          "a5"
+        ],
+        [
+          "a1",
+          "i5"
+        ],
+        [
+          "a2",
+          "a4"
+        ],
+        [
+          "h0",
+          "h1"
+        ],
+        [
+          "i0",
+          "a2"
+        ],
+        [
+          "i0",
+          "a4"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i0",
+          "i4"
+        ],
+        [
+          "i1",
+          "a1"
+        ],
+        [
+          "i1",
+          "a3"
+        ],
+        [
+          "i1",
+          "i3"
+        ],
+        [
+          "i1",
+          "i5"
+        ],
+        [
+          "i2",
+          "i4"
+        ],
+        [
+          "i3",
+          "i5"
+        ],
+        [
+          "i5",
+          "a5"
+        ]
+      ],
+      "five_color_witness_colors": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        0
+      ],
+      "witness_uses_at_most": 3
+    },
+    "virtual_event_essentiality": "For each of the 32 virtual events e, the certificate has a proper 5-coloring of H that makes every other virtual pair different and makes e equal. Thus no proper subset of these 32 events still forces the OR on this fixed 14-point H.",
+    "virtual_pairs": [
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i0"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i2"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i3"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i4"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "O",
+        "v": "i5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "a1",
+        "v": "a2"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "a1",
+        "v": "a4"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "a2",
+        "v": "a3"
+      },
+      {
+        "distance": "2",
+        "u": "a2",
+        "v": "i4"
+      },
+      {
+        "distance": "2",
+        "u": "a3",
+        "v": "a5"
+      },
+      {
+        "distance": "2",
+        "u": "a3",
+        "v": "i3"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "a4",
+        "v": "a5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h0",
+        "v": "a1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h0",
+        "v": "a4"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h0",
+        "v": "a5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h0",
+        "v": "i0"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h0",
+        "v": "i5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h1",
+        "v": "a1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h1",
+        "v": "a2"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h1",
+        "v": "a3"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "h1",
+        "v": "i1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i0",
+        "v": "a1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i0",
+        "v": "h1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i0",
+        "v": "i1"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i0",
+        "v": "i5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i1",
+        "v": "i2"
+      },
+      {
+        "distance": "2",
+        "u": "i2",
+        "v": "a4"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i2",
+        "v": "i3"
+      },
+      {
+        "distance": "2",
+        "u": "i3",
+        "v": "a5"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i3",
+        "v": "i4"
+      },
+      {
+        "distance": "1/sqrt3",
+        "u": "i4",
+        "v": "i5"
+      }
+    ]
+  },
+  "schema": "g14-port-or-exact-replay-v1",
+  "scope_limits": [
+    "This is not a unit-distance graph with chromatic number 6.",
+    "It is not a strict 15-domain separating potential or proof of a non-5-colorable actual unit-distance graph.",
+    "The 32-event minimality is only for the fixed 14-point unit-only core H, not for all proper colorings of the full 509-point graph or Y.",
+    "No claim that the larger Y has free 3-terminal relations; only its pair-saturation result is used."
+  ]
+}

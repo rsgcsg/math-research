@@ -1,0 +1,392 @@
+{
+  "schema": "port4-exact-rational-law-v1",
+  "status": "EXACT_RATIONAL_4PORT_LAW",
+  "basis_sha256": "67ed7b7ef19512bb7b917e1c611301cf42cc5819d8b19f8f0ccb6d0b115bb224",
+  "whole_Y_proper_words": 75,
+  "support_size": 47,
+  "common_denominator": 184246020,
+  "weights": [
+    {
+      "word_id": 0,
+      "source": "branch56",
+      "source_index": 0,
+      "sha256": "ecf26d911894774932eec47e31a9bd4780bb1d751e89ce9091553a4149eabdf3",
+      "weight": "526463/26320860"
+    },
+    {
+      "word_id": 1,
+      "source": "branch56",
+      "source_index": 1,
+      "sha256": "cae2b6b4572ccaba15c5ea5007917ccffa4dee3b9654c1d8a3a6f73a2596ea7c",
+      "weight": "318961/30707670"
+    },
+    {
+      "word_id": 2,
+      "source": "branch56",
+      "source_index": 2,
+      "sha256": "6e2b3bd5f7930c58ee8746914894ed87d925d7705aba4dcd3e5897b4ba50df26",
+      "weight": "533263/30707670"
+    },
+    {
+      "word_id": 3,
+      "source": "branch56",
+      "source_index": 3,
+      "sha256": "56e2a52d27ac4173980a38e046591a0f777d31351710b60055b89563258a53c4",
+      "weight": "2065433/184246020"
+    },
+    {
+      "word_id": 4,
+      "source": "branch56",
+      "source_index": 4,
+      "sha256": "94730079b2f8e201789a42c55cf03292e10c51dbcf5d65c40f043fb9e275bf86",
+      "weight": "134563/18424602"
+    },
+    {
+      "word_id": 5,
+      "source": "branch56",
+      "source_index": 5,
+      "sha256": "c7589206e508dd99549ab40d5bba7c3ab0f337a0ba0f9723a11e332e6d2f0914",
+      "weight": "399904/6580215"
+    },
+    {
+      "word_id": 6,
+      "source": "branch56",
+      "source_index": 6,
+      "sha256": "236e11160febbd841fc95209a58c2fb5f4a9d140c42df08cdd483fefcda54b59",
+      "weight": "3416867/92123010"
+    },
+    {
+      "word_id": 8,
+      "source": "branch56",
+      "source_index": 8,
+      "sha256": "eaa19d854916a8db45b346a5941377fb18d52779538fc723065fd684cf8f91e2",
+      "weight": "40997/92123010"
+    },
+    {
+      "word_id": 11,
+      "source": "branch56",
+      "source_index": 11,
+      "sha256": "adf3d1694b40c0b801256f959ea9eae772814ec5bdc34e9918001c433896c2b1",
+      "weight": "11219/579390"
+    },
+    {
+      "word_id": 13,
+      "source": "branch56",
+      "source_index": 13,
+      "sha256": "b909bdc458440d6a9d8923e28da044d4147928a2d5e3408300df3ce9ea040ce5",
+      "weight": "13142593/184246020"
+    },
+    {
+      "word_id": 16,
+      "source": "branch56",
+      "source_index": 16,
+      "sha256": "cf71cc77b869c29967b664ab5eeddafd18feae3fad637e05e7bdf79c86dac0e4",
+      "weight": "68576/46061505"
+    },
+    {
+      "word_id": 17,
+      "source": "branch56",
+      "source_index": 17,
+      "sha256": "bda41ec18ffa3dc1f5ddd498a5fde463e9acb9790192e76437aa1adba0288bd3",
+      "weight": "34171/990570"
+    },
+    {
+      "word_id": 19,
+      "source": "branch56",
+      "source_index": 19,
+      "sha256": "5f3476fb100c1eb3f020f6d3db02b3f3a891e2f443569fa214b2b81587396989",
+      "weight": "59743/2924540"
+    },
+    {
+      "word_id": 20,
+      "source": "branch56",
+      "source_index": 20,
+      "sha256": "bd16f69f377d0322615f201e53e7cf35a3a86f43aa5a99d24d9a9fd0e35a208a",
+      "weight": "5842649/61415340"
+    },
+    {
+      "word_id": 21,
+      "source": "branch56",
+      "source_index": 21,
+      "sha256": "5769e3fe21181b765947847481a9ece12a3fb542ef955153a89ea86e972ffc24",
+      "weight": "394061/184246020"
+    },
+    {
+      "word_id": 22,
+      "source": "branch56",
+      "source_index": 22,
+      "sha256": "d82ea567ced923c8e04eac816aa81683412678a7f0ebf7b0b967655f8429ba23",
+      "weight": "38927/2193405"
+    },
+    {
+      "word_id": 25,
+      "source": "branch56",
+      "source_index": 25,
+      "sha256": "e5f521289866b116642443c5dc625952240ee0239325fc7cb16b8bd694a4938d",
+      "weight": "485953/18424602"
+    },
+    {
+      "word_id": 26,
+      "source": "branch56",
+      "source_index": 26,
+      "sha256": "1478477a1d8dae7e131462141023e5b7437ff14da7580e8e56096ac4b6c86fbe",
+      "weight": "618683/184246020"
+    },
+    {
+      "word_id": 28,
+      "source": "branch56",
+      "source_index": 28,
+      "sha256": "02f2bd41c8ba887d4a619f492e0920759141aeec4fc34dc40c30eace371d45b1",
+      "weight": "230975/18424602"
+    },
+    {
+      "word_id": 29,
+      "source": "branch56",
+      "source_index": 29,
+      "sha256": "8aeaa1b20f55a3f96624795d493d9ed6b06cd291a84605b2e19c7ee835bf331f",
+      "weight": "538264/46061505"
+    },
+    {
+      "word_id": 32,
+      "source": "branch56",
+      "source_index": 32,
+      "sha256": "3e2d470e97df714d24f48018560a0a3be0b7696d32c3107719d54a91372dec94",
+      "weight": "2860349/92123010"
+    },
+    {
+      "word_id": 34,
+      "source": "branch56",
+      "source_index": 34,
+      "sha256": "1c467ecd2fe413d7ac07ea0d12dc8b9ab650d445d69975a177de240a09853968",
+      "weight": "880821/20471780"
+    },
+    {
+      "word_id": 35,
+      "source": "branch56",
+      "source_index": 35,
+      "sha256": "2439cb7043bd5f37685f49bb583b072b4780c60ec5dc4fd3c025a948bd7575d8",
+      "weight": "123097/10235890"
+    },
+    {
+      "word_id": 36,
+      "source": "branch56",
+      "source_index": 36,
+      "sha256": "7cd178b878f6586dde30f1c865b38966e66f1c3a51e06a27883163295ae88485",
+      "weight": "604187/184246020"
+    },
+    {
+      "word_id": 37,
+      "source": "branch56",
+      "source_index": 37,
+      "sha256": "2ce55a44bbc3a1f1069652a42b112104b0e557b5bb904239a5fb9c3a78aecf9d",
+      "weight": "287689/18424602"
+    },
+    {
+      "word_id": 39,
+      "source": "branch56",
+      "source_index": 39,
+      "sha256": "fde1b31730617a745ce8c761dbd9f089aa1343f14ce948faba4e576f07b157f6",
+      "weight": "79130/9212301"
+    },
+    {
+      "word_id": 40,
+      "source": "branch56",
+      "source_index": 40,
+      "sha256": "9ba81108bd944bb9484838dd56329890dce2eb98f255fbfcbe15ac35f22b4b3c",
+      "weight": "2065433/184246020"
+    },
+    {
+      "word_id": 41,
+      "source": "branch56",
+      "source_index": 41,
+      "sha256": "0c50ac02f78cba473375db0085ec92045dfe52e0630d78bb7266fbbea7c0ddb7",
+      "weight": "127693/6580215"
+    },
+    {
+      "word_id": 43,
+      "source": "branch56",
+      "source_index": 43,
+      "sha256": "8bd959f802c73b74a0fe1993e50661f8b755799577cd83c786bd26a4207d793a",
+      "weight": "557161/36849204"
+    },
+    {
+      "word_id": 46,
+      "source": "branch56",
+      "source_index": 46,
+      "sha256": "3a606baf1ac0c3bd04ae101609b5521133458cf53100bd2e4ad4f6c9de41766d",
+      "weight": "958243/61415340"
+    },
+    {
+      "word_id": 47,
+      "source": "branch56",
+      "source_index": 47,
+      "sha256": "751f4dd37d911e2a7e886753de212fab3666c95f160e93b9e7670c38c8bbb996",
+      "weight": "240637/10235890"
+    },
+    {
+      "word_id": 48,
+      "source": "branch56",
+      "source_index": 48,
+      "sha256": "d337c6efe1ad280de65000e5b9bd56ec3867a80376ee187a75fe62d91c17d41c",
+      "weight": "193299/20471780"
+    },
+    {
+      "word_id": 49,
+      "source": "branch56",
+      "source_index": 49,
+      "sha256": "d744bcf7689a95a569baab86a494413ebefa015b9d17a046d9397ad7af21e725",
+      "weight": "142034/46061505"
+    },
+    {
+      "word_id": 50,
+      "source": "branch56",
+      "source_index": 50,
+      "sha256": "2c00d8e8cc575d1547f784c77f965605b62f804834fa565df5b99643a69bac5c",
+      "weight": "80987/5117945"
+    },
+    {
+      "word_id": 52,
+      "source": "branch56",
+      "source_index": 52,
+      "sha256": "2f4e48584887eab3d18eec33e4ed9a858cda9ee476a246d6a5cb0f2c6ffd48bb",
+      "weight": "40997/92123010"
+    },
+    {
+      "word_id": 53,
+      "source": "branch56",
+      "source_index": 53,
+      "sha256": "70b65e1ce02f5cb83c4345d061c8ba4f959126b79da216041ebecaef18fd9e8e",
+      "weight": "357821/46061505"
+    },
+    {
+      "word_id": 54,
+      "source": "branch56",
+      "source_index": 54,
+      "sha256": "bbd83c6df8f2aefa4cb708a54c5fb40444aaea7ea2039b18689b8abc36dc0848",
+      "weight": "261173/18424602"
+    },
+    {
+      "word_id": 55,
+      "source": "branch56",
+      "source_index": 55,
+      "sha256": "2d2b5f1f15c167908754ab3f8a59cd1c5b0530dc79897a334f90eeb5ab18fc03",
+      "weight": "291371/18424602"
+    },
+    {
+      "word_id": 56,
+      "source": "E083",
+      "source_index": 0,
+      "sha256": "0cc5896e9d2f0687f44f12c540f532ec828620d3024f74a55e96b7743ceecc60",
+      "weight": "87317/6580215"
+    },
+    {
+      "word_id": 59,
+      "source": "E083",
+      "source_index": 3,
+      "sha256": "e2417ced95c5df0d721a265f258bbc18e26a6e8d425053f257e968adb3f389c4",
+      "weight": "611441/18424602"
+    },
+    {
+      "word_id": 61,
+      "source": "E111",
+      "source_index": 0,
+      "sha256": "6e9f556d26fda218c22e439f56773f9ec180153634c69d8d46dd07ec34bb2933",
+      "weight": "30768/1023589"
+    },
+    {
+      "word_id": 65,
+      "source": "S3",
+      "source_index": 2,
+      "sha256": "993b7b1459512ce026ce4b7757ddad34a481d3ffbbb5076e4e994659a50963ac",
+      "weight": "3492263/92123010"
+    },
+    {
+      "word_id": 67,
+      "source": "E115_pool",
+      "source_index": 9,
+      "sha256": "6c594bfb5c6c3da28adba47e660ce3f6524f64061f3baff6cbe065cf67306a6c",
+      "weight": "3286357/61415340"
+    },
+    {
+      "word_id": 71,
+      "source": "pricing_port4_round_003_result",
+      "source_index": 0,
+      "sha256": "aa21ec8b88c4a013dd8ec075647ba690031566ad0a19b1b58fd1194d19b7e09a",
+      "weight": "2443817/61415340"
+    },
+    {
+      "word_id": 72,
+      "source": "pricing_port4_round_004_result",
+      "source_index": 0,
+      "sha256": "2063899d2a1fbb37040db96fcfb4598c06dd6886c048d8e891481c1961ad3374",
+      "weight": "123097/10235890"
+    },
+    {
+      "word_id": 73,
+      "source": "pricing_port4_round_005_result",
+      "source_index": 0,
+      "sha256": "35de33fcdbf04da7feb841080f19837ee4ce26d467d31f9b23deff32eb0818f8",
+      "weight": "59743/2924540"
+    },
+    {
+      "word_id": 74,
+      "source": "pricing_port4_round_006_result",
+      "source_index": 0,
+      "sha256": "bc2ba226dde37a41f55f29e9c2e5c24350c7de81f7b94778909fd13cf3280d0b",
+      "weight": "261173/18424602"
+    }
+  ],
+  "row_balances": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "scope": "Exact law only for the frozen four selected complete-pattern port marginals; not a full-domain joint law."
+}

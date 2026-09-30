@@ -1,5 +1,49 @@
 # Evidence
 
+- `mixed_motion_integrated_validation_20260930.json` and its compressed log:
+  one complete `make check` passed on exact published commit
+  `1bf57231b05730364372136c065e4f25bf3fdbef`, tree
+  `0ecb82cd627823b3b25ef7be0206a0f775a79786` (Python 3.12.14, 3309 s).
+  This receipt predates T152–T154/C026 and must not be used to claim their later
+  combined tree passed the full suite.
+
+- `qd_family_certificate.json`: T152's exact finite calibration for the
+  recursively constructed rational induced unit graphs `Q_d`, d=1..8. The
+  independent standard-library checker rebuilds 43435 point pairs, validates
+  odd denominators and distance-parity colors, and rejects four mutations.
+  Run `make check-qd-family` to compare a fresh result and checker hash with
+  this receipt. The all-d theorem rests on the finite-exclusion proof, not on
+  these finite dimensions; the general graph-partial-isomorphism spectral
+  bound was already recorded in the Q6 comparison proof. No ordinary HN bound.
+- `residue11_coloring.json` plus `research/verify_t028_host_orbit_ceiling.py`:
+  T153's finite residue-table census. Checks the table SHA256, all 726
+  norm-one edges, same/different counts in each norm shell and all 24
+  orthogonal transformations. Combined with T028's full valuation/coset proof,
+  this yields both terminal colors for every reduced norm 2 through 10; no
+  claim about colorings of the whole Euclidean plane.
+- `Y_full_geometry.json.gz`: shared exact-coordinate/edge corpus for the
+  G14 relation and its whole-Y witness. Its canonical semantic digest is
+  compared against `full_law_preparation_audit.json`; the existing Y
+  preparation verifier supplies the independent reconstruction.
+- `g14_port_or_certificate.json`: standard-library exact replay of the pinned
+  external G14 14-point three-distance graph, its 32-event OR, and embeddings
+  into Parts509 and Y. The OR is about virtual distances, not just unit edges.
+- `g14_unique_event_y_result.json`: one complete proper five-color word on Y
+  with exactly one monochromatic G14 virtual pair (`a2-i4`, distance 2).
+  `make check-g14-port-or` first replays the G14 geometry, then independently
+  checks the word on all stored actual Y edges and all 32 event statuses.
+  The SAT query is only a witness source; direct exact verification is the
+  mathematical evidence.
+- `port4_exact_rational_law.json` and `port4_exact_rational_basis.json`:
+  T154's exact 47-atom rational weights and the frozen 50-row basis for four
+  selected four-port marginal comparisons. Six pricing-counterword witnesses
+  (`port4_pricing_result.json`, `port4_round_002_result.json` through
+  `port4_round_006_result.json`) supplement existing certified whole-Y words;
+  together the checker rebuilds 75 distinct proper colorings and validates
+  every exact balance. `port4_exact_law_verification.json` binds the geometry,
+  source hashes, zero rows, and five mutation rejections. This balances none
+  of the 15 original full motion domains and is not a full15 law or HN bound.
+
 - `refined_center_arrays.json.gz`: complete actual center-coordinate contact
   tables for Lambda and Lambda/3, independently reconstructed by positive
   trace spheres with a different pair-sum decomposition and gcd geometry.

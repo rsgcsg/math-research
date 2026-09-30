@@ -457,3 +457,14 @@ E115收尾补充：第一份池内势的阈值−1查询给出全Y合法价格�
 | 混合宿主 `B+Λ` | `B=∪_{r=0}^4η^rY` 的22041点种子重建出20461个代表、173328类完整接触；完成三种斜率、二相位及84901点有限patch的有界查询 | 查询均为UNKNOWN；没有正染色或不可染证书。[几何记录](../certificates/mixed_lattice_geometry.json) · [搜索记录](../certificates/mixed_lattice_search.json) |
 
 独立验收：`make check-lattice-ports`；本地仅用Python标准库重建几何与复核证书。GitHub Actions完整验收由 [run 36576410262](https://github.com/rsgcsg/math-research/actions/runs/36576410262) 执行，checked commit 为 `efde4dc005bf897d120d717f46db4a497ccf00de`；运行时恢复的271个源文件哈希与最终分支提交 `fc6d2c2` 中对应文件逐一吻合。该历史收据不替代本次与T147–T151合并后的完整 `make check`。
+
+## 2026-09-30：几何/抽象对称边界与有限端口新证据
+
+| ID | 内容 | 状态 | 证据/范围 |
+|---|---|---|---|
+| T152 | 对每个有限 $d\ge1$，有效构造奇分母有理平面点集，其完整诱导单位图恰为 $Q_d$；坐标和模2给出对全部真实欧氏部分等距不变的二色划分律 | 有限禁方向归纳给出任意维存在与终止；精确检查 $d=1\ldots8$ 共43435个点对并拒绝4类篡改 | [完整证明](proofs/qd_geometric_partial_isometry.md)、[检查器](../research/check_qd_family.py)、[证书](../certificates/qd_family_certificate.json)。抽象图部分同构不变律需 $k\ge d$ 的通用谱界早已在Q6比较证明第5节陈述，不新编号；无普通HN下界或优先权主张 |
+| T153 | T028 的 F11 陪集五色法在每个非零剩余范数 $2,\ldots,10$ 同时实现同色/异色，并生成所有25种命名端口色对；故安全宿主内无端口强制 | 既有全 $K^2$ 证明＋有限剩余色表、全部726条单位边、所有剩余范数对计数及 $O_2(\mathbb F_{11})$ 壳传递检查 | [完整范围与有限核验](proofs/t028_host_orbit_ceiling_20260930.md)、[检查器](../research/verify_t028_host_orbit_ceiling.py)；特别阻止 $K^2$ 内用距离2或 $1/\sqrt3$ 端口强制异色，不是HN下界 |
+| T154 | 冻结的4组四端口完整模式行存在47支持精确有理共同律，分母184246020；所选50行全部归零，故其张成空间不是全词严格分离势 | 75份全Y proper词和3,739,350条边义务；精确权重、模式映射、5类篡改均由独立标准库检查 | [四端口证明](proofs/port4_exact_rational_law.md)、[法律状态证书](../certificates/port4_exact_rational_law.json)、[检查报告](../certificates/port4_exact_law_verification.json)、[检查器](../research/verify_port4_exact_law.py)。不平衡任何原15完整域；不关闭其它行空间或full15 |
+| C026 | 实际全Y的一份五染色只触发G14 32个虚拟事件中的 $(a_2,i_4)$（距离2）；原 OR 的 $\ge1$ 达到尖锐，且省略该事件的任何子集 OR均被反例击破 | 完整检查Y 10077点/49858单位边及32事件；见证直接逐边验色。G14外部来源固定为 `4c84e4d…` | [证明、来源范围](proofs/g14_y_unique_or_witness.md)、[重放器](../research/verify_g14_port_or.py)＋[见证检查器](../research/verify_g14_unique_event_y.py)、[证书](../certificates/g14_port_or_certificate.json)、[染色与共享几何语料](../certificates/g14_unique_event_y_result.json)；不是单位图NON5，包含该触发事件的其它子集仍未决 |
+
+完整 `make check` 曾在精确发布树 `1bf57231b05730364372136c065e4f25bf3fdbef` / tree `0ecb82cd627823b3b25ef7be0206a0f775a79786` 通过（Python 3.12.14、3309秒、exit 0）；[收据](../certificates/mixed_motion_integrated_validation_20260930.json)与[日志](../certificates/mixed_motion_integrated_full_check_20260930.log.gz)只覆盖该树。后添的T152–T154/C026须以各自目标验收；其加入后的组合树完整 `make check` 尚待运行。

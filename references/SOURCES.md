@@ -686,3 +686,12 @@ E116为独立有限检查；E117的四次UNKNOWN只是搜索记录，不是文�
 - [Abrishami等, *Periodic colorings and orientations in infinite graphs*, arXiv:2411.01951v3](https://arxiv.org/abs/2411.01951v3)：三角格证明仅将文中周期性条件作为边界提醒；没有从其两端图定理外推到任意二维单位图。其早前阅读范围见上文历史来源记录。
 
 以上条目记录的是恢复成果所用术语及阅读范围，不宣称这些分支证明有外部文献优先权，也不将抽象图EPPA的色数结论记为普通HN界。
+
+## 2026-09-30：Q_d 几何扩展
+
+- Vjekoslav Kovač、Bruno Predojević，[*Large dilates of hypercube graphs in the plane*](https://arxiv.org/html/2309.14791v2)，arXiv:2309.14791v2。读作者HTML摘要及引言 §1：研究对象是平面中超立方体 $1$-骨架的距离图，并以单位长度向量和描述顶点；这为几何背景提供出处，不导入其密度定理。本文目标是不同的精确陈述：用奇分母有理坐标逐维排除一切额外单位边。
+- Noga Alon、Andrey Kupavskii，[*Two notions of unit distance graphs*](https://arxiv.org/html/1306.3916v3)，arXiv:1306.3916v3。读作者HTML摘要和定义1–2：区分“distance graph”（边是实际单位对的子集）与“faithful distance graph”（边集等于全部实际单位对）。这里只用该术语边界，说明为何新构造明确检查所有点对；不使用该文其他界。
+
+## 2026-09-30：G14 虚拟距离 OR
+
+- HeliCorgi，[`fourteen-points-six-colors`](https://github.com/HeliCorgi/fourteen-points-six-colors)，固定于[提交 `4c84e4d67522e644faef704694cd5ba7fc273abc`](https://github.com/HeliCorgi/fourteen-points-six-colors/commit/4c84e4d67522e644faef704694cd5ba7fc273abc)，尤其是该版本 [`proofs/PROOF_G14.md`](https://github.com/HeliCorgi/fourteen-points-six-colors/blob/4c84e4d67522e644faef704694cd5ba7fc273abc/proofs/PROOF_G14.md)。本轮读 README、G14/G15证明、clique-starvation引理及文献清单；独立转录并重放G14坐标、三距离分类、五色排除和显式六染。来源里的“最小14点/catalog/区间证书”等其它主张未在本轮核验；没有运行外部代码。该G14是距离集 $\{1,1/\sqrt3,2\}$ 的图，不能称作普通单位距离图。

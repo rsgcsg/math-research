@@ -1,4 +1,4 @@
-.PHONY: check-heptagon-module check-python check-joined-pricing check-full15-support check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore check-lattice-ports
+.PHONY: check-heptagon-module check-python check-joined-pricing check-full15-support check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore check-lattice-ports check-qd-family check-t028-host-orbit check-g14-port-or check-y-full-geometry check-port4-exact-law
 .DEFAULT_GOAL := check
 
 check-python:
@@ -21,6 +21,10 @@ check: check-python
 	$(MAKE) check-full15-support
 	$(MAKE) check-heptagon-module
 	$(MAKE) check-lattice-ports
+	$(MAKE) check-qd-family
+	$(MAKE) check-t028-host-orbit
+	$(MAKE) check-g14-port-or
+	$(MAKE) check-port4-exact-law
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -92,3 +96,19 @@ check-lattice-ports:
 	python3 -S research/test_lattice_mixed.py
 	python3 -S research/verify_Y_pair_portfolio.py --self-test
 	python3 -S research/verify_cube_symmetry_gap.py
+
+check-qd-family:
+	python3 -S research/check_qd_family.py --check-certificate certificates/qd_family_certificate.json
+
+check-t028-host-orbit:
+	python3 -S research/verify_t028_host_orbit_ceiling.py
+
+check-y-full-geometry:
+	python3 -S research/audit_full_law_preparation.py --cache certificates/Y_full_geometry.json.gz
+
+check-g14-port-or: check-y-full-geometry
+	python3 -S research/verify_g14_port_or.py --check-certificate certificates/g14_port_or_certificate.json
+	python3 -S research/verify_g14_unique_event_y.py
+
+check-port4-exact-law: check-y-full-geometry
+	python3 -S research/verify_port4_exact_law.py --check-certificate certificates/port4_exact_law_verification.json

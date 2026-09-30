@@ -1,0 +1,192 @@
+{
+  "status": "PASS_EXACT_RATIONAL_4PORT_LAW",
+  "geometry_reconstructed": true,
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "source_certificate_sha256": {
+    "branch56": "f068a4c099fa47a6950de3d7ef233d83692e98203ca9cc0356b9fd84f680fa94",
+    "E083": "c9de7e35464a7538ff2129a30a1335dc1b8669e870b541b070bba55d44dded12",
+    "E111": "302030a3579e7d6c13f6837ed10111f01bfd57bd3221c07c0f8addeccd62eeaf",
+    "E115_negative_price": "5c35fd689d7d175f8732be90c4ccb5d15a63bbecd246357696cab03011960620",
+    "S3": "5dae5049895e88a7f031a4c9303088c4e1f3b317e97142cab539e8da40845133",
+    "E115_pool": "007faa43a8d95c002e71fede0b87a8b78efac63bdacefba09f614843836a999a"
+  },
+  "basis_sha256": "67ed7b7ef19512bb7b917e1c611301cf42cc5819d8b19f8f0ccb6d0b115bb224",
+  "ports": [
+    {
+      "motion": 8,
+      "source": [
+        3604,
+        3817,
+        4114,
+        4641
+      ],
+      "image": [
+        8921,
+        9029,
+        9056,
+        9070
+      ]
+    },
+    {
+      "motion": 7,
+      "source": [
+        3484,
+        6700,
+        7219,
+        9104
+      ],
+      "image": [
+        876,
+        1770,
+        3049,
+        7536
+      ]
+    },
+    {
+      "motion": 3,
+      "source": [
+        3748,
+        3797,
+        4513,
+        5158
+      ],
+      "image": [
+        5441,
+        4356,
+        4524,
+        4386
+      ]
+    },
+    {
+      "motion": 14,
+      "source": [
+        233,
+        239,
+        9425,
+        9951
+      ],
+      "image": [
+        5557,
+        238,
+        8157,
+        9957
+      ]
+    }
+  ],
+  "legal_pattern_rows": 50,
+  "whole_Y_proper_words": 75,
+  "support_size": 47,
+  "whole_edge_checks": 3739350,
+  "common_denominator": 184246020,
+  "mutation_tests_rejected": [
+    "negative-weight",
+    "changed-weight",
+    "changed-source-image-map",
+    "missing-support-word",
+    "altered-color-edge"
+  ],
+  "exact_row_balances": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "pricing_counterwords": [
+    {
+      "source": "pricing_port4_pricing_result",
+      "result_sha256": "ef77e6a1a4effb4a9d6d7f75cc8b75774a6f68b6fe0edf6f9b6b345e616c8c6e",
+      "word_sha256": "342596ed3618570ea5abfcf89a568e1d7fdec93a44be6861d45a721aadc633dc",
+      "exact_score": -5,
+      "event_terms": 42,
+      "CNF_sha256": "b07d46adb1dbd35612da74fdc07b52247de592ded27ee08beb3ab3b8c8074a6f"
+    },
+    {
+      "source": "pricing_port4_round_002_result",
+      "result_sha256": "a065f81de792c27922291ec4152100344ff9b7ae6004220694540a4072a7df25",
+      "word_sha256": "190d604a0a2eb62843a7b2990933bf96720a968b71f2029f4b9530c77819dce7",
+      "exact_score": -41,
+      "event_terms": 42,
+      "CNF_sha256": "0ef2b8889c985ee5fb83565219096e2c2f40ff9f197053dd0176bf02c52713be"
+    },
+    {
+      "source": "pricing_port4_round_003_result",
+      "result_sha256": "d8fcac9e713e168b26d45ef820096dea6cdc2caea5bb417c71ec19003a7f3c76",
+      "word_sha256": "aa21ec8b88c4a013dd8ec075647ba690031566ad0a19b1b58fd1194d19b7e09a",
+      "exact_score": -30,
+      "event_terms": 43,
+      "CNF_sha256": "26bd385499439b2238ab6b46fda80367148774d55d340bea7f0ea453b99c8373"
+    },
+    {
+      "source": "pricing_port4_round_004_result",
+      "result_sha256": "752e5a885cc7feb389736c6705418ca6cc1c1189f22d9a65cbdc6e4181b7f82d",
+      "word_sha256": "2063899d2a1fbb37040db96fcfb4598c06dd6886c048d8e891481c1961ad3374",
+      "exact_score": -148,
+      "event_terms": 41,
+      "CNF_sha256": "78f06b2fd1b93b8d36276518b0ec2b2a5ea421537b782d72855b70b9b1f917a3"
+    },
+    {
+      "source": "pricing_port4_round_005_result",
+      "result_sha256": "0be646472c5c8b0902cacd1310e4e7218f3be7dc00ce1cbd346dc56fde5712f1",
+      "word_sha256": "35de33fcdbf04da7feb841080f19837ee4ce26d467d31f9b23deff32eb0818f8",
+      "exact_score": -317,
+      "event_terms": 43,
+      "CNF_sha256": "3175787b08f94878dc9183845612e2d3eb9a32f26ab50eddb5461b37f9843315"
+    },
+    {
+      "source": "pricing_port4_round_006_result",
+      "result_sha256": "c543782e85c2fb6b55eb8b8be9de0704b6ae466f31410c5f19c12ee983a46ea7",
+      "word_sha256": "bc2ba226dde37a41f55f29e9c2e5c24350c7de81f7b94778909fd13cf3280d0b",
+      "exact_score": -35240,
+      "event_terms": 46,
+      "CNF_sha256": "42b6e5a047d0a419ea9664d1739c2a94901959a8fd0a3a92e5817b00b335f22a"
+    }
+  ],
+  "full_original_domains_balanced": [],
+  "scope": "An exact common law for these four selected 4-port complete-pattern marginals only. This is not a joint law on the four full domains, not a full15 law, and not an HN bound."
+}

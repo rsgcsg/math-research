@@ -10,6 +10,12 @@
 [二端口证明](docs/proofs/Y_two_terminal_completion.md) · [平移宿主证明](docs/proofs/triangular_lattice_saturation.md) · [对称性边界](docs/proofs/geometric_versus_graph_symmetry.md) · [恢复记录](docs/BRANCHES.md)。
 `make check-lattice-ports` 将这些独立检查接入全仓检查；未把一次性自更新工作流并入主线。
 
+## 2026-09-30：有界新定理与验证范围
+
+T152给出任意有限维奇分母有理诱导 $Q_d$ 平面实现；T153用T028/F11陪集表排除 $K^2$ 内距离2或 $1/\sqrt3$ 端口强制；C026在实际Y上使G14的32事件OR恰由 $(a_2,i_4)$ 单触发。T154另给出指定四端口事件行的精确47原子律，但不平衡任何原15完整域。它们都不改变普通 $5\le\chi(\mathbb R^2)\le7$ 界或全15域任意支持未决状态。
+
+完整 `make check` 已在精确发布基线 `1bf57231b05730364372136c065e4f25bf3fdbef` / tree `0ecb82cd627823b3b25ef7be0206a0f775a79786` 通过（Python 3.12.14，3309秒，见[收据与日志](certificates/mixed_motion_integrated_validation_20260930.json)）。后追加的 T152–T154/C026 目标已分别检查；当前组合树的完整 `make check` 尚未运行，不由旧基线收据覆盖。
+
 
 ## 2026-09-29 第二轮：从七重几何得到无限宿主定理
 

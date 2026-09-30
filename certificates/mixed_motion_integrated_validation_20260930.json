@@ -1,0 +1,32 @@
+{
+  "schema": "hn-integrated-full-check-v1",
+  "status": "PASS",
+  "date": "2026-09-30",
+  "command": "make check",
+  "returncode": 0,
+  "base_commit": "b87a0d7a5dc62a4e13c2411ed09e2c162a36c664",
+  "checked_commit": "1bf57231b05730364372136c065e4f25bf3fdbef",
+  "checked_tree_sha": "0ecb82cd627823b3b25ef7be0206a0f775a79786",
+  "checked_commit_url": "https://github.com/rsgcsg/math-research/commit/1bf57231b05730364372136c065e4f25bf3fdbef",
+  "started_utc": "2026-09-30T09:32:07Z",
+  "completed_utc": "2026-09-30T10:27:16Z",
+  "runtime_seconds": 3309,
+  "python": "3.12.14",
+  "log_sha256": "c4d76e93226aabc56e2efb38b654f0259e599f0d591146ef93b9b6b9e7686ab1",
+  "log_bytes": 239252,
+  "log_lines": 12452,
+  "compressed_log_path": "certificates/mixed_motion_integrated_full_check_20260930.log.gz",
+  "compressed_log_sha256": "44696379562b6db528678acf09089e55f50c01ed7296b476356fb32d94bb7a74",
+  "runtime_only_outputs_restored": [
+    {
+      "path": "certificates/dyadic_cyclic_orbit_validation.json",
+      "field": "elapsed_seconds"
+    },
+    {
+      "path": "certificates/finite_frame_validation.json",
+      "field": "python"
+    }
+  ],
+  "scope": "One complete repository make check on the same Git tree as checked_commit, including full15-support, heptagon-module and lattice-ports targets. No search run, new HN bound, full15 arbitrary-support decision, or formal proof-assistant claim.",
+  "verification_note": "The full check changed only the two named runtime fields; they were restored to the checked-tree versions after confirming all other mathematical fields matched. The pre-run manifest tree and restored post-run worktree both hash to checked_tree_sha."
+}
