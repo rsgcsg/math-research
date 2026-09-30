@@ -1,0 +1,903 @@
+{
+  "cases": [
+    {
+      "chorded_cycle_bound": 2,
+      "chorded_cycle_lhs": "2",
+      "fractional_gap": "0",
+      "k": 2,
+      "n": 4,
+      "partition_kernel": true,
+      "q": 2,
+      "subset_checks": 16
+    },
+    {
+      "chorded_cycle_bound": 2,
+      "chorded_cycle_lhs": "5/2",
+      "fractional_gap": "1/2",
+      "k": 3,
+      "n": 5,
+      "partition_kernel": false,
+      "q": 2,
+      "subset_checks": 32
+    },
+    {
+      "chorded_cycle_bound": 3,
+      "chorded_cycle_lhs": "3",
+      "fractional_gap": "0",
+      "k": 3,
+      "n": 6,
+      "partition_kernel": true,
+      "q": 2,
+      "subset_checks": 64
+    },
+    {
+      "chorded_cycle_bound": 4,
+      "chorded_cycle_lhs": "4",
+      "fractional_gap": "0",
+      "k": 2,
+      "n": 6,
+      "partition_kernel": true,
+      "q": 3,
+      "subset_checks": 64
+    },
+    {
+      "chorded_cycle_bound": 3,
+      "chorded_cycle_lhs": "7/2",
+      "fractional_gap": "1/2",
+      "k": 4,
+      "n": 7,
+      "partition_kernel": false,
+      "q": 2,
+      "subset_checks": 128
+    },
+    {
+      "chorded_cycle_bound": 4,
+      "chorded_cycle_lhs": "14/3",
+      "fractional_gap": "2/3",
+      "k": 3,
+      "n": 7,
+      "partition_kernel": false,
+      "q": 3,
+      "subset_checks": 128
+    },
+    {
+      "chorded_cycle_bound": 4,
+      "chorded_cycle_lhs": "4",
+      "fractional_gap": "0",
+      "k": 4,
+      "n": 8,
+      "partition_kernel": true,
+      "q": 2,
+      "subset_checks": 256
+    },
+    {
+      "chorded_cycle_bound": 5,
+      "chorded_cycle_lhs": "16/3",
+      "fractional_gap": "1/3",
+      "k": 3,
+      "n": 8,
+      "partition_kernel": false,
+      "q": 3,
+      "subset_checks": 256
+    },
+    {
+      "chorded_cycle_bound": 6,
+      "chorded_cycle_lhs": "6",
+      "fractional_gap": "0",
+      "k": 2,
+      "n": 8,
+      "partition_kernel": true,
+      "q": 4,
+      "subset_checks": 256
+    },
+    {
+      "chorded_cycle_bound": 4,
+      "chorded_cycle_lhs": "9/2",
+      "fractional_gap": "1/2",
+      "k": 5,
+      "n": 9,
+      "partition_kernel": false,
+      "q": 2,
+      "subset_checks": 512
+    },
+    {
+      "chorded_cycle_bound": 6,
+      "chorded_cycle_lhs": "6",
+      "fractional_gap": "0",
+      "k": 3,
+      "n": 9,
+      "partition_kernel": true,
+      "q": 3,
+      "subset_checks": 512
+    },
+    {
+      "chorded_cycle_bound": 6,
+      "chorded_cycle_lhs": "27/4",
+      "fractional_gap": "3/4",
+      "k": 3,
+      "n": 9,
+      "partition_kernel": false,
+      "q": 4,
+      "subset_checks": 512
+    },
+    {
+      "chorded_cycle_bound": 5,
+      "chorded_cycle_lhs": "5",
+      "fractional_gap": "0",
+      "k": 5,
+      "n": 10,
+      "partition_kernel": true,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 6,
+      "chorded_cycle_lhs": "20/3",
+      "fractional_gap": "2/3",
+      "k": 4,
+      "n": 10,
+      "partition_kernel": false,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 7,
+      "chorded_cycle_lhs": "15/2",
+      "fractional_gap": "1/2",
+      "k": 3,
+      "n": 10,
+      "partition_kernel": false,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 8,
+      "chorded_cycle_lhs": "8",
+      "fractional_gap": "0",
+      "k": 2,
+      "n": 10,
+      "partition_kernel": true,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 5,
+      "chorded_cycle_lhs": "11/2",
+      "fractional_gap": "1/2",
+      "k": 6,
+      "n": 11,
+      "partition_kernel": false,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 7,
+      "chorded_cycle_lhs": "22/3",
+      "fractional_gap": "1/3",
+      "k": 4,
+      "n": 11,
+      "partition_kernel": false,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 8,
+      "chorded_cycle_lhs": "33/4",
+      "fractional_gap": "1/4",
+      "k": 3,
+      "n": 11,
+      "partition_kernel": false,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 8,
+      "chorded_cycle_lhs": "44/5",
+      "fractional_gap": "4/5",
+      "k": 3,
+      "n": 11,
+      "partition_kernel": false,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 6,
+      "chorded_cycle_lhs": "6",
+      "fractional_gap": "0",
+      "k": 6,
+      "n": 12,
+      "partition_kernel": true,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 8,
+      "chorded_cycle_lhs": "8",
+      "fractional_gap": "0",
+      "k": 4,
+      "n": 12,
+      "partition_kernel": true,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 9,
+      "chorded_cycle_lhs": "9",
+      "fractional_gap": "0",
+      "k": 3,
+      "n": 12,
+      "partition_kernel": true,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 9,
+      "chorded_cycle_lhs": "48/5",
+      "fractional_gap": "3/5",
+      "k": 3,
+      "n": 12,
+      "partition_kernel": false,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 10,
+      "chorded_cycle_lhs": "10",
+      "fractional_gap": "0",
+      "k": 2,
+      "n": 12,
+      "partition_kernel": true,
+      "q": 6,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 6,
+      "chorded_cycle_lhs": "13/2",
+      "fractional_gap": "1/2",
+      "k": 7,
+      "n": 13,
+      "partition_kernel": false,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 8,
+      "chorded_cycle_lhs": "26/3",
+      "fractional_gap": "2/3",
+      "k": 5,
+      "n": 13,
+      "partition_kernel": false,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 9,
+      "chorded_cycle_lhs": "39/4",
+      "fractional_gap": "3/4",
+      "k": 4,
+      "n": 13,
+      "partition_kernel": false,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 10,
+      "chorded_cycle_lhs": "52/5",
+      "fractional_gap": "2/5",
+      "k": 3,
+      "n": 13,
+      "partition_kernel": false,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 10,
+      "chorded_cycle_lhs": "65/6",
+      "fractional_gap": "5/6",
+      "k": 3,
+      "n": 13,
+      "partition_kernel": false,
+      "q": 6,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 7,
+      "chorded_cycle_lhs": "7",
+      "fractional_gap": "0",
+      "k": 7,
+      "n": 14,
+      "partition_kernel": true,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 9,
+      "chorded_cycle_lhs": "28/3",
+      "fractional_gap": "1/3",
+      "k": 5,
+      "n": 14,
+      "partition_kernel": false,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 10,
+      "chorded_cycle_lhs": "21/2",
+      "fractional_gap": "1/2",
+      "k": 4,
+      "n": 14,
+      "partition_kernel": false,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 11,
+      "chorded_cycle_lhs": "56/5",
+      "fractional_gap": "1/5",
+      "k": 3,
+      "n": 14,
+      "partition_kernel": false,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 11,
+      "chorded_cycle_lhs": "35/3",
+      "fractional_gap": "2/3",
+      "k": 3,
+      "n": 14,
+      "partition_kernel": false,
+      "q": 6,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 12,
+      "chorded_cycle_lhs": "12",
+      "fractional_gap": "0",
+      "k": 2,
+      "n": 14,
+      "partition_kernel": true,
+      "q": 7,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 7,
+      "chorded_cycle_lhs": "15/2",
+      "fractional_gap": "1/2",
+      "k": 8,
+      "n": 15,
+      "partition_kernel": false,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 10,
+      "chorded_cycle_lhs": "10",
+      "fractional_gap": "0",
+      "k": 5,
+      "n": 15,
+      "partition_kernel": true,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 11,
+      "chorded_cycle_lhs": "45/4",
+      "fractional_gap": "1/4",
+      "k": 4,
+      "n": 15,
+      "partition_kernel": false,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 12,
+      "chorded_cycle_lhs": "12",
+      "fractional_gap": "0",
+      "k": 3,
+      "n": 15,
+      "partition_kernel": true,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 12,
+      "chorded_cycle_lhs": "25/2",
+      "fractional_gap": "1/2",
+      "k": 3,
+      "n": 15,
+      "partition_kernel": false,
+      "q": 6,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 12,
+      "chorded_cycle_lhs": "90/7",
+      "fractional_gap": "6/7",
+      "k": 3,
+      "n": 15,
+      "partition_kernel": false,
+      "q": 7,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 8,
+      "chorded_cycle_lhs": "8",
+      "fractional_gap": "0",
+      "k": 8,
+      "n": 16,
+      "partition_kernel": true,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 10,
+      "chorded_cycle_lhs": "32/3",
+      "fractional_gap": "2/3",
+      "k": 6,
+      "n": 16,
+      "partition_kernel": false,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 12,
+      "chorded_cycle_lhs": "12",
+      "fractional_gap": "0",
+      "k": 4,
+      "n": 16,
+      "partition_kernel": true,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 12,
+      "chorded_cycle_lhs": "64/5",
+      "fractional_gap": "4/5",
+      "k": 4,
+      "n": 16,
+      "partition_kernel": false,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 13,
+      "chorded_cycle_lhs": "40/3",
+      "fractional_gap": "1/3",
+      "k": 3,
+      "n": 16,
+      "partition_kernel": false,
+      "q": 6,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 13,
+      "chorded_cycle_lhs": "96/7",
+      "fractional_gap": "5/7",
+      "k": 3,
+      "n": 16,
+      "partition_kernel": false,
+      "q": 7,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 14,
+      "chorded_cycle_lhs": "14",
+      "fractional_gap": "0",
+      "k": 2,
+      "n": 16,
+      "partition_kernel": true,
+      "q": 8,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 8,
+      "chorded_cycle_lhs": "17/2",
+      "fractional_gap": "1/2",
+      "k": 9,
+      "n": 17,
+      "partition_kernel": false,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 11,
+      "chorded_cycle_lhs": "34/3",
+      "fractional_gap": "1/3",
+      "k": 6,
+      "n": 17,
+      "partition_kernel": false,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 12,
+      "chorded_cycle_lhs": "51/4",
+      "fractional_gap": "3/4",
+      "k": 5,
+      "n": 17,
+      "partition_kernel": false,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 13,
+      "chorded_cycle_lhs": "68/5",
+      "fractional_gap": "3/5",
+      "k": 4,
+      "n": 17,
+      "partition_kernel": false,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 14,
+      "chorded_cycle_lhs": "85/6",
+      "fractional_gap": "1/6",
+      "k": 3,
+      "n": 17,
+      "partition_kernel": false,
+      "q": 6,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 14,
+      "chorded_cycle_lhs": "102/7",
+      "fractional_gap": "4/7",
+      "k": 3,
+      "n": 17,
+      "partition_kernel": false,
+      "q": 7,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 14,
+      "chorded_cycle_lhs": "119/8",
+      "fractional_gap": "7/8",
+      "k": 3,
+      "n": 17,
+      "partition_kernel": false,
+      "q": 8,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 9,
+      "chorded_cycle_lhs": "9",
+      "fractional_gap": "0",
+      "k": 9,
+      "n": 18,
+      "partition_kernel": true,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 12,
+      "chorded_cycle_lhs": "12",
+      "fractional_gap": "0",
+      "k": 6,
+      "n": 18,
+      "partition_kernel": true,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 13,
+      "chorded_cycle_lhs": "27/2",
+      "fractional_gap": "1/2",
+      "k": 5,
+      "n": 18,
+      "partition_kernel": false,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 14,
+      "chorded_cycle_lhs": "72/5",
+      "fractional_gap": "2/5",
+      "k": 4,
+      "n": 18,
+      "partition_kernel": false,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 15,
+      "chorded_cycle_lhs": "15",
+      "fractional_gap": "0",
+      "k": 3,
+      "n": 18,
+      "partition_kernel": true,
+      "q": 6,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 15,
+      "chorded_cycle_lhs": "108/7",
+      "fractional_gap": "3/7",
+      "k": 3,
+      "n": 18,
+      "partition_kernel": false,
+      "q": 7,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 15,
+      "chorded_cycle_lhs": "63/4",
+      "fractional_gap": "3/4",
+      "k": 3,
+      "n": 18,
+      "partition_kernel": false,
+      "q": 8,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 16,
+      "chorded_cycle_lhs": "16",
+      "fractional_gap": "0",
+      "k": 2,
+      "n": 18,
+      "partition_kernel": true,
+      "q": 9,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 9,
+      "chorded_cycle_lhs": "19/2",
+      "fractional_gap": "1/2",
+      "k": 10,
+      "n": 19,
+      "partition_kernel": false,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 12,
+      "chorded_cycle_lhs": "38/3",
+      "fractional_gap": "2/3",
+      "k": 7,
+      "n": 19,
+      "partition_kernel": false,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 14,
+      "chorded_cycle_lhs": "57/4",
+      "fractional_gap": "1/4",
+      "k": 5,
+      "n": 19,
+      "partition_kernel": false,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 15,
+      "chorded_cycle_lhs": "76/5",
+      "fractional_gap": "1/5",
+      "k": 4,
+      "n": 19,
+      "partition_kernel": false,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 15,
+      "chorded_cycle_lhs": "95/6",
+      "fractional_gap": "5/6",
+      "k": 4,
+      "n": 19,
+      "partition_kernel": false,
+      "q": 6,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 16,
+      "chorded_cycle_lhs": "114/7",
+      "fractional_gap": "2/7",
+      "k": 3,
+      "n": 19,
+      "partition_kernel": false,
+      "q": 7,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 16,
+      "chorded_cycle_lhs": "133/8",
+      "fractional_gap": "5/8",
+      "k": 3,
+      "n": 19,
+      "partition_kernel": false,
+      "q": 8,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 16,
+      "chorded_cycle_lhs": "152/9",
+      "fractional_gap": "8/9",
+      "k": 3,
+      "n": 19,
+      "partition_kernel": false,
+      "q": 9,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 10,
+      "chorded_cycle_lhs": "10",
+      "fractional_gap": "0",
+      "k": 10,
+      "n": 20,
+      "partition_kernel": true,
+      "q": 2,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 13,
+      "chorded_cycle_lhs": "40/3",
+      "fractional_gap": "1/3",
+      "k": 7,
+      "n": 20,
+      "partition_kernel": false,
+      "q": 3,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 15,
+      "chorded_cycle_lhs": "15",
+      "fractional_gap": "0",
+      "k": 5,
+      "n": 20,
+      "partition_kernel": true,
+      "q": 4,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 16,
+      "chorded_cycle_lhs": "16",
+      "fractional_gap": "0",
+      "k": 4,
+      "n": 20,
+      "partition_kernel": true,
+      "q": 5,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 16,
+      "chorded_cycle_lhs": "50/3",
+      "fractional_gap": "2/3",
+      "k": 4,
+      "n": 20,
+      "partition_kernel": false,
+      "q": 6,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 17,
+      "chorded_cycle_lhs": "120/7",
+      "fractional_gap": "1/7",
+      "k": 3,
+      "n": 20,
+      "partition_kernel": false,
+      "q": 7,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 17,
+      "chorded_cycle_lhs": "35/2",
+      "fractional_gap": "1/2",
+      "k": 3,
+      "n": 20,
+      "partition_kernel": false,
+      "q": 8,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 17,
+      "chorded_cycle_lhs": "160/9",
+      "fractional_gap": "7/9",
+      "k": 3,
+      "n": 20,
+      "partition_kernel": false,
+      "q": 9,
+      "subset_checks": 0
+    },
+    {
+      "chorded_cycle_bound": 18,
+      "chorded_cycle_lhs": "18",
+      "fractional_gap": "0",
+      "k": 2,
+      "n": 20,
+      "partition_kernel": true,
+      "q": 10,
+      "subset_checks": 0
+    }
+  ],
+  "exhaustive_partition_checks": [
+    {
+      "bound": 2,
+      "maximum": 2,
+      "n": 4,
+      "partitions": 15,
+      "q": 2
+    },
+    {
+      "bound": 2,
+      "maximum": 2,
+      "n": 5,
+      "partitions": 52,
+      "q": 2
+    },
+    {
+      "bound": 3,
+      "maximum": 3,
+      "n": 6,
+      "partitions": 203,
+      "q": 2
+    },
+    {
+      "bound": 4,
+      "maximum": 4,
+      "n": 6,
+      "partitions": 203,
+      "q": 3
+    },
+    {
+      "bound": 3,
+      "maximum": 3,
+      "n": 7,
+      "partitions": 877,
+      "q": 2
+    },
+    {
+      "bound": 4,
+      "maximum": 4,
+      "n": 7,
+      "partitions": 877,
+      "q": 3
+    },
+    {
+      "bound": 4,
+      "maximum": 4,
+      "n": 8,
+      "partitions": 4140,
+      "q": 2
+    },
+    {
+      "bound": 5,
+      "maximum": 5,
+      "n": 8,
+      "partitions": 4140,
+      "q": 3
+    },
+    {
+      "bound": 6,
+      "maximum": 6,
+      "n": 8,
+      "partitions": 4140,
+      "q": 4
+    },
+    {
+      "bound": 4,
+      "maximum": 4,
+      "n": 9,
+      "partitions": 21147,
+      "q": 2
+    },
+    {
+      "bound": 6,
+      "maximum": 6,
+      "n": 9,
+      "partitions": 21147,
+      "q": 3
+    },
+    {
+      "bound": 6,
+      "maximum": 6,
+      "n": 9,
+      "partitions": 21147,
+      "q": 4
+    }
+  ],
+  "schema": "cyclic-interval-kernel-v1",
+  "scope": "Finite calibration only. The arbitrary-n,q theorem follows from the written chorded-cycle proof and explicit offset partition construction. No plane realization except the separately certified C027 case is asserted.",
+  "status": "PASS_EXACT_SMALL_CASE_CALIBRATION"
+}

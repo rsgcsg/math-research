@@ -481,3 +481,12 @@ E115收尾补充：第一份池内势的阈值−1查询给出全Y合法价格�
 标准结果的整理另见[完整理论笔记](proofs/full15_joint_event_theory.md)与[算术方向／色数边界](proofs/arithmetic_direction_and_coloring_boundaries.md)：CP颜色索引提升、匹配多面体、amenability边界、Dirichlet相对单位秩及Moorhouse奇数次二染色都有原来源，不重复编号为新发现。有限校准包括530个有向图、自由群星1024赋值、69词四端口SCC、三次域65个整方向点及五边形52划分。
 
 精确发布树9cca / `64f8485781156ee4a0f4342582e8c254069c0612` 的完整 `make check` 已通过，Python3.12.14，3361秒；[源绑定收据](../certificates/research_checkpoint_9cca_validation.json)及压缩日志保留。后来T155–T157/C027的新增目标分别通过，新增组合树完整验收不在9cca收据范围内。
+
+## 2026-09-30：局部尖锐性、完整匹配窗口族与整数覆盖
+
+| ID | 内容 | 状态与范围 |
+|---|---|---|
+| T158 | (a)固定九点、14个P/5个R事件的完整可行投影恰为五边形，p最小1/27；(b)原Y全部P/R-only且α≤2窗口的完整匹配条件不再缩小该区域 | [九点证明](proofs/nine_point_pr_polygon.md)、[五个顶点证书](../certificates/nine_point_pr_polygon.json)、[精确重放](../certificates/nine_point_pr_polygon_verification.json)、[匹配族证明](proofs/pr_matching_window_ceiling.md)、[双算法团枚举](../certificates/pr_matching_window_ceiling.json)。全部2277局部proper划分；最小点12原子、分母27。局部律不声称共同延拓到Y |
+| C028 | 长度q循环区间的标准化CP矩在n≤kq时有单独立集矩表示，但q∤n时没有任何块数的划分律；q\|n时显式偏移划分给出正律 | [自足推论](proofs/cyclic_interval_kernel_gap.md)、[81参数/78088划分评价校准](../certificates/cyclic_interval_kernel.json)。成熟chorded-cycle不等式的显式无限族，不主张首创；其普通图仍有ceil(n/q)染色，不能当成不可k染证明。除C027特例外无平面单位实现声明 |
+
+本轮默认检查均比较保存收据，显式写入选项才更新；本地精确目标重放与精确源树全仓验收分别报告。c36完整验收尚在进行，9cca旧树收据不覆盖这些新增文件。

@@ -1,0 +1,178 @@
+{
+  "P_basis_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534",
+  "R_basis_sha256": "f21599cb3ed6076e797f1fed319d5e8d4941c50b05fdaed12c6de218a6e9c976",
+  "algorithms": [
+    "ordered common-neighbor recursion",
+    "pivoting Bron-Kerbosch and deduplicated subsets"
+  ],
+  "alpha_le_2_window_counts": {
+    "2": [
+      {
+        "P": 0,
+        "R": 0,
+        "count": 49858
+      },
+      {
+        "P": 0,
+        "R": 1,
+        "count": 1472
+      },
+      {
+        "P": 1,
+        "R": 0,
+        "count": 1860
+      }
+    ],
+    "3": [
+      {
+        "P": 0,
+        "R": 0,
+        "count": 19250
+      },
+      {
+        "P": 1,
+        "R": 0,
+        "count": 1360
+      },
+      {
+        "P": 1,
+        "R": 1,
+        "count": 5044
+      },
+      {
+        "P": 2,
+        "R": 0,
+        "count": 2880
+      }
+    ],
+    "4": [
+      {
+        "P": 2,
+        "R": 1,
+        "count": 2280
+      },
+      {
+        "P": 2,
+        "R": 2,
+        "count": 1140
+      },
+      {
+        "P": 3,
+        "R": 0,
+        "count": 760
+      },
+      {
+        "P": 3,
+        "R": 1,
+        "count": 2520
+      }
+    ],
+    "5": [
+      {
+        "P": 4,
+        "R": 2,
+        "count": 2280
+      }
+    ],
+    "6": [
+      {
+        "P": 6,
+        "R": 3,
+        "count": 380
+      }
+    ],
+    "7": []
+  },
+  "clique_counts": {
+    "2": 53190,
+    "3": 31782,
+    "4": 15340,
+    "5": 10380,
+    "6": 3380,
+    "7": 380
+  },
+  "clique_set_sha256": {
+    "2": "604c5b648675b9733d34b82cb88aafd941a7649ab288fd8d84d6ea8133f5391c",
+    "3": "ed6bbac77a14dbe3a8e256524c9e4e3191a7601290408b6280343b54e7264f90",
+    "4": "4819604f8e8c0482206224500b7bd865ae318fc75abc317e6bdd6db201775460",
+    "5": "8a6f2bece1674b19a6ec5b15a4799054e4393a47bcd7fed9b2113a19033cee17",
+    "6": "5bf73916d9c66f02def40e299040d6a9dced2173cde2ded6baa633e8ad7098a1",
+    "7": "0c858942d5f5bb0e02f1ce064239ec0ad3441bb587a9cae51836853ca523d829"
+  },
+  "degree_patterns": [
+    {
+      "P": 0,
+      "R": 0,
+      "count": 158826
+    },
+    {
+      "P": 0,
+      "R": 1,
+      "count": 10268
+    },
+    {
+      "P": 1,
+      "R": 0,
+      "count": 24084
+    },
+    {
+      "P": 1,
+      "R": 1,
+      "count": 19204
+    },
+    {
+      "P": 2,
+      "R": 0,
+      "count": 10200
+    },
+    {
+      "P": 2,
+      "R": 1,
+      "count": 9120
+    },
+    {
+      "P": 3,
+      "R": 0,
+      "count": 760
+    }
+  ],
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "maximal_clique_size_counts": {
+    "2": 6326,
+    "3": 19922,
+    "6": 720,
+    "7": 380
+  },
+  "rejected_mutations": [
+    "missing-unit-edge",
+    "missing-P-node",
+    "wrong-R-node"
+  ],
+  "schema": "pr-matching-window-ceiling-v1",
+  "scope": "All alpha<=2 induced windows of the fixed Y whose every nonunit pair belongs to the certified P or R component. No constraint from this complete matching family cuts the displayed pentagon. This does not cover other pair components, alpha>=3 windows, higher pattern laws, or full15 feasibility.",
+  "status": "PASS_EXACT_FIXED_FAMILY_CENSUS",
+  "tested_polygon_vertices": [
+    [
+      "1/27",
+      "14/27"
+    ],
+    [
+      "1/6",
+      "0"
+    ],
+    [
+      "1/3",
+      "0"
+    ],
+    [
+      "1/3",
+      "1/3"
+    ],
+    [
+      "1/5",
+      "3/5"
+    ]
+  ],
+  "union_edges": 53190,
+  "union_vertices": 10077
+}

@@ -725,3 +725,11 @@ Vorob’ev、Atserias–Kolaitis、Abramsky–Brandenburger、Chazottes 等的�
 - [Greenwood–Gleason, *Combinatorial Relations and Chromatic Graphs*](https://doi.org/10.4153/CJM-1955-001-4)，1955：读§3的R(3,4)=9及表1，仅用于α≤2平面单位图窗口至多8点的范围上限。
 
 [C027与精确匹配族](../docs/proofs/matching_partition_family.md)只提供局部划分多面体校准，不把一个特定CP矩的不可表示性外推为平稳打包矩失败或HN反证。
+
+## 2026-09-30：局部投影之后的划分多面体筛选
+
+- [Chopra–Rao, *Facets of the k-partition polytope*](https://doi.org/10.1016/0166-218X(93)E0175-X)，Discrete Applied Mathematics61（1995），27–48：核对hypermetric/2-partition背景及Lemma2.1的记号与假设。本地另以整数随机变量平方凸性自足证明所有整数权、负商和零余数的所需界；不依赖未核验的facet条件，也不称新发现。
+- [Grötschel–Wakabayashi, *Facets of the clique partitioning polytope*](https://doi.org/10.1007/BF01580870)，Mathematical Programming47（1990），367–387：2-chorded odd-cycle家族的原始归属。本轮精确符号与有效性还通过下项开放作者稿核验；未声称重新证明原文所有facet分类。
+- [Irmai–Naumann–Andres, *Chorded Cycle Facets of Clique Partitioning Polytopes*,2411.03407v1](https://arxiv.org/html/2411.03407v1)，2024-11-05：读§§3–4定义、Lemma2以及附录A.1完整有效性证明，确认同块变量、按循环位置计重的弦约定，以及该不等式作为box/triangle体系Chvátal–Gomory取整割的机制。C028是显式区间Gram核的自足推论；一般参数的平面单位实现未给出。后续期刊DOI为10.1016/j.dam.2025.09.020，精确读取版本仍为此v1。
+
+T158使用固定c36几何及P/R输入，不将相同距离自动当作运输分量相同。短圈的有限适用性扫描不代替所有长度的分离算法；原始full15和普通HN结论保持未决。

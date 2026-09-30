@@ -4,6 +4,12 @@
 [当前状态](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线](docs/ROUTES.md) ·
 [统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md)。
 
+## 2026-09-30：完整局部投影与整数覆盖缺口
+
+T158将固定九点的P/R可行区域完整决定为五边形，五个顶点都有精确概率证书，1/27是该模型的尖锐下界。原Y中整个P/R匹配窗口族也不能缩小它。C028用循环区间矩给出一个成熟不等式的完整正反校准族：分数覆盖可行，真正划分还受整除约束。**这些都不是full15或HN的解。**
+
+[九点精确投影](docs/proofs/nine_point_pr_polygon.md) · [完整匹配族上限](docs/proofs/pr_matching_window_ceiling.md) · [循环区间与颜色耦合](docs/proofs/cyclic_interval_kernel_gap.md)。重放：`make check-pr-local-projection check-cyclic-interval-kernel`。源树c36的完整验收仍在进行，本轮新增目标不由旧9cca收据覆盖。
+
 ## 2026-09-30：从局部正律提取真正的耦合限制
 
 T155的2638条成对行有单原子律；T156进一步给出与50条四端口行同时相容的39原子精确律。随后T157证明：原15运动中的另一成对分量迫使同色概率p≥1/27，从而支持无关地排除整个p=0构造面。**full15完整律仍未解决；没有HN新界。**

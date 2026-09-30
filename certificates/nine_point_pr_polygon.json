@@ -1,0 +1,978 @@
+{
+  "schema": "exact-local-pr-projection-v1",
+  "scope": "Only distributions over proper partitions of the induced unit graph on this fixed nine-point V, using exactly the P/R component events whose endpoints lie in V. This is not a probability law on all of Y and makes no extension claim.",
+  "vertices": [
+    4641,
+    877,
+    887,
+    3483,
+    5535,
+    7479,
+    7489,
+    229,
+    305
+  ],
+  "seven_point_subset": [
+    4641,
+    877,
+    887,
+    3483,
+    5535,
+    7479,
+    7489
+  ],
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "P_component_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534",
+  "R_component_candidate_sha256": "f21599cb3ed6076e797f1fed319d5e8d4941c50b05fdaed12c6de218a6e9c976",
+  "induced_unit_edges": [
+    [
+      877,
+      5535
+    ],
+    [
+      877,
+      7479
+    ],
+    [
+      887,
+      3483
+    ],
+    [
+      887,
+      7489
+    ],
+    [
+      887,
+      229
+    ],
+    [
+      3483,
+      7489
+    ],
+    [
+      3483,
+      229
+    ],
+    [
+      5535,
+      7479
+    ]
+  ],
+  "P_events": [
+    [
+      229,
+      305
+    ],
+    [
+      229,
+      877
+    ],
+    [
+      877,
+      887
+    ],
+    [
+      877,
+      3483
+    ],
+    [
+      877,
+      4641
+    ],
+    [
+      887,
+      4641
+    ],
+    [
+      887,
+      5535
+    ],
+    [
+      3483,
+      4641
+    ],
+    [
+      3483,
+      7479
+    ],
+    [
+      4641,
+      5535
+    ],
+    [
+      4641,
+      7479
+    ],
+    [
+      4641,
+      7489
+    ],
+    [
+      5535,
+      7489
+    ],
+    [
+      7479,
+      7489
+    ]
+  ],
+  "R_events": [
+    [
+      229,
+      4641
+    ],
+    [
+      305,
+      4641
+    ],
+    [
+      877,
+      7489
+    ],
+    [
+      887,
+      7479
+    ],
+    [
+      3483,
+      5535
+    ]
+  ],
+  "enumeration": {
+    "partitions_at_most_5_blocks": 18002,
+    "locally_proper_partitions": 2277,
+    "distinct_P_R_event_signatures": 885
+  },
+  "vertices_of_projected_polytope": [
+    {
+      "p": "1/27",
+      "r": "14/27",
+      "support": [
+        {
+          "partition": [
+            0,
+            0,
+            1,
+            2,
+            3,
+            1,
+            4,
+            0,
+            1
+          ],
+          "weight": "1/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            0,
+            2,
+            3,
+            4,
+            1,
+            3,
+            0
+          ],
+          "weight": "1/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            1,
+            2,
+            3,
+            4,
+            4,
+            0,
+            1
+          ],
+          "weight": "1/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            0,
+            3,
+            4,
+            1,
+            3,
+            0
+          ],
+          "weight": "1/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            1,
+            2,
+            3,
+            4,
+            0,
+            1
+          ],
+          "weight": "1/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            0,
+            2,
+            4,
+            0,
+            1
+          ],
+          "weight": "1/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            3,
+            2,
+            4,
+            4,
+            0
+          ],
+          "weight": "7/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            3,
+            4,
+            1,
+            0,
+            1
+          ],
+          "weight": "7/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            0,
+            4,
+            0,
+            1
+          ],
+          "weight": "1/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            2,
+            1,
+            0,
+            0
+          ],
+          "weight": "1/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            2,
+            1,
+            4,
+            0
+          ],
+          "weight": "4/27"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            3,
+            0,
+            0,
+            1
+          ],
+          "weight": "1/27"
+        }
+      ]
+    },
+    {
+      "p": "1/6",
+      "r": "0",
+      "support": [
+        {
+          "partition": [
+            0,
+            0,
+            1,
+            2,
+            3,
+            2,
+            4,
+            3,
+            1
+          ],
+          "weight": "1/12"
+        },
+        {
+          "partition": [
+            0,
+            0,
+            1,
+            2,
+            3,
+            4,
+            3,
+            3,
+            3
+          ],
+          "weight": "1/12"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            0,
+            2,
+            3,
+            2,
+            4,
+            3,
+            3
+          ],
+          "weight": "1/12"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            0,
+            2,
+            3,
+            4,
+            3,
+            3,
+            1
+          ],
+          "weight": "1/12"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            1,
+            2,
+            3,
+            4,
+            0,
+            3,
+            1
+          ],
+          "weight": "1/6"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            0,
+            2,
+            3,
+            4,
+            3,
+            1
+          ],
+          "weight": "1/6"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            1,
+            3,
+            0,
+            4,
+            3,
+            1
+          ],
+          "weight": "1/6"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            0,
+            4,
+            4,
+            1,
+            2
+          ],
+          "weight": "1/6"
+        }
+      ]
+    },
+    {
+      "p": "1/3",
+      "r": "0",
+      "support": [
+        {
+          "partition": [
+            0,
+            0,
+            0,
+            1,
+            2,
+            1,
+            3,
+            2,
+            1
+          ],
+          "weight": "1/21"
+        },
+        {
+          "partition": [
+            0,
+            0,
+            0,
+            1,
+            2,
+            3,
+            2,
+            2,
+            1
+          ],
+          "weight": "2/21"
+        },
+        {
+          "partition": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            2,
+            2,
+            2,
+            1
+          ],
+          "weight": "1/42"
+        },
+        {
+          "partition": [
+            0,
+            0,
+            1,
+            0,
+            2,
+            3,
+            4,
+            2,
+            1
+          ],
+          "weight": "1/6"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            2,
+            3,
+            2,
+            1
+          ],
+          "weight": "1/14"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            0,
+            2,
+            0,
+            3,
+            3,
+            1,
+            2
+          ],
+          "weight": "5/42"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            1,
+            0,
+            2,
+            0,
+            3,
+            2,
+            2
+          ],
+          "weight": "1/21"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            1,
+            2,
+            0,
+            2,
+            0,
+            3,
+            1
+          ],
+          "weight": "1/7"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            0,
+            3,
+            0,
+            3,
+            1,
+            1
+          ],
+          "weight": "2/21"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            1,
+            3,
+            0,
+            0,
+            3,
+            3
+          ],
+          "weight": "1/14"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "weight": "5/42"
+        }
+      ]
+    },
+    {
+      "p": "1/3",
+      "r": "1/3",
+      "support": [
+        {
+          "partition": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            2,
+            2,
+            0
+          ],
+          "weight": "5/72"
+        },
+        {
+          "partition": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "weight": "1/9"
+        },
+        {
+          "partition": [
+            0,
+            0,
+            1,
+            2,
+            1,
+            2,
+            0,
+            0,
+            1
+          ],
+          "weight": "5/36"
+        },
+        {
+          "partition": [
+            0,
+            0,
+            1,
+            2,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "weight": "1/72"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            2,
+            2,
+            2
+          ],
+          "weight": "1/12"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            0,
+            2,
+            0,
+            2,
+            1,
+            1,
+            1
+          ],
+          "weight": "1/12"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            0,
+            2,
+            2,
+            0,
+            1,
+            1,
+            0
+          ],
+          "weight": "7/72"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            2,
+            2,
+            2,
+            1
+          ],
+          "weight": "1/9"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            1,
+            0,
+            2,
+            0,
+            2,
+            2,
+            0
+          ],
+          "weight": "1/9"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "weight": "1/24"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "weight": "5/36"
+        }
+      ]
+    },
+    {
+      "p": "1/5",
+      "r": "3/5",
+      "support": [
+        {
+          "partition": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            2,
+            2,
+            0
+          ],
+          "weight": "3/25"
+        },
+        {
+          "partition": [
+            0,
+            0,
+            1,
+            2,
+            1,
+            2,
+            0,
+            0,
+            1
+          ],
+          "weight": "2/25"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            2,
+            2,
+            0
+          ],
+          "weight": "2/25"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "weight": "1/25"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            1,
+            2,
+            3,
+            2,
+            3,
+            0,
+            1
+          ],
+          "weight": "1/25"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            2,
+            1,
+            1,
+            0
+          ],
+          "weight": "3/25"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            0,
+            2,
+            0,
+            1,
+            3,
+            0
+          ],
+          "weight": "2/25"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "weight": "2/25"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            1,
+            2,
+            3,
+            3,
+            0,
+            1
+          ],
+          "weight": "1/25"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            3,
+            2,
+            1,
+            0,
+            0
+          ],
+          "weight": "4/25"
+        },
+        {
+          "partition": [
+            0,
+            1,
+            2,
+            3,
+            3,
+            2,
+            1,
+            0,
+            1
+          ],
+          "weight": "4/25"
+        }
+      ]
+    }
+  ],
+  "facets": [
+    {
+      "name": "seven-point count",
+      "inequality": "4*p + r >= 2/3",
+      "equivalent": "12*p + 3*r >= 2",
+      "pointwise_count": "Among the 15 certified P/R events on U, every locally proper partition has at least 2 monochromatic pairs."
+    },
+    {
+      "name": "nonnegative R probability",
+      "inequality": "r >= 0",
+      "pointwise_count": "Each event indicator is nonnegative."
+    },
+    {
+      "name": "unit-triangle P spokes",
+      "inequality": "p <= 1/3",
+      "pointwise_count": "For the unit triangle {877,5535,7479}, center 4641 is P-related to each vertex; it can match at most one."
+    },
+    {
+      "name": "mixed triangle spokes",
+      "inequality": "2*p + r <= 1",
+      "pointwise_count": "The unit triangle {229,887,3483} has center 4641 with two P spokes (to 887,3483) and one R spoke (to 229); at most one can be monochromatic."
+    },
+    {
+      "name": "three-point transitivity",
+      "inequality": "2*r - p <= 1",
+      "pointwise_count": "For {229,4641,305}, two R same-block indicators minus the P same-block indicator is at most 1."
+    }
+  ],
+  "combined_lower_p_dual": {
+    "pointwise_inequality": "1 - 2*N7 + 3*T <= 0",
+    "N7": "sum of same-block indicators over the 12 certified P and 3 certified R events on U",
+    "T": "1[229~4641] + 1[305~4641] - 1[229~305]",
+    "expectation_identity": "E[1 - 2*N7 + 3*T] = 1 - 27*p",
+    "conclusion": "p >= 1/27"
+  },
+  "reference_polygon_vertices": [
+    [
+      "1/27",
+      "14/27"
+    ],
+    [
+      "1/6",
+      "0"
+    ],
+    [
+      "1/3",
+      "0"
+    ],
+    [
+      "1/3",
+      "1/3"
+    ],
+    [
+      "1/5",
+      "3/5"
+    ]
+  ],
+  "certificate_sha256": "e7d33779601d6b48c7df4ef111d531690b67966dfe6a5648807fa6ae9d3ad14c"
+}

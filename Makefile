@@ -148,3 +148,17 @@ check: check-pentagon-partition-gap
 
 check-pentagon-partition-gap:
 	python3 -S research/verify_pentagon_cp_partition_gap.py
+
+.PHONY: check-pr-local-projection
+check: check-pr-local-projection
+
+check-pr-local-projection: check-g14-pr-bound
+	python3 -S research/verify_nine_point_pr_polygon.py
+	python3 -S research/test_nine_point_pr_polygon.py
+	python3 -S research/verify_pr_matching_window_ceiling.py
+
+.PHONY: check-cyclic-interval-kernel
+check: check-cyclic-interval-kernel
+
+check-cyclic-interval-kernel:
+	python3 -S research/verify_cyclic_interval_kernel.py

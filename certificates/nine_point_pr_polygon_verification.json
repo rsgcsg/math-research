@@ -1,0 +1,58 @@
+{
+  "status": "PASS_EXACT_LOCAL_NINE_POINT_PR_POLYGON",
+  "certificate_sha256": "e7d33779601d6b48c7df4ef111d531690b67966dfe6a5648807fa6ae9d3ad14c",
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "P_component_nodes": 1860,
+  "R_component_nodes": 1472,
+  "local_pair_membership_checked_against_forest": true,
+  "P_event_rows": 14,
+  "R_event_rows": 5,
+  "unit_edges": 8,
+  "all_partitions_at_most5": 18002,
+  "locally_proper_partitions": 2277,
+  "distinct_event_signatures": 885,
+  "same_distance_pairs_not_in_P_component": [],
+  "same_distance_pairs_not_in_R_component": [],
+  "pointwise_lower_dual_scores_min_max": [
+    "-12",
+    "0"
+  ],
+  "lower_optimum_support_all_has_N7_2_and_T_1": true,
+  "tight_seven_count_states": 810,
+  "tight_triangle_transitivity_states": 825,
+  "exact_vertices": [
+    [
+      "1/27",
+      "14/27",
+      12
+    ],
+    [
+      "1/6",
+      "0",
+      8
+    ],
+    [
+      "1/5",
+      "3/5",
+      11
+    ],
+    [
+      "1/3",
+      "0",
+      11
+    ],
+    [
+      "1/3",
+      "1/3",
+      11
+    ]
+  ],
+  "facets": [
+    "12p+3r>=2",
+    "r>=0",
+    "p<=1/3",
+    "2p+r<=1",
+    "2r-p<=1"
+  ],
+  "scope": "Only distributions over proper partitions of the induced unit graph on this fixed nine-point V, using exactly the P/R component events whose endpoints lie in V. This is not a probability law on all of Y and makes no extension claim."
+}
