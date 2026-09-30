@@ -4,11 +4,17 @@
 [当前状态](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [路线](docs/ROUTES.md) ·
 [统一框架](docs/proofs/hn_unified_framework.md) · [文献地图](references/LITERATURE_MAP.md)。
 
+## 本轮收尾（2026-09-30）
+
+研究已收束到有限证据与范围边界：局部共同律、p=0面的支持无关排除、九点精确五边形、受限奇圈全长度上限，以及Q耦合和隐变量消去校准。**原full15与普通HN仍未解决。** 最后冻结组合树完成全仓验收并归档后停止，不自动展开新方向。
+
+[最新状态与验证范围](docs/CURRENT.md) · [隐变量消去校准](docs/proofs/hidden_pair_elimination.md) · [Q/P/R审核](docs/proofs/q_pr_coupling_audit.md)。
+
 ## 2026-09-30：全长度奇圈族的有限结构证书
 
 T159已把逐节点只使用实际P/R信息的BW边／奇圈体系处理到所有长度：它恰好只给三条既有上界，不能缩小九点可行五边形。证明用星形和二部结构，把无限长度问题压缩为完整的有限禁形检查；不是一次搜索超时或短圈抽样。[证明](docs/proofs/bw_pr_odd_cycle_ceiling.md) · [收据](certificates/bw_pr_odd_cycle_ceiling.json)。原full15与普通HN仍未解决。
 
-精确c36源树完整回归已通过（3657秒，[收据](certificates/research_checkpoint_c36_validation.json)）；cccb源树正在单独完整重放。当前新增目标另有精确重放，不借旧树收据声称最新组合树全部通过。
+精确c36源树完整回归已通过（3657秒，[收据](certificates/research_checkpoint_c36_validation.json)）；cccb源树随后也已完整通过（3883秒）。当前新增目标另有精确重放，不借旧树收据声称最新组合树全部通过。
 
 ## 2026-09-30：完整局部投影与整数覆盖缺口
 

@@ -169,3 +169,15 @@ check: check-bw-pr-odd-cycle-ceiling
 check-bw-pr-odd-cycle-ceiling: check-pr-local-projection
 	python3 -S research/verify_star_odd_cycle_lemma.py
 	python3 -S research/verify_bw_pr_odd_cycle_ceiling.py
+
+.PHONY: check-hidden-pair-elimination
+check: check-hidden-pair-elimination
+
+check-hidden-pair-elimination: check-bw-pr-odd-cycle-ceiling
+	python3 -S research/verify_hidden_pair_elimination.py
+
+.PHONY: check-q-pr-coupling-audit
+check: check-q-pr-coupling-audit
+
+check-q-pr-coupling-audit: check-pr-local-projection check-g14-pair-orbit
+	python3 -S research/verify_q_pr_coupling_audit.py

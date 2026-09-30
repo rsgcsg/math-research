@@ -1,0 +1,531 @@
+{
+  "C027_matching_window_test": {
+    "C027_matching_cut": "4p + 2r <= 2, equivalently 2p + r <= 1; this is already a facet of H and contains no Q coordinate",
+    "all_5_clique_algorithms_agree": true,
+    "all_5_cliques": 11160,
+    "alpha_le_2_5_windows": 2280,
+    "alpha_le_2_profile_counts": {
+      "4P+0Q+2R": 2280
+    },
+    "clique_algorithms": [
+      "ordered common-neighbor recursion",
+      "pivoting Bron-Kerbosch plus deduplicated subsets"
+    ],
+    "clique_counts_by_size": {
+      "2": 53970,
+      "3": 34402,
+      "4": 17960,
+      "5": 11160,
+      "6": 3380,
+      "7": 380
+    },
+    "clique_set_sha256_by_size": {
+      "2": "5416c6cc454b06a9752ddd7c84b23f56474e93ce3f95e426a992373d76f47782",
+      "3": "e40c5059726fffc1fbd46c63fcff62c77438be28e4f411bb8c16ef8cb9310af4",
+      "4": "5bda14b9f24fe8dbd76f06b2a4a7b85b93da1d5633547fa19c58966df99acbb6",
+      "5": "b004ee3ce117a9f2c234d6c66379396de2eb24285ae9c24b573a60d7a0390448",
+      "6": "5bf73916d9c66f02def40e299040d6a9dced2173cde2ded6baa633e8ad7098a1",
+      "7": "0c858942d5f5bb0e02f1ce064239ec0ad3441bb587a9cae51836853ca523d829"
+    },
+    "maximal_clique_size_counts": {
+      "2": 6326,
+      "3": 19922,
+      "4": 280,
+      "5": 780,
+      "6": 720,
+      "7": 380
+    },
+    "q_containing_5_cliques": 780,
+    "scope": "All 5-cliques of E\u222aP\u222aQ\u222aR, filtered for alpha(E[W])<=2. Each eligible nonunit graph is K2,3, hence bipartite; no C027 C5 blossom window contains Q.",
+    "support_edges": 53970
+  },
+  "Q_only_contraction": {
+    "class_size_histogram": {
+      "1": 9359,
+      "3": 158,
+      "4": 58,
+      "6": 2
+    },
+    "classes": 9577,
+    "collapsed_P_pairs": 0,
+    "collapsed_R_pairs": 0,
+    "merges": 500,
+    "quotient_pair_edge_counts": {
+      "E": 48706,
+      "P": 780,
+      "R": 332
+    },
+    "quotient_pair_intersections": {
+      "P_E": 0,
+      "P_R": 0,
+      "R_E": 0
+    },
+    "unit_loops": 0
+  },
+  "Q_union_R_contraction": {
+    "P_different_pair_loops_on_p_zero_face": 188,
+    "P_loop_path_witness": {
+      "P_pair": [
+        229,
+        305
+      ],
+      "R_equal_pairs": [
+        [
+          229,
+          4641
+        ],
+        [
+          4641,
+          305
+        ]
+      ]
+    },
+    "actual_unit_edge_loops": 120,
+    "classes": 9341,
+    "collapsed_P_pairs_sha256": "28a01e8ed2e1ff49d3cb22658f65dc79a260661e64331d9bbd7a02d63ac829a0",
+    "combined_conflicts_on_p_zero_face": 308,
+    "merges": 736,
+    "scope_note": "308 counts 120 E loops plus 188 P inequalities only on p=0; it is not 308 unit-edge loops.",
+    "unit_loop_pairs_sha256": "d280a1987857f0b3f2fee92e8148e7ae39bed05b88c3108dc3b47d5a743e0996",
+    "unit_loop_path_witness": {
+      "R_equal_pairs": [
+        [
+          238,
+          229
+        ],
+        [
+          229,
+          4641
+        ],
+        [
+          4641,
+          305
+        ]
+      ],
+      "unit_edge": [
+        238,
+        305
+      ]
+    }
+  },
+  "bounded_conclusion": {
+    "QRR": "2r-q<=1 is a genuine Q/R marginal coupling, but the pointwise binary check shows it is the ordinary triangle inequality and is satisfied by the single-independent-set moment relaxation.",
+    "projection": "The inspected ordinary pair-path cuts and alpha<=2 C027/Edmonds matching windows do not shrink H at q=1. This is not a full Q-augmented BW proof or a full15 result.",
+    "unresolved": [
+      "full Q-augmented BW odd-cycle family",
+      "higher-order partition cuts and alpha>=3 windows",
+      "full15 joint-law feasibility"
+    ]
+  },
+  "inputs": {
+    "P_Q_basis_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534",
+    "R_candidate_sha256": "f21599cb3ed6076e797f1fed319d5e8d4941c50b05fdaed12c6de218a6e9c976",
+    "actual_unit_edges_E": 49858,
+    "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+    "selected_P_pairs": 1860,
+    "selected_Q_pairs": 780,
+    "selected_R_pairs": 1472,
+    "vertices": 10077
+  },
+  "research_id": "E119",
+  "schema": "q-pr-coupling-audit-v1",
+  "selected_pair_event_triangles": {
+    "QRR_binary_checks": 8,
+    "QRR_inequality": "2r - q <= 1",
+    "QRR_single_independent_set_pointwise_checks": 8,
+    "absent_profiles": [
+      "PPQ",
+      "PQQ",
+      "PQR",
+      "QQR"
+    ],
+    "counts": {
+      "PPP": 1080,
+      "PPR": 1380,
+      "PRR": 68,
+      "QQQ": 280,
+      "QRR": 1560,
+      "RRR": 720
+    },
+    "witnesses": {
+      "PPP": {
+        "edges": [
+          {
+            "pair": [
+              31,
+              33
+            ],
+            "type": "P"
+          },
+          {
+            "pair": [
+              31,
+              229
+            ],
+            "type": "P"
+          },
+          {
+            "pair": [
+              33,
+              229
+            ],
+            "type": "P"
+          }
+        ],
+        "vertices": [
+          31,
+          33,
+          229
+        ]
+      },
+      "PPR": {
+        "edges": [
+          {
+            "pair": [
+              31,
+              33
+            ],
+            "type": "P"
+          },
+          {
+            "pair": [
+              31,
+              35
+            ],
+            "type": "R"
+          },
+          {
+            "pair": [
+              33,
+              35
+            ],
+            "type": "P"
+          }
+        ],
+        "vertices": [
+          31,
+          33,
+          35
+        ]
+      },
+      "PRR": {
+        "edges": [
+          {
+            "pair": [
+              229,
+              305
+            ],
+            "type": "P"
+          },
+          {
+            "pair": [
+              229,
+              4641
+            ],
+            "type": "R"
+          },
+          {
+            "pair": [
+              305,
+              4641
+            ],
+            "type": "R"
+          }
+        ],
+        "vertices": [
+          229,
+          305,
+          4641
+        ]
+      },
+      "QQQ": {
+        "edges": [
+          {
+            "pair": [
+              31,
+              889
+            ],
+            "type": "Q"
+          },
+          {
+            "pair": [
+              31,
+              7477
+            ],
+            "type": "Q"
+          },
+          {
+            "pair": [
+              889,
+              7477
+            ],
+            "type": "Q"
+          }
+        ],
+        "vertices": [
+          31,
+          889,
+          7477
+        ]
+      },
+      "QRR": {
+        "edges": [
+          {
+            "pair": [
+              31,
+              35
+            ],
+            "type": "R"
+          },
+          {
+            "pair": [
+              31,
+              873
+            ],
+            "type": "R"
+          },
+          {
+            "pair": [
+              35,
+              873
+            ],
+            "type": "Q"
+          }
+        ],
+        "vertices": [
+          31,
+          35,
+          873
+        ]
+      },
+      "RRR": {
+        "edges": [
+          {
+            "pair": [
+              31,
+              35
+            ],
+            "type": "R"
+          },
+          {
+            "pair": [
+              31,
+              877
+            ],
+            "type": "R"
+          },
+          {
+            "pair": [
+              35,
+              877
+            ],
+            "type": "R"
+          }
+        ],
+        "vertices": [
+          31,
+          35,
+          877
+        ]
+      }
+    }
+  },
+  "shortest_R_paths_after_Q_contraction": {
+    "P_pair_endpoint_distances": {
+      "distance_counts": {
+        "2": 76,
+        "3": 64,
+        "4": 48,
+        "infinity": 1672
+      },
+      "witnesses": {
+        "2": {
+          "pair": [
+            229,
+            305
+          ],
+          "q_classes": [
+            229,
+            305
+          ],
+          "r_actual_pair_representatives": [
+            [
+              229,
+              4641
+            ],
+            [
+              305,
+              4641
+            ]
+          ],
+          "r_quotient_path_classes": [
+            229,
+            4641,
+            305
+          ]
+        },
+        "3": {
+          "pair": [
+            238,
+            239
+          ],
+          "q_classes": [
+            238,
+            239
+          ],
+          "r_actual_pair_representatives": [
+            [
+              229,
+              238
+            ],
+            [
+              229,
+              233
+            ],
+            [
+              233,
+              239
+            ]
+          ],
+          "r_quotient_path_classes": [
+            238,
+            229,
+            233,
+            239
+          ]
+        },
+        "4": {
+          "pair": [
+            237,
+            238
+          ],
+          "q_classes": [
+            237,
+            238
+          ],
+          "r_actual_pair_representatives": [
+            [
+              237,
+              239
+            ],
+            [
+              233,
+              239
+            ],
+            [
+              229,
+              233
+            ],
+            [
+              229,
+              238
+            ]
+          ],
+          "r_quotient_path_classes": [
+            237,
+            239,
+            233,
+            229,
+            238
+          ]
+        },
+        "infinity": {
+          "pair": [
+            31,
+            33
+          ],
+          "q_classes": [
+            31,
+            33
+          ]
+        }
+      }
+    },
+    "actual_unit_pair_endpoint_distances": {
+      "distance_counts": {
+        "3": 72,
+        "4": 48,
+        "infinity": 49738
+      },
+      "witnesses": {
+        "3": {
+          "pair": [
+            238,
+            305
+          ],
+          "q_classes": [
+            238,
+            305
+          ],
+          "r_actual_pair_representatives": [
+            [
+              229,
+              238
+            ],
+            [
+              229,
+              4641
+            ],
+            [
+              305,
+              4641
+            ]
+          ],
+          "r_quotient_path_classes": [
+            238,
+            229,
+            4641,
+            305
+          ]
+        },
+        "4": {
+          "pair": [
+            237,
+            5551
+          ],
+          "q_classes": [
+            237,
+            240
+          ],
+          "r_actual_pair_representatives": [
+            [
+              237,
+              5552
+            ],
+            [
+              4641,
+              5552
+            ],
+            [
+              4641,
+              5557
+            ],
+            [
+              240,
+              5557
+            ]
+          ],
+          "r_quotient_path_classes": [
+            237,
+            5552,
+            4641,
+            5557,
+            240
+          ]
+        },
+        "infinity": {
+          "pair": [
+            0,
+            1
+          ],
+          "q_classes": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "interpretation": "No unit endpoints have R-distance 1 or 2 after Q contraction; the minimum is 3. P endpoints have no R-distance-1 pair; distance 2 yields only 2r-p<=1, already in H."
+  },
+  "status": "PASS_EXACT_BOUNDED_Q_PR_COUPLING_AUDIT"
+}

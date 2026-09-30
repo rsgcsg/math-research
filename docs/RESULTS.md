@@ -500,3 +500,13 @@ E115收尾补充：第一份池内势的阈值−1查询给出全Y合法价格�
 通用星形引理由任意规模计数证明；[独立校准](../certificates/star_odd_cycle_lemma_calibration.json)检查9216个小图、五个缺假设反例和120种六点冲突重叠类型。C028另补自足割锥／ℓ₁嵌入公式，说明所有齐次割锥有效式也被单集矩满足；它不否定高阶度量或完整划分方法。
 
 精确发布提交c36 / tree `67691cf2e2eb418e7a120f1f9b993ac7c812108d` 完整`make check`已通过：12:14:57–13:15:54 UTC，3657秒，Python3.12.14，exit0。[收据](../certificates/research_checkpoint_c36_validation.json)只覆盖该源树；cccb独立重放仍进行，当前T159组合树的全仓状态另报。
+
+
+## 2026-09-30：最终范围审核与收尾
+
+| ID | 内容 | 状态与范围 |
+|---|---|---|
+| C029 | 四共线点的逐节点已知BW诱导模型允许s≤1，但两条完整BW边消去未知项即得尖锐s≤2/3；完整部分平移两色律实现[0,2/3] | [证明](proofs/hidden_pair_elimination.md)、[精确检查](../research/verify_hidden_pair_elimination.py)、[证书](../certificates/hidden_pair_elimination.json)。15划分全枚举；标准投影机制，不改善实际P/R域或HN界 |
+| E119 | 实际Q/P/R耦合审查：Q收缩、R路径、全部所选分量三角和双算法匹配窗口普查 | [范围与证明](proofs/q_pr_coupling_audit.md)、[检查器](../research/verify_q_pr_coupling_audit.py)、[证书](../certificates/q_pr_coupling_audit.json)。QRR给2r−q≤1；所查路径与匹配族不缩小H投影。不包括完整Q-BW及高阶共同律 |
+
+cccb精确源提交`cccb4bc0bae32d15ff352324a797bcf0ebdef386`完整`make check`通过，Python3.12.14、3883秒、exit0。[收据与全日志](../certificates/research_checkpoint_cccb_validation.json)只覆盖该树。最终新增组合树冻结后独立完整回归；完成后本轮停止。

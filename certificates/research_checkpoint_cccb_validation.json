@@ -1,0 +1,48 @@
+{
+  "schema": "exact-tree-full-check-receipt-v1",
+  "source": {
+    "repository": "rsgcsg/math-research",
+    "commit": "cccb4bc0bae32d15ff352324a797bcf0ebdef386",
+    "tree": "5df41f4aabc2f70ae4a479a73923226332d39b25",
+    "parent": "c36c1308112d37405354974837d2ad8a4e5bca47",
+    "worktree": "isolated detached checkout of the exact source commit",
+    "detached": true
+  },
+  "check": {
+    "command": "make check",
+    "exit_code": 0,
+    "status": "PASS",
+    "python": "3.12.14",
+    "started_utc": "2026-09-30T13:17:30Z",
+    "ended_utc": "2026-09-30T14:22:13Z",
+    "elapsed_seconds": 3883
+  },
+  "complete_log": {
+    "path": "certificates/research_checkpoint_cccb_full_check.log.gz",
+    "capture": "direct shell 2>&1 | tee from initial source/date/version markers",
+    "format": "UTF-8 plain text",
+    "bytes": 285700,
+    "sha256": "a127ab4a4a36f50ea59b062deb0dd349409c4496263336d7832520ed78a3436e",
+    "contains_final_exit_marker": true,
+    "includes_new_targets": [
+      "check-pr-local-projection",
+      "check-cyclic-interval-kernel"
+    ],
+    "storage_format": "gzip; byte count and sha256 above refer to the decompressed complete log",
+    "gzip_sha256": "23a69af31d4917e01ef6fec4b9e749bd8995a68b6d89497450b6fc1111c8b2ee"
+  },
+  "post_check_worktree": {
+    "head": "cccb4bc0bae32d15ff352324a797bcf0ebdef386",
+    "tree": "5df41f4aabc2f70ae4a479a73923226332d39b25",
+    "tracked_runtime_metadata_changes": [
+      "certificates/dyadic_cyclic_orbit_validation.json",
+      "certificates/finite_frame_validation.json"
+    ],
+    "runtime_metadata_diff": {
+      "path": "certificates/research_checkpoint_cccb_runtime_metadata.patch",
+      "sha256": "60e748c7f2223bbe273195b86aab0e2d1aecdf2cdb9c049f7f43dcc0ce2495a4"
+    },
+    "no_other_worktree_changes": true
+  },
+  "original_receipt_sha256": "537c3f05b5b163216fa7320576eb75eec5e1173c9c03fc54f8c2686fdb62373e"
+}
