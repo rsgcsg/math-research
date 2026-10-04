@@ -1,0 +1,53 @@
+name: Transport projection verification
+on:
+  push:
+    branches: [research/transport-projection-20261004]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Fetch the exact public source without persisted credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -eu
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          git branch export-snapshot HEAD
+          git bundle create "$RUNNER_TEMP/source.bundle" export-snapshot
+          git archive --format=zip HEAD > "$RUNNER_TEMP/source.zip"
+          git rev-parse HEAD > "$RUNNER_TEMP/checked-commit.txt"
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.14'
+      - name: Source preflight and independent new evidence when present
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: |
+          set -o pipefail
+          python3 -S -m compileall -q research
+          if test -f research/check_transport_projection.py; then
+            python3 -S research/check_transport_projection.py 2>&1 | tee "$RUNNER_TEMP/transport-projection.log"
+          else
+            printf 'SOURCE_PREFLIGHT_ONLY: new checker not yet present; no new mathematical evidence verified.\n' | tee "$RUNNER_TEMP/transport-projection.log"
+          fi
+          git diff --exit-code
+      - name: Retain source and actual verification output
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: transport-projection-source-and-replay
+          path: |
+            ${{ runner.temp }}/source.bundle
+            ${{ runner.temp }}/source.zip
+            ${{ runner.temp }}/checked-commit.txt
+            ${{ runner.temp }}/transport-projection.log
+          retention-days: 30
+          if-no-files-found: error
