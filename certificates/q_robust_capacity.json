@@ -1,0 +1,119 @@
+{
+  "schema": "q-robust-capacity-v1",
+  "status": "PASS",
+  "date": "2026-10-06",
+  "research_base": "c7dd21efe99cf18884a62b21f34a27de23eec550",
+  "relation_source": "certificates/q_pr_joint_cuts.json",
+  "scope": "Exact 21-point combinatorial capacity inequality on the T161-selected E/P/Q/R realizations. No full15 infeasibility or Hadwiger-Nelson bound claimed.",
+  "q_edge_order": [
+    [
+      31,
+      889
+    ],
+    [
+      33,
+      891
+    ],
+    [
+      33,
+      7479
+    ],
+    [
+      35,
+      873
+    ],
+    [
+      35,
+      7489
+    ],
+    [
+      37,
+      875
+    ],
+    [
+      227,
+      5535
+    ],
+    [
+      233,
+      3477
+    ],
+    [
+      235,
+      3483
+    ]
+  ],
+  "q_weights": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1,
+    2
+  ],
+  "penalty_sum": 13,
+  "minimum_score": 9,
+  "sharp_witness": "002130244211300443302",
+  "optimality_witnesses": [
+    {
+      "s": 7,
+      "broken": [
+        0
+      ],
+      "coloring": "012323201234431010212"
+    },
+    {
+      "s": 5,
+      "broken": [
+        5,
+        6
+      ],
+      "coloring": "012034241210301413412"
+    },
+    {
+      "s": 6,
+      "broken": [
+        1,
+        2,
+        3
+      ],
+      "coloring": "012223441023002411242"
+    },
+    {
+      "s": 5,
+      "broken": [
+        3,
+        4,
+        8
+      ],
+      "coloring": "012123443313001442210"
+    },
+    {
+      "s": 5,
+      "broken": [
+        2,
+        7,
+        8
+      ],
+      "coloring": "010234334024201001340"
+    },
+    {
+      "s": 6,
+      "broken": [
+        1,
+        4,
+        7
+      ],
+      "coloring": "012130431212403412311"
+    }
+  ],
+  "derived_inequalities": [
+    "36p+12r+13(1-q)>=9",
+    "42p+13(1-q)>=3",
+    "p=1/27 => q<=8/9"
+  ],
+  "optimality_scope": "13 is optimal among nonnegative per-Q-link penalties u_j in inequalities S+sum u_j d_j>=9 for this fixed 21-point relation system."
+}
