@@ -1,0 +1,139 @@
+{
+  "schema": "generalized-partition-facet-audit-v1",
+  "research_ids": [
+    "T160",
+    "E120"
+  ],
+  "source_g14_pr_certificate_sha256": "dce2b97c1996be80b53f8fb24ad1756a7210304f61a2322b746c370de8bc325f",
+  "local_vertices": [
+    4641,
+    877,
+    887,
+    3483,
+    5535,
+    7479,
+    7489
+  ],
+  "local_pair_tag_counts": {
+    "P": 12,
+    "R": 3,
+    "unit": 6
+  },
+  "T158_pentagon_vertices": [
+    [
+      "1/27",
+      "14/27"
+    ],
+    [
+      "1/6",
+      "0"
+    ],
+    [
+      "1/3",
+      "0"
+    ],
+    [
+      "1/3",
+      "1/3"
+    ],
+    [
+      "1/5",
+      "3/5"
+    ]
+  ],
+  "gow": {
+    "c3": {
+      "groupings": 8400,
+      "unique_projected_rows": 70,
+      "minimum_slack_on_T158_pentagon": "0",
+      "tight_projected_rows_P_R_rhs": [
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          6,
+          3,
+          3
+        ]
+      ]
+    },
+    "c5": {
+      "groupings": 4032,
+      "unique_projected_rows": 49,
+      "minimum_slack_on_T158_pentagon": "1/3",
+      "tight_projected_rows_P_R_rhs": []
+    }
+  },
+  "g2coc": {
+    "c5_n5": {
+      "groupings": 504,
+      "unique_full_rows_P_R_unit_rhs": 18,
+      "unique_projected_rows_P_R_rhs": 18,
+      "minimum_slack_on_T158_pentagon": "2/3",
+      "best_full_row": {
+        "P": 4,
+        "R": -2,
+        "unit": -2,
+        "rhs": 2,
+        "maximum_lhs_on_pentagon": "4/3"
+      }
+    },
+    "c5_n7": {
+      "groupings": 3360,
+      "unique_full_rows_P_R_unit_rhs": 33,
+      "unique_projected_rows_P_R_rhs": 21,
+      "minimum_slack_on_T158_pentagon": "4/5",
+      "best_full_row": {
+        "P": 2,
+        "R": 3,
+        "unit": -6,
+        "rhs": 3,
+        "maximum_lhs_on_pentagon": "11/5"
+      }
+    },
+    "c6_n7": {
+      "groupings": 2520,
+      "unique_full_rows_P_R_unit_rhs": 34,
+      "unique_projected_rows_P_R_rhs": 34,
+      "minimum_slack_on_T158_pentagon": "4/5",
+      "best_full_row": {
+        "P": 2,
+        "R": 3,
+        "unit": -6,
+        "rhs": 3,
+        "maximum_lhs_on_pentagon": "11/5"
+      }
+    },
+    "c7_n7": {
+      "groupings": 720,
+      "unique_full_rows_P_R_unit_rhs": 24,
+      "unique_projected_rows_P_R_rhs": 24,
+      "minimum_slack_on_T158_pentagon": "1",
+      "best_full_row": {
+        "P": 1,
+        "R": 3,
+        "unit": -4,
+        "rhs": 3,
+        "maximum_lhs_on_pentagon": "2"
+      }
+    }
+  },
+  "totals": {
+    "gow_groupings": 12432,
+    "g2coc_groupings": 7104
+  },
+  "status": "PASS_EXACT_SEVEN_POINT_GENERALIZED_PARTITION_FACET_AUDIT",
+  "scope": "All GOW and G2COC instances whose nonempty sets fit inside the complete seven-point T157 P/R/unit core, modulo cyclic rotation of the side-set labels. No row cuts the exact T158 P/R pentagon. This does not audit larger grouped windows on Y, alpha>=3 higher-order cuts, full15 feasibility, or the Hadwiger-Nelson chromatic number."
+}
