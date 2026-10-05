@@ -1,0 +1,40 @@
+{
+  "schema": "q-defect-publication-v1",
+  "status": "PASS",
+  "research_date": "2026-10-06 Australia/Brisbane",
+  "base_commit": "c7dd21efe99cf18884a62b21f34a27de23eec550",
+  "checked_commit": "6a86b1f3f50cf1e8806d6749e854f5ddbb61b966",
+  "workflow_run": "37350310802",
+  "python": "3.12.14",
+  "source_files": 316,
+  "source_manifest_sha256": "b543d03e47d61f7d8f569fc31cf41c18900d57d68da00785007f9243bcd6175d",
+  "changed_file_sha256": {
+    "Makefile": "d0194aa097eaea5bc6ab5c892fe159b9ec9571f08435f13be0b23af79ea48898",
+    "README.md": "c52003fd36589bd04a275c5c77961f7856d71f3e456a553b39c39c13b62b560b",
+    "certificates/q_defect_lifting.json": "a9086435371d1b6105a93316c054e079b2b166d5ef9242fd952d090f1dadee78",
+    "certificates/q_defect_lifting_validation.json": "eb4563074d2c428492d138edbd65e9352887041ca4d19a7f2525c90c2e0a70b9",
+    "docs/CURRENT.md": "decd931fdad673210e1da39a595ead0a844402610dd9f9532dd31ac89c699bdd",
+    "docs/RESULTS.md": "ef01e10751cf078d95064435d2a2325f09912885b0399188571df3ba49ba4684",
+    "docs/ROUTES.md": "ca6811aeaee9e736b250ba770f483ad3c9393e1297cb2a89cbb36afbc47ba728",
+    "docs/proofs/q_defect_lifting.md": "e6cfc20ec6f4a0694336718b2324902f47f9da1cb50a8cb29767b83c18d8f8bf",
+    "research/verify_q_defect_lifting.py": "6546989802ff47b5026def979520947ea62c056c6ef9216906a4285836c9fde5"
+  },
+  "source_unchanged": true,
+  "commands": [
+    "make check-q-defect-lifting check-transport-projection",
+    "python3 -S research/verify_g14_pr_transport_bound.py",
+    "python3 -S research/verify_q_pr_coupling_audit.py"
+  ],
+  "returncodes": [
+    0,
+    0,
+    0
+  ],
+  "logs_sha256": {
+    "q-defect-targets.log": "d53df66d99a0eed3567382ef5f65638a9a61a201d021b5e771f52c586a568bd8",
+    "pr-bound.log": "457ffa3044a8c6042dd33e14d77aa70c6f8ea5fc97881c70a89181ea36357a36",
+    "q-pr-audit.log": "08857b599cc25956eacd56166e14b68487459544fba1a654a4c3dcd5218e4526"
+  },
+  "patch_sha256": "cd08f2b51e2beb1ef6c95a6f214832ad3220363de7bf56efc168ff8313b36638",
+  "scope": "Actual targeted independent GitHub replay including fresh Y geometry reconstruction, T160-T163, previous PR transport bound, and Q audit. Not a whole-repository make check or a full15 solution or new HN bound."
+}
