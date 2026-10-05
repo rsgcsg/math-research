@@ -1,5 +1,14 @@
 # Hadwiger–Nelson research
 
+## 2026-10-06：T162，Q断裂罚系数81→最优13
+
+T161的21点颜色核可以做得远强于九条Q链接的粗并集界。新T162给出逐链接权重
+`(2,1,1,1,1,2,2,1,2)`，对每份proper五染色有精确容量式，取期望后得到
+`36p+12r+13(1-q)>=9`；再用既有`2r-p<=1`得到`42p+13(1-q)>=3`。
+在旧尖点`p=1/27`上因此有`q<=8/9`。六份显式染色证明总罚13在这类逐Q链接非负罚式中已最优。
+[证明](docs/proofs/q_robust_capacity.md) · [检查器](research/verify_q_robust_capacity.py) · [证书](certificates/q_robust_capacity.json)。
+**full15与普通Hadwiger–Nelson仍未解决；5≤χ(R²)≤7没有改变。**
+
 ## 2026-10-05：恢复研究，T160–T161 的实际 Q/P/R 联合投影
 
 最新结果及完整证据见 [联合投影证明](docs/proofs/q_pr_joint_projection.md)。
