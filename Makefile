@@ -181,3 +181,9 @@ check: check-q-pr-coupling-audit
 
 check-q-pr-coupling-audit: check-pr-local-projection check-g14-pair-orbit
 	python3 -S research/verify_q_pr_coupling_audit.py
+
+.PHONY: check-generalized-partition-facets
+check: check-generalized-partition-facets
+
+check-generalized-partition-facets: check-g14-pr-bound
+	python3 -S research/verify_generalized_partition_facets.py
