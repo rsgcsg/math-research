@@ -1,0 +1,78 @@
+{
+  "Q_links": 9,
+  "actual_unit_edges": 34,
+  "actual_vertices": 21,
+  "at_p_1_over_27_q_at_most": "95/108",
+  "case_count_by_defect_number": {
+    "0": 1,
+    "1": 9,
+    "2": 36,
+    "3": 84,
+    "4": 126,
+    "5": 126,
+    "6": 84,
+    "7": 36,
+    "8": 9,
+    "9": 1
+  },
+  "certificate_sha256": "56ce80ebe05756b488ccd308abb9ec5af2e7515b4bab9eb09f94d461fc91a85d",
+  "coefficientwise_minimal_penalties": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    0,
+    2
+  ],
+  "exact_cases": 512,
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "independent_integer_search_nodes": 21678333,
+  "joint_certificate_sha256": "5753d18f691eab2b5b04e54d21762f063e8478daff72c013558535144b44d056",
+  "local_squared_distances": 210,
+  "minimum_penalty_sum": 12,
+  "minimum_score_by_defect_number": {
+    "0": 9,
+    "1": 7,
+    "2": 5,
+    "3": 4,
+    "4": 3,
+    "5": 3,
+    "6": 3,
+    "7": 3,
+    "8": 3,
+    "9": 3
+  },
+  "necessary_inequalities": [
+    "36p+12r+12(1-q) >= 9",
+    "14p+4(1-q) >= 1"
+  ],
+  "positive_words": 512,
+  "schema": "q-defect-lift-replay-v1",
+  "scope": "Exact pointwise inequality on the fixed induced 21-point configuration and coefficientwise optimal penalties for the fixed 48-event expression and nine links. Positive local words are not full-Y laws. No unrestricted full15 solution or plane chromatic bound.",
+  "score_events": {
+    "P": 36,
+    "R": 12
+  },
+  "single_external_vertex_extension": {
+    "maximum_forbidden_colors": 3,
+    "minimum_available_colors": 2,
+    "outside_vertices": 10056,
+    "scope": "One outside vertex at a time, for the fixed W-only expression; not a common law or simultaneous extension.",
+    "unit_neighbors_in_W_histogram": {
+      "0": 9556,
+      "1": 447,
+      "2": 52,
+      "3": 1
+    }
+  },
+  "status": "PASS",
+  "transport_component_sizes": {
+    "P": 1860,
+    "Q": 780,
+    "R": 1472
+  },
+  "uses_sat_or_floating_point": false
+}

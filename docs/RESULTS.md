@@ -520,3 +520,11 @@ cccb精确源提交`cccb4bc0bae32d15ff352324a797bcf0ebdef386`完整`make check`�
 | T161 | 原Y 21点Q识别给出三个四点颜色团；加一点后q=1局部P/R投影恰为四边形，p最小1/14；任意q另有14p+27(1-q)>=1 | [证明](proofs/q_pr_joint_projection.md) §3–5、[证书](../certificates/q_pr_joint_cuts.json)、[独立重放](../certificates/q_pr_joint_cuts_validation.json)。22点全部34单位边和47P/11Q/31R均值；四份正律公分母11088/24/18/84。1/14可达只在该局部q=1模型，不是任意q的全Y下界；无HN新界 |
 
 `make check-transport-projection`重建来源几何并验证新证据；旧验证收据保持原样，默认不覆盖。
+
+## 2026-10-06：支持无关的最优局部 Q 失配提升
+
+| ID | 内容 | 状态与范围 |
+|---|---|---|
+| T162 | 固定21点48项计数的九Q链失配罚项逐坐标最优，总和12；任意支持平衡律有14p+4(1-q)>=1；旧p=1/27面上q<=95/108 | [完整证明](proofs/q_defect_lift.md)、[512精确情形](../certificates/q_defect_lift.json)、[独立收据](../certificates/q_defect_lift_validation.json)。512实际正词及21,678,333个整数搜索节点；9个单断链词证明局部最优；外部10056点至多3个W单位邻居，使保持旧表达式的任意单点增广仍尖锐。不是全Y罚项最优性、概率律延拓、full15反证或HN新界 |
+
+`make check-q-defect-lift` 接入全仓入口；默认不改写收据，15类证书篡改、错误下界和优化模式均拒绝。
