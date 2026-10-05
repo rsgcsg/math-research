@@ -1,5 +1,12 @@
 # Hadwiger–Nelson research
 
+## 研究重新开启（2026-10-06）
+
+2026-09-30 的冻结验收是上一轮停止点；研究现已按用户要求继续。新 T160 证明 generalised odd wheel (GOW) 对 equimarginal single-independent-set moment 自动成立，因此它结构上无法修复 C028 的完整颜色覆盖缺口；E120 又穷尽 T157 七点 P/R 核内全部 19,536 个 GOW/G2COC 规范化分组，均不缩小 T158 精确五边形。更大 Y 上的 grouped G2COC/其它高阶完整覆盖切面仍开放。
+
+**原始 full15 任意支持共同律仍未解决，普通 Hadwiger–Nelson 仍为 5≤χ(R²)≤7。**
+[新证明与精确审核](docs/proofs/generalized_partition_facet_audit.md) · [当前状态](docs/CURRENT.md) · [路线](docs/ROUTES.md)
+
 ## 最终验收与停止（2026-09-30 16:10 UTC）
 
 研究源冻结于 `73ebe849758f36544ccd6a378b31f7383b0b7ac0`，tree `3d2bb2058d46981b62fd5b40e83a27dbe8fe1d16`。本轮已完成并停止；下文历史待办仅记录当时状态，不再自动执行。
