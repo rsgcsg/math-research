@@ -19,7 +19,7 @@ import sys
 if not __debug__:
     raise RuntimeError('Verification requires normal Python, not -O')
 
-from verify_pr_matching_window_ceiling import read, canonical, digest
+from verify_pr_matching_window_ceiling import read, digest
 from check_transport_projection import (
     require, verify_geometry_and_components, square_distance, multiplication_twice,
 )
@@ -27,6 +27,7 @@ from check_transport_projection import (
 ROOT = Path(__file__).resolve().parents[1]
 CERT = ROOT / 'certificates/q_defect_lift.json'
 RECEIPT = ROOT / 'certificates/q_defect_lift_validation.json'
+ENVELOPE = ROOT / 'certificates/q_defect_envelope.json'
 BASE = 'c7dd21efe99cf18884a62b21f34a27de23eec550'
 
 
@@ -213,7 +214,7 @@ def check(cert, parent, prepared, replay_minima=True):
     boundary_q = F(1) - (F(1) - F(14, 27)) / 4
     require(boundary_q == F(95, 108), 'p=1/27 boundary')
     return {
-        'schema': 'q-defect-lift-replay-v1', 'status': 'PASS',
+        'schema': 'q-defect-lift-replay-v2', 'status': 'PASS',
         'certificate_sha256': digest(cert), 'joint_certificate_sha256': digest(parent),
         'geometry_semantic_sha256': cert['geometry_semantic_sha256'],
         'transport_component_sizes': sizes,
@@ -235,6 +236,81 @@ def check(cert, parent, prepared, replay_minima=True):
     }
 
 
+
+def check_envelope(envelope, lift):
+    """Complete lower envelope from integer dual rows and rational positive laws.
+
+    The caller must have independently verified every case minimum in lift.
+    The four rows give pointwise lower bounds, and the five breakpoint laws
+    attain their maximum. Convex mixtures of consecutive laws cover every q.
+    Individual P/R event means are deliberately not imposed in this model.
+    """
+    require(literal_tree(envelope), 'envelope uses exact literals')
+    require(envelope['schema'] == 'q-defect-balanced-score-envelope-v1', 'envelope schema')
+    require(envelope['lift_certificate_sha256'] == digest(lift), 'envelope source binding')
+    rows = envelope['facets']
+    require(len(rows) == 4, 'four lower envelope pieces')
+    aggregate = []
+    for row in rows:
+        constant = row['constant_twice']
+        weights = row['same_coefficients_twice']
+        require(type(constant) is int and len(weights) == 9 and
+                all(type(x) is int for x in weights), 'integer dual row')
+        aggregate.append((constant, sum(weights)))
+        for case in lift['cases']:
+            rhs = constant + sum(w for j, w in enumerate(weights)
+                                 if not ((case['mask'] >> j) & 1))
+            require(2 * case['minimum'] >= rhs, 'pointwise envelope dual inequality')
+    require(aggregate == [(6, 2), (5, 5), (3, 9), (-6, 24)], 'four exact aggregate lines')
+    expected_q = [F(0), F(1, 3), F(1, 2), F(3, 5), F(1)]
+    laws = envelope['breakpoint_laws']
+    require(len(laws) == 5, 'all five breakpoints')
+    def rational(text):
+        require(type(text) is str, 'rational string')
+        value = F(text)
+        require(str(value) == text, 'canonical rational string')
+        return value
+    boundary = []
+    total_atoms = 0
+    for q, law in zip(expected_q, laws):
+        require(rational(law['q']) == q, 'ordered exact breakpoint')
+        masks = [a['mask'] for a in law['atoms']]
+        require(len(masks) == len(set(masks)) and
+                all(type(m) is int and 0 <= m < 512 for m in masks), 'distinct valid atom masks')
+        masses = [rational(a['weight']) for a in law['atoms']]
+        require(all(x > 0 for x in masses) and sum(masses) == 1, 'positive probability law')
+        require(all(sum(w for m, w in zip(masks, masses) if not ((m >> j) & 1)) == q
+                    for j in range(9)), 'each of nine Q events has the same mean')
+        score = sum(lift['cases'][m]['minimum'] * w for m, w in zip(masks, masses))
+        lower = max(F(c + a*q, 2) for c, a in aggregate)
+        require(score == rational(law['minimum_expected_score']) == lower,
+                'positive breakpoint law attains the exact lower envelope')
+        total_atoms += len(masks)
+        boundary.append({'q': str(q), 'minimum_expected_score': str(score),
+                         'atoms': len(masks)})
+    for i, (c, a) in enumerate(aggregate):
+        # An affine difference nonnegative at both ends is nonnegative on
+        # the whole segment; no sampled grid substitutes for the interval.
+        for q in expected_q[i:i+2]:
+            require(F(c+a*q, 2) == max(F(d+b*q, 2) for d, b in aggregate),
+                    'the stated line is active throughout its interval')
+    # The old 12p+3r>=2 and r>=0 imply S_mean=36p+12r>=6.
+    # Each of the first three lines is at most 6 on the whole unit interval.
+    require(all(max(F(c, 2), F(c+a, 2)) <= 6 for c, a in aggregate[:3]),
+            'first three pieces redundant under the old PR count')
+    return {
+        'schema': 'balanced-score-lower-envelope-replay-v1',
+        'envelope_certificate_sha256': digest(envelope),
+        'pointwise_integer_dual_checks': 4 * 512,
+        'breakpoints': boundary, 'positive_atom_occurrences': total_atoms,
+        'individual_Q_mean_checks': 5 * 9,
+        'lower_envelope': 'max(3+q, (5+5q)/2, (3+9q)/2, 12q-3)',
+        'intervals': ['[0,1/3]', '[1/3,1/2]', '[1/2,3/5]', '[3/5,1]'],
+        'first_three_pieces_redundant_under_old_PR_count': True,
+        'scope': envelope['scope'],
+    }
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--write-receipt', action='store_true')
@@ -247,6 +323,8 @@ def main():
     r = read(ROOT / 'certificates/g14_r_pair_orbit_basis.json.gz')
     prepared = prepare(parent, g, b, r)
     report = check(cert, parent, prepared)
+    envelope = read(ENVELOPE)
+    report['balanced_score_envelope'] = check_envelope(envelope, cert)
     if args.self_test:
         mutations = {
             'wrong-schema': lambda c: c.__setitem__('schema', 'invalid'),
@@ -273,6 +351,26 @@ def main():
             except (ValueError, KeyError, TypeError, IndexError):
                 continue
             raise ValueError('mutation not rejected: ' + name)
+        envelope_mutations = {
+            'wrong-envelope-source': lambda c: c.__setitem__('lift_certificate_sha256', '0' * 64),
+            'missing-envelope-facet': lambda c: c['facets'].pop(),
+            'false-envelope-row': lambda c: c['facets'][0].__setitem__('constant_twice', 8),
+            'float-envelope-coefficient': lambda c: c['facets'][0]['same_coefficients_twice'].__setitem__(0, 0.0),
+            'missing-breakpoint': lambda c: c['breakpoint_laws'].pop(),
+            'wrong-breakpoint-q': lambda c: c['breakpoint_laws'][1].__setitem__('q', '1/4'),
+            'wrong-breakpoint-score': lambda c: c['breakpoint_laws'][1].__setitem__('minimum_expected_score', '3'),
+            'wrong-breakpoint-weight': lambda c: c['breakpoint_laws'][1]['atoms'][0].__setitem__('weight', '1/5'),
+            'negative-weight': lambda c: c['breakpoint_laws'][1]['atoms'][0].__setitem__('weight', '-1/6'),
+            'wrong-breakpoint-mask': lambda c: c['breakpoint_laws'][0]['atoms'][0].__setitem__('mask', 0),
+        }
+        for name, mutate in envelope_mutations.items():
+            damaged = deepcopy(envelope)
+            mutate(damaged)
+            try:
+                check_envelope(damaged, cert)
+            except (ValueError, KeyError, TypeError, IndexError):
+                continue
+            raise ValueError('envelope mutation not rejected: ' + name)
         # Exercise the negative checker itself, not only certificate plumbing.
         model = build_case(*prepared[:4], 0)
         try:
@@ -286,6 +384,7 @@ def main():
                               capture_output=True, text=True)
         require(proc.returncode != 0 and 'not -O' in proc.stderr, 'optimized mode rejected')
         print(json.dumps({'self_test': 'PASS', 'certificate_mutations_rejected': len(mutations),
+                          'envelope_mutations_rejected': len(envelope_mutations),
                           'false_lower_bound_rejected': True, 'optimized_mode_rejected': True}, sort_keys=True))
     if args.write_receipt:
         RECEIPT.write_bytes(json.dumps(report, indent=2, sort_keys=True, ensure_ascii=False).encode() + b'\n')

@@ -3,6 +3,49 @@
   "actual_unit_edges": 34,
   "actual_vertices": 21,
   "at_p_1_over_27_q_at_most": "95/108",
+  "balanced_score_envelope": {
+    "breakpoints": [
+      {
+        "atoms": 1,
+        "minimum_expected_score": "3",
+        "q": "0"
+      },
+      {
+        "atoms": 5,
+        "minimum_expected_score": "10/3",
+        "q": "1/3"
+      },
+      {
+        "atoms": 4,
+        "minimum_expected_score": "15/4",
+        "q": "1/2"
+      },
+      {
+        "atoms": 5,
+        "minimum_expected_score": "21/5",
+        "q": "3/5"
+      },
+      {
+        "atoms": 1,
+        "minimum_expected_score": "9",
+        "q": "1"
+      }
+    ],
+    "envelope_certificate_sha256": "a3cd369e2091f63f50d93506eee21bca06e78d1ee40edae4a53d968d85762ba4",
+    "first_three_pieces_redundant_under_old_PR_count": true,
+    "individual_Q_mean_checks": 45,
+    "intervals": [
+      "[0,1/3]",
+      "[1/3,1/2]",
+      "[1/2,3/5]",
+      "[3/5,1]"
+    ],
+    "lower_envelope": "max(3+q, (5+5q)/2, (3+9q)/2, 12q-3)",
+    "pointwise_integer_dual_checks": 2048,
+    "positive_atom_occurrences": 16,
+    "schema": "balanced-score-lower-envelope-replay-v1",
+    "scope": "Exact lower boundary of expected fixed score S versus a common mean q for the nine selected Q links on the induced W graph. Individual P/R means are not constrained; no full-Y extension or upper-bound projection is asserted."
+  },
   "case_count_by_defect_number": {
     "0": 1,
     "1": 9,
@@ -50,7 +93,7 @@
     "14p+4(1-q) >= 1"
   ],
   "positive_words": 512,
-  "schema": "q-defect-lift-replay-v1",
+  "schema": "q-defect-lift-replay-v2",
   "scope": "Exact pointwise inequality on the fixed induced 21-point configuration and coefficientwise optimal penalties for the fixed 48-event expression and nine links. Positive local words are not full-Y laws. No unrestricted full15 solution or plane chromatic bound.",
   "score_events": {
     "P": 36,
