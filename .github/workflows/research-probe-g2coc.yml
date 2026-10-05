@@ -1,0 +1,27 @@
+name: Research c5 G2COC probe
+on:
+  pull_request:
+    paths:
+      - 'research/probe_g2coc_full_y.py'
+      - '.github/workflows/research-probe-g2coc.yml'
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Exhaust full-Y known-coordinate c5 G2COC
+        run: python3 -S research/probe_g2coc_full_y.py --output "$RUNNER_TEMP/g2coc-probe.json"
+      - name: Upload probe
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: g2coc-full-y-probe
+          path: ${{ runner.temp }}/g2coc-probe.json
+          retention-days: 3
+          if-no-files-found: error
