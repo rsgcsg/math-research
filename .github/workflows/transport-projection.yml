@@ -1,16 +1,16 @@
-name: Transport projection publication and independent replay
+name: Transport projection verification
 on:
   push:
     branches: [research/transport-projection-20261004]
-    paths: [.github/workflows/transport-projection.yml, '.research-transfer/q-pr-20261005/**']
+  workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
-  publish:
+  verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 90
     steps:
-      - name: Fetch exact public source without persisted credentials
+      - name: Fetch exact branch commit without persisted credentials
         env:
           SOURCE_SHA: ${{ github.sha }}
         run: |
@@ -20,98 +20,33 @@ jobs:
           git fetch --no-tags origin "$SOURCE_SHA"
           git checkout --detach FETCH_HEAD
           test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
-          git merge-base --is-ancestor 9c8b191541febe9c90c4f34addc7dc34ca3468f5 HEAD
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git branch export-snapshot HEAD
+          git bundle create "$RUNNER_TEMP/source.bundle" export-snapshot
+          git archive --format=zip HEAD > "$RUNNER_TEMP/source.zip"
+          git rev-parse HEAD > "$RUNNER_TEMP/checked-commit.txt"
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.12.14'
-      - name: Restore the exact reviewed mathematical patch
-        run: |
-          python3 -S - <<'PY'
-          import base64,gzip,hashlib,json,os,subprocess
-          from pathlib import Path
-          def h(x): return hashlib.sha256(x).hexdigest()
-          folder=Path('.research-transfer/q-pr-20261005')
-          files=sorted(folder.glob('part*.b64'))
-          if [p.name for p in files]!=[f'part{i:02}.b64' for i in range(4)]: raise RuntimeError('transport parts')
-          packed=base64.b64decode(''.join(p.read_text() for p in files),validate=True)
-          if h(packed)!='af67f644e1975b872b23ae3fad2a727a542d1f3cefe0100fd8d08d37be5596d8': raise RuntimeError('gzip SHA')
-          raw=gzip.decompress(packed)
-          if h(raw)!='ab7fec4e728fbb8323ef4a4089c0e09278688e81d89a84a4b4269754e640b8b6': raise RuntimeError('patch SHA')
-          patch=Path(os.environ['RUNNER_TEMP'])/'q-pr.patch'; patch.write_bytes(raw)
-          subprocess.run(['git','apply','--check',str(patch)],check=True)
-          subprocess.run(['git','apply',str(patch)],check=True)
-          paths=['Makefile','requirements-research.txt']+[str(p) for p in sorted(Path('research').glob('*.py'))]
-          manifest={p:h(Path(p).read_bytes()) for p in paths}
-          encoded=json.dumps(manifest,sort_keys=True,separators=(',',':')).encode()
-          if len(manifest)!=315 or h(encoded)!='77e56c90ff7bea2db63206fb51ef97a3e43e0cc1008df934437fec5e728b5816': raise RuntimeError('source manifest')
-          (Path(os.environ['RUNNER_TEMP'])/'frozen-source.json').write_bytes(encoded)
-          expected={'Makefile','README.md','certificates/q_pr_joint_cuts.json','certificates/q_pr_joint_cuts_validation.json','docs/CURRENT.md','docs/RESULTS.md','docs/ROUTES.md','docs/proofs/hn_unified_framework.md','docs/proofs/q_pr_joint_projection.md','references/LITERATURE_MAP.md','research/check_transport_projection.py'}
-          actual=set(subprocess.check_output(['git','diff','--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines())
-          if actual!=expected: raise RuntimeError(('unexpected patch paths',sorted(actual)))
-          for p in files:p.unlink()
-          folder.rmdir()
-          subprocess.run(['git','add','-A'],check=True)
-          subprocess.run(['git','diff','--cached','--check'],check=True)
-          subprocess.run(['git','commit','-m','research: certify T160 PQR polytope and T161 conditional 22-point color kernel'],check=True)
-          (Path(os.environ['RUNNER_TEMP'])/'checked-commit.txt').write_bytes(subprocess.check_output(['git','rev-parse','HEAD']))
-          PY
-      - name: Independently reconstruct geometry and verify new and prerequisite evidence
+      - name: Reconstruct T160-T161 geometry and verify T162 capacity
         env:
           PYTHONUNBUFFERED: '1'
         run: |
           set -o pipefail
-          make check-transport-projection 2>&1 | tee "$RUNNER_TEMP/transport-projection.log"
+          python3 -S -m compileall -q research
+          make check-q-robust-capacity 2>&1 | tee "$RUNNER_TEMP/q-robust-capacity.log"
           python3 -S research/verify_g14_pr_transport_bound.py 2>&1 | tee "$RUNNER_TEMP/pr-bound.log"
           python3 -S research/verify_q_pr_coupling_audit.py 2>&1 | tee "$RUNNER_TEMP/previous-coupling.log"
           git diff --exit-code
-      - name: Bind the actual targeted replay to frozen sources
-        run: |
-          python3 -S - <<'PY'
-          import hashlib,json,os,platform,subprocess
-          from pathlib import Path
-          def h(x):return hashlib.sha256(x).hexdigest()
-          tmp=Path(os.environ['RUNNER_TEMP'])
-          frozen=json.loads((tmp/'frozen-source.json').read_text())
-          current={p:h(Path(p).read_bytes()) for p in frozen}
-          if current!=frozen:raise RuntimeError('source changed during replay')
-          logs={name:h((tmp/name).read_bytes()) for name in ['transport-projection.log','pr-bound.log','previous-coupling.log']}
-          record={'schema':'transport-projection-publication-v1','status':'PASS','date':'2026-10-05','checked_commit':(tmp/'checked-commit.txt').read_text().strip(),'research_base':'3009eda28c26334bc8063913af74031cc7bcd9f4','branch_base':'9c8b191541febe9c90c4f34addc7dc34ca3468f5','workflow_run':os.environ['GITHUB_RUN_ID'],'python':platform.python_version(),'source_files':len(frozen),'source_manifest_sha256':h((tmp/'frozen-source.json').read_bytes()),'source_unchanged':True,'commands':['make check-transport-projection','python3 -S research/verify_g14_pr_transport_bound.py','python3 -S research/verify_q_pr_coupling_audit.py'],'returncodes':[0,0,0],'logs_sha256':logs,'patch_sha256':'ab7fec4e728fbb8323ef4a4089c0e09278688e81d89a84a4b4269754e640b8b6','scope':'Fresh targeted independent replay, including reconstruction of Y geometry and actual P/Q/R components. Not a new whole-repository make check; no full15 solution, global HN bound, or literature priority claimed.'}
-          text=json.dumps(record,ensure_ascii=False,indent=2)+'\n'
-          Path('certificates/transport_projection_publication.json').write_text(text)
-          (tmp/'publication.json').write_text(text)
-          PY
-          git add certificates/transport_projection_publication.json
-          git commit -m 'verification: record independent targeted replay of T160 and T161'
-          git diff --exit-code
-          git branch export-snapshot HEAD
-          git bundle create "$RUNNER_TEMP/source.bundle" export-snapshot
-          git archive --format=zip HEAD > "$RUNNER_TEMP/source.zip"
-          git rev-parse HEAD > "$RUNNER_TEMP/published-commit.txt"
-      - name: Fast-forward only the dedicated research branch after successful verification
-        env:
-          GH_TOKEN: ${{ github.token }}
-          SOURCE_SHA: ${{ github.sha }}
-        run: |
-          set -eu
-          test "$(git ls-remote origin refs/heads/research/transport-projection-20261004 | cut -f1)" = "$SOURCE_SHA"
-          AUTH="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
-          echo "::add-mask::$AUTH"
-          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin HEAD:refs/heads/research/transport-projection-20261004
-      - name: Retain exact source and actual replay evidence
+      - name: Retain exact source and replay logs
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
-          name: transport-projection-certified-source
+          name: transport-projection-t162-replay
           path: |
             ${{ runner.temp }}/source.bundle
             ${{ runner.temp }}/source.zip
             ${{ runner.temp }}/checked-commit.txt
-            ${{ runner.temp }}/published-commit.txt
-            ${{ runner.temp }}/frozen-source.json
-            ${{ runner.temp }}/publication.json
-            ${{ runner.temp }}/transport-projection.log
+            ${{ runner.temp }}/q-robust-capacity.log
             ${{ runner.temp }}/pr-bound.log
             ${{ runner.temp }}/previous-coupling.log
           retention-days: 30
