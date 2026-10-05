@@ -193,3 +193,9 @@ check: check-q-defect-lift
 
 check-q-defect-lift: check-transport-projection check-g14-pr-bound
 	python3 -S research/check_q_defect_lift.py --self-test
+
+.PHONY: check-q-defect-scope-audit
+check: check-q-defect-scope-audit
+
+check-q-defect-scope-audit: check-y-full-geometry
+	python3 -S research/check_q_defect_scope_audit.py --self-test
