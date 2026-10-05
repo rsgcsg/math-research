@@ -1,3 +1,8 @@
+## 2026-10-06 高阶 clique-partition 面族
+
+- [Letchford–Sørensen, *New Facets of the Clique Partitioning Polytope*, ORL 59 (2025) 107242](https://doi.org/10.1016/j.orl.2025.107242)：读取作者稿中 generalised odd wheel (GOW) 与 generalised 2-chorded odd cycle (G2COC) 的定义、有效性证明及 facet 陈述。本仓库 T160 只把 GOW 有效性作为外部输入，再独立证明其对 equimarginal single-independent-set moment 自动成立；E120 的七点枚举为本地精确重放。没有把外部 facet 定理登记为本地原创，也没有据此声称 HN 新界。
+- [Andres–Irmai–Naumann, *Chorded cycle facets of the clique partitioning polytope*, Discrete Applied Mathematics 378 (2026) 662–670](https://doi.org/10.1016/j.dam.2025.09.020)：作为普通 chorded-cycle 家族背景；C028 已有独立自足证明与有限校准，本轮不把该文计算当证书。
+
 ## 2026-09-27本次整理的来源复核（不覆盖历史阅读记录）
 
 - [Haugland 2608.04542v2](https://arxiv.org/html/2608.04542v2)：重开作者版本页及HTML引言，版本仍为2026-08-06 v2。
