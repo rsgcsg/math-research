@@ -1,0 +1,115 @@
+{
+  "schema": "q-defect-final-integration-validation-v1",
+  "task_date": "2026-10-06",
+  "task_timezone": "Australia/Brisbane",
+  "recorded_utc": "2026-10-05T18:01:47.491452+00:00",
+  "status": "TARGETED_PASS_FULL_SUITE_INCOMPLETE_LOCAL_SUPPLEMENT",
+  "source": {
+    "commit": "e4a65f89f8b18c990f0d9d9c46d35872e9708436",
+    "tree": "3044d83219b61b0592995362affb312f6505836e",
+    "files": 743,
+    "source_manifest_sha256": "791fd4bca7c7dfcc2efe7e916c84c5732a16ea70501794cffbda70e8746cff19"
+  },
+  "targeted_replay": {
+    "command": [
+      "make",
+      "check-q-defect-lift",
+      "check-q-defect-scope-audit"
+    ],
+    "cwd": "/mnt/data/math-research",
+    "start_utc": "2026-10-05T17:56:10.175129+00:00",
+    "end_utc": "2026-10-05T17:57:39.197582+00:00",
+    "elapsed_seconds": 89.022,
+    "returncode": 0,
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "status": "PASS",
+    "source_unchanged": true
+  },
+  "bounded_full_replay": {
+    "command": [
+      "timeout",
+      "--signal=INT",
+      "--kill-after=5s",
+      "240",
+      "make",
+      "check"
+    ],
+    "cwd": "/mnt/data/T162-final-full-check",
+    "start_utc": "2026-10-05T17:56:10.203717+00:00",
+    "end_utc": "2026-10-05T18:00:10.474095+00:00",
+    "elapsed_seconds": 240.27,
+    "returncode": 124,
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "status": "TIME_LIMIT_NOT_PASS",
+    "source_unchanged": true,
+    "successful_prerequisite_commands": [
+      "python3 -c 'import sys; sys.exit(\"Python >=3.10 required; activate .venv before make check\" if sys.version_info < (3, 10) else 0)'",
+      "python3 -S research/audit_full_law_preparation.py --cache certificates/Y_full_geometry.json.gz",
+      "python3 -S research/verify_scc_calibration.py",
+      "python3 -S research/verify_free_group_star_calibration.py",
+      "python3 -S research/verify_four_port_scc.py",
+      "python3 -S research/verify_g14_pair_orbit_law.py",
+      "python3 -S research/test_g14_pair_orbit_forest.py",
+      "python3 -S research/verify_g14_pair_port4_common_law.py",
+      "python3 -S research/verify_cubic_unit_directions.py",
+      "python3 -S research/verify_g14_pr_transport_bound.py",
+      "python3 -S research/verify_pentagon_cp_partition_gap.py",
+      "python3 -S research/verify_nine_point_pr_polygon.py",
+      "python3 -S research/test_nine_point_pr_polygon.py",
+      "python3 -S research/verify_pr_matching_window_ceiling.py",
+      "python3 -S research/verify_cyclic_interval_kernel.py",
+      "python3 -S research/verify_star_odd_cycle_lemma.py",
+      "python3 -S research/verify_bw_pr_odd_cycle_ceiling.py",
+      "python3 -S research/verify_hidden_pair_elimination.py",
+      "python3 -S research/verify_q_pr_coupling_audit.py",
+      "python3 -S research/check_transport_projection.py --self-test",
+      "python3 -S research/check_q_defect_lift.py --self-test",
+      "python3 -S research/check_q_defect_scope_audit.py --self-test"
+    ],
+    "interrupted_command": "python3 research/verify.py",
+    "scope": "The bounded make check completed all prerequisite commands, including both new proof targets, then stopped in the existing general verify.py suite. Exit 124 is an execution-budget stop, not a mathematical infeasibility certificate. No full-suite PASS or complete target coverage is claimed."
+  },
+  "source_manifest": {
+    "repository_path": "certificates/q_defect_final_source_manifest_e4a65f8.json.gz",
+    "raw_sha256": "791fd4bca7c7dfcc2efe7e916c84c5732a16ea70501794cffbda70e8746cff19",
+    "gzip_sha256": "cbf94ee2f2f29d8aae1677374463ba4064fb623eabd1f8d8b09537076a1e5e3f",
+    "tracked_files": 743
+  },
+  "logs": {
+    "final-targeted": {
+      "repository_path": "certificates/q_defect_final_targeted_e4a65f8.log.gz",
+      "raw_sha256": "674ce3849c80a88af8fe986e05771b315f8942ec8f197098459764168d322a9b",
+      "gzip_sha256": "1eea80cf05e94a8c6fb5a52413588178be1009dfaa209d858995c482bae8ae1a",
+      "raw_bytes": 12934
+    },
+    "final-make-check": {
+      "repository_path": "certificates/q_defect_final_make_check_e4a65f8.log.gz",
+      "raw_sha256": "0493d369005c37bf860b27f8e74d5be7162edfbf0e6de1b11bea2117449fde7b",
+      "gzip_sha256": "4f88cc81f084d146c478fb1db97d7ddbef35e4458301c9aa503f5dd58a49a15a",
+      "raw_bytes": 46739
+    }
+  },
+  "certificate_checks": {
+    "full_induced_case_minima": 512,
+    "case_minimum_search_nodes": 21678333,
+    "lower_envelope_dual_comparisons": 2048,
+    "rational_breakpoint_laws": 5,
+    "selected_model_case_patterns": 512,
+    "selected_model_search_nodes": 34417616,
+    "induced_model_validity_search_nodes": 4365160,
+    "scope_audit_omitted_unit_edges": 16,
+    "selected_optimality_words_invalid_on_induced_graph": 6,
+    "certificate_mutations_rejected": 36,
+    "false_lower_bound_rejected": true,
+    "optimized_python_guards_checked": 2
+  },
+  "parallel_alignment": {
+    "published_same_12_bound_and_T163_source": "rsgcsg/math-research@3c0d99f90a44af34102742db2d17a840e856bf24",
+    "published_13_bound_source": "rsgcsg/math-research@335c78d1d5f9e6f9c1058601039c237b4daaf221",
+    "resolution": "13 is the minimum sum for 18 selected unit edges; 12 is the minimum sum for all 34 induced unit edges. Both claims have now been independently replayed in their exact models.",
+    "independently_replayed_external_82_atom_law": false,
+    "local_supplement": "Full four-piece fixed-score/common-Q lower envelope, exhaustive single-external-vertex fixed-expression ceiling, and exact selected-versus-induced model reconciliation. The already-published same T162 inequality is treated as an independent cross-check, not a distinct new theorem."
+  },
+  "publication": "No successful push by this session. The complete local branch and a verified patch are exported. Parallel published commits are not presented as this session's write operations. The final archival commit and final push result are bound in the external delivery.json to avoid a self-reference cycle.",
+  "mathematical_scope": "No unrestricted full15 positive law or refutation, no full-Y extension of local words, and no new ordinary plane chromatic-number bound."
+}

@@ -6,6 +6,8 @@
 [独立范围审查](docs/proofs/q_defect_model_scope_audit.md)已分别认证两个最优值，并定位六份
 松弛模型正词违反的真实边。本轮另补上固定S/共同Q均值的完整四段下边界。
 远端已发布的同一12界作为交叉复核关联，不重复声明为另一个新定理。
+最终组合专项已通过：`make check-q-defect-lift check-q-defect-scope-audit`。
+[验证与发布边界](certificates/q_defect_final_integration_validation.json)明确区分专项PASS、全仓限时中断和本地未推送。
 
 ## 2026-10-06：T162 最优局部失配界
 
