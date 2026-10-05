@@ -8,6 +8,8 @@
 
 | ID | 内容 | 状态 | 证据/范围 |
 |---|---|---|---|
+| T160 | 所有GOW不等式对任意等边际single-independent-set moment自动成立 | 已证，一般概率/划分论推导 | [证明](proofs/generalized_partition_facet_audit.md)；因此GOW不能越过C028单集矩/完整覆盖缺口，不是HN界 |
+| E120 | T157七点P/R/unit核内全部GOW/G2COC不缩小T158五边形 | 19,536个规范化分组精确穷举 | 12,432 GOW + 7,104 G2COC；[检查器](../research/verify_generalized_partition_facets.py)与[收据](../certificates/generalized_partition_facet_audit.json)；更大Y仍开放 |
 | T001 | wheel 重复超额至少 7-k，k=5,6,7 可达 | 已证且精确枚举 | phase_checks.py；只针对该 wheel |
 | T002 | 路线图的五色 D+I、六色 D 定义 pair equality | 已证且穷举 | 100/225 对状态全部检查 |
 | C001 | 最小六色 defect 不强迫全局 matching | 显式反例 | 行增量交替 2,3；周期基本域 12 点 |
