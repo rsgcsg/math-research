@@ -1,0 +1,121 @@
+name: Q defect lifting publication and independent replay
+on:
+  push:
+    branches: [research/q-defect-20261006]
+    paths: [.github/workflows/q-defect-lifting.yml, '.research-transfer/q-defect-20261006/**']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Fetch the exact selected source without persisted credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -eu
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          git merge-base --is-ancestor c7dd21efe99cf18884a62b21f34a27de23eec550 HEAD
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.14'
+      - name: Restore the hash-bound reviewed mathematical patch
+        run: |
+          python3 -S - <<'PY'
+          import base64,gzip,hashlib,json,os,subprocess
+          from pathlib import Path
+          def h(x): return hashlib.sha256(x).hexdigest()
+          folder=Path('.research-transfer/q-defect-20261006')
+          files=sorted(folder.glob('part*.b64'))
+          if [p.name for p in files]!=[f'part{i:02}.b64' for i in range(4)]: raise RuntimeError('transport parts')
+          packed=base64.b64decode(''.join(p.read_text() for p in files),validate=True)
+          if h(packed)!='efc89506f8ae5afd53af4d3c2e0569d653d0eec7098c8736c8a7e540c4851b30': raise RuntimeError('gzip SHA')
+          raw=gzip.decompress(packed)
+          if h(raw)!='cd08f2b51e2beb1ef6c95a6f214832ad3220363de7bf56efc168ff8313b36638': raise RuntimeError('patch SHA')
+          patch=Path(os.environ['RUNNER_TEMP'])/'q-defect.patch'; patch.write_bytes(raw)
+          subprocess.run(['git','apply','--check',str(patch)],check=True)
+          subprocess.run(['git','apply',str(patch)],check=True)
+          expected={'Makefile','README.md','docs/CURRENT.md','docs/RESULTS.md','docs/ROUTES.md','docs/proofs/q_defect_lifting.md','research/verify_q_defect_lifting.py','certificates/q_defect_lifting.json','certificates/q_defect_lifting_validation.json'}
+          actual=set(subprocess.check_output(['git','diff','--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines())
+          if actual!=expected: raise RuntimeError(('unexpected patch paths',sorted(actual)))
+          paths=['Makefile','requirements-research.txt']+[str(p) for p in sorted(Path('research').glob('*.py'))]
+          manifest={p:h(Path(p).read_bytes()) for p in paths}
+          encoded=json.dumps(manifest,sort_keys=True,separators=(',',':')).encode()
+          if len(manifest)!=316 or h(encoded)!='b543d03e47d61f7d8f569fc31cf41c18900d57d68da00785007f9243bcd6175d': raise RuntimeError('source manifest')
+          tmp=Path(os.environ['RUNNER_TEMP'])
+          (tmp/'frozen-source.json').write_bytes(encoded)
+          (tmp/'changed-files.json').write_text(json.dumps({p:h(Path(p).read_bytes()) for p in sorted(expected)},sort_keys=True,indent=2)+'\n')
+          for p in files:p.unlink()
+          folder.rmdir()
+          subprocess.run(['git','add','-A'],check=True)
+          subprocess.run(['git','diff','--cached','--check'],check=True)
+          subprocess.run(['git','commit','-m','research: prove optimal Q defect lifting and sharp unrestricted 22-point p bound'],check=True)
+          (tmp/'checked-commit.txt').write_bytes(subprocess.check_output(['git','rev-parse','HEAD']))
+          PY
+      - name: Reconstruct geometry and independently replay new and prerequisite certificates
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: |
+          set -o pipefail
+          make check-q-defect-lifting check-transport-projection 2>&1 | tee "$RUNNER_TEMP/q-defect-targets.log"
+          python3 -S research/verify_g14_pr_transport_bound.py 2>&1 | tee "$RUNNER_TEMP/pr-bound.log"
+          python3 -S research/verify_q_pr_coupling_audit.py 2>&1 | tee "$RUNNER_TEMP/q-pr-audit.log"
+          git diff --exit-code
+      - name: Bind actual verification to the restored sources
+        run: |
+          python3 -S - <<'PY'
+          import hashlib,json,os,platform,subprocess
+          from pathlib import Path
+          def h(x):return hashlib.sha256(x).hexdigest()
+          tmp=Path(os.environ['RUNNER_TEMP'])
+          frozen=json.loads((tmp/'frozen-source.json').read_text())
+          if {p:h(Path(p).read_bytes()) for p in frozen}!=frozen:raise RuntimeError('source changed during replay')
+          changes=json.loads((tmp/'changed-files.json').read_text())
+          if {p:h(Path(p).read_bytes()) for p in changes}!=changes:raise RuntimeError('evidence changed during replay')
+          record={'schema':'q-defect-publication-v1','status':'PASS','research_date':'2026-10-06 Australia/Brisbane','base_commit':'c7dd21efe99cf18884a62b21f34a27de23eec550','checked_commit':(tmp/'checked-commit.txt').read_text().strip(),'workflow_run':os.environ['GITHUB_RUN_ID'],'python':platform.python_version(),'source_files':len(frozen),'source_manifest_sha256':h((tmp/'frozen-source.json').read_bytes()),'changed_file_sha256':changes,'source_unchanged':True,'commands':['make check-q-defect-lifting check-transport-projection','python3 -S research/verify_g14_pr_transport_bound.py','python3 -S research/verify_q_pr_coupling_audit.py'],'returncodes':[0,0,0],'logs_sha256':{p:h((tmp/p).read_bytes()) for p in ['q-defect-targets.log','pr-bound.log','q-pr-audit.log']},'patch_sha256':'cd08f2b51e2beb1ef6c95a6f214832ad3220363de7bf56efc168ff8313b36638','scope':'Actual targeted independent GitHub replay including fresh Y geometry reconstruction, T160-T163, previous PR transport bound, and Q audit. Not a whole-repository make check or a full15 solution or new HN bound.'}
+          text=json.dumps(record,ensure_ascii=False,indent=2)+'\n'
+          Path('certificates/q_defect_publication.json').write_text(text)
+          (tmp/'publication.json').write_text(text)
+          PY
+          git add certificates/q_defect_publication.json
+          git commit -m 'verification: record independent replay of T162 and T163'
+          git diff --exit-code
+          git branch export-snapshot HEAD
+          git bundle create "$RUNNER_TEMP/source.bundle" export-snapshot
+          git archive --format=zip HEAD > "$RUNNER_TEMP/source.zip"
+          git rev-parse HEAD > "$RUNNER_TEMP/published-commit.txt"
+      - name: Fast-forward only this dedicated branch after successful replay
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -eu
+          test "$(git ls-remote origin refs/heads/research/q-defect-20261006 | cut -f1)" = "$SOURCE_SHA"
+          AUTH="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          echo "::add-mask::$AUTH"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin HEAD:refs/heads/research/q-defect-20261006
+      - name: Retain exact source and actual independent replay evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: q-defect-certified-source
+          path: |
+            ${{ runner.temp }}/source.bundle
+            ${{ runner.temp }}/source.zip
+            ${{ runner.temp }}/checked-commit.txt
+            ${{ runner.temp }}/published-commit.txt
+            ${{ runner.temp }}/frozen-source.json
+            ${{ runner.temp }}/changed-files.json
+            ${{ runner.temp }}/publication.json
+            ${{ runner.temp }}/q-defect-targets.log
+            ${{ runner.temp }}/pr-bound.log
+            ${{ runner.temp }}/q-pr-audit.log
+          retention-days: 30
+          if-no-files-found: error
