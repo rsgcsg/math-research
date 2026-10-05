@@ -520,3 +520,12 @@ cccb精确源提交`cccb4bc0bae32d15ff352324a797bcf0ebdef386`完整`make check`�
 | T161 | 原Y 21点Q识别给出三个四点颜色团；加一点后q=1局部P/R投影恰为四边形，p最小1/14；任意q另有14p+27(1-q)>=1 | [证明](proofs/q_pr_joint_projection.md) §3–5、[证书](../certificates/q_pr_joint_cuts.json)、[独立重放](../certificates/q_pr_joint_cuts_validation.json)。22点全部34单位边和47P/11Q/31R均值；四份正律公分母11088/24/18/84。1/14可达只在该局部q=1模型，不是任意q的全Y下界；无HN新界 |
 
 `make check-transport-projection`重建来源几何并验证新证据；旧验证收据保持原样，默认不覆盖。
+
+
+## 2026-10-06：Q断裂容量的最优逐链接罚式
+
+| ID | 内容 | 状态与范围 |
+|---|---|---|
+| T162 | T161固定21点核上，逐Q链接权重(2,1,1,1,1,2,2,1,2)给 S+Σu_j d_j>=9；总罚13在所有同型非负逐链接罚式中最优。故任意全Y P/Q/R平衡律须满足36p+12r+13(1-q)>=9，结合2r-p<=1得42p+13(1-q)>=3；p=1/27时q<=8/9 | [证明](proofs/q_robust_capacity.md)、[检查器](../research/verify_q_robust_capacity.py)、[证书](../certificates/q_robust_capacity.json)。穷尽颜色置换商无得分<9划分，显式得分9见证；另六份proper五染色给总罚>=13的对偶式最优性。最优性只针对这一固定21点关系系统与同型罚式；候选(1/27,1/3,14/27)仍可通过当前必要式，故不是full15反证或HN新界 |
+
+重放：`make check-q-robust-capacity`。T160–T161几何资格仍由`check-transport-projection`独立重建，T162检查器只消费其已认证的固定关系并做新的完整组合穷尽。
