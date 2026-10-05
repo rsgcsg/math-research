@@ -1,8 +1,9 @@
-name: Research c5 G2COC probe
+name: Research generalized G2COC probe
 on:
   pull_request:
     paths:
       - 'research/probe_g2coc_full_y.py'
+      - 'research/verify_full_y_c5_g2coc.py'
       - '.github/workflows/research-probe-g2coc.yml'
 permissions:
   contents: read
@@ -15,13 +16,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: Exhaust full-Y known-coordinate c5 G2COC
-        run: python3 -S research/probe_g2coc_full_y.py --output "$RUNNER_TEMP/g2coc-probe.json"
-      - name: Upload probe
+      - name: Independently replay full-Y known-coordinate c5 G2COC ceiling
+        run: python3 -S research/verify_full_y_c5_g2coc.py --write-receipt --receipt "$RUNNER_TEMP/full-y-c5-g2coc.json"
+      - name: Upload exact replay
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: g2coc-full-y-probe
-          path: ${{ runner.temp }}/g2coc-probe.json
+          name: full-y-c5-g2coc
+          path: ${{ runner.temp }}/full-y-c5-g2coc.json
           retention-days: 3
           if-no-files-found: error
