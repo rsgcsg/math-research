@@ -1,0 +1,116 @@
+name: Joint boundary separation publication and independent replay
+on:
+  push:
+    branches: [research/q-defect-20261006]
+    paths: [.github/workflows/q-joint-boundary.yml, '.research-transfer/q-joint-20261006/**']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Fetch exact selected source without persisted credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -eu
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          git merge-base --is-ancestor 3c0d99f90a44af34102742db2d17a840e856bf24 HEAD
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.14'
+      - name: Restore the hash-bound reviewed proof and exact evidence
+        run: |
+          python3 -S - <<'PY'
+          import base64,gzip,hashlib,json,os,subprocess
+          from pathlib import Path
+          def h(x):return hashlib.sha256(x).hexdigest()
+          folder=Path('.research-transfer/q-joint-20261006')
+          files=sorted(folder.glob('part*.b64'))
+          if [p.name for p in files]!=[f'part{i:02}.b64' for i in range(4)]:raise RuntimeError('transport parts')
+          packed=base64.b64decode(''.join(p.read_text() for p in files),validate=True)
+          if h(packed)!='520fcaa9d21717fca7181705fa210165b655e6f9512447269a3c0ba9173002a2':raise RuntimeError('gzip SHA')
+          raw=gzip.decompress(packed)
+          if h(raw)!='bb06014a4a5257f8d0394e2a864189ea765d72676941f9b8869d512964accb4c':raise RuntimeError('patch SHA')
+          tmp=Path(os.environ['RUNNER_TEMP']);patch=tmp/'q-joint.patch';patch.write_bytes(raw)
+          subprocess.run(['git','apply','--check',str(patch)],check=True)
+          subprocess.run(['git','apply',str(patch)],check=True)
+          expected={'Makefile','README.md','docs/CURRENT.md','docs/RESULTS.md','docs/ROUTES.md','docs/proofs/q_joint_boundary_gap.md','research/verify_q_joint_boundary_gap.py','certificates/q_joint_boundary_gap.json','certificates/q_joint_boundary_gap_validation.json'}
+          actual=set(subprocess.check_output(['git','diff','--name-only']).decode().splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard']).decode().splitlines())
+          if actual!=expected:raise RuntimeError(('unexpected patch paths',sorted(actual)))
+          paths=['Makefile','requirements-research.txt']+[str(p) for p in sorted(Path('research').glob('*.py'))]
+          frozen={p:h(Path(p).read_bytes()) for p in paths}
+          encoded=json.dumps(frozen,sort_keys=True,separators=(',',':')).encode()
+          if len(frozen)!=317 or h(encoded)!='912a31a956b58f327ba1d7095cfbf04ea83bd4c2a6e47da17e7ec6dfb32b252a':raise RuntimeError('source manifest')
+          (tmp/'frozen-source.json').write_bytes(encoded)
+          (tmp/'changed-files.json').write_text(json.dumps({p:h(Path(p).read_bytes()) for p in sorted(expected)},sort_keys=True,indent=2)+'\n')
+          for p in files:p.unlink()
+          folder.rmdir()
+          subprocess.run(['git','add','-A'],check=True)
+          subprocess.run(['git','diff','--cached','--check'],check=True)
+          subprocess.run(['git','commit','-m','research: certify T164-T165 color-class dual and C030 actual joint gap'],check=True)
+          (tmp/'checked-commit.txt').write_bytes(subprocess.check_output(['git','rev-parse','HEAD']))
+          PY
+      - name: Independently reconstruct geometry and replay both new proof layers
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: |
+          set -o pipefail
+          make check-q-joint-boundary-gap check-q-defect-lifting check-transport-projection 2>&1 | tee "$RUNNER_TEMP/joint-boundary.log"
+          git diff --exit-code
+      - name: Bind actual verification to frozen sources
+        run: |
+          python3 -S - <<'PY'
+          import hashlib,json,os,platform,subprocess
+          from pathlib import Path
+          def h(x):return hashlib.sha256(x).hexdigest()
+          tmp=Path(os.environ['RUNNER_TEMP'])
+          frozen=json.loads((tmp/'frozen-source.json').read_text())
+          changes=json.loads((tmp/'changed-files.json').read_text())
+          for record in (frozen,changes):
+              if {p:h(Path(p).read_bytes()) for p in record}!=record:raise RuntimeError('inputs changed during replay')
+          record={'schema':'q-joint-boundary-publication-v1','status':'PASS','research_date':'2026-10-06 Australia/Brisbane','base_commit':'3c0d99f90a44af34102742db2d17a840e856bf24','checked_commit':(tmp/'checked-commit.txt').read_text().strip(),'workflow_run':os.environ['GITHUB_RUN_ID'],'python':platform.python_version(),'source_files':len(frozen),'source_manifest_sha256':h((tmp/'frozen-source.json').read_bytes()),'changed_file_sha256':changes,'source_unchanged':True,'commands':['make check-q-joint-boundary-gap check-q-defect-lifting check-transport-projection'],'returncodes':[0],'logs_sha256':{'joint-boundary.log':h((tmp/'joint-boundary.log').read_bytes())},'patch_sha256':'bb06014a4a5257f8d0394e2a864189ea765d72676941f9b8869d512964accb4c','scope':'Actual independent GitHub replay: full exact Y reconstruction, T160-T165 prerequisites and new certificates, 8232 independent sets with separate 2^21 subset coverage, 5648160 saturated proper partitions, 99-term exact fractional cover, and self-tests. This is not a whole-repository make check, an optimal q bound, or a full15/HN solution.'}
+          text=json.dumps(record,ensure_ascii=False,indent=2)+'\n'
+          Path('certificates/q_joint_boundary_publication.json').write_text(text)
+          (tmp/'publication.json').write_text(text)
+          PY
+          git add certificates/q_joint_boundary_publication.json
+          git commit -m 'verification: bind independent exact replay of joint boundary separation'
+          git diff --exit-code
+          git branch export-snapshot HEAD
+          git bundle create "$RUNNER_TEMP/source.bundle" export-snapshot
+          git archive --format=zip HEAD > "$RUNNER_TEMP/source.zip"
+          git rev-parse HEAD > "$RUNNER_TEMP/published-commit.txt"
+      - name: Fast-forward only the dedicated research branch after verified replay
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -eu
+          test "$(git ls-remote origin refs/heads/research/q-defect-20261006 | cut -f1)" = "$SOURCE_SHA"
+          AUTH="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          echo "::add-mask::$AUTH"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin HEAD:refs/heads/research/q-defect-20261006
+      - name: Retain exact source and actual replay evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: q-joint-boundary-certified-source
+          path: |
+            ${{ runner.temp }}/source.bundle
+            ${{ runner.temp }}/source.zip
+            ${{ runner.temp }}/checked-commit.txt
+            ${{ runner.temp }}/published-commit.txt
+            ${{ runner.temp }}/frozen-source.json
+            ${{ runner.temp }}/changed-files.json
+            ${{ runner.temp }}/publication.json
+            ${{ runner.temp }}/joint-boundary.log
+          retention-days: 30
+          if-no-files-found: error
