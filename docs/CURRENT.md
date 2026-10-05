@@ -1,4 +1,14 @@
-# 当前状态：本轮研究收尾；full15仍未决
+# 当前状态：研究已重新开启；full15仍未决
+
+## 2026-10-06：T160 / E120，新划分面族的结构校准
+
+2026-09-30 的“停止”是上一轮冻结验收；本轮按用户要求重新开启研究。普通 Hadwiger–Nelson 仍为 **5≤χ(R²)≤7**，原始 full15 任意支持共同律仍未解决。
+
+- **T160：** Letchford–Sørensen 2025 的 generalised odd wheel (GOW) 不等式，对任意等边际 single-independent-set moment `Q_uv=k Pr(u,v∈A)` 都自动成立。证明逐份随机集合缩小 hub/side sets，并用 dummy 单点补空 side，再取期望。因此 GOW 无法越过 C028 已证明存在的“单颜色矩可行、完整随机划分不可行”缺口；这条全局路线退休。
+- **E120：** 在 T157 的完整七点 P/R/unit 核上，穷尽所有能容纳的 GOW 与 generalised 2-chorded odd cycle (G2COC)：12,432 个 GOW、7,104 个 G2COC，合计 19,536 个规范化分组。没有一条切入 T158 的精确 P/R 五边形；G2COC 的七点核路线退休，但更大 Y 上的 grouped/α≥3 情形仍开放。
+- 精确重放：`make check-generalized-partition-facets`；[证明与范围](proofs/generalized_partition_facet_audit.md) · [冻结收据](../certificates/generalized_partition_facet_audit.json)。
+
+下一主攻因此进一步收窄为：在更大的真实 Y 上寻找 **真正越过 single-independent-set moment 的完整覆盖切面**（G2COC 或其它高阶 partition facets），并且其非零系数点对必须能通过已认证运动分量组合回 full15 合法行张成。只发现抽象 facet 而不能运输回真实 15 域，不算 full15 进展。
 
 ## 最终验收与停止（2026-09-30 16:10 UTC）
 
