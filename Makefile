@@ -187,3 +187,9 @@ check: check-transport-projection
 
 check-transport-projection: check-y-full-geometry
 	python3 -S research/check_transport_projection.py --self-test
+
+.PHONY: check-q-robust-capacity
+check: check-q-robust-capacity
+
+check-q-robust-capacity: check-transport-projection
+	python3 -S research/verify_q_robust_capacity.py --self-test
