@@ -1,0 +1,27 @@
+{
+  "schema": "q-defect-lifting-validation-v1",
+  "status": "PASS",
+  "certificate_sha256": "0e95de5517c615963e01aa900c67a12a14dfdccbf136b3575988dc28e1659ce6",
+  "base": "c7dd21efe99cf18884a62b21f34a27de23eec550",
+  "transport_components": {
+    "P": 1860,
+    "Q": 780,
+    "R": 1472
+  },
+  "local_exact_pair_checks": 231,
+  "finite_evidence": {
+    "atoms": 82,
+    "denominator": 29743913853014769669126663,
+    "unit_edge_checks": 2788,
+    "individual_event_means": 89,
+    "singleton_witnesses": 9
+  },
+  "case_replay": {
+    "patterns": 512,
+    "nontrivial_patterns": 442,
+    "trivial_by_nonnegativity": 70,
+    "inconsistent_patterns": 0,
+    "enumeration_nodes": 4255188
+  },
+  "scope": "A pointwise inequality on the actual 21-point induced unit graph and a 22-point marginal law. Neither a full-Y law nor a full15 solution or new plane chromatic bound."
+}

@@ -187,3 +187,9 @@ check: check-transport-projection
 
 check-transport-projection: check-y-full-geometry
 	python3 -S research/check_transport_projection.py --self-test
+
+.PHONY: check-q-defect-lifting
+check: check-q-defect-lifting
+
+check-q-defect-lifting: check-y-full-geometry
+	python3 -S research/verify_q_defect_lifting.py --self-test

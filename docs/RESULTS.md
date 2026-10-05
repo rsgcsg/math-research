@@ -520,3 +520,14 @@ cccb精确源提交`cccb4bc0bae32d15ff352324a797bcf0ebdef386`完整`make check`�
 | T161 | 原Y 21点Q识别给出三个四点颜色团；加一点后q=1局部P/R投影恰为四边形，p最小1/14；任意q另有14p+27(1-q)>=1 | [证明](proofs/q_pr_joint_projection.md) §3–5、[证书](../certificates/q_pr_joint_cuts.json)、[独立重放](../certificates/q_pr_joint_cuts_validation.json)。22点全部34单位边和47P/11Q/31R均值；四份正律公分母11088/24/18/84。1/14可达只在该局部q=1模型，不是任意q的全Y下界；无HN新界 |
 
 `make check-transport-projection`重建来源几何并验证新证据；旧验证收据保持原样，默认不覆盖。
+
+
+## 2026-10-06：最优逐链接 Q 提升与无条件局部尖锐性
+
+| ID | 内容 | 状态与范围 |
+|---|---|---|
+| T162 | 固定T161的S及九Q链接，逐项最小罚向量(2,1,1,1,1,2,2,0,2)，总和12；全Y必要式14p+4(1-q)>=1，p=1/27时q<=95/108 | [完整有限证明](proofs/q_defect_lifting.md) §1–3；512模式完整分类、4255188节点；九个实际单失效词证明固定提升问题逐坐标最优。不主张全部Q不等式最优，无full15反证 |
+| T163 | W∪{305}全部局部P/Q/R共同均值模型在q自由时最小p恰为1/27；82原子正律实现(1/27,1/3,14/27) | [证明](proofs/q_defect_lifting.md) §4；34实际单位边、47P/11Q/31R逐事件整数验收；分母29743913853014769669126663。只确定该22点边际模型，不提供全Y延拓或full15正律 |
+
+[共同证书](../certificates/q_defect_lifting.json)和[确定性重放收据](../certificates/q_defect_lifting_validation.json)；
+24项自测包含篡改、违规叶、非负剪枝和优化模式拒绝；`make check-q-defect-lifting`重建来源几何。
