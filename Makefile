@@ -181,3 +181,9 @@ check: check-q-pr-coupling-audit
 
 check-q-pr-coupling-audit: check-pr-local-projection check-g14-pair-orbit
 	python3 -S research/verify_q_pr_coupling_audit.py
+
+.PHONY: check-transport-projection
+check: check-transport-projection
+
+check-transport-projection: check-y-full-geometry
+	python3 -S research/check_transport_projection.py --self-test

@@ -510,3 +510,13 @@ E115收尾补充：第一份池内势的阈值−1查询给出全Y合法价格�
 | E119 | 实际Q/P/R耦合审查：Q收缩、R路径、全部所选分量三角和双算法匹配窗口普查 | [范围与证明](proofs/q_pr_coupling_audit.md)、[检查器](../research/verify_q_pr_coupling_audit.py)、[证书](../certificates/q_pr_coupling_audit.json)。QRR给2r−q≤1；所查路径与匹配族不缩小H投影。不包括完整Q-BW及高阶共同律 |
 
 cccb精确源提交`cccb4bc0bae32d15ff352324a797bcf0ebdef386`完整`make check`通过，Python3.12.14、3883秒、exit0。[收据与全日志](../certificates/research_checkpoint_cccb_validation.json)只覆盖该树。最终新增组合树冻结后独立完整回归；完成后本轮停止。
+
+
+## 2026-10-05：Q/P/R联合识别与整数颜色容量
+
+| ID | 内容 | 状态与范围 |
+|---|---|---|
+| T160 | 原Y七点核的P/Q/R投影精确九面描述；6p+q+2r<=3、p-q+2r<=1、r-q<=1/3对任意全Y平衡律必要 | [完整证明](proofs/q_pr_joint_projection.md) §2；69个proper至多五块划分、九个有理顶点及逐事件S3正律。不是full15反证或一般划分多面体首创facet |
+| T161 | 原Y 21点Q识别给出三个四点颜色团；加一点后q=1局部P/R投影恰为四边形，p最小1/14；任意q另有14p+27(1-q)>=1 | [证明](proofs/q_pr_joint_projection.md) §3–5、[证书](../certificates/q_pr_joint_cuts.json)、[独立重放](../certificates/q_pr_joint_cuts_validation.json)。22点全部34单位边和47P/11Q/31R均值；四份正律公分母11088/24/18/84。1/14可达只在该局部q=1模型，不是任意q的全Y下界；无HN新界 |
+
+`make check-transport-projection`重建来源几何并验证新证据；旧验证收据保持原样，默认不覆盖。
