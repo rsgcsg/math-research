@@ -193,3 +193,8 @@ check: check-q-defect-lifting
 
 check-q-defect-lifting: check-y-full-geometry
 	python3 -S research/verify_q_defect_lifting.py --self-test
+
+.PHONY: check-q-joint-boundary-gap
+check: check-q-joint-boundary-gap
+check-q-joint-boundary-gap: check-y-full-geometry
+	python3 -S research/verify_q_joint_boundary_gap.py --self-test
