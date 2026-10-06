@@ -235,5 +235,73 @@
       ]
     }
   ],
-  "scope": "Exact exhaustive audit of the smallest facet-inducing q-chorded k-cycle inequalities with support size at most 10 whose every cycle/chord pair lies in the 120 already-certified W22 P/Q/R/E pairs. No unclassified pair is inferred. None separates the C030 fractional cover from proper five-block laws. This does not audit support size >=11, generalized set-valued q-chorded families, full Y, full15 feasibility, or the Hadwiger-Nelson chromatic number."
+  "scope": "Exact exhaustive audit of the smallest facet-inducing q-chorded k-cycle inequalities with support size at most 10 whose every cycle/chord pair lies in the 120 already-certified W22 P/Q/R/E pairs. No unclassified pair is inferred. None separates the C030 fractional cover from proper five-block laws. This does not audit support size >=11, generalized set-valued q-chorded families, full Y, full15 feasibility, or the Hadwiger-Nelson chromatic number.",
+  "known_support_cliques": {
+    "maximum_clique_size": 7,
+    "size7_cliques": [
+      [
+        31,
+        33,
+        227,
+        229,
+        231,
+        875,
+        877
+      ],
+      [
+        33,
+        35,
+        229,
+        231,
+        233,
+        877,
+        887
+      ],
+      [
+        35,
+        37,
+        231,
+        233,
+        235,
+        887,
+        889
+      ],
+      [
+        227,
+        229,
+        873,
+        875,
+        877,
+        3477,
+        3483
+      ],
+      [
+        229,
+        231,
+        875,
+        877,
+        887,
+        3483,
+        4641
+      ],
+      [
+        231,
+        233,
+        877,
+        887,
+        889,
+        4641,
+        5535
+      ],
+      [
+        877,
+        887,
+        3483,
+        4641,
+        5535,
+        7479,
+        7489
+      ]
+    ]
+  }
 }
