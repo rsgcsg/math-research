@@ -1,0 +1,29 @@
+{
+  "schema": "single-separator-identity-threshold-v1",
+  "research_id": "T173",
+  "source_certificate": "certificates/q_joint_boundary_gap.json",
+  "source_blob_sha": "a14a1bf442e2155773ac1082d83bfc74a30c616d",
+  "target_means": {"P":[1,27],"Q":[7,10],"R":[14,27]},
+  "target_gap": [115,27],
+  "event_counts": {"P":47,"Q":11,"R":31,"total":89},
+  "fixed_identity_threshold": 71,
+  "best_escape_at_70_fixed": [115,27],
+  "best_escape_at_71_fixed": [32,9],
+  "free_counts_at_70_fixed": {"P":11,"Q":2,"R":6},
+  "free_counts_at_71_fixed": {"P":10,"Q":2,"R":6},
+  "one_optimal_71_fixed_complement": {
+    "P": [
+      [[229,305],0], [[887,889],0], [[3483,7479],0], [[35,37],0],
+      [[31,227],0], [[33,231],4], [[233,235],10], [[35,233],18],
+      [[37,233],18], [[887,5535],19]
+    ],
+    "Q": [
+      [[227,5535],65], [[31,889],65]
+    ],
+    "R": [
+      [[231,5535],-1], [[33,887],0], [[227,3483],0], [[37,891],0],
+      [[305,4641],0], [[233,4641],1]
+    ]
+  },
+  "scope": "Exact method ceiling for consequences using only the T165 separator, the three C030 class-total equalities, probability boxes 0<=x_e<=1, and exact fixation of selected individual event marginals to their C030 targets. No set of at most 70 fixed identities can force contradiction in this relaxation; one set of 71 can. This is not a claim about the full boundary polytope, where additional valid inequalities may yield much sparser separation."
+}
