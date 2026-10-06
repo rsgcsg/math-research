@@ -1,0 +1,63 @@
+{
+  "schema": "q-boundary-gauge-lift-v1",
+  "research_id": "T170",
+  "source": "certificates/q_joint_boundary_gap.json",
+  "window_gauge": [
+    3,
+    0,
+    -19,
+    23,
+    210,
+    -1,
+    -49
+  ],
+  "gauge_sum": 167,
+  "face_rhs": 336,
+  "transformed": {
+    "coefficient_sums": {
+      "P": -263,
+      "Q": 500,
+      "R": 0
+    },
+    "positive_coefficient_sum": 969,
+    "l1_coefficient_sum": 1701,
+    "max_abs_coefficient": 71,
+    "nonzero_coefficients": 76
+  },
+  "coarse_lift_penalty": 633,
+  "expected_defect": {
+    "P": 85,
+    "R": 19,
+    "constant": -13
+  },
+  "unconditional_inequality": {
+    "Q": 500,
+    "P": -54068,
+    "R": -12027,
+    "rhs": -7893,
+    "display": "500 q <= 54068 p + 12027 r - 7893"
+  },
+  "scalar_after_transitivity": {
+    "Q": 1000,
+    "P": -120163,
+    "rhs": -3759,
+    "display": "1000 q <= 120163 p - 3759"
+  },
+  "comparison_to_previous_scalar": {
+    "previous": "1000 q <= 254704 p - 8742",
+    "rhs_difference": "134541*(p-1/27)",
+    "valid_region": "p >= 1/27",
+    "strict_when": "p > 1/27"
+  },
+  "boundary_q_upper": [
+    1867,
+    2700
+  ],
+  "consequence_if_q_at_least_7_10": {
+    "p_lower": [
+      4459,
+      120163
+    ]
+  },
+  "scope": "Exact algebraic gauge normalization of the already certified T165 zero-defect separator, followed by a support-independent coarse lift using the exact positive-coefficient sum. It strengthens the previous scalar lifted inequality for every p>1/27. It does not provide q>=7/10, a full15 decision, or a new ordinary Hadwiger-Nelson bound."
+}
