@@ -12,6 +12,7 @@ certified geometry/transport reconstruction helpers.
 import argparse
 from copy import deepcopy
 import json
+import hashlib
 from pathlib import Path
 import sys
 
