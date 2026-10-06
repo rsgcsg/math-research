@@ -44,12 +44,23 @@ def enumerate_masks(problem, terms, expected=5648160):
         event_at[b].append((a,bit))
     lo=np.empty(expected,dtype=np.uint64)
     hi=np.empty(expected,dtype=np.uint64)
+    pbits=[i for i,t in enumerate(terms) if t["type"]=="P"]
+    qbits=[i for i,t in enumerate(terms) if t["type"]=="Q"]
+    p_lo_mask=sum(1<<i for i in pbits if i<64)
+    p_hi_mask=sum(1<<(i-64) for i in pbits if i>=64)
+    p0_q_witness={}
     leaves=0
     def visit(i,top,mask_lo,mask_hi):
         nonlocal leaves
         if i==n:
             require(leaves<expected,"more leaves than pinned T165 count")
-            lo[leaves]=mask_lo; hi[leaves]=mask_hi; leaves+=1
+            lo[leaves]=mask_lo; hi[leaves]=mask_hi
+            if (mask_lo & p_lo_mask)==0 and (mask_hi & p_hi_mask)==0:
+                for bit in qbits:
+                    on=((mask_lo>>bit)&1) if bit<64 else ((mask_hi>>(bit-64))&1)
+                    if on and bit not in p0_q_witness:
+                        p0_q_witness[bit]=colors.copy()
+            leaves+=1
             return
         for color in range(min(5,top+2)):
             if before[i] & classes[color]: continue
@@ -80,7 +91,7 @@ def enumerate_masks(problem, terms, expected=5648160):
     packed=np.empty(expected,dtype=[("lo","<u8"),("hi","<u8")])
     packed["lo"]=lo; packed["hi"]=hi
     uniq=np.unique(packed)
-    return uniq["lo"].copy(), uniq["hi"].copy(), leaves
+    return uniq["lo"].copy(), uniq["hi"].copy(), leaves, p0_q_witness
 
 def bit_column(lo,hi,j):
     if j<64: return ((lo >> np.uint64(j)) & np.uint64(1)).astype(np.int64)
@@ -272,7 +283,7 @@ def main():
     problem=boundary_problem(cert["boundary"],local)
     terms=cert["boundary"]["terms"]
     enumerate_masks.order=cert["boundary"]["order"]
-    lo,hi,leaves=enumerate_masks(problem,terms)
+    lo,hi,leaves,p0_q_witness=enumerate_masks(problem,terms)
     coeff=[t["coefficient"] for t in terms]
     target=[F(1,27) if t["type"]=="P" else F(7,10) if t["type"]=="Q" else F(14,27)
             for t in terms]
@@ -300,6 +311,8 @@ def main():
     out={"schema":"sparse-boundary-projection-search-v1","status":"SEARCH_OBSERVATION",
          "boundary_leaves":leaves,"unique_event_patterns":len(lo),
          "best":results[0],"all_runs":[{k:v for k,v in z.items() if k!="terms"} for z in results],
+         "q_P0_witnesses":[{"Q_pair":terms[j]["pair"],"partition":p0_q_witness[j]}
+                            for j in sorted(p0_q_witness)],
          "q_by_p_covers":q_by_p,
          "exact_q_by_p_covers":exact_q_by_p,
          "q_by_one_r_four_p":one_r_four_p,
