@@ -67,6 +67,28 @@ def build_tags(source):
     return tags
 
 
+def audit_known_support_cliques(vertices, tags, windows):
+    """Prove the known-pair support has clique number exactly seven.
+
+    Direct combination enumeration is intentionally independent of the
+    q-chorded DFS below: all 8-subsets are rejected, and all 7-subsets are
+    collected exactly.
+    """
+    from itertools import combinations
+    known = set(tags)
+    size7 = []
+    for C in combinations(vertices, 7):
+        if all(pair(a, b) in known for a, b in combinations(C, 2)):
+            size7.append(list(C))
+    for C in combinations(vertices, 8):
+        if all(pair(a, b) in known for a, b in combinations(C, 2)):
+            raise ValueError("known-pair support contains a K8")
+    expected = sorted(sorted(w) for w in windows)
+    if sorted(size7) != expected:
+        raise ValueError("maximal K7 family is not exactly the seven saturated windows")
+    return {"maximum_clique_size": 7, "size7_cliques": size7}
+
+
 def audit_case(vertices, tags, k, q):
     known = {a: set() for a in vertices}
     for a, b in tags:
@@ -173,6 +195,11 @@ def main():
         raise ValueError("unexpected W22 vertex set")
 
     tags = build_tags(source)
+    clique_audit = audit_known_support_cliques(
+        vertices, tags, source["boundary"]["saturated_windows"]
+    )
+    if clique_audit != cert["known_support_cliques"]:
+        raise ValueError("known-support clique audit differs from frozen certificate")
     got = [audit_case(vertices, tags, k, q) for k, q in TARGETS]
 
     # The frozen certificate intentionally excludes node counts: they are
@@ -194,6 +221,7 @@ def main():
         "status": "PASS",
         "certified_pair_counts": {"P":47,"Q":11,"R":31,"E":31},
         "targets": TARGETS,
+        "known_support_cliques": clique_audit,
         "cases": got,
         "scope": cert["scope"],
     }, sort_keys=True))
