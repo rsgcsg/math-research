@@ -11,6 +11,7 @@ on:
       - 'research/verify_single_separator_identity_threshold.py'
       - 'certificates/identity_sensitive_robustness.json'
       - 'certificates/single_separator_identity_threshold.json'
+      - 'research/search_sparse_boundary_projection.py'
       - '.github/workflows/research-boundary-projection-laws.yml'
 permissions:
   contents: read
@@ -31,3 +32,11 @@ jobs:
         run: python3 -S research/verify_identity_sensitive_robustness.py
       - name: Replay T173
         run: python3 -S research/verify_single_separator_identity_threshold.py
+      - name: Install sparse-search dependency
+        run: python3 -m pip install numpy==2.5.3
+      - name: Search sparse identity separator
+        run: python3 research/search_sparse_boundary_projection.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sparse-boundary-projection-search
+          path: sparse_boundary_projection_search.json
