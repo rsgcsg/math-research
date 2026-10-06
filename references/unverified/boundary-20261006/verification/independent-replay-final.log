@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/mnt/data/hn-boundary-final-20261006/experiments/finalize_boundary.py", line 82, in <module>
+    try:run()
+        ~~~^^
+  File "/mnt/data/hn-boundary-final-20261006/experiments/finalize_boundary.py", line 24, in run
+    f=W/'experiments'/('endpoint_'+name+'.json');insist(f.is_file(),'Unfinished search: missing '+f.name);d=read(f)
+                                                 ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/hn-boundary-final-20261006/experiments/finalize_boundary.py", line 12, in insist
+    if not x:raise ValueError(m)
+             ^^^^^^^^^^^^^^^^^^^
+ValueError: Unfinished search: missing endpoint_max.json

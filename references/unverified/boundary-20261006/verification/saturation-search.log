@@ -1,0 +1,5 @@
+WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing /mnt/data/hn-boundary-final-20261006/deps/python_sat-1.9.dev15-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl
+Installing collected packages: python-sat
+Successfully installed python-sat-1.9.dev15
+{"status": "SAT_POSITIVE_WORD_CHECKED", "counts": {"P": 234, "Q": 145, "R": 357}, "windows": 380, "triangles": 68}

@@ -1,3 +1,12 @@
+# 统一成果账本（2026-10-06整合）
+
+现行编号：T001–T169、E001–E124、C001–C032、Q001–Q011。编号是项目索引，不表示169项原问题突破。
+T141–143恢复自本地原始提交；并行重号见 [ID_ALIASES](ID_ALIASES.md)。证书内历史编号不修改。
+T162的12与T167的13使用不同边模型；T168只有九Q均值，不冒称完整P/Q/R正律。
+本次整合未新增普通HN界，未完成任意支持full15；实验UNKNOWN与未认证否定继续保留。
+
+## 原有账本和补入条目
+
 # 结果和实验账本
 
 编号只供引用，不宣称文献优先权。完整证明在 `proofs/`，精确检查在
@@ -8,6 +17,7 @@
 
 | ID | 内容 | 状态 | 证据/范围 |
 |---|---|---|---|
+| E121 | W22 当前认证支持上全部 k<=10 的 facet-inducing q-chorded cycle 均不能切掉 C030 | 精确穷尽六类周期；严格正余量 | [证明](proofs/q_chorded_w22_audit.md)；120个已认证P/Q/R/E点对，未知点对不推断；不覆盖k>=11/fullY/full15 |
 | T001 | wheel 重复超额至少 7-k，k=5,6,7 可达 | 已证且精确枚举 | phase_checks.py；只针对该 wheel |
 | T002 | 路线图的五色 D+I、六色 D 定义 pair equality | 已证且穷举 | 100/225 对状态全部检查 |
 | C001 | 最小六色 defect 不强迫全局 matching | 显式反例 | 行增量交替 2,3；周期基本域 12 点 |
@@ -510,3 +520,47 @@ E115收尾补充：第一份池内势的阈值−1查询给出全Y合法价格�
 | E119 | 实际Q/P/R耦合审查：Q收缩、R路径、全部所选分量三角和双算法匹配窗口普查 | [范围与证明](proofs/q_pr_coupling_audit.md)、[检查器](../research/verify_q_pr_coupling_audit.py)、[证书](../certificates/q_pr_coupling_audit.json)。QRR给2r−q≤1；所查路径与匹配族不缩小H投影。不包括完整Q-BW及高阶共同律 |
 
 cccb精确源提交`cccb4bc0bae32d15ff352324a797bcf0ebdef386`完整`make check`通过，Python3.12.14、3883秒、exit0。[收据与全日志](../certificates/research_checkpoint_cccb_validation.json)只覆盖该树。最终新增组合树冻结后独立完整回归；完成后本轮停止。
+
+
+## 2026-10-05：Q/P/R联合识别与整数颜色容量
+
+| ID | 内容 | 状态与范围 |
+|---|---|---|
+| T160 | 原Y七点核的P/Q/R投影精确九面描述；6p+q+2r<=3、p-q+2r<=1、r-q<=1/3对任意全Y平衡律必要 | [完整证明](proofs/q_pr_joint_projection.md) §2；69个proper至多五块划分、九个有理顶点及逐事件S3正律。不是full15反证或一般划分多面体首创facet |
+| T161 | 原Y 21点Q识别给出三个四点颜色团；加一点后q=1局部P/R投影恰为四边形，p最小1/14；任意q另有14p+27(1-q)>=1 | [证明](proofs/q_pr_joint_projection.md) §3–5、[证书](../certificates/q_pr_joint_cuts.json)、[独立重放](../certificates/q_pr_joint_cuts_validation.json)。22点全部34单位边和47P/11Q/31R均值；四份正律公分母11088/24/18/84。1/14可达只在该局部q=1模型，不是任意q的全Y下界；无HN新界 |
+
+`make check-transport-projection`重建来源几何并验证新证据；旧验证收据保持原样，默认不覆盖。
+
+
+## 2026-10-06：最优逐链接 Q 提升与无条件局部尖锐性
+
+| ID | 内容 | 状态与范围 |
+|---|---|---|
+| T162 | 固定T161的S及九Q链接，逐项最小罚向量(2,1,1,1,1,2,2,0,2)，总和12；全Y必要式14p+4(1-q)>=1，p=1/27时q<=95/108 | [完整有限证明](proofs/q_defect_lifting.md) §1–3；512模式完整分类、4255188节点；九个实际单失效词证明固定提升问题逐坐标最优。不主张全部Q不等式最优，无full15反证 |
+| T163 | W∪{305}全部局部P/Q/R共同均值模型在q自由时最小p恰为1/27；82原子正律实现(1/27,1/3,14/27) | [证明](proofs/q_defect_lifting.md) §4；34实际单位边、47P/11Q/31R逐事件整数验收；分母29743913853014769669126663。只确定该22点边际模型，不提供全Y延拓或full15正律 |
+
+[共同证书](../certificates/q_defect_lifting.json)和[确定性重放收据](../certificates/q_defect_lifting_validation.json)；
+24项自测包含篡改、违规叶、非负剪枝和优化模式拒绝；`make check-q-defect-lifting`重建来源几何。
+
+## 2026-10-06：T164–T165 / C030，联合边界与分数颜色覆盖
+
+| ID | 类型与精确结论 | 证据与范围 |
+|---|---|---|
+| T164 | W21全部独立集满足 f(A)>=2|A∩H|−3；推出任意k色式S+Σwd>=24−3k，并对质量≤k、每点覆盖1的分数颜色覆盖成立 | 8232独立集与全部2^21子集双算法；[证明](proofs/q_joint_boundary_gap.md)。不把单颜色外放松误称完整划分约束 |
+| T165 | W22原所选逐事件模型的p=1/27面满足q<=1867/2700；无条件必要式500q<=114552p+25600r−17171 | 七个真实窗口、PRR三角、5648160完整边界划分整数重放；不声称q界最优或full15反证 |
+| C030 | W22分数独立集覆盖逐事件实现(1/27,7/10,14/27)，却不存在同边际的proper五块划分律 | 99原子、分母6110370、总质量5、每点覆盖1；严格违反T165。实际局部联合缺口，不是全Y律 |
+
+| T141 | Y的Γ={bridge,translation_one,one_plus_eta_2,one_plus_eta_4,minus_bar,u}完整共同律最小划分支持恰2，任意Γ律的原子质量≤1/2且可达；删去任一运动即有单词 | 两个完整正词、六个删运动正词与独立hinted-RUP反证；多数原子引理正文证明 | [完整证明](proofs/two_atom_motion_packet.md)；仅Γ，不声称全15域支持恰2或HN新界；Γ的任意全模式势不能严格分离所有proper词 |
+| E123 | 58份共享事件定价反例、120轮零事件细化后2112项仍有零词；转入完整域后找到Γ的两词正修复与单词反证 | 全几何重建、全边检查、有限前缀重放与CNF校准；更大两词查询仍UNKNOWN | [主证书](../certificates/two_atom_motion_packet.json.gz)、[探索证书](../certificates/motion_packet_exploration.json.gz)；固定两词超时不否定任意支持律 |
+| T142 | 有限阶g、q步真实轨道W：指定局部模式兼容图无q步闭游走，则其事件在任意g不变律中的质量≤(q−1)/q；本29点V的五次η扩展86点110边给尖锐4/5 | 完整循环证明；全部3655点对、兼容图、实际五阶恒等式及达到4/5的proper五色旋转平均独立重放 | [完整证明](proofs/cyclic_pattern_extension.md)、[证书](../certificates/cyclic_pattern_extension.json)；W有30点不在Y，不决定原Y15域，也不改变普通HN界 |
+| C031 | 29点V的全15局部域多面体最小支持2，却有三原子极点；其唯一η支持匹配为3循环，不能复制成符合真实五阶关系的同三划分支持作用 | 三份完整proper词、全15域相等分布、两行模式秩与行列式−3；非负性证明全多面体极点，不只是词库极点 | [证明](proofs/cyclic_pattern_extension.md)、[局部证书](../certificates/localized_motion_packet.json)；实际否定两词包凸包的一般完备性；该局部正律不具有T142的真实η轨道延拓 |
+| T143 | 29点V中五点U的真实η闭包为原Y内11点；三个模式概率的精确k≥3边际为([0,1]^3+conv(0,e0,e1,e2))/5，单项/双项/总项上界2/5、3/5、4/5，13顶点由三色旋转律实现；上界下降到原Y完整η律，排除C025边际的原Y延拓 | 完整循环/凸几何证明、精确半空间顶点检查、全实际点对与13个正词；任意实权支撑函数闭式 | [完整证明](proofs/original_Y_cycle_descent.md)、[证书](../certificates/original_Y_cycle_descent.json)；尖锐性仅11点，不是整个Y的边际刻画，不是HN严格正势 |
+| E124 | 122位置/129点传播核的命中数最优98且三色可达；完整Y词保u全域和12旧二点且全部五点位置同划分；跨位置相关已能区分。更强F=核15完整局部域＋Y完整u＋12旧二点：singleton由1413步RUP排除，五词共同正修复 | 独立完整Y/全部边、完整CNF/RUP、五词的28项完整分布重放；随后F∪Γ自由五状态联合查询UNKNOWN | [证明](proofs/original_Y_cycle_descent.md)、[单词反证](../certificates/joined_kernel_singleton.json.gz)、[五词正证](../certificates/joined_kernel_five_law.json)、[实验记录](../certificates/cycle_descent_experiments.json)；F可行、最小支持仅知2至5，原Y15域仍未知 |
+| C032 | F在整个Ω₅(Y)上的五原子极点，不能由至多四原子的F律混合得到 | 五份完整Y词、249290项边检查、28完整模式多重集相等；R上五循环及归一化满秩证明整个F多面体极点 | [完整证明](proofs/original_Y_cycle_descent.md) §6.3–6.4、[证书](../certificates/joined_kernel_five_law.json)；极点支持5不等于最小支持5，不是原Y15域正律或极点 |
+| T166 | 所有GOW不等式对任意等边际single-independent-set moment自动成立 | 已证，一般概率/划分论推导 | [证明](proofs/generalized_partition_facet_audit.md)；因此GOW不能越过C028单集矩/完整覆盖缺口，不是HN界 |
+| E120 | T157七点P/R/unit核内全部GOW/G2COC不缩小T158五边形 | 19,536个规范化分组精确穷举 | 12,432 GOW + 7,104 G2COC；[检查器](../research/verify_generalized_partition_facets.py)与[收据](../certificates/generalized_partition_facet_audit.json)；更大Y仍开放 |
+| T167 | 固定21点、18条所选单位边模型的九Q链总罚最优13；与T162完整34边模型的最优12不矛盾 | [18边证明](proofs/q_robust_capacity.md)及[双模型审计](proofs/q_defect_model_scope_audit.md)；原T162@335c78重编号，不能用六份选边词证明完整诱导图的最优性 |
+| T168 | 固定48项计数S、九Q链接各均值q时，完整34边局部模型的精确下包络为max(3+q,(5+5q)/2,(3+9q)/2,12q−3)；任意单个W外点不能消除旧计数尖锐词 | [本地增补证明](proofs/q_defect_lift.md) §4–5、[有理正证书](../certificates/q_defect_envelope.json)；未平衡各条P/R，单点结论不覆盖多点/新增均值条件，本次为已有成果归档而非新发现 |
+| T169 | 原Y的全部整数单位平移并集恰五色：9740代表、60229完整接触类型和颜色公式a_i+n mod5 | [历史独立证明](proofs/integer_translate_five_coloring.md)；被已存更强三角格宿主结果涵盖，保留独立原证据，不是新HN界或新方向 |
+| E122 | W22当前120个认证点对上全部8529条可完整评价的2-partition不等式均不能排除C030，恰一条PRR三角取等 | [证明](proofs/two_partition_w22_audit.md)、[检查器](../research/verify_two_partition_w22_audit.py)；6830条满足完整图facet大小条件，不涵盖未知点对或多行消元。修复原证书尾部字面量\n与整页转义，不变更数值 |
+

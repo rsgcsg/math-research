@@ -1,0 +1,232 @@
+{
+  "schema": "q-defect-model-scope-audit-v1",
+  "relation_parent_sha256": "5753d18f691eab2b5b04e54d21762f063e8478daff72c013558535144b44d056",
+  "external_observation": {
+    "commit": "335c78d1d5f9e6f9c1058601039c237b4daaf221",
+    "certificate_path": "certificates/q_robust_capacity.json",
+    "certificate_git_blob": "0da7c1bbf1ba2f9db72abba87b6a9217e0974813",
+    "checker_path": "research/verify_q_robust_capacity.py",
+    "checker_git_blob": "a28ce4a9bd9c64bb99d2cdabe08189171c288ffc"
+  },
+  "selected_weights": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1,
+    2
+  ],
+  "induced_weights": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    0,
+    2
+  ],
+  "rows": [
+    {
+      "score": 7,
+      "broken": [
+        0
+      ],
+      "word": "012323201234431010212",
+      "violated_actual_unit_edges": [
+        [
+          37,
+          889
+        ]
+      ],
+      "penalty_12_score": 9
+    },
+    {
+      "score": 5,
+      "broken": [
+        5,
+        6
+      ],
+      "word": "012034241210301413412",
+      "violated_actual_unit_edges": [
+        [
+          37,
+          889
+        ],
+        [
+          233,
+          5535
+        ]
+      ],
+      "penalty_12_score": 9
+    },
+    {
+      "score": 6,
+      "broken": [
+        1,
+        2,
+        3
+      ],
+      "word": "012223441023002411242",
+      "violated_actual_unit_edges": [
+        [
+          891,
+          5535
+        ],
+        [
+          3477,
+          7479
+        ]
+      ],
+      "penalty_12_score": 9
+    },
+    {
+      "score": 5,
+      "broken": [
+        3,
+        4,
+        8
+      ],
+      "word": "012123443313001442210",
+      "violated_actual_unit_edges": [
+        [
+          229,
+          873
+        ],
+        [
+          887,
+          7489
+        ]
+      ],
+      "penalty_12_score": 9
+    },
+    {
+      "score": 5,
+      "broken": [
+        2,
+        7,
+        8
+      ],
+      "word": "010234334024201001340",
+      "violated_actual_unit_edges": [
+        [
+          233,
+          5535
+        ],
+        [
+          873,
+          3483
+        ],
+        [
+          877,
+          7479
+        ],
+        [
+          3483,
+          7489
+        ]
+      ],
+      "penalty_12_score": 8
+    },
+    {
+      "score": 6,
+      "broken": [
+        1,
+        4,
+        7
+      ],
+      "word": "012130431212403412311",
+      "violated_actual_unit_edges": [
+        [
+          233,
+          891
+        ],
+        [
+          233,
+          5535
+        ],
+        [
+          891,
+          5535
+        ],
+        [
+          3483,
+          7489
+        ]
+      ],
+      "penalty_12_score": 8
+    }
+  ],
+  "omitted_unit_edges": [
+    [
+      37,
+      889
+    ],
+    [
+      229,
+      873
+    ],
+    [
+      231,
+      875
+    ],
+    [
+      231,
+      889
+    ],
+    [
+      233,
+      891
+    ],
+    [
+      233,
+      5535
+    ],
+    [
+      873,
+      3483
+    ],
+    [
+      877,
+      3477
+    ],
+    [
+      877,
+      5535
+    ],
+    [
+      877,
+      7479
+    ],
+    [
+      887,
+      3483
+    ],
+    [
+      887,
+      7489
+    ],
+    [
+      891,
+      5535
+    ],
+    [
+      3477,
+      7479
+    ],
+    [
+      3483,
+      7489
+    ],
+    [
+      5535,
+      7479
+    ]
+  ],
+  "scope": "Exact distinction between the same fixed-score model with 18 selected unit edges and with all 34 actual induced unit edges. Both optima are certified, but a positive witness of the 18-edge relaxation need not be a proper coloring of the 34-edge graph.",
+  "induced_witness_source_sha256": "56ce80ebe05756b488ccd308abb9ec5af2e7515b4bab9eb09f94d461fc91a85d"
+}

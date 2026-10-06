@@ -1,0 +1,864 @@
+{
+  "schema": "hn-unified-sources-v1",
+  "baseline_main": "3009eda28c26334bc8063913af74031cc7bcd9f4",
+  "status": "LOCAL_INTEGRATION_PENDING_REPLAY",
+  "remote_cleanup": "NOT_EXECUTED",
+  "refs": [
+    {
+      "ref": "refs/archive/local0/heads/research/cycle-descent-20260928",
+      "sha": "f986eb0a0de1e33769efa54aa73c3eac9d2ff711",
+      "divergence": "18\t3",
+      "files": [
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/cycle_descent_experiments.json",
+        "A\tcertificates/cycle_descent_validation.json",
+        "A\tcertificates/cyclic_pattern_Y_extensions.json",
+        "A\tcertificates/cyclic_pattern_extension.json",
+        "A\tcertificates/joined_kernel_five_law.json",
+        "A\tcertificates/joined_kernel_singleton.json.gz",
+        "A\tcertificates/localized_motion_packet.json",
+        "A\tcertificates/motion_packet_exploration.json.gz",
+        "A\tcertificates/motion_packet_search_observations.json",
+        "A\tcertificates/motion_packet_static_audit.json",
+        "A\tcertificates/motion_packet_validation.json",
+        "A\tcertificates/original_Y_cycle_descent.json",
+        "A\tcertificates/two_atom_motion_packet.json.gz",
+        "M\tdocs/BRANCHES.md",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "A\tdocs/proofs/cyclic_pattern_extension.md",
+        "M\tdocs/proofs/hn_unified_framework.md",
+        "A\tdocs/proofs/original_Y_cycle_descent.md",
+        "A\tdocs/proofs/two_atom_motion_packet.md",
+        "M\treferences/LITERATURE_MAP.md",
+        "M\treferences/SOURCES.md",
+        "A\trequirements-packet-search.txt",
+        "A\tresearch/build_cycle_descent.py",
+        "A\tresearch/build_cyclic_pattern_extension.py",
+        "A\tresearch/build_localized_motion_packet.py",
+        "A\tresearch/motion_packet_cnf.py",
+        "A\tresearch/search_cycle_descent.py",
+        "A\tresearch/search_joined_kernel.py",
+        "A\tresearch/search_motion_packet.py",
+        "A\tresearch/test_cycle_descent.py",
+        "A\tresearch/test_motion_packet.py",
+        "A\tresearch/verify_cycle_descent.py",
+        "A\tresearch/verify_cyclic_pattern_extension.py",
+        "A\tresearch/verify_joined_kernel.py",
+        "A\tresearch/verify_localized_hintfree.py",
+        "A\tresearch/verify_localized_motion_packet.py",
+        "A\tresearch/verify_motion_packet.py"
+      ]
+    },
+    {
+      "ref": "refs/archive/local1/heads/research/baseline-next-20260927",
+      "sha": "875c4f802125f804039ae43586d3c2a8caa19b3d",
+      "divergence": "29\t0",
+      "files": []
+    },
+    {
+      "ref": "refs/archive/local1/tags/verified/baseline-20260927",
+      "sha": "d5ef85a26138942ba3ae08a93e31e846133160cb",
+      "divergence": "30\t0",
+      "files": []
+    },
+    {
+      "ref": "refs/archive/local2/heads/research/full15-certified",
+      "sha": "86a7f6c53e0d4058fdee6990c6cc2946bbd4fad1",
+      "divergence": "11\t1",
+      "files": [
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/full15_proof_export_reproducer.json",
+        "A\tcertificates/full15_search_observations.json",
+        "A\tcertificates/full15_support_exclusion.json.gz",
+        "A\tcertificates/full15_support_validation.json",
+        "A\tcertificates/integer_translate_five_coloring.json",
+        "A\tcertificates/integer_translate_kernel.json.gz",
+        "A\tcertificates/integer_translate_search_observations.json",
+        "A\tcertificates/unit_translate_Y.json.gz",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "A\tdocs/proofs/full15_support_exclusion.md",
+        "M\tdocs/proofs/hn_unified_framework.md",
+        "A\tdocs/proofs/integer_translate_five_coloring.md",
+        "A\tdocs/proofs/proof_stream_integrity.md",
+        "A\tdocs/proofs/ternary_concentration.md",
+        "M\treferences/SOURCES.md",
+        "A\tresearch/closed_binary_proof.py",
+        "A\tresearch/full15_support_cnf.py",
+        "A\tresearch/pack_full15_support.py",
+        "A\tresearch/reproduce_proof_stream.py",
+        "A\tresearch/search_full15_support.py",
+        "A\tresearch/search_integer_translate.py",
+        "A\tresearch/search_unit_translate.py",
+        "A\tresearch/ternary_mass_bound.py",
+        "A\tresearch/test_full15_support.py",
+        "A\tresearch/trim_full15_rup.cpp",
+        "A\tresearch/verify_full15_support.py",
+        "A\tresearch/verify_integer_translate_kernel.py",
+        "A\tresearch/verify_unit_translate.py"
+      ]
+    },
+    {
+      "ref": "refs/archive/local3/heads/main",
+      "sha": "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa",
+      "divergence": "18\t0",
+      "files": []
+    },
+    {
+      "ref": "refs/archive/local3/heads/research/motion-packet-20260928",
+      "sha": "b532e71453935088000fa54738163c28180b17b8",
+      "divergence": "18\t2",
+      "files": [
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/cyclic_pattern_Y_extensions.json",
+        "A\tcertificates/cyclic_pattern_extension.json",
+        "A\tcertificates/localized_motion_packet.json",
+        "A\tcertificates/motion_packet_exploration.json.gz",
+        "A\tcertificates/motion_packet_search_observations.json",
+        "A\tcertificates/motion_packet_static_audit.json",
+        "A\tcertificates/motion_packet_validation.json",
+        "A\tcertificates/two_atom_motion_packet.json.gz",
+        "M\tdocs/BRANCHES.md",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "A\tdocs/proofs/cyclic_pattern_extension.md",
+        "M\tdocs/proofs/hn_unified_framework.md",
+        "A\tdocs/proofs/two_atom_motion_packet.md",
+        "M\treferences/LITERATURE_MAP.md",
+        "M\treferences/SOURCES.md",
+        "A\trequirements-packet-search.txt",
+        "A\tresearch/build_cyclic_pattern_extension.py",
+        "A\tresearch/build_localized_motion_packet.py",
+        "A\tresearch/motion_packet_cnf.py",
+        "A\tresearch/search_motion_packet.py",
+        "A\tresearch/test_motion_packet.py",
+        "A\tresearch/verify_cyclic_pattern_extension.py",
+        "A\tresearch/verify_localized_hintfree.py",
+        "A\tresearch/verify_localized_motion_packet.py",
+        "A\tresearch/verify_motion_packet.py"
+      ]
+    },
+    {
+      "ref": "refs/archive/local3/tags/archive/2026-09-27/research/rotation-integration-20260926",
+      "sha": "3af5a63622185c1393f8e30efda41609ea223230",
+      "divergence": "26\t0",
+      "files": []
+    },
+    {
+      "ref": "refs/archive/local3/tags/archive/2026-09-27/research/rotation-rank2-20260926",
+      "sha": "482b53020f36900ab2fcceff801ee2eb84893d94",
+      "divergence": "66\t0",
+      "files": []
+    },
+    {
+      "ref": "refs/archive/local3/tags/verified/baseline-20260927",
+      "sha": "d5ef85a26138942ba3ae08a93e31e846133160cb",
+      "divergence": "30\t0",
+      "files": []
+    },
+    {
+      "ref": "refs/archive/local4/heads/research/q-defect-capacity-20261006",
+      "sha": "3dc223a711cc37dbb610b48f136a5c5308871421",
+      "divergence": "0\t9",
+      "files": [
+        "A\t.github/workflows/transport-projection.yml",
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/q_defect_envelope.json",
+        "A\tcertificates/q_defect_final_integration_validation.json",
+        "A\tcertificates/q_defect_final_make_check_e4a65f8.log.gz",
+        "A\tcertificates/q_defect_final_source_manifest_e4a65f8.json.gz",
+        "A\tcertificates/q_defect_final_targeted_e4a65f8.log.gz",
+        "A\tcertificates/q_defect_lift.json",
+        "A\tcertificates/q_defect_lift_checkpoint_20261006.json",
+        "A\tcertificates/q_defect_lift_full_prefix_47cea2a.log.gz",
+        "A\tcertificates/q_defect_lift_source_manifests.json.gz",
+        "A\tcertificates/q_defect_lift_targeted_3e48e6b.log.gz",
+        "A\tcertificates/q_defect_lift_validation.json",
+        "A\tcertificates/q_defect_scope_audit.json",
+        "A\tcertificates/q_defect_scope_audit_validation.json",
+        "A\tcertificates/q_pr_joint_cuts.json",
+        "A\tcertificates/q_pr_joint_cuts_validation.json",
+        "A\tcertificates/transport_projection_publication.json",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "M\tdocs/proofs/hn_unified_framework.md",
+        "A\tdocs/proofs/q_defect_lift.md",
+        "A\tdocs/proofs/q_defect_model_scope_audit.md",
+        "A\tdocs/proofs/q_pr_joint_projection.md",
+        "M\treferences/LITERATURE_MAP.md",
+        "A\tresearch/check_q_defect_lift.py",
+        "A\tresearch/check_q_defect_scope_audit.py",
+        "A\tresearch/check_transport_projection.py"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/main",
+      "sha": "3009eda28c26334bc8063913af74031cc7bcd9f4",
+      "divergence": "0\t0",
+      "files": []
+    },
+    {
+      "ref": "refs/remotes/origin/maintenance/unified-results-20261006",
+      "sha": "e9ca4696e6524476b8cca2f3fcb1a2838e309e7e",
+      "divergence": "0\t1",
+      "files": [
+        "A\t.github/workflows/consolidation-snapshot.yml"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/research/full15-coupling-20260928",
+      "sha": "4c3e2313902b40bbfbf63cbc673a45e2951f991f",
+      "divergence": "9\t0",
+      "files": []
+    },
+    {
+      "ref": "refs/remotes/origin/research/generalized-partition-facets-20261006",
+      "sha": "eaefe43b3ceec3fafd82a849db8ced2764e9e8af",
+      "divergence": "0\t15",
+      "files": [
+        "A\t.github/workflows/research-probe-g2coc.yml",
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/generalized_partition_facet_audit.json",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "A\tdocs/proofs/generalized_partition_facet_audit.md",
+        "M\treferences/SOURCES.md",
+        "A\tresearch/probe_g2coc_full_y.py",
+        "A\tresearch/probe_g2coc_nonclique.py",
+        "A\tresearch/verify_full_y_c5_g2coc.py",
+        "A\tresearch/verify_generalized_partition_facets.py"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/research/intrinsic-eta-cycle-20260928",
+      "sha": "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa",
+      "divergence": "18\t0",
+      "files": []
+    },
+    {
+      "ref": "refs/remotes/origin/research/joint-continuation-20260928",
+      "sha": "b1e4aa8f307010fb7e5322a6cec6403665e32d0e",
+      "divergence": "12\t0",
+      "files": []
+    },
+    {
+      "ref": "refs/remotes/origin/research/mixed-motion-20260929",
+      "sha": "fc6d2c2972f6c234f06112576610d26525795cf8",
+      "divergence": "11\t4",
+      "files": [
+        "A\t.github/workflows/mixed-motion-checkpoint.yml",
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/Y_pair_portfolio.json.gz",
+        "A\tcertificates/Y_pair_portfolio.json.search.json",
+        "A\tcertificates/cube_symmetry_gap.json",
+        "A\tcertificates/lattice_ports_remote_validation.json",
+        "A\tcertificates/mixed_lattice_geometry.json",
+        "A\tcertificates/mixed_lattice_search.json",
+        "A\tcertificates/triangular_lattice_five_coloring.json",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "A\tdocs/proofs/Y_two_terminal_completion.md",
+        "A\tdocs/proofs/geometric_versus_graph_symmetry.md",
+        "A\tdocs/proofs/triangular_lattice_saturation.md",
+        "A\tdocs/proofs/triangular_palette_normal_form.md",
+        "M\treferences/LITERATURE_MAP.md",
+        "M\treferences/SOURCES.md",
+        "A\tresearch/build_Y_pair_portfolio.py",
+        "A\tresearch/search_lattice_twophase.py",
+        "A\tresearch/search_triangular_lattice.py",
+        "A\tresearch/test_lattice_mixed.py",
+        "A\tresearch/verify_Y_pair_portfolio.py",
+        "A\tresearch/verify_cube_symmetry_gap.py",
+        "A\tresearch/verify_triangular_lattice.py"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/research/q-chorded-w22-audit-20261006",
+      "sha": "a8fc6be077250441e627077ee33e15b7f9c22e10",
+      "divergence": "0\t22",
+      "files": [
+        "A\t.github/workflows/q-defect-lifting.yml",
+        "A\t.github/workflows/q-joint-boundary.yml",
+        "A\t.github/workflows/research-q-chorded-w22.yml",
+        "A\t.github/workflows/transport-projection.yml",
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/q_chorded_w22_audit.json",
+        "A\tcertificates/q_defect_lifting.json",
+        "A\tcertificates/q_defect_lifting_validation.json",
+        "A\tcertificates/q_defect_publication.json",
+        "A\tcertificates/q_joint_boundary_gap.json",
+        "A\tcertificates/q_joint_boundary_gap_validation.json",
+        "A\tcertificates/q_joint_boundary_publication.json",
+        "A\tcertificates/q_pr_joint_cuts.json",
+        "A\tcertificates/q_pr_joint_cuts_validation.json",
+        "A\tcertificates/transport_projection_publication.json",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "M\tdocs/proofs/hn_unified_framework.md",
+        "A\tdocs/proofs/q_chorded_w22_audit.md",
+        "A\tdocs/proofs/q_defect_lifting.md",
+        "A\tdocs/proofs/q_joint_boundary_gap.md",
+        "A\tdocs/proofs/q_pr_joint_projection.md",
+        "M\treferences/LITERATURE_MAP.md",
+        "A\tresearch/check_transport_projection.py",
+        "A\tresearch/verify_q_chorded_w22_audit.py",
+        "A\tresearch/verify_q_defect_lifting.py",
+        "A\tresearch/verify_q_joint_boundary_gap.py"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/research/q-defect-20261006",
+      "sha": "91849ffc04cc1e21193fbe3fddae2947072f7093",
+      "divergence": "0\t10",
+      "files": [
+        "A\t.github/workflows/q-defect-lifting.yml",
+        "A\t.github/workflows/q-joint-boundary.yml",
+        "A\t.github/workflows/transport-projection.yml",
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/q_defect_lifting.json",
+        "A\tcertificates/q_defect_lifting_validation.json",
+        "A\tcertificates/q_defect_publication.json",
+        "A\tcertificates/q_joint_boundary_gap.json",
+        "A\tcertificates/q_joint_boundary_gap_validation.json",
+        "A\tcertificates/q_joint_boundary_publication.json",
+        "A\tcertificates/q_pr_joint_cuts.json",
+        "A\tcertificates/q_pr_joint_cuts_validation.json",
+        "A\tcertificates/transport_projection_publication.json",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "M\tdocs/proofs/hn_unified_framework.md",
+        "A\tdocs/proofs/q_defect_lifting.md",
+        "A\tdocs/proofs/q_joint_boundary_gap.md",
+        "A\tdocs/proofs/q_pr_joint_projection.md",
+        "M\treferences/LITERATURE_MAP.md",
+        "A\tresearch/check_transport_projection.py",
+        "A\tresearch/verify_q_defect_lifting.py",
+        "A\tresearch/verify_q_joint_boundary_gap.py"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/research/q-defect-lifting-20261006",
+      "sha": "335c78d1d5f9e6f9c1058601039c237b4daaf221",
+      "divergence": "0\t11",
+      "files": [
+        "A\t.github/workflows/transport-projection.yml",
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/q_pr_joint_cuts.json",
+        "A\tcertificates/q_pr_joint_cuts_validation.json",
+        "A\tcertificates/q_robust_capacity.json",
+        "A\tcertificates/transport_projection_publication.json",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "M\tdocs/proofs/hn_unified_framework.md",
+        "A\tdocs/proofs/q_pr_joint_projection.md",
+        "A\tdocs/proofs/q_robust_capacity.md",
+        "M\treferences/LITERATURE_MAP.md",
+        "A\tresearch/check_transport_projection.py",
+        "A\tresearch/verify_q_robust_capacity.py"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/research/transport-projection-20261004",
+      "sha": "335c78d1d5f9e6f9c1058601039c237b4daaf221",
+      "divergence": "0\t11",
+      "files": [
+        "A\t.github/workflows/transport-projection.yml",
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/q_pr_joint_cuts.json",
+        "A\tcertificates/q_pr_joint_cuts_validation.json",
+        "A\tcertificates/q_robust_capacity.json",
+        "A\tcertificates/transport_projection_publication.json",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "M\tdocs/proofs/hn_unified_framework.md",
+        "A\tdocs/proofs/q_pr_joint_projection.md",
+        "A\tdocs/proofs/q_robust_capacity.md",
+        "M\treferences/LITERATURE_MAP.md",
+        "A\tresearch/check_transport_projection.py",
+        "A\tresearch/verify_q_robust_capacity.py"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/research/triangular-lattice-20260928",
+      "sha": "578bd83c3a47d9a2b9eeed6dc6cbd2651c0f1793",
+      "divergence": "11\t1",
+      "files": [
+        "A\tdocs/proofs/triangular_lattice_saturation.md"
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/research/two-partition-w22-audit-20261006",
+      "sha": "a0d51399b6fa9bd5b057b8cac910191a92f4f519",
+      "divergence": "0\t26",
+      "files": [
+        "A\t.github/workflows/q-defect-lifting.yml",
+        "A\t.github/workflows/q-joint-boundary.yml",
+        "A\t.github/workflows/research-q-chorded-w22.yml",
+        "A\t.github/workflows/research-two-partition-w22.yml",
+        "A\t.github/workflows/transport-projection.yml",
+        "M\tMakefile",
+        "M\tREADME.md",
+        "A\tcertificates/q_chorded_w22_audit.json",
+        "A\tcertificates/q_defect_lifting.json",
+        "A\tcertificates/q_defect_lifting_validation.json",
+        "A\tcertificates/q_defect_publication.json",
+        "A\tcertificates/q_joint_boundary_gap.json",
+        "A\tcertificates/q_joint_boundary_gap_validation.json",
+        "A\tcertificates/q_joint_boundary_publication.json",
+        "A\tcertificates/q_pr_joint_cuts.json",
+        "A\tcertificates/q_pr_joint_cuts_validation.json",
+        "A\tcertificates/transport_projection_publication.json",
+        "A\tcertificates/two_partition_w22_audit.json",
+        "M\tdocs/CURRENT.md",
+        "M\tdocs/RESULTS.md",
+        "M\tdocs/ROUTES.md",
+        "M\tdocs/proofs/hn_unified_framework.md",
+        "A\tdocs/proofs/q_chorded_w22_audit.md",
+        "A\tdocs/proofs/q_defect_lifting.md",
+        "A\tdocs/proofs/q_joint_boundary_gap.md",
+        "A\tdocs/proofs/q_pr_joint_projection.md",
+        "A\tdocs/proofs/two_partition_w22_audit.md",
+        "M\treferences/LITERATURE_MAP.md",
+        "A\tresearch/check_transport_projection.py",
+        "A\tresearch/verify_q_chorded_w22_audit.py",
+        "A\tresearch/verify_q_defect_lifting.py",
+        "A\tresearch/verify_q_joint_boundary_gap.py",
+        "A\tresearch/verify_two_partition_w22_audit.py"
+      ]
+    }
+  ],
+  "input_archives": {
+    "all-remote-history-before-consolidation-20261006.zip": {
+      "sha256": "82250bfdaa918e4a30dcba2fa0d7ea72ae7fe4e2355648f603f723285ab56b48",
+      "files": 6
+    },
+    "math-research-q-defect-final-20261006(2).zip": {
+      "sha256": "3093f98a32c6367eea4dba000d7b5d4dc4108a0310d927cee8e17c8cee2755f1",
+      "files": 20
+    },
+    "math_research_boundary_20261006.zip": {
+      "sha256": "9896e82e8612042ff9436d270d1ffc44829ca9b86778fd9fdb3f78c26b51e74f",
+      "files": 769
+    },
+    "q-joint-boundary-source-20261006.zip": {
+      "sha256": "c3460a7b5c1740b5f8f376ebe712515e211a371cfe95101215acb9b966ada5b7",
+      "files": 8
+    }
+  },
+  "aliases": [
+    {
+      "source": "local-cycle",
+      "old": "E113",
+      "canonical": "E123",
+      "subject": "motion_packet_exploration",
+      "commit": "f986eb0a0de1e33769efa54aa73c3eac9d2ff711"
+    },
+    {
+      "source": "local-cycle",
+      "old": "E114",
+      "canonical": "E124",
+      "subject": "original_Y_cycle_descent",
+      "commit": "f986eb0a0de1e33769efa54aa73c3eac9d2ff711"
+    },
+    {
+      "source": "local-cycle",
+      "old": "C025",
+      "canonical": "C031",
+      "subject": "cyclic_pattern_extension",
+      "commit": "f986eb0a0de1e33769efa54aa73c3eac9d2ff711"
+    },
+    {
+      "source": "local-cycle",
+      "old": "C026",
+      "canonical": "C032",
+      "subject": "joined_kernel_five_law",
+      "commit": "f986eb0a0de1e33769efa54aa73c3eac9d2ff711"
+    },
+    {
+      "source": "generalized-facets",
+      "old": "T160",
+      "canonical": "T166",
+      "subject": "generalized_partition_facet_audit",
+      "commit": "eaefe43b3ceec3fafd82a849db8ced2764e9e8af"
+    },
+    {
+      "source": "18-edge-q",
+      "old": "T162",
+      "canonical": "T167",
+      "subject": "q_robust_capacity",
+      "commit": "335c78d1d5f9e6f9c1058601039c237b4daaf221"
+    }
+  ],
+  "all_visible_archives": [
+    {
+      "file": "all-remote-history-before-consolidation-20261006.zip",
+      "sha256": "82250bfdaa918e4a30dcba2fa0d7ea72ae7fe4e2355648f603f723285ab56b48",
+      "members": 6,
+      "git_bundles": [
+        {
+          "member": "all-remote-history.bundle",
+          "heads": [
+            "3009eda28c26334bc8063913af74031cc7bcd9f4 refs/remotes/origin/main",
+            "e9ca4696e6524476b8cca2f3fcb1a2838e309e7e refs/remotes/origin/maintenance/unified-results-20261006",
+            "4c3e2313902b40bbfbf63cbc673a45e2951f991f refs/remotes/origin/research/full15-coupling-20260928",
+            "eaefe43b3ceec3fafd82a849db8ced2764e9e8af refs/remotes/origin/research/generalized-partition-facets-20261006",
+            "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa refs/remotes/origin/research/intrinsic-eta-cycle-20260928",
+            "b1e4aa8f307010fb7e5322a6cec6403665e32d0e refs/remotes/origin/research/joint-continuation-20260928",
+            "fc6d2c2972f6c234f06112576610d26525795cf8 refs/remotes/origin/research/mixed-motion-20260929",
+            "a8fc6be077250441e627077ee33e15b7f9c22e10 refs/remotes/origin/research/q-chorded-w22-audit-20261006",
+            "91849ffc04cc1e21193fbe3fddae2947072f7093 refs/remotes/origin/research/q-defect-20261006",
+            "335c78d1d5f9e6f9c1058601039c237b4daaf221 refs/remotes/origin/research/q-defect-lifting-20261006",
+            "335c78d1d5f9e6f9c1058601039c237b4daaf221 refs/remotes/origin/research/transport-projection-20261004",
+            "578bd83c3a47d9a2b9eeed6dc6cbd2651c0f1793 refs/remotes/origin/research/triangular-lattice-20260928",
+            "a0d51399b6fa9bd5b057b8cac910191a92f4f519 refs/remotes/origin/research/two-partition-w22-audit-20261006",
+            "dc43a72d6f34209f88022faeb898d3c886412011 refs/tags/archive/2026-09-22/maintenance/branch-cleanup-20260922",
+            "a658761d00ce0395242faace7e8e0db9a1bb16ee refs/tags/archive/2026-09-22/research/birank-rotation-20260921",
+            "a61cdfce8f93878c300718f1a8fe806d60e8ca11 refs/tags/archive/2026-09-22/research/checkpoint-audit-20260921",
+            "00c43b5f6e9a3af06ac3e9e5263b1c27a6026ed8 refs/tags/archive/2026-09-22/research/consolidated-20260921",
+            "a658761d00ce0395242faace7e8e0db9a1bb16ee refs/tags/archive/2026-09-22/research/cyclic-orbit-20260921",
+            "fcea973ad8c05b4b5f2d3fa28ed7977aebf645ae refs/tags/archive/2026-09-22/research/full-joint-20260919",
+            "bc1ac3a1bb486f0b17a495b48c385c9711b5ea46 refs/tags/archive/2026-09-22/research/full-law-loop-20260922",
+            "5cd52cea0bfa5ac8ed25e1e1ca04e8b7654cdc7b refs/tags/archive/2026-09-22/research/full-law-pricing-20260921",
+            "5cd6b56373e9e92d686101a87028e213747feaf2 refs/tags/archive/2026-09-22/research/joint-pair-cegar-20260920",
+            "404dd1d1965f31f5bba3dbab8fea44e51d2fce73 refs/tags/archive/2026-09-22/research/sextic-four-color-20260919",
+            "3af5a63622185c1393f8e30efda41609ea223230 refs/tags/archive/2026-09-27/research/rotation-integration-20260926",
+            "482b53020f36900ab2fcceff801ee2eb84893d94 refs/tags/archive/2026-09-27/research/rotation-rank2-20260926",
+            "e9ca4696e6524476b8cca2f3fcb1a2838e309e7e HEAD"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "branch-cleanup-actual-receipt.zip",
+      "sha256": "eb54020955159639a0f8a918ceb9d945b7de63e99085e5f90f5af16051747a2e",
+      "members": 1,
+      "git_bundles": []
+    },
+    {
+      "file": "cyclic-research-workspace.zip",
+      "sha256": "372374aa33f5bd893e8032fdb607ff654d2707b098312bee08c2a91e3196bcc5",
+      "members": 1,
+      "git_bundles": []
+    },
+    {
+      "file": "eta_support_remote_replay_20260928.zip",
+      "sha256": "a98b0a512e3b075cc069142de9c19809e98ecaf6e50c12fd4799842df09570cd",
+      "members": 2,
+      "git_bundles": []
+    },
+    {
+      "file": "finalized-checkpoint-history-and-audit-20260927.zip",
+      "sha256": "6f9d9e0c65915a2e2cbe190f860a9f07ff13a14635cb4eeb1949a7b22b842c20",
+      "members": 4,
+      "git_bundles": [
+        {
+          "member": "_temp/finalized-history.bundle",
+          "heads": [
+            "45deeba8b80f6169d4a3e072a7633c39c47c53a2 HEAD"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "full-law-inputs-audit-20260921.zip",
+      "sha256": "7c0fa6c6af8be5f2afded794e944ef835fbcf2234088c4546f90ddd48ee51993",
+      "members": 2,
+      "git_bundles": []
+    },
+    {
+      "file": "full-law-loop-evidence-before-cleanup.zip",
+      "sha256": "cbf4065c09ec427753be9d80d53772d2a23bc0d6e1d3bd03c401264c0810c55c",
+      "members": 10,
+      "git_bundles": []
+    },
+    {
+      "file": "full15-coupling-baseline.zip",
+      "sha256": "f2dfd94c2b0af2cb86384ce8fbec0ad9a377c560f1455696412a68e8868438af",
+      "members": 4,
+      "git_bundles": [
+        {
+          "member": "source.bundle",
+          "heads": [
+            "7791811cd8bfda5f0ccd3f9651c04cd86f634e07 refs/heads/export-snapshot"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "hn-consolidated-source-and-replay.zip",
+      "sha256": "9b663a2519215bf3b76361e4d69245cb8d4978db9f516d074888a62baecef446",
+      "members": 6,
+      "git_bundles": []
+    },
+    {
+      "file": "math-research-q-defect-final-20261006(2).zip",
+      "sha256": "3093f98a32c6367eea4dba000d7b5d4dc4108a0310d927cee8e17c8cee2755f1",
+      "members": 20,
+      "git_bundles": [
+        {
+          "member": "math-research-q-defect-final/math-research-q-defect.bundle",
+          "heads": [
+            "3dc223a711cc37dbb610b48f136a5c5308871421 refs/heads/research/q-defect-capacity-20261006"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "math_research_baseline_next_20260927.zip",
+      "sha256": "36fd08340b67bb472ab802e5eaa88b4c437501db43bff1d1bd35ea329af70758",
+      "members": 565,
+      "git_bundles": [
+        {
+          "member": "math_research_20260927.bundle",
+          "heads": [
+            "875c4f802125f804039ae43586d3c2a8caa19b3d refs/heads/research/baseline-next-20260927",
+            "d5ef85a26138942ba3ae08a93e31e846133160cb refs/tags/verified/baseline-20260927"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "math_research_boundary_20261006.zip",
+      "sha256": "9896e82e8612042ff9436d270d1ffc44829ca9b86778fd9fdb3f78c26b51e74f",
+      "members": 769,
+      "git_bundles": [
+        {
+          "member": "math_research_boundary_20261006.bundle",
+          "heads": [
+            "91849ffc04cc1e21193fbe3fddae2947072f7093 HEAD"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "math_research_branch_cleanup_20260922.zip",
+      "sha256": "b1d2584dc9aa80228f999aaca8cddd3def3ee3b46edcf1ff7f9f350557bcf870",
+      "members": 517,
+      "git_bundles": []
+    },
+    {
+      "file": "math_research_checkpoint_audit_20260921.zip",
+      "sha256": "ef8f5bedb32b4cd63ae369ae728e72c1e60da2c591ac869df3b503d73cfe02ef",
+      "members": 498,
+      "git_bundles": []
+    },
+    {
+      "file": "math_research_consolidated_20260921.zip",
+      "sha256": "e553037bfee5ea418753f5209cf15a3b20c588416a09845801d026af0efeb47f",
+      "members": 490,
+      "git_bundles": []
+    },
+    {
+      "file": "math_research_consolidated_20260927.zip",
+      "sha256": "1db60ab96fcad50b01a5218df214bd557050ecda8fff8ae02d4536327ffd395b",
+      "members": 556,
+      "git_bundles": [
+        {
+          "member": "history/math-research.bundle",
+          "heads": [
+            "ed4cfb044164b5d88413a2d53c7e030274d04bb8 refs/heads/main",
+            "ed4cfb044164b5d88413a2d53c7e030274d04bb8 refs/remotes/origin/main",
+            "3af5a63622185c1393f8e30efda41609ea223230 refs/tags/archive/2026-09-27/research/rotation-integration-20260926",
+            "482b53020f36900ab2fcceff801ee2eb84893d94 refs/tags/archive/2026-09-27/research/rotation-rank2-20260926",
+            "d5ef85a26138942ba3ae08a93e31e846133160cb refs/tags/verified/baseline-20260927",
+            "ed4cfb044164b5d88413a2d53c7e030274d04bb8 HEAD"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "math_research_cycle_descent_20260928.zip",
+      "sha256": "1338c2efc4af52b1ef390ae182bedf5a8448d035c619fee1042c0b6ac1022efa",
+      "members": 702,
+      "git_bundles": [
+        {
+          "member": "math_research_cycle_descent_20260928.bundle",
+          "heads": [
+            "f986eb0a0de1e33769efa54aa73c3eac9d2ff711 refs/heads/research/cycle-descent-20260928"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "math_research_eta_joint_20260928.zip",
+      "sha256": "697b946bc67c03f8af2f925542d5d11bed9c6f228df3e3881c5bc2e3bd1ab6d2",
+      "members": 22,
+      "git_bundles": []
+    },
+    {
+      "file": "math_research_frame_separation_20260921.zip",
+      "sha256": "d300683797eb72a494ead214c8df617e5b9b68e04f048d3c5e1d103d7cdaf15e",
+      "members": 488,
+      "git_bundles": []
+    },
+    {
+      "file": "math_research_full15_integer_20260928.zip",
+      "sha256": "ed1a6a45623e16ce0dc695464a25e153ec9fa959baaa02af8268fe8141d9e73a",
+      "members": 648,
+      "git_bundles": [
+        {
+          "member": "math_research_full15_integer_20260928.bundle",
+          "heads": [
+            "86a7f6c53e0d4058fdee6990c6cc2946bbd4fad1 refs/heads/research/full15-certified",
+            "7791811cd8bfda5f0ccd3f9651c04cd86f634e07 refs/remotes/origin/export-snapshot",
+            "86a7f6c53e0d4058fdee6990c6cc2946bbd4fad1 HEAD",
+            "a885b67c172726e14884cb43cd37b965dbb32575 worktrees/baseline/HEAD"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "math_research_joint_cover_20260921.zip",
+      "sha256": "f38b0010c6fe705f3f72c8679fbb8352989b7d4b778656b5e70ec98c94b16a08",
+      "members": 477,
+      "git_bundles": []
+    },
+    {
+      "file": "math_research_motion_laws_20260928.zip",
+      "sha256": "af070323a449aa9357c64a99d709c79ebcf538619f060e616254ad9914686447",
+      "members": 722,
+      "git_bundles": [
+        {
+          "member": "history/math_research_motion_laws_20260928.bundle",
+          "heads": [
+            "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa refs/heads/main",
+            "b532e71453935088000fa54738163c28180b17b8 refs/heads/research/motion-packet-20260928",
+            "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa refs/remotes/origin/main",
+            "3af5a63622185c1393f8e30efda41609ea223230 refs/tags/archive/2026-09-27/research/rotation-integration-20260926",
+            "482b53020f36900ab2fcceff801ee2eb84893d94 refs/tags/archive/2026-09-27/research/rotation-rank2-20260926",
+            "d5ef85a26138942ba3ae08a93e31e846133160cb refs/tags/verified/baseline-20260927"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "math_research_update_20260919.zip",
+      "sha256": "18c2bf0f4a8db79a4cd6617c9c1b463d8a1d90b5f66adaee0e20c02c1ab0155d",
+      "members": 12,
+      "git_bundles": []
+    },
+    {
+      "file": "mixed-motion-baseline-20260929.zip",
+      "sha256": "3582f82d12ba209d448a5a3ee6dca01c494f9c03321aa0b91954d75c2ff4277e",
+      "members": 4,
+      "git_bundles": [
+        {
+          "member": "source.bundle",
+          "heads": [
+            "384275f1c655794b8efccfd75dfd31a8bc2d03d2 refs/heads/export-snapshot"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "parallel-cyclic-translates-20260928.zip",
+      "sha256": "304d92f9c7f61b00f593bbf9eb0252a370957304ff62f10b6ae5ec6c7c96de25",
+      "members": 6,
+      "git_bundles": [
+        {
+          "member": "cyclic-published-history.bundle",
+          "heads": [
+            "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa HEAD"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "q-joint-boundary-source-20261006.zip",
+      "sha256": "c3460a7b5c1740b5f8f376ebe712515e211a371cfe95101215acb9b966ada5b7",
+      "members": 8,
+      "git_bundles": [
+        {
+          "member": "source.bundle",
+          "heads": [
+            "91849ffc04cc1e21193fbe3fddae2947072f7093 refs/heads/export-snapshot"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "quartet-verified-source.zip",
+      "sha256": "1be936a546c629ca2201af3e1c8144ef87b6216e34100be8650f62fb80ce9722",
+      "members": 2,
+      "git_bundles": []
+    },
+    {
+      "file": "research-source-base.zip",
+      "sha256": "91b7ceee8171d169cf8efd035fa78565e43d63c92405a51eeec3cccb106bc849",
+      "members": 1,
+      "git_bundles": []
+    },
+    {
+      "file": "rotation-cleanup-history-and-evidence-20260927.zip",
+      "sha256": "fea203783dfb6671e3edc27e3a1c7a91f700d16cdec80acd0dd021104f2a946b",
+      "members": 5,
+      "git_bundles": [
+        {
+          "member": "_temp/published-history.bundle",
+          "heads": [
+            "147d1b02aad00e48bb8315c817b2134f97990f90 HEAD"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "transport-certified-20261006.zip",
+      "sha256": "d90d994fa849ad6233f952527d3d984bcd8e4ea084f6b5c8d512a8ffbf7637f5",
+      "members": 9,
+      "git_bundles": [
+        {
+          "member": "source.bundle",
+          "heads": [
+            "c7dd21efe99cf18884a62b21f34a27de23eec550 refs/heads/export-snapshot"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "transport-projection-baseline-20261005.zip",
+      "sha256": "2c28b6c2e5d93e30845679f1b265e88d13e51b51f5e883b0534f8418e86e4053",
+      "members": 4,
+      "git_bundles": [
+        {
+          "member": "source.bundle",
+          "heads": [
+            "9c8b191541febe9c90c4f34addc7dc34ca3468f5 refs/heads/export-snapshot"
+          ]
+        }
+      ]
+    }
+  ],
+  "additional_uncovered_bundle_heads": [],
+  "original_local_commits_remote_archive": {
+    "status": "PRESERVED",
+    "workflow_run": 37419556724,
+    "prefix": "archive/2026-10-06/local/",
+    "commits": [
+      "f986eb0a0de1e33769efa54aa73c3eac9d2ff711",
+      "b532e71453935088000fa54738163c28180b17b8",
+      "86a7f6c53e0d4058fdee6990c6cc2946bbd4fad1",
+      "3dc223a711cc37dbb610b48f136a5c5308871421"
+    ]
+  }
+}

@@ -1,30 +1,11 @@
-.PHONY: check-heptagon-module check-python check-joined-pricing check-full15-support check-eta-support check check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates setup explore check-lattice-ports check-qd-family check-t028-host-orbit check-g14-port-or check-y-full-geometry check-port4-exact-law
 .DEFAULT_GOAL := check
+.PHONY: check-python check check-salem check-quartet check-orbit check-covers check-frames check-preparation setup explore check-pricing check-rotations check-rank2 check-next check-cyclic-translates check-eta-support check-full15-support check-joined-pricing check-heptagon-module check-lattice-ports check-qd-family check-t028-host-orbit check-y-full-geometry check-g14-port-or check-port4-exact-law check-joint-theory check-g14-pair-orbit check-g14-common-law check-cubic-unit-directions check-g14-pr-bound check-pentagon-partition-gap check-pr-local-projection check-cyclic-interval-kernel check-bw-pr-odd-cycle-ceiling check-hidden-pair-elimination check-q-pr-coupling-audit check-transport-projection check-q-defect-lifting check-q-joint-boundary-gap check-q-chorded-w22-audit check-generalized-partition-facets check-q-robust-capacity check-q-defect-lift check-q-defect-scope-audit check-packet check-cycle-descent check-unit-translate check-translate-kernel check-legacy-full15-support
 
 check-python:
 	python3 -c 'import sys; sys.exit("Python >=3.10 required; activate .venv before make check" if sys.version_info < (3, 10) else 0)'
 
-check: check-python
+check: check-integration check-two-partition-w22-audit check-python check-joint-theory check-g14-pair-orbit check-g14-common-law check-cubic-unit-directions check-g14-pr-bound check-pentagon-partition-gap check-pr-local-projection check-cyclic-interval-kernel check-bw-pr-odd-cycle-ceiling check-hidden-pair-elimination check-q-pr-coupling-audit check-transport-projection check-q-defect-lifting check-q-joint-boundary-gap check-generalized-partition-facets check-q-robust-capacity check-q-defect-lift check-q-defect-scope-audit check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates check-eta-support check-full15-support check-heptagon-module check-lattice-ports check-qd-family check-t028-host-orbit check-g14-port-or check-port4-exact-law check-packet check-cycle-descent check-unit-translate check-translate-kernel check-legacy-full15-support
 	python3 research/verify.py
-	$(MAKE) check-salem
-	$(MAKE) check-quartet
-	$(MAKE) check-orbit
-	$(MAKE) check-covers
-	$(MAKE) check-frames
-	$(MAKE) check-preparation
-	$(MAKE) check-pricing
-	$(MAKE) check-rotations
-	$(MAKE) check-rank2
-	$(MAKE) check-next
-	$(MAKE) check-cyclic-translates
-	$(MAKE) check-eta-support
-	$(MAKE) check-full15-support
-	$(MAKE) check-heptagon-module
-	$(MAKE) check-lattice-ports
-	$(MAKE) check-qd-family
-	$(MAKE) check-t028-host-orbit
-	$(MAKE) check-g14-port-or
-	$(MAKE) check-port4-exact-law
 
 check-salem:
 	python3 research/test_salem_sextic_certificates.py
@@ -52,7 +33,6 @@ setup:
 explore:
 	.venv/bin/python research/search_phases.py --width 6 --height 6 --opposite-only
 
-
 check-pricing:
 	python3 research/test_full_law_pricing.py
 
@@ -74,13 +54,12 @@ check-cyclic-translates:
 check-eta-support:
 	python3 -S research/test_eta_joined_support.py
 
-check-full15-support:
+check-full15-support: check-joined-pricing
 	python3 -S research/test_palette_difference.py
 	python3 -S research/test_connected_partition_marginals.py
 	python3 -S research/test_weighted_transport.py
 	python3 -S research/verify_three_atom_mass.py
 	python3 -S research/test_full15_support.py
-	$(MAKE) check-joined-pricing
 
 check-joined-pricing:
 	python3 -S research/verify_joined_seed_pricing.py
@@ -113,23 +92,14 @@ check-g14-port-or: check-y-full-geometry
 check-port4-exact-law: check-y-full-geometry
 	python3 -S research/verify_port4_exact_law.py --check-certificate certificates/port4_exact_law_verification.json
 
-.PHONY: check-joint-theory
-check: check-joint-theory
-
 check-joint-theory: check-y-full-geometry
 	python3 -S research/verify_scc_calibration.py
 	python3 -S research/verify_free_group_star_calibration.py
 	python3 -S research/verify_four_port_scc.py
 
-.PHONY: check-g14-pair-orbit
-check: check-g14-pair-orbit
-
 check-g14-pair-orbit: check-y-full-geometry
 	python3 -S research/verify_g14_pair_orbit_law.py
 	python3 -S research/test_g14_pair_orbit_forest.py
-
-.PHONY: check-g14-common-law check-cubic-unit-directions
-check: check-g14-common-law check-cubic-unit-directions
 
 check-g14-common-law: check-y-full-geometry
 	python3 -S research/verify_g14_pair_port4_common_law.py
@@ -137,47 +107,74 @@ check-g14-common-law: check-y-full-geometry
 check-cubic-unit-directions:
 	python3 -S research/verify_cubic_unit_directions.py
 
-.PHONY: check-g14-pr-bound
-check: check-g14-pr-bound
-
 check-g14-pr-bound: check-y-full-geometry
 	python3 -S research/verify_g14_pr_transport_bound.py
 
-.PHONY: check-pentagon-partition-gap
-check: check-pentagon-partition-gap
-
 check-pentagon-partition-gap:
 	python3 -S research/verify_pentagon_cp_partition_gap.py
-
-.PHONY: check-pr-local-projection
-check: check-pr-local-projection
 
 check-pr-local-projection: check-g14-pr-bound
 	python3 -S research/verify_nine_point_pr_polygon.py
 	python3 -S research/test_nine_point_pr_polygon.py
 	python3 -S research/verify_pr_matching_window_ceiling.py
 
-.PHONY: check-cyclic-interval-kernel
-check: check-cyclic-interval-kernel
-
 check-cyclic-interval-kernel:
 	python3 -S research/verify_cyclic_interval_kernel.py
-
-.PHONY: check-bw-pr-odd-cycle-ceiling
-check: check-bw-pr-odd-cycle-ceiling
 
 check-bw-pr-odd-cycle-ceiling: check-pr-local-projection
 	python3 -S research/verify_star_odd_cycle_lemma.py
 	python3 -S research/verify_bw_pr_odd_cycle_ceiling.py
 
-.PHONY: check-hidden-pair-elimination
-check: check-hidden-pair-elimination
-
 check-hidden-pair-elimination: check-bw-pr-odd-cycle-ceiling
 	python3 -S research/verify_hidden_pair_elimination.py
 
-.PHONY: check-q-pr-coupling-audit
-check: check-q-pr-coupling-audit
-
 check-q-pr-coupling-audit: check-pr-local-projection check-g14-pair-orbit
 	python3 -S research/verify_q_pr_coupling_audit.py
+
+check-transport-projection: check-y-full-geometry
+	python3 -S research/check_transport_projection.py --self-test
+
+check-q-defect-lifting: check-y-full-geometry
+	python3 -S research/verify_q_defect_lifting.py --self-test
+
+check-q-joint-boundary-gap: check-y-full-geometry
+	python3 -S research/verify_q_joint_boundary_gap.py --self-test
+
+check-q-chorded-w22-audit:
+	python3 -S research/verify_q_chorded_w22_audit.py
+
+check-generalized-partition-facets: check-g14-pr-bound
+	python3 -S research/verify_generalized_partition_facets.py
+
+check-q-robust-capacity: check-transport-projection
+	python3 -S research/verify_q_robust_capacity.py --self-test
+
+check-q-defect-lift: check-transport-projection check-g14-pr-bound
+	python3 -S research/check_q_defect_lift.py --self-test
+
+check-q-defect-scope-audit: check-y-full-geometry
+	python3 -S research/check_q_defect_scope_audit.py --self-test
+
+check-packet:
+	python3 -S research/test_motion_packet.py
+
+check-cycle-descent:
+	python3 -S research/test_cycle_descent.py
+
+check-unit-translate:
+	python3 -S research/verify_unit_translate.py
+
+check-translate-kernel:
+	python3 -S research/verify_integer_translate_kernel.py
+
+check-legacy-full15-support:
+	python3 -S research/legacy_test_full15_support.py
+
+
+.PHONY: check-two-partition-w22-audit
+check-two-partition-w22-audit: check-q-joint-boundary-gap
+	python3 -S research/verify_two_partition_w22_audit.py
+
+.PHONY: check-integration
+check-integration:
+	python3 -S research/check_integration.py

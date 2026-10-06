@@ -1,0 +1,22 @@
+{
+  "schema": "research-delivery-v1",
+  "date": "2026-10-06",
+  "base_commit": "91849ffc04cc1e21193fbe3fddae2947072f7093",
+  "ordinary_hn_new_bound": false,
+  "full15_decided": false,
+  "local_verification": {
+    "discovery_returncode": 0,
+    "independent_returncode": 1,
+    "status": "NOT_COMPLETED"
+  },
+  "result_kind": "INCOMPLETE_RESEARCH_CHECKPOINT",
+  "note": "No new theorem is claimed; numerical discovery and failures are retained outside accepted mathematical evidence.",
+  "local_commit": "91849ffc04cc1e21193fbe3fddae2947072f7093",
+  "local_tree": "b269905435c54644635ffac450870bdca03fe846",
+  "working_tree_status": "?? certificates/pr_boundary_saturation_witness.json\n",
+  "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "bundle_sha256": "d1a7aeb99dde5d138d784c17c2bd87030af58e1fbf5d68f2f07b2b1fe5dd2d56",
+  "remote_published": false,
+  "push_not_attempted_reason": "No completed new result",
+  "verification_scope": "Only recorded successful independent runs; no new single whole-repository make check is claimed."
+}

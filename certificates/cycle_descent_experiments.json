@@ -1,0 +1,1235 @@
+{
+  "schema": "hn-cycle-descent-experiment-ledger-v1",
+  "date": "2026-09-28",
+  "research_base": "b532e71453935088000fa54738163c28180b17b8",
+  "remote_base": "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa",
+  "input_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "entries": [
+    {
+      "file": "verification/host-eta-sharp-search.json",
+      "sha256": "17d4ef0bdd43c04179a065064b3656aea03ef35bb17efb46c71e949b2cfd7f15",
+      "summary": {
+        "status": "UNKNOWN_RESTRICTED",
+        "seconds": 3.7179556490000323,
+        "variables": 52050,
+        "clauses": 396195,
+        "statistics": {
+          "restarts": 142,
+          "conflicts": 10002,
+          "decisions": 25059,
+          "propagations": 4064701
+        },
+        "scope": "Five eta phases; tau fixes labels; u acts by (123). Negative results would concern this restricted representation only."
+      }
+    },
+    {
+      "file": "verification/finite-eta-sharp-search.json",
+      "sha256": "eb7da86fb279d6e7aa7340f211c7afaff9d98e1f1a1b514f3a37f8132a01f955",
+      "summary": {
+        "status": "UNKNOWN",
+        "statistics": {
+          "restarts": 1413,
+          "conflicts": 20000,
+          "decisions": 236102,
+          "propagations": 11191042
+        },
+        "seconds": 10.949531181999987
+      }
+    },
+    {
+      "file": "verification/finite-eta-sharp-seeded-search.json",
+      "sha256": "bb8c91fd70a1b1e26158dcbc9e5e0d070237114e2e9fb0a8968b7b18e696e0ad",
+      "summary": [
+        {
+          "start": 0,
+          "status": "UNKNOWN",
+          "statistics": {
+            "restarts": 467,
+            "conflicts": 15002,
+            "decisions": 116257,
+            "propagations": 6718940
+          },
+          "seconds": 8.113886236999974
+        },
+        {
+          "start": 1,
+          "status": "UNKNOWN",
+          "statistics": {
+            "restarts": 418,
+            "conflicts": 15003,
+            "decisions": 130126,
+            "propagations": 6867957
+          },
+          "seconds": 7.44720254899994
+        },
+        {
+          "start": 2,
+          "status": "UNKNOWN",
+          "statistics": {
+            "restarts": 532,
+            "conflicts": 15004,
+            "decisions": 123756,
+            "propagations": 6774673
+          },
+          "seconds": 7.6373964059999935
+        }
+      ]
+    },
+    {
+      "file": "verification/kernel-packet-search.json",
+      "sha256": "f0865be0cc59cbab682d70f332a48d5b435497d82b4e66dc6ada2c125a7b29c8",
+      "summary": {
+        "status": "UNSAT_FIXED_SUPPORT_UNCERTIFIED",
+        "statistics": {
+          "restarts": 176,
+          "conflicts": 1184,
+          "decisions": 8758,
+          "propagations": 464049
+        },
+        "seconds": 0.42744891699999243,
+        "support": 5,
+        "scope": "Five equal atoms on 129-point induced kernel and all its 15 restricted complete domains; not full Y law."
+      },
+      "scope_note": "Restricted five equal atoms with a prescribed eta support cycle and four membership hits; unverified UNSAT is NOT any-law infeasibility, not all five-atom laws."
+    },
+    {
+      "file": "verification/moment-packet-search.json",
+      "sha256": "4b755cde189438c4f563112510a41d1cdde00f299a05e057ba9aa1fb2006308e",
+      "summary": {
+        "status": "UNKNOWN_FIXED_SUPPORT",
+        "seconds": 0.818918364999945,
+        "statistics": {
+          "restarts": 102,
+          "conflicts": 30625,
+          "decisions": 119527,
+          "propagations": 2824458
+        },
+        "word_count": 5,
+        "common_membership_target": "4/5",
+        "scope": "Membership moments only, not complete pattern laws or a full-Y extension"
+      },
+      "scope_note": "Restricted five equal atoms with prescribed event counts; UNKNOWN."
+    },
+    {
+      "file": "verification/transport-maxsat.json",
+      "sha256": "28f97d0b42f6adb95d668ad1501dc5f6b7f7658656efa3282403fc47fd471da9",
+      "summary": {
+        "status": "UNCERTIFIED_MAXSAT_OPTIMUM_WITH_CHECKABLE_PRIMAL",
+        "cost": 24,
+        "hits": 98,
+        "seconds": 1.0907229100000677,
+        "word_saved_count": 129
+      },
+      "scope_note": "Original MaxSAT optimum flag not trusted. The final 98 bound instead follows from 24 exact cycles and a three-color witness."
+    },
+    {
+      "file": "verification/orbit-moment-columns.json",
+      "sha256": "81fe6709c4d5956e7bd7d28b56b2583e31f7191e3599133c87095599a9190871",
+      "summary": {
+        "elapsed_seconds": 10.164232787999936,
+        "status": "INTERRUPTED_UNCERTIFIED_PRICING",
+        "interruption_reason": "A weighted oracle after 74 resumed iterations stalled; no absence-of-column conclusion. Switched to a bounded-dual sharp-face test.",
+        "weights": null,
+        "history_saved_count": 133,
+        "features_saved_count": 139,
+        "words_saved_count": 139
+      },
+      "scope_note": "Saved proper-word/feature prefix only. A subsequent large-weight price query was interrupted, without any certified optimum or separation."
+    },
+    {
+      "file": "verification/sharp-face.json",
+      "sha256": "58705f9977efde44e572edc8b01a8a95925e08c5cf2d06b4280bd7ef8bf1253d",
+      "summary": {
+        "status": "SEARCH_PREFIX",
+        "forced_hits": [],
+        "seconds": 2.215802892999818,
+        "features_saved_count": 2000,
+        "words_saved_count": 2000
+      },
+      "scope_note": "2000 saved sharp-face samples, not a complete face enumeration. Infeasibility of their convex hull does not imply face infeasibility."
+    },
+    {
+      "file": "verification/face-price-interruption.json",
+      "sha256": "0226bdd6b67c77d0e783eef6068e173b91e09ebd0ec29a233f95a74ff23fb948",
+      "summary": {
+        "status": "INTERRUPTED_UNCERTIFIED_PRICING",
+        "round": 0,
+        "reason": "Large-denominator exact rationalization made the exploratory weighted oracle impractical. No negative pricing claim; no certified sharp-face optimum."
+      }
+    },
+    {
+      "file": "verification/core-polytope.json",
+      "sha256": "cc040746ce028afcbd8bed0c6147bf6cea6df278c83dedb2971734e3d3bc7037",
+      "summary": {
+        "legal_sequences": 151,
+        "counts": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        "facets": [
+          [
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            1,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            1,
+            0,
+            3
+          ],
+          [
+            1,
+            1,
+            1,
+            4
+          ]
+        ],
+        "witnesses": [
+          {
+            "counts": [
+              0,
+              0,
+              0
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              0,
+              0,
+              2
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              0,
+              1,
+              2
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              0,
+              2,
+              0
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              0,
+              2,
+              1
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              1,
+              0,
+              2
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              1,
+              1,
+              2
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              1,
+              2,
+              0
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              1,
+              2,
+              1
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              2,
+              0,
+              0
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              2,
+              0,
+              1
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              2,
+              1,
+              0
+            ],
+            "word_saved_count": 11
+          },
+          {
+            "counts": [
+              2,
+              1,
+              1
+            ],
+            "word_saved_count": 11
+          }
+        ],
+        "vertices_saved_count": 13
+      },
+      "scope_note": "Final corrected positive vertex words are independently checked in original_Y_cycle_descent.json. An earlier draft had a CardEnc trivial-bound variable-top bug; no draft UNSAT is used."
+    },
+    {
+      "file": "verification/kernel-count-three.json",
+      "sha256": "cb46e1bce0863ff163b5b163922f319e3554247c78f8dfe38d2632c535f631aa",
+      "summary": {
+        "status": "SEARCH_PREFIX",
+        "forced_hits": [],
+        "seconds": 0.008403255999837711,
+        "features_saved_count": 1,
+        "words_saved_count": 1
+      }
+    },
+    {
+      "file": "verification/joined-zero-search.json",
+      "sha256": "e4adc735e2fb7b28a49c718ca3c6593cb735e9d744d7bc3a36eda5308e3fff02",
+      "summary": {
+        "status": "SAT_WITNESS",
+        "conflict_budget": 50000,
+        "statistics": {
+          "restarts": 3,
+          "conflicts": 555,
+          "decisions": 29999,
+          "propagations": 268332
+        },
+        "seconds": 0.28374905300006503,
+        "variables": 52838,
+        "clauses": 377642,
+        "cnf_sha256": "1b047e29f2ebdb7ed0fd395a055cb65a0401bd19b8e756f8ac39ac3445482d67",
+        "scope": "One full-Y word with E111 equalities plus avoidance of all three inherited patterns at all 122 transported five-point tuples. No all-word negative conclusion.",
+        "word_saved_count": 10077
+      }
+    },
+    {
+      "file": "verification/full-tuple-zero-search.json",
+      "sha256": "b8e495c87f07de89a94e1abf5ef23f2c64402a9dec20e7e4eaba91d526130e29",
+      "summary": {
+        "status": "SAT_WITNESS",
+        "conflict_budget": 30000,
+        "statistics": {
+          "restarts": 5,
+          "conflicts": 1176,
+          "decisions": 42254,
+          "propagations": 495676
+        },
+        "seconds": 0.31147272599991993,
+        "variables": 53460,
+        "clauses": 381122,
+        "cnf_sha256": "5978794b62911bde6f8d95795dfec68dfe8b84c6182715c12426296dfe78a043",
+        "scope": "One full-Y word with E111 equalities and identical complete five-point partitions at all 122 tuples. No negative conclusion for arbitrary support.",
+        "word_saved_count": 10077
+      }
+    },
+    {
+      "file": "verification/public-cli-search.json",
+      "sha256": "9368bde22302202645f75f43d35f42bdcf6ca20b92a18653844f88be5ee9cc91",
+      "summary": {
+        "schema": "cycle-descent-search-v1",
+        "mode": "full",
+        "status": "SAT_WITNESS",
+        "conflict_budget": 30000,
+        "statistics": {
+          "restarts": 9,
+          "conflicts": 1591,
+          "decisions": 79703,
+          "propagations": 862771
+        },
+        "elapsed_seconds": 0.5754411650000293,
+        "variables": 53460,
+        "clauses": 381122,
+        "cnf_sha256": "5978794b62911bde6f8d95795dfec68dfe8b84c6182715c12426296dfe78a043",
+        "scope": "Search result, not its own independent certificate; no arbitrary-law negative claim.",
+        "word_saved_count": 10077
+      }
+    },
+    {
+      "file": "verification/joint-observation-gap.json",
+      "sha256": "534f65619fbf89068a430f6d6b940f55b6bbc170dfe4e06cd977f0cc4c8451f2",
+      "summary": {
+        "failed_kernel_domains": [
+          0,
+          3,
+          4,
+          6,
+          7,
+          12,
+          13
+        ],
+        "minimal_pair_union_for_this_word": [
+          7,
+          0,
+          [
+            889,
+            4641,
+            4638,
+            5162,
+            3484,
+            887,
+            6655
+          ],
+          [
+            5826,
+            4641,
+            4672,
+            4571,
+            5605,
+            5836,
+            3294
+          ]
+        ],
+        "scope": "A mismatch of one saved word, not an all-coloring obstruction."
+      },
+      "scope_note": "The seven-point union distinguishes one saved word. No minimal arity result; a two-point CROSS-position event already detects it."
+    },
+    {
+      "file": "verification/kernel-next-packets.json",
+      "sha256": "f1f1662b06748144b8b0fbbc939b960edee1ec6e6e98831380cd8e8eaf00750f",
+      "summary": [
+        {
+          "instance": "kernel129",
+          "support": 1,
+          "status": "SAT_WITNESS",
+          "budget": 20000,
+          "statistics": {
+            "restarts": 0,
+            "conflicts": 5,
+            "decisions": 31,
+            "propagations": 4142
+          },
+          "seconds": 0.04428245799999786,
+          "words_saved_count": 1
+        },
+        {
+          "instance": "kernel129",
+          "support": 2,
+          "status": "SAT_WITNESS",
+          "budget": 20000,
+          "statistics": {
+            "restarts": 28,
+            "conflicts": 917,
+            "decisions": 2450,
+            "propagations": 168468
+          },
+          "seconds": 0.13330817199994272,
+          "words_saved_count": 2
+        }
+      ]
+    },
+    {
+      "file": "verification/packet-enlargement.json",
+      "sha256": "5a7586f4838405529057456cf7aa36746f5a0d90ad7c482d0ca1702ab51723be",
+      "summary": {
+        "instance": "fullY_Gamma_plus_kernel15",
+        "support": 2,
+        "status": "UNKNOWN_FIXED_SUPPORT",
+        "budget": 20000,
+        "statistics": {
+          "restarts": 599,
+          "conflicts": 20000,
+          "decisions": 254967,
+          "propagations": 20199490
+        },
+        "seconds": 16.24076501899981,
+        "scope": "Six fullY domains, remaining nine kernel-local domains; fixed two-support failure is not an arbitrary-law obstruction."
+      }
+    },
+    {
+      "file": "verification/kernel-full-law-search.json",
+      "sha256": "f192b153f9a6257146bd3ecde72d2e95fdc0b7a93939b0524960f0daee4e75e9",
+      "summary": {
+        "status": "UNSAT_FIXED_SINGLETON_UNCERTIFIED",
+        "conflict_budget": 30000,
+        "statistics": {
+          "restarts": 1,
+          "conflicts": 973,
+          "decisions": 1953,
+          "propagations": 238540
+        },
+        "seconds": 0.5468240559998776,
+        "variables": 50832,
+        "clauses": 374573,
+        "cnf_sha256": "c0eb5f1428c5bde27d28733b09002cef8bf60f6490f02b48dcac0d3713d826f1",
+        "scope": "All full129-kernel local15 domains plus fullY-u and 12 old pairs, on a single proper fullY word. A negative result here is not a common-law obstruction."
+      },
+      "scope_note": "Initial uncertified singleton negative; subsequently rerun with an independent full-CNF/RUP chain in joined_kernel_singleton.json.gz."
+    },
+    {
+      "file": "verification/joined-kernel-packet.json",
+      "sha256": "3eed598b971722d9817e88203cd764570d803dd0d7b5389c4f05d341401fac74",
+      "summary": {
+        "instance": "fullY_kernel15_plus_u_and_old12",
+        "support": 2,
+        "status": "UNKNOWN_FIXED_SUPPORT",
+        "budget": 30000,
+        "statistics": {
+          "restarts": 2466,
+          "conflicts": 30001,
+          "decisions": 84720,
+          "propagations": 21832611
+        },
+        "seconds": 11.128042250999897,
+        "scope": "Fifteen kernel-local full domains plus fullY-u and 12 inherited two-point events; not fullY15."
+      },
+      "scope_note": "Two EQUAL-weight words only; UNKNOWN, not arbitrary-law infeasibility."
+    },
+    {
+      "file": "verification/joined-kernel-three-packet.json",
+      "sha256": "9bd0b28cd0d683bf592afb65a58a4667c26e62daf0022a722f7c2cd4bea88410",
+      "summary": {
+        "instance": "fullY_kernel15_plus_u_and_old12",
+        "support": 3,
+        "status": "UNKNOWN_FIXED_SUPPORT",
+        "budget": 30000,
+        "statistics": {
+          "restarts": 2715,
+          "conflicts": 30000,
+          "decisions": 328074,
+          "propagations": 17422075
+        },
+        "seconds": 16.774259256000278,
+        "scope": "Fifteen kernel-local full domains plus fullY-u and 12 inherited two-point events; not fullY15."
+      },
+      "scope_note": "Three EQUAL-weight words only; UNKNOWN, not arbitrary-weight three-atom infeasibility."
+    },
+    {
+      "file": "verification/joint-kernel-singleton.json",
+      "sha256": "ffb36b5ef3c56ad2da04bffd007e44d8b5387c5f53cd2faf009affce6a5be705",
+      "summary": {
+        "status": "VERIFIED_FIXED_SINGLETON_UNSAT",
+        "statistics": {
+          "restarts": 2,
+          "conflicts": 1510,
+          "decisions": 2869,
+          "propagations": 352537
+        },
+        "seconds": 0.4508935389999351,
+        "cnf_sha256": "67c9a7994e40245668a0694d3b8431894c4db0fa567582ca0dd41fcb1e2c5344",
+        "nv": 51085,
+        "clauses": 376132,
+        "mapping_sizes": [
+          65,
+          1,
+          121,
+          121,
+          61,
+          3,
+          10,
+          8,
+          4,
+          3,
+          2,
+          2,
+          3,
+          61,
+          1,
+          29,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "scope": "Full proper Y, all15 local129-kernel full domains, full u, and12 old pairs; single partition only.",
+        "proof_report": {
+          "status": "VERIFIED_RUP_REFUTATION",
+          "initial_clauses": 376132,
+          "additions": 1510,
+          "deletions": 0,
+          "hinted_propagations": 549202,
+          "empty_clause_id": 377642,
+          "rat_steps_accepted": 0
+        },
+        "proof_saved_count": 1510
+      }
+    },
+    {
+      "file": "verification/joined-kernel-relator.json",
+      "sha256": "957dd2acfff07cf69064f1192bfe22af338e682765581d987565245382f7fbf0",
+      "summary": [
+        {
+          "instance": "fullY_kernel15_plus_u_and_old12",
+          "support": 2,
+          "status": "UNKNOWN_FIXED_SUPPORT",
+          "budget": 10000,
+          "statistics": {
+            "restarts": 426,
+            "conflicts": 10001,
+            "decisions": 40398,
+            "propagations": 7380832
+          },
+          "seconds": 6.805678468000224,
+          "closed_eta_points": 121,
+          "fixed_points": [
+            4641
+          ],
+          "relator_equalities_added": true,
+          "scope": "Redundant per-word color equalities proved from m<5, C5 invariance on closed subset and a fixed point with k=5. Still restricted finite support, not an all-law negative."
+        },
+        {
+          "instance": "fullY_kernel15_plus_u_and_old12",
+          "support": 3,
+          "status": "UNKNOWN_FIXED_SUPPORT",
+          "budget": 10000,
+          "statistics": {
+            "restarts": 777,
+            "conflicts": 10000,
+            "decisions": 97028,
+            "propagations": 7801996
+          },
+          "seconds": 8.734762141999909,
+          "closed_eta_points": 121,
+          "fixed_points": [
+            4641
+          ],
+          "relator_equalities_added": true,
+          "scope": "Redundant per-word color equalities proved from m<5, C5 invariance on closed subset and a fixed point with k=5. Still restricted finite support, not an all-law negative."
+        },
+        {
+          "instance": "fullY_kernel15_plus_u_and_old12",
+          "support": 4,
+          "status": "UNKNOWN_FIXED_SUPPORT",
+          "budget": 10000,
+          "statistics": {
+            "restarts": 806,
+            "conflicts": 10001,
+            "decisions": 132439,
+            "propagations": 7984436
+          },
+          "seconds": 13.024893671999962,
+          "closed_eta_points": 121,
+          "fixed_points": [
+            4641
+          ],
+          "relator_equalities_added": true,
+          "scope": "Redundant per-word color equalities proved from m<5, C5 invariance on closed subset and a fixed point with k=5. Still restricted finite support, not an all-law negative."
+        },
+        {
+          "instance": "fullY_kernel15_plus_u_and_old12",
+          "support": 5,
+          "status": "UNKNOWN_FIXED_SUPPORT",
+          "budget": 10000,
+          "statistics": {
+            "restarts": 896,
+            "conflicts": 10000,
+            "decisions": 173960,
+            "propagations": 7271109
+          },
+          "seconds": 16.660236354999597,
+          "closed_eta_points": 121,
+          "fixed_points": [
+            4641
+          ],
+          "relator_equalities_added": false,
+          "scope": "Redundant per-word color equalities proved from m<5, C5 invariance on closed subset and a fixed point with k=5. Still restricted finite support, not an all-law negative."
+        }
+      ],
+      "scope_note": "Two/three/four equal-word queries include sound C5 fixed-point consequences; fifth-word query has no such added consequence. All remain UNKNOWN."
+    },
+    {
+      "file": "verification/public-joined-cli.json",
+      "sha256": "8c778a9dd7e4e5169372ca1eb196e7c1b1a470769a4c239afe6c2cf6c226c0a0",
+      "summary": {
+        "schema": "hn-joined-observation-search-v1",
+        "equal_weight_words": 1,
+        "status": "RUP_FIXED_SINGLETON",
+        "variables": 51085,
+        "clauses": 376132,
+        "cnf_sha256": "67c9a7994e40245668a0694d3b8431894c4db0fa567582ca0dd41fcb1e2c5344",
+        "conflicts": 10000,
+        "statistics": {
+          "restarts": 2,
+          "conflicts": 1510,
+          "decisions": 2869,
+          "propagations": 352537
+        },
+        "seconds": 0.5438101559998358,
+        "relator_equalities_added": false,
+        "closed_eta_points": 0,
+        "scope": "Fixed equal-weight word count only; no arbitrary-law negative inference.",
+        "proof_report": {
+          "status": "VERIFIED_RUP_REFUTATION",
+          "initial_clauses": 15468,
+          "additions": 1413,
+          "deletions": 0,
+          "hinted_propagations": 510926,
+          "empty_clause_id": 16881,
+          "rat_steps_accepted": 0
+        },
+        "independent_semantics_replay_required": true
+      },
+      "scope_note": "Proof producer executed again. Its gzip certificate is byte-identical to the independently checked saved certificate; this equality does not replace independent semantic replay."
+    },
+    {
+      "file": "verification/pricing-and-cli-calibration.json",
+      "sha256": "4e203d62131106b290c9375d84447a14a5c4ecbbe94db3b48212eb14a2501c1f",
+      "summary": {
+        "status": "PASS",
+        "signed_weight_checks": 345,
+        "large_integer_bits": 73,
+        "formula": "5 max_{q in P} w.q = sum_i max(w_i,0)+max(0,w_0,w_1,w_2)",
+        "scope": "Finite signed-weight calibration of the general Minkowski-sum proof; no full-Y optimization claim.",
+        "regenerated_singleton_certificate_semantically_identical": true,
+        "regenerated_singleton_certificate_byte_identical": true,
+        "five_word_public_cli_replay": {
+          "status": "PASS",
+          "same_five_words_as_independently_verified_certificate": true,
+          "result_sha256": "74e6812c3b1a168210eb8fd59746075ae59f1942d6d53713b4f94b6120d239f2",
+          "certificate_sha256": "0219ce243dd98b24d6b5d7aa68c85f8c91a5496710ceef139423e248d207e14c",
+          "scope": "Actual optional search CLI rerun yields the same five complete words; their correctness is separately checked without SAT."
+        }
+      }
+    },
+    {
+      "file": "verification/joined-kernel-seeded.json",
+      "sha256": "c2dba7d57bf2563f1c2cb6f8475869e67e8f007262ded876ab611117207be566",
+      "summary": [
+        {
+          "mode": "free_E083",
+          "equal_weight_words": 5,
+          "status": "UNKNOWN_RESTRICTED",
+          "budget": 15000,
+          "statistics": {
+            "restarts": 827,
+            "conflicts": 15000,
+            "decisions": 435728,
+            "propagations": 9867513
+          },
+          "seconds": 23.513102219999837,
+          "scope": "Only F=kernel-local15 + fullu +12pairs; mode fixed_non_u_E083 freezes support/palette operators, not colors. No arbitrary-law negative claim."
+        },
+        {
+          "mode": "fixed_non_u_E083",
+          "equal_weight_words": 5,
+          "status": "SAT_WITNESS",
+          "budget": 15000,
+          "statistics": {
+            "restarts": 899,
+            "conflicts": 10123,
+            "decisions": 1018700,
+            "propagations": 13191423
+          },
+          "seconds": 13.967670339000051,
+          "scope": "Only F=kernel-local15 + fullu +12pairs; mode fixed_non_u_E083 freezes support/palette operators, not colors. No arbitrary-law negative claim.",
+          "words_saved_count": 5
+        }
+      ]
+    },
+    {
+      "file": "verification/public-five-law-cli.json",
+      "sha256": "74e6812c3b1a168210eb8fd59746075ae59f1942d6d53713b4f94b6120d239f2",
+      "summary": {
+        "schema": "hn-joined-observation-search-v1",
+        "equal_weight_words": 5,
+        "status": "SAT_WITNESS",
+        "variables": 269100,
+        "clauses": 2014600,
+        "cnf_sha256": "96ccca8c990b4fde9caace7edc30db628aa470aba6cdf4e72ff1552e67e871c4",
+        "conflicts": 15000,
+        "statistics": {
+          "restarts": 899,
+          "conflicts": 10123,
+          "decisions": 1018700,
+          "propagations": 13191423
+        },
+        "seconds": 21.27876082900002,
+        "relator_equalities_added": false,
+        "closed_eta_points": 0,
+        "phase_seed": "e083",
+        "fixed_non_u_E083_matching": true,
+        "scope": "Fixed equal-weight word count only; no arbitrary-law negative inference.",
+        "words_saved_count": 5
+      }
+    },
+    {
+      "file": "verification/five_atom_F_summary.json",
+      "sha256": "c3686ecf316a5664ba19e0f764ee569128b58156ed1213ddbc82210a3df11747",
+      "summary": {
+        "original_full_Y_domains": [
+          14
+        ],
+        "distinct_R_patterns": 5,
+        "R_eta_rows": [
+          {
+            "pattern": [
+              [
+                0,
+                2,
+                6,
+                9
+              ],
+              [
+                1,
+                3,
+                5,
+                8
+              ],
+              [
+                4
+              ],
+              [
+                7,
+                10
+              ]
+            ],
+            "coefficients": [
+              0,
+              1,
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "pattern": [
+              [
+                0,
+                2,
+                7,
+                10
+              ],
+              [
+                1,
+                3,
+                6,
+                9
+              ],
+              [
+                4
+              ],
+              [
+                5,
+                8
+              ]
+            ],
+            "coefficients": [
+              0,
+              0,
+              -1,
+              1,
+              0
+            ]
+          },
+          {
+            "pattern": [
+              [
+                0,
+                5,
+                7,
+                9
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6,
+                8,
+                10
+              ],
+              [
+                4
+              ]
+            ],
+            "coefficients": [
+              0,
+              -1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "pattern": [
+              [
+                0,
+                5,
+                8,
+                10
+              ],
+              [
+                1,
+                2,
+                7,
+                9
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4
+              ]
+            ],
+            "coefficients": [
+              -1,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "pattern": [
+              [
+                0,
+                9
+              ],
+              [
+                1,
+                2,
+                6,
+                8
+              ],
+              [
+                3,
+                5,
+                7,
+                10
+              ],
+              [
+                4
+              ]
+            ],
+            "coefficients": [
+              1,
+              0,
+              0,
+              -1,
+              0
+            ]
+          }
+        ],
+        "R_words": [
+          "23310131321",
+          "24240421421",
+          "23310212121",
+          "12120321321",
+          "12230132121"
+        ]
+      }
+    },
+    {
+      "file": "verification/F-plus-Gamma.json",
+      "sha256": "820c4b1e15e4bdc47572f09e7330ccecd10887cac0f9a8fd033f708f07998eb0",
+      "summary": {
+        "instance": "fullY_F_plus_Gamma",
+        "equal_weight_words": 5,
+        "conflict_budget": 15000,
+        "memory_address_space_limit_MiB": 1750,
+        "status": "UNKNOWN_FIXED_WORD_COUNT",
+        "scope": "All Y proper edges, F28 observations plus the five remaining original full Gamma domains. No matching/palette/color is fixed. Any budget/resource limit is UNKNOWN, not arbitrary-law infeasibility.",
+        "statistics": {
+          "restarts": 339,
+          "conflicts": 15001,
+          "decisions": 572754,
+          "propagations": 12484264
+        },
+        "variables": 363275,
+        "clauses": 3418465,
+        "mapping_sizes": [
+          65,
+          1,
+          121,
+          121,
+          61,
+          3,
+          10,
+          8,
+          4,
+          3,
+          2,
+          2,
+          3,
+          61,
+          1,
+          29,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          513,
+          333,
+          513,
+          512,
+          1866
+        ],
+        "seconds": 39.451509268000336
+      }
+    },
+    {
+      "file": "verification/kernel-colors.json",
+      "sha256": "9224b9e4b04eaa41243e0e18321fe994060f795e16f9a73c9ef58952c51ba651",
+      "summary": [
+        {
+          "k": 2,
+          "status": "UNSAT_UNCERTIFIED",
+          "stats": {
+            "restarts": 1,
+            "conflicts": 2,
+            "decisions": 2,
+            "propagations": 1
+          }
+        },
+        {
+          "k": 3,
+          "status": "SAT",
+          "stats": {
+            "restarts": 1,
+            "conflicts": 0,
+            "decisions": 80,
+            "propagations": 388
+          },
+          "word_saved_count": 129
+        },
+        {
+          "k": 4,
+          "status": "SAT",
+          "stats": {
+            "restarts": 1,
+            "conflicts": 0,
+            "decisions": 235,
+            "propagations": 517
+          },
+          "word_saved_count": 129
+        }
+      ]
+    }
+  ],
+  "exploratory_source_hashes": {
+    "exploration/add_polytope.py": "cffdcf22558899253c050612cbc830eada65a1648a89ab7ef00233b9d9064b51",
+    "exploration/certify_joint_kernel_singleton.py": "e9b59ac9bd30ec43825cdb5dc6bdee78bc9d6b34e99625c3076876f531eddabd",
+    "exploration/column_moments.py": "af93226cce1fe9bab4c307dc7820a2451a69713d242add2a0b250efcd5c30f06",
+    "exploration/column_moments_resume.py": "10a9f36be2e13179c3e6bcea2144e596e8e902e878d5858c908b5733610f1c02",
+    "exploration/core_polytope.py": "edf1d81b0d0f70ec7b1f510428183d9488e8ba8e7c7b615e5ffbb8e22ed34a55",
+    "exploration/explore_descent.py": "6edb28af06cf71460bc11c0ca2bd5338ced513567c4c5f433fab7ac95484a12b",
+    "exploration/explore_minimal.py": "8d11c14b6cf5fd87e746970ff8522bae5e7c88a6a085943426b9005ab4d64a47",
+    "exploration/explore_orbit_counts.py": "9c7884954768519ab3a2cea7f3245241aaa12d4e31f22dc06a48899bd64dcbd9",
+    "exploration/explore_transport.py": "79ab8a2ed389fab8cf71b01802945e324d058b845f8f7625455affaf2dc3291d",
+    "exploration/face_columns.py": "4905c842fe35c492c436889d3ea7b52e328c074d1d015cef478ca751c1888bcf",
+    "exploration/feature_conflicts.py": "3870a6d7afb3651cf7133eaaeb148419bfb2ef3200bae7910a31c468040dfcc2",
+    "exploration/make_joint_kernel_certificate.py": "3b40a001de6dd247b8b8986a5190c89c710feb7034f6eb5e2c8cf6af74d143ee",
+    "exploration/optimize_orbit.py": "00dd2c9c6f33eff921bead6442588126f945a6498d9035052a29eed8ec4cd96f",
+    "exploration/search_F_plus_Gamma.py": "b98bc9f316ef886d4ed0b2fe38212447c5d7b02b79092aaae1e5cce62b33f8be",
+    "exploration/search_core_polytope.py": "a08b65a4ea2ef27e0e7fe163465a646c257701fc3b68aec44654ce8ae25c2116",
+    "exploration/search_core_polytope5.py": "2f6bdbf80987025a8bef6dafe9455baf1b0cd8e0f5e0f1b7557c5221458389cf",
+    "exploration/search_finite_eta.py": "5337420e4817cb3e17b2eaf01627de5947e3bff0aec053f89622a0c89ad0322f",
+    "exploration/search_finite_eta_seeded.py": "904d9d80736f90169111914f6c4bd9020da2a3ffadde825a1560a7a6802998e0",
+    "exploration/search_full_tuple_zero.py": "ea3b733bc0ddfc0cfc9afba244acfb409270e16b883addac5f21b0f25ec065ce",
+    "exploration/search_host.py": "c9dad01bbd2a1093c806890c47018832faedababadc2a415f5316cfd371a52b0",
+    "exploration/search_joined_kernel_packet.py": "092e30d0b67f9279ae18c862d78dbae1dea47486656aa20b0853be6dc0684ac7",
+    "exploration/search_joined_kernel_relator.py": "89eafb08793ff1c743a8c1858e883d2eada9ff8f939bffac16890f75561622f3",
+    "exploration/search_joined_kernel_seeded.py": "515fd5506b71262c73de1c3d137d15bfa05818a6e0466eb38e2e20e68648002c",
+    "exploration/search_joined_kernel_three.py": "242dba5fc23a67e7d66304fde02f75a7e299ff4568300e93a6171de192d5c7eb",
+    "exploration/search_joined_zero.py": "3b7c9d75c16873eb5f452b49337b06f72a3e16bec07859cfdaf27939e23f7b3f",
+    "exploration/search_kernel_colors.py": "85809cc72d3d5a95dbee3e643f5d5251658405559514b3ffb37cf26c6660a9b2",
+    "exploration/search_kernel_full_law.py": "4fa1db4420c4e5883b2c15c8921c7e30c64bf98e0956e22bd3aeb94c7dca9ff4",
+    "exploration/search_kernel_packet.py": "6f7073bfb25d468f57eab1c2c96b4096443caf7da1085e4f3bdaf9fd8b7c77ca",
+    "exploration/search_moment_packet.py": "0ed8ef08df2021bec1fd631f54fa0b0bba89096d7f910f108c709153269c87f1",
+    "exploration/search_packets_next.py": "05d83ccf37f2264fb12f5855e72051b9119cdce93a809db02c95e7539916abbb",
+    "exploration/sharp_face.py": "7f0f871dc73f690b007c8c1922c0a14f0f148815198be9f73041681bbb1ee6b3",
+    "exploration/try_count_three.py": "d5facc3ce0e6e6d23eab40975d2db24b4d4ff7023348f0159af63f506bc6ab18"
+  },
+  "verification_boundaries": {
+    "formal_claims": [
+      "original_Y_cycle_descent.json",
+      "joined_kernel_singleton.json.gz",
+      "joined_kernel_five_law.json"
+    ],
+    "independent_target": "make check-cycle-descent",
+    "untrusted_search_flags_not_promoted": true,
+    "raw_delivery_location": "verification/ and exploration/ in the accompanying complete checkpoint ZIP",
+    "scope": "Exploratory searches, interruptions and diagnostic prefixes are not theorems. The complete written proof plus independent target support T143/E114/C026. The actual five-word positive law now decides F, not original full15; earlier bounded UNKNOWNs remain historical."
+  },
+  "latest_status": {
+    "T143": "Proved exact11-point marginal polytope and necessary descent to original Y; full-Y sharpness not claimed.",
+    "F28": "FEASIBLE: five distinct full-Y proper partitions with equal weights; singleton impossible; minimum support only [2,5].",
+    "C026": "This five-atom F-law is extreme in the entire full-Y F-law polytope; not the original full15-law polytope.",
+    "F_plus_Gamma": "Only one free five-equal-state query, 15000-conflict budget /15001 actual conflicts, UNKNOWN_FIXED_WORD_COUNT.",
+    "original_full15": "UNKNOWN",
+    "HN_bounds_changed": false,
+    "historical_query_statuses_preserved": true
+  }
+}

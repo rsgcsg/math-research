@@ -1,0 +1,40 @@
+{
+  "schema": "q-joint-boundary-validation-v1",
+  "status": "PASS",
+  "certificate_sha256": "5cdb3ad41b7e635847845f9d3752e6a51332949f9d3da1a2bc62de8eaf8ba2b7",
+  "transport_components": {
+    "P": 1860,
+    "Q": 780,
+    "R": 1472
+  },
+  "color_class": {
+    "independent_sets": 8232,
+    "subsets_in_second_algorithm": 2097152,
+    "tight_sets": 564,
+    "minima_by_H_occupancy": {
+      "0": -3,
+      "1": -1,
+      "2": 1,
+      "3": 3
+    }
+  },
+  "boundary": {
+    "nodes": 11909676,
+    "proper_saturated_partitions": 5648160,
+    "maximum_integer_score": 2,
+    "bound_rhs": 2,
+    "coefficient_sums": {
+      "P": -2267,
+      "Q": 500,
+      "R": -501
+    }
+  },
+  "fractional_cover": {
+    "atoms": 99,
+    "denominator": 6110370,
+    "total_mass": 5,
+    "individual_vertex_covers": 22,
+    "individual_pair_moments": 89
+  },
+  "scope": "T164 color-class proof and exact fractional-cover consequence; T165 support-independent bound on p=1/27 within the actual 22-point P/Q/R model; C030 fractional independent-set cover separated from proper five-block laws. No full15 solution or global HN bound; the q upper bound is not claimed optimal."
+}

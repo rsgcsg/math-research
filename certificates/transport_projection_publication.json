@@ -1,0 +1,30 @@
+{
+  "schema": "transport-projection-publication-v1",
+  "status": "PASS",
+  "date": "2026-10-05",
+  "checked_commit": "b4d449634af3c830a8868b31ff0e07a70da715b1",
+  "research_base": "3009eda28c26334bc8063913af74031cc7bcd9f4",
+  "branch_base": "9c8b191541febe9c90c4f34addc7dc34ca3468f5",
+  "workflow_run": "37282355952",
+  "python": "3.12.14",
+  "source_files": 315,
+  "source_manifest_sha256": "77e56c90ff7bea2db63206fb51ef97a3e43e0cc1008df934437fec5e728b5816",
+  "source_unchanged": true,
+  "commands": [
+    "make check-transport-projection",
+    "python3 -S research/verify_g14_pr_transport_bound.py",
+    "python3 -S research/verify_q_pr_coupling_audit.py"
+  ],
+  "returncodes": [
+    0,
+    0,
+    0
+  ],
+  "logs_sha256": {
+    "transport-projection.log": "ff9244ae9ea051e1ac91bc8eb04867017757d165754d617eac00da98759337a1",
+    "pr-bound.log": "457ffa3044a8c6042dd33e14d77aa70c6f8ea5fc97881c70a89181ea36357a36",
+    "previous-coupling.log": "08857b599cc25956eacd56166e14b68487459544fba1a654a4c3dcd5218e4526"
+  },
+  "patch_sha256": "ab7fec4e728fbb8323ef4a4089c0e09278688e81d89a84a4b4269754e640b8b6",
+  "scope": "Fresh targeted independent replay, including reconstruction of Y geometry and actual P/Q/R components. Not a new whole-repository make check; no full15 solution, global HN bound, or literature priority claimed."
+}
