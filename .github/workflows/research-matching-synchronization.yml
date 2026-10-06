@@ -1,0 +1,24 @@
+name: Research matching synchronization probe
+on:
+  push:
+    branches:
+      - 'research/matching-synchronization-20261006'
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Enumerate exact matching/Q synchronization face
+        run: python3 -S research/probe_matching_synchronization.py --output "$RUNNER_TEMP/matching-synchronization.json"
+      - name: Upload probe
+        uses: actions/upload-artifact@v4
+        with:
+          name: matching-synchronization-probe
+          path: ${{ runner.temp }}/matching-synchronization.json
+          retention-days: 3
