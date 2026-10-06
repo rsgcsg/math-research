@@ -17,7 +17,7 @@ T162的12与T167的13使用不同边模型；T168只有九Q均值，不冒称完
 
 | ID | 内容 | 状态 | 证据/范围 |
 |---|---|---|---|
-| T170 | T165 separator 沿七个 saturated-window 等式作显式 gauge：P/Q/R 聚合系数化为 (-263,500,0)，正系数和969，support-independent 罚项1321→633；得 `500q≤54068p+12027r−7893`，继而 `1000q≤120163p−3759` | 已证；对 `p≥1/27` 不弱于旧 lifted scalar，`p>1/27` 时严格更强 | [证明](proofs/q_boundary_gauge_lift.md)；[证书](../certificates/q_boundary_gauge_lift.json)；不提供q下界/full15/HN新界 |\n| E121 | W22 当前认证支持上全部 k<=10 的 facet-inducing q-chorded cycle 均不能切掉 C030 | 精确穷尽六类周期；严格正余量 | [证明](proofs/q_chorded_w22_audit.md)；120个已认证P/Q/R/E点对，未知点对不推断；不覆盖k>=11/fullY/full15 |
+| T170 | T165 separator 沿七个 saturated-window 等式作显式 gauge：P/Q/R 聚合系数化为 (-263,500,0)，正系数和969，support-independent 罚项1321→633；33项整数对偶证书证明633在 `Σg=167` 的实数七窗口 gauge + 统一正系数粗lifting类中最优；得 `500q≤54068p+12027r−7893`，继而 `1000q≤120163p−3759` | 已证；对 `p≥1/27` 不弱于旧 lifted scalar，`p>1/27` 时严格更强；最优性不覆盖非均匀defect或其他separator | [证明](proofs/q_boundary_gauge_lift.md)；[证书](../certificates/q_boundary_gauge_lift.json)；不提供q下界/full15/HN新界 |\n| E121 | W22 当前认证支持上全部 k<=10 的 facet-inducing q-chorded cycle 均不能切掉 C030 | 精确穷尽六类周期；严格正余量 | [证明](proofs/q_chorded_w22_audit.md)；120个已认证P/Q/R/E点对，未知点对不推断；不覆盖k>=11/fullY/full15 |
 | T001 | wheel 重复超额至少 7-k，k=5,6,7 可达 | 已证且精确枚举 | phase_checks.py；只针对该 wheel |
 | T002 | 路线图的五色 D+I、六色 D 定义 pair equality | 已证且穷举 | 100/225 对状态全部检查 |
 | C001 | 最小六色 defect 不强迫全局 matching | 显式反例 | 行增量交替 2,3；周期基本域 12 点 |
