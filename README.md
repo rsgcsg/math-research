@@ -25,7 +25,7 @@ T141–143已恢复；广义奇轮旧T160现T166，18边模型最优13现T167，
 make check                     # 全部已接入的独立检查，不执行新研究搜索
 make check-integration         # 编号、JSON、Python语法及本地文件引用
 make check-packet check-cycle-descent
-make check-q-joint-boundary-gap check-two-partition-w22-audit
+make check-q-joint-boundary-gap check-q-boundary-gauge-lift check-two-partition-w22-audit
 ```
 
 仅保留手动、只读的verify.yml；一次性导入、封存、归档工作流均已移除。
