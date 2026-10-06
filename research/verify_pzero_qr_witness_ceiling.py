@@ -123,6 +123,7 @@ def enumerate_witnesses(cert, local):
             require((col[a]==col[o])+(col[bp]==col[o])-(col[a]==col[bp])==1,
                     "PRR equality")
             witnesses.append({"Q_pair":list(Q[qi]),"R_pair":list(R[ri]),"partition":c})
+    witness_bytes=json.dumps(witnesses,sort_keys=True,separators=(",",":")).encode()
     return {
         "schema":"pzero-qr-witness-ceiling-v1",
         "research_id":"T174",
@@ -131,7 +132,8 @@ def enumerate_witnesses(cert, local):
         "pair_witnesses":len(witnesses),
         "enumeration_nodes_until_complete":nodes,
         "complete_Pzero_leaves_visited_until_complete":pzero_leaves,
-        "witnesses":witnesses,
+        "canonical_witness_list_sha256":hashlib.sha256(witness_bytes).hexdigest(),
+        "example_witness":witnesses[0],
         "scope":"For every named Q and named R event on the exact T165 saturated boundary face, there is an actual proper <=5-block W22 partition with that Q=R=1 and all 47 named P events zero. Hence no pointwise inequality Q+R<=1+sum a_P P with nonnegative coefficients can hold on this face, regardless of support size or weights. This does not rule out inequalities using multiple R events, negative coefficients, off-face lifting, full-Y constraints, or full15."
     }
 
