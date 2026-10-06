@@ -1,0 +1,61 @@
+{
+  "schema": "q-external-transport-cut-v1",
+  "source": "certificates/q_joint_boundary_gap.json",
+  "source_schema": "q-joint-boundary-gap-v1",
+  "boundary": {
+    "p": [1, 27],
+    "r": [14, 27],
+    "old_separator_coefficient_sums": {"P": -2267, "Q": 500, "R": -501},
+    "old_rhs": 2
+  },
+  "external_vertices": [7477, 5541],
+  "contacts": {
+    "7477": {
+      "E": [[875, 7477], [4641, 7477]],
+      "P": [[3477, 7477], [3483, 7477], [7477, 7479]],
+      "Q": [[31, 7477], [889, 7477]],
+      "R": [[873, 7477], [877, 7477], [7477, 7489]]
+    },
+    "5541": {
+      "E": [[235, 5541], [887, 5541], [5541, 7489]],
+      "P": [[889, 5541], [891, 5541], [5535, 5541]],
+      "Q": [[229, 5541]],
+      "R": [[233, 5541], [4641, 5541]]
+    }
+  },
+  "external_terms": [
+    {"type":"Q","pair":[31,7477],"coefficient":3},
+    {"type":"R","pair":[873,7477],"coefficient":1},
+    {"type":"R","pair":[877,7477],"coefficient":-3},
+    {"type":"Q","pair":[889,7477],"coefficient":1},
+    {"type":"P","pair":[3477,7477],"coefficient":-4},
+    {"type":"P","pair":[3483,7477],"coefficient":-1},
+    {"type":"P","pair":[7477,7479],"coefficient":-2},
+    {"type":"R","pair":[7477,7489],"coefficient":-1},
+    {"type":"Q","pair":[229,5541],"coefficient":1},
+    {"type":"R","pair":[233,5541],"coefficient":-2},
+    {"type":"P","pair":[889,5541],"coefficient":-3},
+    {"type":"P","pair":[891,5541],"coefficient":-2},
+    {"type":"P","pair":[5535,5541],"coefficient":-1}
+  ],
+  "pointwise": {"old_separator_multiplier": 2, "rhs": 2},
+  "external_coefficient_sums": {"P": -13, "Q": 5, "R": -5},
+  "combined_coefficient_sums": {"P": -4547, "Q": 1005, "R": -1007},
+  "q_upper": [6233, 9045],
+  "previous_q_upper": [1867, 2700],
+  "improvement": [887, 542700],
+  "sharp_witness": {
+    "w22_order_partition": "0120234421333314203444",
+    "colors": {"7477": 3, "5541": 0},
+    "old_separator_value": 0,
+    "external_value": 2,
+    "total_value": 2
+  },
+  "enumeration": {
+    "w22_boundary_partitions": 5648160,
+    "represented_two_vertex_extensions": 37787139,
+    "maximum_pointwise_score": 2,
+    "tight_extensions": 102
+  },
+  "scope": "T170: on the p=1/27 boundary face forced by the seven saturated W22 windows and the PRR equality, every proper five-coloring extended to the two actual Y vertices 7477 and 5541 satisfies the stated integer cut. Hence any full-Y P/Q/R-balanced law with p=1/27 has r=14/27 and q<=6233/9045. This does not prove the bound is optimal for W24, exclude the full p=1/27 face, solve arbitrary-support full15, or change the ordinary Hadwiger-Nelson bounds."
+}
