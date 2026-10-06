@@ -1,0 +1,121 @@
+name: Assemble reviewed consolidation tree
+on:
+  push:
+    branches: [maintenance/unified-results-20261006]
+    paths: [.github/workflows/assemble-reviewed-tree.yml]
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Fetch repository objects without persisted credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin '+refs/heads/*:refs/remotes/origin/*' '+refs/tags/*:refs/tags/*'
+          git checkout --detach "$SOURCE_SHA"
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+      - name: Reconstruct data-only delta and verify every object and final tree
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, json, lzma, os, re, subprocess
+          from pathlib import Path, PurePosixPath
+          REPO='rsgcsg/math-research'
+          BASE='3009eda28c26334bc8063913af74031cc7bcd9f4'
+          EXPECTED_TREE='2f78ebe47272609cb86008ae470aa6f985f984c8'
+          EXPECTED_DELTA='e864c85f8efc6c63ef6481d96c578a98aac4954b287c0333738bef1c05eab76b'
+          PARTS=['85ac955bdfc3e27df75a6f971716995bee8a6b74','6c21c3307c6b7b11c372f2fd25fd0182d5108bed','2305c9aff2f040d313e9583bba8060aa48c3e30c','43c3c0676678fbc721aa967d4b9ad341a6d5503c','4ab59786df653983639ed6a38191e2ce5ce6cb95','ce6cfcd8c4c36eea409dc936439d12ee5586e05b','7bea41bd64d99eb72572332ac4164f4e34aa412e','bb10f7696f951939dc2f813c8ab3657cf7fcc44e','b49869746566d0dc90fe36e65ddb731f3a909270']
+          PARENTS=['a0d51399b6fa9bd5b057b8cac910191a92f4f519','eaefe43b3ceec3fafd82a849db8ced2764e9e8af','335c78d1d5f9e6f9c1058601039c237b4daaf221','f986eb0a0de1e33769efa54aa73c3eac9d2ff711','86a7f6c53e0d4058fdee6990c6cc2946bbd4fad1','3dc223a711cc37dbb610b48f136a5c5308871421','fc6d2c2972f6c234f06112576610d26525795cf8']
+          def git(*args, data=None):
+              return subprocess.check_output(['git',*args],input=data)
+          def text(*args): return git(*args).decode().strip()
+          def path_ok(p):
+              q=PurePosixPath(p)
+              return bool(p) and not q.is_absolute() and '..' not in q.parts and '.git' not in q.parts and '\x00' not in p and '\n' not in p and '\t' not in p
+          source=os.environ['SOURCE_SHA']
+          ref='refs/heads/maintenance/unified-results-20261006'
+          if os.environ['GITHUB_REPOSITORY']!=REPO or os.environ['GITHUB_REF']!=ref: raise RuntimeError('wrong repository or branch')
+          if text('ls-remote','origin',ref).split()[0]!=source: raise RuntimeError('maintenance branch moved')
+          chunks=[]
+          for sha in PARTS:
+              obj=json.loads(subprocess.check_output(['gh','api',f'repos/{REPO}/git/blobs/{sha}']))
+              raw=base64.b64decode(obj['content'])
+              actual=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
+              if actual!=sha or obj['sha']!=sha: raise RuntimeError('native blob hash mismatch')
+              chunks.append(raw)
+          packed=base64.b64decode(b''.join(chunks),validate=True)
+          if hashlib.sha256(packed).hexdigest()!=EXPECTED_DELTA: raise RuntimeError('delta digest mismatch')
+          d=json.loads(lzma.decompress(packed))
+          if (d['schema'],d['base'],d['tree'])!=('exact-research-tree-delta-v1',BASE,EXPECTED_TREE): raise RuntimeError('wrong delta identity')
+          if len(d['blobs'])!=55 or len(d['entries'])!=145: raise RuntimeError('wrong delta size')
+          for b in d['blobs']:
+              if not path_ok(b['path']): raise RuntimeError('unsafe path')
+              if 'literal' in b:
+                  raw=b['literal'].encode('utf-8')
+              else:
+                  commit,old_path=b['base'].split(':',1)
+                  if commit not in [BASE,*PARENTS] or not path_ok(old_path): raise RuntimeError('invalid copy source')
+                  lines=git('show',b['base']).decode('utf-8').splitlines(keepends=True)
+                  out=[]
+                  for op in b['ops']:
+                      if isinstance(op,str): out.append(op)
+                      elif isinstance(op,list) and len(op)==2 and all(type(x) is int for x in op) and 0<=op[0]<=op[1]<=len(lines): out.append(''.join(lines[op[0]:op[1]]))
+                      else: raise RuntimeError('invalid copy range')
+                  raw=''.join(out).encode('utf-8')
+              got=git('hash-object','-w','--stdin',data=raw).decode().strip()
+              if got!=b['sha']: raise RuntimeError('reconstructed blob mismatch: '+b['path'])
+          git('read-tree',BASE)
+          paths=set()
+          for e in d['entries']:
+              p=e['path']
+              if not path_ok(p) or p in paths: raise RuntimeError('invalid entry path')
+              paths.add(p)
+              if e['mode']=='0' and e['sha']=='0'*40: git('update-index','--force-remove','--',p)
+              elif e['mode']=='100644' and re.fullmatch('[0-9a-f]{40}',e['sha']):
+                  git('cat-file','-e',e['sha']+'^{blob}')
+                  git('update-index','--add','--cacheinfo','100644',e['sha'],p)
+              else: raise RuntimeError('invalid mode or object')
+          if text('write-tree')!=EXPECTED_TREE: raise RuntimeError('reviewed tree differs')
+          # Preserve workflow files exactly as the source branch until the connector performs final cleanup.
+          git('restore','--source='+source,'--staged','--','.github/workflows')
+          changed=text('diff','--cached','--name-only',EXPECTED_TREE).splitlines()
+          if not all(p.startswith('.github/workflows/') for p in changed): raise RuntimeError('non-workflow difference')
+          git('config','user.name','github-actions[bot]')
+          git('config','user.email','41898282+github-actions[bot]@users.noreply.github.com')
+          tree=text('write-tree')
+          args=['commit-tree',tree,'-p',source]
+          for p in PARENTS: args.extend(['-p',p])
+          new=text(*args,'-m','integration: preserve all original research histories; consolidated source pending final acceptance')
+          git('update-ref','refs/heads/combined-export',new)
+          subprocess.run(['git','fsck','--full','--no-dangling'],check=True)
+          if text('ls-remote','origin',ref).split()[0]!=source: raise RuntimeError('concurrent branch update')
+          auth=base64.b64encode(('x-access-token:'+os.environ['GH_TOKEN']).encode()).decode()
+          print('::add-mask::'+auth,flush=True)
+          env=os.environ.copy()
+          env.update(GIT_CONFIG_COUNT='1',GIT_CONFIG_KEY_0='http.https://github.com/.extraheader',GIT_CONFIG_VALUE_0='AUTHORIZATION: basic '+auth)
+          # Ordinary fast-forward push: never overwrites another writer or changes main.
+          subprocess.run(['git','push','origin',new+':'+ref],env=env,check=True)
+          if text('ls-remote','origin',ref).split()[0]!=new: raise RuntimeError('publication readback')
+          report={'status':'CANDIDATE_PUBLISHED_NOT_FINAL_ACCEPTANCE','commit':new,'tree':tree,'reviewed_tree':EXPECTED_TREE,'workflow_only_difference':changed,'original_parents':PARENTS,'main_unchanged':True}
+          tmp=Path(os.environ['RUNNER_TEMP'])
+          (tmp/'candidate-publication.json').write_text(json.dumps(report,indent=2)+'\n')
+          git('bundle','create',str(tmp/'combined-source.bundle'),'--all')
+          print(json.dumps(report),flush=True)
+          PY
+      - name: Save reconstructed source history and actual publication receipt
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: unified-candidate-source
+          path: |
+            ${{ runner.temp }}/combined-source.bundle
+            ${{ runner.temp }}/candidate-publication.json
+          retention-days: 30
+          if-no-files-found: error
