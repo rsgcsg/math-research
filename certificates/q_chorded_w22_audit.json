@@ -1,0 +1,239 @@
+{
+  "schema": "q-chorded-w22-audit-v1",
+  "source": "certificates/q_joint_boundary_gap.json",
+  "moment_scale": 270,
+  "pair_weights": {
+    "P": 10,
+    "Q": 189,
+    "R": 140,
+    "E": 0
+  },
+  "cases": [
+    {
+      "k": 5,
+      "q": 2,
+      "supported_cycles": 2388,
+      "best_numerator_over_270": 280,
+      "rhs_numerator_over_270": 540,
+      "slack_numerator_over_270": 260,
+      "best_cycle": [
+        31,
+        33,
+        227,
+        231,
+        877
+      ],
+      "cycle_pair_types": [
+        "P",
+        "E",
+        "R",
+        "P",
+        "R"
+      ],
+      "q_chord_pair_types": [
+        "P",
+        "P",
+        "E",
+        "E",
+        "E"
+      ]
+    },
+    {
+      "k": 7,
+      "q": 2,
+      "supported_cycles": 26181,
+      "best_numerator_over_270": 430,
+      "rhs_numerator_over_270": 810,
+      "slack_numerator_over_270": 380,
+      "best_cycle": [
+        31,
+        33,
+        875,
+        227,
+        231,
+        229,
+        877
+      ],
+      "cycle_pair_types": [
+        "P",
+        "R",
+        "P",
+        "R",
+        "P",
+        "P",
+        "R"
+      ],
+      "q_chord_pair_types": [
+        "E",
+        "E",
+        "E",
+        "P",
+        "P",
+        "P",
+        "E"
+      ]
+    },
+    {
+      "k": 9,
+      "q": 2,
+      "supported_cycles": 295740,
+      "best_numerator_over_270": 609,
+      "rhs_numerator_over_270": 1080,
+      "slack_numerator_over_270": 471,
+      "best_cycle": [
+        31,
+        33,
+        875,
+        227,
+        3483,
+        3477,
+        229,
+        873,
+        35
+      ],
+      "cycle_pair_types": [
+        "P",
+        "R",
+        "P",
+        "R",
+        "P",
+        "R",
+        "E",
+        "Q",
+        "R"
+      ],
+      "q_chord_pair_types": [
+        "E",
+        "E",
+        "P",
+        "E",
+        "E",
+        "P",
+        "E",
+        "R",
+        "P"
+      ]
+    },
+    {
+      "k": 7,
+      "q": 3,
+      "supported_cycles": 26181,
+      "best_numerator_over_270": 658,
+      "rhs_numerator_over_270": 1080,
+      "slack_numerator_over_270": 422,
+      "best_cycle": [
+        31,
+        227,
+        5535,
+        231,
+        33,
+        877,
+        889
+      ],
+      "cycle_pair_types": [
+        "P",
+        "Q",
+        "R",
+        "P",
+        "E",
+        "R",
+        "Q"
+      ],
+      "q_chord_pair_types": [
+        "E",
+        "E",
+        "E",
+        "E",
+        "P",
+        "E",
+        "P"
+      ]
+    },
+    {
+      "k": 9,
+      "q": 4,
+      "supported_cycles": 295740,
+      "best_numerator_over_270": 987,
+      "rhs_numerator_over_270": 1620,
+      "slack_numerator_over_270": 633,
+      "best_cycle": [
+        31,
+        877,
+        3483,
+        235,
+        231,
+        33,
+        7479,
+        887,
+        889
+      ],
+      "cycle_pair_types": [
+        "R",
+        "P",
+        "Q",
+        "R",
+        "P",
+        "Q",
+        "R",
+        "P",
+        "Q"
+      ],
+      "q_chord_pair_types": [
+        "E",
+        "E",
+        "P",
+        "E",
+        "E",
+        "P",
+        "E",
+        "E",
+        "P"
+      ]
+    },
+    {
+      "k": 10,
+      "q": 3,
+      "supported_cycles": 243888,
+      "best_numerator_over_270": 997,
+      "rhs_numerator_over_270": 1620,
+      "slack_numerator_over_270": 623,
+      "best_cycle": [
+        31,
+        227,
+        5535,
+        231,
+        33,
+        7479,
+        4641,
+        229,
+        877,
+        889
+      ],
+      "cycle_pair_types": [
+        "P",
+        "Q",
+        "R",
+        "P",
+        "Q",
+        "P",
+        "R",
+        "P",
+        "R",
+        "Q"
+      ],
+      "q_chord_pair_types": [
+        "E",
+        "E",
+        "E",
+        "E",
+        "P",
+        "E",
+        "E",
+        "P",
+        "E",
+        "P"
+      ]
+    }
+  ],
+  "scope": "Exact exhaustive audit of the smallest facet-inducing q-chorded k-cycle inequalities with support size at most 10 whose every cycle/chord pair lies in the 120 already-certified W22 P/Q/R/E pairs. No unclassified pair is inferred. None separates the C030 fractional cover from proper five-block laws. This does not audit support size >=11, generalized set-valued q-chorded families, full Y, full15 feasibility, or the Hadwiger-Nelson chromatic number."
+}
