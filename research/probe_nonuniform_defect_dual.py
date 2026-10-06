@@ -136,7 +136,7 @@ def main():
         x,S=solve_lp(rows)
         best,w,z,T,L,nodes,ex=oracle(source,base,units,x)
         history.append({"iteration":it,"S":S,"x":[float(v) for v in x],
-                        "oracle":best,"z":z,"T":T,"Lprime":L,"nodes":nodes})
+                        "oracle":best,"z":z,"T":T,"Lprime":L,"nodes":nodes,"partition":w})
         print(json.dumps(history[-1],sort_keys=True),flush=True)
         if best<=1e-7:
             out={"status":"FOUND","S":S,"x":[float(v) for v in x],
