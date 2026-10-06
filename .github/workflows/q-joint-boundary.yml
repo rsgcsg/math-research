@@ -3,10 +3,28 @@ on:
   push:
     branches: [research/q-defect-20261006]
     paths: [.github/workflows/q-joint-boundary.yml, '.research-transfer/q-joint-20261006/**']
+  pull_request:
+    paths:
+      - '.github/workflows/q-joint-boundary.yml'
+      - 'research/verify_q_chorded_w22_audit.py'
+      - 'certificates/q_chorded_w22_audit.json'
+      - 'certificates/q_joint_boundary_gap.json'
 permissions:
   contents: write
 jobs:
+  q-chorded-audit:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Replay exact W22 q-chorded audit
+        run: python3 -S research/verify_q_chorded_w22_audit.py
   publish:
+    if: github.event_name == 'push'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
