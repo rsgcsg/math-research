@@ -741,3 +741,75 @@ T158使用固定c36几何及P/R输入，不将相同距离自动当作运输分�
 - [Letchford–Sørensen2024作者会议稿](https://eventos.ull.es/_files/_event/_111018/_editorFiles/file/ConferenceProgram/paper-010.pdf)及[2025更正](https://doi.org/10.1016/j.disopt.2024.100876)：核对half-chorded旧精确分离声明的修正和更大合法类的区别。本文q=2研究不把half-chorded的旧结论照搬过来；2411.03407v1仍只是这里采用的有效式／面分类来源，并非分离算法来源。
 
 T159的贡献范围是固定实际输入上的完整结构核查及明确行族的精确参数区域。通用星形引理、六点冲突校准和完整70350个C节点检查均在本地给出；未声称full15或HN突破。
+
+
+## 2026-10-06 整合保留：各分支新增记录（历史编号见 ID_ALIASES）
+
+<!-- imported from eaefe43b3ceec3fafd82a849db8ced2764e9e8af; legacy statement scope retained -->
+## 2026-10-06 高阶 clique-partition 面族
+
+- [Letchford–Sørensen, *New Facets of the Clique Partitioning Polytope*, ORL 59 (2025) 107242](https://doi.org/10.1016/j.orl.2025.107242)：读取作者稿中 generalised odd wheel (GOW) 与 generalised 2-chorded odd cycle (G2COC) 的定义、有效性证明及 facet 陈述。本仓库 T160 只把 GOW 有效性作为外部输入，再独立证明其对 equimarginal single-independent-set moment 自动成立；E120 的七点枚举为本地精确重放。没有把外部 facet 定理登记为本地原创，也没有据此声称 HN 新界。
+- [Andres–Irmai–Naumann, *Chorded cycle facets of the clique partitioning polytope*, Discrete Applied Mathematics 378 (2026) 662–670](https://doi.org/10.1016/j.dam.2025.09.020)：作为普通 chorded-cycle 家族背景；C028 已有独立自足证明与有限校准，本轮不把该文计算当证书。
+
+
+<!-- imported from f986eb0a0de1e33769efa54aa73c3eac9d2ff711; legacy statement scope retained -->
+
+
+## 2026-09-28：T141/E113来源与证据层级
+
+- PySAT官方`pysat.solvers`文档：本轮读取proof logging、`solve_limited`及冲突预算接口；
+  https://pysathq.github.io/docs/html/api/solvers.html 。当前页面标题版本与本轮安装的
+  python-sat 1.9.dev15未必相同，实际版本由搜索记录给出。只把官方接口解释作为来源，不以文档认证求解结果。
+- Cruz-Filipe等，Efficient Certified RAT Verification，https://arxiv.org/abs/1612.02353 ：
+  本轮重新打开作者摘要页作证明格式来源参照；本轮未重新逐页阅读或重放其形式化开发。
+  本库仍只接受明确支持的hinted-RUP子集，独立重放自己保存的反证。
+- Haugland，https://arxiv.org/abs/2608.04542 ：本轮重新核对作者页；
+  不是新的普通六色下界。本轮不重复扩大此前v2的阅读声明，也不重放外部完整构造。
+- T141多数原子引理和指定Γ的两原子结论在本库完整证明/证书中处理，不依赖未经读取的外部数学定理，
+  不主张这些一般思想的文献首创。
+
+T142的有限阶兼容图循环界及C025的极点结论采用正文中的自足有限证明；
+没有把支持匹配视作自动满足几何群关系，也不宣称这些一般线性/循环思想的文献优先权。
+同日远端T140/E112的热带来源记录按其原提交保留；本轮读取其仓库书面证明并重放新增入口，
+不冒称重新阅读了该并行轮次所引外部PDF。
+
+
+## 2026-09-28：T143/E114 的边际延拓参照（仅摘要层）
+
+- J.-R. Chazottes, J.-M. Gambaudo, M. Hochman, E. Ugalde,
+  [On the finite-dimensional marginals of shift-invariant measures, v2](https://arxiv.org/abs/1011.2442v2).
+  本轮读取作者页摘要及版本信息，区分局部不变多面体和全局可延拓边际；未读全篇，未用其高维结论判断HN。
+- Marcus Pivato,
+  [Building a Stationary Stochastic Process From a Finite-dimensional Marginal](https://arxiv.org/abs/math/0108081).
+  作者页摘要作为平稳边际延拓的结构参照，不把一般不可判定性搬到当前有限几何问题。
+- [Haugland 2608.04542v2 引言](https://arxiv.org/html/2608.04542v2)重新核对普通5/7界。
+
+T143的实际11点构造、十个半空间、13个三色见证、任意权支撑函数和原Y下降均在本库自足证明。
+新编号不宣称文献优先权；上述摘要参照不是未读定理的黑箱输入。
+
+<!-- imported from 86a7f6c53e0d4058fdee6990c6cc2946bbd4fad1; legacy statement scope retained -->
+
+
+## 2026-09-28：全15域支持认证的外部输入范围
+
+- PySAT官方API：https://pysathq.github.io/docs/html/api/solvers.html 。本次打开页面标题为1.9.dev12；实际搜索使用既有来源绑定轮子1.9.dev15，二者不混同。证明导出问题另由安装源码和本地最小例证实，不把在线文档视作该特定缺陷的声明。
+- Efficient Certified RAT Verification：https://arxiv.org/abs/1612.02353 。本次只使用RUP思想及既有独立检查器，不声称完整RAT实现或形式化验证。
+- Haugland：https://arxiv.org/html/2608.04542v2 。本次重新打开的2026无Moser-spindle五色构造来源，用于核对普通5/7范围；不把其他染色指标混同为普通新界。
+- 远端4c3e2313902b40bbfbf63cbc673a45e2951f991f的加权η正规形已阅读；新全15域证明自足重述其所需部分。未称该分支已经合并。
+
+<!-- imported from fc6d2c2972f6c234f06112576610d26525795cf8; legacy statement scope retained -->
+
+
+## 2026-09-29：本轮跨结构参照与实际阅读范围
+
+- [Alon–Alweiss, arXiv:1905.10483v2](https://arxiv.org/abs/1905.10483v2)：
+  本次打开作者摘要，使用proper coloring portfolio/product dimension术语；未依赖渐近定理。
+  本轮另需单射签名且每个因子固定K5，由56份实际全Y词独立认证。
+- [Bradley-Williams–Cameron–Hubička–Konečný, arXiv:2311.07995v3](https://arxiv.org/abs/2311.07995v3)：
+  本次阅读作者摘要的普通图EPPA定义及版本/发表信息（JCTB170,2025），没有调用其规模界。
+  64点单位Q6的颜色/概率矛盾是本库自足证明，不将图部分同构冒充真实部分等距。
+- [Abrishami等, arXiv:2411.01951v3](https://arxiv.org/abs/2411.01951v3)：
+  本次打开作者摘要与HTML，当前新增论证不调用其条件定理。周期性不能无条件假设；
+  本库三角格公式仅作为有明确全边证书的正构造，三个斜率的失败不否定全部五染色。
+
+原5/7界仍据已核对的普通HN来源。2026年高维覆盖/分数或地图型结果不被混记为平面普通新界。

@@ -1,0 +1,484 @@
+{
+  "schema": "motion-packet-search-observations-v1",
+  "date": "2026-09-28",
+  "input_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "queries": [
+    {
+      "schema": "motion-packet-search-v1",
+      "support": 2,
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14,
+        2
+      ],
+      "conflict_budget": 6000,
+      "environment": {
+        "python": "3.13.5",
+        "python_sat": "1.9.dev15",
+        "solver": "cadical195"
+      },
+      "full_law_claim": false,
+      "statistics": {
+        "restarts": 320,
+        "conflicts": 6001,
+        "decisions": 115041,
+        "propagations": 13022466
+      },
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "elapsed_seconds": 11.619969728000115,
+      "scope": "Only the listed motions and fixed support. NO_SINGLETON does not mean no distribution; a multiword positive law needs full-domain replay."
+    },
+    {
+      "schema": "motion-packet-search-v1",
+      "support": 2,
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14,
+        0
+      ],
+      "conflict_budget": 6000,
+      "environment": {
+        "python": "3.13.5",
+        "python_sat": "1.9.dev15",
+        "solver": "cadical195"
+      },
+      "full_law_claim": false,
+      "statistics": {
+        "restarts": 574,
+        "conflicts": 6000,
+        "decisions": 369708,
+        "propagations": 18636712
+      },
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "elapsed_seconds": 11.14439474400001,
+      "scope": "Only the listed motions and fixed support. NO_SINGLETON does not mean no distribution; a multiword positive law needs full-domain replay."
+    },
+    {
+      "schema": "motion-packet-search-v1",
+      "support": 2,
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14,
+        4
+      ],
+      "conflict_budget": 6000,
+      "environment": {
+        "python": "3.13.5",
+        "python_sat": "1.9.dev15",
+        "solver": "cadical195"
+      },
+      "full_law_claim": false,
+      "statistics": {
+        "restarts": 634,
+        "conflicts": 6000,
+        "decisions": 198632,
+        "propagations": 12911164
+      },
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "elapsed_seconds": 12.321881819000055,
+      "scope": "Only the listed motions and fixed support. NO_SINGLETON does not mean no distribution; a multiword positive law needs full-domain replay."
+    },
+    {
+      "schema": "motion-packet-search-v1",
+      "support": 2,
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14,
+        12
+      ],
+      "conflict_budget": 6000,
+      "environment": {
+        "python": "3.13.5",
+        "python_sat": "1.9.dev15",
+        "solver": "cadical195"
+      },
+      "full_law_claim": false,
+      "statistics": {
+        "restarts": 454,
+        "conflicts": 6000,
+        "decisions": 79268,
+        "propagations": 8858609
+      },
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "elapsed_seconds": 9.799493494999979,
+      "scope": "Only the listed motions and fixed support. NO_SINGLETON does not mean no distribution; a multiword positive law needs full-domain replay."
+    },
+    {
+      "schema": "motion-packet-search-v1",
+      "support": 2,
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14,
+        1
+      ],
+      "conflict_budget": 6000,
+      "environment": {
+        "python": "3.13.5",
+        "python_sat": "1.9.dev15",
+        "solver": "cadical195"
+      },
+      "full_law_claim": false,
+      "statistics": {
+        "restarts": 569,
+        "conflicts": 6000,
+        "decisions": 170648,
+        "propagations": 13030107
+      },
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "elapsed_seconds": 10.753121698999848,
+      "scope": "Only the listed motions and fixed support. NO_SINGLETON does not mean no distribution; a multiword positive law needs full-domain replay."
+    },
+    {
+      "schema": "motion-packet-search-v1",
+      "support": 2,
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14,
+        3
+      ],
+      "conflict_budget": 6000,
+      "environment": {
+        "python": "3.13.5",
+        "python_sat": "1.9.dev15",
+        "solver": "cadical195"
+      },
+      "full_law_claim": false,
+      "statistics": {
+        "restarts": 757,
+        "conflicts": 6000,
+        "decisions": 121508,
+        "propagations": 12576819
+      },
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "elapsed_seconds": 14.23379576299999,
+      "scope": "Only the listed motions and fixed support. NO_SINGLETON does not mean no distribution; a multiword positive law needs full-domain replay."
+    },
+    {
+      "schema": "motion-packet-search-v1",
+      "support": 2,
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14,
+        8
+      ],
+      "conflict_budget": 6000,
+      "environment": {
+        "python": "3.13.5",
+        "python_sat": "1.9.dev15",
+        "solver": "cadical195"
+      },
+      "full_law_claim": false,
+      "statistics": {
+        "restarts": 498,
+        "conflicts": 6002,
+        "decisions": 115912,
+        "propagations": 9665171
+      },
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "elapsed_seconds": 9.813377482000078,
+      "scope": "Only the listed motions and fixed support. NO_SINGLETON does not mean no distribution; a multiword positive law needs full-domain replay."
+    },
+    {
+      "schema": "motion-packet-search-v1",
+      "support": 2,
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14,
+        10
+      ],
+      "conflict_budget": 6000,
+      "environment": {
+        "python": "3.13.5",
+        "python_sat": "1.9.dev15",
+        "solver": "cadical195"
+      },
+      "full_law_claim": false,
+      "statistics": {
+        "restarts": 765,
+        "conflicts": 6000,
+        "decisions": 140402,
+        "propagations": 10667505
+      },
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "elapsed_seconds": 9.667676775000018,
+      "scope": "Only the listed motions and fixed support. NO_SINGLETON does not mean no distribution; a multiword positive law needs full-domain replay."
+    },
+    {
+      "schema": "motion-packet-search-v1",
+      "support": 2,
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14,
+        7
+      ],
+      "conflict_budget": 6000,
+      "environment": {
+        "python": "3.13.5",
+        "python_sat": "1.9.dev15",
+        "solver": "cadical195"
+      },
+      "full_law_claim": false,
+      "statistics": {
+        "restarts": 137,
+        "conflicts": 6000,
+        "decisions": 53769,
+        "propagations": 7136511
+      },
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "elapsed_seconds": 8.703824493999946,
+      "scope": "Only the listed motions and fixed support. NO_SINGLETON does not mean no distribution; a multiword positive law needs full-domain replay."
+    }
+  ],
+  "scope": "Nine completed fixed-two-word bounded queries. All are UNKNOWN, not certified impossibility claims.",
+  "additional_bounded_searches": {
+    "seven-motion-glucose.json": {
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14,
+        7
+      ],
+      "support": 2,
+      "solver": "glucose3",
+      "budget": 50000,
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "statistics": {
+        "restarts": 247,
+        "conflicts": 67191,
+        "decisions": 437186,
+        "propagations": 88979480
+      },
+      "elapsed_seconds": 21.526650772000266
+    },
+    "three-packet.json": {
+      "support": 3,
+      "motions": [
+        5,
+        6,
+        9,
+        11,
+        13,
+        14
+      ],
+      "conflict_budget": 30000,
+      "status": "UNKNOWN_FIXED_SUPPORT",
+      "statistics": {
+        "restarts": 2768,
+        "conflicts": 30003,
+        "decisions": 859907,
+        "propagations": 46523999
+      },
+      "seconds": 27.98617838600012
+    },
+    "cyclic-packet-trials.json": [
+      {
+        "support": 3,
+        "motions": [
+          5,
+          6,
+          9,
+          11,
+          13,
+          14
+        ],
+        "fixed_support_action": "identity_except_one_plus_eta_2_full_cycle",
+        "solver": "glucose3",
+        "budget": 30000,
+        "status": "UNKNOWN_RESTRICTED_ACTION",
+        "statistics": {
+          "restarts": 59,
+          "conflicts": 30959,
+          "decisions": 43358,
+          "propagations": 8210182
+        },
+        "seconds": 4.94062914899996
+      },
+      {
+        "support": 4,
+        "motions": [
+          5,
+          6,
+          9,
+          11,
+          13,
+          14
+        ],
+        "fixed_support_action": "identity_except_one_plus_eta_2_full_cycle",
+        "solver": "glucose3",
+        "budget": 30000,
+        "status": "UNKNOWN_RESTRICTED_ACTION",
+        "statistics": {
+          "restarts": 57,
+          "conflicts": 30214,
+          "decisions": 252442,
+          "propagations": 17293042
+        },
+        "seconds": 7.7588884819997475
+      }
+    ]
+  },
+  "localized_candidate_search": {
+    "start_used_vertices": 1162,
+    "start_listed_unit_edges": 3215,
+    "intermediate_sizes": [
+      59,
+      33
+    ],
+    "final_vertices": 29,
+    "final_actual_edges": 30,
+    "final_independent_certificate": "certificates/localized_motion_packet.json",
+    "scope": "Heuristic UNSAT/core extraction used for discovery only. Final 29-point denial, all deletion witnesses and actual geometry have separate exact verification."
+  },
+  "local_lower_color_queries": {
+    "results": [
+      {
+        "colors": 3,
+        "support": 2,
+        "budget": 10000,
+        "status": "UNSAT_FIXED_SUPPORT_UNCERTIFIED",
+        "statistics": {
+          "restarts": 41,
+          "conflicts": 2219,
+          "decisions": 2860,
+          "propagations": 233590
+        },
+        "elapsed": 0.06212831599987112
+      },
+      {
+        "colors": 4,
+        "support": 2,
+        "budget": 10000,
+        "status": "UNKNOWN",
+        "statistics": {
+          "restarts": 478,
+          "conflicts": 10000,
+          "decisions": 19897,
+          "propagations": 1085716
+        },
+        "elapsed": 0.3533216609998817
+      },
+      {
+        "colors": 3,
+        "support": 3,
+        "budget": 10000,
+        "status": "UNKNOWN",
+        "statistics": {
+          "restarts": 400,
+          "conflicts": 10001,
+          "decisions": 17645,
+          "propagations": 834019
+        },
+        "elapsed": 0.33655544300017937
+      },
+      {
+        "colors": 4,
+        "support": 3,
+        "budget": 10000,
+        "status": "UNKNOWN",
+        "statistics": {
+          "restarts": 626,
+          "conflicts": 10000,
+          "decisions": 33097,
+          "propagations": 1100969
+        },
+        "elapsed": 0.3487940879999769
+      }
+    ],
+    "scope": "29-point local system only. No negative result independently certified; not a chromatic-number-of-laws classification."
+  },
+  "individual_three_patterns_Y_extensions": [
+    {
+      "local_atom": 0,
+      "status": "SAT_FREE_Y_EXTENSION",
+      "statistics": {
+        "restarts": 14,
+        "conflicts": 295,
+        "decisions": 35810,
+        "propagations": 444225
+      },
+      "elapsed_seconds": 0.5707601160002014
+    },
+    {
+      "local_atom": 1,
+      "status": "SAT_FREE_Y_EXTENSION",
+      "statistics": {
+        "restarts": 37,
+        "conflicts": 630,
+        "decisions": 40403,
+        "propagations": 570791
+      },
+      "elapsed_seconds": 0.5028629429998546
+    },
+    {
+      "local_atom": 2,
+      "status": "SAT_FREE_Y_EXTENSION",
+      "statistics": {
+        "restarts": 20,
+        "conflicts": 425,
+        "decisions": 37870,
+        "propagations": 494110
+      },
+      "elapsed_seconds": 0.45336574300017674
+    }
+  ],
+  "prescribed_three_pattern_Gamma_query": {
+    "status": "UNKNOWN_FIXED_SUPPORT",
+    "support": 3,
+    "motions": [
+      5,
+      6,
+      9,
+      11,
+      13,
+      14
+    ],
+    "budget": 6000,
+    "statistics": {
+      "restarts": 429,
+      "conflicts": 6002,
+      "decisions": 228005,
+      "propagations": 15709798
+    },
+    "elapsed_seconds": 10.738548305000222,
+    "scope": "Fixed-three support query with each V partition prescribed from C025; not a full-Y15 denial."
+  }
+}

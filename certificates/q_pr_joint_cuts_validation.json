@@ -1,0 +1,98 @@
+{
+  "certificate_sha256": "5753d18f691eab2b5b04e54d21762f063e8478daff72c013558535144b44d056",
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "local_q_one_projection": {
+    "actual_vertices": 22,
+    "minimum_p": "1/14",
+    "r_at_minimum": "15/28",
+    "typed_pairs": {
+      "E": 34,
+      "P": 47,
+      "Q": 11,
+      "R": 31
+    },
+    "vertices": [
+      {
+        "atoms": 72,
+        "denominator": 11088,
+        "p": "1/14",
+        "r": "15/28"
+      },
+      {
+        "atoms": 24,
+        "denominator": 24,
+        "p": "1/4",
+        "r": "0"
+      },
+      {
+        "atoms": 12,
+        "denominator": 18,
+        "p": "1/3",
+        "r": "0"
+      },
+      {
+        "atoms": 22,
+        "denominator": 84,
+        "p": "1/7",
+        "r": "4/7"
+      }
+    ]
+  },
+  "local_squared_distances": 462,
+  "necessary_inequalities": [
+    "6p+q+2r <= 3",
+    "p-q+2r <= 1",
+    "r-q <= 1/3",
+    "36p+12r+81(1-q) >= 9",
+    "14p+27(1-q) >= 1"
+  ],
+  "q_one_necessary_interval_p": [
+    "1/14",
+    "1/3"
+  ],
+  "quotient": {
+    "Q_links": 9,
+    "actual_vertices": 21,
+    "classes": 12,
+    "individual_event_orbit_checks": 240,
+    "polygon_vertices": 5,
+    "proper_partitions": 14400,
+    "typed_pairs": 66
+  },
+  "rejections": [
+    "geometry-binding",
+    "false-outer-point",
+    "weakened-facet",
+    "false-vertex",
+    "bad-seven-coloring",
+    "missing-quotient-pair",
+    "wrong-pair-type",
+    "missing-Q-link",
+    "fake-Q-link",
+    "bad-quotient-coloring",
+    "stronger-uncertified-penalty",
+    "float-in-facet",
+    "false-attainment-probability",
+    "false-attainment-coloring",
+    "false-local-sharpness",
+    "boolean-point",
+    "optimized-mode"
+  ],
+  "schema": "q-pr-joint-cuts-replay-v1",
+  "scope": "Exact seven-point P/Q/R polytope; exact 21-point q=1 P/R pentagon and 22-point q=1 P/R quadrilateral; necessary inequalities for any full-Y pair-transport law. No full15 infeasibility, no global HN bound, no claimed literature priority.",
+  "seven": {
+    "facets": 9,
+    "individual_event_orbit_checks": 81,
+    "proper_partitions": 69,
+    "unit_edges": 9,
+    "vertices": 7,
+    "vertices_of_polytope": 9
+  },
+  "status": "PASS",
+  "transport_component_sizes": {
+    "P": 1860,
+    "Q": 780,
+    "R": 1472
+  },
+  "uses_sat_or_floating_point": false
+}

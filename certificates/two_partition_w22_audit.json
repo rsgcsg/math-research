@@ -1,0 +1,111 @@
+{
+  "schema": "two-partition-w22-audit-v1",
+  "source": "certificates/q_joint_boundary_gap.json",
+  "moment_scale": 270,
+  "pair_weights": {
+    "P": 10,
+    "Q": 189,
+    "R": 140,
+    "E": 0
+  },
+  "audit": {
+    "known_support_clique_counts": {
+      "2": 120,
+      "3": 277,
+      "4": 323,
+      "5": 199,
+      "6": 61,
+      "7": 7
+    },
+    "two_partition_inequalities": 8529,
+    "facet_size_unequal_cases": 6830,
+    "tight_inequalities": 1,
+    "tight_facet_cases": 1,
+    "global_minimum": {
+      "clique": [
+        229,
+        305,
+        4641
+      ],
+      "A": [
+        229,
+        305
+      ],
+      "B": [
+        4641
+      ],
+      "lhs_over_270": 270,
+      "rhs_over_270": 270,
+      "slack_over_270": 0
+    },
+    "tight_rows": [
+      {
+        "clique": [
+          229,
+          305,
+          4641
+        ],
+        "A": [
+          229,
+          305
+        ],
+        "B": [
+          4641
+        ],
+        "lhs_over_270": 270,
+        "rhs_over_270": 270
+      }
+    ],
+    "strata": {
+      "2:1-1": {
+        "count": 120,
+        "minimum_slack_over_270": 81
+      },
+      "3:1-2": {
+        "count": 831,
+        "minimum_slack_over_270": 0
+      },
+      "4:1-3": {
+        "count": 1292,
+        "minimum_slack_over_270": 91
+      },
+      "4:2-2": {
+        "count": 969,
+        "minimum_slack_over_270": 211
+      },
+      "5:1-4": {
+        "count": 995,
+        "minimum_slack_over_270": 130
+      },
+      "5:2-3": {
+        "count": 1990,
+        "minimum_slack_over_270": 211
+      },
+      "6:1-5": {
+        "count": 366,
+        "minimum_slack_over_270": 180
+      },
+      "6:2-4": {
+        "count": 915,
+        "minimum_slack_over_270": 230
+      },
+      "6:3-3": {
+        "count": 610,
+        "minimum_slack_over_270": 330
+      },
+      "7:1-6": {
+        "count": 49,
+        "minimum_slack_over_270": 470
+      },
+      "7:2-5": {
+        "count": 147,
+        "minimum_slack_over_270": 400
+      },
+      "7:3-4": {
+        "count": 245,
+        "minimum_slack_over_270": 330
+      }
+    }
+  },
+  "scope": "Exact exhaustive audit of every 2-partition inequality whose support A union B is a clique of the 120 already-certified W22 P/Q/R/E pairs. C030 violates none. Among 8,529 inequalities, 6,830 have unequal side sizes (the classical facet condition), and the unique tight inequality is the actual PRR triangle {229,305,4641} split 2+1. This does not cover inequalities using unclassified W22 pairs, genuinely multi-window facets, full Y, full15 feasibility, or the Hadwiger-Nelson chromatic number."
+}

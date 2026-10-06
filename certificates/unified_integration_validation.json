@@ -1,0 +1,587 @@
+{
+  "schema": "hn-unified-integration-v1",
+  "status": "PASS",
+  "date": "2026-10-06",
+  "tested_commit": "7f630ef6686daa078c2aa637b4d6255d81f7ee3f",
+  "run_id": "37431407795",
+  "source_files": 356,
+  "tested_source_manifest_sha256": "328652e0ec6c9d8dd9d417f269fe3faeea40f21b590a4c94435c23e5b4d83231",
+  "final_source_manifest_sha256": "8d68e5bbfe230042b3dd7ece4882187b4772820d8795456416c7e3334af27a70",
+  "command_count": 70,
+  "commands": [
+    {
+      "index": 0,
+      "command": "python3 -S research/check_integration.py",
+      "returncode": 0,
+      "seconds": 1.869,
+      "log_sha256": "5b6e49566e079177ed677f232934ee6c1007fd3836205419219e3222679fca1c"
+    },
+    {
+      "index": 1,
+      "command": "python3 -S research/audit_full_law_preparation.py --cache certificates/Y_full_geometry.json.gz",
+      "returncode": 0,
+      "seconds": 48.826,
+      "log_sha256": "7cc3eb20beba80da21eeb6cf73590f4e7da79d7b51f322942b487a78197a5955"
+    },
+    {
+      "index": 2,
+      "command": "python3 -S research/verify_q_joint_boundary_gap.py --self-test",
+      "returncode": 0,
+      "seconds": 19.344,
+      "log_sha256": "dafde22c788bc7024d76c3ae49ff3c18a9e57978a7308303f3d4ac13230453a7"
+    },
+    {
+      "index": 3,
+      "command": "python3 -S research/verify_two_partition_w22_audit.py",
+      "returncode": 0,
+      "seconds": 0.114,
+      "log_sha256": "2a7482a61adbb5b70b08e75a315860f3cc8b2f04fd9382eee5c4952feb80f143"
+    },
+    {
+      "index": 4,
+      "command": "python3 -S research/verify_q_chorded_w22_audit.py",
+      "returncode": 0,
+      "seconds": 104.228,
+      "log_sha256": "87ec097d90102ef6e6bcd003a1bc3e7a4685ae4705f87b7fd7ac9f60106a6e1f"
+    },
+    {
+      "index": 5,
+      "command": "python3 -c 'import sys; sys.exit(\"Python >=3.10 required; activate .venv before make check\" if sys.version_info < (3, 10) else 0)'",
+      "returncode": 0,
+      "seconds": 0.016,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "index": 6,
+      "command": "python3 -S research/verify_scc_calibration.py",
+      "returncode": 0,
+      "seconds": 0.032,
+      "log_sha256": "2f5fb1db046bdd10a525a0f90678531e7a1a72e1acf14abea17a41ed0bf0ddac"
+    },
+    {
+      "index": 7,
+      "command": "python3 -S research/verify_free_group_star_calibration.py",
+      "returncode": 0,
+      "seconds": 0.032,
+      "log_sha256": "d6319f8a4c198f01095114fa82c13b0affdf2742ba667c0ff33aea912b01321f"
+    },
+    {
+      "index": 8,
+      "command": "python3 -S research/verify_four_port_scc.py",
+      "returncode": 0,
+      "seconds": 0.616,
+      "log_sha256": "c6e29558390abd4341967eb511c95e35240f3e387bc78d6e570d08412cafdb5d"
+    },
+    {
+      "index": 9,
+      "command": "python3 -S research/verify_g14_pair_orbit_law.py",
+      "returncode": 0,
+      "seconds": 49.181,
+      "log_sha256": "c9b58ef99bb9985a6e99c843dafc1dbd303c2462ae2844e2ce335fb48009739c"
+    },
+    {
+      "index": 10,
+      "command": "python3 -S research/test_g14_pair_orbit_forest.py",
+      "returncode": 0,
+      "seconds": 0.164,
+      "log_sha256": "029723e5bc0847170d11c795afda68f4f367326160f580be1e7ae5d8397216be"
+    },
+    {
+      "index": 11,
+      "command": "python3 -S research/verify_g14_pair_port4_common_law.py",
+      "returncode": 0,
+      "seconds": 38.396,
+      "log_sha256": "a9490b1f1004c340e4a47d70d6d675b96eb217b49cbfa27990b319b4c381ce01"
+    },
+    {
+      "index": 12,
+      "command": "python3 -S research/verify_cubic_unit_directions.py",
+      "returncode": 0,
+      "seconds": 0.064,
+      "log_sha256": "b9b34a86540495146f5251a5b5e0309e8f7e91c2f7c8e6c4a1d4224bd30b7821"
+    },
+    {
+      "index": 13,
+      "command": "python3 -S research/verify_g14_pr_transport_bound.py",
+      "returncode": 0,
+      "seconds": 49.338,
+      "log_sha256": "457ffa3044a8c6042dd33e14d77aa70c6f8ea5fc97881c70a89181ea36357a36"
+    },
+    {
+      "index": 14,
+      "command": "python3 -S research/verify_pentagon_cp_partition_gap.py",
+      "returncode": 0,
+      "seconds": 0.032,
+      "log_sha256": "1e5174d31820cd2f5dbcfc7b07b6b763c5cc8b4c1bef9349d6194f4c0aa00c3d"
+    },
+    {
+      "index": 15,
+      "command": "python3 -S research/verify_nine_point_pr_polygon.py",
+      "returncode": 0,
+      "seconds": 0.365,
+      "log_sha256": "44ebaea8b161e2c05ba2e3a39f8035fc176331daf4bb977561d2074595f68c5b"
+    },
+    {
+      "index": 16,
+      "command": "python3 -S research/test_nine_point_pr_polygon.py",
+      "returncode": 0,
+      "seconds": 1.518,
+      "log_sha256": "51f6923f9ef33862861023f69b50ff45c60c11bfd7998f4df1d211256964fa2f"
+    },
+    {
+      "index": 17,
+      "command": "python3 -S research/verify_pr_matching_window_ceiling.py",
+      "returncode": 0,
+      "seconds": 2.522,
+      "log_sha256": "fdb76cecd214a28feb3a9700393817f7a2c31a11232c7a4d9a49cf6ca2ae446d"
+    },
+    {
+      "index": 18,
+      "command": "python3 -S research/verify_cyclic_interval_kernel.py",
+      "returncode": 0,
+      "seconds": 2.869,
+      "log_sha256": "60597dc24f60a7bededf3844d40c4184d03b1c5677d474441cb3c47b39b348a6"
+    },
+    {
+      "index": 19,
+      "command": "python3 -S research/verify_star_odd_cycle_lemma.py",
+      "returncode": 0,
+      "seconds": 0.315,
+      "log_sha256": "d8498731a9d333658d20ddba4ba88187f00281ac5a567e3d69ba977307c55764"
+    },
+    {
+      "index": 20,
+      "command": "python3 -S research/verify_bw_pr_odd_cycle_ceiling.py",
+      "returncode": 0,
+      "seconds": 19.77,
+      "log_sha256": "eb659eda12f42189c88db724ac125fb9d0a66c117ced3afe20a51a86dea02a50"
+    },
+    {
+      "index": 21,
+      "command": "python3 -S research/verify_hidden_pair_elimination.py",
+      "returncode": 0,
+      "seconds": 0.064,
+      "log_sha256": "3ab4be0ee98a390f1f67dc5bcfb6cc9a3b7aa65680c9dbe09e30cb68b568fcfd"
+    },
+    {
+      "index": 22,
+      "command": "python3 -S research/verify_q_pr_coupling_audit.py",
+      "returncode": 0,
+      "seconds": 0.816,
+      "log_sha256": "08857b599cc25956eacd56166e14b68487459544fba1a654a4c3dcd5218e4526"
+    },
+    {
+      "index": 23,
+      "command": "python3 -S research/check_transport_projection.py --self-test",
+      "returncode": 0,
+      "seconds": 2.12,
+      "log_sha256": "4f946aa92fddec898e7f2c7b115be4ddeaba940cf799c6cda27571f7a51b6413"
+    },
+    {
+      "index": 24,
+      "command": "python3 -S research/verify_q_defect_lifting.py --self-test",
+      "returncode": 0,
+      "seconds": 8.588,
+      "log_sha256": "e49f10d7719f9ca73cc00b25b858b8fd60e01af977ccdf108de8f3ff21ac126e"
+    },
+    {
+      "index": 25,
+      "command": "python3 -S research/verify_generalized_partition_facets.py",
+      "returncode": 0,
+      "seconds": 0.816,
+      "log_sha256": "157eb67392ad55359666ca7f7d4d863eef3b9ee72adfd3b29058ebbff06bbe19"
+    },
+    {
+      "index": 26,
+      "command": "python3 -S research/verify_q_robust_capacity.py --self-test",
+      "returncode": 0,
+      "seconds": 0.765,
+      "log_sha256": "44fd2082abf5f29755c0692d92893b40e34f7c98de8bc4fec18a3fb474938191"
+    },
+    {
+      "index": 27,
+      "command": "python3 -S research/check_q_defect_lift.py --self-test",
+      "returncode": 0,
+      "seconds": 7.531,
+      "log_sha256": "43bf77a01f72e546a8388c08161262187799a303fd54075ac0298ed91aaafb7f"
+    },
+    {
+      "index": 28,
+      "command": "python3 -S research/check_q_defect_scope_audit.py --self-test",
+      "returncode": 0,
+      "seconds": 16.055,
+      "log_sha256": "917b0d2aeb8af1b0c453d90268bb3aa7419bd3af3ff7072a27f26c9885ac16a0"
+    },
+    {
+      "index": 29,
+      "command": "python3 research/test_salem_sextic_certificates.py",
+      "returncode": 0,
+      "seconds": 4.023,
+      "log_sha256": "458dad3230a0d35100726d7cff6fa6986d02ef8dfed8ee27c3ce09d3b2da56fa"
+    },
+    {
+      "index": 30,
+      "command": "python3 research/test_partition_quartet_completeness.py",
+      "returncode": 0,
+      "seconds": 0.815,
+      "log_sha256": "2790ab3a3dad599e687ce0ad3cb9e18429ff3715b2e0c17a16a959e70848ac89"
+    },
+    {
+      "index": 31,
+      "command": "python3 research/test_cyclic_valuation_sieve.py",
+      "returncode": 0,
+      "seconds": 0.966,
+      "log_sha256": "3452e13b47ea2678af104b878cf2eb39ffd228783e6159c1d97aaedf3b0772ae"
+    },
+    {
+      "index": 32,
+      "command": "python3 research/verify_dyadic_cyclic_orbit.py",
+      "returncode": 0,
+      "seconds": 116.371,
+      "log_sha256": "b187fbaf74163a48bee13b61923fdc11d21a912881a2fb938ddd797a4aec3657"
+    },
+    {
+      "index": 33,
+      "command": "python3 research/test_joint_cover_certificates.py",
+      "returncode": 0,
+      "seconds": 103.136,
+      "log_sha256": "ddcf854c429babc5259e7a1583a022f34b84dd3467b51ac2d3a16fceff82a24c"
+    },
+    {
+      "index": 34,
+      "command": "python3 research/test_finite_frame_certificates.py",
+      "returncode": 0,
+      "seconds": 59.522,
+      "log_sha256": "2eb86f032959ce1adb2d6a16c52a65aa7ff0f33ae9cd870c8345b88256ac5b2d"
+    },
+    {
+      "index": 35,
+      "command": "python3 research/audit_full_law_preparation.py --self-test",
+      "returncode": 0,
+      "seconds": 39.7,
+      "log_sha256": "8b35e3fc114d39f52c9b9c82b56e1e64cff9d733872e862f2922cb01de3c7591"
+    },
+    {
+      "index": 36,
+      "command": "python3 research/test_full_law_pricing.py",
+      "returncode": 0,
+      "seconds": 52.598,
+      "log_sha256": "75a0355303ab2b05b856c37b532aa1aaef4604a516a06beb49ac5c87c8bc6c5c"
+    },
+    {
+      "index": 37,
+      "command": "python3 research/verify_dyadic_commuting_patch.py --mutations",
+      "returncode": 0,
+      "seconds": 48.167,
+      "log_sha256": "bcfe3bdb3637e2ded29698e635582e5705419fb8df954bc029d80faa3bf01b41"
+    },
+    {
+      "index": 38,
+      "command": "python3 research/verify_rational_rotation_orbit.py --mutations",
+      "returncode": 0,
+      "seconds": 0.214,
+      "log_sha256": "87d7b48901fe815aa7422885c2994a02081d5d9eec5bffae4667d4472c724838"
+    },
+    {
+      "index": 39,
+      "command": "python3 research/verify_rotation_orbit_colorings.py --mutation-tests",
+      "returncode": 0,
+      "seconds": 138.171,
+      "log_sha256": "9bb8ac9e285475f1b9ad0f0d024137a249624bcba4846e5a52c52747d5a550d1"
+    },
+    {
+      "index": 40,
+      "command": "python3 research/test_rank2_rotation.py",
+      "returncode": 0,
+      "seconds": 178.043,
+      "log_sha256": "682e9d4208aee9b18957a234b2259018d439c3f0ad07b33345a673a5417a7445"
+    },
+    {
+      "index": 41,
+      "command": "python3 -S research/test_research_checkpoint.py",
+      "returncode": 0,
+      "seconds": 127.577,
+      "log_sha256": "a03390e0677b3fe58a533e89bbf7d79f37fef54f825867a6682efe197d83cdfa"
+    },
+    {
+      "index": 42,
+      "command": "python3 -S research/test_cyclic_translate_contacts.py",
+      "returncode": 0,
+      "seconds": 1.817,
+      "log_sha256": "38dd08d14f1d134f61c25b3f17447a3b0febdc80c0b382676d967b39e0ee3299"
+    },
+    {
+      "index": 43,
+      "command": "python3 -S research/verify_cyclic_translate_research.py",
+      "returncode": 0,
+      "seconds": 38.047,
+      "log_sha256": "1a90a76ec14680f6333853ac900f3ca3c414fe56659f5f01e131b188018143fa"
+    },
+    {
+      "index": 44,
+      "command": "python3 -S research/test_eta_joined_support.py",
+      "returncode": 0,
+      "seconds": 55.458,
+      "log_sha256": "14c47c324e63d44b84452550abe153fda35f8af53bdc30e833e9f97d6ad147a6"
+    },
+    {
+      "index": 45,
+      "command": "python3 -S research/verify_joined_seed_pricing.py",
+      "returncode": 0,
+      "seconds": 49.718,
+      "log_sha256": "ac62818e56f753481608087b7a9f66cd9522b0149bf3e7dd8e8cd3715be389d0"
+    },
+    {
+      "index": 46,
+      "command": "python3 -S research/test_joined_seed_pricing.py",
+      "returncode": 0,
+      "seconds": 27.257,
+      "log_sha256": "636305a6db0a573c21402523e64dd71560745079a4a04f89533d97c67107b895"
+    },
+    {
+      "index": 47,
+      "command": "python3 -S research/verify_joined_negative_probe.py",
+      "returncode": 0,
+      "seconds": 49.486,
+      "log_sha256": "3693fd5aa3a75b28b0e77a90c91924d58b1ad87f2eb8409d04ca37a43720e84a"
+    },
+    {
+      "index": 48,
+      "command": "python3 -S research/test_palette_difference.py",
+      "returncode": 0,
+      "seconds": 0.032,
+      "log_sha256": "94c999be328f906adb677954146b3ae0cfa54923bb5d78fdf5d724bd60433884"
+    },
+    {
+      "index": 49,
+      "command": "python3 -S research/test_connected_partition_marginals.py",
+      "returncode": 0,
+      "seconds": 1.067,
+      "log_sha256": "949b3c7d74ed54d9d73b2697935d66b668c0de3c1d35c22c3248a16ebf3bbc5e"
+    },
+    {
+      "index": 50,
+      "command": "python3 -S research/test_weighted_transport.py",
+      "returncode": 0,
+      "seconds": 0.515,
+      "log_sha256": "2f0699b2ef7ceb3d35e411fad29a9c4922a3c5af770d4cb14708d884a6c80de7"
+    },
+    {
+      "index": 51,
+      "command": "python3 -S research/verify_three_atom_mass.py",
+      "returncode": 0,
+      "seconds": 0.064,
+      "log_sha256": "15fdfad4b5ae51ca09dc5e21fe9f04a1979a4a17b2cb97b94e7505fe720d9c52"
+    },
+    {
+      "index": 52,
+      "command": "python3 -S research/test_full15_support.py",
+      "returncode": 0,
+      "seconds": 119.504,
+      "log_sha256": "713b17e4a7171ee5d587371cf8ae64a23a947bce7f7048ab49f84b742ca32fa4"
+    },
+    {
+      "index": 53,
+      "command": "python3 -S research/test_heptagon_module.py",
+      "returncode": 0,
+      "seconds": 21.515,
+      "log_sha256": "840e5879b9feb81343f556db3245831783b720771c0a928fb0acafb843880f22"
+    },
+    {
+      "index": 54,
+      "command": "python3 -S research/verify_heptagon_residue27.py",
+      "returncode": 0,
+      "seconds": 0.114,
+      "log_sha256": "004867cca020c079ef829a5d588307b7d50be93182cea5811494842728a253e9"
+    },
+    {
+      "index": 55,
+      "command": "python3 -S research/verify_heptagon_actual_patch.py",
+      "returncode": 0,
+      "seconds": 3.071,
+      "log_sha256": "b8e72a3bc351bdfdf0d3d5d296961f038fc5f289797706c86f569f57df577b5a"
+    },
+    {
+      "index": 56,
+      "command": "python3 -S research/test_lattice_mixed.py",
+      "returncode": 0,
+      "seconds": 121.636,
+      "log_sha256": "b57a2e533b0cfc0b484458e36fa584c7a6e0da105c7842a7c81943f9299f6d4f"
+    },
+    {
+      "index": 57,
+      "command": "python3 -S research/verify_Y_pair_portfolio.py --self-test",
+      "returncode": 0,
+      "seconds": 50.446,
+      "log_sha256": "90543105968a5de154e1103c1a24a73283fda4f749f88c3bfb581698f722bb58"
+    },
+    {
+      "index": 58,
+      "command": "python3 -S research/verify_cube_symmetry_gap.py",
+      "returncode": 0,
+      "seconds": 0.114,
+      "log_sha256": "9c8566000863c16829898f00ce131ed8c2e86a4016fda26d4cb20d488c4f302c"
+    },
+    {
+      "index": 59,
+      "command": "python3 -S research/check_qd_family.py --check-certificate certificates/qd_family_certificate.json",
+      "returncode": 0,
+      "seconds": 0.515,
+      "log_sha256": "3de0ee74656e9febc242b39ef164028b37e27de07afb3ca823487bfa65c5cb64"
+    },
+    {
+      "index": 60,
+      "command": "python3 -S research/verify_t028_host_orbit_ceiling.py",
+      "returncode": 0,
+      "seconds": 0.064,
+      "log_sha256": "f37e9ba2e515647b5dd01fc39a8a6026bfee14349e4c9e443c7a6a34942afcdc"
+    },
+    {
+      "index": 61,
+      "command": "python3 -S research/verify_g14_port_or.py --check-certificate certificates/g14_port_or_certificate.json",
+      "returncode": 0,
+      "seconds": 0.215,
+      "log_sha256": "41b2c40c7065a9c19f8495579b4e528ce7fd245f4d613bb3bee8848e99eac22f"
+    },
+    {
+      "index": 62,
+      "command": "python3 -S research/verify_g14_unique_event_y.py",
+      "returncode": 0,
+      "seconds": 0.615,
+      "log_sha256": "70de745485bf80e8a3bba18834d02278b85a472cd5739a508d0f630e29f59241"
+    },
+    {
+      "index": 63,
+      "command": "python3 -S research/verify_port4_exact_law.py --check-certificate certificates/port4_exact_law_verification.json",
+      "returncode": 0,
+      "seconds": 54.458,
+      "log_sha256": "c9391a5c1bf2691b4c775a8a0bbe085a043ea06e9d201b72adf43e88185c9bff"
+    },
+    {
+      "index": 64,
+      "command": "python3 -S research/test_motion_packet.py",
+      "returncode": 0,
+      "seconds": 60.429,
+      "log_sha256": "e0b99dc1356dd49324d76ab63fdf2b2670cd2637aaaa0452c4783b485c6f2e0d"
+    },
+    {
+      "index": 65,
+      "command": "python3 -S research/test_cycle_descent.py",
+      "returncode": 0,
+      "seconds": 62.541,
+      "log_sha256": "5c8fb04e7875a9bdfabbd4908c39600b16387023e9803017c20ee3f09f677a78"
+    },
+    {
+      "index": 66,
+      "command": "python3 -S research/verify_unit_translate.py",
+      "returncode": 0,
+      "seconds": 34.072,
+      "log_sha256": "f7bdd1f8929961348c8309563b915931a7e3aeef3dbf6b79cbaa6a4c6ace33fd"
+    },
+    {
+      "index": 67,
+      "command": "python3 -S research/verify_integer_translate_kernel.py",
+      "returncode": 0,
+      "seconds": 68.669,
+      "log_sha256": "e63d75e84f888bd85a9b240d7fb44c71fa08d54e8595bf08527cad60d6bad7da"
+    },
+    {
+      "index": 68,
+      "command": "python3 -S research/legacy_test_full15_support.py",
+      "returncode": 0,
+      "seconds": 204.883,
+      "log_sha256": "bfc3dc5a25a87f3bddb482b8033887d8e0ef780cca01f66045ad09d32594e30f"
+    },
+    {
+      "index": 69,
+      "command": "python3 research/verify.py",
+      "returncode": 0,
+      "seconds": 2655.777,
+      "log_sha256": "899688561742bff61c6495b74114659a284459a6d99e5b7879a19f22f71c930a"
+    }
+  ],
+  "plan_unchanged_after_cleanup": true,
+  "research_executables_unchanged": true,
+  "original_certificates_unchanged": true,
+  "runtime_output_review": [
+    {
+      "shard": 0,
+      "path": "certificates/dyadic_cyclic_orbit_validation.json",
+      "changed_runtime_fields": [
+        "elapsed_seconds"
+      ],
+      "original_sha256": "1db4f7defe2c0222136e62e88b741b5fba7097c18ff3a5817366c8b25cbdb14e",
+      "runtime_sha256": "8a7e961bc4854b21140b98ef8e583315262f03cf6979d24947147b3fb6f4677f",
+      "original_bytes_retained": true
+    },
+    {
+      "shard": 2,
+      "path": "certificates/finite_frame_validation.json",
+      "changed_runtime_fields": [
+        "python"
+      ],
+      "original_sha256": "964268f9b440d57f5bc0eee174baef32b039a12d0e626c2d6a3acd69aa2d9de7",
+      "runtime_sha256": "2eb86f032959ce1adb2d6a16c52a65aa7ff0f33ae9cd870c8345b88256ac5b2d",
+      "original_bytes_retained": true
+    }
+  ],
+  "reviewed_closeout_changes": [
+    {
+      "path": "Makefile",
+      "before_sha256": "4b9878c21797071dfb10c962197def7d3c4a1d65301af3149628496cb9e179d5",
+      "after_sha256": "3ca3dac462ad5951f34ca3e72d716cef4c18732a7f3aabc50408e16abc5cc0fe"
+    },
+    {
+      "path": "docs/RESULTS.md",
+      "before_sha256": "48f5c4f6786632838bf5c34c74080c1610793431b618bcf79f92ae747dd0bde5",
+      "after_sha256": "e4b898bf7a0d8f4825bc6940498ffa87333befb9f00048ff3a6b3405c5c6f91c"
+    },
+    {
+      "path": "docs/proofs/q_defect_lift.md",
+      "before_sha256": "bec35a568adeb7dbfb6d7d552609d00ad699b96be7298213cceae61b41ae2c5f",
+      "after_sha256": "ed5d46eea93c9940dec5d87c6809f477810bebe85bad809b0cc5d3c28c2d7a1e"
+    },
+    {
+      "path": "docs/proofs/full15_support_exclusion.md",
+      "before_sha256": "ab1277af1731a11094bd5c1dbfaf34243e354dd937d9c418b9c489f10740e3da",
+      "after_sha256": "ef1854741a10bf2794a4eef9d2b3506ea970105b530039bdcd8f43af43be2550"
+    }
+  ],
+  "raw_evidence": {
+    "path": "certificates/unified_check_20261006.zip",
+    "sha256": "bc1448d9adaebfaaf3484376ffa13dce6808977b7389fbc60e4e2ca92d9fdff1"
+  },
+  "preserved_histories": [
+    "f986eb0a0de1e33769efa54aa73c3eac9d2ff711",
+    "b532e71453935088000fa54738163c28180b17b8",
+    "86a7f6c53e0d4058fdee6990c6cc2946bbd4fad1",
+    "3dc223a711cc37dbb610b48f136a5c5308871421"
+  ],
+  "local_audit_summary": {
+    "zip_inputs_reviewed": 32,
+    "prior_inventory_hashes_confirmed": 31,
+    "scientific_contributions_identical": 146,
+    "legacy_modules_renamed": 4,
+    "related_import_or_description_adjustments": 3,
+    "user_upload": "math-research-q-defect-final-20261006(2).zip",
+    "user_upload_sha256": "3093f98a32c6367eea4dba000d7b5d4dc4108a0310d927cee8e17c8cee2755f1",
+    "source": "Local review in this consolidation; archive list and original refs retained in docs/integration_sources.json. Not inferred from CI pass."
+  },
+  "publication_status_at_seal": "VERIFIED_ON_INTEGRATION_BRANCH; main merge and branch cleanup are separate operations",
+  "scope": "All 70 distinct Python commands from make -n check passed in eight isolated workspaces on identical frozen research source. Not a single serial make check invocation. Post-test Makefile edit only removes a duplicate prerequisite and leaves the exact command plan unchanged; documentation labels are corrected. Tests replay scoped finite evidence, not formalize all general theorems. No new HN bound, full15 law or endpoint result.",
+  "final_static_audit": {
+    "status": "PASS",
+    "python_syntax_files": 352,
+    "json_certificate_files": 263,
+    "local_file_targets": 866,
+    "ledger_ids": {
+      "T": 169,
+      "E": 124,
+      "C": 32,
+      "Q": 11
+    },
+    "source_files": 356,
+    "source_manifest_sha256": "8d68e5bbfe230042b3dd7ece4882187b4772820d8795456416c7e3334af27a70",
+    "scope": "Integration syntax, parseability, exact ID coverage and local file targets only. Not exhaustive anchor checking, new theorem validation, or remote publication."
+  }
+}

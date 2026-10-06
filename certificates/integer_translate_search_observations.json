@@ -1,0 +1,21 @@
+{
+  "schema": "integer-translate-search-observations-v1",
+  "base_commit": "a885b67c172726e14884cb43cd37b965dbb32575",
+  "finite_three_copies": {
+    "copies": 3,
+    "vertices": 29561,
+    "listed_edges": 170265,
+    "point_sha256": "2116b8f4e58073983e37d8aca4a5e3d46526fb33818d7b93e88852c8cdc72160",
+    "edge_sha256": "add35ba45c2bc54e051a71e28bd3fc879228d9941c7cd1a69faca70e24fc4e57",
+    "status": "UNKNOWN",
+    "stats": {
+      "restarts": 5183,
+      "conflicts": 100004,
+      "decisions": 948735,
+      "propagations": 44938567
+    },
+    "seconds": 20.130368666999857
+  },
+  "subsequent_mathematical_status": "Entire integer translate host has an independently checked five-color formula; original query status remains UNKNOWN.",
+  "scope": "Raw budgeted finite query, not a negative certificate."
+}

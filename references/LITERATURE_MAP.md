@@ -945,3 +945,70 @@ Haugland v4 §2/4 → Milne的混合分圆整数环与素点 → CM/Kronecker �
 - [周期染色](https://arxiv.org/abs/2411.01951v3) 的成熟定理需要局部有限/拟传递/有界路径宽等具体假设。本仓库的 `Y+Λ` 正构造有完整无限接触核；失败的仿射/相位SAT只列UNKNOWN，不把周期框架当作一般五染色完备性。
 
 这些对应不增HN定理编号；原Y全15域共同律与普通平面色数界都未由抽象术语改变。
+
+
+## 2026-10-06 整合保留：各分支新增记录（历史编号见 ID_ALIASES）
+
+<!-- imported from a0d51399b6fa9bd5b057b8cac910191a92f4f519; legacy statement scope retained -->
+
+
+## 2026-10-05补读：完整划分面与Q收缩
+
+重读 Irmai–Naumann–Andres, arXiv:2411.03407v1，第1–4节HTML，核对同色二元变量、
+三角条件、凸包与chorded-cycle类的范围。链接：https://arxiv.org/html/2411.03407v1 。
+本轮T160–T161用自足有限枚举、对称平均与整数占用证明具体运输分量的新投影；
+不把这些成熟方法或一般facet族声明为原创，不依赖未读的PDF细节。
+另核对Haugland arXiv:2608.04542v2作者HTML的五色构造与普通5/7问题范围：
+https://arxiv.org/html/2608.04542v2 。未发现可据此替代普通界的六色下界。
+
+<!-- imported from f986eb0a0de1e33769efa54aa73c3eac9d2ff711; legacy statement scope retained -->
+
+
+## 2026-09-28：T141/E113来源与证据层级
+
+- PySAT官方`pysat.solvers`文档：本轮读取proof logging、`solve_limited`及冲突预算接口；
+  https://pysathq.github.io/docs/html/api/solvers.html 。当前页面标题版本与本轮安装的
+  python-sat 1.9.dev15未必相同，实际版本由搜索记录给出。只把官方接口解释作为来源，不以文档认证求解结果。
+- Cruz-Filipe等，Efficient Certified RAT Verification，https://arxiv.org/abs/1612.02353 ：
+  本轮重新打开作者摘要页作证明格式来源参照；本轮未重新逐页阅读或重放其形式化开发。
+  本库仍只接受明确支持的hinted-RUP子集，独立重放自己保存的反证。
+- Haugland，https://arxiv.org/abs/2608.04542 ：本轮重新核对作者页；
+  不是新的普通六色下界。本轮不重复扩大此前v2的阅读声明，也不重放外部完整构造。
+- T141多数原子引理和指定Γ的两原子结论在本库完整证明/证书中处理，不依赖未经读取的外部数学定理，
+  不主张这些一般思想的文献首创。
+
+T142的有限阶兼容图循环界及C025的极点结论采用正文中的自足有限证明；
+没有把支持匹配视作自动满足几何群关系，也不宣称这些一般线性/循环思想的文献优先权。
+同日远端T140/E112的热带来源记录按其原提交保留；本轮读取其仓库书面证明并重放新增入口，
+不冒称重新阅读了该并行轮次所引外部PDF。
+
+
+## 2026-09-28：T143/E114 的边际延拓参照（仅摘要层）
+
+- J.-R. Chazottes, J.-M. Gambaudo, M. Hochman, E. Ugalde,
+  [On the finite-dimensional marginals of shift-invariant measures, v2](https://arxiv.org/abs/1011.2442v2).
+  本轮读取作者页摘要及版本信息，区分局部不变多面体和全局可延拓边际；未读全篇，未用其高维结论判断HN。
+- Marcus Pivato,
+  [Building a Stationary Stochastic Process From a Finite-dimensional Marginal](https://arxiv.org/abs/math/0108081).
+  作者页摘要作为平稳边际延拓的结构参照，不把一般不可判定性搬到当前有限几何问题。
+- [Haugland 2608.04542v2 引言](https://arxiv.org/html/2608.04542v2)重新核对普通5/7界。
+
+T143的实际11点构造、十个半空间、13个三色见证、任意权支撑函数和原Y下降均在本库自足证明。
+新编号不宣称文献优先权；上述摘要参照不是未读定理的黑箱输入。
+
+<!-- imported from fc6d2c2972f6c234f06112576610d26525795cf8; legacy statement scope retained -->
+
+
+## 2026-09-29：本轮跨结构参照与实际阅读范围
+
+- [Alon–Alweiss, arXiv:1905.10483v2](https://arxiv.org/abs/1905.10483v2)：
+  本次打开作者摘要，使用proper coloring portfolio/product dimension术语；未依赖渐近定理。
+  本轮另需单射签名且每个因子固定K5，由56份实际全Y词独立认证。
+- [Bradley-Williams–Cameron–Hubička–Konečný, arXiv:2311.07995v3](https://arxiv.org/abs/2311.07995v3)：
+  本次阅读作者摘要的普通图EPPA定义及版本/发表信息（JCTB170,2025），没有调用其规模界。
+  64点单位Q6的颜色/概率矛盾是本库自足证明，不将图部分同构冒充真实部分等距。
+- [Abrishami等, arXiv:2411.01951v3](https://arxiv.org/abs/2411.01951v3)：
+  本次打开作者摘要与HTML，当前新增论证不调用其条件定理。周期性不能无条件假设；
+  本库三角格公式仅作为有明确全边证书的正构造，三个斜率的失败不否定全部五染色。
+
+原5/7界仍据已核对的普通HN来源。2026年高维覆盖/分数或地图型结果不被混记为平面普通新界。

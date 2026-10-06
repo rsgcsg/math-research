@@ -1,0 +1,160 @@
+{
+  "schema": "q-defect-lift-checkpoint-v1",
+  "task_date": "2026-10-06",
+  "task_timezone": "Australia/Brisbane",
+  "recorded_utc": "2026-10-05T17:46:11.118297+00:00",
+  "status": "TARGETED_PASS_LOCAL_COMMITS_NOT_REMOTE_PUBLISHED",
+  "source_base": "c7dd21efe99cf18884a62b21f34a27de23eec550",
+  "research_branch": "research/q-defect-capacity-20261006",
+  "source_acquisition": {
+    "repository": "rsgcsg/math-research",
+    "workflow_run_id": 37282355952,
+    "artifact_id": 11332952909,
+    "artifact_name": "transport-projection-certified-source",
+    "artifact_zip_sha256": "d90d994fa849ad6233f952527d3d984bcd8e4ea084f6b5c8d512a8ffbf7637f5",
+    "source_bundle_restored_commit": "c7dd21efe99cf18884a62b21f34a27de23eec550"
+  },
+  "final_checked_source": {
+    "commit": "3e48e6ba3a7ce0a996378daecedcf50da86f3655",
+    "tree": "20a6610370d345081661b2de3549a06f8c302b8f",
+    "files": 735,
+    "source_manifest_sha256": "025bb7b0f60eb679e7235cc2f4330c1d0fae28e6f5fab45ac70e893b4f6db908"
+  },
+  "final_targeted_replay": {
+    "command": [
+      "make",
+      "check-q-defect-lift"
+    ],
+    "cwd": "/mnt/data/T162-envelope-work",
+    "start_utc": "2026-10-05T17:41:10.398092+00:00",
+    "end_utc": "2026-10-05T17:42:24.727423+00:00",
+    "elapsed_seconds": 74.329,
+    "returncode": 0,
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "status": "PASS",
+    "tracked_source_files_unchanged": true
+  },
+  "earlier_full_replay": {
+    "command": [
+      "make",
+      "check"
+    ],
+    "cwd": "/mnt/data/math-research",
+    "start_utc": "2026-10-05T17:31:34.322899+00:00",
+    "end_utc": "2026-10-05T17:43:47.990602+00:00",
+    "elapsed_seconds": 733.668,
+    "returncode": 2,
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "status": "INTERRUPTED_NOT_PASS",
+    "source": {
+      "commit": "47cea2ad99bf319ff56165b3ff59fa7a2831c4bc",
+      "tree": "69f7c001d81a1ae0d59cfde27ea9bc463760b7d1",
+      "files": 734,
+      "source_manifest_sha256": "a2683800b77348641561468c897c1fa66495340b9ef9405b08fee780c273a488"
+    },
+    "tracked_source_files_unchanged": true,
+    "successful_prerequisite_commands": [
+      "python3 -c 'import sys; sys.exit(\"Python >=3.10 required; activate .venv before make check\" if sys.version_info < (3, 10) else 0)'",
+      "python3 -S research/audit_full_law_preparation.py --cache certificates/Y_full_geometry.json.gz",
+      "python3 -S research/verify_scc_calibration.py",
+      "python3 -S research/verify_free_group_star_calibration.py",
+      "python3 -S research/verify_four_port_scc.py",
+      "python3 -S research/verify_g14_pair_orbit_law.py",
+      "python3 -S research/test_g14_pair_orbit_forest.py",
+      "python3 -S research/verify_g14_pair_port4_common_law.py",
+      "python3 -S research/verify_cubic_unit_directions.py",
+      "python3 -S research/verify_g14_pr_transport_bound.py",
+      "python3 -S research/verify_pentagon_cp_partition_gap.py",
+      "python3 -S research/verify_nine_point_pr_polygon.py",
+      "python3 -S research/test_nine_point_pr_polygon.py",
+      "python3 -S research/verify_pr_matching_window_ceiling.py",
+      "python3 -S research/verify_cyclic_interval_kernel.py",
+      "python3 -S research/verify_star_odd_cycle_lemma.py",
+      "python3 -S research/verify_bw_pr_odd_cycle_ceiling.py",
+      "python3 -S research/verify_hidden_pair_elimination.py",
+      "python3 -S research/verify_q_pr_coupling_audit.py",
+      "python3 -S research/check_transport_projection.py --self-test",
+      "python3 -S research/check_q_defect_lift.py --self-test"
+    ],
+    "interrupted_command": "python3 research/verify.py",
+    "interruption": {
+      "requested_utc": "2026-10-05T17:43:47.591396+00:00",
+      "reason": "Stopped the old full-suite replay at this delivery checkpoint after retaining its successful prerequisite prefix. The final T162 targeted make command finished with return code 0. No whole-repository PASS is claimed.",
+      "runner_pid": 1187,
+      "interrupted_children": [
+        [
+          1404,
+          1199,
+          "python3 research/verify.py"
+        ]
+      ],
+      "signal": "SIGINT"
+    },
+    "note": "The initial make check began on working-tree content subsequently committed unchanged as 47cea2a. Its successful prefix includes the original T162 case-minimum replay. No complete target-coverage or single full-suite PASS is claimed."
+  },
+  "logs": {
+    "make-check.log": {
+      "repository_path": "certificates/q_defect_lift_full_prefix_47cea2a.log.gz",
+      "uncompressed_sha256": "2ac04082109e5f092ef30b4985dc28135b7e44369b0b45048cb36f98dca17574",
+      "gzip_sha256": "0c691a0f6b9d16a9dfede952f1539ae7f6fa38dc2d2a27fb37592e3460cfb011",
+      "uncompressed_bytes": 86137
+    },
+    "make-check-q-defect-lift.log": {
+      "repository_path": "certificates/q_defect_lift_targeted_3e48e6b.log.gz",
+      "uncompressed_sha256": "7a8c5a3e28731ecef377decbf6ad6372cc5113af065302219b24e4e60d57bc2d",
+      "gzip_sha256": "b310d7d59f23435e3e78a4857c0fee99ca2a63f942a6f95ca098a269c9542a6c",
+      "uncompressed_bytes": 11610
+    }
+  },
+  "source_manifests": {
+    "repository_path": "certificates/q_defect_lift_source_manifests.json.gz",
+    "uncompressed_sha256": "0bcb8f62da68e7206790769aac4064cb2c2bbad0026377f0b3c57c7c6b9ac4fb",
+    "gzip_sha256": "1e7ff69318109a14e8ad3558a8b97b64b149948b5de63b27cf058dc572303eb3",
+    "note": "Manifests cover the two exact research trees before this archival receipt and logs were added."
+  },
+  "mathematics": {
+    "independent_integer_search_nodes": 21678333,
+    "defect_patterns": 512,
+    "local_positive_words": 512,
+    "dual_envelope_integer_comparisons": 2048,
+    "exact_envelope_breakpoint_laws": 5,
+    "positive_breakpoint_atom_occurrences": 16,
+    "rejected_certificate_mutations": 15,
+    "rejected_envelope_mutations": 10,
+    "false_lower_bound_rejected": true,
+    "optimized_python_rejected": true,
+    "scope": "T162 fixed local score lift and its entire Q-balanced lower envelope; single outside vertex at a time. No unrestricted full15 solution, full-Y extension, upper-envelope classification, or ordinary plane chromatic-number improvement."
+  },
+  "remote_publication": {
+    "commit": "3e48e6ba3a7ce0a996378daecedcf50da86f3655",
+    "command": [
+      "git",
+      "push",
+      "--porcelain",
+      "--set-upstream",
+      "origin",
+      "research/q-defect-capacity-20261006"
+    ],
+    "attempt_utc": "2026-10-05T17:44:56.843968+00:00",
+    "returncode": 128,
+    "stdout": "",
+    "stderr": "fatal: unable to access 'https://github.com/rsgcsg/math-research.git/': Could not resolve host: github.com\n",
+    "remote_write_success": false
+  },
+  "connector_boundary": {
+    "read_search_download_actions_exposed": 48,
+    "write_actions_exposed": 0,
+    "git_cli_push_failed": "Could not resolve host: github.com",
+    "gh_cli_available": false
+  },
+  "parallel_branch_observation": {
+    "branch": "research/generalized-partition-facets-20261006",
+    "observed_commit": "b4931cca04c0694749f752da2b8f4ff1260d9520",
+    "observed_file": "certificates/generalized_partition_facet_audit.json",
+    "observed_research_ids": [
+      "T160",
+      "E120"
+    ],
+    "integration_risk": "The T160 identifier overlaps the already-published Q/P/R result on the transport-projection branch. No renumbering, merge, or modification of that separate branch has been performed."
+  }
+}

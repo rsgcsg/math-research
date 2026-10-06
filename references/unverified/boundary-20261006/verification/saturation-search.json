@@ -1,0 +1,23 @@
+{
+  "status": "SAT_POSITIVE_WORD_CHECKED",
+  "summary": {
+    "schema": "pr-boundary-saturation-witness-v1",
+    "base_commit": "91849ffc04cc1e21193fbe3fddae2947072f7093",
+    "geometry_sha256": "7cbf9c71e1cd1aca64a1622ef9d6550cacbf40972547e89495993f58e4f6a436",
+    "counts": {
+      "P": 234,
+      "Q": 145,
+      "R": 357
+    },
+    "solver_stats": {
+      "restarts": 66,
+      "conflicts": 2484,
+      "decisions": 163011,
+      "propagations": 1217766
+    },
+    "variables": 63597,
+    "clauses": 417672,
+    "elapsed_seconds": 0.47665472000005593,
+    "scope": "An actual full-Y coloring satisfying every enumerated zero-slack identity; not a P/R mean law, not full15, not a new HN bound."
+  }
+}

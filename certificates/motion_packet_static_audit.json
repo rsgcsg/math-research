@@ -1,0 +1,21 @@
+{
+  "schema": "motion-packet-static-audit-v1",
+  "status": "PASS",
+  "date": "2026-09-28",
+  "python_syntax_files": 266,
+  "json_files": 169,
+  "markdown_local_file_targets": 602,
+  "ledger_ids": {
+    "T": 142,
+    "E": 113,
+    "C": 25,
+    "Q": 11
+  },
+  "documents": {
+    "README.md": "bf2a60cc5bc3cdf5bd6cab8fa432cc2b057943596027bffaee20828514dcf0af",
+    "docs/CURRENT.md": "05c54b39444d1d798c7a13635e302ba099af28a9a8942620c3ea317f77a2236b",
+    "docs/proofs/two_atom_motion_packet.md": "5c3b0a72b42476f252dd38a17e70c056a30dabc7107551dde3d98b2283f110fd",
+    "docs/proofs/cyclic_pattern_extension.md": "21056e33e335b2125d78ca7f1be9844010d10332b4adf04ec65e8bfd1f5bd272"
+  },
+  "scope": "Syntax, JSON parseability, local file links and exact ledger counts. Not exhaustive Markdown anchors, peer review, or mathematical theorem formalization."
+}

@@ -1,0 +1,29 @@
+{
+  "actual_unit_violations_in_each_selected_word": [
+    1,
+    2,
+    2,
+    2,
+    4,
+    4
+  ],
+  "case_patterns_per_model": 512,
+  "certificate_sha256": "6f91036c485f5fc57e6b01b589357ca1541d8ca42a17819c7758ddedf8df4bd1",
+  "counterexamples_to_penalty_12_in_selected_model": 2,
+  "full_graph_singleton_optimality_words": 9,
+  "induced_edges": 34,
+  "induced_model_minimum_penalty_sum": 12,
+  "induced_optimality_witness_source_sha256": "56ce80ebe05756b488ccd308abb9ec5af2e7515b4bab9eb09f94d461fc91a85d",
+  "integer_branch_cover_nodes": {
+    "induced_34": 4365160,
+    "selected_18": 34417616
+  },
+  "omitted_actual_edges": 16,
+  "relation_parent_sha256": "5753d18f691eab2b5b04e54d21762f063e8478daff72c013558535144b44d056",
+  "schema": "q-defect-model-scope-replay-v1",
+  "scope": "Exact distinction between the same fixed-score model with 18 selected unit edges and with all 34 actual induced unit edges. Both optima are certified, but a positive witness of the 18-edge relaxation need not be a proper coloring of the 34-edge graph.",
+  "selected_edges": 18,
+  "selected_model_minimum_penalty_sum": 13,
+  "selected_model_optimality_words": 6,
+  "status": "PASS"
+}
