@@ -1,0 +1,25 @@
+name: Search Q covers with Q/R defects
+on:
+  pull_request:
+    paths:
+      - 'research/probe_fractional_q_p_notq_notr_cover.py'
+      - 'certificates/q_joint_boundary_gap.json'
+      - '.github/workflows/research-q-literal-cover.yml'
+permissions:
+  contents: read
+jobs:
+  search:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python3 -m pip install numpy==2.5.3 scipy==1.18.1
+      - name: Search Q literal covers
+        run: python3 research/probe_fractional_q_p_notq_notr_cover.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q-literal-cover-search
+          path: fractional_q_p_notq_notr_cover_search.json
