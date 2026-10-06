@@ -1,0 +1,25 @@
+name: Discover nonuniform W22 defect dual
+on:
+  push:
+    branches:
+      - 'research/nonuniform-defect-dual-20261006'
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install --quiet scipy
+      - name: Optimize seven-window defect prices
+        run: python3 research/probe_nonuniform_defect_dual.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nonuniform-defect-discovery
+          path: certificates/nonuniform_defect_discovery.json
+          retention-days: 3
