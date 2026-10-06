@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - 'research/nonuniform-defect-dual-20261006'
+  pull_request:
+    paths:
+      - 'research/probe_nonuniform_defect_dual.py'
+      - '.github/workflows/research-nonuniform-defect-dual.yml'
 permissions:
   contents: read
 jobs:
