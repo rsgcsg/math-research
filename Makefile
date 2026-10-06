@@ -198,3 +198,7 @@ check-q-defect-lifting: check-y-full-geometry
 check: check-q-joint-boundary-gap
 check-q-joint-boundary-gap: check-y-full-geometry
 	python3 -S research/verify_q_joint_boundary_gap.py --self-test
+
+.PHONY: check-q-chorded-w22-audit
+check-q-chorded-w22-audit:
+	python3 -S research/verify_q_chorded_w22_audit.py
