@@ -1,0 +1,17 @@
+{
+  "schema": "boundary-projection-publication-v1",
+  "status": "PASS",
+  "research_ids": [
+    "T170",
+    "T171"
+  ],
+  "branch": "research/q-projection-law-20261006",
+  "workflow_run_id": 37459768631,
+  "workflow_job_id": 112256128898,
+  "checked_head": "3e32d1528d703e0ca7ab694647e06b26db111bd2",
+  "steps": {
+    "Replay T170": "success",
+    "Replay T171": "success"
+  },
+  "scope": "GitHub Actions independently checked out the PR head and replayed the two exact standard-library verifiers. This validates the explicit finite T170/T171 witnesses only. It is not a whole-repository replay, a C030 proper-partition law, a full15 solution, or a new Hadwiger-Nelson bound."
+}
