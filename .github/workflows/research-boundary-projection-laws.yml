@@ -33,7 +33,7 @@ jobs:
       - name: Replay T173
         run: python3 -S research/verify_single_separator_identity_threshold.py
       - name: Install sparse-search dependency
-        run: python3 -m pip install numpy==2.5.3
+        run: python3 -m pip install numpy==2.5.3 scipy==1.18.1
       - name: Search sparse identity separator
         run: python3 research/search_sparse_boundary_projection.py
       - uses: actions/upload-artifact@v4
