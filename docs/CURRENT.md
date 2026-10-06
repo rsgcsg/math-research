@@ -16,6 +16,14 @@
 
 这仍不是 C030/full-Y/full15 不可行证书，也没有新的普通 HN 界。
 
+## 2026-10-06：T173 精确封顶单 separator 的稀疏化能力
+
+只使用 T165 的一个89项 separator、三个 class-total 等式、概率盒，并把若干具体事件固定到 C030 目标时，**首次能强制矛盾的固定事件数恰为71**。固定70条时最优自由逃逸仍恰等于 separator 缺口 (115/27)；固定71条时降到 (32/9<115/27)。
+
+因此继续对同一个 T165 separator 做删边、类内 gauge 或只固定少量身份，不能产生小支持严格证书。下一主攻改为寻找新的独立 identity-sensitive facet / 多窗口高阶约束。
+
+[证明](proofs/single_separator_identity_threshold.md) · [证书](../certificates/single_separator_identity_threshold.json) · [检查器](../research/verify_single_separator_identity_threshold.py)
+
 ## 2026-10-06：Q-only 与三类总量投影都已经真实可行
 
 在统一基线 65874a0e56ebbcaff8a33fc0cac1137c152c9131 上继续 T165/C030。
