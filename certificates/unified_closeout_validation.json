@@ -1,0 +1,105 @@
+{
+  "schema": "hn-unified-closeout-v1",
+  "status": "PASS",
+  "date": "2026-10-06",
+  "baseline_commit": "83c36cd432e41fb2cdc7ed82395902ddedb87fd7",
+  "baseline_tree": "0e89109cd44b0b951f6ef0f5713a92ef016a1efd",
+  "scope": "Fresh content/history/record audit and static checks only; 70 mathematical check commands were previously run and their stored output and exact source were reverified, not rerun in this closeout. This receipt is not itself a claim about a future publication SHA.",
+  "remote_readback_before_closeout": {
+    "heads": {
+      "main": "83c36cd432e41fb2cdc7ed82395902ddedb87fd7"
+    },
+    "open_pull_requests": 0,
+    "archive_tags": 28,
+    "source": "Live GitHub connector branch, open-pull, and tag-ref reads; complete Git history downloaded from workflow 37437922972 artifact 11399752573."
+  },
+  "local_scope": "Currently mounted conversation artifacts, source fragments, and restored Git workspace only; no access to unuploaded repositories on the user computer is claimed.",
+  "artifact_inventory": {
+    "path": "certificates/unified_closeout_inventory.json",
+    "sha256": "265fc3cdca69b9ea8eb23b4ebb70be00c6ac9a9893802e9072b3eb550f873a22",
+    "top_level_zips": 36,
+    "previous_inventory_zips_identical": 31,
+    "embedded_or_standalone_bundle_sources": 23,
+    "distinct_bundle_head_commits": 42,
+    "head_commits_ancestral_to_main": 41,
+    "archive_only_head": "5cd52cea0bfa5ac8ed25e1e1ca04e8b7654cdc7b",
+    "archive_only_reason": "Old one-file input-preparation workflow; retained by archive/2026-09-22/research/full-law-pricing-20260921.",
+    "unpreserved_bundle_heads": [],
+    "cleanup_targets_reverified": 12,
+    "mounted_fragment_files": 39,
+    "mounted_fragments_already_in_git_history": 31
+  },
+  "historical_fragment_preservation": {
+    "already_in_preserved_history": 31,
+    "historical_metadata_json_records": 7,
+    "losslessly_reconstructible_superseded_proof": 1,
+    "repository_path": "references/unverified/local-fragments-20261006.json",
+    "repository_file_sha256": "12b6bac2b8a19022444dca9441100041cfeb39fa71bdf15fdc280231f5e448e1",
+    "raw_file_archive_in_delivery": "verification/local-fragments-20261006.zip",
+    "raw_file_archive_sha256": "143f44c7a78cafed784d634a63695cbe223db271ea03275feb65b95f41563d74",
+    "scope": "Seven metadata records retain all JSON values and original byte hashes. The old proof is encoded as one exact replacement against a pinned Git ancestor and its original SHA256 is checked. All eight raw originals additionally retained in the delivery; no superseded error is restored as a theorem."
+  },
+  "stored_full_coverage_reverified": {
+    "original_run": 37431407795,
+    "commands": 70,
+    "isolated_shards": 8,
+    "source_files": 356,
+    "current_source_manifest_sha256": "8d68e5bbfe230042b3dd7ece4882187b4772820d8795456416c7e3334af27a70",
+    "each_log_sha256_verified": true,
+    "exact_command_plan_unchanged": true,
+    "all_original_program_and_certificate_bytes_unchanged": true,
+    "inherited_files_compared": 645,
+    "runtime_only_differences": [
+      {
+        "path": "certificates/dyadic_cyclic_orbit_validation.json",
+        "runtime_fields": [
+          "elapsed_seconds"
+        ],
+        "shard": 0
+      },
+      {
+        "path": "certificates/finite_frame_validation.json",
+        "runtime_fields": [
+          "python"
+        ],
+        "shard": 2
+      }
+    ],
+    "raw_evidence_path": "certificates/unified_check_20261006.zip"
+  },
+  "fresh_checks": {
+    "static_audit": {
+      "status": "PASS",
+      "python_syntax_files": 352,
+      "json_certificate_files": 265,
+      "local_file_targets": 870,
+      "ledger_ids": {
+        "T": 169,
+        "E": 124,
+        "C": 32,
+        "Q": 11
+      },
+      "source_files": 356,
+      "source_manifest_sha256": "8d68e5bbfe230042b3dd7ece4882187b4772820d8795456416c7e3334af27a70",
+      "scope": "Integration syntax, parseability, exact ID coverage and local file targets only. Not exhaustive anchor checking, new theorem validation, or remote publication."
+    },
+    "static_command": "python3 -S research/check_integration.py",
+    "static_returncode": 0,
+    "static_log_sha256": "b00f22b23d3fb095325738cd4eb144fd960eccf739948a0e11c4c5bb3da72fa3",
+    "optimization_guard_returncode": 1,
+    "optimization_rejection_log_sha256": "2da10fc1e22d75705f29ee354ab9ea23afec530003c0fe0a094fce7f89aa77f3",
+    "git_fsck_returncode": 0
+  },
+  "removed_completed_maintenance_files": [
+    ".github/workflows/archive-unified-branches.yml",
+    ".maintenance/archive_integrated.py"
+  ],
+  "retained_workflow": ".github/workflows/verify.yml",
+  "result_ledger": {
+    "T": 169,
+    "E": 124,
+    "C": 32,
+    "Q": 11
+  },
+  "mathematical_status": "No new mathematical result. Unrestricted full15 remains unresolved, no new ordinary HN bound. NOT_COMPLETED endpoint input and all historical UNKNOWN statuses retained."
+}
