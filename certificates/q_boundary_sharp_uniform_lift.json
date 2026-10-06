@@ -1,0 +1,112 @@
+{
+  "schema": "q-boundary-sharp-uniform-lift-v1",
+  "research_id": "T171",
+  "source": "certificates/q_joint_boundary_gap.json",
+  "gauge_source": "certificates/q_boundary_gauge_lift.json",
+  "uniform_penalty": 179,
+  "face_rhs": 336,
+  "transformed_aggregate": {
+    "P": -263,
+    "Q": 500,
+    "R": 0
+  },
+  "pointwise_inequality": "Lprime(c) <= 336 + 179 D(c)",
+  "sharpness": {
+    "rejected_penalty": 178,
+    "order": [
+      229,
+      887,
+      3483,
+      231,
+      875,
+      877,
+      4641,
+      33,
+      233,
+      227,
+      35,
+      31,
+      873,
+      889,
+      5535,
+      37,
+      235,
+      7479,
+      7489,
+      891,
+      3477,
+      305
+    ],
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      2,
+      0,
+      1,
+      0,
+      3,
+      4,
+      4,
+      4,
+      4,
+      3,
+      1,
+      2,
+      1,
+      4,
+      1,
+      0,
+      0
+    ],
+    "D": 1,
+    "Lprime": 515,
+    "excess_at_178": 1,
+    "equality_at_179": true
+  },
+  "unconditional_inequality": {
+    "display": "500 q <= 15478 p + 3401 r - 1991",
+    "P": 15478,
+    "Q": 500,
+    "R": 3401,
+    "constant": -1991
+  },
+  "scalar_after_transitivity": {
+    "display": "1000 q <= 34357 p - 581",
+    "P": 34357,
+    "Q": 1000,
+    "constant": -581
+  },
+  "comparison_to_T170": {
+    "T170": "1000 q <= 120163 p - 3759",
+    "old_rhs_minus_new_rhs": "85806*(p-1/27)",
+    "valid_region": "p >= 1/27",
+    "strict_when": "p > 1/27"
+  },
+  "consequence_if_q_at_least_7_10": {
+    "p_lower": [
+      1281,
+      34357
+    ]
+  },
+  "discovery": {
+    "workflow_run": 37461214052,
+    "head_sha": "8dd73ad2f068dcacd7d5998cc40f0210aca3d7c6",
+    "producer": "research/probe_uniform_defect_penalty.py",
+    "binary_search_checked_penalties": [
+      316,
+      158,
+      237,
+      198,
+      178,
+      188,
+      183,
+      181,
+      180,
+      179
+    ]
+  },
+  "scope": "Exact W22 theorem for the fixed T170 gauge-transformed separator. The integer uniform defect penalty 179 is sufficient for every proper <=5-color partition and sharp because a certified D=1 partition has Lprime=515. This strengthens the support-independent P/Q/R necessary inequality but does not provide q>=7/10, decide full15, or change the ordinary Hadwiger-Nelson bounds."
+}
