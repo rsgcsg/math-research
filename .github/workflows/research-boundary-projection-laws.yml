@@ -1,0 +1,25 @@
+name: Research boundary projection laws
+on:
+  pull_request:
+    paths:
+      - 'research/verify_q_boundary_projection_law.py'
+      - 'research/verify_pqr_total_boundary_projection_law.py'
+      - 'certificates/q_boundary_projection_law.json'
+      - 'certificates/pqr_total_boundary_projection_law.json'
+      - 'certificates/q_joint_boundary_gap.json'
+      - '.github/workflows/research-boundary-projection-laws.yml'
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Replay T170
+        run: python3 -S research/verify_q_boundary_projection_law.py
+      - name: Replay T171
+        run: python3 -S research/verify_pqr_total_boundary_projection_law.py

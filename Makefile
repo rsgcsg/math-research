@@ -177,3 +177,10 @@ check-two-partition-w22-audit: check-q-joint-boundary-gap
 .PHONY: check-integration
 check-integration:
 	python3 -S research/check_integration.py
+
+.PHONY: check-q-boundary-projection-law check-pqr-total-boundary-projection-law
+check-q-boundary-projection-law: check-q-joint-boundary-gap
+	python3 -S research/verify_q_boundary_projection_law.py
+
+check-pqr-total-boundary-projection-law: check-q-joint-boundary-gap
+	python3 -S research/verify_pqr_total_boundary_projection_law.py

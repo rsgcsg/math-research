@@ -1,0 +1,151 @@
+{
+  "schema": "pqr-total-boundary-projection-law-v1",
+  "research_id": "T171",
+  "source": "certificates/q_joint_boundary_gap.json",
+  "denominator": 270,
+  "target_totals": {
+    "P": [
+      47,
+      27
+    ],
+    "Q": [
+      77,
+      10
+    ],
+    "R": [
+      434,
+      27
+    ]
+  },
+  "atoms": [
+    {
+      "weight_numerator": 99,
+      "counts": {
+        "P": 2,
+        "Q": 8,
+        "R": 16
+      },
+      "partition": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        3,
+        4,
+        1,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        1,
+        3,
+        1,
+        1,
+        4
+      ]
+    },
+    {
+      "weight_numerator": 81,
+      "counts": {
+        "P": 2,
+        "Q": 7,
+        "R": 16
+      },
+      "partition": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        3,
+        4,
+        2,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2,
+        1,
+        2,
+        0,
+        3,
+        2,
+        0,
+        4
+      ]
+    },
+    {
+      "weight_numerator": 70,
+      "counts": {
+        "P": 1,
+        "Q": 8,
+        "R": 16
+      },
+      "partition": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        4,
+        0,
+        1,
+        0,
+        2,
+        3,
+        4,
+        3,
+        3,
+        2,
+        4,
+        2,
+        1,
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "weight_numerator": 20,
+      "counts": {
+        "P": 2,
+        "Q": 8,
+        "R": 17
+      },
+      "partition": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3,
+        4,
+        1,
+        0,
+        4,
+        4,
+        3,
+        4,
+        3,
+        2,
+        1,
+        2,
+        0,
+        4,
+        1,
+        0,
+        4
+      ]
+    }
+  ],
+  "scope": "Exact 4-atom convex combination of proper W22 boundary partitions whose expected total numbers of equal P, Q, and R events are respectively 47/27, 77/10, and 434/27, exactly the class-total values of C030. Therefore no linear inequality depending only on the three aggregate counts sum_P x, sum_Q x, sum_R x can separate C030 from this boundary face. Individual event marginals are not claimed balanced; this is not a C030 proper-partition law, full-Y law, full15 law, or new Hadwiger-Nelson bound."
+}
