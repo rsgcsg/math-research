@@ -1,4 +1,60 @@
-# 当前研究状态：全部可见分支与本地成果统一基线
+# 当前研究状态：T174 P=0 的 Q/R 身份天花板；full15仍未决
+
+## 2026-10-06：T174 封死单 Q / 单 R 的非负 Horn 覆盖
+
+在 T165 七窗口饱和边界面上，11 条 Q 与31条 R 的全部341个身份配对都存在一份实际
+W22 proper 至多五块划分，使该 Q=R=1 而 **47 条 P 全部为0**。独立标准库检查器
+重新从几何与边界等式构造见证；第一次验收只访问523个递归节点、135个完整P=0叶便
+覆盖全部341配对，并逐份重验实际单位边、七窗口、PRR等式和事件值。
+
+因此任意固定 Q/R 以及任意非负实数系数都不可能满足逐词式
+
+\[
+x_Q+x_R\le1+\sum_{e\in P}a_e x_e,\qquad a_e\ge0.
+\]
+
+特别地，P-only cover 与“一个具体R + 任意P”的 Horn 路线一次性退休，不是简单的
+“小支持搜索没找到”。仍可能有效的下一层必须用多个 R-complement、正负系数共同出现、
+真正的多窗口 patching/matching-synchronization，或离开边界面的运输 lifting。
+
+[完整证明](proofs/pzero_qr_witness_ceiling.md) ·
+[独立检查器](../research/verify_pzero_qr_witness_ceiling.py)
+
+## 2026-10-06：T172 把“必须使用具体边身份”变成显式距离下界
+
+接续 T165、T170–T171。在 T165 七窗口边界面上，如果一份 proper 五块划分概率律的 P/Q/R 三类总量已经与 C030 完全一致，则89条指定事件里至少一条逐事件边际满足
+
+[
+|x_e-t_e|\ge 115/120663\approx 9.53\times 10^{-4}.
+]
+
+证明把 T165 separator 在三个 class-total 超平面内做最优 L1 gauge：P/Q/R 各类中位数分别为 -21、46、0，中心化后的 L1 范数恰为 3066+178+1225=4469，而 C030 对 separator 的严格缺口为 115/27。Hölder 立即给出上述 L∞ 下界。
+
+这个常数对“只保留三个 class-total 等式 + 单个 T165 separator + 0<=x<=1”的外放松已经尖锐；继续只做该 separator 的类内平移不可能改进。要继续推进，必须增加新的独立 identity-sensitive 边界不等式或更高阶共同结构。
+
+[完整证明](proofs/identity_sensitive_robustness.md) · [精确证书](../certificates/identity_sensitive_robustness.json) · [标准库检查器](../research/verify_identity_sensitive_robustness.py)
+
+这仍不是 C030/full-Y/full15 不可行证书，也没有新的普通 HN 界。
+
+## 2026-10-06：T173 精确封顶单 separator 的稀疏化能力
+
+只使用 T165 的一个89项 separator、三个 class-total 等式、概率盒，并把若干具体事件固定到 C030 目标时，**首次能强制矛盾的固定事件数恰为71**。固定70条时最优自由逃逸仍恰等于 separator 缺口 (115/27)；固定71条时降到 (32/9<115/27)。
+
+因此继续对同一个 T165 separator 做删边、类内 gauge 或只固定少量身份，不能产生小支持严格证书。下一主攻改为寻找新的独立 identity-sensitive facet / 多窗口高阶约束。
+
+[证明](proofs/single_separator_identity_threshold.md) · [证书](../certificates/single_separator_identity_threshold.json) · [检查器](../research/verify_single_separator_identity_threshold.py)
+
+## 2026-10-06：Q-only 与三类总量投影都已经真实可行
+
+在统一基线 65874a0e56ebbcaff8a33fc0cac1137c152c9131 上继续 T165/C030。
+
+- **T170：** 给出12份实际 W22 边界 proper 五块划分的精确有理混合，11条Q逐事件边际全部恰为 `7/10`。因此 C030 的均匀 Q 向量已经位于边界划分的 Q-only 投影凸包中，任何只依赖这11条Q坐标的线性不等式都不可能严格分离 C030。
+- **T171：** 给出4份实际边界划分，其 `(#P,#Q,#R)` 为 `(2,8,16),(2,7,16),(1,8,16),(2,8,17)`；按权重 `11/30,3/10,7/27,2/27` 混合，恰得到 C030 的三类总量 `(47/27,77/10,434/27)`。因此任何只依赖 P/Q/R 三类总和的线性式也不可能分离。
+
+这两条都不是 C030 proper-partition 正律：逐条 P/R（T170）或逐条 P/Q/R（T171）并不平衡。
+结论把下一主攻压缩为**身份敏感的 joint 投影**：必须识别少数具体 P/R/Q 边，不能只换 Q 权重或只看三类总量。
+
+[Q-only 证明](proofs/q_boundary_projection_law.md) · [三总量证明](proofs/pqr_total_boundary_projection_law.md)
 
 2026-10-06，Australia/Brisbane。PR #11归并及12个分支归档均已完成，远端仅保留main。
 本次从已发布提交83c36cd432e41fb2cdc7ed82395902ddedb87fd7接续收尾；更早主线起点为3009eda28c26334bc8063913af74031cc7bcd9f4。

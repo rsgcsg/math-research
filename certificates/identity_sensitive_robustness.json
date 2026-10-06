@@ -1,0 +1,38 @@
+{
+  "schema": "identity-sensitive-robustness-v1",
+  "research_id": "T172",
+  "source_certificate": "certificates/q_joint_boundary_gap.json",
+  "source_blob_sha": "a14a1bf442e2155773ac1082d83bfc74a30c616d",
+  "boundary_separator_rhs": 2,
+  "target_means": {
+    "P": [1, 27],
+    "Q": [7, 10],
+    "R": [14, 27]
+  },
+  "coefficient_sums": {
+    "P": -2267,
+    "Q": 500,
+    "R": -501
+  },
+  "target_separator_value": [169, 27],
+  "separator_gap": [115, 27],
+  "class_gauge_medians": {
+    "P": -21,
+    "Q": 46,
+    "R": 0
+  },
+  "class_centered_l1": {
+    "P": 3066,
+    "Q": 178,
+    "R": 1225,
+    "total": 4469
+  },
+  "minimum_forced_linf_deviation": [115, 120663],
+  "sharp_single_separator_relaxation": {
+    "P_sign_counts": [23, 23, 1],
+    "Q_sign_counts": [5, 5, 1],
+    "R_sign_counts": [13, 14, 4],
+    "description": "Within the relaxation consisting only of the three class-total equalities and the T165 separator, the bound 115/120663 is attained by taking target-minus-x equal to epsilon times the sign of the centered coefficient, using one zero R coefficient with +epsilon to restore the R class-total equality."
+  },
+  "scope": "Quantitative consequence on the T165 seven-window boundary face for probability laws whose aggregate P, Q, R totals match C030. It proves at least one of the 89 named event marginals differs from its C030 class target by at least 115/120663. The constant is optimal for the single T165 separator modulo the three class-total equalities, not claimed optimal for the full boundary polytope. No full15 solution or new Hadwiger-Nelson bound."
+}

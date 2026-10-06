@@ -1,0 +1,25 @@
+name: Search P-zero Q laws dominating R
+on:
+  pull_request:
+    paths:
+      - 'research/probe_pzero_q_rdom_law.py'
+      - 'certificates/q_joint_boundary_gap.json'
+      - '.github/workflows/research-pzero-rdom.yml'
+permissions:
+  contents: read
+jobs:
+  search:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python3 -m pip install numpy==2.5.3 scipy==1.18.1
+      - name: Search exact-rationalizable P-zero laws
+        run: python3 research/probe_pzero_q_rdom_law.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pzero-q-rdom-search
+          path: pzero_q_rdom_search.json

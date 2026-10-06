@@ -1,0 +1,60 @@
+name: Research boundary projection laws
+on:
+  pull_request:
+    paths:
+      - 'research/verify_q_boundary_projection_law.py'
+      - 'research/verify_pqr_total_boundary_projection_law.py'
+      - 'certificates/q_boundary_projection_law.json'
+      - 'certificates/pqr_total_boundary_projection_law.json'
+      - 'certificates/q_joint_boundary_gap.json'
+      - 'research/verify_identity_sensitive_robustness.py'
+      - 'research/verify_single_separator_identity_threshold.py'
+      - 'certificates/identity_sensitive_robustness.json'
+      - 'certificates/single_separator_identity_threshold.json'
+      - 'research/search_sparse_boundary_projection.py'
+      - 'research/probe_fractional_q_pr_cover.py'
+      - 'research/probe_horn_qr_p.py'
+      - 'research/probe_fractional_q_p_notr_cover.py'
+      - 'research/verify_pzero_qr_witness_ceiling.py'
+      - '.github/workflows/research-boundary-projection-laws.yml'
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Replay T170
+        run: python3 -S research/verify_q_boundary_projection_law.py
+      - name: Replay T171
+        run: python3 -S research/verify_pqr_total_boundary_projection_law.py
+      - name: Replay T172
+        run: python3 -S research/verify_identity_sensitive_robustness.py
+      - name: Replay T173
+        run: python3 -S research/verify_single_separator_identity_threshold.py
+      - name: Install sparse-search dependency
+        run: python3 -m pip install numpy==2.5.3 scipy==1.18.1
+      - name: Search sparse identity separator
+        run: python3 research/search_sparse_boundary_projection.py
+      - name: Search fractional Q-by-P/R covers
+        run: python3 research/probe_fractional_q_pr_cover.py
+      - name: Search small Q-R-P Horn separators
+        run: python3 research/probe_horn_qr_p.py
+      - name: Search fractional Q covers by P and R defects
+        run: python3 research/probe_fractional_q_p_notr_cover.py
+      - name: Build independent P-zero Q/R witness certificate
+        run: python3 -S research/verify_pzero_qr_witness_ceiling.py --write
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sparse-boundary-projection-search
+          path: |
+            sparse_boundary_projection_search.json
+            fractional_q_pr_cover_search.json
+            horn_qr_p_search.json
+            fractional_q_p_notr_cover_search.json
+            certificates/pzero_qr_witness_ceiling.json
+            certificates/pzero_qr_witness_ceiling_validation.json
