@@ -14,6 +14,7 @@ on:
       - 'research/search_sparse_boundary_projection.py'
       - 'research/probe_fractional_q_pr_cover.py'
       - 'research/probe_horn_qr_p.py'
+      - 'research/probe_fractional_q_p_notr_cover.py'
       - '.github/workflows/research-boundary-projection-laws.yml'
 permissions:
   contents: read
@@ -42,6 +43,8 @@ jobs:
         run: python3 research/probe_fractional_q_pr_cover.py
       - name: Search small Q-R-P Horn separators
         run: python3 research/probe_horn_qr_p.py
+      - name: Search fractional Q covers by P and R defects
+        run: python3 research/probe_fractional_q_p_notr_cover.py
       - uses: actions/upload-artifact@v4
         with:
           name: sparse-boundary-projection-search
@@ -49,3 +52,4 @@ jobs:
             sparse_boundary_projection_search.json
             fractional_q_pr_cover_search.json
             horn_qr_p_search.json
+            fractional_q_p_notr_cover_search.json
