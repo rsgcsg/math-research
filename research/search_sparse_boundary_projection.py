@@ -141,6 +141,63 @@ def greedy_q_by_p_covers(lo,hi,terms):
     found.sort(key=lambda z:(z["P_count"],z["Q_pair"]))
     return found
 
+
+def exact_q_by_p_cover_milp(lo,hi,terms):
+    """Exact minimum-cardinality P cover of every boundary pattern with Q_e=1.
+
+    Discovery uses scipy.milp.  A later proof checker must independently certify
+    any claimed optimum before promotion to a theorem.
+    """
+    from scipy.optimize import Bounds, LinearConstraint, milp
+    from scipy.sparse import csr_matrix
+    cols=[bit_column(lo,hi,j).astype(bool) for j in range(len(terms))]
+    pidx=[j for j,t in enumerate(terms) if t["type"]=="P"]
+    qidx=[j for j,t in enumerate(terms) if t["type"]=="Q"]
+    # Pack the 47 P coordinates into uint64 once.
+    pcode=np.zeros(len(lo),dtype=np.uint64)
+    for pos,j in enumerate(pidx):
+        pcode |= cols[j].astype(np.uint64) << np.uint64(pos)
+    ans=[]
+    for qj in qidx:
+        masks=np.unique(pcode[cols[qj]])
+        if np.any(masks==0):
+            ans.append({"Q_pair":terms[qj]["pair"],"cover_exists":False,
+                        "reason":"Q=1 boundary pattern with all 47 P events zero"})
+            continue
+        # Inclusion-minimal row masks suffice: hitting a subset also hits every superset.
+        ints=sorted((int(x) for x in masks),key=lambda z:(z.bit_count(),z))
+        minimal=[]
+        for m in ints:
+            if not any((s & m)==s for s in minimal):
+                minimal.append(m)
+        rows=[]; cols_ix=[]
+        for i,m in enumerate(minimal):
+            z=m
+            while z:
+                bit=z & -z; cols_ix.append(bit.bit_length()-1); rows.append(i); z^=bit
+        A=csr_matrix((np.ones(len(rows),dtype=float),(rows,cols_ix)),
+                     shape=(len(minimal),len(pidx)))
+        res=milp(c=np.ones(len(pidx)),integrality=np.ones(len(pidx)),
+                 bounds=Bounds(np.zeros(len(pidx)),np.ones(len(pidx))),
+                 constraints=LinearConstraint(A,np.ones(len(minimal)),
+                                               np.full(len(minimal),np.inf)),
+                 options={"time_limit":120.0})
+        require(res.success and res.x is not None,"exact P-cover MILP failed")
+        chosen=[pidx[i] for i,x in enumerate(res.x) if x>0.5]
+        # Direct integer replay against every Q=1 pattern.
+        hit=np.zeros(len(lo),dtype=bool)
+        for j in chosen: hit |= cols[j]
+        require(np.all(hit[cols[qj]]),"MILP P-cover candidate misses Q=1 pattern")
+        ans.append({"Q_pair":terms[qj]["pair"],"cover_exists":True,
+                    "minimum_P_count":len(chosen),
+                    "violates_C030":F(len(chosen),27)<F(7,10),
+                    "P_pairs":[terms[j]["pair"] for j in chosen],
+                    "unique_Q1_P_patterns":int(len(masks)),
+                    "minimal_hitting_constraints":len(minimal),
+                    "solver_status":int(res.status),
+                    "solver_message":str(res.message)})
+    return ans
+
 def main():
     cert=read(CERT)
     g=read(ROOT/"certificates/Y_full_geometry.json.gz")
@@ -175,10 +232,12 @@ def main():
                         "terms":rows})
     results.sort(key=lambda x:(x["support_size"],-F(*x["margin"])))
     q_by_p=greedy_q_by_p_covers(lo,hi,terms)
+    exact_q_by_p=exact_q_by_p_cover_milp(lo,hi,terms)
     out={"schema":"sparse-boundary-projection-search-v1","status":"SEARCH_OBSERVATION",
          "boundary_leaves":leaves,"unique_event_patterns":len(lo),
          "best":results[0],"all_runs":[{k:v for k,v in z.items() if k!="terms"} for z in results],
          "q_by_p_covers":q_by_p,
+         "exact_q_by_p_covers":exact_q_by_p,
          "scope":"Producer observation only until independently replayed. Coefficients are a subset of the certified T165 separator with omitted coefficients set to zero; rhs is recomputed by exhaustive boundary enumeration."}
     OUT.write_text(json.dumps(out,indent=2)+"\n")
     print(json.dumps(out,sort_keys=True))
