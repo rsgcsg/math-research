@@ -1,8 +1,142 @@
 {
   "schema": "hn-unified-sources-v1",
   "baseline_main": "3009eda28c26334bc8063913af74031cc7bcd9f4",
-  "status": "VERIFIED_PENDING_MAIN_MERGE",
-  "remote_cleanup": "NOT_EXECUTED",
+  "status": "MERGED_AND_ARCHIVED",
+  "remote_cleanup": {
+    "schema": "hn-unified-branch-closeout-v1",
+    "status": "PASS",
+    "date": "2026-10-06",
+    "time_utc": "2026-10-06T08:42:56.526508+00:00",
+    "run_id": "37437922972",
+    "main_at_cleanup": "4ccfe396f1d62a6d63decd49fc673a642941094f",
+    "merged_pr": 11,
+    "merge_commit": "76a4545c4cb021cb5c837e6b61099d3a9c4a1c0e",
+    "targets": [
+      {
+        "branch": "research/full15-coupling-20260928",
+        "sha": "4c3e2313902b40bbfbf63cbc673a45e2951f991f",
+        "archive_tag": "archive/2026-10-06/research/full15-coupling-20260928",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "research/generalized-partition-facets-20261006",
+        "sha": "eaefe43b3ceec3fafd82a849db8ced2764e9e8af",
+        "archive_tag": "archive/2026-10-06/research/generalized-partition-facets-20261006",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "research/intrinsic-eta-cycle-20260928",
+        "sha": "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa",
+        "archive_tag": "archive/2026-10-06/research/intrinsic-eta-cycle-20260928",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "research/joint-continuation-20260928",
+        "sha": "b1e4aa8f307010fb7e5322a6cec6403665e32d0e",
+        "archive_tag": "archive/2026-10-06/research/joint-continuation-20260928",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "research/mixed-motion-20260929",
+        "sha": "fc6d2c2972f6c234f06112576610d26525795cf8",
+        "archive_tag": "archive/2026-10-06/research/mixed-motion-20260929",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "research/q-chorded-w22-audit-20261006",
+        "sha": "a8fc6be077250441e627077ee33e15b7f9c22e10",
+        "archive_tag": "archive/2026-10-06/research/q-chorded-w22-audit-20261006",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "research/q-defect-20261006",
+        "sha": "91849ffc04cc1e21193fbe3fddae2947072f7093",
+        "archive_tag": "archive/2026-10-06/research/q-defect-20261006",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "research/q-defect-lifting-20261006",
+        "sha": "335c78d1d5f9e6f9c1058601039c237b4daaf221",
+        "archive_tag": "archive/2026-10-06/research/q-defect-lifting-20261006",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "research/transport-projection-20261004",
+        "sha": "335c78d1d5f9e6f9c1058601039c237b4daaf221",
+        "archive_tag": "archive/2026-10-06/research/transport-projection-20261004",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "research/triangular-lattice-20260928",
+        "sha": "578bd83c3a47d9a2b9eeed6dc6cbd2651c0f1793",
+        "archive_tag": "archive/2026-10-06/research/triangular-lattice-20260928",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "research/two-partition-w22-audit-20261006",
+        "sha": "a0d51399b6fa9bd5b057b8cac910191a92f4f519",
+        "archive_tag": "archive/2026-10-06/research/two-partition-w22-audit-20261006",
+        "status": "ARCHIVED_AND_DELETED"
+      },
+      {
+        "branch": "maintenance/unified-results-20261006",
+        "sha": "3c7ca34060cb8f22997895507934d990a7e42ede",
+        "archive_tag": "archive/2026-10-06/maintenance/unified-results-20261006",
+        "status": "ARCHIVED_AND_DELETED"
+      }
+    ],
+    "old_tag_count": 16,
+    "old_tags_unchanged": true,
+    "heads_before": {
+      "main": "4ccfe396f1d62a6d63decd49fc673a642941094f",
+      "maintenance/unified-results-20261006": "3c7ca34060cb8f22997895507934d990a7e42ede",
+      "research/full15-coupling-20260928": "4c3e2313902b40bbfbf63cbc673a45e2951f991f",
+      "research/generalized-partition-facets-20261006": "eaefe43b3ceec3fafd82a849db8ced2764e9e8af",
+      "research/intrinsic-eta-cycle-20260928": "09926d59b176c1f649aa30f7ec397fb8fa9ef9fa",
+      "research/joint-continuation-20260928": "b1e4aa8f307010fb7e5322a6cec6403665e32d0e",
+      "research/mixed-motion-20260929": "fc6d2c2972f6c234f06112576610d26525795cf8",
+      "research/q-chorded-w22-audit-20261006": "a8fc6be077250441e627077ee33e15b7f9c22e10",
+      "research/q-defect-20261006": "91849ffc04cc1e21193fbe3fddae2947072f7093",
+      "research/q-defect-lifting-20261006": "335c78d1d5f9e6f9c1058601039c237b4daaf221",
+      "research/transport-projection-20261004": "335c78d1d5f9e6f9c1058601039c237b4daaf221",
+      "research/triangular-lattice-20260928": "578bd83c3a47d9a2b9eeed6dc6cbd2651c0f1793",
+      "research/two-partition-w22-audit-20261006": "a0d51399b6fa9bd5b057b8cac910191a92f4f519"
+    },
+    "heads_after": {
+      "main": "4ccfe396f1d62a6d63decd49fc673a642941094f"
+    },
+    "guard_selftests": {
+      "status": "PASS",
+      "unsafe_plans_rejected": 8
+    },
+    "guards": [
+      "explicit targets",
+      "exact SHA",
+      "merged ancestry",
+      "no open PR",
+      "no active workflow",
+      "tag conflict refusal",
+      "atomic archive-and-delete",
+      "per-ref expected-SHA leases",
+      "remote readback"
+    ],
+    "scope": "Reference cleanup only. Original commits and evidence preserved. Mathematical UNKNOWNs unchanged. Unknown concurrent branches are not deleted.",
+    "post_record_static_audit": {
+      "status": "PASS",
+      "python_syntax_files": 352,
+      "json_certificate_files": 263,
+      "local_file_targets": 867,
+      "ledger_ids": {
+        "T": 169,
+        "E": 124,
+        "C": 32,
+        "Q": 11
+      },
+      "source_files": 356,
+      "source_manifest_sha256": "8d68e5bbfe230042b3dd7ece4882187b4772820d8795456416c7e3334af27a70",
+      "scope": "Integration syntax, parseability, exact ID coverage and local file targets only. Not exhaustive anchor checking, new theorem validation, or remote publication."
+    }
+  },
   "refs": [
     {
       "ref": "refs/archive/local0/heads/research/cycle-descent-20260928",

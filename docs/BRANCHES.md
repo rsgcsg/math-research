@@ -27,3 +27,10 @@ git switch -c research/revisit archive/2026-10-06/research/q-defect-20261006
 
 本地完整历史包也保留所有读取的头；无网恢复不依赖会过期的Actions下载链接。
 独有未提交实验保存在references/unverified，进入仓库只代表保全，不代表认证。
+
+## 已完成的远端收尾
+
+PR #11已合并到main；其包含原PR #7–10全部研究提交与本地独有历史。11个旧研究分支及本次维护分支
+均已建立同SHA归档标签并删除旧指针。原有标签未变。操作时保留的分支、精确SHA、逐项归档结果及
+运行号均记录在[integration_sources.json](integration_sources.json)的remote_cleanup字段。
+旧PR已归入统一整合，不重复计数成果。会过期的Actions包不是唯一备份，原始Git提交由永久标签保留。
