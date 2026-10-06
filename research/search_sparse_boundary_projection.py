@@ -104,6 +104,43 @@ def greedy(lo,hi,coeff,target,order):
             scores=trial; tscore=tt; support.remove(j)
     return support, tscore, int(scores.max()), tscore-int(scores.max())
 
+
+def greedy_q_by_p_covers(lo,hi,terms):
+    """Discovery: try q_e <= sum_{p in S} p with |S|<=18."""
+    cols=[bit_column(lo,hi,j).astype(bool) for j in range(len(terms))]
+    pidx=[j for j,t in enumerate(terms) if t["type"]=="P"]
+    qidx=[j for j,t in enumerate(terms) if t["type"]=="Q"]
+    found=[]
+    for qj in qidx:
+        uncovered=cols[qj].copy()
+        chosen=[]
+        available=set(pidx)
+        while uncovered.any() and len(chosen)<19:
+            best=None; bestgain=0
+            for j in available:
+                gain=int(np.count_nonzero(uncovered & cols[j]))
+                if gain>bestgain:
+                    bestgain=gain; best=j
+            if best is None or bestgain==0:
+                break
+            chosen.append(best); available.remove(best)
+            uncovered &= ~cols[best]
+        if not uncovered.any() and len(chosen)<=18:
+            # Exact validity replay over every unique event pattern.
+            lhs=cols[qj].astype(np.int16)
+            rhs=np.zeros(len(lo),dtype=np.int16)
+            for j in chosen: rhs += cols[j]
+            require(np.all(lhs<=rhs),"greedy Q-by-P cover validity")
+            found.append({
+                "Q_pair":terms[qj]["pair"],
+                "P_count":len(chosen),
+                "target_rhs":[len(chosen),27],
+                "strict_against_q_7_10": F(len(chosen),27) < F(7,10),
+                "P_pairs":[terms[j]["pair"] for j in chosen],
+            })
+    found.sort(key=lambda z:(z["P_count"],z["Q_pair"]))
+    return found
+
 def main():
     cert=read(CERT)
     g=read(ROOT/"certificates/Y_full_geometry.json.gz")
@@ -137,9 +174,11 @@ def main():
                         "rhs":rhs,"margin":[margin.numerator,margin.denominator],
                         "terms":rows})
     results.sort(key=lambda x:(x["support_size"],-F(*x["margin"])))
+    q_by_p=greedy_q_by_p_covers(lo,hi,terms)
     out={"schema":"sparse-boundary-projection-search-v1","status":"SEARCH_OBSERVATION",
          "boundary_leaves":leaves,"unique_event_patterns":len(lo),
          "best":results[0],"all_runs":[{k:v for k,v in z.items() if k!="terms"} for z in results],
+         "q_by_p_covers":q_by_p,
          "scope":"Producer observation only until independently replayed. Coefficients are a subset of the certified T165 separator with omitted coefficients set to zero; rhs is recomputed by exhaustive boundary enumeration."}
     OUT.write_text(json.dumps(out,indent=2)+"\n")
     print(json.dumps(out,sort_keys=True))
