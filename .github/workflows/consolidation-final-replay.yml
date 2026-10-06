@@ -1,0 +1,131 @@
+name: Complete consolidated verification coverage
+on:
+  push:
+    branches: [maintenance/unified-results-20261006]
+    paths: [.github/workflows/consolidation-final-replay.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  replay:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Checkout exact public source without persisted credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -eu
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Execute every assigned Makefile check and bind its source and output
+        env:
+          SHARD: ${{ matrix.shard }}
+          PYTHONUNBUFFERED: '1'
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,os,platform,shlex,subprocess,time
+          from pathlib import Path
+          root=Path.cwd(); out=Path(os.environ['RUNNER_TEMP'])/'evidence';out.mkdir()
+          def sha(b):return hashlib.sha256(b).hexdigest()
+          def dump(p,x):p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
+          paths=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          paths=[p for p in paths if p and (p.startswith('research/') or p=='Makefile' or p.startswith('requirements'))]
+          def manifest():return {p:sha((root/p).read_bytes()) for p in sorted(paths)}
+          frozen=manifest(); dump(out/'source-manifest.json',frozen)
+          plan=subprocess.check_output(['make','-n','check'],text=True).splitlines()
+          if not plan or len(plan)!=len(set(plan)):raise RuntimeError('empty or duplicated check plan')
+          commands=[shlex.split(line) for line in plan]
+          if any(not c or c[0]!='python3' for c in commands):raise RuntimeError('unsupported Makefile command')
+          dump(out/'check-plan.json',plan)
+          shard=int(os.environ['SHARD']); records=[]
+          report=dict(schema='hn-consolidated-shard-v1',commit=os.environ['GITHUB_SHA'],shard=shard,
+            source_manifest_sha256=sha(json.dumps(frozen,sort_keys=True,separators=(',',':')).encode()),
+            plan_sha256=sha(json.dumps(plan,separators=(',',':')).encode()),python=platform.python_version(),
+            commands=records,status='RUNNING')
+          dump(out/'report.json',report)
+          for i,c in enumerate(commands):
+              if i%8!=shard:continue
+              log=out/f'{i:03d}.log';started=time.time()
+              print('START',i,plan[i],flush=True)
+              with log.open('wb') as f:
+                  try:rc=subprocess.run(c,stdout=f,stderr=subprocess.STDOUT,timeout=3600).returncode
+                  except subprocess.TimeoutExpired:rc=124
+              records.append(dict(index=i,command=plan[i],returncode=rc,seconds=round(time.time()-started,3),log_sha256=sha(log.read_bytes())))
+              dump(out/'report.json',report);print('END',i,rc,flush=True)
+          report['source_unchanged']=manifest()==frozen
+          report['changed_files']=subprocess.check_output(['git','diff','--name-only'],text=True).splitlines()
+          (out/'worktree.diff').write_bytes(subprocess.check_output(['git','diff','--binary']))
+          for p in report['changed_files']:
+              target=out/'outputs'/p;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes((root/p).read_bytes())
+          report['status']='PASS' if report['source_unchanged'] and all(r['returncode']==0 for r in records) else 'FAIL'
+          dump(out/'report.json',report)
+          raise SystemExit(0 if report['status']=='PASS' else 1)
+          PY
+      - name: Preserve exact per-command evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: integration-shard-${{ matrix.shard }}
+          path: ${{ runner.temp }}/evidence
+          retention-days: 30
+          if-no-files-found: error
+  aggregate:
+    if: always()
+    needs: replay
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Download exact shard receipts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download '${{ github.run_id }}' --repo rsgcsg/math-research --pattern 'integration-shard-*' --dir "$RUNNER_TEMP/shards"
+      - name: Confirm complete coverage without promoting partial success
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          root=Path(os.environ['RUNNER_TEMP'])/'shards'; reports=[];errors=[]
+          def load(p):return json.loads(p.read_text())
+          plan=None;manifest=None;seen=[]
+          for k in range(8):
+              d=root/f'integration-shard-{k}'
+              try:r=load(d/'report.json');p=load(d/'check-plan.json');m=load(d/'source-manifest.json')
+              except Exception as e:errors.append(str(e));continue
+              if plan is None:plan=p;manifest=m
+              if p!=plan or m!=manifest or r['commit']!=os.environ['SOURCE_SHA'] or r['shard']!=k:errors.append('source/plan mismatch')
+              if r['status']!='PASS':errors.append('failed shard '+str(k))
+              for row in r['commands']:
+                  i=row['index'];seen.append(i)
+                  if row['command']!=p[i] or row['returncode']!=0:errors.append('failed command '+str(i))
+                  if hashlib.sha256((d/f'{i:03d}.log').read_bytes()).hexdigest()!=row['log_sha256']:errors.append('log digest')
+              reports.append(r)
+          if plan is None or sorted(seen)!=list(range(len(plan))):errors.append('incomplete/duplicated coverage')
+          report=dict(schema='hn-consolidated-full-coverage-v1',status='PASS' if not errors else 'FAIL',
+              source_commit=os.environ['SOURCE_SHA'],run_id=os.environ['GITHUB_RUN_ID'],
+              command_count=len(plan or []),errors=errors,shards=reports,
+              scope='Every distinct Python command in make -n check executed in isolated shard workspaces on identical frozen source. Not a single serial make check invocation. Runtime output differences require separate review. No new mathematical result is claimed.')
+          (root/'coverage.json').write_text(json.dumps(report,indent=2)+'\n')
+          print(json.dumps(dict(status=report['status'],commands=report['command_count'],errors=errors)))
+          raise SystemExit(bool(errors))
+          PY
+      - name: Save all source-bound logs and aggregate receipt
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: consolidated-complete-verification
+          path: ${{ runner.temp }}/shards
+          retention-days: 30
+          if-no-files-found: error
