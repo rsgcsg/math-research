@@ -198,6 +198,69 @@ def exact_q_by_p_cover_milp(lo,hi,terms):
                     "solver_message":str(res.message)})
     return ans
 
+
+def small_p_cover_from_masks(mask_values, max_depth=4):
+    """Exact branch search for a hitting set of at most max_depth P bits."""
+    masks=sorted(set(int(x) for x in mask_values),key=lambda z:(z.bit_count(),z))
+    if not masks:
+        return []
+    if masks[0]==0:
+        return None
+    def rec(active,depth,chosen):
+        if not active:
+            return chosen
+        if depth==0:
+            return None
+        pivot=min(active,key=lambda z:z.bit_count())
+        z=pivot
+        while z:
+            bit=z & -z
+            nxt=[m for m in active if not (m & bit)]
+            ans=rec(nxt,depth-1,chosen+[bit.bit_length()-1])
+            if ans is not None:
+                return ans
+            z^=bit
+        return None
+    for d in range(max_depth+1):
+        ans=rec(masks,d,[])
+        if ans is not None:
+            return ans
+    return None
+
+def exact_q_by_one_r_four_p(lo,hi,terms):
+    """Exhaust Q <= R + up to four P candidates exactly over boundary patterns."""
+    cols=[bit_column(lo,hi,j).astype(bool) for j in range(len(terms))]
+    pidx=[j for j,t in enumerate(terms) if t["type"]=="P"]
+    qidx=[j for j,t in enumerate(terms) if t["type"]=="Q"]
+    ridx=[j for j,t in enumerate(terms) if t["type"]=="R"]
+    pcode=np.zeros(len(lo),dtype=np.uint64)
+    for pos,j in enumerate(pidx):
+        pcode |= cols[j].astype(np.uint64) << np.uint64(pos)
+    found=[]
+    audited=0
+    for qj in qidx:
+        for rj in ridx:
+            rows=cols[qj] & ~cols[rj]
+            masks=np.unique(pcode[rows])
+            audited+=1
+            chosen_pos=small_p_cover_from_masks(masks,4)
+            if chosen_pos is None:
+                continue
+            chosen=[pidx[pos] for pos in chosen_pos]
+            lhs=cols[qj].astype(np.int16)
+            rhs=cols[rj].astype(np.int16)
+            for j in chosen: rhs += cols[j]
+            require(np.all(lhs<=rhs),"one-R/four-P cover validity")
+            cost=14+len(chosen)
+            found.append({
+                "Q_pair":terms[qj]["pair"],"R_pair":terms[rj]["pair"],
+                "P_count":len(chosen),"integer_target_cost_over_27":cost,
+                "violates_C030":cost*10 < 7*27,
+                "P_pairs":[terms[j]["pair"] for j in chosen],
+            })
+    found.sort(key=lambda z:(z["integer_target_cost_over_27"],z["Q_pair"],z["R_pair"]))
+    return {"audited_QR_pairs":audited,"found":found}
+
 def main():
     cert=read(CERT)
     g=read(ROOT/"certificates/Y_full_geometry.json.gz")
@@ -233,11 +296,13 @@ def main():
     results.sort(key=lambda x:(x["support_size"],-F(*x["margin"])))
     q_by_p=greedy_q_by_p_covers(lo,hi,terms)
     exact_q_by_p=exact_q_by_p_cover_milp(lo,hi,terms)
+    one_r_four_p=exact_q_by_one_r_four_p(lo,hi,terms)
     out={"schema":"sparse-boundary-projection-search-v1","status":"SEARCH_OBSERVATION",
          "boundary_leaves":leaves,"unique_event_patterns":len(lo),
          "best":results[0],"all_runs":[{k:v for k,v in z.items() if k!="terms"} for z in results],
          "q_by_p_covers":q_by_p,
          "exact_q_by_p_covers":exact_q_by_p,
+         "q_by_one_r_four_p":one_r_four_p,
          "scope":"Producer observation only until independently replayed. Coefficients are a subset of the certified T165 separator with omitted coefficients set to zero; rhs is recomputed by exhaustive boundary enumeration."}
     OUT.write_text(json.dumps(out,indent=2)+"\n")
     print(json.dumps(out,sort_keys=True))
