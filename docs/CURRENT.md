@@ -1,4 +1,20 @@
-# 当前状态：T164–T165 / C030，实际联合划分缺口；full15仍未决
+# 当前状态：E121 最小 q-chorded facets 已排除；full15仍未决
+
+## 2026-10-06：E121，C030 不是最小 q-chorded cycle facet 缺口
+
+接续 T164–T165 / C030。采用 Irmai–Naumann–Andres 2026 对任意 q-chorded
+k-cycle facets 的完整判据，在 W22 已逐点认证的 120 个 P/Q/R/E 点对上，精确穷尽
+支持大小不超过10的全部 facet-inducing 参数：
+`(5,2),(7,2),(9,2),(7,3),(9,4),(10,3)`。
+C030 在六类上均严格满足不等式；最接近的新 q>2 情形 `(10,3)` 的最大值为
+`997/270 < 6`。因此 C030 的分数颜色类覆盖/完整五块划分缺口不能由这些最小
+q-chorded cycle facets 解释。未知点对没有被猜作任何类型。
+
+[证明与精确范围](proofs/q_chorded_w22_audit.md) ·
+[冻结证书](../certificates/q_chorded_w22_audit.json) ·
+[独立检查器](../research/verify_q_chorded_w22_audit.py)。
+下一步应扩充实际可认证点对并查 k>=11，或直接抽象 T165 的多窗口共同划分耦合；
+不再重复当前六类小 facet 枚举。普通 HN 与 full15 状态不变。
 
 ## 2026-10-06：从单颜色对偶到真实22点联合分离
 
