@@ -249,8 +249,16 @@ def exact_q_by_one_r_four_p(lo,hi,terms):
         pcode |= cols[j].astype(np.uint64) << np.uint64(pos)
     found=[]
     audited=0
+    eligible_summary=[]
     for qj in qidx:
-        for rj in ridx:
+        p0rows=cols[qj] & (pcode==0)
+        require(np.any(p0rows),"expected Q=1,P=0 witness")
+        eligible=[rj for rj in ridx if np.all(cols[rj][p0rows])]
+        eligible_summary.append({"Q_pair":terms[qj]["pair"],
+                                 "P0_pattern_count":int(np.count_nonzero(p0rows)),
+                                 "eligible_R_count":len(eligible),
+                                 "eligible_R_pairs":[terms[rj]["pair"] for rj in eligible]})
+        for rj in eligible:
             rows=cols[qj] & ~cols[rj]
             masks=np.unique(pcode[rows])
             audited+=1
@@ -270,7 +278,8 @@ def exact_q_by_one_r_four_p(lo,hi,terms):
                 "P_pairs":[terms[j]["pair"] for j in chosen],
             })
     found.sort(key=lambda z:(z["integer_target_cost_over_27"],z["Q_pair"],z["R_pair"]))
-    return {"audited_QR_pairs":audited,"found":found}
+    return {"audited_QR_pairs_after_P0_filter":audited,
+            "P0_R_eligibility":eligible_summary,"found":found}
 
 def main():
     cert=read(CERT)
