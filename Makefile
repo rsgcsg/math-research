@@ -181,3 +181,7 @@ check-q-boundary-gauge-lift: check-q-joint-boundary-gap
 .PHONY: check-integration
 check-integration:
 	python3 -S research/check_integration.py
+
+.PHONY: check-q-boundary-nonuniform-defect-lift
+check-q-boundary-nonuniform-defect-lift: check-q-boundary-gauge-lift
+	python3 -S research/verify_q_boundary_nonuniform_defect_lift.py --self-test
