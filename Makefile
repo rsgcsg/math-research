@@ -188,3 +188,7 @@ check-pqr-total-boundary-projection-law: check-q-joint-boundary-gap
 .PHONY: check-identity-sensitive-robustness
 check-identity-sensitive-robustness:
 	python3 -S research/verify_identity_sensitive_robustness.py
+
+.PHONY: check-single-separator-identity-threshold
+check-single-separator-identity-threshold: check-identity-sensitive-robustness
+	python3 -S research/verify_single_separator_identity_threshold.py
