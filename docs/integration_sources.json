@@ -1,7 +1,7 @@
 {
   "schema": "hn-unified-sources-v1",
   "baseline_main": "3009eda28c26334bc8063913af74031cc7bcd9f4",
-  "status": "LOCAL_INTEGRATION_PENDING_REPLAY",
+  "status": "VERIFIED_PENDING_MAIN_MERGE",
   "remote_cleanup": "NOT_EXECUTED",
   "refs": [
     {
@@ -860,5 +860,17 @@
       "86a7f6c53e0d4058fdee6990c6cc2946bbd4fad1",
       "3dc223a711cc37dbb610b48f136a5c5308871421"
     ]
+  },
+  "verification_commit": "7f630ef6686daa078c2aa637b4d6255d81f7ee3f",
+  "verification_run": "37431407795",
+  "current_local_audit": {
+    "zip_inputs_reviewed": 32,
+    "prior_inventory_hashes_confirmed": 31,
+    "scientific_contributions_identical": 146,
+    "legacy_modules_renamed": 4,
+    "related_import_or_description_adjustments": 3,
+    "user_upload": "math-research-q-defect-final-20261006(2).zip",
+    "user_upload_sha256": "3093f98a32c6367eea4dba000d7b5d4dc4108a0310d927cee8e17c8cee2755f1",
+    "source": "Local review in this consolidation; archive list and original refs retained in docs/integration_sources.json. Not inferred from CI pass."
   }
 }

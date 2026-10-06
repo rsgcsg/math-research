@@ -18,7 +18,6 @@ T165/C030已跨过某个单颜色外放松，但没有排除所有合法五色�
 
 ```sh
 make check                     # 完整标准库检查
-make -j2 check                 # 同一依赖图，两任务并行；需要足够内存
 make check-integration         # 编号/格式/来源/文件引用静态审计
 make check-packet check-cycle-descent
 make check-q-defect-lift check-q-defect-scope-audit
@@ -27,3 +26,6 @@ make check-q-joint-boundary-gap check-two-partition-w22-audit
 
 Python版本、实际覆盖与运行日志见[验收收据](certificates/unified_integration_validation.json)。
 搜索与独立检查分离；新搜索依赖不由make check安装。请先读[AGENTS.md](AGENTS.md)。
+
+本次70条检查完整覆盖已通过；采用隔离分组重放，未声称单次串行全仓运行。
+历史分支及本地独有提交均保留真实Git历史；合并与清理结果见[分支/来源](docs/BRANCHES.md)。
