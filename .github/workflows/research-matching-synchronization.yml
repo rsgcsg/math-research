@@ -27,6 +27,8 @@ jobs:
         run: python3 -S research/verify_q_boundary_gauge_lift.py --self-test
       - name: Enumerate exact matching/Q synchronization face
         run: python3 -S research/probe_matching_synchronization.py --output "$RUNNER_TEMP/matching-synchronization.json"
+      - name: Probe sharp uniform defect penalty
+        run: python3 -S research/probe_uniform_defect_penalty.py --output "$RUNNER_TEMP/uniform-defect-penalty.json"
       - name: Upload probe
         uses: actions/upload-artifact@v4
         with:
