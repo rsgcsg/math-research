@@ -8,6 +8,7 @@
 
 | ID | 内容 | 状态 | 证据/范围 |
 |---|---|---|---|
+| E121 | W22 当前认证支持上全部 k<=10 的 facet-inducing q-chorded cycle 均不能切掉 C030 | 精确穷尽六类周期；严格正余量 | [证明](proofs/q_chorded_w22_audit.md)；120个已认证P/Q/R/E点对，未知点对不推断；不覆盖k>=11/fullY/full15 |
 | T001 | wheel 重复超额至少 7-k，k=5,6,7 可达 | 已证且精确枚举 | phase_checks.py；只针对该 wheel |
 | T002 | 路线图的五色 D+I、六色 D 定义 pair equality | 已证且穷举 | 100/225 对状态全部检查 |
 | C001 | 最小六色 defect 不强迫全局 matching | 显式反例 | 行增量交替 2,3；周期基本域 12 点 |
