@@ -115,7 +115,7 @@ def main():
                 return False
             if pos==len(order):
                 leaves+=1
-                total=constant+value
+                total=value
                 if total>best:
                     best=total
                     witness=list(colors)
@@ -133,8 +133,7 @@ def main():
             return False
 
         visit(0,-1,constant)
-        # value already included constant at root, so correct the accidental double
-        # constant in leaf computation by returning direct recomputation below.
+        # Recompute exact Lprime, D and objective for the maximizing witness.
         if witness is not None:
             eq=lambda a,b: witness[ix[a]]==witness[ix[b]]
             L=sum(w for a,b,w in transformed(source,g) if eq(a,b))
