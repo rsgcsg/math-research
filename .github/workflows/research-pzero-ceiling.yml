@@ -1,0 +1,29 @@
+name: Verify P-zero Q/R witness ceiling
+on:
+  pull_request:
+    paths:
+      - 'research/verify_pzero_qr_witness_ceiling.py'
+      - 'certificates/q_joint_boundary_gap.json'
+      - 'certificates/Y_full_geometry.json.gz'
+      - 'certificates/g14_pair_orbit_basis.json.gz'
+      - 'certificates/g14_r_pair_orbit_basis.json.gz'
+      - '.github/workflows/research-pzero-ceiling.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Build exact witness certificate
+        run: python3 -S research/verify_pzero_qr_witness_ceiling.py --write
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pzero-qr-witness-ceiling
+          path: |
+            certificates/pzero_qr_witness_ceiling.json
+            certificates/pzero_qr_witness_ceiling_validation.json
