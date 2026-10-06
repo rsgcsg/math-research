@@ -1,4 +1,4 @@
-name: Research matching synchronization probe
+name: Research matching synchronization and T170 gauge lift
 on:
   push:
     branches:
@@ -6,18 +6,25 @@ on:
   pull_request:
     paths:
       - 'research/probe_matching_synchronization.py'
+      - 'research/verify_q_boundary_gauge_lift.py'
+      - 'certificates/q_boundary_gauge_lift.json'
+      - 'docs/proofs/q_boundary_gauge_lift.md'
       - '.github/workflows/research-matching-synchronization.yml'
 permissions:
   contents: read
 jobs:
-  probe:
+  verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+      - name: Replay inherited T165 boundary verifier
+        run: python3 -S research/verify_q_joint_boundary_gap.py
+      - name: Verify T170 gauge-normalized lift
+        run: python3 -S research/verify_q_boundary_gauge_lift.py --self-test
       - name: Enumerate exact matching/Q synchronization face
         run: python3 -S research/probe_matching_synchronization.py --output "$RUNNER_TEMP/matching-synchronization.json"
       - name: Upload probe
