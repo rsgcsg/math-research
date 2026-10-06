@@ -1,0 +1,45 @@
+name: Consolidation source snapshot
+on:
+  push:
+    branches: [maintenance/unified-results-20261006]
+    paths: [.github/workflows/consolidation-snapshot.yml]
+permissions:
+  contents: read
+  pull-requests: read
+  actions: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Read all exact public branch and tag histories
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git ls-remote --refs origin > "$RUNNER_TEMP/refs-before.txt"
+          git fetch --no-tags origin '+refs/heads/*:refs/remotes/origin/*' '+refs/tags/*:refs/tags/*'
+          git checkout --detach "$SOURCE_SHA"
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          git bundle create "$RUNNER_TEMP/all-remote-history.bundle" --all
+          git fsck --full --no-dangling
+          git ls-remote --refs origin > "$RUNNER_TEMP/refs-after.txt"
+          gh api --paginate repos/rsgcsg/math-research/pulls?state=open --slurp > "$RUNNER_TEMP/open-pulls.json"
+          gh api --paginate 'repos/rsgcsg/math-research/actions/runs?per_page=100' --slurp > "$RUNNER_TEMP/workflow-runs.json"
+          sha256sum "$RUNNER_TEMP/all-remote-history.bundle" > "$RUNNER_TEMP/bundle.sha256"
+      - name: Save source histories and observed references
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: all-remote-history-before-consolidation
+          path: |
+            ${{ runner.temp }}/all-remote-history.bundle
+            ${{ runner.temp }}/refs-before.txt
+            ${{ runner.temp }}/refs-after.txt
+            ${{ runner.temp }}/open-pulls.json
+            ${{ runner.temp }}/workflow-runs.json
+            ${{ runner.temp }}/bundle.sha256
+          retention-days: 30
+          if-no-files-found: error
