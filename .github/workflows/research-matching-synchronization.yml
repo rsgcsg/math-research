@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - 'research/matching-synchronization-20261006'
+  pull_request:
+    paths:
+      - 'research/probe_matching_synchronization.py'
+      - '.github/workflows/research-matching-synchronization.yml'
 permissions:
   contents: read
 jobs:
