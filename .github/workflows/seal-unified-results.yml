@@ -5,12 +5,25 @@ on:
     paths: [.github/workflows/seal-unified-results.yml]
 permissions:
   contents: write
-  actions: read
+  actions: write
 jobs:
   seal:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     steps:
+      - name: Supersede only the pinned waiting seal, never the mathematical replay
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,subprocess
+          endpoint='repos/rsgcsg/math-research/actions/runs/37435371323'
+          r=json.loads(subprocess.check_output(['gh','api',endpoint]))
+          assert r['head_sha']=='cfb4209560a48a577311341335efaff9e2cf4efc'
+          assert r['path']=='.github/workflows/seal-unified-results.yml'
+          if r['status']!='completed':
+              subprocess.run(['gh','api','--method','POST',endpoint+'/cancel'],check=True)
+          PY
       - name: Fetch exact reviewed source and original archive tags
         env:
           SOURCE_SHA: ${{ github.sha }}
@@ -46,13 +59,22 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh run download 37431407795 --repo rsgcsg/math-research --name consolidated-complete-verification --dir "$RUNNER_TEMP/verified-evidence"
-      - name: Independently check records, apply reviewed labels, and seal only after PASS
+      - name: Independently check records and seal without writing credentials to artifacts
         env:
           GH_TOKEN: ${{ github.token }}
           PYTHONUNBUFFERED: '1'
         run: |
           set -o pipefail
-          python3 -S .maintenance/seal_integration.py 2>&1 | tee "$RUNNER_TEMP/seal.log"
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          code=Path('.maintenance/seal_integration.py').read_text()
+          unsafe="print('::add-mask::'+auth,flush=True)"
+          if code.count(unsafe)!=1:raise SystemExit('unexpected authorization logging source')
+          code=code.replace(unsafe,'pass  # Authorization stays only in the subprocess environment')
+          (Path(os.environ['RUNNER_TEMP'])/'seal_no_credentials.py').write_text(code)
+          PY
+          python3 -S "$RUNNER_TEMP/seal_no_credentials.py" 2>&1 | tee "$RUNNER_TEMP/seal.log"
       - name: Save actual closeout state and exact Git history
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
