@@ -59,5 +59,58 @@
       120163
     ]
   },
-  "scope": "Exact algebraic gauge normalization of the already certified T165 zero-defect separator, followed by a support-independent coarse lift using the exact positive-coefficient sum. It strengthens the previous scalar lifted inequality for every p>1/27. It does not provide q>=7/10, a full15 decision, or a new ordinary Hadwiger-Nelson bound."
+  "scope": "Exact algebraic gauge normalization of the already certified T165 zero-defect separator, followed by a support-independent coarse lift using the exact positive-coefficient sum. It strengthens the previous scalar lifted inequality for every p>1/27. The penalty 633 is optimal within the class of real seven-window gauges with sum 167 when lifting only via the global positive-coefficient upper bound. It does not provide q>=7/10, a full15 decision, or a new ordinary Hadwiger-Nelson bound.",
+  "optimality_certificate": {
+    "gauge_class": "All real seven-window gauges with sum 167, leaving Q coefficients unchanged, with the support-independent lift using the global sum of positive transformed coefficients.",
+    "selected_non_q_indices": [
+      0,
+      1,
+      4,
+      9,
+      10,
+      11,
+      12,
+      14,
+      17,
+      18,
+      20,
+      22,
+      28,
+      30,
+      35,
+      36,
+      40,
+      42,
+      43,
+      48,
+      49,
+      50,
+      55,
+      57,
+      59,
+      62,
+      63,
+      64,
+      65,
+      70,
+      72,
+      73,
+      75
+    ],
+    "selected_original_coefficient_sum": -700,
+    "selected_window_incidence_counts": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "non_q_positive_lower_bound": 469,
+    "fixed_q_positive_sum": 500,
+    "total_positive_lower_bound": 969,
+    "minimum_coarse_lift_penalty": 633,
+    "proof_identity": "-700 + 7*167 = 469; adding fixed Q positive sum 500 gives 969, attained by the explicit gauge."
+  }
 }
