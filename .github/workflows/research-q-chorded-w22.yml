@@ -1,0 +1,21 @@
+name: Research W22 q-chorded audit
+on:
+  pull_request:
+    paths:
+      - 'research/verify_q_chorded_w22_audit.py'
+      - 'certificates/q_chorded_w22_audit.json'
+      - 'certificates/q_joint_boundary_gap.json'
+      - '.github/workflows/research-q-chorded-w22.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Replay exact q-chorded W22 audit
+        run: python3 -S research/verify_q_chorded_w22_audit.py
