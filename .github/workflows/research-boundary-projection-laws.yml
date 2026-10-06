@@ -12,6 +12,7 @@ on:
       - 'certificates/identity_sensitive_robustness.json'
       - 'certificates/single_separator_identity_threshold.json'
       - 'research/search_sparse_boundary_projection.py'
+      - 'research/probe_fractional_q_pr_cover.py'
       - '.github/workflows/research-boundary-projection-laws.yml'
 permissions:
   contents: read
@@ -36,7 +37,11 @@ jobs:
         run: python3 -m pip install numpy==2.5.3 scipy==1.18.1
       - name: Search sparse identity separator
         run: python3 research/search_sparse_boundary_projection.py
+      - name: Search fractional Q-by-P/R covers
+        run: python3 research/probe_fractional_q_pr_cover.py
       - uses: actions/upload-artifact@v4
         with:
           name: sparse-boundary-projection-search
-          path: sparse_boundary_projection_search.json
+          path: |
+            sparse_boundary_projection_search.json
+            fractional_q_pr_cover_search.json
