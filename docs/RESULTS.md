@@ -17,6 +17,8 @@ T162的12与T167的13使用不同边模型；T168只有九Q均值，不冒称完
 
 | ID | 内容 | 状态 | 证据/范围 |
 |---|---|---|---|
+| T170 | C030 的11-Q均匀向量 (7/10)^11 位于 T165 边界 proper 五块划分的 Q-only 投影凸包 | 12原子精确有理正律 | [证明](proofs/q_boundary_projection_law.md)；因此任何Q-only线性严格分离不可能；P/R未平衡，不是C030/full15正律 |
+| T171 | C030 的 P/Q/R 三类总量位于 T165 边界划分的三维总量投影凸包 | 4原子精确有理正律 | [证明](proofs/pqr_total_boundary_projection_law.md)；排除仅依赖三类总和的线性分离；逐事件未平衡 |
 | E121 | W22 当前认证支持上全部 k<=10 的 facet-inducing q-chorded cycle 均不能切掉 C030 | 精确穷尽六类周期；严格正余量 | [证明](proofs/q_chorded_w22_audit.md)；120个已认证P/Q/R/E点对，未知点对不推断；不覆盖k>=11/fullY/full15 |
 | T001 | wheel 重复超额至少 7-k，k=5,6,7 可达 | 已证且精确枚举 | phase_checks.py；只针对该 wheel |
 | T002 | 路线图的五色 D+I、六色 D 定义 pair equality | 已证且穷举 | 100/225 对状态全部检查 |
