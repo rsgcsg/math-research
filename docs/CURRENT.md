@@ -1,4 +1,20 @@
-# 当前研究状态：T170–T171 进一步封死低维投影；full15仍未决
+# 当前研究状态：T172 定量身份偏差；full15仍未决
+
+## 2026-10-06：T172 把“必须使用具体边身份”变成显式距离下界
+
+接续 T165、T170–T171。在 T165 七窗口边界面上，如果一份 proper 五块划分概率律的 P/Q/R 三类总量已经与 C030 完全一致，则89条指定事件里至少一条逐事件边际满足
+
+[
+|x_e-t_e|\ge 115/120663\approx 9.53\times 10^{-4}.
+]
+
+证明把 T165 separator 在三个 class-total 超平面内做最优 L1 gauge：P/Q/R 各类中位数分别为 -21、46、0，中心化后的 L1 范数恰为 3066+178+1225=4469，而 C030 对 separator 的严格缺口为 115/27。Hölder 立即给出上述 L∞ 下界。
+
+这个常数对“只保留三个 class-total 等式 + 单个 T165 separator + 0<=x<=1”的外放松已经尖锐；继续只做该 separator 的类内平移不可能改进。要继续推进，必须增加新的独立 identity-sensitive 边界不等式或更高阶共同结构。
+
+[完整证明](proofs/identity_sensitive_robustness.md) · [精确证书](../certificates/identity_sensitive_robustness.json) · [标准库检查器](../research/verify_identity_sensitive_robustness.py)
+
+这仍不是 C030/full-Y/full15 不可行证书，也没有新的普通 HN 界。
 
 ## 2026-10-06：Q-only 与三类总量投影都已经真实可行
 
