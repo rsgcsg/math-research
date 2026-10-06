@@ -184,3 +184,7 @@ check-q-boundary-projection-law: check-q-joint-boundary-gap
 
 check-pqr-total-boundary-projection-law: check-q-joint-boundary-gap
 	python3 -S research/verify_pqr_total_boundary_projection_law.py
+
+.PHONY: check-identity-sensitive-robustness
+check-identity-sensitive-robustness:
+	python3 -S research/verify_identity_sensitive_robustness.py
