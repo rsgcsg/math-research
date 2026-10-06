@@ -1,0 +1,16 @@
+{
+  "schema": "pzero-qr-witness-ceiling-v1",
+  "research_id": "T174",
+  "source_certificate_sha256": "5cdb3ad41b7e635847845f9d3752e6a51332949f9d3da1a2bc62de8eaf8ba2b7",
+  "event_counts": {"P": 47, "Q": 11, "R": 31},
+  "pair_witnesses": 341,
+  "enumeration_nodes_until_complete": 523,
+  "complete_Pzero_leaves_visited_until_complete": 135,
+  "canonical_witness_list_sha256": "df15aecbc62f4ea6f81d947433c1ecccd60cac109186036cb7cc8a4d3a393914",
+  "example_witness": {
+    "Q_pair": [33,7479],
+    "R_pair": [229,4641],
+    "partition": [0,1,2,2,3,4,0,1,0,2,3,4,1,3,2,1,4,1,3,1,0,1]
+  },
+  "scope": "For every named Q and named R event on the exact T165 saturated boundary face, there is an actual proper <=5-block W22 partition with that Q=R=1 and all 47 named P events zero. Hence no pointwise inequality Q+R<=1+sum a_P P with nonnegative coefficients can hold on this face, regardless of support size or weights. This does not rule out inequalities using multiple R events, negative coefficients, off-face lifting, full-Y constraints, or full15."
+}
