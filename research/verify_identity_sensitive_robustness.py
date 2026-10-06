@@ -63,8 +63,9 @@ def main():
     # For odd cardinalities the listed median is the unique minimizing interval point.
     for k, vals in by.items():
         m = medians[k]
-        require(sum(abs(a-m) for a in vals) <= sum(abs(a-c) for a in vals)
-                for c in range(min(vals)-2, max(vals)+3)), "integer median minimum "+k)
+        require(all(sum(abs(a-m) for a in vals) <= sum(abs(a-c) for a in vals)
+                    for c in range(min(vals)-2, max(vals)+3)),
+                "integer median minimum "+k)
 
     eps = gap / total_l1
     require(eps == F(*cert["minimum_forced_linf_deviation"]) == F(115,120663),
