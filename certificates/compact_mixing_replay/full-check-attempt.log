@@ -1,0 +1,1444 @@
+python3 -S research/check_integration.py
+{
+  "status": "PASS",
+  "python_syntax_files": 357,
+  "json_certificate_files": 273,
+  "local_file_targets": 926,
+  "ledger_ids": {
+    "T": 169,
+    "E": 124,
+    "C": 32,
+    "Q": 11
+  },
+  "source_files": 361,
+  "source_manifest_sha256": "dcfaf19eab70e96205e922f64caf4181e37aa27f71fdf3b4c13882b13245881b",
+  "scope": "Integration syntax, parseability, exact ID coverage and local file targets only. Not exhaustive anchor checking, new theorem validation, or remote publication."
+}
+python3 -S research/audit_full_law_preparation.py --cache certificates/Y_full_geometry.json.gz
+{
+  "status": "PASS",
+  "kind": "INPUT_PREPARATION_ONLY",
+  "independent_inputs": {
+    "semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+    "seed_certificate_sha256": "e4ae7e9355783ee7606711ace881faba0353cbd01bef30c36b338dc3d3a844f9",
+    "geometry": {
+      "vertices": 10077,
+      "actual_pairs": 50767926,
+      "induced_edges": 49858,
+      "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+      "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+      "overlap": 91,
+      "new_cross_edges": 170
+    },
+    "denominator": 480,
+    "proper_seed_edge_checks": 249290,
+    "motions": [
+      {
+        "motion": "tau",
+        "size": 5084,
+        "mapping_sha256": "41e8b4da9a8abb235838a93e8d1ea14206cb0f88887a754c19363234d7e8f8c9",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "nu",
+        "size": 556,
+        "mapping_sha256": "05e91bb00695ab29af7bc240726171dcee38a31f8acbe855b877817d65d21850",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "eta",
+        "size": 5289,
+        "mapping_sha256": "36167c82bd8d25a31ce47f0feea41fc80feda11cb84085f1243b94c758a82c46",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "omega",
+        "size": 4671,
+        "mapping_sha256": "108cba6231df0b85ebad6a9f22591fd6372f0f677bccc9a6dffa6c471486920d",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "bar",
+        "size": 1895,
+        "mapping_sha256": "fd24ff5d17f06ae7da4863520e08e0df1e7811b9238650c3dddaec2b44bd704e",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "bridge",
+        "size": 513,
+        "mapping_sha256": "bf156d302ebbde6a95ef588adaeed519ba8ef4edb482ff950f8000fa1b8b2fc8",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "translation_one",
+        "size": 333,
+        "mapping_sha256": "ec88b2409b92848d61df95b535a2ed29960d6d2682d4493e7c15fea0ca03a412",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "translation_z",
+        "size": 200,
+        "mapping_sha256": "0ba894a4a6829a698d9438e347c6b57e19c0655f10ff43e98376c27304728a2e",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "one_plus_eta_1",
+        "size": 573,
+        "mapping_sha256": "4c1479878dae34379dfab5e5b0de51d2f537572f70f6d84ac5bed574eefa9066",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "one_plus_eta_2",
+        "size": 513,
+        "mapping_sha256": "c7af21735d5c11330961d3aec0524bcbedc66833682647d647fec0acb212b08f",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "one_plus_eta_3",
+        "size": 513,
+        "mapping_sha256": "9658d878708984780ff2e3bab484f0247ff201758c7ae395f15f5d6913f91fbc",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "one_plus_eta_4",
+        "size": 512,
+        "mapping_sha256": "f79298e5076f8079345671791ff82b4ad883c6f5f0f43e1bcabee1e8cde0e998",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "bridge_shift",
+        "size": 511,
+        "mapping_sha256": "d72172dc68cc971d46bf905ddfd4be82f6eac0a77f908d2c6ce23b778fe004d6",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "minus_bar",
+        "size": 1866,
+        "mapping_sha256": "b706ea770abe09c3082c4fb47b020ee1bf749b037c8d01cce702f5142bfe03bd",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "dyadic_u",
+        "size": 29,
+        "mapping_sha256": "2a6684e9346370cc37ee5bbdae8ea82e292e13b05ff7812c63f61c9b4391ddbf",
+        "seed_full_partition_law_equal": false
+      }
+    ],
+    "seed_u_same_color_counts": [
+      1,
+      5
+    ],
+    "seed_support": 5,
+    "scope": "Input geometry and E083 seed audit only; no pricing query, no new law, and no all-word negative result."
+  },
+  "external_cache": {
+    "path": "certificates/Y_full_geometry.json.gz",
+    "sha256": "7cbf9c71e1cd1aca64a1622ef9d6550cacbf40972547e89495993f58e4f6a436"
+  },
+  "rejection_tests": [],
+  "full_law_search_executed": false
+}
+python3 -S research/verify_q_joint_boundary_gap.py --self-test
+self_tests_passed 11
+{"boundary": {"bound_rhs": 2, "coefficient_sums": {"P": -2267, "Q": 500, "R": -501}, "maximum_integer_score": 2, "nodes": 11909676, "proper_saturated_partitions": 5648160}, "certificate_sha256": "5cdb3ad41b7e635847845f9d3752e6a51332949f9d3da1a2bc62de8eaf8ba2b7", "color_class": {"independent_sets": 8232, "minima_by_H_occupancy": {"0": -3, "1": -1, "2": 1, "3": 3}, "subsets_in_second_algorithm": 2097152, "tight_sets": 564}, "fractional_cover": {"atoms": 99, "denominator": 6110370, "individual_pair_moments": 89, "individual_vertex_covers": 22, "total_mass": 5}, "schema": "q-joint-boundary-validation-v1", "scope": "T164 color-class proof and exact fractional-cover consequence; T165 support-independent bound on p=1/27 within the actual 22-point P/Q/R model; C030 fractional independent-set cover separated from proper five-block laws. No full15 solution or global HN bound; the q upper bound is not claimed optimal.", "status": "PASS", "transport_components": {"P": 1860, "Q": 780, "R": 1472}}
+python3 -S research/verify_two_partition_w22_audit.py
+{"audit": {"facet_size_unequal_cases": 6830, "global_minimum": {"A": [229, 305], "B": [4641], "clique": [229, 305, 4641], "lhs_over_270": 270, "rhs_over_270": 270, "slack_over_270": 0}, "known_support_clique_counts": {"2": 120, "3": 277, "4": 323, "5": 199, "6": 61, "7": 7}, "strata": {"2:1-1": {"count": 120, "minimum_slack_over_270": 81}, "3:1-2": {"count": 831, "minimum_slack_over_270": 0}, "4:1-3": {"count": 1292, "minimum_slack_over_270": 91}, "4:2-2": {"count": 969, "minimum_slack_over_270": 211}, "5:1-4": {"count": 995, "minimum_slack_over_270": 130}, "5:2-3": {"count": 1990, "minimum_slack_over_270": 211}, "6:1-5": {"count": 366, "minimum_slack_over_270": 180}, "6:2-4": {"count": 915, "minimum_slack_over_270": 230}, "6:3-3": {"count": 610, "minimum_slack_over_270": 330}, "7:1-6": {"count": 49, "minimum_slack_over_270": 470}, "7:2-5": {"count": 147, "minimum_slack_over_270": 400}, "7:3-4": {"count": 245, "minimum_slack_over_270": 330}}, "tight_facet_cases": 1, "tight_inequalities": 1, "tight_rows": [{"A": [229, 305], "B": [4641], "clique": [229, 305, 4641], "lhs_over_270": 270, "rhs_over_270": 270}], "two_partition_inequalities": 8529}, "scope": "Exact exhaustive audit of every 2-partition inequality whose support A union B is a clique of the 120 already-certified W22 P/Q/R/E pairs. C030 violates none. Among 8,529 inequalities, 6,830 have unequal side sizes (the classical facet condition), and the unique tight inequality is the actual PRR triangle {229,305,4641} split 2+1. This does not cover inequalities using unclassified W22 pairs, genuinely multi-window facets, full Y, full15 feasibility, or the Hadwiger-Nelson chromatic number.", "status": "PASS"}
+python3 -S research/verify_q_chorded_w22_audit.py
+{"cases": [{"best_cycle": [31, 33, 227, 231, 877], "best_numerator_over_270": 280, "cycle_pair_types": ["P", "E", "R", "P", "R"], "k": 5, "q": 2, "q_chord_pair_types": ["P", "P", "E", "E", "E"], "rhs_numerator_over_270": 540, "search_nodes": 19890, "slack_numerator_over_270": 260, "supported_cycles": 2388}, {"best_cycle": [31, 33, 875, 227, 231, 229, 877], "best_numerator_over_270": 430, "cycle_pair_types": ["P", "R", "P", "R", "P", "P", "R"], "k": 7, "q": 2, "q_chord_pair_types": ["E", "E", "E", "P", "P", "P", "E"], "rhs_numerator_over_270": 810, "search_nodes": 449338, "slack_numerator_over_270": 380, "supported_cycles": 26181}, {"best_cycle": [31, 33, 875, 227, 3483, 3477, 229, 873, 35], "best_numerator_over_270": 609, "cycle_pair_types": ["P", "R", "P", "R", "P", "R", "E", "Q", "R"], "k": 9, "q": 2, "q_chord_pair_types": ["E", "E", "P", "E", "E", "P", "E", "R", "P"], "rhs_numerator_over_270": 1080, "search_nodes": 6969785, "slack_numerator_over_270": 471, "supported_cycles": 295740}, {"best_cycle": [31, 227, 5535, 231, 33, 877, 889], "best_numerator_over_270": 658, "cycle_pair_types": ["P", "Q", "R", "P", "E", "R", "Q"], "k": 7, "q": 3, "q_chord_pair_types": ["E", "E", "E", "E", "P", "E", "P"], "rhs_numerator_over_270": 1080, "search_nodes": 481774, "slack_numerator_over_270": 422, "supported_cycles": 26181}, {"best_cycle": [31, 877, 3483, 235, 231, 33, 7479, 887, 889], "best_numerator_over_270": 987, "cycle_pair_types": ["R", "P", "Q", "R", "P", "Q", "R", "P", "Q"], "k": 9, "q": 4, "q_chord_pair_types": ["E", "E", "P", "E", "E", "P", "E", "E", "P"], "rhs_numerator_over_270": 1620, "search_nodes": 9788612, "slack_numerator_over_270": 633, "supported_cycles": 295740}, {"best_cycle": [31, 227, 5535, 231, 33, 7479, 4641, 229, 877, 889], "best_numerator_over_270": 997, "cycle_pair_types": ["P", "Q", "R", "P", "Q", "P", "R", "P", "R", "Q"], "k": 10, "q": 3, "q_chord_pair_types": ["E", "E", "E", "E", "P", "E", "E", "P", "E", "P"], "rhs_numerator_over_270": 1620, "search_nodes": 19485716, "slack_numerator_over_270": 623, "supported_cycles": 243888}], "certified_pair_counts": {"E": 31, "P": 47, "Q": 11, "R": 31}, "known_support_cliques": {"maximum_clique_size": 7, "size7_cliques": [[31, 33, 227, 229, 231, 875, 877], [33, 35, 229, 231, 233, 877, 887], [35, 37, 231, 233, 235, 887, 889], [227, 229, 873, 875, 877, 3477, 3483], [229, 231, 875, 877, 887, 3483, 4641], [231, 233, 877, 887, 889, 4641, 5535], [877, 887, 3483, 4641, 5535, 7479, 7489]]}, "scope": "Exact exhaustive audit of the smallest facet-inducing q-chorded k-cycle inequalities with support size at most 10 whose every cycle/chord pair lies in the 120 already-certified W22 P/Q/R/E pairs. No unclassified pair is inferred. None separates the C030 fractional cover from proper five-block laws. This does not audit support size >=11, generalized set-valued q-chorded families, full Y, full15 feasibility, or the Hadwiger-Nelson chromatic number.", "status": "PASS", "targets": [[5, 2], [7, 2], [9, 2], [7, 3], [9, 4], [10, 3]]}
+python3 -c 'import sys; sys.exit("Python >=3.10 required; activate .venv before make check" if sys.version_info < (3, 10) else 0)'
+python3 -S research/verify_scc_calibration.py
+{'status': 'PASS', 'vertices_1_to_3': [(1, 2, 1, 1), (2, 16, 32, 24), (3, 512, 2304, 1728)], 'total_graphs': 530, 'total_cyclic_arcs': 1753, 'scope': 'graph lemma calibration only; no full-Y relation tested'}
+python3 -S research/verify_free_group_star_calibration.py
+{
+  "status": "PASS",
+  "assignments_examined": 1024,
+  "allowed_patterns": 12,
+  "constant_potential": 2,
+  "scope": "Finite labeled orientation CSP calibration; no unit-distance or HN claim"
+}
+python3 -S research/verify_four_port_scc.py
+{
+  "status": "PASS",
+  "certificate": "/mnt/data/hn158-continuation-20261007/repo/certificates/four_port_witnessed_scc.json",
+  "words": 69,
+  "whole_edge_checks": 3440202,
+  "candidates": [
+    {
+      "motion": "one_plus_eta_1",
+      "T": [
+        3604,
+        3817,
+        4114,
+        4641
+      ],
+      "image": [
+        8921,
+        9029,
+        9056,
+        9070
+      ],
+      "legal": 10,
+      "arcs": 50,
+      "sccs": 1,
+      "other_domains": [
+        0,
+        1,
+        3,
+        4,
+        7,
+        10,
+        12
+      ]
+    },
+    {
+      "motion": "translation_z",
+      "T": [
+        3484,
+        6700,
+        7219,
+        9104
+      ],
+      "image": [
+        876,
+        1770,
+        3049,
+        7536
+      ],
+      "legal": 15,
+      "arcs": 54,
+      "sccs": 1,
+      "other_domains": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "motion": "omega",
+      "T": [
+        3748,
+        3797,
+        4513,
+        5158
+      ],
+      "image": [
+        5441,
+        4356,
+        4524,
+        4386
+      ],
+      "legal": 15,
+      "arcs": 60,
+      "sccs": 1,
+      "other_domains": [
+        0,
+        1,
+        4,
+        12
+      ]
+    },
+    {
+      "motion": "dyadic_u",
+      "T": [
+        233,
+        239,
+        9425,
+        9951
+      ],
+      "image": [
+        5557,
+        238,
+        8157,
+        9957
+      ],
+      "legal": 10,
+      "arcs": 50,
+      "sccs": 1,
+      "other_domains": [
+        0,
+        3,
+        4
+      ]
+    }
+  ]
+}
+python3 -S research/verify_g14_pair_orbit_law.py
+{
+  "status": "PASS_SOLVER_FREE_G14_PAIR_ORBIT_LAW",
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "basis_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534",
+  "source_g14_certificate_sha256": "6ef7a8c1007e2ba0e088c605fafa75737334e68a9fa6fbca9915c8512e523fe6",
+  "word_sha256": "39fa668004a67780783dc099b48382f6879980f7a72986712d3133dbb0656cb3",
+  "vertices": 10077,
+  "actual_Y_edges": 49858,
+  "edge_checks": 49858,
+  "exact_squared_distance_basis": "32-coefficient Q(eta,sqrt(3),sqrt(5),sqrt(11),i); recomputed with checker-side doubled multiplication and conjugation",
+  "orbit_components": {
+    "1/sqrt3": {
+      "nodes": 1860,
+      "components": 1,
+      "seed_nodes": 27
+    },
+    "2": {
+      "nodes": 780,
+      "components": 1,
+      "seed_nodes": 5
+    }
+  },
+  "actual_map_transitions_checked": 14248,
+  "forest_rows": {
+    "1/sqrt3": 1859,
+    "2": 779
+  },
+  "forest_total": 2638,
+  "pair_event_counts": {
+    "d2_1_3_same": 0,
+    "d2_4_same": 780
+  },
+  "forest_balance": "Every source-target equality-event row is exactly 0 on this one coloring; the full 1,860-node d2=1/3 orbit has all events false and the 780-node d2=4 orbit has all events true.",
+  "independently_rebuilt_cnf_sha256": "4f0960333f91ad9295c8a3cf590d3ac4c4f2462d45300e7e1411fd21f694870f",
+  "clauses": 377237,
+  "scope": "One-atom law for only these two selected pair-event motion-orbit components. Not a joint law balancing complete patterns on any of the original 15 domains and not an HN bound.",
+  "source_g14_legacy_sha256": "a31795df303c8dd3ff0719ab0d2ea470c28913f1c814c7e1fd29cfee1ee1f896",
+  "source_g14_rebinding": "Legacy bytes reproduced by removing only actual_Y_embedding.semantic_sha256 from the independently bound published certificate and serializing sorted/indented JSON.",
+  "quotient": {
+    "vertices": 9577,
+    "unit_conflicts": 48706,
+    "extra_conflicts": 780,
+    "overlap": 0,
+    "conflict_edges": 49486,
+    "loops": 0,
+    "color_class_counts": [
+      1994,
+      1958,
+      1872,
+      1918,
+      1835
+    ]
+  },
+  "full_domain_mismatch_witnesses": [
+    {
+      "motion": 0,
+      "name": "tau",
+      "source": [
+        31,
+        32
+      ],
+      "image": [
+        6268,
+        6269
+      ],
+      "source_equal": true,
+      "image_equal": false
+    },
+    {
+      "motion": 1,
+      "name": "nu",
+      "source": [
+        4,
+        5
+      ],
+      "image": [
+        22,
+        23
+      ],
+      "source_equal": true,
+      "image_equal": false
+    },
+    {
+      "motion": 2,
+      "name": "eta",
+      "source": [
+        0,
+        3
+      ],
+      "image": [
+        8080,
+        8173
+      ],
+      "source_equal": false,
+      "image_equal": true
+    },
+    {
+      "motion": 3,
+      "name": "omega",
+      "source": [
+        4,
+        5
+      ],
+      "image": [
+        9919,
+        9920
+      ],
+      "source_equal": true,
+      "image_equal": false
+    },
+    {
+      "motion": 4,
+      "name": "bar",
+      "source": [
+        31,
+        32
+      ],
+      "image": [
+        38,
+        8149
+      ],
+      "source_equal": true,
+      "image_equal": false
+    },
+    {
+      "motion": 5,
+      "name": "bridge",
+      "source": [
+        32,
+        165
+      ],
+      "image": [
+        9063,
+        9071
+      ],
+      "source_equal": false,
+      "image_equal": true
+    },
+    {
+      "motion": 6,
+      "name": "translation_one",
+      "source": [
+        32,
+        122
+      ],
+      "image": [
+        876,
+        1772
+      ],
+      "source_equal": true,
+      "image_equal": false
+    },
+    {
+      "motion": 7,
+      "name": "translation_z",
+      "source": [
+        230,
+        481
+      ],
+      "image": [
+        32,
+        122
+      ],
+      "source_equal": false,
+      "image_equal": true
+    },
+    {
+      "motion": 8,
+      "name": "one_plus_eta_1",
+      "source": [
+        231,
+        704
+      ],
+      "image": [
+        5173,
+        7203
+      ],
+      "source_equal": true,
+      "image_equal": false
+    },
+    {
+      "motion": 9,
+      "name": "one_plus_eta_2",
+      "source": [
+        232,
+        3533
+      ],
+      "image": [
+        231,
+        3503
+      ],
+      "source_equal": false,
+      "image_equal": true
+    },
+    {
+      "motion": 10,
+      "name": "one_plus_eta_3",
+      "source": [
+        232,
+        467
+      ],
+      "image": [
+        7468,
+        8158
+      ],
+      "source_equal": true,
+      "image_equal": false
+    },
+    {
+      "motion": 11,
+      "name": "one_plus_eta_4",
+      "source": [
+        31,
+        121
+      ],
+      "image": [
+        237,
+        488
+      ],
+      "source_equal": true,
+      "image_equal": false
+    },
+    {
+      "motion": 12,
+      "name": "bridge_shift",
+      "source": [
+        231,
+        3533
+      ],
+      "image": [
+        3666,
+        8562
+      ],
+      "source_equal": true,
+      "image_equal": false
+    },
+    {
+      "motion": 13,
+      "name": "minus_bar",
+      "source": [
+        31,
+        32
+      ],
+      "image": [
+        475,
+        9755
+      ],
+      "source_equal": true,
+      "image_equal": false
+    },
+    {
+      "motion": 14,
+      "name": "dyadic_u",
+      "source": [
+        233,
+        239
+      ],
+      "image": [
+        238,
+        5557
+      ],
+      "source_equal": false,
+      "image_equal": true
+    }
+  ]
+}
+python3 -S research/test_g14_pair_orbit_forest.py
+baseline forest: PASS
+duplicate-row mutation: rejected as expected (duplicate forest row)
+cycle mutation: rejected as expected (forest cycle)
+disconnected mutation: rejected as expected (forest disconnected)
+python3 -S research/verify_g14_pair_port4_common_law.py
+{
+  "status": "PASS_EXACT_COMMON_LAW_ON_G14_FACE",
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "geometry_reconstructed": true,
+  "certificate_sha256": "fdc5f0eea829aca1b7f7ef424f312a5bf26191bc5f1025a66b81a3c4e5fd0984",
+  "pair_basis_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534",
+  "port4_basis_sha256": "67ed7b7ef19512bb7b917e1c611301cf42cc5819d8b19f8f0ccb6d0b115bb224",
+  "g14_legacy_source_sha256": "a31795df303c8dd3ff0719ab0d2ea470c28913f1c814c7e1fd29cfee1ee1f896",
+  "pair_orbit_nodes": {
+    "1/sqrt3": 1860,
+    "2": 780
+  },
+  "pair_orbit_forest_rows": 2638,
+  "pair_map_transitions_checked": 14248,
+  "whole_Y_words": 81,
+  "whole_Y_edge_checks": 4038498,
+  "support_size": 39,
+  "common_denominator": 300531,
+  "exact_port4_rows": 50,
+  "exact_pair_orbit_rows": 2638,
+  "mutation_tests_rejected": [
+    "negative-weight",
+    "changed-weight",
+    "missing-support-word",
+    "changed-source-image-map",
+    "altered-color-edge"
+  ],
+  "full15_domain_balance": {
+    "tau": "UNBALANCED",
+    "nu": "UNBALANCED",
+    "eta": "UNBALANCED",
+    "omega": "UNBALANCED",
+    "bar": "UNBALANCED",
+    "bridge": "UNBALANCED",
+    "translation_one": "UNBALANCED",
+    "translation_z": "UNBALANCED",
+    "one_plus_eta_1": "UNBALANCED",
+    "one_plus_eta_2": "UNBALANCED",
+    "one_plus_eta_3": "UNBALANCED",
+    "one_plus_eta_4": "UNBALANCED",
+    "bridge_shift": "UNBALANCED",
+    "minus_bar": "UNBALANCED",
+    "dyadic_u": "UNBALANCED"
+  },
+  "full15_first_residuals": {
+    "tau": "-9160/300531",
+    "nu": "2951/100177",
+    "eta": "-970/14311",
+    "omega": "2951/100177",
+    "bar": "-2809/100177",
+    "bridge": "5396/300531",
+    "translation_one": "2951/100177",
+    "translation_z": "-2951/100177",
+    "one_plus_eta_1": "-137/42933",
+    "one_plus_eta_2": "-861/14311",
+    "one_plus_eta_3": "-6775/300531",
+    "one_plus_eta_4": "4388/300531",
+    "bridge_shift": "-3/1301",
+    "minus_bar": "-970/14311",
+    "dyadic_u": "197/42933"
+  },
+  "scope": "Exact common law on proper whole-Y colorings restricted to the fixed p=0,q=1 face, balancing the fixed50 four-port complete-partition rows and the 2,638 pair-orbit rows. This is not a joint law balancing complete patterns on any of the original15 domains and not an HN bound."
+}
+python3 -S research/verify_cubic_unit_directions.py
+{
+  "status": "PASS",
+  "field_polynomial_descending": [
+    1,
+    0,
+    1,
+    -1
+  ],
+  "coefficient_order": "constant,t,t^2",
+  "generator": [
+    [
+      -1,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      2
+    ]
+  ],
+  "unit_polynomial_descending": [
+    1,
+    6,
+    31,
+    -12,
+    31,
+    6,
+    1
+  ],
+  "exponents_checked": [
+    0,
+    64
+  ],
+  "distinct_integral_points": 65,
+  "point_sequence_sha256": "114bd45391b2096e3022a39f802a11341e2699b452d4c6a77fe001c38528436d",
+  "first_eight_points": [
+    [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        -8,
+        8
+      ],
+      [
+        8,
+        -8,
+        -4
+      ]
+    ],
+    [
+      [
+        31,
+        -14,
+        -48
+      ],
+      [
+        -32,
+        64,
+        -26
+      ]
+    ],
+    [
+      [
+        -255,
+        352,
+        32
+      ],
+      [
+        -48,
+        -144,
+        312
+      ]
+    ],
+    [
+      [
+        607,
+        -1838,
+        1392
+      ],
+      [
+        1376,
+        -1216,
+        -1174
+      ]
+    ],
+    [
+      [
+        4609,
+        184,
+        -10168
+      ],
+      [
+        -7400,
+        12776,
+        -2828
+      ]
+    ],
+    [
+      [
+        -50497,
+        60578,
+        19680
+      ],
+      [
+        2112,
+        -42624,
+        57934
+      ]
+    ]
+  ],
+  "mutation_rejected": "changed-generator-constant",
+  "scope": "Finite exact calibration only. Infinitude and density use the written non-torsion proof; no HN bound."
+}
+python3 -S research/verify_g14_pr_transport_bound.py
+{
+  "status": "PASS_G14_PR_PAIR_COMPONENT_FACE_SEPARATOR",
+  "certificate_sha256": "dce2b97c1996be80b53f8fb24ad1756a7210304f61a2322b746c370de8bc325f",
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "pair_basis_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534",
+  "r_candidate_sha256": "f21599cb3ed6076e797f1fed319d5e8d4941c50b05fdaed12c6de218a6e9c976",
+  "legacy_g14_source_sha256": "a31795df303c8dd3ff0719ab0d2ea470c28913f1c814c7e1fd29cfee1ee1f896",
+  "P_component_nodes": 1860,
+  "R_component_nodes": 1472,
+  "P_transitions": 10044,
+  "R_transitions": 7864,
+  "K7_pair_tags": {
+    "P": 12,
+    "unit": 6,
+    "R": 3
+  },
+  "K7_min_same_P_or_R": 2,
+  "K7_legal_proper5_partitions": 159,
+  "triangle_Bell3_max": 1,
+  "P_upper_spoke_max": 1,
+  "necessary_interval": [
+    "1/27",
+    "1/3"
+  ],
+  "forest_span_nonzero_rows": 30,
+  "face_F_lower_bound": 1,
+  "derived_inequality": "27p>=1",
+  "row_span_mutations_rejected": [
+    "changed-row-coefficient",
+    "missing-row",
+    "changed-row-target"
+  ],
+  "scope": "Support-independent obstruction to extending p=0 into an invariant law balancing P and R pair-event components. It implies p>=1/27 for any such law; it is not full15 infeasibility and not an ordinary plane chromatic lower bound."
+}
+python3 -S research/verify_pentagon_cp_partition_gap.py
+{
+  "status": "PASS_C027_PENTAGON_CP_NOT_PARTITION",
+  "vertices": 5,
+  "actual_unit_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "allowed_pairs": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "exact_pair_distances": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "coefficients": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "coefficients": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "coefficients": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        1,
+        4
+      ],
+      "coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "coefficients": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "coefficients": [
+        "1",
+        "0"
+      ]
+    }
+  ],
+  "all_partitions": 52,
+  "proper_partitions": 11,
+  "complement_matchings": 11,
+  "candidate_sum": "5/2",
+  "maximum_partition_pairs": 2,
+  "degree_constraints": "PASS",
+  "triangle_constraints": "PASS",
+  "subset_k5_pigeonhole_constraints": "PASS",
+  "CP_representation": "5 E[XX^T]: each allowed pair mass1/10, empty mass1/2",
+  "shifted_matrix_integer_scale": 20,
+  "positive_leading_principal_minors": [
+    16,
+    240,
+    3200,
+    26000,
+    200000
+  ],
+  "scope": "A specific CP single-independent-set matrix on an exact unit pentagon is not any proper-partition pair-marginal matrix. No claim about stationary dodecagon moments or HN bounds."
+}
+python3 -S research/verify_nine_point_pr_polygon.py
+{
+  "status": "PASS_EXACT_LOCAL_NINE_POINT_PR_POLYGON",
+  "certificate_sha256": "e7d33779601d6b48c7df4ef111d531690b67966dfe6a5648807fa6ae9d3ad14c",
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "P_component_nodes": 1860,
+  "R_component_nodes": 1472,
+  "local_pair_membership_checked_against_forest": true,
+  "P_event_rows": 14,
+  "R_event_rows": 5,
+  "unit_edges": 8,
+  "all_partitions_at_most5": 18002,
+  "locally_proper_partitions": 2277,
+  "distinct_event_signatures": 885,
+  "same_distance_pairs_not_in_P_component": [],
+  "same_distance_pairs_not_in_R_component": [],
+  "pointwise_lower_dual_scores_min_max": [
+    "-12",
+    "0"
+  ],
+  "lower_optimum_support_all_has_N7_2_and_T_1": true,
+  "tight_seven_count_states": 810,
+  "tight_triangle_transitivity_states": 825,
+  "exact_vertices": [
+    [
+      "1/27",
+      "14/27",
+      12
+    ],
+    [
+      "1/6",
+      "0",
+      8
+    ],
+    [
+      "1/5",
+      "3/5",
+      11
+    ],
+    [
+      "1/3",
+      "0",
+      11
+    ],
+    [
+      "1/3",
+      "1/3",
+      11
+    ]
+  ],
+  "facets": [
+    "12p+3r>=2",
+    "r>=0",
+    "p<=1/3",
+    "2p+r<=1",
+    "2r-p<=1"
+  ],
+  "scope": "Only distributions over proper partitions of the induced unit graph on this fixed nine-point V, using exactly the P/R component events whose endpoints lie in V. This is not a probability law on all of Y and makes no extension claim."
+}
+python3 -S research/test_nine_point_pr_polygon.py
+PASS: four rehashed mathematical mutations rejected; optimized mode fails closed
+python3 -S research/verify_pr_matching_window_ceiling.py
+{"P_basis_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534", "R_basis_sha256": "f21599cb3ed6076e797f1fed319d5e8d4941c50b05fdaed12c6de218a6e9c976", "algorithms": ["ordered common-neighbor recursion", "pivoting Bron-Kerbosch and deduplicated subsets"], "alpha_le_2_window_counts": {"2": [{"P": 0, "R": 0, "count": 49858}, {"P": 0, "R": 1, "count": 1472}, {"P": 1, "R": 0, "count": 1860}], "3": [{"P": 0, "R": 0, "count": 19250}, {"P": 1, "R": 0, "count": 1360}, {"P": 1, "R": 1, "count": 5044}, {"P": 2, "R": 0, "count": 2880}], "4": [{"P": 2, "R": 1, "count": 2280}, {"P": 2, "R": 2, "count": 1140}, {"P": 3, "R": 0, "count": 760}, {"P": 3, "R": 1, "count": 2520}], "5": [{"P": 4, "R": 2, "count": 2280}], "6": [{"P": 6, "R": 3, "count": 380}], "7": []}, "clique_counts": {"2": 53190, "3": 31782, "4": 15340, "5": 10380, "6": 3380, "7": 380}, "clique_set_sha256": {"2": "604c5b648675b9733d34b82cb88aafd941a7649ab288fd8d84d6ea8133f5391c", "3": "ed6bbac77a14dbe3a8e256524c9e4e3191a7601290408b6280343b54e7264f90", "4": "4819604f8e8c0482206224500b7bd865ae318fc75abc317e6bdd6db201775460", "5": "8a6f2bece1674b19a6ec5b15a4799054e4393a47bcd7fed9b2113a19033cee17", "6": "5bf73916d9c66f02def40e299040d6a9dced2173cde2ded6baa633e8ad7098a1", "7": "0c858942d5f5bb0e02f1ce064239ec0ad3441bb587a9cae51836853ca523d829"}, "degree_patterns": [{"P": 0, "R": 0, "count": 158826}, {"P": 0, "R": 1, "count": 10268}, {"P": 1, "R": 0, "count": 24084}, {"P": 1, "R": 1, "count": 19204}, {"P": 2, "R": 0, "count": 10200}, {"P": 2, "R": 1, "count": 9120}, {"P": 3, "R": 0, "count": 760}], "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957", "maximal_clique_size_counts": {"2": 6326, "3": 19922, "6": 720, "7": 380}, "rejected_mutations": ["missing-unit-edge", "missing-P-node", "wrong-R-node"], "schema": "pr-matching-window-ceiling-v1", "scope": "All alpha<=2 induced windows of the fixed Y whose every nonunit pair belongs to the certified P or R component. No constraint from this complete matching family cuts the displayed pentagon. This does not cover other pair components, alpha>=3 windows, higher pattern laws, or full15 feasibility.", "status": "PASS_EXACT_FIXED_FAMILY_CENSUS", "tested_polygon_vertices": [["1/27", "14/27"], ["1/6", "0"], ["1/3", "0"], ["1/3", "1/3"], ["1/5", "3/5"]], "union_edges": 53190, "union_vertices": 10077}
+python3 -S research/verify_cyclic_interval_kernel.py
+{"status": "PASS_EXACT_SMALL_CASE_CALIBRATION", "kernel_cases": 81, "positive_cases": 27, "strict_counterexamples": 54, "exhaustive_partition_evaluations": 78088}
+python3 -S research/verify_star_odd_cycle_lemma.py
+{"status": "PASS_SMALL_GRAPH_CALIBRATION", "graphs": 9216, "qualified": 4708, "hypothesis_counterexamples": 5, "parameter_boundary_sharp": true}
+python3 -S research/verify_bw_pr_odd_cycle_ceiling.py
+node counts A B C 78142 20968 70350
+AB source conflict edges 36654
+AB components 67932 B-centered 20968 A-only 46964 isolated-A singletons 46964 B-B quotient edges 5476 B-graph vertices 20968 bipartite True largest zero comp 384
+one-C scan 70350 max A/B neighbors per C 556 triangle witness None five-cycle witness None seconds 12.78
+{"AB_components": {"B_centered": 20968, "isolated_A": 46964, "largest": 384, "max_B_neighbors_per_A": 1, "max_B_per_component": 1, "total": 67932}, "AB_edge_sha256": "bcc70e6f13472149e6c85fa10707fdee66e8ef0c2d74253f1feec4386798aff1", "AB_edges": {"AA": 0, "AB": 31178, "BB": 5476, "total": 36654}, "B_center_graph": {"bipartite": true, "edges": 5476, "loops": 0, "vertices": 20968}, "C_scan": {"forbidden_five_cycles": 0, "forbidden_triangles": 0, "independent_source_edge_forms_equal": true, "max_AB_neighbors": 556, "neighborhood_sha256": "531e55606b7122f7b207c643a5e9b90c88afb1a017f665a5ad130a05b41c2d65", "nodes": 70350, "source_edges": 3649876}, "P_basis_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534", "RRP_interaction": {"RR_unit_triangles": 0, "edges": 68, "maximum_degree": 1, "nonisolated_vertices": 136, "vertices": 1472}, "R_basis_sha256": "f21599cb3ed6076e797f1fed319d5e8d4941c50b05fdaed12c6de218a6e9c976", "all_length_proof": "Weighted A/B/C star lemma in the accompanying proof; not a bounded cycle-length enumeration.", "forcing_inequalities": [{"bound": 1, "coefficients": [3, 0], "name": "three-P unit-triangle spokes", "nodes": [[5535, 877, 4641], [7479, 5535, 4641], [877, 7479, 4641]]}, {"bound": 1, "coefficients": [2, 1], "name": "two-P one-R unit-triangle spokes", "nodes": [[887, 229, 4641], [3483, 887, 4641], [229, 3483, 4641]]}, {"bound": 1, "coefficients": [-1, 2], "name": "R-R-P transitivity edge", "nodes": [[887, 229, 4641], [229, 305, 4641]]}], "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957", "independent_source_edge_forms_equal": true, "node_class_sha256": {"A": "26d2b02b8283fa236124b0795be67bbdffd51121578b2fa0e27c13555c3266ea", "B": "a9b814da1e3895f99284dbe12a20090928f5cc2c72bbc64d7544982ebf0c64d6", "C": "31b5ac41866ca33c902db66f2e8dc5a0a09ab58d8ec1aaf0edfb222c6753b3de"}, "node_classes": {"A": 78142, "B": 20968, "C": 70350}, "schema": "known-node-bw-pr-odd-cycle-ceiling-v1", "scope": "The induced BW auxiliary graph whose individual node expressions q_jk-q_ij use only known E/P/R pairs. All its edge and odd-cycle inequalities give exactly the displayed upper polygon, with p,r>=0. It covers simple 2-chorded cycles with all cycle/chord coordinates known. It does not cover unknown-coordinate nodes whose unknown terms cancel only after summation, full partition feasibility, or full15.", "status": "PASS_EXACT_ALL_LENGTH_RESTRICTED_FAMILY", "upper_polygon_vertices": [["0", "0"], ["0", "1/2"], ["1/5", "3/5"], ["1/3", "0"], ["1/3", "1/3"]]}
+python3 -S research/verify_hidden_pair_elimination.py
+{"status": "PASS_EXACT_FOUR_POINT_PROJECTION_GAP", "known_nodes": 8, "all_partitions": 15, "proper_partitions": 10, "induced_interval": ["0", "1"], "true_interval": ["0", "2/3"]}
+python3 -S research/verify_q_pr_coupling_audit.py
+{"C027_matching_window_test": {"C027_matching_cut": "4p + 2r <= 2, equivalently 2p + r <= 1; this is already a facet of H and contains no Q coordinate", "all_5_clique_algorithms_agree": true, "all_5_cliques": 11160, "alpha_le_2_5_windows": 2280, "alpha_le_2_profile_counts": {"4P+0Q+2R": 2280}, "clique_algorithms": ["ordered common-neighbor recursion", "pivoting Bron-Kerbosch plus deduplicated subsets"], "clique_counts_by_size": {"2": 53970, "3": 34402, "4": 17960, "5": 11160, "6": 3380, "7": 380}, "clique_set_sha256_by_size": {"2": "5416c6cc454b06a9752ddd7c84b23f56474e93ce3f95e426a992373d76f47782", "3": "e40c5059726fffc1fbd46c63fcff62c77438be28e4f411bb8c16ef8cb9310af4", "4": "5bda14b9f24fe8dbd76f06b2a4a7b85b93da1d5633547fa19c58966df99acbb6", "5": "b004ee3ce117a9f2c234d6c66379396de2eb24285ae9c24b573a60d7a0390448", "6": "5bf73916d9c66f02def40e299040d6a9dced2173cde2ded6baa633e8ad7098a1", "7": "0c858942d5f5bb0e02f1ce064239ec0ad3441bb587a9cae51836853ca523d829"}, "maximal_clique_size_counts": {"2": 6326, "3": 19922, "4": 280, "5": 780, "6": 720, "7": 380}, "q_containing_5_cliques": 780, "scope": "All 5-cliques of E\u222aP\u222aQ\u222aR, filtered for alpha(E[W])<=2. Each eligible nonunit graph is K2,3, hence bipartite; no C027 C5 blossom window contains Q.", "support_edges": 53970}, "Q_only_contraction": {"class_size_histogram": {"1": 9359, "3": 158, "4": 58, "6": 2}, "classes": 9577, "collapsed_P_pairs": 0, "collapsed_R_pairs": 0, "merges": 500, "quotient_pair_edge_counts": {"E": 48706, "P": 780, "R": 332}, "quotient_pair_intersections": {"P_E": 0, "P_R": 0, "R_E": 0}, "unit_loops": 0}, "Q_union_R_contraction": {"P_different_pair_loops_on_p_zero_face": 188, "P_loop_path_witness": {"P_pair": [229, 305], "R_equal_pairs": [[229, 4641], [4641, 305]]}, "actual_unit_edge_loops": 120, "classes": 9341, "collapsed_P_pairs_sha256": "28a01e8ed2e1ff49d3cb22658f65dc79a260661e64331d9bbd7a02d63ac829a0", "combined_conflicts_on_p_zero_face": 308, "merges": 736, "scope_note": "308 counts 120 E loops plus 188 P inequalities only on p=0; it is not 308 unit-edge loops.", "unit_loop_pairs_sha256": "d280a1987857f0b3f2fee92e8148e7ae39bed05b88c3108dc3b47d5a743e0996", "unit_loop_path_witness": {"R_equal_pairs": [[238, 229], [229, 4641], [4641, 305]], "unit_edge": [238, 305]}}, "bounded_conclusion": {"QRR": "2r-q<=1 is a genuine Q/R marginal coupling, but the pointwise binary check shows it is the ordinary triangle inequality and is satisfied by the single-independent-set moment relaxation.", "projection": "The inspected ordinary pair-path cuts and alpha<=2 C027/Edmonds matching windows do not shrink H at q=1. This is not a full Q-augmented BW proof or a full15 result.", "unresolved": ["full Q-augmented BW odd-cycle family", "higher-order partition cuts and alpha>=3 windows", "full15 joint-law feasibility"]}, "inputs": {"P_Q_basis_sha256": "757a6f62edfb5285b9fde82f55c93454abd6e6a5b1985f3838d4c2a93e003534", "R_candidate_sha256": "f21599cb3ed6076e797f1fed319d5e8d4941c50b05fdaed12c6de218a6e9c976", "actual_unit_edges_E": 49858, "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957", "selected_P_pairs": 1860, "selected_Q_pairs": 780, "selected_R_pairs": 1472, "vertices": 10077}, "research_id": "E119", "schema": "q-pr-coupling-audit-v1", "selected_pair_event_triangles": {"QRR_binary_checks": 8, "QRR_inequality": "2r - q <= 1", "QRR_single_independent_set_pointwise_checks": 8, "absent_profiles": ["PPQ", "PQQ", "PQR", "QQR"], "counts": {"PPP": 1080, "PPR": 1380, "PRR": 68, "QQQ": 280, "QRR": 1560, "RRR": 720}, "witnesses": {"PPP": {"edges": [{"pair": [31, 33], "type": "P"}, {"pair": [31, 229], "type": "P"}, {"pair": [33, 229], "type": "P"}], "vertices": [31, 33, 229]}, "PPR": {"edges": [{"pair": [31, 33], "type": "P"}, {"pair": [31, 35], "type": "R"}, {"pair": [33, 35], "type": "P"}], "vertices": [31, 33, 35]}, "PRR": {"edges": [{"pair": [229, 305], "type": "P"}, {"pair": [229, 4641], "type": "R"}, {"pair": [305, 4641], "type": "R"}], "vertices": [229, 305, 4641]}, "QQQ": {"edges": [{"pair": [31, 889], "type": "Q"}, {"pair": [31, 7477], "type": "Q"}, {"pair": [889, 7477], "type": "Q"}], "vertices": [31, 889, 7477]}, "QRR": {"edges": [{"pair": [31, 35], "type": "R"}, {"pair": [31, 873], "type": "R"}, {"pair": [35, 873], "type": "Q"}], "vertices": [31, 35, 873]}, "RRR": {"edges": [{"pair": [31, 35], "type": "R"}, {"pair": [31, 877], "type": "R"}, {"pair": [35, 877], "type": "R"}], "vertices": [31, 35, 877]}}}, "shortest_R_paths_after_Q_contraction": {"P_pair_endpoint_distances": {"distance_counts": {"2": 76, "3": 64, "4": 48, "infinity": 1672}, "witnesses": {"2": {"pair": [229, 305], "q_classes": [229, 305], "r_actual_pair_representatives": [[229, 4641], [305, 4641]], "r_quotient_path_classes": [229, 4641, 305]}, "3": {"pair": [238, 239], "q_classes": [238, 239], "r_actual_pair_representatives": [[229, 238], [229, 233], [233, 239]], "r_quotient_path_classes": [238, 229, 233, 239]}, "4": {"pair": [237, 238], "q_classes": [237, 238], "r_actual_pair_representatives": [[237, 239], [233, 239], [229, 233], [229, 238]], "r_quotient_path_classes": [237, 239, 233, 229, 238]}, "infinity": {"pair": [31, 33], "q_classes": [31, 33]}}}, "actual_unit_pair_endpoint_distances": {"distance_counts": {"3": 72, "4": 48, "infinity": 49738}, "witnesses": {"3": {"pair": [238, 305], "q_classes": [238, 305], "r_actual_pair_representatives": [[229, 238], [229, 4641], [305, 4641]], "r_quotient_path_classes": [238, 229, 4641, 305]}, "4": {"pair": [237, 5551], "q_classes": [237, 240], "r_actual_pair_representatives": [[237, 5552], [4641, 5552], [4641, 5557], [240, 5557]], "r_quotient_path_classes": [237, 5552, 4641, 5557, 240]}, "infinity": {"pair": [0, 1], "q_classes": [0, 1]}}}, "interpretation": "No unit endpoints have R-distance 1 or 2 after Q contraction; the minimum is 3. P endpoints have no R-distance-1 pair; distance 2 yields only 2r-p<=1, already in H."}, "status": "PASS_EXACT_BOUNDED_Q_PR_COUPLING_AUDIT"}
+python3 -S research/check_transport_projection.py --self-test
+{
+  "certificate_sha256": "5753d18f691eab2b5b04e54d21762f063e8478daff72c013558535144b44d056",
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "local_q_one_projection": {
+    "actual_vertices": 22,
+    "minimum_p": "1/14",
+    "r_at_minimum": "15/28",
+    "typed_pairs": {
+      "E": 34,
+      "P": 47,
+      "Q": 11,
+      "R": 31
+    },
+    "vertices": [
+      {
+        "atoms": 72,
+        "denominator": 11088,
+        "p": "1/14",
+        "r": "15/28"
+      },
+      {
+        "atoms": 24,
+        "denominator": 24,
+        "p": "1/4",
+        "r": "0"
+      },
+      {
+        "atoms": 12,
+        "denominator": 18,
+        "p": "1/3",
+        "r": "0"
+      },
+      {
+        "atoms": 22,
+        "denominator": 84,
+        "p": "1/7",
+        "r": "4/7"
+      }
+    ]
+  },
+  "local_squared_distances": 462,
+  "necessary_inequalities": [
+    "6p+q+2r <= 3",
+    "p-q+2r <= 1",
+    "r-q <= 1/3",
+    "36p+12r+81(1-q) >= 9",
+    "14p+27(1-q) >= 1"
+  ],
+  "q_one_necessary_interval_p": [
+    "1/14",
+    "1/3"
+  ],
+  "quotient": {
+    "Q_links": 9,
+    "actual_vertices": 21,
+    "classes": 12,
+    "individual_event_orbit_checks": 240,
+    "polygon_vertices": 5,
+    "proper_partitions": 14400,
+    "typed_pairs": 66
+  },
+  "rejections": [
+    "geometry-binding",
+    "false-outer-point",
+    "weakened-facet",
+    "false-vertex",
+    "bad-seven-coloring",
+    "missing-quotient-pair",
+    "wrong-pair-type",
+    "missing-Q-link",
+    "fake-Q-link",
+    "bad-quotient-coloring",
+    "stronger-uncertified-penalty",
+    "float-in-facet",
+    "false-attainment-probability",
+    "false-attainment-coloring",
+    "false-local-sharpness",
+    "boolean-point",
+    "optimized-mode"
+  ],
+  "schema": "q-pr-joint-cuts-replay-v1",
+  "scope": "Exact seven-point P/Q/R polytope; exact 21-point q=1 P/R pentagon and 22-point q=1 P/R quadrilateral; necessary inequalities for any full-Y pair-transport law. No full15 infeasibility, no global HN bound, no claimed literature priority.",
+  "seven": {
+    "facets": 9,
+    "individual_event_orbit_checks": 81,
+    "proper_partitions": 69,
+    "unit_edges": 9,
+    "vertices": 7,
+    "vertices_of_polytope": 9
+  },
+  "status": "PASS",
+  "transport_component_sizes": {
+    "P": 1860,
+    "Q": 780,
+    "R": 1472
+  },
+  "uses_sat_or_floating_point": false
+}
+python3 -S research/verify_q_defect_lifting.py --self-test
+self_tests_passed 24
+{"base": "c7dd21efe99cf18884a62b21f34a27de23eec550", "case_replay": {"enumeration_nodes": 4255188, "inconsistent_patterns": 0, "nontrivial_patterns": 442, "patterns": 512, "trivial_by_nonnegativity": 70}, "certificate_sha256": "0e95de5517c615963e01aa900c67a12a14dfdccbf136b3575988dc28e1659ce6", "finite_evidence": {"atoms": 82, "denominator": 29743913853014769669126663, "individual_event_means": 89, "singleton_witnesses": 9, "unit_edge_checks": 2788}, "local_exact_pair_checks": 231, "schema": "q-defect-lifting-validation-v1", "scope": "A pointwise inequality on the actual 21-point induced unit graph and a 22-point marginal law. Neither a full-Y law nor a full15 solution or new plane chromatic bound.", "status": "PASS", "transport_components": {"P": 1860, "Q": 780, "R": 1472}}
+python3 -S research/verify_generalized_partition_facets.py
+{"T158_pentagon_vertices": [["1/27", "14/27"], ["1/6", "0"], ["1/3", "0"], ["1/3", "1/3"], ["1/5", "3/5"]], "g2coc": {"c5_n5": {"best_full_row": {"P": 4, "R": -2, "maximum_lhs_on_pentagon": "4/3", "rhs": 2, "unit": -2}, "groupings": 504, "minimum_slack_on_T158_pentagon": "2/3", "unique_full_rows_P_R_unit_rhs": 18, "unique_projected_rows_P_R_rhs": 18}, "c5_n7": {"best_full_row": {"P": 2, "R": 3, "maximum_lhs_on_pentagon": "11/5", "rhs": 3, "unit": -6}, "groupings": 3360, "minimum_slack_on_T158_pentagon": "4/5", "unique_full_rows_P_R_unit_rhs": 33, "unique_projected_rows_P_R_rhs": 21}, "c6_n7": {"best_full_row": {"P": 2, "R": 3, "maximum_lhs_on_pentagon": "11/5", "rhs": 3, "unit": -6}, "groupings": 2520, "minimum_slack_on_T158_pentagon": "4/5", "unique_full_rows_P_R_unit_rhs": 34, "unique_projected_rows_P_R_rhs": 34}, "c7_n7": {"best_full_row": {"P": 1, "R": 3, "maximum_lhs_on_pentagon": "2", "rhs": 3, "unit": -4}, "groupings": 720, "minimum_slack_on_T158_pentagon": "1", "unique_full_rows_P_R_unit_rhs": 24, "unique_projected_rows_P_R_rhs": 24}}, "gow": {"c3": {"groupings": 8400, "minimum_slack_on_T158_pentagon": "0", "tight_projected_rows_P_R_rhs": [[2, 1, 1], [3, 0, 1], [4, 2, 2], [6, 3, 3]], "unique_projected_rows": 70}, "c5": {"groupings": 4032, "minimum_slack_on_T158_pentagon": "1/3", "tight_projected_rows_P_R_rhs": [], "unique_projected_rows": 49}}, "local_pair_tag_counts": {"P": 12, "R": 3, "unit": 6}, "local_vertices": [4641, 877, 887, 3483, 5535, 7479, 7489], "research_ids": ["T160", "E120"], "schema": "generalized-partition-facet-audit-v1", "scope": "All GOW and G2COC instances whose nonempty sets fit inside the complete seven-point T157 P/R/unit core, modulo cyclic rotation of the side-set labels. No row cuts the exact T158 P/R pentagon. This does not audit larger grouped windows on Y, alpha>=3 higher-order cuts, full15 feasibility, or the Hadwiger-Nelson chromatic number.", "source_g14_pr_certificate_sha256": "dce2b97c1996be80b53f8fb24ad1756a7210304f61a2322b746c370de8bc325f", "status": "PASS_EXACT_SEVEN_POINT_GENERALIZED_PARTITION_FACET_AUDIT", "totals": {"g2coc_groupings": 7104, "gow_groupings": 12432}}
+python3 -S research/verify_q_robust_capacity.py --self-test
+PASS q-robust-capacity nodes=512531 min_score=9 penalty_sum=13 expectation: 36p+12r+13(1-q)>=9; with T161 2r-p<=1: 42p+13(1-q)>=3
+python3 -S research/check_q_defect_lift.py --self-test
+{"certificate_mutations_rejected": 15, "envelope_mutations_rejected": 10, "false_lower_bound_rejected": true, "optimized_mode_rejected": true, "self_test": "PASS"}
+{
+  "Q_links": 9,
+  "actual_unit_edges": 34,
+  "actual_vertices": 21,
+  "at_p_1_over_27_q_at_most": "95/108",
+  "balanced_score_envelope": {
+    "breakpoints": [
+      {
+        "atoms": 1,
+        "minimum_expected_score": "3",
+        "q": "0"
+      },
+      {
+        "atoms": 5,
+        "minimum_expected_score": "10/3",
+        "q": "1/3"
+      },
+      {
+        "atoms": 4,
+        "minimum_expected_score": "15/4",
+        "q": "1/2"
+      },
+      {
+        "atoms": 5,
+        "minimum_expected_score": "21/5",
+        "q": "3/5"
+      },
+      {
+        "atoms": 1,
+        "minimum_expected_score": "9",
+        "q": "1"
+      }
+    ],
+    "envelope_certificate_sha256": "a3cd369e2091f63f50d93506eee21bca06e78d1ee40edae4a53d968d85762ba4",
+    "first_three_pieces_redundant_under_old_PR_count": true,
+    "individual_Q_mean_checks": 45,
+    "intervals": [
+      "[0,1/3]",
+      "[1/3,1/2]",
+      "[1/2,3/5]",
+      "[3/5,1]"
+    ],
+    "lower_envelope": "max(3+q, (5+5q)/2, (3+9q)/2, 12q-3)",
+    "pointwise_integer_dual_checks": 2048,
+    "positive_atom_occurrences": 16,
+    "schema": "balanced-score-lower-envelope-replay-v1",
+    "scope": "Exact lower boundary of expected fixed score S versus a common mean q for the nine selected Q links on the induced W graph. Individual P/R means are not constrained; no full-Y extension or upper-bound projection is asserted."
+  },
+  "case_count_by_defect_number": {
+    "0": 1,
+    "1": 9,
+    "2": 36,
+    "3": 84,
+    "4": 126,
+    "5": 126,
+    "6": 84,
+    "7": 36,
+    "8": 9,
+    "9": 1
+  },
+  "certificate_sha256": "56ce80ebe05756b488ccd308abb9ec5af2e7515b4bab9eb09f94d461fc91a85d",
+  "coefficientwise_minimal_penalties": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    0,
+    2
+  ],
+  "exact_cases": 512,
+  "geometry_semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+  "independent_integer_search_nodes": 21678333,
+  "joint_certificate_sha256": "5753d18f691eab2b5b04e54d21762f063e8478daff72c013558535144b44d056",
+  "local_squared_distances": 210,
+  "minimum_penalty_sum": 12,
+  "minimum_score_by_defect_number": {
+    "0": 9,
+    "1": 7,
+    "2": 5,
+    "3": 4,
+    "4": 3,
+    "5": 3,
+    "6": 3,
+    "7": 3,
+    "8": 3,
+    "9": 3
+  },
+  "necessary_inequalities": [
+    "36p+12r+12(1-q) >= 9",
+    "14p+4(1-q) >= 1"
+  ],
+  "positive_words": 512,
+  "schema": "q-defect-lift-replay-v2",
+  "scope": "Exact pointwise inequality on the fixed induced 21-point configuration and coefficientwise optimal penalties for the fixed 48-event expression and nine links. Positive local words are not full-Y laws. No unrestricted full15 solution or plane chromatic bound.",
+  "score_events": {
+    "P": 36,
+    "R": 12
+  },
+  "single_external_vertex_extension": {
+    "maximum_forbidden_colors": 3,
+    "minimum_available_colors": 2,
+    "outside_vertices": 10056,
+    "scope": "One outside vertex at a time, for the fixed W-only expression; not a common law or simultaneous extension.",
+    "unit_neighbors_in_W_histogram": {
+      "0": 9556,
+      "1": 447,
+      "2": 52,
+      "3": 1
+    }
+  },
+  "status": "PASS",
+  "transport_component_sizes": {
+    "P": 1860,
+    "Q": 780,
+    "R": 1472
+  },
+  "uses_sat_or_floating_point": false
+}
+python3 -S research/check_q_defect_scope_audit.py --self-test
+{"self_test": "PASS", "certificate_mutations_rejected": 11, "optimized_mode_rejected": true}
+{
+  "actual_unit_violations_in_each_selected_word": [
+    1,
+    2,
+    2,
+    2,
+    4,
+    4
+  ],
+  "case_patterns_per_model": 512,
+  "certificate_sha256": "6f91036c485f5fc57e6b01b589357ca1541d8ca42a17819c7758ddedf8df4bd1",
+  "counterexamples_to_penalty_12_in_selected_model": 2,
+  "full_graph_singleton_optimality_words": 9,
+  "induced_edges": 34,
+  "induced_model_minimum_penalty_sum": 12,
+  "induced_optimality_witness_source_sha256": "56ce80ebe05756b488ccd308abb9ec5af2e7515b4bab9eb09f94d461fc91a85d",
+  "integer_branch_cover_nodes": {
+    "induced_34": 4365160,
+    "selected_18": 34417616
+  },
+  "omitted_actual_edges": 16,
+  "relation_parent_sha256": "5753d18f691eab2b5b04e54d21762f063e8478daff72c013558535144b44d056",
+  "schema": "q-defect-model-scope-replay-v1",
+  "scope": "Exact distinction between the same fixed-score model with 18 selected unit edges and with all 34 actual induced unit edges. Both optima are certified, but a positive witness of the 18-edge relaxation need not be a proper coloring of the 34-edge graph.",
+  "selected_edges": 18,
+  "selected_model_minimum_penalty_sum": 13,
+  "selected_model_optimality_words": 6,
+  "status": "PASS"
+}
+python3 research/test_salem_sextic_certificates.py
+{
+  "byte_identical_rebuild": true,
+  "graph": {
+    "branches": 410,
+    "chromatic_number": 4,
+    "deletion_witnesses": 114,
+    "exact_pairs": 6441,
+    "leaves": 411,
+    "nodes": 821,
+    "status": "PASS",
+    "triangles": 0,
+    "unit_edges": 267,
+    "vertices": 114
+  },
+  "height": {
+    "direction_colors_mod3": [
+      2,
+      1,
+      2,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      1,
+      2,
+      1,
+      0
+    ],
+    "minimum_strict_margin": 2,
+    "relation_norms": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      10,
+      10,
+      10,
+      7,
+      10
+    ],
+    "scope": "finite certificate for the proved 12/13-direction threshold",
+    "separators": 10,
+    "sign_patterns": 128,
+    "status": "PASS"
+  },
+  "mutations_rejected": [
+    "coordinate",
+    "missing-unit-edge",
+    "field-polynomial",
+    "four-colouring",
+    "false-conflict-leaf",
+    "omitted-colour-branch",
+    "nonedge-palette-anchor",
+    "deletion-colouring",
+    "relation-norm",
+    "no-sign-separation",
+    "relation-dimension",
+    "linear-three-colouring",
+    "direction-thirteen",
+    "height-polynomial"
+  ],
+  "optimized_mode_rejections": 2,
+  "scope": "new Salem checks only; not the full repository regression",
+  "status": "PASS"
+}
+python3 research/test_partition_quartet_completeness.py
+{
+  "status": "PASS",
+  "experiment": "E098",
+  "partition_count": 202,
+  "roots": 10,
+  "support_cover_nodes": 4135,
+  "support_cover_branches": 2016,
+  "support_cover_leaves": 2119,
+  "support_cover_arcs": 4125,
+  "exact_sharpness": {
+    "four_points_necessary": {
+      "points": 4,
+      "equal_restrictions_through": 3,
+      "total_integer_mass": 5
+    },
+    "six_colors_defeat_four_points": {
+      "points": 6,
+      "equal_restrictions_through": 5,
+      "total_integer_mass": 5
+    },
+    "unequal_weights_need_five": {
+      "points": 5,
+      "equal_restrictions_through": 4,
+      "total_integer_mass": 6
+    }
+  },
+  "four_point_multisets_checked": 15503,
+  "scope": "DAG proves the finite six-point lemma used by T128; T127 uses the written arbitrary-size proof",
+  "byte_identical_rebuild": true,
+  "mutations_rejected": [
+    "support_limit",
+    "block_limit",
+    "duplicate_partition",
+    "omitted_root",
+    "wrong_root",
+    "omitted_branch",
+    "false_leaf",
+    "cyclic_child",
+    "wrong_child_state",
+    "invalid_selected_atom",
+    "false_deletion",
+    "unequal_total_mass",
+    "false_sharpness_word",
+    "false_six_color_cap"
+  ],
+  "optimized_modes_rejected": [
+    "verify_partition_quartet_completeness.py",
+    "test_partition_quartet_completeness.py"
+  ],
+  "event_extractor_pairs_tested": 151,
+  "genuine_quadratic_events_tested": 67,
+  "certificate_sha256": "4021f7cd2ac3674caa0a5a631c7df00537c7a57b59f3d2dd21838bb5a5848332"
+}
+python3 research/test_cyclic_valuation_sieve.py
+{
+  "status": "PASS",
+  "exact_pair_power_checks": 24025,
+  "detected_edges": 60,
+  "maximum_candidate_count": 2,
+  "distant_lag_examples": [
+    {
+      "lag": 1,
+      "candidates": [
+        -1,
+        1
+      ]
+    },
+    {
+      "lag": 2,
+      "candidates": [
+        -2,
+        2
+      ]
+    },
+    {
+      "lag": 17,
+      "candidates": [
+        -17,
+        17
+      ]
+    },
+    {
+      "lag": 101,
+      "candidates": [
+        -101,
+        101
+      ]
+    }
+  ],
+  "two_color_period_four": "0011",
+  "scope": "General-lemma calibration in Q(i), not the Y orbit certificate"
+}
+python3 research/verify_dyadic_cyclic_orbit.py
+make: *** [Makefile:18: check-orbit] Terminated

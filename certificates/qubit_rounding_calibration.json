@@ -1,0 +1,91 @@
+{
+  "schema": "hn-qubit-rounding-calibration-v1",
+  "status": "PASS_FINITE_CALIBRATION",
+  "rational_complex_samples": {
+    "bloch_vectors": 38,
+    "pair_trace_identities": 1444,
+    "orthogonal_ordered_pairs": 38,
+    "selected_nonorthogonal_pairs": 361,
+    "labelled_measurements": 775,
+    "mutations_rejected": 4
+  },
+  "triangle": {
+    "field": "Q(sqrt(3))",
+    "projections": [
+      [
+        [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            "1/4",
+            "0"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ],
+        [
+          [
+            "0",
+            "1/4"
+          ],
+          [
+            "3/4",
+            "0"
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            "1/4",
+            "0"
+          ],
+          [
+            "0",
+            "-1/4"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-1/4"
+          ],
+          [
+            "3/4",
+            "0"
+          ]
+        ]
+      ]
+    ],
+    "edge_label_products": 6,
+    "squared_frobenius_defect": "1/4",
+    "frobenius_defect": "1/2",
+    "impossible_classical_assignments": 8,
+    "scope": "Exact m=3 upper witness; the matching lower bound and arbitrary odd m are written proofs."
+  },
+  "all_graphs_checked_by_enumeration": false,
+  "infinite_result_formalized": false,
+  "scope": "Rational complex projector samples and exact triangle witness only; full claims use docs/proofs/qubit_coloring_rounding.md."
+}

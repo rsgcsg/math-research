@@ -1,0 +1,99 @@
+{
+  "schema": "hn-compact-mixing-remote-v1",
+  "status": "PASS_SCOPED_CHECKS",
+  "date": "2026-10-07",
+  "source_commit": "0b966a5258f64d3a53d7f5e02f316fd1c03f3652",
+  "local_commit_preserved": "a314954103af4fa2297a0446064179dfce53a474",
+  "reviewed_tree": "41af9b70a5c7c662a9b8a69afe5935cee02b3391",
+  "base_commit": "243c3fb7901e9ad21c7321481efc3714d1e6e2c6",
+  "run_id": "37585484501",
+  "commands": [
+    {
+      "command": [
+        "make",
+        "check-compact-mixing"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "seconds": 0.566,
+      "log": "certificates/compact_mixing_remote_replay/0.log",
+      "sha256": "570c245426abaa661204b3823111f35049bc189994336a39360fe9d6eee2bae2"
+    },
+    {
+      "command": [
+        "make",
+        "check-radical-transfer"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "seconds": 0.259,
+      "log": "certificates/compact_mixing_remote_replay/1.log",
+      "sha256": "33f322c33eaef766927d48a4fc9d3719a99ca0e3cacb40000ad133392c9e930e"
+    },
+    {
+      "command": [
+        "python3",
+        "-S",
+        "research/check_integration.py"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "seconds": 1.236,
+      "log": "certificates/compact_mixing_remote_replay/2.log",
+      "sha256": "08744f0073feb542cd9d5c885fc27ce1e2ab633f22eaa248d63d5b147f601dba"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "-S",
+        "research/verify_compact_mixing_transfer.py"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "seconds": 0.029,
+      "log": "certificates/compact_mixing_remote_replay/3.log",
+      "sha256": "09c108a7e095abaf8c2d27d38f03133449ab82809747732b1895f35b465a42b7"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "-S",
+        "research/verify_qubit_rounding.py"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "seconds": 0.026,
+      "log": "certificates/compact_mixing_remote_replay/4.log",
+      "sha256": "2bdb1d956cb13cb748907c44dda279760ad5b9fd920a40dd10125c5861d5b4cd"
+    }
+  ],
+  "original_local_full_check_status": "TIMEOUT_124_AFTER_300_SECONDS",
+  "full_make_check_passed": false,
+  "full_make_check_repeated_remotely": false,
+  "inherited_scientific_files_unchanged": 663,
+  "original_local_proof_and_log_bytes_unchanged": true,
+  "fixed_source_manifest_sha256": "e25c1fd2ed9f88ecf8a9e1bc5aa448829717ca0dbfed8908a5aca0c5b4f3cc65",
+  "new_claims_lean_formalized": false,
+  "plane_six_or_seven_decided": false,
+  "explicit_non5_found": false,
+  "full15_decided": false,
+  "scope": "Exact reviewed local tree and original commit restored. New finite mechanisms and inherited radical calibration replayed independently, with current syntax/ID audit. Not a full 74-command PASS, not formalization of general written proofs, and no novelty priority assertion. Publication is recorded separately after the actual push.",
+  "final_static": {
+    "status": "PASS",
+    "python_syntax_files": 357,
+    "json_certificate_files": 274,
+    "local_file_targets": 934,
+    "ledger_ids": {
+      "T": 169,
+      "E": 124,
+      "C": 32,
+      "Q": 11
+    },
+    "source_files": 361,
+    "source_manifest_sha256": "e25c1fd2ed9f88ecf8a9e1bc5aa448829717ca0dbfed8908a5aca0c5b4f3cc65",
+    "scope": "Integration syntax, parseability, exact ID coverage and local file targets only. Not exhaustive anchor checking, new theorem validation, or remote publication."
+  },
+  "final_static_log_sha256": "6c87938345490f89e9b204a783bbdbbfebc72e89f167bb02cd958c56d8973a3c"
+}
