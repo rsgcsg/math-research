@@ -1,0 +1,56 @@
+python3 -S research/verify_binary_povm_threshold.py --self-test
+{
+  "status": "PASS_EXACT_FINITE_EVIDENCE",
+  "certificate": {
+    "hoffman_singleton": {
+      "edges": 175,
+      "vertices": 50,
+      "degree": 7,
+      "triangles": 0,
+      "integer_sos_entries": 2500,
+      "gram_square_entries": 2500,
+      "vector_chromatic_number": "10/3",
+      "normalized_binary_optimum": "1/4",
+      "stability_constant": 700,
+      "plane_unit_distance_realization_claimed": false
+    },
+    "c5": {
+      "vertices": 5,
+      "matrix_products_checked": 20,
+      "qubit_max_squared_error": "821/10240",
+      "qubit_uniform_squared_error": "1/8",
+      "diagonal4_max_squared_error": "611/3200",
+      "diagonal4_uniform_squared_error": "1/4",
+      "optimality_claimed": false
+    }
+  },
+  "noncommutative_identity": {
+    "gaussian_hermitian_pairs": 40,
+    "noncommuting_pairs": 30,
+    "scalar_effect_pairs": 25,
+    "row_bound": "1/4",
+    "dimensions": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "clifford": {
+    "dimensions": [
+      2,
+      4,
+      8
+    ],
+    "anticommutators_checked": 56
+  },
+  "boundary_checks": {
+    "three_outcome_path_parameters": 5,
+    "rational_kappa_calibrations": 11
+  },
+  "general_theorem_lean_formalized": false,
+  "full15_decided": false,
+  "new_hn_bound": false,
+  "scope": "Exact stored graph and rational POVM witnesses; finite formula calibration. General graph/dimension classification and the conic alternative use the written proof.",
+  "mutations_rejected": 10
+}
