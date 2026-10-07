@@ -1,0 +1,100 @@
+{
+  "schema": "hn-radical-template-closeout-v1",
+  "status": "PASS_SCOPED_CHECKS",
+  "date": "2026-10-07",
+  "tested_parent": "6a92b8f6a5774704b97bdab5d096c912624956d7",
+  "run_id": "37578171063",
+  "base_commit": "65874a0e56ebbcaff8a33fc0cac1137c152c9131",
+  "files": {
+    "Makefile": "f93b6a92899ef1467b9f25e13a2ee800f28d106c44e2cd0e55b29f98f7197ae4",
+    "README.md": "d377c4286426cd8725dd9db85d95f845b6d878e58dbf2be601bea2567488d492",
+    "docs/CURRENT.md": "4b9ac80b3ba27e83aff2cd45bddb5c8e5183c10b8fc84efd985b8393150b484f",
+    "docs/RESULTS.md": "9d5a881772a0ca2151a5560eef52cb4c5f8d821144ded1530ce2a75ea5db1c03",
+    "docs/ROUTES.md": "68557a2e76cfa1a7f68731b9f9e96cc3563b5b7089e6871c5b77f1d9b6b756d6",
+    "docs/proofs/hn_unified_framework.md": "fe58fcf5113b20045332a4469f5cf094d89a62e317f2430b2432e2df396a892f",
+    "references/OPENAI_158_AUDIT.md": "1181e7f8140da0b074450bf9efce09598020ed2e455aecb9a72ce8468d417e31",
+    "docs/proofs/algebraic_subfield_haar_transfer.md": "0beeec63333684aabf26605bd47547a5c6f2402c93bb03dc8b89cd6e3f5198dc",
+    "docs/proofs/radical_plane_colorability.md": "746c71339e629bc495e0d813b0c0472918080425a471c91bf06e24117f7a8e66",
+    "docs/proofs/radical_finite_template_transfer.md": "28cc6e3309061e7a4124e0813bd78ec4d65ce9958b4e227f0ce2e4beec4f6b28",
+    "docs/proofs/finitely_generated_rotation_rigidity_obstruction.md": "35721f61d44eda0b2032c5c8d1496476f0f7b7922a544761ceddf7e9f36577d0",
+    "research/verify_radical_transfer_calibration.py": "05f354a7495447d838e15ac790368a4842a4abb32ae3c9e888ff8b2bd7875e8e",
+    "research/audit_openai_158_sources.py": "90bf6768989accf272c5963c52a7002f4250834ab86f304051a0e68d377eceaa",
+    "research/verify_radical_template_mechanism.py": "89b48529feb1263335472764d0d0c1a0fc8856cae319d6cd91221b3ffb6f634b"
+  },
+  "commands": [
+    {
+      "command": [
+        "make",
+        "check-radical-transfer"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "log_sha256": "33f322c33eaef766927d48a4fc9d3719a99ca0e3cacb40000ad133392c9e930e"
+    },
+    {
+      "command": [
+        "python3",
+        "-S",
+        "research/audit_openai_158_sources.py",
+        "/home/runner/work/_temp/upstream/family158-source.zip"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "log_sha256": "0473f8a3c59bf7b0088cf5deb6edd3df17fd697ce5330f05cfcd6e61214a963c"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "-S",
+        "research/verify_radical_template_mechanism.py"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "log_sha256": "e2897e9a519f96b11a88efc0bb5ab2f73e4718895ffc6d46881e2606e8d7478c"
+    },
+    {
+      "command": [
+        "python3",
+        "-S",
+        "research/check_integration.py"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "log_sha256": "f3587a5af5a1b78b73cfbe53715752d6b3c4e85b1331bdfca2e7b3ec13c372b8"
+    }
+  ],
+  "inherited_scientific_files_unchanged": 646,
+  "full_make_plan_commands": 72,
+  "full_make_check_rerun": false,
+  "original_lean_run": "37573206401",
+  "new_results_lean_formalized": false,
+  "exact_plane_chromatic_number_determined": false,
+  "explicit_non5_graph_produced": false,
+  "full15_determined": false,
+  "removed_completed_workflows": [
+    ".github/workflows/openai-158-source-audit.yml",
+    ".github/workflows/openai-158-lean-check.yml",
+    ".github/workflows/recover-158-draft.yml",
+    ".github/workflows/publish-158-reviewed.yml",
+    ".github/workflows/finalize-158.yml",
+    ".maintenance/finalize_158.py"
+  ],
+  "scope": "Written proofs R158-H/T/S/N/C/F with specified external analytic inputs. Fresh finite mechanism/source/static checks only. Standard Lean replay of external no-five result retained from earlier completed run. No claim of a complete new formalization or all 72-command replay.",
+  "final_static_audit": {
+    "status": "PASS",
+    "python_syntax_files": 355,
+    "json_certificate_files": 270,
+    "local_file_targets": 902,
+    "ledger_ids": {
+      "T": 169,
+      "E": 124,
+      "C": 32,
+      "Q": 11
+    },
+    "source_files": 359,
+    "source_manifest_sha256": "fdfba8563f6c1674e51c0114805c384621488a603965a6dcdcbe3ac850f0f4b8",
+    "scope": "Integration syntax, parseability, exact ID coverage and local file targets only. Not exhaustive anchor checking, new theorem validation, or remote publication."
+  },
+  "final_static_log_sha256": "079de27125e5a96b974540e128ca873c89cc15a51e7630d097d56913664e13de"
+}

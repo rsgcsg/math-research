@@ -8,6 +8,9 @@
 | R158-H / R158-T | 正平方根闭合、单位群可除的代数子域上的Haar刚性及任意有限颜色数、多距离转移；[书面证明](proofs/algebraic_subfield_haar_transfer.md)，未新形式化。 |
 | R158-S / R158-N | 可解代数实坐标达到全平面色数，但不是所有有限单位图的同态普适宿主；[完整推论与反例](proofs/radical_plane_colorability.md)。 |
 
+| R158-C | 对满足R158-H的子域，任意有限、按距离指定的二点允许关系，在子域平面与R²上可满足性相同；涵盖有限图目标、多重染色和有理循环模板 | [交叉相关与密度点的完整证明](proofs/radical_finite_template_transfer.md)；不是任意高阶CSP或新色数数值，未Lean形式化。 |
+| R158-F | 任意真子域N⊊E包含Q(i)时，N湮灭子Haar概率的Fourier系数为1_N；对所有N×子群不变、避开连续字符且非全Haar。覆盖任意有限生成代数旋转群 | [完整反例](proofs/finitely_generated_rotation_rigidity_obstruction.md)；不依赖Family158、不等于染色反例或full15正律。 |
+
 以下为保留的统一账本和历史证据，旧状态不由外部无五染结果自动升级。
 
 # 统一成果账本（2026-10-06整合）

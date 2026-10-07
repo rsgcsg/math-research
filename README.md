@@ -12,7 +12,10 @@
 
 本轮书面证明：正平方根闭合且单位旋转可除的代数子域，对其中任意距离集具有与全平面相同的有限染色能力。最大可解代数扩张的实部满足这些条件，却不是所有有限单位图的同态普适宿主。新推广尚未形式化；其有限算术校准与上游Lean重放分开记录。
 
-`make check-radical-transfer`只重放本轮有限代数校准。旧数据、定理编号和UNKNOWN不因外部结果改写。
+[有限二点模板转移](docs/proofs/radical_finite_template_transfer.md)进一步保留多重染色与有理循环模板；
+[有限生成旋转反例](docs/proofs/finitely_generated_rotation_rigidity_obstruction.md)说明稠密旋转不足以推出全域谱刚性。
+
+`make check-radical-transfer`重放有限代数、标签支持与谱样本校准，不认证无限分析证明。旧数据、定理编号和UNKNOWN不因外部结果改写。
 
 ## 历史统一基线（2026-10-06快照）
 
