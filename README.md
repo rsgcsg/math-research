@@ -56,3 +56,9 @@ make check-q-joint-boundary-gap check-two-partition-w22-audit
 
 本轮[奇次纯根式显式二染校准](docs/proofs/odd_radical_plane_two_coloring.md)把新逃逸旋转放回已知低色数宿主，
 不重复计算Moorhouse的既有二色结论。全仓尝试在300秒预算处中断，专项验证范围见本轮收据。
+
+## 2026-10-08：二结果正效应的全图分类
+
+[R158-V 完整证明](docs/proofs/binary_povm_vector_threshold.md)：能否严格优于均匀赋值恰等价于χ_vec<3；可行时有理对角矩阵足够，不可行时有PSD负证书，连通图的均匀最优解唯一。50点无三角形整数证书与C5有理正例独立重放。
+
+`make check-binary-povm`只验精确有限证据，未形式化一般证明。该二标签误差不能区别含三角形单位图的高色数，不是新的HN下界或full15解。

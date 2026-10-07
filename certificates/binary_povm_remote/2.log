@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/runner/work/math-research/math-research/research/verify_binary_povm_threshold.py", line 193, in <module>
+    main()
+    ~~~~^^
+  File "/home/runner/work/math-research/math-research/research/verify_binary_povm_threshold.py", line 177, in main
+    raise RuntimeError('Binary POVM verifier requires non-optimized Python')
+RuntimeError: Binary POVM verifier requires non-optimized Python

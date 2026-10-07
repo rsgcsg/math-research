@@ -1,0 +1,269 @@
+python3 -S research/verify_compact_mixing_transfer.py
+{
+  "schema": "hn-compact-mixing-calibration-v1",
+  "status": "PASS_FINITE_CALIBRATION",
+  "spectral": {
+    "field": "Q(i,a), a>0 and a^3=2",
+    "basis": [
+      "1",
+      "i",
+      "a",
+      "ia",
+      "a^2",
+      "ia^2"
+    ],
+    "sample_points": 12,
+    "distinct_cosets": 7,
+    "gram_rank": 7,
+    "invariance_checks": 1872,
+    "mixing_character_pairs": 81,
+    "joint_moments": 343,
+    "escape_witnesses": [
+      {
+        "t": "1",
+        "u": [
+          "-3/5",
+          "-4/5",
+          "4/5",
+          "2/5",
+          "-2/5",
+          "4/5"
+        ]
+      },
+      {
+        "t": "1/10",
+        "u": [
+          "249999/250001",
+          "-1000/250001",
+          "100/250001",
+          "50000/250001",
+          "-5000/250001",
+          "10/250001"
+        ]
+      },
+      {
+        "t": "1/100",
+        "u": [
+          "249999999999/250000000001",
+          "-1000000/250000000001",
+          "10000/250000000001",
+          "5000000000/250000000001",
+          "-50000000/250000000001",
+          "100/250000000001"
+        ]
+      },
+      {
+        "t": "1/1000",
+        "u": [
+          "249999999999999999/250000000000000001",
+          "-1000000000/250000000000000001",
+          "1000000/250000000000000001",
+          "500000000000000/250000000000000001",
+          "-500000000000/250000000000000001",
+          "1000/250000000000000001"
+        ]
+      }
+    ],
+    "mutated_escapes_rejected": 6
+  },
+  "compact_nets": {
+    "net_size": 5,
+    "fine_space_size": 25,
+    "epsilon": "1/8",
+    "rounded_allowed_pairs": 1245,
+    "nonclosed_prefix_checks": 528
+  },
+  "projection_templates": {
+    "rational_projection_tuples": 10,
+    "tuple_pair_relations": 100,
+    "scalar_classical_pairs": 55,
+    "mutated_projectors_rejected": 4
+  },
+  "odd_radical_coloring": {
+    "fields": [
+      {
+        "degree": 1,
+        "field_samples": 15,
+        "valuation_products": 196,
+        "unit_directions": 15,
+        "translated_unit_edges": 225
+      },
+      {
+        "degree": 3,
+        "field_samples": 20,
+        "valuation_products": 361,
+        "unit_directions": 20,
+        "translated_unit_edges": 400
+      },
+      {
+        "degree": 5,
+        "field_samples": 20,
+        "valuation_products": 361,
+        "unit_directions": 20,
+        "translated_unit_edges": 400
+      },
+      {
+        "degree": 7,
+        "field_samples": 20,
+        "valuation_products": 361,
+        "unit_directions": 20,
+        "translated_unit_edges": 400
+      }
+    ],
+    "exact_cubic_escape_comparisons": 4,
+    "even_degree_formula_counterexample_checked": true,
+    "scope": "Finite calibration of the uniform odd-degree proof and explicit coloring; not extrapolation from these degrees."
+  },
+  "infinite_theorems_formalized": false,
+  "new_plane_bound": false,
+  "scope": "Exact finite algebra and finite template mechanisms only. Infinite R158-M/K/D use written proofs; all-order mixing uses ESS; compact transfer depends on R158-C."
+}
+python3 -S research/verify_qubit_rounding.py
+{
+  "schema": "hn-qubit-rounding-calibration-v1",
+  "status": "PASS_FINITE_CALIBRATION",
+  "rational_complex_samples": {
+    "bloch_vectors": 38,
+    "pair_trace_identities": 1444,
+    "orthogonal_ordered_pairs": 38,
+    "selected_nonorthogonal_pairs": 361,
+    "labelled_measurements": 775,
+    "mutations_rejected": 4
+  },
+  "triangle": {
+    "field": "Q(sqrt(3))",
+    "projections": [
+      [
+        [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            "1/4",
+            "0"
+          ],
+          [
+            "0",
+            "1/4"
+          ]
+        ],
+        [
+          [
+            "0",
+            "1/4"
+          ],
+          [
+            "3/4",
+            "0"
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            "1/4",
+            "0"
+          ],
+          [
+            "0",
+            "-1/4"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-1/4"
+          ],
+          [
+            "3/4",
+            "0"
+          ]
+        ]
+      ]
+    ],
+    "edge_label_products": 6,
+    "squared_frobenius_defect": "1/4",
+    "frobenius_defect": "1/2",
+    "impossible_classical_assignments": 8,
+    "scope": "Exact m=3 upper witness; the matching lower bound and arbitrary odd m are written proofs."
+  },
+  "all_graphs_checked_by_enumeration": false,
+  "infinite_result_formalized": false,
+  "scope": "Rational complex projector samples and exact triangle witness only; full claims use docs/proofs/qubit_coloring_rounding.md."
+}
+python3 -S research/verify_radical_transfer_calibration.py --self-test
+{
+  "status": "PASS_FINITE_ALGEBRA_ONLY",
+  "unit_rotations": 8,
+  "nonzero_four_by_four_determinants": 70,
+  "monic_divisor_checks": {
+    "mod2_factors": 4,
+    "mod3_quintic": 12,
+    "mod2_cubic": 2
+  },
+  "generated_group_order": 120,
+  "analytic_transfer_proved_by_this_program": false,
+  "lean_replay": false,
+  "finite_non5_graph_constructed": false,
+  "certificate_sha256": "45f985953922f791c3ff7afa1b859bd5cbb3c52428f84e7d9276b207d5ad0e4d",
+  "rejection_tests": [
+    "bool_coordinate",
+    "bool_integer_conflation",
+    "dependent_rotations",
+    "float_coordinate",
+    "noncanonical_fraction",
+    "nonunit",
+    "wrong_factor",
+    "wrong_parameter",
+    "wrong_polynomial",
+    "zero_denominator",
+    "duplicate_json",
+    "optimized_mode"
+  ]
+}
+python3 -S research/verify_radical_template_mechanism.py
+{
+  "status": "PASS_FINITE_MECHANISMS_ONLY",
+  "support_rounding": {
+    "relation_support_pairs": 25234,
+    "zero_product_cases": 5379,
+    "label_sizes": [
+      1,
+      2,
+      3
+    ]
+  },
+  "reflection_polarization": {
+    "exact_identities": 3645,
+    "nonreflection_counterexample_checked": true
+  },
+  "subfield_kernel": {
+    "sample_points": 9,
+    "additive_cosets": 4,
+    "gram_rank": 4,
+    "rotation_pair_comparisons": 891,
+    "exact_unit_norm": true
+  },
+  "general_transfer_formalized": false,
+  "full15_decided": false,
+  "scope": "Finite support rounding, real polarization and exact subgroup-kernel examples. Infinite claims use the accompanying written proofs."
+}

@@ -1,0 +1,323 @@
+python3 -S research/verify_binary_povm_threshold.py --self-test
+{
+  "status": "PASS_EXACT_FINITE_EVIDENCE",
+  "certificate": {
+    "hoffman_singleton": {
+      "edges": 175,
+      "vertices": 50,
+      "degree": 7,
+      "triangles": 0,
+      "integer_sos_entries": 2500,
+      "gram_square_entries": 2500,
+      "vector_chromatic_number": "10/3",
+      "normalized_binary_optimum": "1/4",
+      "stability_constant": 700,
+      "plane_unit_distance_realization_claimed": false
+    },
+    "c5": {
+      "vertices": 5,
+      "matrix_products_checked": 20,
+      "qubit_max_squared_error": "821/10240",
+      "qubit_uniform_squared_error": "1/8",
+      "diagonal4_max_squared_error": "611/3200",
+      "diagonal4_uniform_squared_error": "1/4",
+      "optimality_claimed": false
+    }
+  },
+  "noncommutative_identity": {
+    "gaussian_hermitian_pairs": 40,
+    "noncommuting_pairs": 30,
+    "scalar_effect_pairs": 25,
+    "row_bound": "1/4",
+    "dimensions": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "clifford": {
+    "dimensions": [
+      2,
+      4,
+      8
+    ],
+    "anticommutators_checked": 56
+  },
+  "boundary_checks": {
+    "three_outcome_path_parameters": 5,
+    "rational_kappa_calibrations": 11
+  },
+  "general_theorem_lean_formalized": false,
+  "full15_decided": false,
+  "new_hn_bound": false,
+  "scope": "Exact stored graph and rational POVM witnesses; finite formula calibration. General graph/dimension classification and the conic alternative use the written proof.",
+  "mutations_rejected": 10
+}
+python3 -S research/check_integration.py
+{
+  "status": "PASS",
+  "python_syntax_files": 359,
+  "json_certificate_files": 276,
+  "local_file_targets": 941,
+  "ledger_ids": {
+    "T": 169,
+    "E": 124,
+    "C": 32,
+    "Q": 11
+  },
+  "source_files": 363,
+  "source_manifest_sha256": "6ca0695199c18df7de48074a3a378609a44159fd1e89f8ec05e8293a7d982583",
+  "scope": "Integration syntax, parseability, exact ID coverage and local file targets only. Not exhaustive anchor checking, new theorem validation, or remote publication."
+}
+python3 -S research/audit_full_law_preparation.py --cache certificates/Y_full_geometry.json.gz
+{
+  "status": "PASS",
+  "kind": "INPUT_PREPARATION_ONLY",
+  "independent_inputs": {
+    "semantic_sha256": "90674956a11ac0b6627fb12c6bc108f1c4ddf2ca037c39a9271cf6ba896c0957",
+    "seed_certificate_sha256": "e4ae7e9355783ee7606711ace881faba0353cbd01bef30c36b338dc3d3a844f9",
+    "geometry": {
+      "vertices": 10077,
+      "actual_pairs": 50767926,
+      "induced_edges": 49858,
+      "point_sha256": "6ca784d1ebe413a02dc35360fa9251d6497e221c39f9a0f9ef6aa6abc7d603a1",
+      "edge_sha256": "ba6a10d1bbe68510d334a6bbffda73186ce4ec862c543f5aa8b374ebdd46fee6",
+      "overlap": 91,
+      "new_cross_edges": 170
+    },
+    "denominator": 480,
+    "proper_seed_edge_checks": 249290,
+    "motions": [
+      {
+        "motion": "tau",
+        "size": 5084,
+        "mapping_sha256": "41e8b4da9a8abb235838a93e8d1ea14206cb0f88887a754c19363234d7e8f8c9",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "nu",
+        "size": 556,
+        "mapping_sha256": "05e91bb00695ab29af7bc240726171dcee38a31f8acbe855b877817d65d21850",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "eta",
+        "size": 5289,
+        "mapping_sha256": "36167c82bd8d25a31ce47f0feea41fc80feda11cb84085f1243b94c758a82c46",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "omega",
+        "size": 4671,
+        "mapping_sha256": "108cba6231df0b85ebad6a9f22591fd6372f0f677bccc9a6dffa6c471486920d",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "bar",
+        "size": 1895,
+        "mapping_sha256": "fd24ff5d17f06ae7da4863520e08e0df1e7811b9238650c3dddaec2b44bd704e",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "bridge",
+        "size": 513,
+        "mapping_sha256": "bf156d302ebbde6a95ef588adaeed519ba8ef4edb482ff950f8000fa1b8b2fc8",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "translation_one",
+        "size": 333,
+        "mapping_sha256": "ec88b2409b92848d61df95b535a2ed29960d6d2682d4493e7c15fea0ca03a412",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "translation_z",
+        "size": 200,
+        "mapping_sha256": "0ba894a4a6829a698d9438e347c6b57e19c0655f10ff43e98376c27304728a2e",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "one_plus_eta_1",
+        "size": 573,
+        "mapping_sha256": "4c1479878dae34379dfab5e5b0de51d2f537572f70f6d84ac5bed574eefa9066",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "one_plus_eta_2",
+        "size": 513,
+        "mapping_sha256": "c7af21735d5c11330961d3aec0524bcbedc66833682647d647fec0acb212b08f",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "one_plus_eta_3",
+        "size": 513,
+        "mapping_sha256": "9658d878708984780ff2e3bab484f0247ff201758c7ae395f15f5d6913f91fbc",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "one_plus_eta_4",
+        "size": 512,
+        "mapping_sha256": "f79298e5076f8079345671791ff82b4ad883c6f5f0f43e1bcabee1e8cde0e998",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "bridge_shift",
+        "size": 511,
+        "mapping_sha256": "d72172dc68cc971d46bf905ddfd4be82f6eac0a77f908d2c6ce23b778fe004d6",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "minus_bar",
+        "size": 1866,
+        "mapping_sha256": "b706ea770abe09c3082c4fb47b020ee1bf749b037c8d01cce702f5142bfe03bd",
+        "seed_full_partition_law_equal": true
+      },
+      {
+        "motion": "dyadic_u",
+        "size": 29,
+        "mapping_sha256": "2a6684e9346370cc37ee5bbdae8ea82e292e13b05ff7812c63f61c9b4391ddbf",
+        "seed_full_partition_law_equal": false
+      }
+    ],
+    "seed_u_same_color_counts": [
+      1,
+      5
+    ],
+    "seed_support": 5,
+    "scope": "Input geometry and E083 seed audit only; no pricing query, no new law, and no all-word negative result."
+  },
+  "external_cache": {
+    "path": "certificates/Y_full_geometry.json.gz",
+    "sha256": "7cbf9c71e1cd1aca64a1622ef9d6550cacbf40972547e89495993f58e4f6a436"
+  },
+  "rejection_tests": [],
+  "full_law_search_executed": false
+}
+python3 -S research/verify_q_joint_boundary_gap.py --self-test
+self_tests_passed 11
+{"boundary": {"bound_rhs": 2, "coefficient_sums": {"P": -2267, "Q": 500, "R": -501}, "maximum_integer_score": 2, "nodes": 11909676, "proper_saturated_partitions": 5648160}, "certificate_sha256": "5cdb3ad41b7e635847845f9d3752e6a51332949f9d3da1a2bc62de8eaf8ba2b7", "color_class": {"independent_sets": 8232, "minima_by_H_occupancy": {"0": -3, "1": -1, "2": 1, "3": 3}, "subsets_in_second_algorithm": 2097152, "tight_sets": 564}, "fractional_cover": {"atoms": 99, "denominator": 6110370, "individual_pair_moments": 89, "individual_vertex_covers": 22, "total_mass": 5}, "schema": "q-joint-boundary-validation-v1", "scope": "T164 color-class proof and exact fractional-cover consequence; T165 support-independent bound on p=1/27 within the actual 22-point P/Q/R model; C030 fractional independent-set cover separated from proper five-block laws. No full15 solution or global HN bound; the q upper bound is not claimed optimal.", "status": "PASS", "transport_components": {"P": 1860, "Q": 780, "R": 1472}}
+python3 -S research/verify_two_partition_w22_audit.py
+{"audit": {"facet_size_unequal_cases": 6830, "global_minimum": {"A": [229, 305], "B": [4641], "clique": [229, 305, 4641], "lhs_over_270": 270, "rhs_over_270": 270, "slack_over_270": 0}, "known_support_clique_counts": {"2": 120, "3": 277, "4": 323, "5": 199, "6": 61, "7": 7}, "strata": {"2:1-1": {"count": 120, "minimum_slack_over_270": 81}, "3:1-2": {"count": 831, "minimum_slack_over_270": 0}, "4:1-3": {"count": 1292, "minimum_slack_over_270": 91}, "4:2-2": {"count": 969, "minimum_slack_over_270": 211}, "5:1-4": {"count": 995, "minimum_slack_over_270": 130}, "5:2-3": {"count": 1990, "minimum_slack_over_270": 211}, "6:1-5": {"count": 366, "minimum_slack_over_270": 180}, "6:2-4": {"count": 915, "minimum_slack_over_270": 230}, "6:3-3": {"count": 610, "minimum_slack_over_270": 330}, "7:1-6": {"count": 49, "minimum_slack_over_270": 470}, "7:2-5": {"count": 147, "minimum_slack_over_270": 400}, "7:3-4": {"count": 245, "minimum_slack_over_270": 330}}, "tight_facet_cases": 1, "tight_inequalities": 1, "tight_rows": [{"A": [229, 305], "B": [4641], "clique": [229, 305, 4641], "lhs_over_270": 270, "rhs_over_270": 270}], "two_partition_inequalities": 8529}, "scope": "Exact exhaustive audit of every 2-partition inequality whose support A union B is a clique of the 120 already-certified W22 P/Q/R/E pairs. C030 violates none. Among 8,529 inequalities, 6,830 have unequal side sizes (the classical facet condition), and the unique tight inequality is the actual PRR triangle {229,305,4641} split 2+1. This does not cover inequalities using unclassified W22 pairs, genuinely multi-window facets, full Y, full15 feasibility, or the Hadwiger-Nelson chromatic number.", "status": "PASS"}
+python3 -S research/verify_q_chorded_w22_audit.py
+{"cases": [{"best_cycle": [31, 33, 227, 231, 877], "best_numerator_over_270": 280, "cycle_pair_types": ["P", "E", "R", "P", "R"], "k": 5, "q": 2, "q_chord_pair_types": ["P", "P", "E", "E", "E"], "rhs_numerator_over_270": 540, "search_nodes": 19890, "slack_numerator_over_270": 260, "supported_cycles": 2388}, {"best_cycle": [31, 33, 875, 227, 231, 229, 877], "best_numerator_over_270": 430, "cycle_pair_types": ["P", "R", "P", "R", "P", "P", "R"], "k": 7, "q": 2, "q_chord_pair_types": ["E", "E", "E", "P", "P", "P", "E"], "rhs_numerator_over_270": 810, "search_nodes": 449338, "slack_numerator_over_270": 380, "supported_cycles": 26181}, {"best_cycle": [31, 33, 875, 227, 3483, 3477, 229, 873, 35], "best_numerator_over_270": 609, "cycle_pair_types": ["P", "R", "P", "R", "P", "R", "E", "Q", "R"], "k": 9, "q": 2, "q_chord_pair_types": ["E", "E", "P", "E", "E", "P", "E", "R", "P"], "rhs_numerator_over_270": 1080, "search_nodes": 6969785, "slack_numerator_over_270": 471, "supported_cycles": 295740}, {"best_cycle": [31, 227, 5535, 231, 33, 877, 889], "best_numerator_over_270": 658, "cycle_pair_types": ["P", "Q", "R", "P", "E", "R", "Q"], "k": 7, "q": 3, "q_chord_pair_types": ["E", "E", "E", "E", "P", "E", "P"], "rhs_numerator_over_270": 1080, "search_nodes": 481774, "slack_numerator_over_270": 422, "supported_cycles": 26181}, {"best_cycle": [31, 877, 3483, 235, 231, 33, 7479, 887, 889], "best_numerator_over_270": 987, "cycle_pair_types": ["R", "P", "Q", "R", "P", "Q", "R", "P", "Q"], "k": 9, "q": 4, "q_chord_pair_types": ["E", "E", "P", "E", "E", "P", "E", "E", "P"], "rhs_numerator_over_270": 1620, "search_nodes": 9788612, "slack_numerator_over_270": 633, "supported_cycles": 295740}, {"best_cycle": [31, 227, 5535, 231, 33, 7479, 4641, 229, 877, 889], "best_numerator_over_270": 997, "cycle_pair_types": ["P", "Q", "R", "P", "Q", "P", "R", "P", "R", "Q"], "k": 10, "q": 3, "q_chord_pair_types": ["E", "E", "E", "E", "P", "E", "E", "P", "E", "P"], "rhs_numerator_over_270": 1620, "search_nodes": 19485716, "slack_numerator_over_270": 623, "supported_cycles": 243888}], "certified_pair_counts": {"E": 31, "P": 47, "Q": 11, "R": 31}, "known_support_cliques": {"maximum_clique_size": 7, "size7_cliques": [[31, 33, 227, 229, 231, 875, 877], [33, 35, 229, 231, 233, 877, 887], [35, 37, 231, 233, 235, 887, 889], [227, 229, 873, 875, 877, 3477, 3483], [229, 231, 875, 877, 887, 3483, 4641], [231, 233, 877, 887, 889, 4641, 5535], [877, 887, 3483, 4641, 5535, 7479, 7489]]}, "scope": "Exact exhaustive audit of the smallest facet-inducing q-chorded k-cycle inequalities with support size at most 10 whose every cycle/chord pair lies in the 120 already-certified W22 P/Q/R/E pairs. No unclassified pair is inferred. None separates the C030 fractional cover from proper five-block laws. This does not audit support size >=11, generalized set-valued q-chorded families, full Y, full15 feasibility, or the Hadwiger-Nelson chromatic number.", "status": "PASS", "targets": [[5, 2], [7, 2], [9, 2], [7, 3], [9, 4], [10, 3]]}
+python3 -c 'import sys; sys.exit("Python >=3.10 required; activate .venv before make check" if sys.version_info < (3, 10) else 0)'
+python3 -S research/verify_scc_calibration.py
+{'status': 'PASS', 'vertices_1_to_3': [(1, 2, 1, 1), (2, 16, 32, 24), (3, 512, 2304, 1728)], 'total_graphs': 530, 'total_cyclic_arcs': 1753, 'scope': 'graph lemma calibration only; no full-Y relation tested'}
+python3 -S research/verify_free_group_star_calibration.py
+{
+  "status": "PASS",
+  "assignments_examined": 1024,
+  "allowed_patterns": 12,
+  "constant_potential": 2,
+  "scope": "Finite labeled orientation CSP calibration; no unit-distance or HN claim"
+}
+python3 -S research/verify_four_port_scc.py
+{
+  "status": "PASS",
+  "certificate": "/home/runner/work/_temp/full-check/certificates/four_port_witnessed_scc.json",
+  "words": 69,
+  "whole_edge_checks": 3440202,
+  "candidates": [
+    {
+      "motion": "one_plus_eta_1",
+      "T": [
+        3604,
+        3817,
+        4114,
+        4641
+      ],
+      "image": [
+        8921,
+        9029,
+        9056,
+        9070
+      ],
+      "legal": 10,
+      "arcs": 50,
+      "sccs": 1,
+      "other_domains": [
+        0,
+        1,
+        3,
+        4,
+        7,
+        10,
+        12
+      ]
+    },
+    {
+      "motion": "translation_z",
+      "T": [
+        3484,
+        6700,
+        7219,
+        9104
+      ],
+      "image": [
+        876,
+        1770,
+        3049,
+        7536
+      ],
+      "legal": 15,
+      "arcs": 54,
+      "sccs": 1,
+      "other_domains": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "motion": "omega",
+      "T": [
+        3748,
+        3797,
+        4513,
+        5158
+      ],
+      "image": [
+        5441,
+        4356,
+        4524,
+        4386
+      ],
+      "legal": 15,
+      "arcs": 60,
+      "sccs": 1,
+      "other_domains": [
+        0,
+        1,
+        4,
+        12
+      ]
+    },
+    {
+      "motion": "dyadic_u",
+      "T": [
+        233,
+        239,
+        9425,
+        9951
+      ],
+      "image": [
+        5557,
+        238,
+        8157,
+        9957
+      ],
+      "legal": 10,
+      "arcs": 50,
+      "sccs": 1,
+      "other_domains": [
+        0,
+        3,
+        4
+      ]
+    }
+  ]
+}
+python3 -S research/verify_g14_pair_orbit_law.py
+make: *** [Makefile:101: check-g14-pair-orbit] Terminated
