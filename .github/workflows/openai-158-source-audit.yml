@@ -11,27 +11,56 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
-      - name: Fetch pinned public sources without executing upstream code
+      - name: Retrieve bounded pinned source without executing upstream code
         env:
           UPSTREAM_SHA: adc7f1241b42e322a6451854ab7e4b4c146bf78a
         run: |
-          set -euo pipefail
-          mkdir upstream && cd upstream
-          git init .
-          git remote add origin https://github.com/openai/math.git
-          git fetch --depth=1 --filter=blob:none origin "$UPSTREAM_SHA"
-          test "$(git rev-parse FETCH_HEAD)" = "$UPSTREAM_SHA"
-          git ls-tree -r --long FETCH_HEAD > "$RUNNER_TEMP/upstream-tree.txt"
-          git checkout FETCH_HEAD -- README.md LICENSE CONTENTS.md overview.tex lean/README.md lean/formalization.yaml lean/lean-toolchain lean/lakefile.toml lean/ComparatorChallenges/README.md lean/ComparatorChallenges/EuclideanFiveColor.lean lean/ComparatorChallenges/PlaneColoring.lean lean/docs/158.md lean/OAI/Geometry/PlaneColoring preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026
           python3 - <<'PY'
           from pathlib import Path
-          import hashlib,json,os,zipfile
-          root=Path.cwd(); paths=sorted(p for p in root.rglob('*') if p.is_file() and '.git' not in p.parts)
-          manifest={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
-          report=dict(schema='upstream-source-only-v1',upstream='openai/math',commit=os.environ['UPSTREAM_SHA'],files=manifest,scope='Source retrieval and byte binding only. No Lean build or mathematical verification is claimed.')
+          from urllib.request import urlopen, Request
+          from urllib.error import HTTPError
+          from concurrent.futures import ThreadPoolExecutor
+          import hashlib,json,os,re,zipfile,time
+          root=Path(os.environ['RUNNER_TEMP'])/'upstream';root.mkdir()
+          sha=os.environ['UPSTREAM_SHA'];base='https://raw.githubusercontent.com/openai/math/'+sha+'/'
+          paper='preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/'
+          paths=['README.md','LICENSE','CONTENTS.md','overview.tex','lean/README.md','lean/formalization.yaml','lean/lean-toolchain','lean/ComparatorChallenges/README.md','lean/ComparatorChallenges/EuclideanFiveColor.lean','lean/ComparatorChallenges/EuclideanFiveColor.json','lean/ComparatorChallenges/PlaneColoring.lean','lean/docs/158.md',paper+'README.md',paper+'paper.pdf',paper+'build/main.tex',paper+'build/references.bib']
+          paths += [paper+'build/sections/'+s+'.tex' for s in ['introduction','spectral','rigidity','transfer','palettes','transitions','interfaces','angular']]
+          paths += ['lean/OAI/Geometry/PlaneColoring/Five.lean']
+          def fetch(p):
+              for attempt in range(3):
+                  try:
+                      with urlopen(Request(base+p,headers={'User-Agent':'pinned-math-source-audit'}),timeout=40) as r:raw=r.read(8000001)
+                      if len(raw)>8000000:raise RuntimeError('oversized source '+p)
+                      target=root/p;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
+                      return p
+                  except Exception:
+                      if attempt==2:raise
+                      time.sleep(2)
+          with ThreadPoolExecutor(max_workers=8) as pool:list(pool.map(fetch,paths))
+          seen=set(paths);pending=['lean/OAI/Geometry/PlaneColoring/Five.lean'];external=set()
+          while pending:
+              needed=set()
+              for p in pending:
+                  text=(root/p).read_text()
+                  for line in text.splitlines():
+                      m=re.match(r'\s*(?:public\s+)?import\s+(.+)',line)
+                      if not m:continue
+                      for module in m[1].split():
+                          if not re.fullmatch(r'[A-Za-z0-9_.]+',module):break
+                          if module.startswith('OAI.'):
+                              q='lean/'+module.replace('.','/')+'.lean'
+                              if q not in seen:needed.add(q)
+                          else:external.add(module)
+              if len(seen|needed)>1200:raise RuntimeError('import source bound exceeded')
+              pending=sorted(needed);seen.update(needed)
+              with ThreadPoolExecutor(max_workers=8) as pool:list(pool.map(fetch,pending))
+          manifest={p:dict(sha256=hashlib.sha256((root/p).read_bytes()).hexdigest(),git_blob_sha1=hashlib.sha1(b'blob '+str((root/p).stat().st_size).encode()+b'\0'+(root/p).read_bytes()).hexdigest(),bytes=(root/p).stat().st_size) for p in sorted(seen)}
+          report=dict(schema='upstream-source-only-v2',upstream='openai/math',commit=sha,files=manifest,external_imports=sorted(external),scope='Pinned file retrieval and syntactic OAI import closure only. No Lean build, dependency axiom computation, or mathematical verification is claimed.')
           (Path(os.environ['RUNNER_TEMP'])/'upstream-source-receipt.json').write_text(json.dumps(report,indent=2)+'\n')
           with zipfile.ZipFile(Path(os.environ['RUNNER_TEMP'])/'family158-source.zip','w',zipfile.ZIP_DEFLATED) as z:
-              for p in paths:z.write(p,str(p.relative_to(root)))
+              for p in sorted(seen):z.write(root/p,p)
+          print(json.dumps(dict(status='SOURCE_RETRIEVAL_COMPLETE',files=len(seen),external_imports=sorted(external))),flush=True)
           PY
       - name: Preserve source and manifest
         if: always()
@@ -41,6 +70,5 @@ jobs:
           path: |
             ${{ runner.temp }}/family158-source.zip
             ${{ runner.temp }}/upstream-source-receipt.json
-            ${{ runner.temp }}/upstream-tree.txt
           retention-days: 30
           if-no-files-found: error
