@@ -1,0 +1,46 @@
+name: Final source import
+on:
+  push:
+    branches: [maintenance/final-convergence-20261008]
+    paths: [.github/workflows/final-source-import.yml]
+permissions:
+  contents: write
+jobs:
+  import-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Import only hash-matching user-owned research history
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import os,json,hashlib,lzma,base64,subprocess
+          from pathlib import Path
+          from urllib.request import urlopen
+          from urllib.error import HTTPError
+          u='https://sdmntprjapaneast.oaiusercontent.com/files/00000000-96c4-8209-b971-121e581ebc73/raw?se=2026-10-07T15%3A08%3A57Z&sp=r&sv=2026-02-06&sr=b&scid=3087932c-e38e-53ef-bca7-59f12f0df927&skoid=b7fc319f-b93c-4fac-ba5f-14fdc3f9209f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-07T08%3A04%3A20Z&ske=2026-10-08T08%3A04%3A20Z&sks=b&skv=2026-02-06&sig=xuIT0fuM18On9EOSVgD5wCkUMdvsXOLBRhjKiAS86lI%3D'
+          try:
+              with urlopen(u,timeout=40) as r:b=r.read(6000001)
+          except HTTPError as e:
+              print('TRANSPORT_FAILURE',e.code,e.read(2000).decode(errors='replace'),flush=True)
+              raise SystemExit(1)
+          if hashlib.sha256(b).hexdigest()!='fe8a918dd2e7407b351a6703be9ec1449ce77c5f6c9021d679986e08aa0f570b':raise RuntimeError('pack hash')
+          b=lzma.decompress(b,memlimit=256*1024*1024)
+          if hashlib.sha256(b).hexdigest()!='c836e9cf10195ac9e06a48b0b60dc36f8d0df7e4ccfa145f2dea2825b67b28be':raise RuntimeError('decoded hash')
+          def run(*a,**kw):return subprocess.run(list(a),check=True,**kw)
+          def git(*a):return subprocess.check_output(['git',*a],text=True).strip()
+          run('git','init','.');run('git','remote','add','origin','https://github.com/rsgcsg/math-research.git')
+          run('git','fetch','--no-tags','origin','+refs/heads/*:refs/remotes/origin/*','+refs/tags/*:refs/tags/*')
+          run('git','index-pack','--fix-thin','--stdin',input=b)
+          old='7b331292bfce8823677a3db4e856bf3747f6c383';source=os.environ['SOURCE_SHA'];branch='maintenance/final-convergence-20261008'
+          if git('rev-parse',old+'^{tree}')!='ddc46e3ecb77ca894d81ab607d111dc8969e4838':raise RuntimeError('tree')
+          run('git','checkout','--detach',old);run('python3','-S','research/check_integration.py');run('git','diff','--exit-code')
+          run('git','config','user.name','github-actions[bot]');run('git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com')
+          c=subprocess.check_output(['git','commit-tree',git('rev-parse',old+'^{tree}'),'-p',old,'-p',source],input='maintenance: preserve exact recovered scientific history; new verification remains separate\n',text=True).strip()
+          if git('ls-remote','origin','refs/heads/'+branch).split()[0]!=source:raise RuntimeError('branch moved')
+          auth=base64.b64encode(('x-access-token:'+os.environ['GH_TOKEN']).encode()).decode();env=os.environ.copy();env.update(GIT_CONFIG_COUNT='1',GIT_CONFIG_KEY_0='http.https://github.com/.extraheader',GIT_CONFIG_VALUE_0='AUTHORIZATION: basic '+auth)
+          run('git','push','--porcelain','origin',c+':refs/heads/'+branch,env=env)
+          print('IMPORTED',c,flush=True)
+          PY
