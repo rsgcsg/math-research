@@ -17,7 +17,7 @@ T162的12与T167的13使用不同边模型；T168只有九Q均值，不冒称完
 
 | ID | 内容 | 状态 | 证据/范围 |
 |---|---|---|---|
-| T170 | C030 的11-Q均匀向量 (7/10)^11 位于 T165 边界 proper 五块划分的 Q-only 投影凸包 | 12原子精确有理正律 | [证明](proofs/q_boundary_projection_law.md)；因此任何Q-only线性严格分离不可能；P/R未平衡，不是C030/full15正律 |
+| T175 | P=0 的 T165 边界面上，每个指定Q的非负多R-complement分数覆盖最小总质量恰为2 | 22份实际W22双见证＋PRR等式给出精确上下界 | [证明](proofs/pzero_multir_cover_ceiling.md)；C030成本至少26/27>7/10，故该覆盖族不能严格分离；不含P项/负系数/多Q/off-face/full15 |\n| T170 | C030 的11-Q均匀向量 (7/10)^11 位于 T165 边界 proper 五块划分的 Q-only 投影凸包 | 12原子精确有理正律 | [证明](proofs/q_boundary_projection_law.md)；因此任何Q-only线性严格分离不可能；P/R未平衡，不是C030/full15正律 |
 | T171 | C030 的 P/Q/R 三类总量位于 T165 边界划分的三维总量投影凸包 | 4原子精确有理正律 | [证明](proofs/pqr_total_boundary_projection_law.md)；排除仅依赖三类总和的线性分离；逐事件未平衡 |
 | T174 | T165边界上每个11×31个Q/R身份对都有P=0、Q=R=1的实际proper五块见证 | 独立有限构造与逐份重验 | [证明](proofs/pzero_qr_witness_ceiling.md)；封死任意非负系数的P-only cover和单R Horn族；不覆盖多R-complement/负系数/off-face/full15 |
 | E121 | W22 当前认证支持上全部 k<=10 的 facet-inducing q-chorded cycle 均不能切掉 C030 | 精确穷尽六类周期；严格正余量 | [证明](proofs/q_chorded_w22_audit.md)；120个已认证P/Q/R/E点对，未知点对不推断；不覆盖k>=11/fullY/full15 |
