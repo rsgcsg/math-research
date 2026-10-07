@@ -1,0 +1,107 @@
+name: Verify and publish reviewed convergence
+on:
+  push:
+    branches: [maintenance/converged-20261007]
+    paths: [.github/workflows/convergence-verified-publish.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Retrieve the exact reviewed public-research transfer
+        run: |
+          python3 - <<'PY'
+          from urllib.request import urlopen
+          from pathlib import Path
+          import hashlib,lzma,os
+          url='https://sdmntprnznorth.oaiusercontent.com/files/00000000-97f0-820b-bf63-f7e631b8580d/raw?se=2026-10-07T11%3A38%3A03Z&sp=r&sv=2026-02-06&sr=b&scid=854d9874-f26b-5d40-a914-a27ba584a4de&skoid=b7fc319f-b93c-4fac-ba5f-14fdc3f9209f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-07T07%3A19%3A21Z&ske=2026-10-08T07%3A19%3A21Z&sks=b&skv=2026-02-06&sig=XU0vsCjdH8VGXt3ZBGHipMirMfAxruCCeNVmCsO/C7w%3D'
+          with urlopen(url,timeout=40) as r:b=r.read(1000000)
+          assert len(b)==65496 and hashlib.sha256(b).hexdigest()=='6cbf35c682eb03d6f0eef117d3ff603fb86a6c206a879e24f742dc455f1f1244'
+          raw=lzma.decompress(b,memlimit=128*1024*1024)
+          assert len(raw)==222321 and hashlib.sha256(raw).hexdigest()=='1cbe421bba869dc6d9c710cd81afd380ef29bd6d7dc0be9c57698ae16624e95e'
+          (Path(os.environ['RUNNER_TEMP'])/'reviewed.pack').write_bytes(raw)
+          PY
+      - name: Fetch source histories and restore the pinned local commit
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -eu
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin '+refs/heads/*:refs/remotes/origin/*' '+refs/tags/*:refs/tags/*'
+          git cat-file -e "$SOURCE_SHA^{commit}"
+          git index-pack --fix-thin --stdin < "$RUNNER_TEMP/reviewed.pack"
+          git checkout --detach 71613b7f94ec35e22b45436799d1fe508773cc82
+          test "$(git rev-parse HEAD^{tree})" = 72041ab3e1315c008b31de664244c4058816b5a4
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Independently replay every impacted check on exact frozen source
+        env:
+          PYTHONUNBUFFERED: '1'
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,hashlib,os,subprocess,time,base64
+          root=Path.cwd();tmp=Path(os.environ['RUNNER_TEMP']);local='71613b7f94ec35e22b45436799d1fe508773cc82';source=os.environ['GITHUB_SHA'];branch='maintenance/converged-20261007'
+          def require(ok,msg):
+              if not ok:raise RuntimeError(msg)
+          def sha(b):return hashlib.sha256(b).hexdigest()
+          def git(*args):return subprocess.check_output(['git',*args],text=True).strip()
+          def dump(p,x):p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
+          r=json.loads(Path('certificates/convergence_20261007_validation.json').read_text());frozen=r['source_manifest']
+          require(r['status']=='PASS_SCOPED_CHECKS','local receipt state')
+          require(all(sha(Path(p).read_bytes())==h for p,h in frozen.items()),'source mismatch')
+          require(subprocess.check_output(['make','-n','check'],text=True).splitlines()==r['make_plan'],'plan mismatch')
+          origins=json.loads(Path('docs/convergence_20261007_sources.json').read_text())
+          for ref,s in origins['original_refs'].items():
+              if ref.startswith('refs/heads/'):subprocess.run(['git','merge-base','--is-ancestor',s,local],check=True)
+          out=Path('certificates/convergence_20261007_remote');out.mkdir();rows=[]
+          report=dict(schema='hn-convergence-remote-v1',status='RUNNING',run_id=os.environ['GITHUB_RUN_ID'],workflow_parent=source,local_commit=local,reviewed_tree='72041ab3e1315c008b31de664244c4058816b5a4',commands=rows,scope='Fresh impacted checks, exact source and real-edge evidence. No full85-command PASS or full15/6-or7 verdict.')
+          for i,row in enumerate(r['commands']):
+              c=row['command'];print('START',i,c,flush=True);t=time.time()
+              p=subprocess.run(c,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=180)
+              log=out/f'{i:02d}.log';log.write_bytes(p.stdout)
+              rows.append(dict(command=c,returncode=p.returncode,expected_returncode=row['expected_returncode'],seconds=round(time.time()-t,3),log=str(log),sha256=sha(p.stdout)))
+              dump(out/'report.json',report);require(p.returncode==row['expected_returncode'],'impacted check failed')
+          require(all(sha(Path(p).read_bytes())==h for p,h in frozen.items()),'checked source changed')
+          require(not git('diff','--name-only'),'checker altered tracked evidence')
+          # A bounded whole-entry attempt in a separate worktree; never promote a timeout.
+          full=tmp/'full-attempt';subprocess.run(['git','worktree','add','--detach',str(full),local],check=True)
+          t=time.time();p=subprocess.run(['timeout','120s','make','check'],cwd=full,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+          log=out/'bounded-full-check.log';log.write_bytes(p.stdout)
+          report['bounded_full_check']=dict(command=['timeout','120s','make','check'],returncode=p.returncode,seconds=round(time.time()-t,3),sha256=sha(p.stdout),scope='Separate frozen worktree; exit124 means incomplete, not a mathematical failure and not full coverage.')
+          report['full_make_check_passed']=p.returncode==0
+          require(p.returncode in (0,124),'full entry had an actual non-timeout error')
+          report['status']='PASS_SCOPED_CHECKS';report['source_unchanged']=True;dump(out/'report.json',report)
+          origins['state']='VERIFIED_ON_CONVERGENCE_BRANCH';origins['remote_replay_run']=os.environ['GITHUB_RUN_ID'];dump(Path('docs/convergence_20261007_sources.json'),origins)
+          subprocess.run(['git','diff','--check'],check=True)
+          subprocess.run(['git','add','-f','certificates/convergence_20261007_remote','docs/convergence_20261007_sources.json'],check=True)
+          tree=git('write-tree')
+          msg='verification: seal real-edge convergence replay and preserve bounded full-check outcome\n'
+          new=subprocess.check_output(['git','commit-tree',tree,'-p',local,'-p',source],input=msg,text=True).strip()
+          require(git('ls-remote','origin','refs/heads/'+branch).split()[0]==source,'branch changed during verification')
+          auth=base64.b64encode(('x-access-token:'+os.environ['GH_TOKEN']).encode()).decode()
+          env=os.environ.copy();env.update(GIT_CONFIG_COUNT='1',GIT_CONFIG_KEY_0='http.https://github.com/.extraheader',GIT_CONFIG_VALUE_0='AUTHORIZATION: basic '+auth)
+          subprocess.run(['git','push','--porcelain','origin',new+':refs/heads/'+branch],env=env,check=True)
+          final=tmp/'published';final.mkdir();subprocess.run(['git','branch','converged-export',new],check=True)
+          subprocess.run(['git','bundle','create',str(final/'source.bundle'),'converged-export','--tags'],check=True)
+          subprocess.run(['git','archive','--format=zip',new,'-o',str(final/'source.zip')],check=True)
+          dump(final/'publication.json',dict(status='PUBLISHED_TO_BRANCH',commit=new,tree=tree,local_commit=local,report=report))
+          print('PUBLISHED',new,flush=True)
+          PY
+      - name: Preserve actual evidence on success or failure
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: converged-reviewed-results
+          path: |
+            ${{ runner.temp }}/published
+            certificates/convergence_20261007_remote
+          retention-days: 30
+          if-no-files-found: error
