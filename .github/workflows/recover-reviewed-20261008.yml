@@ -1,0 +1,64 @@
+name: Recover reviewed scientific history
+on:
+  push:
+    branches: [maintenance/final-convergence-20261008]
+    paths: [.github/workflows/recover-reviewed-20261008.yml]
+permissions:
+  contents: write
+jobs:
+  recover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Download byte-bound public research data only
+        run: |
+          python3 - <<'PY'
+          from urllib.request import urlopen
+          from pathlib import Path
+          import hashlib,lzma,os
+          url='https://sdmntprseasia.oaiusercontent.com/files/00000000-3468-8207-b430-ddbb6fd79000/raw?se=2026-10-07T14%3A49%3A18Z&sp=r&sv=2026-02-06&sr=b&scid=a7655d85-6ac9-556d-a8de-b3330f02590d&skoid=b7fc319f-b93c-4fac-ba5f-14fdc3f9209f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-07T06%3A39%3A37Z&ske=2026-10-08T06%3A39%3A37Z&sks=b&skv=2026-02-06&sig=cQfG2JvEKyDNfxBI8Jz6AzPlUuetP7L%2B5fPHUPsUaNg%3D'
+          with urlopen(url,timeout=60) as r:b=r.read(6000001)
+          if len(b)!=5550912 or hashlib.sha256(b).hexdigest()!='fe8a918dd2e7407b351a6703be9ec1449ce77c5f6c9021d679986e08aa0f570b':raise RuntimeError('packed input hash')
+          raw=lzma.decompress(b,memlimit=256*1024*1024)
+          if len(raw)!=5885623 or hashlib.sha256(raw).hexdigest()!='c836e9cf10195ac9e06a48b0b60dc36f8d0df7e4ccfa145f2dea2825b67b28be':raise RuntimeError('git pack hash')
+          (Path(os.environ['RUNNER_TEMP'])/'reviewed.pack').write_bytes(raw)
+          PY
+      - name: Restore original objects and publish an ancestry-preserving candidate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -eu
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin '+refs/heads/*:refs/remotes/origin/*' '+refs/tags/*:refs/tags/*'
+          git index-pack --fix-thin --stdin < "$RUNNER_TEMP/reviewed.pack"
+          git checkout --detach 7b331292bfce8823677a3db4e856bf3747f6c383
+          test "$(git rev-parse HEAD^{tree})" = ddc46e3ecb77ca894d81ab607d111dc8969e4838
+          git fsck --full --no-dangling
+          python3 -S research/check_integration.py > "$RUNNER_TEMP/static.log"
+          git diff --exit-code
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 - <<'PY'
+          import os,subprocess,base64,json
+          def git(*a):return subprocess.check_output(['git',*a],text=True).strip()
+          b='maintenance/final-convergence-20261008';s=os.environ['SOURCE_SHA'];old='7b331292bfce8823677a3db4e856bf3747f6c383'
+          if git('ls-remote','origin','refs/heads/'+b).split()[0]!=s:raise RuntimeError('branch moved')
+          new=subprocess.check_output(['git','commit-tree',git('rev-parse',old+'^{tree}'),'-p',old,'-p',s],input='maintenance: preserve complete reviewed local convergence histories; full replay pending\n',text=True).strip()
+          auth=base64.b64encode(('x-access-token:'+os.environ['GH_TOKEN']).encode()).decode()
+          env=os.environ.copy();env.update(GIT_CONFIG_COUNT='1',GIT_CONFIG_KEY_0='http.https://github.com/.extraheader',GIT_CONFIG_VALUE_0='AUTHORIZATION: basic '+auth)
+          subprocess.run(['git','push','--porcelain','origin',new+':refs/heads/'+b],env=env,check=True)
+          from pathlib import Path
+          p=Path(os.environ['RUNNER_TEMP'])/'recovery.json';p.write_text(json.dumps(dict(status='RECOVERED_ON_BRANCH',commit=new,tree=git('rev-parse',old+'^{tree}'),original_local_commit=old,full_replay_passed=False),indent=2)+'\n')
+          print('RECOVERED',new)
+          PY
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: recovered-history-20261008
+          path: |
+            ${{ runner.temp }}/recovery.json
+            ${{ runner.temp }}/static.log
+          if-no-files-found: warn
+          retention-days: 30
