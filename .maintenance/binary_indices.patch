@@ -1,0 +1,96 @@
+diff --git a/Makefile b/Makefile
+index 226aa8e..bc2d1d2 100644
+--- a/Makefile
++++ b/Makefile
+@@ -4,7 +4,7 @@
+ check-python:
+ 	python3 -c 'import sys; sys.exit("Python >=3.10 required; activate .venv before make check" if sys.version_info < (3, 10) else 0)'
+ 
+-check: check-integration check-two-partition-w22-audit check-q-chorded-w22-audit check-python check-joint-theory check-g14-pair-orbit check-g14-common-law check-cubic-unit-directions check-g14-pr-bound check-pentagon-partition-gap check-pr-local-projection check-cyclic-interval-kernel check-bw-pr-odd-cycle-ceiling check-hidden-pair-elimination check-q-pr-coupling-audit check-transport-projection check-q-defect-lifting check-q-joint-boundary-gap check-generalized-partition-facets check-q-robust-capacity check-q-defect-lift check-q-defect-scope-audit check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates check-eta-support check-full15-support check-heptagon-module check-lattice-ports check-qd-family check-t028-host-orbit check-g14-port-or check-port4-exact-law check-packet check-cycle-descent check-unit-translate check-translate-kernel check-legacy-full15-support
++check: check-binary-povm check-integration check-two-partition-w22-audit check-q-chorded-w22-audit check-python check-joint-theory check-g14-pair-orbit check-g14-common-law check-cubic-unit-directions check-g14-pr-bound check-pentagon-partition-gap check-pr-local-projection check-cyclic-interval-kernel check-bw-pr-odd-cycle-ceiling check-hidden-pair-elimination check-q-pr-coupling-audit check-transport-projection check-q-defect-lifting check-q-joint-boundary-gap check-generalized-partition-facets check-q-robust-capacity check-q-defect-lift check-q-defect-scope-audit check-salem check-quartet check-orbit check-covers check-frames check-preparation check-pricing check-rotations check-rank2 check-next check-cyclic-translates check-eta-support check-full15-support check-heptagon-module check-lattice-ports check-qd-family check-t028-host-orbit check-g14-port-or check-port4-exact-law check-packet check-cycle-descent check-unit-translate check-translate-kernel check-legacy-full15-support
+ 	python3 research/verify.py
+ 
+ check-salem:
+@@ -191,3 +191,7 @@ check-compact-mixing:
+ 	python3 -S research/verify_qubit_rounding.py
+ 
+ check: check-compact-mixing
++
++.PHONY: check-binary-povm
++check-binary-povm:
++	python3 -S research/verify_binary_povm_threshold.py --self-test
+ diff --git a/README.md b/README.md
+index 9b813aa..a37d201 100644
+--- a/README.md
++++ b/README.md
+@@ -56,3 +56,9 @@ make check-q-joint-boundary-gap check-two-partition-w22-audit
+ 
+ 本轮[奇次纯根式显式二染校准](docs/proofs/odd_radical_plane_two_coloring.md)把新逃逸旋转放回已知低色数宿主，
+ 不重复计算Moorhouse的既有二色结论。全仓尝试在300秒预算处中断，专项验证范围见本轮收据。
++
++## 2026-10-08：二结果正效应的全图分类
++
++[R158-V 完整证明](docs/proofs/binary_povm_vector_threshold.md)：能否严格优于均匀赋值恰等价于χ_vec<3；可行时有理对角矩阵足够，不可行时有PSD负证书，连通图的均匀最优解唯一。50点无三角形整数证书与C5有理正例独立重放。
++
++`make check-binary-povm`只验精确有限证据，未形式化一般证明。该二标签误差不能区别含三角形单位图的高色数，不是新的HN下界或full15解。
+diff --git a/docs/CURRENT.md b/docs/CURRENT.md
+index 0298ed8..37a7793 100644
+--- a/docs/CURRENT.md
++++ b/docs/CURRENT.md
+@@ -1,5 +1,15 @@
+ # 当前研究状态：外部无五染已核验，研究转向有限见证与6/7终局
+ 
++## 2026-10-08：二結果矩阵误差的完整阈值分类（R158-V）
++
++[完整证明](proofs/binary_povm_vector_threshold.md)已将一个扩展问题闭合：有限图在某个有限维数的二结果POVM中能严格优于均匀赋值，当且仅当向量色数小于3。可行时至多2|V|维的有理对角矩阵已足够；不可行时有非负边权的半正定证书。连通图向量色数≥3时，每个维数下均匀赋值还是唯一最优解。
++
++另给出全维归一化误差的显式上下界、50点无三角形图的整数平方和及稳定性证书、C5的有理严格正例。50点图只作为抽象图使用，没有声称平面单位距离实现。三结果三角形反例说明二结果条件不能删除。
++
++本页定理不依赖Family158或根式分析，未Lean形式化、未外部同行复核，也不主张文献优先权。该目标对任何含三角形的单位图都均匀最优，无法区分普通色数3、5、6、7；这条二标签优化备线至此收束。下一次原问题攻击需回到五/六标签的联合排斥，不再只增加此模型的矩阵维数。
++
++当前提交以实际远端94df41d9为基准，自足发布，不默认合入本地7b331292等尚未发布整合结果，亦不覆盖其他活动分支。新鲜验证与全仓尝试的准确范围见[收据](../certificates/binary_povm_validation.json)；full15及原问题终局未由此决定。
++
+ 2026-10-07。OpenAI Family158在普通任意染色意义下证明平面不可五染；本轮已在固定原源码、Lean4.34.1及固定Mathlib上实际编译该目标，显式核对命题及三项标准基础公理。**普通范围现在为6≤χ(R²)≤7，这是外部结果，不是本项目原Y搜索得出的新下界。**
+ 
+ [来源与Lean证据](../references/OPENAI_158_AUDIT.md) · [本轮推广主证明](proofs/radical_plane_colorability.md) · [分析依赖与完整转移](proofs/algebraic_subfield_haar_transfer.md)。
+diff --git a/docs/RESULTS.md b/docs/RESULTS.md
+index b2f9322..e157508 100644
+--- a/docs/RESULTS.md
++++ b/docs/RESULTS.md
+@@ -17,6 +17,8 @@
+ 
+ | R158-D | 既有Moorhouse奇数次数域二色定理的纯根式显式公式、奇数层相容并与谱逃逸反向校准 | [完整实现与边界](proofs/odd_radical_plane_two_coloring.md)，不计新色数发现；n=2反例只否定该公式无条件使用。 |
+ 
++| R158-V | 二结果POVM严格改进⇔χ_vec<3⇔无非零非负边权使D_w/2+A_w≥0；有理对角正例、连通均匀取等刚性、全维误差界与HS/C5精确证书 | [完整自足证明](proofs/binary_povm_vector_threshold.md)，不依赖上游分析，未Lean形式化；不把抽象HS图当作平面单位图，不声称一般中间区间精确误差。 |
++
+ 以下为保留的统一账本和历史证据，旧状态不由外部无五染结果自动升级。
+ 
+ # 统一成果账本（2026-10-06整合）
+diff --git a/docs/ROUTES.md b/docs/ROUTES.md
+index 759f298..23a7f3c 100644
+--- a/docs/ROUTES.md
++++ b/docs/ROUTES.md
+@@ -1,3 +1,9 @@
++## 2026-10-08收敛：停止二标签矩阵误差的HN搜索
++
++[R158-V](proofs/binary_povm_vector_threshold.md)已给出完整向量色数阈值与PSD备择；严格改进甚至能用有理对角矩阵实现。含三角形图全维均匀最优，故该误差目标不能分辨普通3色与更高色数，继续增加维数不会提供HN结论。这个停止条件只针对明确的二结果、Frobenius同标签乘积误差；不覆盖五/六标签、近投影门槛、原full15或所有量子模型。
++
++一般证明和已知向量色数/HS构造的文献背景分开；不把草稿、有限数值实验或具体图上的校准扩大为任意单位图结论。
++
+ ## 奇次纯根式逃逸的反向校准
+ 
+ 谱中u_t=(1+it∛2)/(1-it∛2)虽给TV距离1，但[整个承载域仍恰二色](proofs/odd_radical_plane_two_coloring.md)。
+diff --git a/references/LITERATURE_MAP.md b/references/LITERATURE_MAP.md
+index 9cddb41..326c697 100644
+--- a/references/LITERATURE_MAP.md
++++ b/references/LITERATURE_MAP.md
+@@ -1039,3 +1039,9 @@ T143的实际11点构造、十个半空间、13个三色见证、任意权支撑
+   本库三角格公式仅作为有明确全边证书的正构造，三个斜率的失败不否定全部五染色。
+ 
+ 原5/7界仍据已核对的普通HN来源。2026年高维覆盖/分数或地图型结果不被混记为平面普通新界。
++
++## 2026-10-08：R158-V 的成熟背景与证据界限
++
++Karger–Motwani–Sudan [原作者论文](https://arxiv.org/abs/cs/9812008)引入用于近似染色的向量SDP；Godsil等[原作者论文](https://arxiv.org/abs/1610.10002)采用本项目同一χ_vec定义。Brouwer的[Hoffman–Singleton资料](https://aeb.win.tue.nl/drg/graphs/Hoffman-Singleton.html)给出50点构造；本项目独立逐项重算其整数矩阵等式，不主张该已知图或其不变量首创。
++
++此次一般二结果效应阈值及刚性是独立书面推导，检索没有找到同名结论并非原创优先权证据；没有借已知向量松弛的正解推断普通染色。
