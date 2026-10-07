@@ -1,0 +1,54 @@
+name: Recover exact local commit
+on:
+  push:
+    branches: [maintenance/final-convergence-20261008]
+    paths: [.github/workflows/recover-data-retry.yml]
+permissions:
+  contents: write
+jobs:
+  recover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Receive exact public-research pack
+        run: |
+          python3 - <<'PY'
+          from urllib.request import urlopen,Request
+          from urllib.error import HTTPError
+          from pathlib import Path
+          import hashlib,lzma,os
+          u='https://sdmntpraustraliaeast.oaiusercontent.com/files/00000000-bfec-81fa-b16a-6e44c74acd3c/raw?se=2026-10-07T14%3A55%3A28Z&sp=r&sv=2026-02-06&sr=b&scid=59fb085c-b549-5437-b8e5-f308b2598716&skoid=b7fc319f-b93c-4fac-ba5f-14fdc3f9209f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-06T21%3A38%3A14Z&ske=2026-10-07T21%3A38%3A14Z&sks=b&skv=2026-02-06&sig=a0L6ZFxqUHhM3hmJU7GGyMyyKCZMHgm/9wbuEa9PHD8%3D'
+          try:
+              with urlopen(Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=60) as r:b=r.read(6000001)
+          except HTTPError as e:
+              print('HTTP',e.code,e.read(2000).decode(errors='replace'));raise SystemExit(1)
+          if len(b)!=5550912 or hashlib.sha256(b).hexdigest()!='fe8a918dd2e7407b351a6703be9ec1449ce77c5f6c9021d679986e08aa0f570b':raise RuntimeError('pack integrity')
+          raw=lzma.decompress(b,memlimit=256*1024*1024)
+          if hashlib.sha256(raw).hexdigest()!='c836e9cf10195ac9e06a48b0b60dc36f8d0df7e4ccfa145f2dea2825b67b28be':raise RuntimeError('decoded integrity')
+          (Path(os.environ['RUNNER_TEMP'])/'reviewed.pack').write_bytes(raw)
+          PY
+      - name: Recover original history without rewriting commits
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin '+refs/heads/*:refs/remotes/origin/*' '+refs/tags/*:refs/tags/*'
+          git index-pack --fix-thin --stdin < "$RUNNER_TEMP/reviewed.pack"
+          git checkout --detach 7b331292bfce8823677a3db4e856bf3747f6c383
+          test "$(git rev-parse HEAD^{tree})" = ddc46e3ecb77ca894d81ab607d111dc8969e4838
+          python3 -S research/check_integration.py
+          git diff --exit-code
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 - <<'PY'
+          import subprocess,os,base64,json
+          def g(*a):return subprocess.check_output(['git',*a],text=True).strip()
+          b='maintenance/final-convergence-20261008';s=os.environ['SOURCE_SHA'];old='7b331292bfce8823677a3db4e856bf3747f6c383'
+          if g('ls-remote','origin','refs/heads/'+b).split()[0]!=s:raise RuntimeError('moved branch')
+          c=subprocess.check_output(['git','commit-tree',g('rev-parse',old+'^{tree}'),'-p',old,'-p',s],input='maintenance: recover complete original local research histories; full replay remains separate\n',text=True).strip()
+          auth=base64.b64encode(('x-access-token:'+os.environ['GH_TOKEN']).encode()).decode();e=os.environ.copy();e.update(GIT_CONFIG_COUNT='1',GIT_CONFIG_KEY_0='http.https://github.com/.extraheader',GIT_CONFIG_VALUE_0='AUTHORIZATION: basic '+auth)
+          subprocess.run(['git','push','--porcelain','origin',c+':refs/heads/'+b],env=e,check=True)
+          print('RECOVERED',c)
+          PY
