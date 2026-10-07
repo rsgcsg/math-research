@@ -192,3 +192,6 @@ check-identity-sensitive-robustness:
 .PHONY: check-single-separator-identity-threshold
 check-single-separator-identity-threshold: check-identity-sensitive-robustness
 	python3 -S research/verify_single_separator_identity_threshold.py
+.PHONY: check-pzero-multir-cover-ceiling
+check-pzero-multir-cover-ceiling: check-q-joint-boundary-gap
+	python3 -S research/verify_pzero_multir_cover_ceiling.py
