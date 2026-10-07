@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "Original Family158 target compiled in a minimal pinned Mathlib-only package with original OAI bytes and autoImplicit=false; literal no-five-coloring statement checked and listed axioms restricted to standard three. Not a Comparator/nanoda run and not a formalization of the new subfield extension.",
+  "upstream": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

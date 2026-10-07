@@ -1,3 +1,13 @@
+# 2026-10-07新增来源
+
+OpenAI，*The Euclidean plane is not five-colorable*，稿面2026-09-23，公开于2026-10-06。
+固定版本、全部来源哈希、本文实际阅读范围、Lean精确目标重放及未覆盖事项见[Family158审计](OPENAI_158_AUDIT.md)。
+实际读取全部spectral/rigidity/transfer源码，并核对五色palette关键步骤和存在性有限见证声明。
+其余Family167/172/157/073本轮只核对目录，没有重放证明。
+本轮可解子域推广是新书面推导，不将上游Lean标签转移给新结论。
+
+---
+
 ## 2026-09-27本次整理的来源复核（不覆盖历史阅读记录）
 
 - [Haugland 2608.04542v2](https://arxiv.org/html/2608.04542v2)：重开作者版本页及HTML引言，版本仍为2026-08-06 v2。

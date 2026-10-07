@@ -1,12 +1,20 @@
 # Hadwiger–Nelson research
 
-目标：决定普通欧氏平面的单位距离色数。**本项目未改变普通5≤χ(R²)≤7界；任意支持full15仍未决。**
+目标：决定普通欧氏平面的单位距离色数。**2026-10-06公开的OpenAI Family158给出6≤χ(R²)≤7；本项目已重放其Lean无五染目标。答案6或7、显式有限NON5证书及任意支持full15仍未由本项目解决。**
 
 [当前成果与真实瓶颈](docs/CURRENT.md) · [结果账本](docs/RESULTS.md) · [编号映射](docs/ID_ALIASES.md) ·
 [统一证明框架](docs/proofs/hn_unified_framework.md) · [路线与淘汰理由](docs/ROUTES.md) ·
 [分支、来源与恢复](docs/BRANCHES.md) · [文献地图](references/LITERATURE_MAP.md)。
 
-## 统一基线已落地（2026-10-06）
+## 2026-10-07：外部无五染定理核验与可解坐标推广
+
+[Family158来源和实际Lean重放](references/OPENAI_158_AUDIT.md) · [可解代数坐标主结果](docs/proofs/radical_plane_colorability.md) · [完整子域转移论证](docs/proofs/algebraic_subfield_haar_transfer.md)。
+
+本轮书面证明：正平方根闭合且单位旋转可除的代数子域，对其中任意距离集具有与全平面相同的有限染色能力。最大可解代数扩张的实部满足这些条件，却不是所有有限单位图的同态普适宿主。新推广尚未形式化；其有限算术校准与上游Lean重放分开记录。
+
+`make check-radical-transfer`只重放本轮有限代数校准。旧数据、定理编号和UNKNOWN不因外部结果改写。
+
+## 历史统一基线（2026-10-06快照）
 
 PR #11已把可读取的本地成果和远端研究分支归入main。远端只保留main；
 11个研究分支和1个维护分支已按原SHA归档，连同更早归档及4个本地检查点，共保留28个标签。

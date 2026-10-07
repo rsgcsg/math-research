@@ -1,0 +1,10 @@
+{
+  "status": "PASS_SOURCE_BINDING_ONLY",
+  "source_files": 94,
+  "OAI_modules_scanned": 70,
+  "families": 372,
+  "manuscript_links": 722,
+  "lean_executed": false,
+  "analytic_generalization_proved": false,
+  "scope": "Pinned bytes, literal token scan and metadata only, not semantic proof verification."
+}

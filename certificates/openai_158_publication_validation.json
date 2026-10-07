@@ -1,0 +1,55 @@
+{
+  "schema": "hn-158-reviewed-publication-v1",
+  "status": "PASS_TARGETED_CHECKS",
+  "source_commit": "e3d42fd28a4baa7c0ca863537efab168019f5714",
+  "run_id": "37576935885",
+  "patch_sha256": "20e1d974745aa239c85762741808c366cfd5f2a7c842b24265c2d11d821507dc",
+  "reviewed_files": {
+    "Makefile": "cd4df09189ad9200e3f8bf7828349b1cb2845117e11f14f684431a18f9b1bf61",
+    "README.md": "64dfb01ee8db74ac9a7ff09c837359d80dcb6d60cdef5f67ca10d14a16758c21",
+    "certificates/radical_transfer_calibration.json": "45f985953922f791c3ff7afa1b859bd5cbb3c52428f84e7d9276b207d5ad0e4d",
+    "docs/CURRENT.md": "ecb4bb8d2ae439dfe2d3291af7f25dd8bccedf4c160654d8889a6f65878e6854",
+    "docs/RESULTS.md": "cfcd4bfb31a7f64c8b87ba2af6008281c040083715177f1e0d0cd0ae98cb928f",
+    "docs/ROUTES.md": "aa8932fb6a61b12158130104d79d00cb02e6f0396863e4f1ff66ba54a4596425",
+    "docs/proofs/algebraic_subfield_haar_transfer.md": "0beeec63333684aabf26605bd47547a5c6f2402c93bb03dc8b89cd6e3f5198dc",
+    "docs/proofs/hn_unified_framework.md": "c0503ad12ce37f50ec6b471afaa1326bb064444f30cacc8f474c31999af6c4d3",
+    "docs/proofs/radical_plane_colorability.md": "746c71339e629bc495e0d813b0c0472918080425a471c91bf06e24117f7a8e66",
+    "references/LITERATURE_MAP.md": "17cd7916b3d08e68a1b073070e40b4b3e3091a8581fa727d6716b503c07a3e45",
+    "references/OPENAI_158_AUDIT.md": "7aa382db0a0ff57e350fe6c553c0c52b1eeab59dd04516991315cacf3b20afda",
+    "references/SOURCES.md": "6f86011af3953f92a0ff16284c40b01c3c12394f954cc613efa0b18111dc10cb",
+    "research/audit_openai_158_sources.py": "90bf6768989accf272c5963c52a7002f4250834ab86f304051a0e68d377eceaa",
+    "research/verify_radical_transfer_calibration.py": "05f354a7495447d838e15ac790368a4842a4abb32ae3c9e888ff8b2bd7875e8e"
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-S",
+        "research/verify_radical_transfer_calibration.py",
+        "--self-test"
+      ],
+      "returncode": 0,
+      "log_sha256": "85d55016f2e41fa437384675dad8b7ce378cb05a72a4878fed6dfbb4d1ef4f36"
+    },
+    {
+      "command": [
+        "python3",
+        "-S",
+        "research/audit_openai_158_sources.py",
+        "/home/runner/work/_temp/source/family158-source.zip"
+      ],
+      "returncode": 0,
+      "log_sha256": "0473f8a3c59bf7b0088cf5deb6edd3df17fd697ce5330f05cfcd6e61214a963c"
+    },
+    {
+      "command": [
+        "python3",
+        "-S",
+        "research/check_integration.py"
+      ],
+      "returncode": 0,
+      "log_sha256": "595593d1434871cb1bc7ab72d45b0680319eb45785e6a68f7c2a3534e40b8261"
+    }
+  ],
+  "scope": "Recovered draft fully inspected before this workflow. Exact finite algebra and source binding/static checks freshly replayed. Original no-five Lean build was run 37573206401; extension is written proof, not Lean-formalized. No full make check rerun; no explicit NON5 graph or six-coloring of the plane."
+}

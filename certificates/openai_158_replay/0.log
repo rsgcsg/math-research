@@ -1,0 +1,29 @@
+{
+  "status": "PASS_FINITE_ALGEBRA_ONLY",
+  "unit_rotations": 8,
+  "nonzero_four_by_four_determinants": 70,
+  "monic_divisor_checks": {
+    "mod2_factors": 4,
+    "mod3_quintic": 12,
+    "mod2_cubic": 2
+  },
+  "generated_group_order": 120,
+  "analytic_transfer_proved_by_this_program": false,
+  "lean_replay": false,
+  "finite_non5_graph_constructed": false,
+  "certificate_sha256": "45f985953922f791c3ff7afa1b859bd5cbb3c52428f84e7d9276b207d5ad0e4d",
+  "rejection_tests": [
+    "bool_coordinate",
+    "bool_integer_conflation",
+    "dependent_rotations",
+    "float_coordinate",
+    "noncanonical_fraction",
+    "nonunit",
+    "wrong_factor",
+    "wrong_parameter",
+    "wrong_polynomial",
+    "zero_denominator",
+    "duplicate_json",
+    "optimized_mode"
+  ]
+}
