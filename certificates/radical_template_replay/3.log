@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "python_syntax_files": 355,
+  "json_certificate_files": 269,
+  "local_file_targets": 902,
+  "ledger_ids": {
+    "T": 169,
+    "E": 124,
+    "C": 32,
+    "Q": 11
+  },
+  "source_files": 359,
+  "source_manifest_sha256": "fdfba8563f6c1674e51c0114805c384621488a603965a6dcdcbe3ac850f0f4b8",
+  "scope": "Integration syntax, parseability, exact ID coverage and local file targets only. Not exhaustive anchor checking, new theorem validation, or remote publication."
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/runner/work/math-research/math-research/research/verify_radical_template_mechanism.py", line 113, in <module>
+    main()
+    ~~~~^^
+  File "/home/runner/work/math-research/math-research/research/verify_radical_template_mechanism.py", line 101, in main
+    raise RuntimeError('Finite mechanism checks require non-optimized Python')
+RuntimeError: Finite mechanism checks require non-optimized Python

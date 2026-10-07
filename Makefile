@@ -177,3 +177,10 @@ check-two-partition-w22-audit: check-q-joint-boundary-gap
 .PHONY: check-integration
 check-integration:
 	python3 -S research/check_integration.py
+
+.PHONY: check-radical-transfer
+check-radical-transfer:
+	python3 -S research/verify_radical_transfer_calibration.py --self-test
+	python3 -S research/verify_radical_template_mechanism.py
+
+check: check-radical-transfer
