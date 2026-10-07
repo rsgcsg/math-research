@@ -1,0 +1,24 @@
+name: Diagnose research transfer
+on:
+  push:
+    branches: [maintenance/final-convergence-20261008]
+    paths: [.github/workflows/transport-diagnostic.yml]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Read bounded error body only
+        run: |
+          python3 - <<'PY'
+          from urllib.request import urlopen
+          from urllib.error import HTTPError
+          u='https://drive.google.com/uc?export=download&id=14FiZ7_bWOK3--QzMz6dw5SbiifaCGwi6'
+          try:
+              with urlopen(u,timeout=20) as r:
+                  print('status',r.status,'type',r.headers.get('Content-Type'));print(r.read(300))
+          except HTTPError as e:
+              print('HTTP',e.code);print(e.read(2500).decode(errors='replace'))
+          PY
