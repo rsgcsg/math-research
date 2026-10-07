@@ -1,0 +1,84 @@
+name: Family 158 isolated Lean check
+on:
+  push:
+    branches: [research/openai-158-audit-20261007]
+    paths: [.github/workflows/openai-158-lean-check.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  lean:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Download the already pinned source receipt
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 37572850907 --repo rsgcsg/math-research --name family158-pinned-source --dir "$RUNNER_TEMP/source"
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,json,os,zipfile,shutil
+          d=Path(os.environ['RUNNER_TEMP'])/'source';r=json.loads((d/'upstream-source-receipt.json').read_text())
+          assert r['commit']=='adc7f1241b42e322a6451854ab7e4b4c146bf78a'
+          root=Path(os.environ['RUNNER_TEMP'])/'check';root.mkdir()
+          with zipfile.ZipFile(d/'family158-source.zip') as z:
+              for p,m in r['files'].items():
+                  b=z.read(p);assert hashlib.sha256(b).hexdigest()==m['sha256']
+                  if p.startswith('lean/') and (p.endswith('.lean') or p=='lean/lean-toolchain') and not p.startswith('lean/ComparatorChallenges/'):
+                      f=root/p[5:];f.parent.mkdir(parents=True,exist_ok=True);f.write_bytes(b)
+          (root/'lakefile.lean').write_text('import Lake\nopen Lake DSL\npackage Audit where\n  leanOptions := #[⟨`autoImplicit, false⟩]\nrequire mathlib from git "https://github.com/leanprover-community/mathlib4.git" @ "d13f23b723b8a846827a245b89c10fc7d3f11612"\nlean_lib OAI\n')
+          (root/'AuditStatement.lean').write_text('import OAI.Geometry.PlaneColoring.Five\nset_option autoImplicit false\nexample : ¬ ∃ c : ℂ → Fin 5, ∀ x y : ℂ, ‖x-y‖ = 1 → c x ≠ c y := by\n  simpa only [OAI.EuclideanFiveColor.ProperColoring] using OAI.EuclideanFiveColor.no_proper_five_coloring\n#print axioms OAI.EuclideanFiveColor.no_proper_five_coloring\n')
+          PY
+      - name: Install pinned official Lean release
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 2 https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
+          mkdir "$RUNNER_TEMP/toolchain"
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP/toolchain" --strip-components=1
+          echo "$RUNNER_TEMP/toolchain/bin" >> "$GITHUB_PATH"
+      - name: Resolve pinned Mathlib and download its standard cache
+        run: |
+          set -o pipefail
+          cd "$RUNNER_TEMP/check"
+          lean --version | tee "$RUNNER_TEMP/lean-version.log"
+          lake update 2>&1 | tee "$RUNNER_TEMP/lake-update.log"
+          test "$(git -C .lake/packages/mathlib rev-parse HEAD)" = d13f23b723b8a846827a245b89c10fc7d3f11612
+          lake exe cache get 2>&1 | tee "$RUNNER_TEMP/cache.log"
+      - name: Build original proof and check the literal unrestricted statement
+        env:
+          GLIBC_TUNABLES: glibc.malloc.mmap_max=0:glibc.malloc.arena_max=1
+        run: |
+          set -o pipefail
+          cd "$RUNNER_TEMP/check"
+          lake build OAI.Geometry.PlaneColoring.Five 2>&1 | tee "$RUNNER_TEMP/lean-build.log"
+          lake env lean AuditStatement.lean 2>&1 | tee "$RUNNER_TEMP/axioms.log"
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,json,os,re
+          t=Path(os.environ['RUNNER_TEMP']);s=(t/'axioms.log').read_text()
+          names=re.findall(r'depends on axioms:\s*\[([^\]]*)\]',s,re.S)
+          assert len(names)==1,s
+          actual={a.strip() for a in names[0].split(',') if a.strip()}
+          assert actual <= {'propext','Quot.sound','Classical.choice'},actual
+          r=json.loads((t/'source/upstream-source-receipt.json').read_text())
+          for p,m in r['files'].items():
+              if p.startswith('lean/OAI/') and p.endswith('.lean'):
+                  assert hashlib.sha256((t/'check'/p[5:]).read_bytes()).hexdigest()==m['sha256']
+          report=dict(status='PASS',scope='Original Family158 target compiled in a minimal pinned Mathlib-only package with original OAI bytes and autoImplicit=false; literal no-five-coloring statement checked and listed axioms restricted to standard three. Not a Comparator/nanoda run and not a formalization of the new subfield extension.',upstream=r['commit'],mathlib='d13f23b723b8a846827a245b89c10fc7d3f11612',axioms=sorted(actual))
+          (t/'lean-check-receipt.json').write_text(json.dumps(report,indent=2)+'\n')
+          PY
+      - name: Preserve actual logs on success or failure
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: family158-lean-attempt
+          path: |
+            ${{ runner.temp }}/*.log
+            ${{ runner.temp }}/lean-check-receipt.json
+            ${{ runner.temp }}/check/AuditStatement.lean
+            ${{ runner.temp }}/check/lake-manifest.json
+            ${{ runner.temp }}/check/lakefile.lean
+          retention-days: 30
+          if-no-files-found: error
