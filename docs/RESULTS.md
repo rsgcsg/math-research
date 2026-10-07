@@ -11,6 +11,12 @@
 | R158-C | 对满足R158-H的子域，任意有限、按距离指定的二点允许关系，在子域平面与R²上可满足性相同；涵盖有限图目标、多重染色和有理循环模板 | [交叉相关与密度点的完整证明](proofs/radical_finite_template_transfer.md)；不是任意高阶CSP或新色数数值，未Lean形式化。 |
 | R158-F | 任意真子域N⊊E包含Q(i)时，N湮灭子Haar概率的Fourier系数为1_N；对所有N×子群不变、避开连续字符且非全Haar。覆盖任意有限生成代数旋转群 | [完整反例](proofs/finitely_generated_rotation_rigidity_obstruction.md)；不依赖Family158、不等于染色反例或full15正律。 |
 
+| R158-K | 有限模板转移推出任意紧度量目标、闭径向二点关系的存在性转移；涵盖每个固定d,k的投影量子染色、固定维数向量染色和实循环模板 | [完整紧致性证明](proofs/compact_target_radical_transfer.md)，依赖R158-C，未新形式化；无量子色数新值。 |
+| R158-Q2 | 任意图的二维投影k染色等价于普通k染色；不可k染的m边图最大乘积误差≥sin(π/(2m))；奇圈二标签全族达到此界 | [自足取整、稳定性与构造](proofs/qubit_coloring_rounding.md)，不依赖R158分析链；有限样本不是全族证明，不宣称低维机制首创。 |
+| R158-M | 真N线性子空间的湮灭子谱二重强混合；有限生成H下任意阶混合；可匹配整个旧数域的Haar联合边际，且显式小外域旋转产生TV距离1 | [完整构造与证明](proofs/mixing_spectral_camouflage.md)；任意阶部分用ESS，不是proper染色或full15正律。 |
+
+| R158-D | 既有Moorhouse奇数次数域二色定理的纯根式显式公式、奇数层相容并与谱逃逸反向校准 | [完整实现与边界](proofs/odd_radical_plane_two_coloring.md)，不计新色数发现；n=2反例只否定该公式无条件使用。 |
+
 以下为保留的统一账本和历史证据，旧状态不由外部无五染结果自动升级。
 
 # 统一成果账本（2026-10-06整合）

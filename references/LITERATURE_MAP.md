@@ -1,3 +1,20 @@
+## 奇次纯根式与本轮谱逃逸
+
+Moorhouse既有奇数次数域二染色已在旧算术笔记中记录；本轮[显式公式](../docs/proofs/odd_radical_plane_two_coloring.md)
+使它直接作用于u_t的三次域承载空间。只增加域次数或破坏单个谱，不能绕过整域低色数公式。
+
+## 2026-10-07：本轮使用的成熟连接
+
+- Evertse–Schlickewei–Schmidt，有限秩乘法群线性方程（Annals 2002）：
+  [R158-M](../docs/proofs/mixing_spectral_camouflage.md)的任意阶混合归约；不是用有限测试重证数论定理。
+- Schmidt–Ward（Inventiones 1993）：代数Z^r作用的混合到多重混合，是同一机制的经典背景。
+  本轮直接用ESS证明所需特殊情形，未把一般强混合误认为任意阶混合。
+- de Bruijn–Erdős（1951）：闭柱条件的有限交紧致性；
+  [R158-K](../docs/proofs/compact_target_radical_transfer.md)先离散目标，再取紧极限，不扰动源几何。
+- Cameron等（2007）：量子投影着色模型；
+  [R158-Q2](../docs/proofs/qubit_coloring_rounding.md)低维取整和奇圈误差分类的背景。
+  搜索未承担文献优先权证明，未声称这些通用机制是新发现。
+
 # 2026-10-07新增来源
 
 OpenAI，*The Euclidean plane is not five-colorable*，稿面2026-09-23，公开于2026-10-06。

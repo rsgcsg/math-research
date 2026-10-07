@@ -1,3 +1,25 @@
+## 2026-10-07续篇补充：已知奇次二色的直接校准
+
+重新读取Moorhouse, *On the Chromatic Numbers of Planes*, 2010-03-03初步稿，第7节Theorem7.1及证明（PDF页14–15）：
+https://ericmoorhouse.org/pub/chromatic.pdf 。仓库既有算术笔记已经包含该定理，本轮R158-D只补纯根式规范公式、
+有向并相容性和谱逃逸的几何反向检验，不主张新色数发现。
+
+## 2026-10-07紧目标/混合续篇所用原始来源
+
+- J.-H. Evertse, H. P. Schlickewei, W. M. Schmidt. *Linear equations in variables which lie in a multiplicative group*,
+  Ann. Math. 155 (2002), 807–836. https://arxiv.org/abs/math/0409604
+  本轮核对其有限秩非退化解定理接口；在R158-M中为明确外部依赖。
+- K. Schmidt, T. Ward. *Mixing automorphisms of compact groups and a theorem of Schlickewei*,
+  Invent. Math. 111 (1993), 69–76. https://ueaeprints.uea.ac.uk/id/eprint/18597/
+  背景比较；本轮读取作者存档摘要，未重放该论文全部证明。
+- N. G. de Bruijn, P. Erdős. *A colour problem for infinite graphs and a problem in the theory of relations* (1951).
+  https://research.tue.nl/en/publications/a-colour-problem-for-infinite-graphs-and-a-problem-in-the-theory-/
+  原始关系紧致性背景；R158-K中的紧目标引理自足证明。
+- P. J. Cameron, A. Montanaro, M. W. Newman, S. Severini, A. Winter.
+  *On the quantum chromatic number of a graph*, EJC 14 (2007), R81.
+  https://arxiv.org/abs/quant-ph/0608016
+  本轮只依赖明确写出的投影模型，不调用该文其他定理，也不声称普遍量子色数新值。
+
 # 2026-10-07新增来源
 
 OpenAI，*The Euclidean plane is not five-colorable*，稿面2026-09-23，公开于2026-10-06。

@@ -17,6 +17,17 @@
 
 `make check-radical-transfer`重放有限代数、标签支持与谱样本校准，不认证无限分析证明。旧数据、定理编号和UNKNOWN不因外部结果改写。
 
+## 2026-10-07续篇：完成的扩展与准确方法边界
+
+[紧目标与固定维数量子模板](docs/proofs/compact_target_radical_transfer.md) ·
+[二维投影的精确普通化与奇圈误差](docs/proofs/qubit_coloring_rounding.md) ·
+[任意阶混合但整域不可分辨的谱反例](docs/proofs/mixing_spectral_camouflage.md)。
+
+新紧目标转移依赖前轮R158-C；二维投影取整和谱反例另有独立证明。
+奇圈二标签的最小乘积Frobenius误差恰为sin(π/(2m))，不是数值估计。
+原始6/7、显式有限NON5及任意支持full15仍未解决；不把扩展问题的完成混同为原问题完成。
+`make check-compact-mixing`执行新增精确有限校准；无限结论未Lean形式化。
+
 ## 历史统一基线（2026-10-06快照）
 
 PR #11已把可读取的本地成果和远端研究分支归入main。远端只保留main；
@@ -42,3 +53,6 @@ make check-q-joint-boundary-gap check-two-partition-w22-audit
 仅保留手动、只读的verify.yml；一次性导入、封存、归档工作流均已移除。
 未完成的边界端点实验和已纠正旧稿在references/unverified内单独保存，不冒充有效证书。
 请先读[AGENTS.md](AGENTS.md)。搜索器和独立检查器分开；一般证明不因程序PASS就被称为形式化或同行评审完成。
+
+本轮[奇次纯根式显式二染校准](docs/proofs/odd_radical_plane_two_coloring.md)把新逃逸旋转放回已知低色数宿主，
+不重复计算Moorhouse的既有二色结论。全仓尝试在300秒预算处中断，专项验证范围见本轮收据。

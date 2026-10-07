@@ -184,3 +184,10 @@ check-radical-transfer:
 	python3 -S research/verify_radical_template_mechanism.py
 
 check: check-radical-transfer
+
+.PHONY: check-compact-mixing
+check-compact-mixing:
+	python3 -S research/verify_compact_mixing_transfer.py
+	python3 -S research/verify_qubit_rounding.py
+
+check: check-compact-mixing

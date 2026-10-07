@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/mnt/data/hn158-continuation-20261007/repo/research/verify_compact_mixing_transfer.py", line 365, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/hn158-continuation-20261007/repo/research/verify_compact_mixing_transfer.py", line 349, in main
+    raise RuntimeError('Exact calibration requires non-optimized Python')
+RuntimeError: Exact calibration requires non-optimized Python

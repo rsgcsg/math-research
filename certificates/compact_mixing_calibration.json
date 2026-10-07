@@ -1,0 +1,119 @@
+{
+  "schema": "hn-compact-mixing-calibration-v1",
+  "status": "PASS_FINITE_CALIBRATION",
+  "spectral": {
+    "field": "Q(i,a), a>0 and a^3=2",
+    "basis": [
+      "1",
+      "i",
+      "a",
+      "ia",
+      "a^2",
+      "ia^2"
+    ],
+    "sample_points": 12,
+    "distinct_cosets": 7,
+    "gram_rank": 7,
+    "invariance_checks": 1872,
+    "mixing_character_pairs": 81,
+    "joint_moments": 343,
+    "escape_witnesses": [
+      {
+        "t": "1",
+        "u": [
+          "-3/5",
+          "-4/5",
+          "4/5",
+          "2/5",
+          "-2/5",
+          "4/5"
+        ]
+      },
+      {
+        "t": "1/10",
+        "u": [
+          "249999/250001",
+          "-1000/250001",
+          "100/250001",
+          "50000/250001",
+          "-5000/250001",
+          "10/250001"
+        ]
+      },
+      {
+        "t": "1/100",
+        "u": [
+          "249999999999/250000000001",
+          "-1000000/250000000001",
+          "10000/250000000001",
+          "5000000000/250000000001",
+          "-50000000/250000000001",
+          "100/250000000001"
+        ]
+      },
+      {
+        "t": "1/1000",
+        "u": [
+          "249999999999999999/250000000000000001",
+          "-1000000000/250000000000000001",
+          "1000000/250000000000000001",
+          "500000000000000/250000000000000001",
+          "-500000000000/250000000000000001",
+          "1000/250000000000000001"
+        ]
+      }
+    ],
+    "mutated_escapes_rejected": 6
+  },
+  "compact_nets": {
+    "net_size": 5,
+    "fine_space_size": 25,
+    "epsilon": "1/8",
+    "rounded_allowed_pairs": 1245,
+    "nonclosed_prefix_checks": 528
+  },
+  "projection_templates": {
+    "rational_projection_tuples": 10,
+    "tuple_pair_relations": 100,
+    "scalar_classical_pairs": 55,
+    "mutated_projectors_rejected": 4
+  },
+  "odd_radical_coloring": {
+    "fields": [
+      {
+        "degree": 1,
+        "field_samples": 15,
+        "valuation_products": 196,
+        "unit_directions": 15,
+        "translated_unit_edges": 225
+      },
+      {
+        "degree": 3,
+        "field_samples": 20,
+        "valuation_products": 361,
+        "unit_directions": 20,
+        "translated_unit_edges": 400
+      },
+      {
+        "degree": 5,
+        "field_samples": 20,
+        "valuation_products": 361,
+        "unit_directions": 20,
+        "translated_unit_edges": 400
+      },
+      {
+        "degree": 7,
+        "field_samples": 20,
+        "valuation_products": 361,
+        "unit_directions": 20,
+        "translated_unit_edges": 400
+      }
+    ],
+    "exact_cubic_escape_comparisons": 4,
+    "even_degree_formula_counterexample_checked": true,
+    "scope": "Finite calibration of the uniform odd-degree proof and explicit coloring; not extrapolation from these degrees."
+  },
+  "infinite_theorems_formalized": false,
+  "new_plane_bound": false,
+  "scope": "Exact finite algebra and finite template mechanisms only. Infinite R158-M/K/D use written proofs; all-order mixing uses ESS; compact transfer depends on R158-C."
+}

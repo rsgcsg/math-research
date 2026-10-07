@@ -1,0 +1,57 @@
+python3 -S research/verify_radical_transfer_calibration.py --self-test
+{
+  "status": "PASS_FINITE_ALGEBRA_ONLY",
+  "unit_rotations": 8,
+  "nonzero_four_by_four_determinants": 70,
+  "monic_divisor_checks": {
+    "mod2_factors": 4,
+    "mod3_quintic": 12,
+    "mod2_cubic": 2
+  },
+  "generated_group_order": 120,
+  "analytic_transfer_proved_by_this_program": false,
+  "lean_replay": false,
+  "finite_non5_graph_constructed": false,
+  "certificate_sha256": "45f985953922f791c3ff7afa1b859bd5cbb3c52428f84e7d9276b207d5ad0e4d",
+  "rejection_tests": [
+    "bool_coordinate",
+    "bool_integer_conflation",
+    "dependent_rotations",
+    "float_coordinate",
+    "noncanonical_fraction",
+    "nonunit",
+    "wrong_factor",
+    "wrong_parameter",
+    "wrong_polynomial",
+    "zero_denominator",
+    "duplicate_json",
+    "optimized_mode"
+  ]
+}
+python3 -S research/verify_radical_template_mechanism.py
+{
+  "status": "PASS_FINITE_MECHANISMS_ONLY",
+  "support_rounding": {
+    "relation_support_pairs": 25234,
+    "zero_product_cases": 5379,
+    "label_sizes": [
+      1,
+      2,
+      3
+    ]
+  },
+  "reflection_polarization": {
+    "exact_identities": 3645,
+    "nonreflection_counterexample_checked": true
+  },
+  "subfield_kernel": {
+    "sample_points": 9,
+    "additive_cosets": 4,
+    "gram_rank": 4,
+    "rotation_pair_comparisons": 891,
+    "exact_unit_norm": true
+  },
+  "general_transfer_formalized": false,
+  "full15_decided": false,
+  "scope": "Finite support rounding, real polarization and exact subgroup-kernel examples. Infinite claims use the accompanying written proofs."
+}
