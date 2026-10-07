@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/mnt/data/hn158-continuation-20261007/repo/research/verify_qubit_rounding.py", line 180, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/data/hn158-continuation-20261007/repo/research/verify_qubit_rounding.py", line 166, in main
+    raise RuntimeError('Qubit checks require non-optimized Python')
+RuntimeError: Qubit checks require non-optimized Python

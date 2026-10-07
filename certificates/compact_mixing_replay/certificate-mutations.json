@@ -1,0 +1,38 @@
+[
+  {
+    "checker": "verify_compact_mixing_transfer",
+    "mutation": "duplicate_key",
+    "rejected": true,
+    "message": "duplicate JSON key"
+  },
+  {
+    "checker": "verify_compact_mixing_transfer",
+    "mutation": "wrong_status",
+    "rejected": true,
+    "message": "saved calibration differs from independent recomputation"
+  },
+  {
+    "checker": "verify_compact_mixing_transfer",
+    "mutation": "damaged_json",
+    "rejected": true,
+    "message": "Expecting ',' delimiter: line 118 column 174 (char 2988)"
+  },
+  {
+    "checker": "verify_qubit_rounding",
+    "mutation": "duplicate_key",
+    "rejected": true,
+    "message": "duplicate JSON key"
+  },
+  {
+    "checker": "verify_qubit_rounding",
+    "mutation": "wrong_status",
+    "rejected": true,
+    "message": "certificate mismatch"
+  },
+  {
+    "checker": "verify_qubit_rounding",
+    "mutation": "damaged_json",
+    "rejected": true,
+    "message": "Expecting ',' delimiter: line 90 column 137 (char 1751)"
+  }
+]
