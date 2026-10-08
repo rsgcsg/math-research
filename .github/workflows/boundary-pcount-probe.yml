@@ -1,0 +1,108 @@
+name: Full boundary P-count probe
+on:
+  push:
+    branches: [research/boundary-global-pcount-20261008]
+    paths: [.github/workflows/boundary-pcount-probe.yml]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Fetch exact source without stored credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -eu
+          git init .
+          git remote add origin https://github.com/rsgcsg/math-research.git
+          git fetch --no-tags origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Install search-only dependency
+        run: python3 -m pip install python-sat==1.9.dev15
+      - name: Test a finite color-count obstruction and save every outcome
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from itertools import combinations
+          import gzip,json,time,hashlib,os,signal
+          from pysat.solvers import Solver
+          from pysat.card import CardEnc,EncType
+          out=Path(os.environ['RUNNER_TEMP'])/'evidence';out.mkdir()
+          def read(p):
+              b=Path(p).read_bytes();return json.loads(gzip.decompress(b) if b[:2]==b'\x1f\x8b' else b)
+          g=read('certificates/Y_full_geometry.json.gz');basis=read('certificates/g14_pair_orbit_basis.json.gz');rb=read('certificates/g14_r_pair_orbit_basis.json.gz')
+          S=dict(E=set(map(tuple,g['edges'])),P=set(map(tuple,basis['orbit_nodes_by_grade']['1/sqrt3'])),Q=set(map(tuple,basis['orbit_nodes_by_grade']['2'])),R=set(map(tuple,rb['orbit_nodes'])))
+          n=len(g['points']);adj=[set() for _ in range(n)];pn=[set() for _ in range(n)];rn=[set() for _ in range(n)]
+          for pairs,neighbors in [(S['E'],adj),(S['P'],pn),(S['R'],rn)]:
+              for a,b in pairs:neighbors[a].add(b);neighbors[b].add(a)
+          W=set()
+          for o,ns in enumerate(pn):
+              ts=[]
+              for a in sorted(ns):
+                  for b in sorted(ns&adj[a]):
+                      if b>a:ts.extend((a,b,c) for c in sorted(ns&adj[a]&adj[b]) if c>b)
+              for a,b in combinations(ts,2):
+                  if set(a)&set(b):continue
+                  vs=tuple(sorted((o,*a,*b)));pairs=set(combinations(vs,2))
+                  if tuple(len(pairs&S[t]) for t in ('E','P','R'))==(6,12,3):W.add(vs)
+          W=sorted(W);T=sorted((a,o,b) for o in range(n) for a,b in combinations(sorted(rn[o]),2) if (a,b) in S['P'])
+          if (len(W),len(T))!=(380,68):raise RuntimeError('input geometry mismatch')
+          V=sorted({v for t in 'PQR' for e in S[t] for v in e});ix={v:i for i,v in enumerate(V)};coreE=sorted(e for e in S['E'] if set(e)<=set(V))
+          def base(vertices,edges):
+              index={v:i for i,v in enumerate(vertices)};x=lambda v,c:5*index[v]+c+1;C=[]
+              for v in vertices:
+                  lits=[x(v,c) for c in range(5)];C.append(lits);C.extend([-a,-b] for a,b in combinations(lits,2))
+              for a,b in edges:C.extend([-x(a,c),-x(b,c)] for c in range(5))
+              for w in W:
+                  for c in range(5):
+                      lits=[x(v,c) for v in w];C.append(lits);C.extend([-a,-b,-d] for a,b,d in combinations(lits,3))
+              for a,o,b in T:C.extend([-x(o,c),x(a,c),x(b,c)] for c in range(5))
+              top=5*len(vertices);eq=[]
+              for a,b in sorted(S['P']):
+                  top+=1;eq.append(top)
+                  for c in range(5):C.extend([[-x(a,c),-x(b,c),top],[-top,-x(a,c),x(b,c)]])
+              C.extend([[x(877,0)],[x(5535,1)],[x(7479,2)]])
+              return C,eq,top
+          def check(vertices,word,edges):
+              c=dict(zip(vertices,word))
+              if not all(c[a]!=c[b] for a,b in edges):raise RuntimeError('invalid unit edge')
+              if not all(sum(c[a]==c[b] for a,b in combinations(w,2))==2 for w in W):raise RuntimeError('window')
+              if not all(int(c[a]==c[o])+int(c[b]==c[o])-int(c[a]==c[b])==1 for a,o,b in T):raise RuntimeError('triangle')
+              return {t:sum(c[a]==c[b] for a,b in S[t]) for t in 'PQR'}
+          report=dict(schema='boundary-pcount-discovery-v1',base='592dd2b3f769c1698dfbd6ec8c1e3bdaf24ece4a',workflow_commit=os.environ['GITHUB_SHA'],core_vertices=V,core_edges=[list(e) for e in coreE],windows=W,triangles=T,queries=[],scope='Discovery and direct positive checks only. UNSAT without independent proof and UNKNOWN imply no theorem. A core coloring is not a full-Y coloring or a common law.')
+          def save():(out/'results.json').write_text(json.dumps(report,separators=(',',':'))+'\n')
+          print('CORE',len(V),len(coreE),len(S['P']),flush=True);save()
+          C,eq,top=base(V,coreE)
+          for cap in [68,40,20,0]:
+              card=CardEnc.atmost(eq,bound=cap,top_id=top,encoding=EncType.seqcounter)
+              with Solver(name='cadical195',bootstrap_with=C+card.clauses) as s:
+                  s.conf_budget(120000);start=time.monotonic();answer=s.solve_limited()
+                  row=dict(cap=cap,status='SAT' if answer is True else 'UNSAT_UNCERTIFIED' if answer is False else 'UNKNOWN',seconds=time.monotonic()-start,stats=s.accum_stats())
+                  if answer is True:
+                      model=set(v for v in s.get_model() if v>0);word=''.join(str(next(c for c in range(5) if 5*i+c+1 in model)) for i in range(len(V)))
+                      row['word']=word;row['counts']=check(V,word,coreE)
+                      if row['counts']['P']>cap:raise RuntimeError('P count')
+                  report['queries'].append(row);save();print(row['cap'],row['status'],row.get('counts'),row['seconds'],flush=True)
+                  if answer is not True:break
+          # Preserve a reusable compiled search dependency, not a mathematical certificate.
+          import pysat,pysolvers,shutil
+          root=out/'search-dependency';root.mkdir()
+          shutil.copytree(Path(pysat.__file__).parent,root/'pysat',ignore=shutil.ignore_patterns('__pycache__'))
+          shutil.copyfile(pysolvers.__file__,root/Path(pysolvers.__file__).name)
+          PY
+      - name: Preserve bounded search outputs even on failure
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: boundary-pcount-probe
+          path: ${{ runner.temp }}/evidence
+          retention-days: 30
+          if-no-files-found: error
