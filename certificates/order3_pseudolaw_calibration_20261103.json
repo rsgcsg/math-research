@@ -1,0 +1,12 @@
+{
+  "status": "PASS_LOCAL_FINITE_EXACT_ALGEBRA",
+  "date": "2026-11-03",
+  "lattice_vectors_checked": 80,
+  "equal_marginal_binary_cases": 399,
+  "asymmetric_three_pair_cases": 324,
+  "distinct_pair_triples": 95,
+  "rational_density_lower": "3/14 > 1/5",
+  "scope": "Exact finite rational partition/lattice calibration only; infinite geometry and PSD are written arguments, not Lean formalized.",
+  "full_hn_six_or_seven_decided": false,
+  "full_make_check_executed": false
+}

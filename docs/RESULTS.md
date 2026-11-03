@@ -1,3 +1,14 @@
+## 2026-11-03新增的耦合结构账本（不改变旧T编号）
+ 
+| 标识 | 结果 | 证据与边界 |
+|---|---|---|
+| R2026-MOMENT-A | 严格k染 ⇔ 全部有限合法颜色律射影相容且等距不变 ⇔ 全局合法染色支持上的等距不变概率 | [完整紧致性/不变均值证明](proofs/plane_coupled_moment_bridge_20261103.md)，适用任意有限k；未决定6/7 |
+| R2026-MOMENT-B/C | 连续径向、颜色置换对称的二点非负/PSD松弛的最小颜色数恰为4 | 同上；Bessel基底及Bochner证明，Sawin既有标量Bessel来源已归功；未Lean形式化 |
+| R2026-MOMENT-D | k≥4全空间Bessel二点伪law在三个共线点违反概率伪距离三角式，有理下界5734799/1152000000 | [证明](proofs/plane_coupled_moment_bridge_20261103.md)、[独立分数脚本](../research/verify_bessel_moment_ceiling.py)；伪law不能当合法染色 |
+| R2026-MOMENT-E | 每份等距不变的严格单位距离随机染色律满足D(r)≥1/ceil(1/r) | 同上，有限折线路径的并界证明；只是必要条件，不是六染构造或七色证书 |
+ 
+| R2026-MOMENT-F | 全部平面|F|≤3的五色严格合法且彼此边缘相容的等距不变law；全域二点PSD成立，但全局不可五染 | [完整证明](proofs/order3_coloring_pseudolaw_from_disk_packing_20261103.md)、[有理校准](../research/verify_order3_pseudolaw.py)；单位避距圆盘为经典已有构造；未决定四点是否足以排除五色 |
+
 ## 2026-10-07分支附录：外部Family158与R158推广
 
 原始T001–169/E001–124/C001–032/Q001–011编号不变，避免覆盖并行成果。
