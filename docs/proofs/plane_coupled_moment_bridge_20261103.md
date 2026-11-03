@@ -1,6 +1,6 @@
 # 2026-11-03：从全局染色到完备多点概率律；二点谱的精确天花板
 
-状态：本项目完整书面证明和精确有理数校准；**不是**平面色数6/7的最终证明，未Lean形式化、未外部同行评审、无优先权声明。标识 R2026-MOMENT-A–E。独立脚本与证书另见同分支 research/verify_bessel_moment_ceiling.py 和 certificates/bessel_moment_calibration.json。
+状态：本项目完整书面证明和精确有理数校准；**不是**平面色数6/7的最终证明，未Lean形式化、未外部同行评审、无优先权声明。标识 R2026-MOMENT-A–E。独立脚本与证书另见同分支 research/verify_bessel_moment_ceiling.py 和 certificates/bessel_moment_calibration_20261103.json。
 
 ## A. 统一的主对象：同一份全局law，而不是各窗口不同law
 
