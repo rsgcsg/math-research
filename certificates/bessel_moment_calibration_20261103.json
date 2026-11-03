@@ -1,0 +1,17 @@
+{
+  "status": "PASS_LOCAL_EXACT_RATIONAL_CALIBRATION",
+  "date": "2026-11-03",
+  "python": "Python 3.13 standard library Fraction, non-optimized mode",
+  "source": "research/verify_bessel_moment_ceiling.py (equivalent checked algebraic computations; remote file itself not independently executed by CI at time of record)",
+  "J0_four_upper": "-803/2025",
+  "J0_5_2_lower": "-29239249/603979776",
+  "J0_5_2_upper": "-601013/12582912",
+  "J1_5_2_lower": "7205564155/14495514624",
+  "J1_5_2_upper": "75078305/150994944",
+  "energy_upper": "91042963788852401/364791569817010176",
+  "three_point_gap_numerator_lower": "5734799/1152000000",
+  "guarantee": "rational series comparisons only",
+  "global_chromatic_six_or_seven_decided": false,
+  "new_analytic_results_lean_formalized": false,
+  "full_make_check_executed": false
+}
