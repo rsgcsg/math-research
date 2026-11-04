@@ -1,0 +1,28 @@
+name: Verify robust seven-color geometry
+on:
+  push:
+    branches: [research/robust-seven-limit-20261104]
+    paths:
+      - research/verify_robust_hex_interval.py
+      - docs/proofs/robust_seven_hexagonal_limit_20261104.md
+      - .github/workflows/verify-robust-seven.yml
+      - Makefile
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Exact rational hexagon and odd-cycle calibration
+        run: make check-robust-seven
+      - name: Ensure optimized mode is rejected
+        run: |
+          if python3 -O -S research/verify_robust_hex_interval.py >/tmp/robust7optimized.log 2>&1; then
+            echo "optimized mode incorrectly passed"; exit 1
+          fi
+          grep "assertions required" /tmp/robust7optimized.log
+      - name: Repository static integration
+        run: python3 -S research/check_integration.py
