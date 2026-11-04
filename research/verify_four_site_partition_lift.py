@@ -132,6 +132,63 @@ def canonical_triple_failure():
             "four_point_witness":{str(p):str(w) for p,w in law.items()}}
 
 
+def planar_unit_pentagon_projective_four_law():
+    # Scale a regular pentagon until its long diagonals are length one.
+    # Then i,j are unit-adjacent precisely for indices separated by 2.
+    def unit(i, j):
+        return (i-j) % 5 in (2,3)
+    source = {(0,0,0,0,0):Q(3,8)}
+    for i in range(5):
+        z=tuple(int(j in (i,(i+1)%5)) for j in range(5))
+        source[z]=Q(1,8)
+    for z,w in source.items():
+        if w:
+            for i,j in combinations(range(5),2):
+                need(not(unit(i,j) and z[i] and z[j]),
+                     "binary source is not independent in actual unit graph")
+    triple_laws = {}
+    for absent in range(5):
+        F=tuple(i for i in range(5) if i != absent)
+        path=tuple((absent+j)%5 for j in range(1,5))
+        law=(
+            ({path[0]:0,path[1]:0,path[2]:1,path[3]:1},Q(1,2)),
+            ({path[0]:0,path[1]:1,path[2]:1,path[3]:2},Q(1,2))
+        )
+        for i,j in combinations(F,2):
+            value=sum(w*int(p[i]==p[j]) for p,w in law)
+            need(value==(Q(0) if unit(i,j) else Q(1,2)),
+                 "quadruple disagrees with global pair q")
+        for T in combinations(F,3):
+            marginal={}
+            for p,w in law:
+                renaming={}
+                z=[]
+                for i in T:
+                    if p[i] not in renaming:
+                        renaming[p[i]]=len(renaming)
+                    z.append(renaming[p[i]])
+                z=tuple(z)
+                marginal[z]=marginal.get(z,Q(0))+w
+            need((0,0,0) not in marginal, "triple all equal")
+            if T in triple_laws:
+                need(marginal==triple_laws[T],"overlapping triples differ")
+            else:
+                triple_laws[T]=marginal
+    need(len(triple_laws)==10,"all ten triples")
+    return {
+        "true_unit_edges":5,
+        "short_side_squared":"(3-sqrt(5))/2",
+        "binary_source_singleton_marginal":"1/4",
+        "compatible_four_site_windows":5,
+        "compatible_three_site_marginals":10,
+        "all_joint_blocks_size_at_most_two":True,
+        "common_five_site_law_with_prescribed_pairs_exists":False,
+        "pentagonal_nonextension_gap":"1/2",
+        "actual_unit_graph_is_three_colorable":True,
+        "scope":"Real Euclidean unit pentagon; the prescribed pair moments, not proper coloring itself, fail to extend."
+    }
+
+
 def five_site():
     weights={(0,0,0,0,0):Q(3,8)}
     for i in range(5):
@@ -166,6 +223,7 @@ def verify():
             "four_site":four_site(),
             "canonical_triple_overlap_failure":canonical_triple_failure(),
             "five_site_abstract_boundary":five_site(),
+            "real_unit_pentagon_order_four_gap":planar_unit_pentagon_projective_four_law(),
             "scope":"Any equal-marginal binary law gives a four-site pair moment lift; no coherent four-site triple marginals or geometric five-site obstruction proved.",
             "chromatic_six_or_seven_decided":False,
             "new_lean_formalization":False}
