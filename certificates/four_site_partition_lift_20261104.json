@@ -1,10 +1,10 @@
 {
   "schema": "hn_four_site_coupling_20261104",
-  "status": "PASS_TARGETED_GITHUB_ACTIONS",
+  "status": "PASS_SCOPED_CHECKS",
   "verified_at_date": "2026-11-04",
-  "workflow_run_id": 41839184897,
-  "workflow_run_url": "https://github.com/rsgcsg/math-research/actions/runs/41839184897",
-  "workflow_head_sha": "4347df5d497470665ee984bd6a9042e79d9ea35a",
+  "workflow_run_id": 41840233166,
+  "workflow_run_url": "https://github.com/rsgcsg/math-research/actions/runs/41840233166",
+  "workflow_head_sha": "1da99f7fd7132f1f5e632a6c1bb00e4a3f36540c",
   "workflow_steps": {
     "exact_python_standard_library": "success",
     "optimized_mode_failure_guard": "success",
@@ -23,9 +23,15 @@
     "five_site_partitions": 52,
     "abstract_pentagon_gap": "1/2",
     "forced_four_site_triple_coalescence": "1/3",
-    "canonical_three_site_choice": "0"
+    "canonical_three_site_choice": "0",
+    "five_point_actual_unit_graph": "regular pentagon with index-difference-2 diagonals unit length",
+    "exact_squared_distances_in_quadratic_field": 10,
+    "projectively_consistent_four_point_windows": 5,
+    "shared_triple_marginals": 10,
+    "five_point_marginal_extension_gap": "1/2",
+    "five_point_graph_chromatic_number": 3
   },
-  "scope": "Four-site moment lift for arbitrary equal-mean Bernoulli indicators, four-site overlap counterexample, abstract five-site obstruction. DOES NOT establish a globally projective order-four five-color law or a Euclidean plane NON6 witness.",
+  "scope": "Four-site moment lift for arbitrary equal-mean Bernoulli indicators, four-site overlap counterexample, abstract five-site obstruction. DOES NOT establish a globally projective order-four five-color law or a Euclidean plane NON6 witness. Exact unit-geometry five-vertex C5 example: all subsets of size <=4 have a common projective 5-color law with prescribed pair q, but no five-site law with those q. This graph is 3-colorable; this is not a chromatic obstruction.",
   "full_make_check_rerun": false,
   "new_lean_formalization": false,
   "hn_exact_6_or_7_solved": false
