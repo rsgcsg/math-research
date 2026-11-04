@@ -1,0 +1,28 @@
+name: Coupling-four exact verification
+on:
+  push:
+    branches:
+      - research/four-site-coupling-20261104
+    paths:
+      - research/verify_four_site_partition_lift.py
+      - docs/proofs/four_site_partition_lift_20261104.md
+      - .github/workflows/verify-four-site-coupling.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Check exact polytope and coupling examples
+        run: python3 -S research/verify_four_site_partition_lift.py
+      - name: Require assertion checks
+        run: |
+          if python3 -O -S research/verify_four_site_partition_lift.py > /tmp/check-optimized.log 2>&1; then
+            echo "unexpected optimized pass"; exit 1
+          fi
+          grep "Verification requires assertions" /tmp/check-optimized.log
+      - name: Static repository integration
+        run: python3 -S research/check_integration.py
