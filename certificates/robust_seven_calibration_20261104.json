@@ -1,0 +1,61 @@
+{
+  "schema": "hn_robust_seven_geometry_20261104_v1",
+  "status": "PASS_TARGETED_GITHUB_ACTIONS_AND_LOCAL_FRACTION_REPLAY",
+  "workflow": {
+    "id": 41844878326,
+    "source_sha": "e061c47537447da862c372e136779340b4a03459",
+    "url": "https://github.com/rsgcsg/math-research/actions/runs/41844878326",
+    "exact_make_target": "success",
+    "optimized_mode_rejection": "success",
+    "static_integration": "success"
+  },
+  "hexagonal_tiling": {
+    "modular_color": "m - 2*n modulo 7",
+    "center_lattice_index": 7,
+    "ring_counts": {
+      "1": 6,
+      "2": 12,
+      "3": 18,
+      "4": 24
+    },
+    "third_ring_minimum_squared_distance_in_side_length_units": 7,
+    "robust_symmetric_halfwidth": "(sqrt(7)-2)/(sqrt(7)+2)",
+    "triangular_grid_square_chromatic_number": 7
+  },
+  "one_dimensional_exact_checks": [
+    {
+      "epsilon": "1/4",
+      "shortest_odd_cycle": 5
+    },
+    {
+      "epsilon": "1/5",
+      "shortest_odd_cycle": 5
+    },
+    {
+      "epsilon": "1/10",
+      "shortest_odd_cycle": 11
+    },
+    {
+      "epsilon": "1/21",
+      "shortest_odd_cycle": 21
+    },
+    {
+      "epsilon": "1/50",
+      "shortest_odd_cycle": 51
+    },
+    {
+      "epsilon": "1/101",
+      "shortest_odd_cycle": 101
+    },
+    {
+      "epsilon": "1/1000",
+      "shortest_odd_cycle": 1001
+    }
+  ],
+  "external_input": "Voronov, arXiv:2304.10163, proves any nonempty near-unit distance interval requires >=7 plane colors; this is NOT verified by this finite script.",
+  "written_proofs": "docs/proofs/robust_seven_hexagonal_limit_20261104.md",
+  "scope": "Exact finite hexagon arithmetic and 1D odd-cycle witnesses were tested. Infinite planar seven-robustness lower bound uses external Voronov theorem. N_7(epsilon) compactness equivalence is written proof. No 6-vs-7 result.",
+  "full_make_check_executed": false,
+  "new_results_lean_formalized": false,
+  "exact_plane_chromatic_number_decided": false
+}
