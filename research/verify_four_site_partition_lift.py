@@ -135,6 +135,23 @@ def canonical_triple_failure():
 def planar_unit_pentagon_projective_four_law():
     # Scale a regular pentagon until its long diagonals are length one.
     # Then i,j are unit-adjacent precisely for indices separated by 2.
+    # Independently certify the ten actual squared point distances in
+    # the field Q(sqrt(5)). Long diagonal squared = 1 by chosen scaling.
+    one=(Q(1),Q(0))
+    cos72=(Q(-1,4),Q(1,4))
+    cos144=(Q(-1,4),Q(-1,4))
+    def sub(a,b):
+        return (a[0]-b[0],a[1]-b[1])
+    def div(a,b):
+        den=b[0]*b[0]-5*b[1]*b[1]
+        need(den != 0, "quadratic denominator")
+        return ((a[0]*b[0]-5*a[1]*b[1])/den,
+                (a[1]*b[0]-a[0]*b[1])/den)
+    for i,j in combinations(range(5),2):
+        c=cos72 if ((i-j)%5 in (1,4)) else cos144
+        squared=div(sub(one,c),sub(one,cos144))
+        expected=(Q(3,2),Q(-1,2)) if c==cos72 else one
+        need(squared==expected,"exact unit pentagon squared distance")
     def unit(i, j):
         return (i-j) % 5 in (2,3)
     source = {(0,0,0,0,0):Q(3,8)}
@@ -177,6 +194,7 @@ def planar_unit_pentagon_projective_four_law():
     need(len(triple_laws)==10,"all ten triples")
     return {
         "true_unit_edges":5,
+        "exact_quadratic_field_squared_distance_tests":10,
         "short_side_squared":"(3-sqrt(5))/2",
         "binary_source_singleton_marginal":"1/4",
         "compatible_four_site_windows":5,
