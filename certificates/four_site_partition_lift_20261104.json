@@ -1,0 +1,39 @@
+{
+  "schema": "hn_four_site_coupling_20261104",
+  "status": "PASS_SCOPED_CHECKS",
+  "verified_at_date": "2026-11-04",
+  "workflow_run_id": 41840432042,
+  "workflow_run_url": "https://github.com/rsgcsg/math-research/actions/runs/41840432042",
+  "workflow_head_sha": "c967aff7230879b54867fa4f2e898e882707d8dd",
+  "workflow_steps": {
+    "exact_python_standard_library": "success",
+    "optimized_mode_failure_guard": "success",
+    "static_integration": "success",
+    "standard_makefile_target": "success"
+  },
+  "certificate": {
+    "four_site_partitions": 15,
+    "full_rank_six_vertex_candidates": 4635,
+    "facet_count": 22,
+    "facet_types": {
+      "nonnegative": 6,
+      "transitivity_triangle": 12,
+      "star": 4
+    },
+    "binary_pointwise_checks": 352,
+    "five_site_partitions": 52,
+    "abstract_pentagon_gap": "1/2",
+    "forced_four_site_triple_coalescence": "1/3",
+    "canonical_three_site_choice": "0",
+    "five_point_actual_unit_graph": "regular pentagon with index-difference-2 diagonals unit length",
+    "exact_squared_distances_in_quadratic_field": 10,
+    "projectively_consistent_four_point_windows": 5,
+    "shared_triple_marginals": 10,
+    "five_point_marginal_extension_gap": "1/2",
+    "five_point_graph_chromatic_number": 3
+  },
+  "scope": "Four-site moment lift for arbitrary equal-mean Bernoulli indicators, four-site overlap counterexample, abstract five-site obstruction. DOES NOT establish a globally projective order-four five-color law or a Euclidean plane NON6 witness. Exact unit-geometry five-vertex C5 example: all subsets of size <=4 have a common projective 5-color law with prescribed pair q, but no five-site law with those q. This graph is 3-colorable; this is not a chromatic obstruction. The direct standalone checker and make check-four-site-coupling both passed on the workflow-head source. This is not the full make check suite.",
+  "full_make_check_rerun": false,
+  "new_lean_formalization": false,
+  "hn_exact_6_or_7_solved": false
+}
