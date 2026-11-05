@@ -1,0 +1,49 @@
+name: Verify rational near-unit seven-chromatic grid
+on:
+  push:
+    branches: [research/quantitative-robust-seven-grid-20261105]
+    paths:
+      - research/verify_robust_grid_seven.py
+      - docs/proofs/finite_robust_seven_grid_and_stress.md
+      - certificates/robust_grid_seven_20261105.json
+      - Makefile
+      - .github/workflows/verify-robust-grid-seven.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Rebuild grid and exact seven-color witness
+        run: |
+          make check-robust-grid-seven > /tmp/robust-grid-make.log
+          python3 -S research/verify_robust_grid_seven.py > /tmp/robust-grid-replay.json
+      - name: Check pinned counts and canonical hashes
+        run: |
+          python3 - <<'PY'
+          import json
+          x=json.load(open('/tmp/robust-grid-replay.json'))
+          r=json.load(open('certificates/robust_grid_seven_20261105.json'))['exact_grid']
+          assert x['status']=='PASS_EXACT_FINITE_RECONSTRUCTION'
+          for a,b in [('vertices','vertex_count'),('edges','edge_count'),
+                      ('oriented_offset_types','oriented_offset_types')]:
+              assert x[a]==r[b],(a,x[a],r[b])
+          assert len(x['distinct_forbidden_squared_integer_offsets'])==r['distinct_edge_lengths']
+          assert x['edge_counts_by_squared_offset']==r['edge_counts_by_squared_offset']
+          assert x['edges_sha256']==r['edge_sha256']
+          assert x['color_word_sha256']==r['color_sha256']
+          assert x['contains_no_exact_unit_edges'] is True
+          assert x['plane_chromatic_six_or_seven_decided'] is False
+          print('RECEIPT_HASHES_PASS')
+          PY
+      - name: Refuse optimized mode
+        run: |
+          if python3 -O -S research/verify_robust_grid_seven.py > /tmp/grid-optimized.log 2>&1; then
+            echo 'optimized Python was unexpectedly accepted'; exit 1
+          fi
+          grep 'Certificate requires non-optimized Python' /tmp/grid-optimized.log
+      - name: Repository static integration
+        run: python3 -S research/check_integration.py
