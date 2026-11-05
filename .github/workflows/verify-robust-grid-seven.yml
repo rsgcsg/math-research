@@ -18,7 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Rebuild grid and exact seven-color witness
-        run: make check-robust-grid-seven > /tmp/robust-grid-replay.json
+        run: |
+          make check-robust-grid-seven > /tmp/robust-grid-make.log
+          python3 -S research/verify_robust_grid_seven.py > /tmp/robust-grid-replay.json
       - name: Check pinned counts and canonical hashes
         run: |
           python3 - <<'PY'
