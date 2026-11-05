@@ -63,6 +63,43 @@ def hex_color(point, h, side):
     return (m-2*n)%7
 
 
+
+def wheel_equilibrium_stress_check():
+    """Exact Q(sqrt(3)) six-triangle wheel, with signed rim/spoke stress."""
+    # Pairs (x,y) represent (x, sqrt(3)*y) in the Euclidean plane.
+    P=[(Q(0),Q(0)),(Q(1),Q(0)),(Q(1,2),Q(1,2)),
+       (Q(-1,2),Q(1,2)),(Q(-1),Q(0)),
+       (Q(-1,2),Q(-1,2)),(Q(1,2),Q(-1,2))]
+    E=[(0,j,Q(-1)) for j in range(1,7)]
+    E += [(j, j+1 if j<6 else 1, Q(1)) for j in range(1,7)]
+    need(len(E)==12,'wheel edge count')
+    def square_length(a,b):
+        return (a[0]-b[0])**2 + 3*(a[1]-b[1])**2
+    force=[[Q(0),Q(0)] for _ in P]
+    for i,j,w in E:
+        need(square_length(P[i],P[j])==1,'wheel actual unit edge')
+        for coord in (0,1):
+            v=w*(P[i][coord]-P[j][coord])
+            force[i][coord]+=v
+            force[j][coord]-=v
+    need(all(a==b==0 for a,b in force),'not equilibrium')
+    # The exact quadratic stress identity works for an arbitrary perturbation.
+    t=Q(1,10)
+    moved=[(P[0][0]+t,P[0][1])]+P[1:]
+    lhs=sum(w*(square_length(moved[i],moved[j])
+               -square_length(P[i],P[j])) for i,j,w in E)
+    rhs=sum(w*square_length(
+        (moved[i][0]-P[i][0],moved[i][1]-P[i][1]),
+        (moved[j][0]-P[j][0],moved[j][1]-P[j][1]))
+        for i,j,w in E)
+    need(lhs==rhs==Q(-3,50),'wheel stress quadratic identity')
+    return {'wheel_vertices':7,'exact_unit_edges':12,
+            'all_forces_zero':True,'signed_stress_rim':1,
+            'signed_stress_spoke':-1,
+            'quadratic_perturbation_value':str(lhs)}
+
+
+
 def verify():
     if not __debug__:
         raise RuntimeError('Certificate requires non-optimized Python')
@@ -148,6 +185,7 @@ def verify():
         'exact_unit_7critical_min_vertices':17,
         'exact_unit_7critical_stress_lower':'n+3',
         'nearunit_grid_framework_stress_dim_lower':stress_lower,
+        'exact_rational_wheel_equilibrium_calibration':wheel_equilibrium_stress_check(),
         'full_make_check_replayed':False,
         'new_lean_formalization':False,
         'plane_chromatic_six_or_seven_decided':False,
