@@ -133,6 +133,7 @@ def verify():
     counts=Counter(colors.values())
     need(len(counts)==7,'seven colors not present')
     degrees=Counter()
+    radial_counts=Counter()
     edge_count=0
     edge_digest=sha256()
     for i,j in points:
@@ -141,11 +142,14 @@ def verify():
             if v not in point_set:
                 continue
             edge_count+=1
+            radial_counts[di*di+dj*dj]+=1
             need(colors[(i,j)]!=colors[v],'seven-color edge conflict')
             degrees[(i,j)]+=1
             degrees[v]+=1
             edge_digest.update(f'{i},{j};{v[0]},{v[1]}\n'.encode())
     need(edge_count==324126,'edge count')
+    need(sum(radial_counts.values())==edge_count and
+         sorted(radial_counts)==sqnorms,'radial accounting')
     need(sum(degrees.values())==2*edge_count,'degree sum')
     need(min(degrees.values())==94 and max(degrees.values())==212,
          'degree extrema')
@@ -171,6 +175,7 @@ def verify():
         'vertices':len(points),
         'edges':edge_count,
         'oriented_offset_types':len(steps),
+        'edge_counts_by_squared_offset':{str(q):radial_counts[q] for q in sqnorms},
         'distinct_forbidden_squared_integer_offsets':sqnorms,
         'edge_distance_formula':'(7/80)*sqrt(q) for q in offset norms',
         'contains_no_exact_unit_edges':True,
