@@ -32,6 +32,7 @@ jobs:
                       ('oriented_offset_types','oriented_offset_types')]:
               assert x[a]==r[b],(a,x[a],r[b])
           assert len(x['distinct_forbidden_squared_integer_offsets'])==r['distinct_edge_lengths']
+          assert x['edge_counts_by_squared_offset']==r['edge_counts_by_squared_offset']
           assert x['edges_sha256']==r['edge_sha256']
           assert x['color_word_sha256']==r['color_sha256']
           assert x['contains_no_exact_unit_edges'] is True
