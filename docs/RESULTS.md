@@ -4,6 +4,7 @@
 |---|---|---|
 | R2026-R7-GRID-A | 使用Voronov 2025闭覆盖圆盘定理，构造所有0<ε≤1/8的有理ε-近单位有限图χ=7，显式n≤(2ceil(30/(7ε)+5/7)+1)² | [书面推导](proofs/finite_robust_seven_grid_and_stress.md)；下界依赖外部Theorem1.3，不能移除该输入 |
 | R2026-R7-GRID-B | ε=1/8的具体有理平面图有3853点、324126条边、25种非单位边长、精确七色词；**没有一条恰好单位边** | [纯分数和Q(√3)逐边检查器](../research/verify_robust_grid_seven.py)、[校准收据](../certificates/robust_grid_seven_20261105.json)；不构成精确NON6单位图 |
+| R2026-R7-GRID-E | 任意等距不变六色law在显式25个非单位半径上满足Σm_q P(r_q)≥1；统一构造给sup_{|r−1|≤ε}P(r)≥(10976/17878795)ε³ | [构造及有限冲突计数证明](proofs/finite_robust_seven_grid_and_stress.md)、[25个精确边数](../certificates/robust_grid_seven_20261105.json)；不推出P(1)>0，不是原6/7终局 |
 | R2026-R7-GRID-C | 精确平面单位k-critical图n≥C(k−1,2)+2，七临界图必须n≥17、m≥3n、自应力维数≥n+3；应力给出任意精确单位化的二次移动下界 | [完整图论/刚性证明](proofs/finite_robust_seven_grid_and_stress.md)；必要条件不是足够条件，未解决χ(R²)=6/7 |
 
 ## 2026-11-04新增R2026-ROBUST7（非原问题终局）
