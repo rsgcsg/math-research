@@ -1,6 +1,6 @@
 {
   "schema": "hn-robust-grid-seven-v1",
-  "status": "PASS_LOCAL_EXACT_ARITHMETIC_PENDING_REMOTE_REPLAY",
+  "status": "PASS_EXACT_WITH_EXTERNAL_CLOSED_COVER_DEPENDENCY_PENDING_FINAL_REMOTE_REPLAY",
   "date": "2026-11-05",
   "external_theorem": {
     "author": "Vsevolod Voronov",
@@ -27,7 +27,34 @@
     ],
     "seven_color_hexagon_side": "3/7",
     "edge_sha256": "7cd85cae90a207825b2e019b19364286f5219073c0dd2af8d6715ae3558aa140",
-    "color_sha256": "8f8c8c6ce22b644ed71d33df959ce0a1c3ef190ee525ced72cabe37b64100b66"
+    "color_sha256": "8f8c8c6ce22b644ed71d33df959ce0a1c3ef190ee525ced72cabe37b64100b66",
+    "edge_counts_by_squared_offset": {
+      "100": 18934,
+      "101": 12616,
+      "104": 12572,
+      "106": 12528,
+      "109": 12496,
+      "113": 12440,
+      "116": 12404,
+      "117": 12384,
+      "121": 6184,
+      "122": 12344,
+      "125": 24592,
+      "128": 6122,
+      "130": 24456,
+      "136": 12148,
+      "137": 12144,
+      "144": 6046,
+      "145": 24120,
+      "146": 12040,
+      "148": 12028,
+      "149": 12000,
+      "153": 11968,
+      "157": 11912,
+      "160": 11884,
+      "162": 5928,
+      "164": 11836
+    }
   },
   "general_bound": "n(epsilon) <= (2 ceil(30/(7epsilon)+5/7)+1)^2, for 0<epsilon<=1/8",
   "exact_unit_chromatic7_critical_necessary": {
@@ -39,5 +66,7 @@
   "full_make_check_rerun": false,
   "six_sat_unsat_replayed": false,
   "exact_hadwiger_nelson_six_or_seven_solved": false,
-  "scope": "Finite graph seven-chromatic lower from named EXTERNAL CLOSED-COVER theorem, upper by explicit exact checked coloring. No finite 7-chromatic unit-distance graph."
+  "scope": "Finite graph seven-chromatic lower from named EXTERNAL CLOSED-COVER theorem, upper by explicit exact checked coloring. No finite 7-chromatic unit-distance graph.",
+  "six_color_isometry_invariant_law_inequality": "sum_{q in S} m_q P((7/80)*sqrt(q)) >= 1, hence max P >= 1/324126",
+  "uniform_cubic_pressure": "sup_{|r-1|<=epsilon} P(r) >= (10976/17878795)*epsilon^3 for 0<epsilon<=1/8"
 }
