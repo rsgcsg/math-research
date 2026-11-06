@@ -50,11 +50,25 @@ def reported_parts_upper():
             'general_formula':'a_q <= 2*hole_density/q'}
 
 
+def robust_mixing_tradeoff():
+    r = F(3,20)
+    coefficient_over_sqrt3 = r**3*F(25,224*6)
+    checked(coefficient_over_sqrt3 == F(9,143360), 'rigorous hex star overlap constant')
+    checked(F(3,20)**2 * F(25,16*6) == F(3,512), 'monochromatic majority threshold coefficient')
+    checked(F(3,20)**3/F(16) == F(27,128000), 'per star angular/area bad mass coefficient over pi')
+    return {'star_n':7,'inradius_ball_radius':'3/20',
+            'max_overcount':7,
+            'strong_mixing_threshold':'3*pi/(512*sqrt(3))',
+            'unnormalized_energy_contribution_per_uncovered_star':'27*pi/128000',
+            'normalized_tradeoff_coefficient':'9/(143360*sqrt(3))'}
+
+
 def main():
     result={'status':'PASS',
             'scope':'toy finite exact math only; no proof of six/seven or continuum integration',
             'odd_cycles':[odd_cycle(n) for n in (3,5,7,9)],
             'parts_partial_tiling_conversion':reported_parts_upper(),
+            'robust_energy_mixing_tradeoff':robust_mixing_tradeoff(),
             'square_seam':[x for x in seam_ratios()],
             'periodization_boundary_formula':'4/L - 4/L^2',
             'thermodynamic_limit_claim':'mathematical written proof, not executable finite validation'}
