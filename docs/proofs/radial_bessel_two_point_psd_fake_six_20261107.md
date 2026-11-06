@@ -1,5 +1,8 @@
 # R2026-BESSEL-PAIR-NOGO：四、五、六标签均有完整非负且PSD的单位边二点伪着色
 
+> **2026-11-07 仓库历史去重审计（优先）：**本页的Bessel二点伪着色及三点Hamming不等式反例，**2026-11-03已经在[plane_coupled_moment_bridge_20261103.md](plane_coupled_moment_bridge_20261103.md)的R2026-MOMENT-B/D/E证明**；旧报告更强，还严格分类全部q≥4可行而q≤3不可行，并给不同尺度0,h,2h的有理三点违反，以及D(r)≥1/ceil(1/r)。本页没有新的数学优先权或新的χ7进展，只是以t=1/4,1/2给另一个完全有理的独立交叉核验及校验器。不能作为一条新独立研究分支累计成果。外部Sawin 2026的标量Bessel SDP松弛另见旧报告的原始来源。原始6/7问题仍开放。
+
+
 2026-11-07。状态：**严格二点松弛反例与路线退出证书，不是平面普通四色、五色或六色染色，也不是χ=7证明。**衔接本仓库 full15_joint_event_theory、R2026-POTTS-GAP、R2026-LOCAL-RADIUS；外部背景为Oliveira Filho–Vallentin、Bachoc、Ambrus等的旋转对称谱/二点矩界、以及OpenAI Family158已经严格证明普通χ≥6。
 
 ## 1. 初等Bessel频率的全局最小值
