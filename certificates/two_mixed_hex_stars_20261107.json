@@ -1,0 +1,103 @@
+{
+  "result": "PASS",
+  "scope": "14 exact disk inclusions; measurable Fubini and six-color contradiction are written proof only",
+  "sqrt3_certified_interval": [
+    "433/250",
+    "1733/1000"
+  ],
+  "probe_disk_radius": "1/250",
+  "mixed_threshold_fraction": "1/62500",
+  "minimum_mixed_cells_per_seven_star": 2,
+  "asymptotic_density_lower": "2/7",
+  "probabilistic_core_inequality": "pi>36sqrt(3)/25",
+  "central_and_neighbor_probes": [
+    {
+      "probe": "central",
+      "radius": "1/250",
+      "source_vertical_margin_lower": "214/625",
+      "source_slanted_margin_lower": "856/2165",
+      "six_arrows_unit_and_interior": "PASS",
+      "targets": [
+        {
+          "target": 1,
+          "vertical_margin_lower": "22/625",
+          "slanted_margin_lower": "472/2165"
+        },
+        {
+          "target": 2,
+          "vertical_margin_lower": "118/625",
+          "slanted_margin_lower": "34811/866000"
+        },
+        {
+          "target": 3,
+          "vertical_margin_lower": "118/625",
+          "slanted_margin_lower": "34811/866000"
+        },
+        {
+          "target": 4,
+          "vertical_margin_lower": "22/625",
+          "slanted_margin_lower": "472/2165"
+        },
+        {
+          "target": 5,
+          "vertical_margin_lower": "118/625",
+          "slanted_margin_lower": "34811/866000"
+        },
+        {
+          "target": 6,
+          "vertical_margin_lower": "118/625",
+          "slanted_margin_lower": "34811/866000"
+        }
+      ]
+    },
+    {
+      "probe": "neighbor",
+      "radius": "1/250",
+      "source_vertical_margin_lower": "723/2500",
+      "source_slanted_margin_lower": "1579/4330",
+      "six_arrows_unit_and_interior": "PASS",
+      "targets": [
+        {
+          "target": 0,
+          "vertical_margin_lower": "139/63125",
+          "slanted_margin_lower": "206/218665"
+        },
+        {
+          "target": 2,
+          "vertical_margin_lower": "16327/65000",
+          "slanted_margin_lower": "2211/112580"
+        },
+        {
+          "target": 3,
+          "vertical_margin_lower": "111/500",
+          "slanted_margin_lower": "489/2165"
+        },
+        {
+          "target": 4,
+          "vertical_margin_lower": "23/2500",
+          "slanted_margin_lower": "879/4330"
+        },
+        {
+          "target": 5,
+          "vertical_margin_lower": "111/500",
+          "slanted_margin_lower": "489/2165"
+        },
+        {
+          "target": 6,
+          "vertical_margin_lower": "16327/65000",
+          "slanted_margin_lower": "2211/112580"
+        }
+      ]
+    }
+  ],
+  "pairwise_majority": {
+    "centroid_distance_types": "2sqrt(3)/5,6/5,4sqrt(3)/5",
+    "pair_inball_radius": "3/20",
+    "pair_inball_margin_lower": [
+      "107/2500",
+      "241/2500",
+      "2/625"
+    ],
+    "pair_same_color_dominance_impossible_at_eta": "1/62500"
+  }
+}
