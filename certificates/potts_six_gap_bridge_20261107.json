@@ -42,6 +42,14 @@
     "upper_in_decimal": "0.000047672403"
   },
   "periodization_boundary_formula": "4/L - 4/L^2",
+  "robust_energy_mixing_tradeoff": {
+    "inradius_ball_radius": "3/20",
+    "max_overcount": 7,
+    "normalized_tradeoff_coefficient": "9/(143360*sqrt(3))",
+    "star_n": 7,
+    "strong_mixing_threshold": "3*pi/(512*sqrt(3))",
+    "unnormalized_energy_contribution_per_uncovered_star": "27*pi/128000"
+  },
   "scope": "toy finite exact math only; no proof of six/seven or continuum integration",
   "square_seam": [
     {
