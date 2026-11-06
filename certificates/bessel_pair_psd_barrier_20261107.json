@@ -41,5 +41,13 @@
       "same_site_single_color_probability": "1/6",
       "scope": "rational identity check only; actual m is min J0"
     }
-  ]
+  ],
+  "three_site_triangle_gap": {
+    "sites": "0,h,2h collinear; |h|=1/(4*t_star)",
+    "J0_one_quarter_gt": "63/64",
+    "J0_one_half_lt": "961/1024",
+    "two_J0_quarter_minus_J0_half_minus_one_gt": "31/1024",
+    "gap_for_any_q_ge_4_gt": "31/(1024*(1-m))",
+    "result": "three point joint consistency impossible for this pairwise kernel"
+  }
 }
