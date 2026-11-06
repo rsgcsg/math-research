@@ -74,5 +74,28 @@
     }
   ],
   "status": "PASS",
-  "thermodynamic_limit_claim": "mathematical written proof, not executable finite validation"
+  "thermodynamic_limit_claim": "mathematical written proof, not executable finite validation",
+  "critical_graph_edge_minmax_calibration": [
+    {
+      "q": 2,
+      "abstract_graph": "K3",
+      "edge_count": 3,
+      "beta_q_exact": "1/3",
+      "every_edge_can_be_unique_bad_edge": true
+    },
+    {
+      "q": 3,
+      "abstract_graph": "K4",
+      "edge_count": 6,
+      "beta_q_exact": "1/6",
+      "every_edge_can_be_unique_bad_edge": true
+    },
+    {
+      "q": 4,
+      "abstract_graph": "K5",
+      "edge_count": 10,
+      "beta_q_exact": "1/10",
+      "every_edge_can_be_unique_bad_edge": true
+    }
+  ]
 }
