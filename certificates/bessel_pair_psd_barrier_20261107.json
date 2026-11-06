@@ -1,0 +1,45 @@
+{
+  "result": "PASS",
+  "scope": "exact rational calibration only, no HN=7 proof or global Bessel minimum computation",
+  "bessel_bound": {
+    "even_partial_sum_n6": "-803/2025",
+    "strictly_below_minus_one_third": true,
+    "first_omitted_sign": "negative",
+    "logic": "alternating decreasing tail implies J0(4) < partial"
+  },
+  "color_pair_kernels": [
+    {
+      "q": 4,
+      "algebraic_test_m": "-2/5",
+      "spectral_constant_weight": "1/21",
+      "spectral_circle_weight": "20/21",
+      "unit_rho": "-1/3",
+      "unit_equal_color_prob": "0",
+      "unit_unequal_pair_prob": "1/12",
+      "same_site_single_color_probability": "1/4",
+      "scope": "rational identity check only; actual m is min J0"
+    },
+    {
+      "q": 5,
+      "algebraic_test_m": "-2/5",
+      "spectral_constant_weight": "3/28",
+      "spectral_circle_weight": "25/28",
+      "unit_rho": "-1/4",
+      "unit_equal_color_prob": "0",
+      "unit_unequal_pair_prob": "1/20",
+      "same_site_single_color_probability": "1/5",
+      "scope": "rational identity check only; actual m is min J0"
+    },
+    {
+      "q": 6,
+      "algebraic_test_m": "-2/5",
+      "spectral_constant_weight": "1/7",
+      "spectral_circle_weight": "6/7",
+      "unit_rho": "-1/5",
+      "unit_equal_color_prob": "0",
+      "unit_unequal_pair_prob": "1/30",
+      "same_site_single_color_probability": "1/6",
+      "scope": "rational identity check only; actual m is min J0"
+    }
+  ]
+}
