@@ -19,7 +19,8 @@
       "(7-sqrt(33))/22",
       "9/11"
     ],
-    "local_unit_disk_3_palette_missing_fraction_lower_exact": "(1-3/sqrt(11))^2/7"
+    "local_unit_disk_3_palette_missing_fraction_lower_exact": "(1-3/sqrt(11))^2/7",
+    "every_vertex_deletion_three_colorable": true
   },
   "five_chromatic_graph_tradeoffs": [
     {
