@@ -1,0 +1,31 @@
+name: Exact near-unit geometry and collision stability
+on:
+  push:
+    branches: [research/robust-unit-homomorphism-20261106]
+    paths:
+      - research/verify_near_unit_graph_stability.py
+      - docs/proofs/near_unit_graph_stability_and_collisions_20261106.md
+      - .github/workflows/verify-near-unit-stability.yml
+      - Makefile
+      - docs/CURRENT.md
+      - docs/RESULTS.md
+      - docs/ROUTES.md
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Exact rational and quadratic arithmetic
+        run: make check-near-unit-stability
+      - name: Reject optimized Python
+        run: |
+          if python3 -O -S research/verify_near_unit_graph_stability.py >/tmp/stability-O.log 2>&1; then
+            echo "optimized mode incorrectly accepted"; exit 1
+          fi
+          grep "non-optimized Python required" /tmp/stability-O.log
+      - name: Static integration
+        run: python3 -S research/check_integration.py

@@ -1,0 +1,38 @@
+{
+  "schema": "hn_near_unit_stability_20261106_v1",
+  "status": "PASS_TARGETED_GITHUB_ACTIONS",
+  "date": "2026-11-06",
+  "source_workflow": {
+    "id": 42167182957,
+    "source_sha": "cf82b819dc4eacd4c30d9fdcee7124bf61bd1476",
+    "url": "https://github.com/rsgcsg/math-research/actions/runs/42167182957",
+    "steps": [
+      "Exact rational and quadratic arithmetic: success",
+      "Optimized mode reject: success",
+      "Static integration: success"
+    ]
+  },
+  "k4": {
+    "sharp_max_over_min_distance_ratio": "sqrt(2)",
+    "sharp_symmetric_halfwidth": "3-2*sqrt(2)",
+    "equality_witness": "square of side 2*sqrt(2)-2",
+    "integer_grid_four_point_samples": 12650,
+    "forbidden_in_classic_hex_safety_band": true
+  },
+  "k23": {
+    "exact_injective_unit_realization": false,
+    "injective_epsilon_realizations_for_all_positive_epsilon": true,
+    "noninjective_unit_homomorphism": true,
+    "perturbation_scales": [
+      "1/5",
+      "1/10",
+      "1/20",
+      "1/100",
+      "1/1000"
+    ]
+  },
+  "scope": "Written complete finite-point compactness proof and sharp Euclidean K4/K2,3 geometry. CI independently checked exact finite rational/quadratic algebra only. General homomorphism theorem not Lean formalized.",
+  "full_make_check_executed": false,
+  "exact_plane_chromatic_number_decided": false,
+  "finite_non6_unit_graph_found": false
+}
