@@ -26,7 +26,6 @@ def prove_constants():
     need(y2==F(1241,2304) and y2>F(1,4),"height lower bound")
     need(F(4,9)+F(64,9)==F(68,9) and F(68,9)<36,
          "same-side pair separation")
-    need(F(1,7)<F(3)-F(20,7),"intentionally impossible") if False else None
     return {"epsilon_upper":"1/16","height_sq_lower":"1241/2304",
             "distance_sq_coefficient":"68/9","collision_bound":"6*sqrt(epsilon)"}
 
