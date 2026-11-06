@@ -10,6 +10,8 @@ on:
       - docs/CURRENT.md
       - docs/RESULTS.md
       - docs/ROUTES.md
+      - references/LITERATURE_MAP.md
+      - certificates/seven_port_structure_20261106.json
   workflow_dispatch:
 permissions:
   contents: read
