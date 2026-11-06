@@ -64,9 +64,29 @@ def verify_q(q):
             "scope":"rational identity check only; actual m is min J0"}
 
 
+def verify_three_site_hamming_triangle_gap():
+    # Rigorous exact alternating-series bounds at s=1/4 and 2s=1/2.
+    j_small_lower = 1 - F(1,4)**2/F(4)
+    j_double_upper = 1 - F(1,2)**2/F(4) + F(1,2)**4/F(64)
+    require(j_small_lower == F(63,64), "J0(1/4) strict lower")
+    require(j_double_upper == F(961,1024), "J0(1/2) strict upper")
+    gap_numerator_lower = 2*j_small_lower-j_double_upper-1
+    require(gap_numerator_lower == F(31,1024) and gap_numerator_lower>0,
+            "strict Hamming triangle inequality violation")
+    # In the actual kernel, h=1/(4*t_star), and the gap is
+    # (2*J0(1/4)-J0(1/2)-1)/(1-m)>31/[1024*(1-m)].
+    return {"sites":"0,h,2h collinear; |h|=1/(4*t_star)",
+            "J0_one_quarter_gt":str(j_small_lower),
+            "J0_one_half_lt":str(j_double_upper),
+            "two_J0_quarter_minus_J0_half_minus_one_gt":str(gap_numerator_lower),
+            "gap_for_any_q_ge_4_gt":"31/(1024*(1-m))",
+            "result":"three point joint consistency impossible for this pairwise kernel"}
+
+
 if __name__=="__main__":
     print(json.dumps({"result":"PASS",
                       "scope":"exact rational calibration only, no HN=7 proof or global Bessel minimum computation",
                       "bessel_bound":verify_taylor(),
-                      "color_pair_kernels":[verify_q(q) for q in (4,5,6)]},
+                      "color_pair_kernels":[verify_q(q) for q in (4,5,6)],
+                      "three_site_triangle_gap":verify_three_site_hamming_triangle_gap()},
                      sort_keys=True, indent=2))
