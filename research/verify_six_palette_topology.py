@@ -91,11 +91,32 @@ def verify_circle_words():
             "example":[0,1,2,0,1,2]}
 
 
+
+def verify_seven_skeleton():
+    edges = list(combinations(range(7), 2))
+    triangles = list(combinations(range(7), 3))
+    tetrahedra = list(combinations(range(7), 4))
+    eindex = {e: j for j, e in enumerate(edges)}
+    tindex = {t: j for j, t in enumerate(triangles)}
+    d2 = [sum(1 << eindex[e] for e in combinations(t, 2)) for t in triangles]
+    d3 = [sum(1 << tindex[t] for t in combinations(T, 3)) for T in tetrahedra]
+    require(gf2_rank(d2) == 15, "seven-label rank d2 should be 15")
+    require(gf2_rank(d3) == 20, "seven-label rank d3 should be 20")
+    for tetra in d3:
+        edge_boundary = 0
+        for j, face in enumerate(d2):
+            if tetra & (1 << j):
+                edge_boundary ^= face
+        require(edge_boundary == 0, "boundary d2*d3 is nonzero")
+    return {"vertices":7,"edges":21,"triangles":35,"tetrahedra":35,
+            "rank_d2_mod2":15,"rank_d3_mod2":20,
+            "betti_1_over_Q":0,"betti_2_over_Q":0,"betti_3_over_Q":15}
+
 def main():
     print(json.dumps({"claim":"six palette topology finite calibration",
                       "scope":"not a proof of plane chi=7 or of weak measurable transfer",
                       "annulus": verify_annulus(), "circle": verify_circle_words(),
-                      "simplex": verify_topology(), "result":"PASS"}, indent=2, sort_keys=True))
+                      "simplex": verify_topology(), "seven_color_three_skeleton": verify_seven_skeleton(), "result":"PASS"}, indent=2, sort_keys=True))
 
 
 if __name__ == '__main__':
