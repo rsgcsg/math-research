@@ -3,7 +3,8 @@
 | 标识 | 已证明的事实 | 精确限制 |
 | --- | --- | --- |
 | R2026-BESSEL-PAIR-NOGO-A | 对任何q≥4构造\(M_{ij}(h)=1/q²+(\delta_{ij}/q-1/q²)[a+bJ₀(t_*|h|)]\)，其中\(m=\min J₀<-803/2025<-1/3\)、\(b=q/((q-1)(1-m)),a=1-b\)。对所有h均二点非负边缘正确，对任意有限空间点block矩阵PSD，同点δij/q且所有真实单位边Mii=0 | [完整解析证明](proofs/radial_bessel_two_point_psd_fake_six_20261107.md)：**不是真实任何q染色**；q=4就能满足，但已知有限5色必要单位图使其不可能有完整四标签全词joint law。故单独二点谱PSD不能证明χ7 |
-| R2026-BESSEL-PAIR-NOGO-CHECK | \(J₀(4)<-803/2025<-1/3\)通过精确有理交错级数，测试m=−2/5时q=4/5/6混合系数分别(1/21,20/21)、(3/28,25/28)、(1/7,6/7)，同点与单位边二点表归一 | [有限检查](../research/verify_bessel_pair_psd_barrier.py)·[存档](../certificates/bessel_pair_psd_barrier_20261107.json)；m=−2/5只作公式测试，非真实min，全部距离正定用数学证明；无χ7证书 |
+| R2026-BESSEL-PAIR-NOGO-CHECK || R2026-BESSEL-PAIR-NOGO-B | 所有真实平移不变颜色law的不同色率D满足Hamming三角不等式D(h+k)≤D(h)+D(k)，而上述Bessel核q≥4给(D(h)=(1-J₀(t_*|h|))/(1-m))；三点0,h,2h取|h|=1/(4t*)有严格违反量(D(2h)-2D(h)>31/[1024(1-m)]>0)。对真实旋转均匀零针law，有(D(t)ge(1-epsilon)/lceil1/tceil)微尺度变化下界 | [同文§3a](proofs/radial_bessel_two_point_psd_fake_six_20261107.md)，严格简单三点逻辑+有理Bessel余项；只排除**该伪核**，非全部六染 |
+ \(J₀(4)<-803/2025<-1/3\)通过精确有理交错级数，测试m=−2/5时q=4/5/6混合系数分别(1/21,20/21)、(3/28,25/28)、(1/7,6/7)，同点与单位边二点表归一 | [有限检查](../research/verify_bessel_pair_psd_barrier.py)·[存档](../certificates/bessel_pair_psd_barrier_20261107.json)；m=−2/5只作公式测试，非真实min，全部距离正定用数学证明；无χ7证书 |
 | R2026-LOCAL-RADIUS-CRITICAL | 对任何n顶点5-vertex-critical单位图，非负权重w下“恰一顶点使用第五色”的最优minmax残余严格1/n。外部Shukla G773顶点临界，故单图缺四色概率下界不能仅重加权改进 | [完整证明](proofs/local_chromatic_radius_and_four_palette_defect_20261107.md) §4b；仅固定一张图和缺色顶点负担，跨图共享颜色/单位坏针另需全局耦合 |
 
 ## 2026-11-07 R2026-LOCAL-RADIUS：新小圆盘五色图与六色几何最后一步的定量条件界
