@@ -48,7 +48,11 @@ def spindle():
     check(all(norm2(p_sub(pts[i],pts[j]))!=Z for i,j in combinations(range(7),2)),'distinct vertices')
     check(not any(all(labels[i]!=labels[j] for i,j in edges) for labels in product(range(3),repeat=7)),'no 3 coloring')
     check(any(all(labels[i]!=labels[j] for i,j in edges) for labels in product(range(4),repeat=7)),'valid 4 coloring')
+    check(all(any(all(labels[i]!=labels[j] for i,j in edges if i!=v and j!=v)
+                  for labels in product(range(3),repeat=7))
+              for v in range(7)), 'Moser 7-vertex graph is 4-critical')
     return {'vertices':7,'actual_unit_edges':len(edges),'chi':4,
+            'every_vertex_deletion_three_colorable':True,
             'enclosing_radius_exact':'3/sqrt(11)',
             'enclosing_disk_center_exact':['sqrt(3)/2','sqrt(33)/22'],
             'squared_distances_by_vertex':['9/11','(7-sqrt(33))/22','(7+sqrt(33))/22','9/11','(7+sqrt(33))/22','(7-sqrt(33))/22','9/11'],
