@@ -1,3 +1,5 @@
+**历史去重/优先权审计（2026-11-07）：**下述Bessel二点PSD假场、3点Hamming失败及尺度D(t)≥1/ceil(1/t)**全部机制**已在2026-11-03原[ R2026-MOMENT-B/D/E](proofs/plane_coupled_moment_bridge_20261103.md)完整证明。旧论文还证明q≤3的松弛不可能、最低q恰为4。新3点31/1024为**不同参数下的独立精确有理交叉检验**；不应与MOMENT累计为独立进展、未提高普通χ下界。
+
 ## 2026-11-07 R2026-BESSEL-PAIR-NOGO：无限Bessel伪着色阻断所有纯二点PSD路线；R2026-LOCAL-RADIUS顶点临界最优性
 
 | 标识 | 已证明的事实 | 精确限制 |
