@@ -1,3 +1,10 @@
+## 2026-11-07补充：旋转不变二点谱与完整颜色共同law的硬边界
+
+- Fernando Mário de Oliveira Filho, Frank Vallentin, *Fourier analysis, linear programming, and densities of distance avoiding sets in R^n*, J. Eur. Math. Soc. 12 (2010), 1417–1428, https://doi.org/10.4171/JEMS/236 ：经典旋转平均Fourier/Bessel正定核与二点自相关LP。
+- Christine Bachoc, Gabriele Nebe, Fernando Mário de Oliveira Filho, Frank Vallentin, *Lower bounds for measurable chromatic numbers*, Geom. Funct. Anal. 19 (2009), 645–661, https://arxiv.org/abs/0801.1059 ：theta/PSD几何颜色放松的成熟来源。
+- 本仓库[解析反例](../docs/proofs/radial_bessel_two_point_psd_fake_six_20261107.md)严格证明这些**二点非负+任意有限位置PSD约束**即使q=4也有可行伪核；真实图颜色分布需要高阶一致性，不能由2点核构造全点随机过程。这是精确方法失败边界，不宣称新文献优先权。
+- Shukla 2026-11-04, https://arxiv.org/abs/2611.06269 : G773是5-chromatic vertex-critical；本仓库LOCAL-RADIUS§4b由此得到单图缺四色顶点权重的准确minmax最优常数1/773，不能仅给它重加权以推进χ7。
+
 ## 2026-11-07 补充：新紧致5色必要单位距离图及OpenAI终端区域证明接口
 
 - Chandan Shukla, *Small 5-chromatic unit-distance graphs in disks of radius 3/2, 5/4 and 23/20*, arXiv:2611.06269, posted 2026-11-04, https://arxiv.org/abs/2611.06269 。已阅读HTML原文Theorem 1、Table 1、§2–§3以及数据范围：773点3817边开圆半径1.5、5713点25482边开圆半径1.25、8168点41556边开圆半径1.15。原文声明坐标在Q(√3,√5,√11)、有完整DRAT和5色词；本项目尚未下载/复核大型证书。原文§1另引用Polymath16旧图31171点180942边置于闭半径1圆，所以“新纪录”仅是定半径下**顶点数**。
