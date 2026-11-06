@@ -1,0 +1,62 @@
+{
+  "odd_cycles": [
+    {
+      "beta_2_exact": "1/3",
+      "min_bad_edges_for_two_colors": 1,
+      "n_edges": 3,
+      "n_vertices": 3,
+      "number_of_exactly_one_bad_edge_colorings": 6,
+      "symmetric_average_bad_probability_per_edge": "1/3"
+    },
+    {
+      "beta_2_exact": "1/5",
+      "min_bad_edges_for_two_colors": 1,
+      "n_edges": 5,
+      "n_vertices": 5,
+      "number_of_exactly_one_bad_edge_colorings": 10,
+      "symmetric_average_bad_probability_per_edge": "1/5"
+    },
+    {
+      "beta_2_exact": "1/7",
+      "min_bad_edges_for_two_colors": 1,
+      "n_edges": 7,
+      "n_vertices": 7,
+      "number_of_exactly_one_bad_edge_colorings": 14,
+      "symmetric_average_bad_probability_per_edge": "1/7"
+    },
+    {
+      "beta_2_exact": "1/9",
+      "min_bad_edges_for_two_colors": 1,
+      "n_edges": 9,
+      "n_vertices": 9,
+      "number_of_exactly_one_bad_edge_colorings": 18,
+      "symmetric_average_bad_probability_per_edge": "1/9"
+    }
+  ],
+  "periodization_boundary_formula": "4/L - 4/L^2",
+  "scope": "toy finite exact math only; no proof of six/seven or continuum integration",
+  "square_seam": [
+    {
+      "L": 3,
+      "boundary_stripe_upper_fraction": "8/9"
+    },
+    {
+      "L": 4,
+      "boundary_stripe_upper_fraction": "3/4"
+    },
+    {
+      "L": 8,
+      "boundary_stripe_upper_fraction": "7/16"
+    },
+    {
+      "L": 10,
+      "boundary_stripe_upper_fraction": "9/25"
+    },
+    {
+      "L": 100,
+      "boundary_stripe_upper_fraction": "99/2500"
+    }
+  ],
+  "status": "PASS",
+  "thermodynamic_limit_claim": "mathematical written proof, not executable finite validation"
+}
