@@ -36,19 +36,26 @@ def small_unit_graph_barrier():
     for n, u in enumerate(UNIT_MAX_1_TO_21, 1):
         if n >= 7:
             require(critical_min_edges(n) > u, "unexpected possible 7-critical graph")
-    u = UNIT_MAX_1_TO_21[-1]
-    for n in range(22, 27):
+    # AMP independently establish u(22) <= 61, improving the generic
+    # consequence u(22) <= 62 of the exact u(21)=57 value.
+    u = 61
+    table["22"] = {"certified_upper_unit_edges":u,
+                   "min_seven_critical_edges":critical_min_edges(22)}
+    for n in range(23, 28):
         u = u * n // (n - 2)
         table[str(n)] = {"certified_upper_unit_edges":u,
                          "min_seven_critical_edges":critical_min_edges(n)}
-        if n <= 25:
-            require(critical_min_edges(n) > u, "barrier < 26 failed")
-    require(table["25"] == {"certified_upper_unit_edges":79,
-                             "min_seven_critical_edges":81}, "n25 mismatch")
-    require(table["26"] == {"certified_upper_unit_edges":85,
-                             "min_seven_critical_edges":85}, "n26 threshold")
-    return {"published_u21":57,"vertex_lower_for_non_six_unit_graph":26,
-            "recurrence_from_u21":table}
+    for n in range(22,27):
+        require(table[str(n)]["min_seven_critical_edges"] >
+                table[str(n)]["certified_upper_unit_edges"],
+                "barrier < 27 failed")
+    require(table["26"] == {"certified_upper_unit_edges":84,
+                             "min_seven_critical_edges":85}, "n26 bound")
+    require(table["27"] == {"certified_upper_unit_edges":90,
+                             "min_seven_critical_edges":88}, "n27 not excluded")
+    return {"published_u21":57,"published_u22_upper":61,
+            "vertex_lower_for_non_six_unit_graph":27,
+            "recurrence_from_u22":table}
 
 
 def moore_lower_bound(g):
