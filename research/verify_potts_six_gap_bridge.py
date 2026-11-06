@@ -36,10 +36,25 @@ def seam_ratios():
     return output
 
 
+def reported_parts_upper():
+    # Numeric value copied from Parts 2020; not an independent geometry certificate.
+    uncovered_fraction_reported = F(143017209, 10**12)
+    q = 6
+    upper = 2*uncovered_fraction_reported/q
+    checked(upper == F(47672403,10**12), 'reported area to badness conversion')
+    checked(upper < F(1,20000),'near-perfect six partial coloring implies tiny Potts badness')
+    return {'source':'Jaan Parts 2020; area numerical report only',
+            'reported_hole_fraction': str(uncovered_fraction_reported),
+            'q':q,'random_filling_energy_upper_estimate':str(upper),
+            'upper_in_decimal':format(float(upper), '.12f'),
+            'general_formula':'a_q <= 2*hole_density/q'}
+
+
 def main():
     result={'status':'PASS',
             'scope':'toy finite exact math only; no proof of six/seven or continuum integration',
             'odd_cycles':[odd_cycle(n) for n in (3,5,7,9)],
+            'parts_partial_tiling_conversion':reported_parts_upper(),
             'square_seam':[x for x in seam_ratios()],
             'periodization_boundary_formula':'4/L - 4/L^2',
             'thermodynamic_limit_claim':'mathematical written proof, not executable finite validation'}
