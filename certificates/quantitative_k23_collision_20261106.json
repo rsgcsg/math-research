@@ -1,0 +1,25 @@
+{
+  "schema": "hn_quantitative_k23_collision_v1",
+  "date": "2026-11-06",
+  "status": "PASS_TARGETED_GITHUB_ACTIONS",
+  "verified_workflow_run": 42168010436,
+  "workflow_source_sha": "5a5c420e217537944b3bb83b7794eaf6f7b7bfb3",
+  "workflow_url": "https://github.com/rsgcsg/math-research/actions/runs/42168010436",
+  "checks": {
+    "exact_rational_examples": "success",
+    "optimized_python_rejection": "success",
+    "static_integration": "success"
+  },
+  "theorem": {
+    "range": "0<epsilon<=1/16",
+    "graph": "K_{2,3} as a (not necessarily induced) subgraph",
+    "unavoidable_collision": "min pair distance <= 6 sqrt(epsilon)",
+    "optimal_exponent": "1/2",
+    "achieving_family": "A=(-1,0),B=(1,0),C=(0,0),D/E=(0,+/-sqrt(epsilon))",
+    "minimum_distance_in_family": "sqrt(epsilon)",
+    "separated_points_consequence": "epsilon >= sigma^2/36 if min pair distance >= sigma and epsilon<=1/16"
+  },
+  "scope": "New complete written geometry proof with finite exact rational calibration. Numerical constant 6 is not claimed sharp. Not an original 6-vs-7 theorem, no finite NON6 unit graph, no Lean formalization, no full make check replay.",
+  "full_make_check_executed": false,
+  "chi_plane_exact_solved": false
+}
