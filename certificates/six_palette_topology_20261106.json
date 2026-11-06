@@ -1,0 +1,40 @@
+{
+  "annulus": {
+    "colors": 3,
+    "different_same_color_sectors_distance_gt": "126/125",
+    "mixed_radius_sq_lt": "568/625",
+    "radii": [
+      "4/5",
+      "7/5"
+    ],
+    "same_sector_distance_lt": "49/50",
+    "sectors": 9,
+    "sin_40_degrees_gt": "11371/18000"
+  },
+  "circle": {
+    "example": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+    ],
+    "proper_words": 66,
+    "three_color_words": 60,
+    "two_color_words": 6
+  },
+  "claim": "six palette topology finite calibration",
+  "result": "PASS",
+  "scope": "not a proof of plane chi=7 or of weak measurable transfer",
+  "simplex": {
+    "betti_1_over_Q": 0,
+    "betti_2_over_Q": 10,
+    "edges": 15,
+    "old_five_color_graph_cycle_rank": 6,
+    "rank_d2_mod2": 10,
+    "tetrahedron_cycles_rank_mod2": 10,
+    "triangles": 20,
+    "vertices": 6
+  }
+}
