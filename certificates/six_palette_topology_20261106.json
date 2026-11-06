@@ -27,6 +27,17 @@
   "claim": "six palette topology finite calibration",
   "result": "PASS",
   "scope": "not a proof of plane chi=7 or of weak measurable transfer",
+  "seven_color_three_skeleton": {
+    "betti_1_over_Q": 0,
+    "betti_2_over_Q": 0,
+    "betti_3_over_Q": 15,
+    "edges": 21,
+    "rank_d2_mod2": 15,
+    "rank_d3_mod2": 20,
+    "tetrahedra": 35,
+    "triangles": 35,
+    "vertices": 7
+  },
   "simplex": {
     "betti_1_over_Q": 0,
     "betti_2_over_Q": 10,
