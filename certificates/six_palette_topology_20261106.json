@@ -1,4 +1,11 @@
 {
+  "angular_envelope": {
+    "abstract_average_palette_size": "5/2",
+    "abstract_triple_fraction": "1/2",
+    "complementary_triple_pairs": 10,
+    "scope": "abstract angular family only; not a global six-coloring",
+    "triple_palette_types": 20
+  },
   "annulus": {
     "colors": 3,
     "different_same_color_sectors_distance_gt": "126/125",
