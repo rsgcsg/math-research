@@ -32,6 +32,12 @@
     "two_color_words": 6
   },
   "claim": "six palette topology finite calibration",
+  "forced_outer_circle": {
+    "angle_irrationality_argument": "rational algebraic integer must be integer",
+    "radius_squared": 3,
+    "twice_cos_angle": "5/3",
+    "unit_chord_cos_angle": "5/6"
+  },
   "result": "PASS",
   "scope": "not a proof of plane chi=7 or of weak measurable transfer",
   "seven_color_three_skeleton": {
