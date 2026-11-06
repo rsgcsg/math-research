@@ -89,6 +89,22 @@ def circle_density_audit():
             "rational_sample_check":N}
 
 
+def fractionally_colored_from_disk_packing():
+    # Only strict *rational envelopes* of the classical geometric density:
+    # pi > 3, sqrt(3) < 7/4, so delta=pi/(8sqrt(3)) > 3/14.
+    from fractions import Fraction as Q
+    require(Q(3) < Q(49,16), "sqrt(3) upper envelope")
+    # The pi>3 inequality is a classical analytic input, not proved by code.
+    lower_density=Q(3,14)
+    require(lower_density>Q(1,5), "nontrivial packing density")
+    require(7*lower_density == Q(3,2), "integrality gap lower envelope")
+    return {"density":"pi/(8*sqrt(3))",
+            "density_strictly_greater_than":str(lower_density),
+            "fractional_chromatic_upper":"8*sqrt(3)/pi",
+            "hypothetical_chi7_integrality_gap_at_least":"7*pi/(8*sqrt(3))>3/2",
+            "pi_greater_than_three_is_external_elementary_input":True}
+
+
 def rainbow_port_toy():
     # The odd cycle C5 is a complete k=2 analogy of rainbow-port logic:
     # removing v leaves P4; every 2-coloring of P4 gives different colors
@@ -117,6 +133,7 @@ def main():
         "high_girth_moore_values":high_girth_consequences(),
         "false_external_circle_density_assumption":circle_density_audit(),
         "low_label_port_toy":rainbow_port_toy(),
+        "fractional_gap_bound":fractionally_colored_from_disk_packing(),
         "external_inputs_rebuilt_by_script":False,
         "new_general_theorems_lean_formalized":False,
         "full_make_check_executed":False,
