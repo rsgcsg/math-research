@@ -1,0 +1,31 @@
+name: Seven-if-true high-girth and finite critical audits
+on:
+  push:
+    branches: [research/seven-rainbow-highgirth-20261106]
+    paths:
+      - research/verify_seven_port_structure_20261106.py
+      - docs/proofs/seven_rainbow_high_girth_and_external_audit_20261106.md
+      - .github/workflows/verify-seven-rainbow-ports.yml
+      - Makefile
+      - docs/CURRENT.md
+      - docs/RESULTS.md
+      - docs/ROUTES.md
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Exact integer and combinatorial audit
+        run: make check-seven-port-structure
+      - name: Assertions are mandatory
+        run: |
+          if python3 -O -S research/verify_seven_port_structure_20261106.py >/tmp/seven-port-optimized.log 2>&1; then
+            echo "Optimized mode unexpectedly accepted"; exit 1
+          fi
+          grep "Optimized mode is not permitted" /tmp/seven-port-optimized.log
+      - name: Static repository integration
+        run: python3 -S research/check_integration.py
