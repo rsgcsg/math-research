@@ -48,7 +48,7 @@ def verify_k4():
     diagonal=mul((Q(0),Q(1)),side,2)
     need(diagonal==add(one,e4),"extremal square does not fit interval")
     need(sub(mul(diagonal,diagonal,2),
-                 mul((Q(0),Q(2)),mul(side,side,2),2))
+                 mul((Q(2),Q(0)),mul(side,side,2),2))
          ==(Q(0),Q(0)), "square squared distance mismatch")
     # Compare robust seven's margin eps* against 1/7, then e4 against 1/7.
     # √7<8/3 is exact: 7<64/9.
@@ -91,7 +91,6 @@ def verify_k23():
         need(sqdist(A,C)==1 and sqdist(B,C)==1
              and sqdist(A,D)==1 and sqdist(B,D)==1,
              "four exact K2,3 edges")
-        E=(Q(1,2),Q(1,2)+t/Q(3)**0) if False else None
         # Offset t in the real y coordinate; directly tested via d² above.
         examples.append({"t":str(t),"other_two_edges_sq":"1+sqrt(3)*t+t^2"})
     return {"original_k23_has_no_injective_exact_realization":True,
