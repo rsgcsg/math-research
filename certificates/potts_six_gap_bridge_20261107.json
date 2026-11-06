@@ -33,6 +33,14 @@
       "symmetric_average_bad_probability_per_edge": "1/9"
     }
   ],
+  "parts_partial_tiling_conversion": {
+    "general_formula": "a_q <= 2*hole_density/q",
+    "q": 6,
+    "random_filling_energy_upper_estimate": "47672403/1000000000000",
+    "reported_hole_fraction": "143017209/1000000000000",
+    "source": "Jaan Parts 2020; area numerical report only",
+    "upper_in_decimal": "0.000047672403"
+  },
   "periodization_boundary_formula": "4/L - 4/L^2",
   "scope": "toy finite exact math only; no proof of six/seven or continuum integration",
   "square_seam": [
