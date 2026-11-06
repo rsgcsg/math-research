@@ -1,3 +1,9 @@
+## 2026-11-07 补充：新紧致5色必要单位距离图及OpenAI终端区域证明接口
+
+- Chandan Shukla, *Small 5-chromatic unit-distance graphs in disks of radius 3/2, 5/4 and 23/20*, arXiv:2611.06269, posted 2026-11-04, https://arxiv.org/abs/2611.06269 。已阅读HTML原文Theorem 1、Table 1、§2–§3以及数据范围：773点3817边开圆半径1.5、5713点25482边开圆半径1.25、8168点41556边开圆半径1.15。原文声明坐标在Q(√3,√5,√11)、有完整DRAT和5色词；本项目尚未下载/复核大型证书。原文§1另引用Polymath16旧图31171点180942边置于闭半径1圆，所以“新纪录”仅是定半径下**顶点数**。
+- OpenAI Family158 *The Euclidean plane is not five-colorable*, 2026-09-23, https://github.com/openai/math/tree/main/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026 , Lemma4.3典型点单位边必须异色、Lemma8.8–8.9从排斥区域取7点Moser图的终端矛盾；在六色下可尝试「开四标签区域+精确5色必要图」，但原论文仅完成五色、**没有**保证六色有这种开区域。
+- 已对接本仓库[R2026-LOCAL-RADIUS](../docs/proofs/local_chromatic_radius_and_four_palette_defect_20261107.md)的全可测颜色场局部缺陷—能隙定理；来源图与本仓库独立数学推论严格分开。
+
 ## 2026-10-07续篇补充：已知奇次二色的直接校准
 
 重新读取Moorhouse, *On the Chromatic Numbers of Planes*, 2010-03-03初步稿，第7节Theorem7.1及证明（PDF页14–15）：
