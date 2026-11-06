@@ -1,0 +1,63 @@
+{
+  "all_R60_unions_have_five_distinct_colors": true,
+  "angular_sectors": 18,
+  "even_sector_signed_endpoint_chords_degrees": [
+    0,
+    60,
+    120,
+    180,
+    240,
+    300
+  ],
+  "every_independent_angle_union_has_at_most_five_colors": true,
+  "forced_color_by_sector": [
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4
+  ],
+  "independent_three_color_annulus_radii": [
+    "5/3",
+    "7/4"
+  ],
+  "mixed_sum_difference_exact_unit": true,
+  "outer_circle_chord_rotation_bracket": "pi/9 < arccos(5/6) < 2pi/9",
+  "palette_sizes": [
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3
+  ],
+  "result": "PASS",
+  "same_sector_distance_strictly_less_than": "25/36",
+  "scope": "finite exact calibration only; abstract palette is NOT a true weak six-coloring",
+  "separated_same_color_distance_strictly_greater_than": "265/243"
+}
