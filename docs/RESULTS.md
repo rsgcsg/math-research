@@ -1,3 +1,13 @@
+## 2026-11-07 R2026-POTTS-GAP：零温精确单位针能隙与七色的完全等价、随机填洞上界、稳健混色二择
+
+| 编号 | 严格结果及来源 | 状态/限制 |
+| --- | --- | --- |
+| R2026-POTTS-GAP-A/B/B2 | 任意有限q的单位针热力学极限\(a_q=\lim_{L\to\infty} e_q(L)=\inf_{\rm periodic}E_{\rm needle}\)存在；\(e_q(L)\ge a_q-4/L+4/L²\)。OpenAI Family158 weak-measurable↔ordinary + de Bruijn–Erdős推导\(\chi(\mathbb R²)=\min\{q:a_q=0\}\)，故χ=7⇔a6>0；若有m边、半径R的精确NON6 H，则\(e_6(L)\ge(1-2R/L)²/m\) | [积分书面证明](proofs/six_seven_zero_temperature_frustration_gap_20261107.md)；组合与分析严格，**不是已证a6>0或χ7**；有限盒/周期化为真实单位边而非近单位 |
+| R2026-POTTS-GAP-C | 有限精确单位图H的完整六标签冲突博弈\(\beta_6(H)=\max_w\min_{\sigma\in[6]^V}\sum_e w_e{\bf1}_{\rm mono}=\min_{\mu\in\Delta([6]^V)}\max_eP_\mu(\rm mono_e)>0\iff\chi(H)>6\)；给周期单位针与有限盒能量下界 | 标准有限博弈minimax；只允许**一份整图完整联合law**，不以固定边缘伪律替代 |
+| R2026-POTTS-GAP-D/E | 任意q色合法部分平面、空洞密度ρ，有限直径<1小格随机填洞构造\(a_q\le2ρ/q\)。依赖Parts 2020报告的六色部分平面覆盖率，算得**估计**\(a_6\lesssim4.76724\times10^{-5}\)，如果χ7则为正但很小 | 数学随机填洞证明完整；Parts曲线区域面积数值**未独立复算或严格有理验收**，近似值不是精确上下界证书 |
+| R2026-POTTS-GAP-F | 对任意六色可测场与s=2/5六格网，Mix格定义最大颜色面积<1−3π/(512√3)，得到 \(J_{\Omega_U}\ge(\pi r³/112)(|U|−7|Mix∩N[U]|)_+\)，r=3/20；周期版\(E_{\rm per}\ge[9/(143360\sqrt3)](1-7d_{\rm mix}^+)_+\) | 真实七格内部单位点对、小盘相交角向区间、至多7重计数的独立书面证明；**高混色分支尚未排除** |
+| R2026-POTTS-GAP-CHECK | C3,C5,C7,C9二染有限β2精确对偶、跨盒缝比、Parts数值换算及几何混色系数 | [标准库校验](../research/verify_potts_six_gap_bridge.py)与[有限证书](../certificates/potts_six_gap_bridge_20261107.json)普通与-O一致PASS；不能作为无限定理验证、无Lean、无全仓make check |
+
 ## 2026-11-07 新增 R2026-SEVEN-CRYSTAL：七色上界完美码刚性、实闭域转移及六色强制混色
 
 | 标识 | 结论 | 证明来源与限制 |
