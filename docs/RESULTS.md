@@ -1,3 +1,10 @@
+## 2026-11-07 R2026-POTTS-GAP-C2：边临界图的坏边minmax权重精确为1/m
+
+| 标识 | 结果 | 范围 |
+| --- | --- | --- |
+| R2026-POTTS-GAP-C2 | 若有限图H不可q染且每删除一条边即q可染，m=|E(H)|，则β_q(H)=max_w min_σ Σ_e w_e 1_{mono(e)}=1/m（完整q颜色词）；若χ平面=7，存在某张精确UNIT有限NON6边临界图拥有β6=1/m | [完整证明](proofs/six_seven_zero_temperature_frustration_gap_20261107.md)§4a，边临界性迫使任意指定边都可成为唯一坏边，均匀w上下界吻合；**不是χ7或a6>0的证明** |
+| R2026-POTTS-GAP-C2-CHECK | 低维抽象K3/q2、K4/q3、K5/q4临界边各可成为唯一坏边，故β分别1/3、1/6、1/10 | [有限精确脚本](../research/verify_potts_six_gap_bridge.py)、[收据](../certificates/potts_six_gap_bridge_20261107.json)，这些K4/K5例子**非平面单位图证书**，仅测试普适组合引理 |
+
 **历史去重/优先权审计（2026-11-07）：**下述Bessel二点PSD假场、3点Hamming失败及尺度D(t)≥1/ceil(1/t)**全部机制**已在2026-11-03原[ R2026-MOMENT-B/D/E](proofs/plane_coupled_moment_bridge_20261103.md)完整证明。旧论文还证明q≤3的松弛不可能、最低q恰为4。新3点31/1024为**不同参数下的独立精确有理交叉检验**；不应与MOMENT累计为独立进展、未提高普通χ下界。
 
 ## 2026-11-07 R2026-BESSEL-PAIR-NOGO：无限Bessel伪着色阻断所有纯二点PSD路线；R2026-LOCAL-RADIUS顶点临界最优性
