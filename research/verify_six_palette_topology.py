@@ -133,11 +133,22 @@ def verify_angular_envelope():
             "abstract_triple_fraction": "1/2", "abstract_average_palette_size": "5/2",
             "scope": "abstract angular family only; not a global six-coloring"}
 
+
+def verify_forced_outer_circle():
+    # Two points on radius sqrt(3) unit distance apart have cos(angle)=5/6.
+    cos_angle = F(5, 6)
+    require(6 * (1 - cos_angle) == 1, "outer circle unit chord")
+    require(2*cos_angle == F(5, 3), "root-of-unity rational trace")
+    require((2*cos_angle).denominator != 1, "must be nonintegral")
+    return {"radius_squared": 3, "unit_chord_cos_angle": "5/6",
+            "twice_cos_angle": "5/3",
+            "angle_irrationality_argument": "rational algebraic integer must be integer"}
+
 def main():
     print(json.dumps({"claim":"six palette topology finite calibration",
                       "scope":"not a proof of plane chi=7 or of weak measurable transfer",
                       "annulus": verify_annulus(), "circle": verify_circle_words(),
-                      "simplex": verify_topology(), "seven_color_three_skeleton": verify_seven_skeleton(), "angular_envelope": verify_angular_envelope(), "result":"PASS"}, indent=2, sort_keys=True))
+                      "simplex": verify_topology(), "seven_color_three_skeleton": verify_seven_skeleton(), "angular_envelope": verify_angular_envelope(), "forced_outer_circle": verify_forced_outer_circle(), "result":"PASS"}, indent=2, sort_keys=True))
 
 
 if __name__ == '__main__':
