@@ -77,9 +77,13 @@ def circle_density_audit():
             "arc contains a unit chord")
     measure_counts = [labels.count(i) for i in range(3)]
     require(measure_counts == [240,240,240], "arc measure")
-    # The exact measure is 2*pi/3, while the unsupported
-    # SafeDensity premise requires strictly less than pi/3.
-    require(2 > 1, "2*pi/3 greater than pi/3")
+    # Exact chord test: squared unit radius r²=1/3, angle=2*pi/3
+    # has cosine -1/2, hence chord²=2*r²*(1-cos(angle))=1.
+    from fractions import Fraction as Q
+    chord_squared=2*Q(1,3)*(1-Q(-1,2))
+    require(chord_squared==1, "chord geometry does not match unit distance")
+    # The exact measure 2*pi/3 is twice the unsupported threshold pi/3.
+    require(Q(2,3)>Q(1,3), "wrong angle density bound")
     return {"circle_radius":"1/sqrt(3)",
             "unit_chord_angular_step":"2*pi/3",
             "valid_three_color_arc_measure_each":"2*pi/3",
