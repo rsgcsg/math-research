@@ -63,12 +63,36 @@ def robust_mixing_tradeoff():
             'normalized_tradeoff_coefficient':'9/(143360*sqrt(3))'}
 
 
+def verify_critical_graph_edge_minmax():
+    # Toy abstract complete graphs K_(q+1), not planar unit-distance
+    # gadgets for q >=3: confirms edge-critical q-color minmax exactness.
+    out = []
+    for q in (2, 3, 4):
+        n = q+1
+        edges = [(u,v) for u in range(n) for v in range(u+1,n)]
+        words = list(product(range(q), repeat=n))
+        min_bad = min(sum(word[u] == word[v] for u,v in edges) for word in words)
+        checked(min_bad == 1, "critical clique must need at least one bad edge")
+        for omitted in edges:
+            checked(any(all(word[u] != word[v] for u,v in edges if (u,v) != omitted)
+                        for word in words),
+                    "deleting any edge must permit proper q coloring")
+            checked(any(word[omitted[0]] == word[omitted[1]]
+                        and all(word[u] != word[v] for u,v in edges if (u,v) != omitted)
+                        for word in words), "unique defective edge witness")
+        out.append({'q':q,'abstract_graph':f'K{n}',
+                    'edge_count':len(edges),'beta_q_exact':str(F(1,len(edges))),
+                    'every_edge_can_be_unique_bad_edge':True})
+    return out
+
+
 def main():
     result={'status':'PASS',
             'scope':'toy finite exact math only; no proof of six/seven or continuum integration',
             'odd_cycles':[odd_cycle(n) for n in (3,5,7,9)],
             'parts_partial_tiling_conversion':reported_parts_upper(),
             'robust_energy_mixing_tradeoff':robust_mixing_tradeoff(),
+            'critical_graph_edge_minmax_calibration':verify_critical_graph_edge_minmax(),
             'square_seam':[x for x in seam_ratios()],
             'periodization_boundary_formula':'4/L - 4/L^2',
             'thermodynamic_limit_claim':'mathematical written proof, not executable finite validation'}
