@@ -6,6 +6,7 @@
 | R2026-LOCAL-RADIUS-B | 经典7点Moser spindle标准嵌入最小包围圆\(C=\sqrt3/2+i\sqrt{33}/22\)，\(R=3/\sqrt{11}<1\)，11精确单位边，χ=4；若存在weak六染，每个半径1圆盘任意三标签之外有至少\((1-3/\sqrt{11})^2/7\approx0.130196\%\)面积 | [精确标准库验证程序](../research/verify_local_chromatic_radius.py)和[有限收据](../certificates/local_chromatic_radius_20261107.json)，**此标准嵌入的最小包围圆，不宣称所有四色图的几何半径纪录** |
 | R2026-LOCAL-RADIUS-C | Shukla arXiv:2611.06269的5色必要G773(n=773,m=3817,R<3/2)给任意六色可测场r=2的\(\boxed{773d_4+3817E_B\ge1/16}\)，weak proper ⇒ 任意四标签外≥\(1/12368\)面积；同论文G5713、G8168和旧Polymath半径1图给其他r的分段数值界 | 外部Shukla 2026-11-04与Polymath已报告5色DRAT/旧5色图，**本轮没有独立重放大图DRAT**；无χ=7证明 |
 | R2026-LOCAL-RADIUS-E | 已有形式化χ≥6+de Bruijn–Erdős⇒存在有限精确NON5图H₆：若ordinary proper六染存在，则全部六颜色类都具有统一相对稠密半径；若weak measurable六染存在，则各颜色在每个r>R₆圆盘面积≥π(r−R₆)²/n₆ | [同文§4a](proofs/local_chromatic_radius_and_four_palette_defect_20261107.md)；n₆、R₆目前未有显式证书，**不是NON6图/χ7证明** |
+| R2026-LOCAL-RADIUS-C/D-ANG | 对任何可测方向集E⊂S¹，二维Minkowski和U=E+S¹满足**精确**2|E|≤|U|≤4|E|（Jacobian面积公式+至多2组有序表示）；若固定标签F在E上几乎处处属于Family158最大palette，则F颜色在x+U中a.e.消失；然而胖Cantor E可有|E|>0而int(E+S¹)=∅，所以无法自动将正面积四标签区域改成可嵌5色图的开放区域 | [同文§5a](proofs/local_chromatic_radius_and_four_palette_defect_20261107.md)，书面几何定理和显式抽象反例；弱测度依赖Family158空间密度transfer；**非χ7证明** |
 | R2026-LOCAL-RADIUS-D | 若某weak六染在开集W a.e.仅有固定4标签且W含带内点余量的5色必要图H的一份真实刚体嵌入，则由共同平移与Family158 Lemma4.3立即矛盾；同理3标签+Moser | 完整条件性终局接口；**未证任何六染必须产生这样的W**。不能将固定方向的product-a.e.直接写成pointwise proper |
 | R2026-LOCAL-RADIUS-CHECK | \(\mathbb Q(\sqrt3,\sqrt{11})\)4维精确点代数、Moser3^7/4^7颜色枚举、Shukla声称的n/m/R转本地有理常数 | 本地普通与-O一致PASS，有限验证≠一般无限转移或外部DRAT；未Lean形式化或全仓make check |
 
