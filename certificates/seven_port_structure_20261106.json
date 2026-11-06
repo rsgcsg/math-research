@@ -1,0 +1,85 @@
+{
+  "schema": "hn_seven_if_true_rainbow_ports_20261106_v1",
+  "date": "2026-11-06",
+  "status": "PASS_TARGETED_GITHUB_ACTIONS",
+  "verified_run": {
+    "id": 42173330560,
+    "url": "https://github.com/rsgcsg/math-research/actions/runs/42173330560",
+    "head_sha": "41c6e673fbadb6669e41486003e4d3d6e51b375e",
+    "steps": {
+      "make check-seven-port-structure": "success",
+      "optimized-mode rejection": "success",
+      "python static integration": "success"
+    }
+  },
+  "external_inputs": {
+    "OpenAI Family 158": "no proper five-coloring, Lean audited; does not decide six versus seven",
+    "Tomon 2026 arXiv 2610.03517": "any finite attained distance-graph chromatic number is attained at arbitrarily high girth",
+    "Kostochka-Yancey": "k-critical edge lower bound",
+    "Alexeev Mixon Parshall 2025": "exact u(n) for n<=21, including u(21)=57",
+    "Sergi Galan forbidden distances": "reports chi(R2,{1,2})>=7 and chi(R2,{1,sqrt3})>=7; independent certification not completed here",
+    "Reed public Lean": "coloring_collision requires an independent SafeDensity hypothesis, false for r=1/sqrt3"
+  },
+  "verified_finite_calibrations": {
+    "unit_distance_maxima_n_1_through_21": [
+      0,
+      1,
+      3,
+      5,
+      7,
+      9,
+      12,
+      14,
+      18,
+      20,
+      23,
+      27,
+      30,
+      33,
+      37,
+      41,
+      43,
+      46,
+      50,
+      54,
+      57
+    ],
+    "critical_lower_edges_n_21_to_26": [
+      68,
+      71,
+      75,
+      78,
+      81,
+      85
+    ],
+    "unit_edge_upper_n_21_to_26": [
+      57,
+      62,
+      67,
+      73,
+      79,
+      85
+    ],
+    "necessary_vertices_for_finite_exact_non6_graph": 26,
+    "Moore_bounds": {
+      "g5": 37,
+      "g6": 62,
+      "g7": 187,
+      "g8": 312,
+      "g9": 937,
+      "g11": 4687
+    },
+    "Reed_circle_r": "1/sqrt3",
+    "Reed_circle_actual_max_independent_angular_measure": "2*pi/3",
+    "Reed_false_strict_claim": "<pi/3",
+    "fractional_upper_any_finite_unit_graph": "8*sqrt3/pi",
+    "conditional_chi7_integrality_gap": "7*pi/(8*sqrt3)>3/2",
+    "rainbow_port_small_color_calibration": "C5 center deletion requires both 2 labels on its independent neighbor pair"
+  },
+  "written_proof": "docs/proofs/seven_rainbow_high_girth_and_external_audit_20261106.md",
+  "scope": "All conditionals explicitly marked. Exact small-n arithmetic/circle angular combinatorics checked in CI; Tomon, K-Y, Alexeev, and Galan external results not refomalized, Reed Lean was inspected textually but not compiled. No claimed finding of rainbow 6-port or distance-d simulator.",
+  "full_make_check_executed": false,
+  "new_lean_formalization": false,
+  "original_chi_6_or_7_decided": false,
+  "finite_exact_non6_unit_graph_found": false
+}
