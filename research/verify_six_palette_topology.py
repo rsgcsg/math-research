@@ -112,11 +112,32 @@ def verify_seven_skeleton():
             "rank_d2_mod2":15,"rank_d3_mod2":20,
             "betti_1_over_Q":0,"betti_2_over_Q":0,"betti_3_over_Q":15}
 
+
+def verify_angular_envelope():
+    colors = frozenset(range(6))
+    triples = [frozenset(s) for s in combinations(range(6), 3)]
+    complement_pairs = set()
+    for triple in triples:
+        other = colors - triple
+        complement_pairs.add(frozenset((triple, other)))
+    require(len(triples) == 20 and len(complement_pairs) == 10,
+            "complementary triple enumeration")
+    A = frozenset((0, 1, 2))
+    B = frozenset((3, 4))
+    example = [A, B, A, B, A, B]
+    require(all(not (example[i] & example[(i+1)%6])
+                and len(example[i] | example[(i+1)%6]) == 5
+                for i in range(6)), "abstract local palette saturation")
+    require(sum(len(t)==3 for t in example) == 3, "half-circle ternary capacity")
+    return {"triple_palette_types": 20, "complementary_triple_pairs": 10,
+            "abstract_triple_fraction": "1/2", "abstract_average_palette_size": "5/2",
+            "scope": "abstract angular family only; not a global six-coloring"}
+
 def main():
     print(json.dumps({"claim":"six palette topology finite calibration",
                       "scope":"not a proof of plane chi=7 or of weak measurable transfer",
                       "annulus": verify_annulus(), "circle": verify_circle_words(),
-                      "simplex": verify_topology(), "seven_color_three_skeleton": verify_seven_skeleton(), "result":"PASS"}, indent=2, sort_keys=True))
+                      "simplex": verify_topology(), "seven_color_three_skeleton": verify_seven_skeleton(), "angular_envelope": verify_angular_envelope(), "result":"PASS"}, indent=2, sort_keys=True))
 
 
 if __name__ == '__main__':
