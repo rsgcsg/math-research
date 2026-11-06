@@ -1,7 +1,7 @@
 ## 2026-11-06：七色假说：外部定理、原文审计、未证转换
 
 - **Tomon（2026-10-02），arXiv:2610.03517**：有限unit-distance图的色数可在同维度保留同时将girth提升任意高。结合紧致性，若χ平面=7，则存在每个固定小窗口可二染但整体七染的单位图；引用外部定理，不宣称本项目证明该定理。[结构证明](../docs/proofs/seven_rainbow_high_girth_and_external_audit_20261106.md)
-- **Kostochka–Yancey，arXiv:1209.1050，critical边数下界**及**Alexeev–Mixon–Parshall，arXiv:2412.11914，平面n≤21单位边数完全确定**：结合基础删点递推，保守严格推出精确NON6单位距离图n≥26；同上证明与独立整数校准。
+- **Kostochka–Yancey，arXiv:1209.1050，critical边数下界**及**Alexeev–Mixon–Parshall，arXiv:2412.11914，平面n≤21单位边数完全确定及u(22)≤61**：结合基础删点递推，保守严格推出精确NON6单位距离图n≥27；同上证明与独立整数校准。
 - **Galán（2026-10），双禁距离及可测转移**：外部仓库 https://github.com/decalion89/chromatic-number-of-the-plane/blob/main/papers/forbidden-distances/README.md 报告χ({1,2})≥7及χ({1,√3})≥7，项目作者明确仍未获数学家同行评审。它们**不是**精确单禁距χ=7；本项目提出一种足够条件：可六染且六色必分离端点的单位d-模拟器。未找到该模拟器，未独立验收其全部双禁距证书。
 - **Jonathan Reed（2026-05公开7色声称）**：原Lean https://github.com/AEjonanonymous/Hadwiger-Nelson/blob/main/Hadwiger_Nelson_Final.lean 的coloring_collision含额外h_safe:∀i,SafeDensity ...；该假设在r=1/√3处为**假**，三段各长2π/3的单位避距弧覆盖圆。不能据此引用χ=7的解决。
 - **OpenAI Family158与独立核验**：https://github.com/openai/math/blob/main/lean/docs/158.md 、https://github.com/punk01-shaka/hadwiger-nelson-audit 。仅排除五色，完整值仍6/7。
