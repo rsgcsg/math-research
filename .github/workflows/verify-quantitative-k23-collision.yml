@@ -1,0 +1,31 @@
+name: Verify near-unit K2,3 collision exponent
+on:
+  push:
+    branches: [research/quantitative-k23-collision-20261106]
+    paths:
+      - research/verify_quantitative_k23_collision.py
+      - docs/proofs/quantitative_k23_collision_20261106.md
+      - .github/workflows/verify-quantitative-k23-collision.yml
+      - Makefile
+      - docs/CURRENT.md
+      - docs/RESULTS.md
+      - docs/ROUTES.md
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Exact rational collision constants
+        run: make check-k23-collision
+      - name: Reject disabled assertions
+        run: |
+          if python3 -O -S research/verify_quantitative_k23_collision.py >/tmp/k23-O.log 2>&1; then
+            echo "Unexpected optimized execution success"; exit 1
+          fi
+          grep "Run without -O" /tmp/k23-O.log
+      - name: Static integrity
+        run: python3 -S research/check_integration.py
