@@ -1,0 +1,20 @@
+{
+  "all_mod7_closed_neighborhoods_rainbow": true,
+  "closed_unit_ball_size": 7,
+  "nonzero_linear_mod7_candidates": 48,
+  "opposite_chiral_cosets_intersect": true,
+  "optimal_hex_robust_halfwidth": "(sqrt(7)-2)/(sqrt(7)+2)",
+  "optimal_hex_side": "2/(2+sqrt(7))",
+  "scope": "finite exact verification only; Dejter classification and HN open not checked",
+  "shortest_same_color_norm": {
+    "3": 7,
+    "5": 7
+  },
+  "square_graph_degree": 18,
+  "status": "PASS",
+  "valid_chiral_slopes": [
+    3,
+    5
+  ],
+  "valid_linear_mod7_candidates": 12
+}
