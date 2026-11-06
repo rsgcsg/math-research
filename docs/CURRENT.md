@@ -1,3 +1,5 @@
+**新增非重复的临界性–能隙对应：**[R2026-POTTS-GAP§4a](proofs/six_seven_zero_temperature_frustration_gap_20261107.md)证明任何有限、删除任意一条边即变为q可染的q+1色临界图H（m边），其完整颜色赋值的单位坏边极小极大值**精确**β_q(H)=1/m；因为均匀边权使每份q赋值至少坏一边，而任意边e删除后可q染，只在e出现唯一坏边。若χ平面=7，任何有限NON6见证可缩减到这种6边临界图。故仅重新加权同一临界图的单位坏边，无法改善1/m的needle证书；需跨图几何耦合或新的精确NON6图。与LOCAL-RADIUS§4b顶点临界四标签缺口Γ=1/n同一全词minmax结构。脚本[Potts有限校验](../research/verify_potts_six_gap_bridge.py)现补K3/q2、K4/q3、K5/q4的每边唯一坏色枚举，核验普通+优化模式；**此定理不决定a6>0**。
+
 **2026-11-07 历史去重修正：**下面的Bessel伪核与三个共线点Hamming反证，早在[2026-11-03 R2026-MOMENT-B/D/E](proofs/plane_coupled_moment_bridge_20261103.md)严格证明，本轮只是不同有理尺度下的独立重放。旧报告比本轮更强：其已证明二点PSD松弛最小可行q**恰为4**（q≤3不可能），并已经证明普遍D(r)≥1/ceil(1/r)。**不能把本轮该分支计作新的数学发现**；真正新论证的里程碑需越过旧报告的完整共同law瓶颈。新[交叉复核](proofs/radial_bessel_two_point_psd_fake_six_20261107.md)只作旁证。
 
 ## 2026-11-07：核心证明路线审计新增二点PSD伪六色反例，明确只剩完整共同律（R2026-BESSEL-PAIR-NOGO）
