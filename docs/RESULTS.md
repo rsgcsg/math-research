@@ -3,7 +3,7 @@
 | 标识 | 结论 | 证明来源与范围 |
 |---|---|---|
 | R2026-SEVEN-PORT-A/B | χ平面=7 ⇔ 存在有限六色饱和单位圆口(H,v)；且若χ=7，则任意M存在真实平面七色单位图，所有≤M点子图为森林、可二染，critical圆口端点间绕中心路径长≥M−1 | [完整证明](proofs/seven_rainbow_high_girth_and_external_audit_20261106.md)；用外部Tomon高围长定理，条件性而非7证明 |
-| R2026-SEVEN-PORT-C | 任何有限精确平面NON6单位距离图至少26点 | 同上，Kostochka–Yancey临界边数+Alexeev–Mixon–Parshall已发表u(21)=57与删点递推；[纯整数逐项检查](../research/verify_seven_port_structure_20261106.py)；不是文献最强小规模下界声明 |
+| R2026-SEVEN-PORT-C | 任何有限精确平面NON6单位距离图至少27点 | 同上，Kostochka–Yancey临界边数+Alexeev–Mixon–Parshall已发表u(21)=57、u(22)≤61与删点递推；[纯整数逐项检查](../research/verify_seven_port_structure_20261106.py)；不是文献最强小规模下界声明 |
 | R2026-SEVEN-PORT-D/F | χ=7时可有任意高围长、至少Moore(g)个顶点的临界单位图，且其整数/分数色数比≥7π/(8√3)>3/2 | 同上，Moore BFS树与本仓库旧三角圆盘随机避距集；未给对应图坐标 |
 | R2026-SEVEN-PORT-AUDIT | Reed公开Lean的coloring_collision依赖额外且错误的“任意圆上避距色集测度<π/3”前提；r=1/√3圆可由三个测度2π/3的合法弧染色 | 同上、[Reed原Lean](https://github.com/AEjonanonymous/Hadwiger-Nelson/blob/main/Hadwiger_Nelson_Final.lean)；不代表有证χ=6，仅否定该7声称的形式证明范围 |
 | R2026-SEVEN-PORT-E | 双禁距图χ({1,d})≥7且存在可六染的单位距离d-不等性端口模拟器 ⇒ 可构造有限精确NON6单位距离图 ⇒ χ平面=7 | 同上；Galán{1,2}/{1,√3}候选仍需独立审查，没有构造模拟器，因此未解决原问题 |
