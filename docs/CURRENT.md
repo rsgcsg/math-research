@@ -1,3 +1,7 @@
+## 2026-11-06：六色圆周调色板三标签、稳健三色圆环与二阶拓扑（R2026-SIX-PALETTE-TOPOLOGY）
+
+[完整证明与退出条件](proofs/six_palette_topological_escalation_20261106.md) 对照OpenAI Family158 §5的palette-transfer、60度排斥与binary-center统一分离机制，证明对任意假设存在的weak measurable k染色（k≥5），其每个固定中心的最大圆周palette有 \(|P_x(e)|\le k-3\) 几乎处处；**六色只能直接推出≤3，而不能复制五色的≤2**（本推广依赖上游已证明无限分析引理，尚未单独Lean形式化）。给出环域 \(4/5\le|z|\le7/5\) 的九个40度扇区循环三染，其所有同色距离都严格小于49/50或严格大于126/125；证明仅用初等三角界及有理数。这是局部正例，**不是六色平面染色**。进一步算得六色潜在目标 \(\mathrm{sk}_2\Delta^5\) 的 \(\pi_1=0,\ H_2\cong\pi_2\cong\mathbb Z^{10}\)，十个四面体边界构成整数基；与五色图值目标K5的非平凡一维环路形成严格反差，表明简单照搬π1障碍不可行。提出的“圆心+平滑尺度”三维参数域、强迫非零二维整数荷只是一条**尚缺连续骨架映射及全六色强迫证据**的条件路线，未证明χ=7。独立脚本 [research/verify_six_palette_topology.py](../research/verify_six_palette_topology.py) 本地普通及 -O 模式得到一致PASS；[精确有限收据](../certificates/six_palette_topology_20261106.json) 不验证无限引理；未运行全仓make check。
+
 ## 2026-11-06：七色假说的完整远程饱和结构与外部反证审计（R2026-SEVEN-PORT）
 
 [主证明、外部原文审计及严格边界](proofs/seven_rainbow_high_girth_and_external_audit_20261106.md)建立**若且唯若**的有限六色饱和单位圆端口：χ(ℝ²)=7 ⇔ 有有限单位图(H,v)，H−v可六染而每一份六染在N(v)上用尽六标签。结合Tomon 2026高围长定理：**如果**χ=7，那么对每个固定M存在真实平面七色图，其全部≤M点局部子图都二可染；进一步可使v的单位圆邻点在H−v中两两需要至少M−1条边的绕行路径才能连接，却全局强迫六色同时出现。它不是已证χ=7，更不是七团。
