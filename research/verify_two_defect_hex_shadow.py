@@ -43,6 +43,46 @@ def verify_periodic_partial_coloring():
     }
 
 
+def verify_ten_pure_hex_lock():
+    # Exact algebraic checks for two rational points at unit distance.
+    # All ten pure-hex inballs are certified by 1<d^2<9/5<(1+h)^2.
+    hlo,hhi=F(69,200),F(7,20)
+    p=[F(-3,20),F(17,20)]
+    rows=[
+        [(2,1,-2),(3,-1,-1),(4,-2,2),(5,-1,2),(6,2,-1)],
+        [(2,-1,1),(3,2,-2),(4,3,-2),(5,2,1),(6,0,2)]
+    ]
+    if p[1]-p[0]!=1 or not (F(3,20)<hlo and F(17,20)-2*hlo<hlo):
+        raise RuntimeError("two points do not form exact unit pair in two defect hexes")
+    if not (F(9,5)<(1+hlo)**2):
+        raise RuntimeError("the inball cannot reach exact unit length")
+    table=[]
+    for k,R in enumerate(rows):
+        cells=[]
+        for col,m,n in R:
+            if (m+3*n)%7!=col:
+                raise RuntimeError("pure hex congruence color mismatch")
+            A=2*m+n
+            left=A*hlo-p[k]
+            right=A*hhi-p[k]
+            x_lower=F(0) if left*right<=0 else min(left*left,right*right)
+            x_upper=max(left*left,right*right)
+            y=F(3*n,5)
+            low=x_lower+y*y
+            high=x_upper+y*y
+            if not (F(1)<low<=high<=F(9,5)):
+                raise RuntimeError(f"10 exact pure inball certificates failed: {(k,col,m,n)}")
+            cells.append({"label":col,"triangular_coordinate":[m,n],
+                         "distance_squared_lower":str(low),
+                         "distance_squared_upper":str(high)})
+        table.append({"forced_point_x":str(p[k]),"pure_inball_unit_neighbors":cells})
+    return {"result":"PASS","points":[["-3/20","0"],["17/20","0"]],
+            "separation_exactly_one":True,"ten_pure_inball_witnesses":table,
+            "inball_radius_lower":"69/200",
+            "distance_squared_window":"1<d^2<9/5<(1+h)^2",
+            "conclusion":"conditional six-color impossibility when five original hexagon code classes stay monochrome"}
+
+
 def verify():
     hlo,hhi=F(69,200),F(7,20)
     if not ((5*hlo)**2<3<(5*hhi)**2):
@@ -78,6 +118,7 @@ def verify():
         "squared_diameter_strict_upper":str(rect),
         "positive_unit_squared_gap":str(1-rect),
         "partial_coloring_color_count":6,
+        "ten_pure_hex_unit_lock":verify_ten_pure_hex_lock(),
         "periodic_global_partial_coloring":verify_periodic_partial_coloring(),
         "interpretation":"only the first-step forced sixth-color subset is shown unit-free"
     }
