@@ -52,8 +52,14 @@ def verify_four_frozen_triangle():
        (F(1,50),F(5,2),F(29,50)),
        (F(1,50),F(0),F(27,25))]
     # p1-p0=(sqrt3/2,1/2), p2-p0=(0,1), p2-p1=(-sqrt3/2,1/2).
-    if not (4*F(3,4)==3 and 3*F(1,4)+F(1,4)==1):
-        raise RuntimeError("unit triangle Pythagorean radical failed")
+    # q-p horizontal=(5/2)h=sqrt(3)/2, vertical=1/2;
+    # t-p horizontal=0, vertical=1;
+    # q-t horizontal=(5/2)h, vertical=-1/2.
+    edge_pq=F(25,4)*F(3,25)+F(1,4)
+    edge_pt=F(1)
+    edge_qt=F(25,4)*F(3,25)+F(1,4)
+    if (edge_pq,edge_pt,edge_qt)!=(F(1),F(1),F(1)):
+        raise RuntimeError("unit equilateral triangle exact squared lengths failed")
     rows=[
       [(1,-2,1),(2,1,-2),(3,-1,-1),(6,2,-1)],
       [(1,-1,3),(2,0,3),(3,3,0),(6,2,-1)],
