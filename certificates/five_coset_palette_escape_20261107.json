@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "scope": "exact finite five-color forced propagation; analytic weak-measurable triangle input from prior R2026-TWO-DEFECT-SHADOW",
+  "code": "k(m,n)=m+3n mod 7",
+  "deleted_residues": [
+    0,
+    1
+  ],
+  "remaining_residues": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "seed_vertices": [
+    [
+      -1,
+      0
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      -1
+    ]
+  ],
+  "kernel_generators": [
+    [
+      -3,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "kernel_index": 7,
+  "rigid_five_color_translation": {
+    "square_radius": 4,
+    "compressed_footprint_sites": 30,
+    "compressed_derived_steps": 25,
+    "max_depth": 7,
+    "target_size": 20,
+    "residue_counts": {
+      "2": 6,
+      "3": 6,
+      "4": 6,
+      "5": 6,
+      "6": 6
+    }
+  },
+  "forced_triangle_leaves": {
+    "square_radius": 6,
+    "compressed_footprint_sites": 38,
+    "compressed_derived_steps": 33,
+    "max_depth": 13,
+    "target_size": 9,
+    "residue_counts": {
+      "2": 7,
+      "3": 8,
+      "4": 7,
+      "5": 8,
+      "6": 8
+    }
+  },
+  "translated_triangle_leaf_residue_multiplicity": {
+    "2": 2,
+    "4": 2,
+    "5": 2,
+    "6": 3
+  },
+  "four_freeze_leaf_area_sufficient_bound": {
+    "translation_disk_area_gt": "3/19600",
+    "twelve_majority_leakage_lt": "36/390625",
+    "strict": "3/19600 > 36/390625"
+  },
+  "conditional_weak_six_exact_twofold": {
+    "each_real_label_dominant_on_nonmixed_hex_fraction_at_least": "1/56",
+    "fraction_of_nonmixed_hex_deviating_from_any_fixed_5_coset_injection_at_least_among_all_hex": "1/21",
+    "same_fraction_relative_to_nonmixed_hex": "1/15",
+    "original_hadwiger_nelson_not_solved": true
+  },
+  "external_formula_dependencies": [
+    "R2026-TWO-MIXED-HEX, all same-majority nonmixed adjacent cells forbidden",
+    "R2026-TWO-DEFECT-SHADOW §3d, 12-leaf translated unit triangle and radius 1/140",
+    "R2026-TWOFOLD-RIGID, all exact-twofold marked patterns are 42 code pairs"
+  ]
+}
