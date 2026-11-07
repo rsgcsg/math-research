@@ -1,3 +1,12 @@
+## 2026-11-07 复核的6/7外部原始边界与本轮秩二六射线接口
+
+- OpenAI (2026), *The Euclidean plane is not five-colorable*, result Family158, https://github.com/openai/math/tree/main/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026 ；及https://github.com/decalion89/chromatic-number-of-the-plane 关于其Lean目标独立重放。仅证明普通χ≥6、任意k weak measurable transfer及density-one单位边排斥，**不能作为六色不可行来源**。
+- Vsevolod Voronov (2023/2025), arXiv:2304.10163, https://arxiv.org/abs/2304.10163 ，任意正禁距带需≥7，零宽单位单距不能无条件换序。
+- István Tomon (2026), arXiv:2610.03517, https://arxiv.org/abs/2610.03517 ，若有限unit图色数r，则可以有任意围长同样色数的诱导unit图；**7的意义是条件结果**。
+- Chandan Shukla (2026-11-04), arXiv:2611.06269, https://arxiv.org/abs/2611.06269 ，新的五色必要小盘代数图773/5713/8168顶点，非NON6；本轮未复核大型DRAT。
+- Jaan Parts (2020), arXiv:2010.12668, https://arxiv.org/abs/2010.12668 ，6色部分铺砌缺口约0.000143017209，≤6992顶点单位图6色可行的报道；低缺口不是全平面六色。
+- 60叶[新独立Q√3几何与秩二双码条件定理](../docs/proofs/two_direction_six_ray_majority_interface_20261107.md)只把单类6标签逃逸的原条纹模型推进到二维核格相干，不能从纯code或binary推导任意真实六色身份全局冻结。
+
 ## 2026-11-07补充：旋转不变二点谱与完整颜色共同law的硬边界
 
 - Fernando Mário de Oliveira Filho, Frank Vallentin, *Fourier analysis, linear programming, and densities of distance avoiding sets in R^n*, J. Eur. Math. Soc. 12 (2010), 1417–1428, https://doi.org/10.4171/JEMS/236 ：经典旋转平均Fourier/Bessel正定核与二点自相关LP。
