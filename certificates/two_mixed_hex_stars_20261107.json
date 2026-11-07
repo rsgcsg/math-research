@@ -99,5 +99,20 @@
       "2/625"
     ],
     "pair_same_color_dominance_impossible_at_eta": "1/62500"
+  },
+  "robust_two_mixed_needle_tradeoff": {
+    "status": "PASS",
+    "source_fraction": "19/20",
+    "angular_halfwidth_r_fraction": "1/20",
+    "angular_length_r_fraction": "1/10",
+    "r": "1/250",
+    "eta": "1/62500",
+    "gamma_strictly_greater_than": "3/16",
+    "per_star_one_missing_energy_strictly_greater_than_K": "3/2500000000",
+    "per_star_zero_missing_energy_at_least": "2*K",
+    "max_star_overlap": 7,
+    "finite_window_formula": "J_Omega >= K/7*(2*|U|-7*|Mix intersect N[U]|)_+",
+    "periodic_energy_factor": "K/(14*pi*M)",
+    "scope": "exact rational geometry factors only; no integral or chi=7 proof"
   }
 }
