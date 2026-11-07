@@ -1,0 +1,201 @@
+{
+  "result": "PASS",
+  "scope": "Exact rational Q(sqrt3) geometry and full-rank displacement calibration; weak six-color measure transfer is a written conditional deduction, not chi7.",
+  "ray_count": 60,
+  "inball_radius": "1/50",
+  "sqrt3_interval": [
+    "433/250",
+    "1733/1000"
+  ],
+  "smallest_strict_squared_gap": "1637/25000",
+  "smallest_gap_at": {
+    "source_class": 2,
+    "partner_shift": [
+      1,
+      2
+    ],
+    "target": [
+      3,
+      2
+    ],
+    "bound": "lower"
+  },
+  "witnesses": [
+    {
+      "source_class": 2,
+      "partner_shift": [
+        -3,
+        1
+      ],
+      "case_min_squared_gap": "27189/250000",
+      "all_six_strict_unit_inball_tests": "PASS"
+    },
+    {
+      "source_class": 2,
+      "partner_shift": [
+        1,
+        2
+      ],
+      "case_min_squared_gap": "1637/25000",
+      "all_six_strict_unit_inball_tests": "PASS"
+    },
+    {
+      "source_class": 3,
+      "partner_shift": [
+        -3,
+        1
+      ],
+      "case_min_squared_gap": "2363/31250",
+      "all_six_strict_unit_inball_tests": "PASS"
+    },
+    {
+      "source_class": 3,
+      "partner_shift": [
+        1,
+        2
+      ],
+      "case_min_squared_gap": "28989/250000",
+      "all_six_strict_unit_inball_tests": "PASS"
+    },
+    {
+      "source_class": 4,
+      "partner_shift": [
+        1,
+        2
+      ],
+      "case_min_squared_gap": "4607/25000",
+      "all_six_strict_unit_inball_tests": "PASS"
+    },
+    {
+      "source_class": 4,
+      "partner_shift": [
+        2,
+        -3
+      ],
+      "case_min_squared_gap": "18389/250000",
+      "all_six_strict_unit_inball_tests": "PASS"
+    },
+    {
+      "source_class": 5,
+      "partner_shift": [
+        -3,
+        1
+      ],
+      "case_min_squared_gap": "2383/31250",
+      "all_six_strict_unit_inball_tests": "PASS"
+    },
+    {
+      "source_class": 5,
+      "partner_shift": [
+        1,
+        2
+      ],
+      "case_min_squared_gap": "28289/250000",
+      "all_six_strict_unit_inball_tests": "PASS"
+    },
+    {
+      "source_class": 6,
+      "partner_shift": [
+        -3,
+        1
+      ],
+      "case_min_squared_gap": "27519/250000",
+      "all_six_strict_unit_inball_tests": "PASS"
+    },
+    {
+      "source_class": 6,
+      "partner_shift": [
+        1,
+        2
+      ],
+      "case_min_squared_gap": "18189/250000",
+      "all_six_strict_unit_inball_tests": "PASS"
+    }
+  ],
+  "rank_two_kernel_bases": [
+    {
+      "source_class": 2,
+      "generators": [
+        [
+          -3,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "absolute_determinant": 7,
+      "full_index_seven_kernel_generated": true
+    },
+    {
+      "source_class": 3,
+      "generators": [
+        [
+          -3,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "absolute_determinant": 7,
+      "full_index_seven_kernel_generated": true
+    },
+    {
+      "source_class": 4,
+      "generators": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          -3
+        ]
+      ],
+      "absolute_determinant": 7,
+      "full_index_seven_kernel_generated": true
+    },
+    {
+      "source_class": 5,
+      "generators": [
+        [
+          -3,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "absolute_determinant": 7,
+      "full_index_seven_kernel_generated": true
+    },
+    {
+      "source_class": 6,
+      "generators": [
+        [
+          -3,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "absolute_determinant": 7,
+      "full_index_seven_kernel_generated": true
+    }
+  ],
+  "binary_six_rainbow_formula": {
+    "patterns_checked": 320,
+    "identity": "six distinct colors iff source/partner class bits differ and four other-class helper bits are zero"
+  },
+  "six_leaf_weak_color_area": {
+    "hex_area_exact": "6*sqrt(3)/25",
+    "hex_majority_defect_threshold": "1/62500",
+    "mass_contradiction": "pi/2500 > 6*(1/62500)*(6*sqrt(3)/25)"
+  }
+}
