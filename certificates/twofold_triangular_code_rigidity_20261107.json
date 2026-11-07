@@ -1,0 +1,30 @@
+{
+  "central_patch_vertices": 25,
+  "enumeration": {
+    "central_patterns_reached": 42,
+    "completed_partial_assignments": 138,
+    "non_code_patterns_found": 0,
+    "search_nodes": 906
+  },
+  "finite_star_equations": 49,
+  "finite_window_vertices": 81,
+  "global_classification": "every exact twofold radius-one triangular-grid cover is the union of two cosets of m+3n or m+5n modulo 7",
+  "hn_scope": "only exact 2/7 saturation; no unconditional chi=7 proof",
+  "overlap_uniqueness": {
+    "generators": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "overlap_sites_per_generator": 20,
+    "pairs_of_distinct_templates_that_agree": 0
+  },
+  "proof_scope": "exact exhaustive local enumeration and overlap uniqueness",
+  "status": "PASS",
+  "templates": 42
+}
