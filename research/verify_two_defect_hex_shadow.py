@@ -68,6 +68,12 @@ def verify_four_frozen_triangle():
     if not (F(17,2500)<F(3,25) and F(37,2500)<F(3,25)
                 and (F(1,50)-hhi/2)**2+F(1,50)**2<F(3,25)):
         raise RuntimeError("triangle vertices not inside omitted hex inballs")
+    radius=F(1,140)
+    if not (F(71537,40000)<(1+hlo-radius)**2):
+        raise RuntimeError("common translate radius too large for leaves")
+    assert_mode_unique_cells={(m,n) for row in rows for _,m,n in row}
+    if len(assert_mode_unique_cells)!=9:
+        raise RuntimeError("pure leaf cell count mismatch")
     report=[]
     for pi,(a,b,y) in enumerate(p):
         tests=[]
@@ -89,6 +95,9 @@ def verify_four_frozen_triangle():
       "frozen_classes":[1,2,3,6],
       "all_vertices_have_four_true_unit_neighbors":True,
       "inball_distance_squared_window":"1<d^2<9/5<(1+h)^2",
+      "common_translation_radius":"1/140",
+      "leaf_cell_count_distinct":9,
+      "weak_six_assigned_palette_impurity_fraction_at_least":"pi/(56448*sqrt(3))",
       "exact_pure_hex_witnesses":report,
       "conclusion":"no proper six coloring preserves these four original hex code classes as fixed monochrome classes"
     }
