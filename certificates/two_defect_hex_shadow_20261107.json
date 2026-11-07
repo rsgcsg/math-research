@@ -24,5 +24,16 @@
   "squared_diameter_strict_upper": "30389/40000",
   "positive_unit_squared_gap": "9611/40000",
   "partial_coloring_color_count": 6,
-  "interpretation": "only the first-step forced sixth-color subset is shown unit-free"
+  "interpretation": "only the first-step forced sixth-color subset is shown unit-free",
+  "periodic_global_partial_coloring": {
+    "triangular_norm_two_absent": true,
+    "seven_star_residues_rainbow": true,
+    "two_defect_classes_in_every_star": 2,
+    "disk_radius_test": "1/20",
+    "closest_center_class": "2*sqrt(3)/5",
+    "next_nearest_center_class_at_least": "6/5",
+    "six_color_partial_covered_density_formula": "5/7+25*pi*r^2/(21*sqrt(3))",
+    "limit_r_up_to_1_over_10": "5/7+pi/(84*sqrt(3))",
+    "scope": "strict unit-free only on partially colored domain; not 6 coloring of plane"
+  }
 }
