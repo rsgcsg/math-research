@@ -1,3 +1,11 @@
+## 2026-11-07 R2026-RANKTWO-SIX-RAY：60个真实单位叶、rank-two全核格相干及binary逃逸边界
+
+| 结果ID | 严格断言 | 证书与不可越过的边界 |
+| --- | --- | --- |
+| R2026-RANKTWO-SIX-RAY-A | 对T={0,1}五类nonmixed码余类，每类两套六叶真单位几何，共10套60条真单位线段；r=1/50内圆盘统一、严格有理根式平方距离最小余量1637/25000。任何假想weak六染的这6个非mixed宏格不可能主导六个不同实际标签 | [精确十行坐标和证明](proofs/two_direction_six_ray_majority_interface_20261107.md)§1–2；[标准库60叶Fraction校验](../research/verify_two_direction_six_ray_rigidity_20261107.py)与[证书](../certificates/two_direction_six_ray_rigidity_20261107.json)；无需参考色冻结，但依赖Family158 density-one lemma，**不是χ7** |
+| R2026-RANKTWO-SIX-RAY-B | 若额外假设5类宏格实际主导只在各自参考f(k)=k−1与额外色6中二选一，令x_a为6翻转，则\(|x_a(v)-x_a(v+t)|\le\sum_{b\ne a}x_b(h_b)\)；每类2个t的det绝对值7，生成整个模7核格。其它四类不翻转⇒源类x_a在整个核格一致；周期密度界\(D_a(t_i)\le\sum_{b\ne a}\rho_b\)、位移相关界乘以|m|+|n| | [同文§3](proofs/two_direction_six_ray_majority_interface_20261107.md)，代码枚举320组二元6叶词、五个二维基的精确行列式。**binary非普通weak六染必然条件；此前四冻结本来就有三角形矛盾，不能以此冒充χ7** |
+| R2026-RANKTWO-SIX-RAY-SEARCH | 选取五陪集宏片、旧12叶单位三角形与新60叶的有限放松模型，87宏片+20组三角形+182探点仍6色可行；160宏片+75组三角形+485探点限时未定 | 仅数值/整数优化探索，未保存独立完整6-SAT证书、部分边采用抽象点与内部面积合法性；SAT只证明有限松弛约束不足，UNKNOWN不是UNSAT；无χ7证明 |
+
 ## 2026-11-07 R2026-SIX-RAY-AVALANCHE：五种原色格任何第六色接管都需触发邻域进一步颜色扰动
 
 | 编号 | 已证定理 | 证据、限制 |
