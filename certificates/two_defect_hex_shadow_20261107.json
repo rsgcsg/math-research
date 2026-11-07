@@ -271,6 +271,11 @@
         ]
       }
     ],
-    "conclusion": "no proper six coloring preserves these four original hex code classes as fixed monochrome classes"
+    "conclusion": "no proper six coloring preserves these four original hex code classes as fixed monochrome classes",
+    "common_translation_radius": "1/140",
+    "leaf_cell_count_distinct": 9,
+    "weak_six_assigned_palette_impurity_fraction_at_least": "pi/(56448*sqrt(3))",
+    "max_upper_squared_distance": "71537/40000",
+    "strict_inball_radius_margin_sq_numerator": "2816/1960000"
   }
 }
