@@ -78,6 +78,41 @@ def certify_pairwise_majority():
             "pair_inball_radius":"3/20","pair_inball_margin_lower":gaps,
             "pair_same_color_dominance_impossible_at_eta":str(eta)}
 
+def certify_robust_two_mixed_needle_tradeoff():
+    # Two cases: 0 mixed cells force a repeated dominant label;
+    # exactly 1 mixed cell has six distinct dominant labels or a repeat.
+    # With a common source disk B(x,19*r/20), each of the six directions
+    # admits a length-r/10 angular interval keeping its translate in
+    # the corresponding certified radius-r target disk.
+    gamma_lower=F(361,400)*F(3)-F(36,25)*F(7,4)
+    chk(gamma_lower==F(3,16),"pi>3, sqrt3<7/4 angular area margin")
+    K=F(3,160)*r**3
+    chk(K==F(3,2500000000),"2/7 tradeoff strict rational K")
+    # Earlier positive-energy lemma: repeated-majority pair has
+    # a radius-3/20 unit-linked inball pair.
+    pair_lower=F(3)*rpair**3/F(16)
+    chk(pair_lower>2*K,"repeated-majority pair must cost >=2K")
+    # Critical source area > six target majority deficits:
+    chk(gamma_lower>0 and F(19,20)+F(1,20)==1,
+        "source radius plus angular unit displacement fits target radius")
+    chk(2*eta*F(12,25)<F(3)*rpair**2/F(8),
+        "R0/2 inball overlap beats two majority deficits")
+    # Hex cell area M=6sqrt3/25 and every star vertex belongs to at most
+    # seven closed one-ball stars.
+    return {"status":"PASS",
+            "source_fraction":"19/20",
+            "angular_halfwidth_r_fraction":"1/20",
+            "angular_length_r_fraction":"1/10",
+            "r":"1/250","eta":"1/62500",
+            "gamma_strictly_greater_than":"3/16",
+            "per_star_one_missing_energy_strictly_greater_than_K":str(K),
+            "per_star_zero_missing_energy_at_least":"2*K",
+            "max_star_overlap":7,
+            "finite_window_formula":"J_Omega >= K/7*(2*|U|-7*|Mix intersect N[U]|)_+",
+            "periodic_energy_factor":"K/(14*pi*M)",
+            "scope":"exact rational geometry factors only; no integral or chi=7 proof"}
+
+
 def main():
     chk(L*L<3<U*U,"strict rational radical enclosure")
     chk(eta==F(1,62500) and eta==r*r,"eta and probe disk area")
@@ -110,7 +145,8 @@ def main():
             "asymptotic_density_lower":"2/7",
             "probabilistic_core_inequality":"pi>36sqrt(3)/25",
             "central_and_neighbor_probes":probes,
-            "pairwise_majority":certify_pairwise_majority()}
+            "pairwise_majority":certify_pairwise_majority(),
+            "robust_two_mixed_needle_tradeoff":certify_robust_two_mixed_needle_tradeoff()}
 
 if __name__=="__main__":
     print(json.dumps(main(),ensure_ascii=False,sort_keys=True,indent=2))
