@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "exact rational bounds and diameter only; no six/seven plane solution",
+  "hex_inradius_bracket": [
+    "69/200",
+    "7/20"
+  ],
+  "pure_cell_visibility_necessary_center_distance_range": [
+    "3/5",
+    "7/5"
+  ],
+  "strictly_below_9_over_25": {
+    "F0_vertical_pure_center": "557/1600",
+    "F0_left_top_bottom_pure": "565/1600",
+    "F0_left_far_pure": "533/1600",
+    "F1_vertical_pure_center": "7177/20000"
+  },
+  "forced_color_rectangle": {
+    "min_x": "-1/8",
+    "max_x": "71/100",
+    "min_y": "-1/8",
+    "max_y": "1/8"
+  },
+  "squared_diameter_strict_upper": "30389/40000",
+  "positive_unit_squared_gap": "9611/40000",
+  "partial_coloring_color_count": 6,
+  "interpretation": "only the first-step forced sixth-color subset is shown unit-free"
+}
