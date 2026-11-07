@@ -277,5 +277,15 @@
     "weak_six_assigned_palette_impurity_fraction_at_least": "pi/(56448*sqrt(3))",
     "max_upper_squared_distance": "71537/40000",
     "strict_inball_radius_margin_sq_numerator": "2816/1960000"
+  },
+  "affine_color_orbit_classification": {
+    "status": "PASS",
+    "geometry_rot60_color_multiplier": 3,
+    "geometry_translation_color_increment": 1,
+    "AGL_1_7_order": 42,
+    "non_arithmetic_progression_missing_triples_certified": 14,
+    "three_term_arithmetic_progression_missing_triples_not_yet_certified": 21,
+    "all_four_class_freeze_choices": 35,
+    "scope": "14 cases are Euclidean copies of exact triangle gadget; 21 cases unproved"
   }
 }
