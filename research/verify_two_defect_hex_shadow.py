@@ -7,6 +7,42 @@ the forced-color set satisfies them is in the accompanying document.
 from fractions import Fraction as F
 import json
 
+def verify_periodic_partial_coloring():
+    # Triangular lattice N=a^2+a*b+b^2 has no N=2 for integer a,b.
+    # Every 7-star B1(v) has one vertex in each residue m+3n mod 7.
+    diffs=[(0,0),(1,0),(-1,0),(0,1),(0,-1),(1,-1),(-1,1)]
+    for m in range(7):
+        for n in range(7):
+            residues={(m+a+3*(n+b))%7 for a,b in diffs}
+            if residues != set(range(7)):
+                raise RuntimeError("not seven residue classes in each star")
+            if len([r for r in residues if r in (0,1)])!=2:
+                raise RuntimeError("double code does not double dominate stars")
+    norms={a*a+a*b+b*b for a in range(-12,13) for b in range(-12,13) if (a,b)!=(0,0)}
+    if 1 not in norms or 3 not in norms or 2 in norms:
+        raise RuntimeError("triangular center distances not 1,3,...")
+    r=F(1,20)
+    # For unit-free sixth-color disks:
+    # nearby centers D=2 sqrt(3)/5 -> D+2r<1 if sqrt3<2.
+    if not (F(4,5)+2*r<1):  # upper bound D<4/5
+        raise RuntimeError("nearby disks have unit pair risk")
+    if not (F(6,5)-2*r>1):
+        raise RuntimeError("next nearest disks have unit pair risk")
+    # Exact density formula for arbitrary r<1/10, limiting r->1/10:
+    # density -> 5/7+pi/(84 sqrt3)
+    return {
+        "triangular_norm_two_absent":True,
+        "seven_star_residues_rainbow":True,
+        "two_defect_classes_in_every_star":2,
+        "disk_radius_test":"1/20",
+        "closest_center_class":"2*sqrt(3)/5",
+        "next_nearest_center_class_at_least":"6/5",
+        "six_color_partial_covered_density_formula":"5/7+25*pi*r^2/(21*sqrt(3))",
+        "limit_r_up_to_1_over_10":"5/7+pi/(84*sqrt(3))",
+        "scope":"strict unit-free only on partially colored domain; not 6 coloring of plane"
+    }
+
+
 def verify():
     hlo,hhi=F(69,200),F(7,20)
     if not ((5*hlo)**2<3<(5*hhi)**2):
@@ -42,6 +78,7 @@ def verify():
         "squared_diameter_strict_upper":str(rect),
         "positive_unit_squared_gap":str(1-rect),
         "partial_coloring_color_count":6,
+        "periodic_global_partial_coloring":verify_periodic_partial_coloring(),
         "interpretation":"only the first-step forced sixth-color subset is shown unit-free"
     }
 if __name__=="__main__":
