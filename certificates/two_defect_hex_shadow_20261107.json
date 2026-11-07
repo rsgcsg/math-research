@@ -35,5 +35,124 @@
     "six_color_partial_covered_density_formula": "5/7+25*pi*r^2/(21*sqrt(3))",
     "limit_r_up_to_1_over_10": "5/7+pi/(84*sqrt(3))",
     "scope": "strict unit-free only on partially colored domain; not 6 coloring of plane"
+  },
+  "ten_pure_hex_unit_lock": {
+    "result": "PASS",
+    "points": [
+      [
+        "-3/20",
+        "0"
+      ],
+      [
+        "17/20",
+        "0"
+      ]
+    ],
+    "separation_exactly_one": true,
+    "ten_pure_inball_witnesses": [
+      {
+        "forced_point_x": "-3/20",
+        "pure_inball_unit_neighbors": [
+          {
+            "label": 2,
+            "triangular_coordinate": [
+              1,
+              -2
+            ],
+            "distance_squared_lower": "117/80",
+            "distance_squared_upper": "117/80"
+          },
+          {
+            "label": 3,
+            "triangular_coordinate": [
+              -1,
+              -1
+            ],
+            "distance_squared_lower": "45729/40000",
+            "distance_squared_upper": "117/100"
+          },
+          {
+            "label": 4,
+            "triangular_coordinate": [
+              -2,
+              2
+            ],
+            "distance_squared_lower": "4329/2500",
+            "distance_squared_upper": "697/400"
+          },
+          {
+            "label": 5,
+            "triangular_coordinate": [
+              -1,
+              2
+            ],
+            "distance_squared_lower": "117/80",
+            "distance_squared_upper": "117/80"
+          },
+          {
+            "label": 6,
+            "triangular_coordinate": [
+              2,
+              -1
+            ],
+            "distance_squared_lower": "70569/40000",
+            "distance_squared_upper": "9/5"
+          }
+        ]
+      },
+      {
+        "forced_point_x": "17/20",
+        "pure_inball_unit_neighbors": [
+          {
+            "label": 2,
+            "triangular_coordinate": [
+              -1,
+              1
+            ],
+            "distance_squared_lower": "71521/40000",
+            "distance_squared_upper": "9/5"
+          },
+          {
+            "label": 3,
+            "triangular_coordinate": [
+              2,
+              -2
+            ],
+            "distance_squared_lower": "117/80",
+            "distance_squared_upper": "916/625"
+          },
+          {
+            "label": 4,
+            "triangular_coordinate": [
+              3,
+              -2
+            ],
+            "distance_squared_lower": "17209/10000",
+            "distance_squared_upper": "697/400"
+          },
+          {
+            "label": 5,
+            "triangular_coordinate": [
+              2,
+              1
+            ],
+            "distance_squared_lower": "1801/1600",
+            "distance_squared_upper": "117/100"
+          },
+          {
+            "label": 6,
+            "triangular_coordinate": [
+              0,
+              2
+            ],
+            "distance_squared_lower": "117/80",
+            "distance_squared_upper": "916/625"
+          }
+        ]
+      }
+    ],
+    "inball_radius_lower": "69/200",
+    "distance_squared_window": "1<d^2<9/5<(1+h)^2",
+    "conclusion": "conditional six-color impossibility when five original hexagon code classes stay monochrome"
   }
 }
