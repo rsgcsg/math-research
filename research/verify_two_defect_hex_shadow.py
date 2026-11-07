@@ -43,6 +43,51 @@ def verify_periodic_partial_coloring():
     }
 
 
+def verify_four_frozen_triangle():
+    # Three exact unit triangle vertices in Q(sqrt3), and 12 exact
+    # unit-visibility witnesses from four frozen code classes.
+    hlo,hhi=F(69,200),F(7,20)
+    # x coordinate a+b*h with h=sqrt3/5; y rational.
+    p=[(F(1,50),F(0),F(2,25)),
+       (F(1,50),F(5,2),F(29,50)),
+       (F(1,50),F(0),F(27,25))]
+    # p1-p0=(sqrt3/2,1/2), p2-p0=(0,1), p2-p1=(-sqrt3/2,1/2).
+    if not (4*F(3,4)==3 and 3*F(1,4)+F(1,4)==1):
+        raise RuntimeError("unit triangle Pythagorean radical failed")
+    rows=[
+      [(1,-2,1),(2,1,-2),(3,-1,-1),(6,2,-1)],
+      [(1,-1,3),(2,0,3),(3,3,0),(6,2,-1)],
+      [(1,-2,1),(2,0,3),(3,-2,4),(6,-3,3)]
+    ]
+    if not (F(17,2500)<F(3,25) and F(37,2500)<F(3,25)
+                and (F(1,50)-hhi/2)**2+F(1,50)**2<F(3,25)):
+        raise RuntimeError("triangle vertices not inside omitted hex inballs")
+    report=[]
+    for pi,(a,b,y) in enumerate(p):
+        tests=[]
+        for j,m,n in rows[pi]:
+            if (m+3*n)%7!=j:raise RuntimeError("wrong pure color residue")
+            coef=F(2*m+n)-b
+            v1=coef*hlo-a;v2=coef*hhi-a
+            xlo=F(0) if v1*v2<=0 else min(v1*v1,v2*v2)
+            xhi=max(v1*v1,v2*v2)
+            vY=F(3*n,5)-y
+            low=xlo+vY*vY;high=xhi+vY*vY
+            if not (1<low<=high<F(9,5)):
+                raise RuntimeError(f"four-frozen inball failure:{pi,j,m,n} {low} {high}")
+            tests.append({"pure_color":j,"m":m,"n":n,"sq_distance_lower":str(low),"sq_distance_upper":str(high)})
+        report.append({"triangle_vertex_index":pi,"tests":tests})
+    return {
+      "status":"PASS",
+      "unit_triangle_in_missing_classes":[0,4,5],
+      "frozen_classes":[1,2,3,6],
+      "all_vertices_have_four_true_unit_neighbors":True,
+      "inball_distance_squared_window":"1<d^2<9/5<(1+h)^2",
+      "exact_pure_hex_witnesses":report,
+      "conclusion":"no proper six coloring preserves these four original hex code classes as fixed monochrome classes"
+    }
+
+
 def verify_ten_pure_hex_lock():
     # Exact algebraic checks for two rational points at unit distance.
     # All ten pure-hex inballs are certified by 1<d^2<9/5<(1+h)^2.
@@ -119,6 +164,7 @@ def verify():
         "positive_unit_squared_gap":str(1-rect),
         "partial_coloring_color_count":6,
         "ten_pure_hex_unit_lock":verify_ten_pure_hex_lock(),
+        "four_frozen_equilateral_triangle_lock":verify_four_frozen_triangle(),
         "periodic_global_partial_coloring":verify_periodic_partial_coloring(),
         "interpretation":"only the first-step forced sixth-color subset is shown unit-free"
     }
