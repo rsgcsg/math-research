@@ -1,0 +1,177 @@
+{
+  "status": "PASS",
+  "verification": "exact rational Q(sqrt3) interval per 30 directions; not a chi7 proof",
+  "sqrt3_interval": [
+    "433/250",
+    "1733/1000"
+  ],
+  "inball_radius": "1/100",
+  "majority_defect_threshold": "1/62500",
+  "number_of_source_cosets": 5,
+  "number_of_unit_leaves": 30,
+  "smallest_strict_squared_margin": "583/62500",
+  "smallest_margin_at": "source 5, leaf color 2, lower",
+  "weak_mass_obstruction": "pi/10000 > 6*(1/62500)*(6*sqrt(3)/25)",
+  "source_cosets": {
+    "2": {
+      "offset": [
+        "-21/20",
+        "0"
+      ],
+      "targets": [
+        [
+          -1,
+          1
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    "3": {
+      "offset": [
+        "1",
+        "11/20"
+      ],
+      "targets": [
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    "4": {
+      "offset": [
+        "-7/10",
+        "-3/5"
+      ],
+      "targets": [
+        [
+          2,
+          0
+        ],
+        [
+          5,
+          -3
+        ],
+        [
+          3,
+          -2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          -1
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "5": {
+      "offset": [
+        "-1",
+        "-11/20"
+      ],
+      "targets": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          -2
+        ],
+        [
+          4,
+          -2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          0
+        ]
+      ]
+    },
+    "6": {
+      "offset": [
+        "-19/20",
+        "11/20"
+      ],
+      "targets": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          6,
+          0
+        ]
+      ]
+    }
+  }
+}
