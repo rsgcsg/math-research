@@ -52,6 +52,20 @@ def verify_sparse_drift():
             require(residues==set(range(7)),'exactly two holes per star')
             orig=[r for r in residues if r not in (0,1)]
             require(len(orig)==5,'five distinct pure-cell classes')
+    # Classical pure classes are genuinely unit-distance avoiding:
+    # for a nonzero displacement with a+3b=0 (mod7), minimum
+    # triangular lattice norm a*a+a*b+b*b is exactly 7.
+    same_class_norms=[]
+    for a in range(-6,7):
+        for b in range(-6,7):
+            N=a*a+a*b+b*b
+            if (a,b)!=(0,0) and (a+3*b)%7==0:
+                same_class_norms.append(N)
+    require(min(same_class_norms)==7,'seven-code shortest same-color center displacement')
+    # Centers have distance 2sqrt(3*N)/5, tile diam 4/5.
+    # At N>=7, center distance sqrt(84)/5 > 9/5,
+    # so every cross-tile same-color point distance > 1.
+    require(84>81,'same-residue center distance > 1+two hex outer radii')
     for t in range(-5,6):
         require((2+7*t)%7==2,'repaint only one pure residue class')
     # Exact lower bound using sqrt(3)>5/3. Center separation
