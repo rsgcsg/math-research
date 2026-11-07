@@ -287,5 +287,7 @@
     "three_term_arithmetic_progression_missing_triples_not_yet_certified": 21,
     "all_four_class_freeze_choices": 35,
     "scope": "14 cases are Euclidean copies of exact triangle gadget; 21 cases unproved"
-  }
+  },
+  "provenance": "Structured exact rational bounds from local independent Python Fraction checks (/tmp/check_two_defect_shadow.py, /tmp/ten_witness.py, /tmp/twelve_witness.py and AGL orbit enumeration); saved as a receipt, NOT captured stdout from running the entire GitHub checker or make check.",
+  "validation_scope": "Geometry arithmetic and affine orbit counts independently recalculated. Infinite weak-measurable implications are handwritten proofs using external OpenAI typical-point lemma. No Lean, full make check, or original HN=7 certification."
 }
