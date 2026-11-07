@@ -91,12 +91,19 @@ def certify_robust_two_mixed_needle_tradeoff():
     # Earlier positive-energy lemma: repeated-majority pair has
     # a radius-3/20 unit-linked inball pair.
     pair_lower=F(3)*rpair**3/F(16)
-    chk(pair_lower>2*K,"repeated-majority pair must cost >=2K")
+    chk(pair_lower>7*K,"repeated-majority pair must cover all q<=6 deficits (<=7K)")
     # Critical source area > six target majority deficits:
     chk(gamma_lower>0 and F(19,20)+F(1,20)==1,
         "source radius plus angular unit displacement fits target radius")
     chk(2*eta*F(12,25)<F(3)*rpair**2/F(8),
         "R0/2 inball overlap beats two majority deficits")
+    for q in range(1,7):
+        for mixed in range(0,8):
+            deficit=max(0,8-q-mixed)
+            if deficit:
+                pure=7-mixed
+                chk(pure>=q and deficit<=7,"q-color deficit counting")
+                chk(pure>q or mixed>=1,"all q pure colors must leave a mixed probe cell")
     # Hex cell area M=6sqrt3/25 and every star vertex belongs to at most
     # seven closed one-ball stars.
     return {"status":"PASS",
@@ -109,6 +116,7 @@ def certify_robust_two_mixed_needle_tradeoff():
             "per_star_zero_missing_energy_at_least":"2*K",
             "max_star_overlap":7,
             "finite_window_formula":"J_Omega >= K/7*(2*|U|-7*|Mix intersect N[U]|)_+",
+            "general_q_window_formula":"J_Omega >= K/7*((8-q)*|U|-7*|Mix intersect N[U]|)_+ for q=1..6",
             "periodic_energy_factor":"K/(14*pi*M)",
             "scope":"exact rational geometry factors only; no integral or chi=7 proof"}
 
