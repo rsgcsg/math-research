@@ -1,3 +1,12 @@
+## 2026-11-07 R2026-TWO-MIXED-HEX-D/Dq：适用于任意可测六色场的真单位针量化2/7能隙二择
+
+| 标识 | 严格定理/验证 | 限制与完整证明 |
+| --- | --- | --- |
+| R2026-TWO-MIXED-HEX-D | 对任意可测六标签场、s=2/5六角格、η=1/62500，任意有限中心U有 \(J_{\Omega_U}\ge(K/7)(2|U|-7|\mathrm{Mix}_\eta\cap N[U]|)_+\)，\(K=3/2500000000\)；周期场 \(E_{\mathrm{per}}\ge(K/(14\pi M))(2-7d_\eta^+)_+\)、\(M=6\sqrt3/25\) | [完整几何/积分/七重计数](proofs/two_mixed_hex_star_20261107.md)§4b；用19r/20源内盘与r/10角弧，源面积和目标六标签缺失给 \(361\pi/400-36\sqrt3/25>3/16\)。**未排除d≥2/7高混色状态，不是χ7** |
+| R2026-TWO-MIXED-HEX-Dq | 同一精确单位针不等式对全部1≤q≤6升级为 \(J_{\Omega_U}\ge(K/7)((8-q)|U|-7|\mathrm{Mix}_\eta\cap N[U]|)_+\)；weak proper时每星≥8−q mixed | [同文§4b](proofs/two_mixed_hex_star_20261107.md)，q种非mixed主导色若重复则同色针成本>7K；若互异且恰占满q标签，则选任一mixed格共同六射线探测源。与普通proper点态8−q格阶梯相容 |
+| R2026-TWO-MIXED-HEX-D-CHECK | 纯有理\(K=3/2500000000\)，\((361/400)3-(36/25)(7/4)=3/16\)，旧R=3/20双球坏针质量>\(7K\)，7重计数和1≤q≤6缺陷阶梯 | [校验脚本](../research/verify_two_mixed_hex_stars.py)·[收据](../certificates/two_mixed_hex_stars_20261107.json)，本轮本地整数Fraction核心校验PASS；没跑远端全仓make check/Lean，没得到NON6有限图 |
+| Q2026-HIGH-MIX | 若有γ,δ>0使**全部周期六标签场**在\(d_\eta\ge2/7-\gamma\)时E≥δ，则和上述D拼接得统一\(a_6\ge\min(7C\gamma,\delta)>0\)从而χ=7 | [完整剩余义务](proofs/seven_global_proof_obligation_audit_20261107.md)§4；**尚无证明**，不能从局部2/7混色、已冻结四色矛盾、正禁距Voronov或二点PSD得到 |
+
 ## 2026-11-07 R2026-TWO-DEFECT-SHADOW：二缺陷最佳局部松弛、五/四晶格冻结反证与weak六色面积约束
 
 | 标识 | 严格结论 | 完整证明与不可越界条件 |
