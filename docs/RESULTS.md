@@ -1,3 +1,10 @@
+## 2026-11-07 R2026-DOUBLE-CODE-PHASE：缺陷双码的相位壁、有限距离相关与标签漂移退出反例
+
+| 标识 | 已严格证明 | 适用边界 |
+| --- | --- | --- |
+| R2026-DOUBLE-CODE-PHASE-A | 42份双完美码模板若在两相邻5×5窗口都与同一混色标记场吻合，凭20格交叠唯一性它们的全局模板身份必同；good窗口的各连通分量单相位。周期六色可测场中，两距离ℓ窗口同为good且同相位的概率≥\([1-(\ell+1)\epsilon_{\rm phase}]_+\)，\(\epsilon_{\rm phase}=\min(1,49[7d-2+28πME/K])\) | [证明](proofs/twofold_code_phase_coherence_and_label_drift_20261107.md)§1；由已有B3局部坏窗口比例和坐标路径上的联合界推出，**只锁定mixed位置，不锁定真实六标签** |
+| R2026-DOUBLE-CODE-PHASE-B | 保留两个余类留白、其余五余类整格单色的经典六色**部分**铺砌中，沿k=2余类格\(v_t=(2+7t,0)\)，任选非周期集合A并把相应整片重涂全新第六色，仍逐点严格避所有同色单位边；重涂格之间点距>58/15>1，未染面积=2/7，全局mixed/留白位置仍精确双码 | 同文§2·[标准库整数/有理核验](../research/verify_twofold_phase_and_drift.py)·[证书](../certificates/twofold_phase_and_drift_20261107.json)。**已知FIVE-COSET-ESCAPE含更强宏格6色自由度，此结果仅构造性反例/交叉核验，非真正全平面6染** |
+
 ## 2026-11-07 R2026-FIVE-COSET-ESCAPE：从双码位置到五陪集真实颜色身份的精确证书
 
 | 编号 | 已得数学结论及证明格式 | 核心限制 |
