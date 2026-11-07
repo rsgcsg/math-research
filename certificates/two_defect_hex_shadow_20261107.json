@@ -154,5 +154,123 @@
     "inball_radius_lower": "69/200",
     "distance_squared_window": "1<d^2<9/5<(1+h)^2",
     "conclusion": "conditional six-color impossibility when five original hexagon code classes stay monochrome"
+  },
+  "four_frozen_equilateral_triangle_lock": {
+    "status": "PASS",
+    "unit_triangle_in_missing_classes": [
+      0,
+      4,
+      5
+    ],
+    "frozen_classes": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "all_vertices_have_four_true_unit_neighbors": true,
+    "inball_distance_squared_window": "1<d^2<9/5<(1+h)^2",
+    "exact_pure_hex_witnesses": [
+      {
+        "triangle_vertex_index": 0,
+        "tests": [
+          {
+            "pure_color": 1,
+            "m": -2,
+            "n": 1,
+            "sq_distance_lower": "55337/40000",
+            "sq_distance_upper": "14153/10000"
+          },
+          {
+            "pure_color": 2,
+            "m": 1,
+            "n": -2,
+            "sq_distance_lower": "4097/2500",
+            "sq_distance_upper": "4097/2500"
+          },
+          {
+            "pure_color": 3,
+            "m": -1,
+            "n": -1,
+            "sq_distance_lower": "63017/40000",
+            "sq_distance_upper": "16073/10000"
+          },
+          {
+            "pure_color": 6,
+            "m": 2,
+            "n": -1,
+            "sq_distance_lower": "11941/8000",
+            "sq_distance_upper": "15233/10000"
+          }
+        ]
+      },
+      {
+        "triangle_vertex_index": 1,
+        "tests": [
+          {
+            "pure_color": 1,
+            "m": -1,
+            "n": 3,
+            "sq_distance_lower": "284369/160000",
+            "sq_distance_upper": "71417/40000"
+          },
+          {
+            "pure_color": 2,
+            "m": 0,
+            "n": 3,
+            "sq_distance_lower": "48373/32000",
+            "sq_distance_upper": "60497/40000"
+          },
+          {
+            "pure_color": 3,
+            "m": 3,
+            "n": 0,
+            "sq_distance_lower": "279449/160000",
+            "sq_distance_upper": "71537/40000"
+          },
+          {
+            "pure_color": 6,
+            "m": 2,
+            "n": -1,
+            "sq_distance_lower": "45301/32000",
+            "sq_distance_upper": "56657/40000"
+          }
+        ]
+      },
+      {
+        "triangle_vertex_index": 2,
+        "tests": [
+          {
+            "pure_color": 1,
+            "m": -2,
+            "n": 1,
+            "sq_distance_lower": "53737/40000",
+            "sq_distance_upper": "13753/10000"
+          },
+          {
+            "pure_color": 2,
+            "m": 0,
+            "n": 3,
+            "sq_distance_lower": "12389/8000",
+            "sq_distance_upper": "15793/10000"
+          },
+          {
+            "pure_color": 3,
+            "m": -2,
+            "n": 4,
+            "sq_distance_lower": "4357/2500",
+            "sq_distance_upper": "4357/2500"
+          },
+          {
+            "pure_color": 6,
+            "m": -3,
+            "n": 3,
+            "sq_distance_lower": "65257/40000",
+            "sq_distance_upper": "16633/10000"
+          }
+        ]
+      }
+    ],
+    "conclusion": "no proper six coloring preserves these four original hex code classes as fixed monochrome classes"
   }
 }
