@@ -109,10 +109,11 @@
     "eta": "1/62500",
     "gamma_strictly_greater_than": "3/16",
     "per_star_one_missing_energy_strictly_greater_than_K": "3/2500000000",
-    "per_star_zero_missing_energy_at_least": "2*K",
+    "per_star_zero_missing_energy_at_least": "7*K",
     "max_star_overlap": 7,
     "finite_window_formula": "J_Omega >= K/7*(2*|U|-7*|Mix intersect N[U]|)_+",
+    "general_q_window_formula": "J_Omega >= K/7*((8-q)*|U|-7*|Mix intersect N[U]|)_+ for q=1..6",
     "periodic_energy_factor": "K/(14*pi*M)",
-    "scope": "exact rational geometry factors only; no integral or chi=7 proof"
+    "scope": "rational constants and finite q deficit-count logic only; infinite integration and absence of 7 proof are written"
   }
 }
