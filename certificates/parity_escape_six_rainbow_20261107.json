@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "scope": "Exact rational Q(sqrt(3)) probe and 3 orientation x 4 parity-phase gadget enumeration. The abstract six-coloring is not an actual plane coloring.",
+  "macro_palette": {
+    "removed_cosets": [
+      0,
+      1
+    ],
+    "normal_colors": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "extra_color": 7,
+    "special_coset": 2,
+    "kernel_generators": [
+      [
+        -3,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "parity_rule": "g(m,n)=7 when k(m,n)=2 and (x+y) odd, where (m,n)-(2,0)=x*(-3,1)+y*(1,2); otherwise g=k",
+    "abstract_triangles_checked": 12,
+    "each_local_triangle_can_be_3_colored_from_lists": true,
+    "all_macro_T_square_edges_proper": true
+  },
+  "six_ray_rainbow": {
+    "probe_point": [
+      "1/50+6*sqrt(3)/5",
+      "27/25"
+    ],
+    "probe_translated_leaf_ball_radius": "1/100",
+    "six_sites": [
+      {
+        "label": 2,
+        "macro_center": [
+          0,
+          3
+        ],
+        "squared_distance": "3997/2500+3*sqrt(3)/125"
+      },
+      {
+        "label": 3,
+        "macro_center": [
+          3,
+          0
+        ],
+        "squared_distance": "2917/2500"
+      },
+      {
+        "label": 4,
+        "macro_center": [
+          1,
+          1
+        ],
+        "squared_distance": "3277/2500+3*sqrt(3)/125"
+      },
+      {
+        "label": 5,
+        "macro_center": [
+          3,
+          3
+        ],
+        "squared_distance": "3997/2500-3*sqrt(3)/125"
+      },
+      {
+        "label": 6,
+        "macro_center": [
+          1,
+          4
+        ],
+        "squared_distance": "4357/2500"
+      },
+      {
+        "label": 7,
+        "macro_center": [
+          3,
+          2
+        ],
+        "squared_distance": "1237/2500-2*sqrt(3)/125"
+      }
+    ],
+    "all_distances_between": "1-sqrt(3)/5+1/100 < d < 1+sqrt(3)/5-1/100",
+    "sqrt3_rational_interval": [
+      "433/250",
+      "1733/1000"
+    ],
+    "minimum_exact_squared_margin": "6679/250000",
+    "common_source_disk_area_lower": "3/10000",
+    "six_eta_majority_deficiency_upper": "72/1562500",
+    "contradiction": "3/10000>72/1562500; one common source point sees all six macro-majority colors at exact unit distance with room for translation",
+    "result": "this specific parity escape cannot be realized by a weak proper measurable six coloring"
+  },
+  "hn_status": "6<=chi<=7 remains unresolved"
+}
