@@ -43,6 +43,29 @@ def verify_periodic_partial_coloring():
     }
 
 
+def verify_affine_color_orbits():
+    from itertools import combinations
+    tri=frozenset((0,4,5))
+    orbit={frozenset((a*x+b)%7 for x in tri)
+           for a in range(1,7) for b in range(7)}
+    AP={frozenset(((b-d)%7,b,(b+d)%7))
+        for b in range(7) for d in range(1,7)}
+    triple={frozenset(c) for c in combinations(range(7),3)}
+    if not (len(orbit)==14 and len(AP)==21 and orbit.isdisjoint(AP)
+            and orbit|AP==triple):
+        raise RuntimeError("AGL(1,7) 3-class orbit split mismatch")
+    if [pow(3,j,7) for j in range(6)]!=[1,3,2,6,4,5]:
+        raise RuntimeError("60-degree Euclidean rotation does not generate all nonzero multipliers")
+    return {"status":"PASS",
+            "geometry_rot60_color_multiplier":3,
+            "geometry_translation_color_increment":1,
+            "AGL_1_7_order":42,
+            "non_arithmetic_progression_missing_triples_certified":14,
+            "three_term_arithmetic_progression_missing_triples_not_yet_certified":21,
+            "all_four_class_freeze_choices":35,
+            "scope":"the 14 cases are Euclidean isometric copies of exact triangle gadget; 21 cases unproved"}
+
+
 def verify_four_frozen_triangle():
     # Three exact unit triangle vertices in Q(sqrt3), and 12 exact
     # unit-visibility witnesses from four frozen code classes.
@@ -180,6 +203,7 @@ def verify():
         "partial_coloring_color_count":6,
         "ten_pure_hex_unit_lock":verify_ten_pure_hex_lock(),
         "four_frozen_equilateral_triangle_lock":verify_four_frozen_triangle(),
+        "affine_color_orbit_classification":verify_affine_color_orbits(),
         "periodic_global_partial_coloring":verify_periodic_partial_coloring(),
         "interpretation":"only the first-step forced sixth-color subset is shown unit-free"
     }
