@@ -48,7 +48,7 @@ def forced_cert(radius,targets):
         for v in sorted(vertices-known.keys()):
             seen={}
             for u in neighbors[v]:
-                if u in known:
+                if u in known and known[u] not in seen:
                     seen[known[u]]=u
             if len(seen)==4:
                 unused=COLORS-set(seen)
