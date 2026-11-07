@@ -113,7 +113,7 @@ def certify_robust_two_mixed_needle_tradeoff():
             "r":"1/250","eta":"1/62500",
             "gamma_strictly_greater_than":"3/16",
             "per_star_one_missing_energy_strictly_greater_than_K":str(K),
-            "per_star_zero_missing_energy_at_least":"2*K",
+            "per_star_zero_missing_energy_at_least":"7*K",
             "max_star_overlap":7,
             "finite_window_formula":"J_Omega >= K/7*(2*|U|-7*|Mix intersect N[U]|)_+",
             "general_q_window_formula":"J_Omega >= K/7*((8-q)*|U|-7*|Mix intersect N[U]|)_+ for q=1..6",
