@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "exact_arithmetic": true,
+  "phase_overlap": [
+    {
+      "neighbor_step": [
+        1,
+        0
+      ],
+      "intersection": 20,
+      "different_codes_matching": 0
+    },
+    {
+      "neighbor_step": [
+        0,
+        1
+      ],
+      "intersection": 20,
+      "different_codes_matching": 0
+    }
+  ],
+  "sparse_color_identity_drift": {
+    "base_unpainted_residues": [
+      0,
+      1
+    ],
+    "base_monochromatic_residues": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "sparse_repainted_residue": 2,
+    "recolored_cells": "(2+7*t,0) for t in arbitrary A subset of Z",
+    "base_color_labels": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "new_color_label": 6,
+    "distinct_repainted_centers_distance_strict_gt": "14/3",
+    "distinct_repainted_points_distance_strict_gt": "58/15",
+    "new_same_cell_diameter": "4/5",
+    "same_original_color_center_triangular_norm_min": 7,
+    "old_same_color_point_distance_strict_gt": "1",
+    "missing_area_fraction": "2/7",
+    "full_plane_colorability_claim": "NONE: defined only on the five complete residue classes"
+  },
+  "phase_path_bound": {
+    "fixed_displacement_manhattan_length": "L",
+    "max_bad_windows_along_shortest_path": "L+1",
+    "probability_two_good_same_phase_lower": "max(0, 1-(L+1)*epsilon_phase)",
+    "epsilon_phase": "min(1,49*(7*d-2+28*pi*M*E/K))",
+    "scope": "deterministic overlap and union bound; no Gibbs law or chi=7 proof"
+  },
+  "conclusion": "even an exact global double-code defect set with all five other residue classes monochromatic has legal nonperiodic PARTIAL six-colorings; not a full coloring"
+}
