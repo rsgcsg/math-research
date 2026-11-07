@@ -1,3 +1,10 @@
+## 2026-11-07 R2026-SIX-RAY-AVALANCHE：五种原色格任何第六色接管都需触发邻域进一步颜色扰动
+
+| 编号 | 已证定理 | 证据、限制 |
+| --- | --- | --- |
+| R2026-SIX-RAY-AVALANCHE-A | 对T={0,1}、k=m+3n mod7、五个保留余类a=2,..,6每类给定点p_a及6张宏格（5种原标签＋第六色改色格），从p_a到6张宏格内切圆均有严格单位叶点，且全部六叶共同r=1/100内盘；最小30项平方区间裕量583/62500>0。任何weak proper六染对每份六叶预指定六种互异实际标签有\(\sum_{i=1}^6|H_i\setminus A_{f_i}|\ge\pi/10000\)。因此若η=1/62500且所有格nonmixed，第六色原格接管必迫使另外五个指定宏格至少一处参考标签身份变动 | [精确坐标与完整书面证明](proofs/single_cell_six_rainbow_propagation_20261107.md)；[Fraction30叶校验](../research/verify_single_cell_six_rainbow.py)·[汇总证书](../certificates/single_cell_six_rainbow_20261107.json)；依赖Family158 density-one unit-edge lemma，原始χ7**未解决** |
+| Q2026-AVALANCHE-CLOSURE | 五类统一的六射线传播约束若能与所有真实宏格边及两个缺陷余类的完整颜色赋值组成一份**真正对所有六色候选UNSAT**的有限精确证书，便关闭exact2混色分支；仍需处理非exact2高混色或找到直接NON6图 | 当前只有局部传播、没有对所有逃逸网的闭合证明；旧四冻结已排除固定五参考的部分，不能重复计功 |
+
 ## 2026-11-07 R2026-DOUBLE-CODE-PHASE：缺陷双码的相位壁、有限距离相关与标签漂移退出反例
 
 | 标识 | 已严格证明 | 适用边界 |
