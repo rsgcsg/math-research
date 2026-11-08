@@ -1,3 +1,9 @@
+## 2026-11-08：外部“无理圆周投影证明平面七色”未审定声称的严谨边界
+
+- Jonathan ƒ(n) Reed (2026-05-13), *The Hadwiger-Nelson Problem: Formal Verification of the 7-Color Chromatic Number of the Plane via Toroidal Projection and the Irrationality of 2π*, Zenodo DOI 10.5281/zenodo.20149767；摘要索引 https://globalresearchspace.com/space?star=W7160984021 。摘要声称仅凭单位安全色集角度密度<π/3和无理旋转可推出χ7；未逐行核验原预印本及其Lean证明，非公认结果。
+- [独立完整初等核对](../docs/proofs/irrational_unit_chord_circle_independence_sharp_20261108.md)：在半径sqrt3单位弦圆周，alpha=acos(5/6)，T5(5/6)=−475/486，beta=5alpha∈(2π/3,π)，开集{theta:5theta mod2π∈(0,beta)}严格无单位弦却占圆周46.61%。更一般无理单位弦旋转图的可测独立角密度sup=1/2、不取到；这是对摘要普适单圆周π/3直觉的反例，**不能代替对原文全部附加假设的完整审计**。
+- OpenAI Family158 (2026-09), https://github.com/openai/math/tree/main/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026；独立内核审计 https://github.com/punk01-shaka/hadwiger-nelson-audit ，均不声称χ7已证。
+
 ## 2026-11-07 复核的6/7外部原始边界与本轮秩二六射线接口
 
 - OpenAI (2026), *The Euclidean plane is not five-colorable*, result Family158, https://github.com/openai/math/tree/main/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026 ；及https://github.com/decalion89/chromatic-number-of-the-plane 关于其Lean目标独立重放。仅证明普通χ≥6、任意k weak measurable transfer及density-one单位边排斥，**不能作为六色不可行来源**。
