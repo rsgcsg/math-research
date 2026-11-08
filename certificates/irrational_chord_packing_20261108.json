@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "unit_circle_radius_squared": "3",
+  "unit_chord_cos_alpha": "5/6",
+  "twice_cos_alpha_non_integer": "5/3",
+  "cos_five_alpha": "-475/486",
+  "angular_bound": "2*pi/3 < beta=5*alpha < pi",
+  "explicit_independent_set": "{theta : (5 theta mod 2 pi) in (0,beta)}",
+  "independent_set_angular_measure": "beta > 2*pi/3",
+  "measurable_independent_density_sup": "1/2, not attained",
+  "scope": "exact rational angle certification; ergodic and geometric arguments in written proof only"
+}
