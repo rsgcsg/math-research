@@ -1,3 +1,9 @@
+## 2026-11-08：无理圆周单位弦的严格反例与两条路线收束（R2026-CIRCLE-SHARP）
+
+[完整解析证明](proofs/irrational_unit_chord_circle_independence_sharp_20261108.md)：在半径sqrt(3)圆周，单位弦角alpha=acos(5/6)为无理旋转，但cos(5alpha)=−475/486且2pi/3<5alpha<pi。五段开弧A={theta:5theta mod 2pi 属于(0,5alpha)}是严格可测独立集，角长5alpha>2pi/3，占圆周约46.61%。任何无理圆周旋转图的可测独立集密度上确界精确为1/2、无法取到：上界由A与A+alpha不交，等号违反2alpha遍历性；下确界逼近由nalpha mod 2pi稠密和有限开弧构造。**所以单凭无理角度无法推出每个单色集合角长<pi/3、也不能推出统一<1/2−delta的正缺口。**这与之前条件性“仅两个缺口颜色盖满角向会矛盾”相容，不是原平面χ7证明。[Fraction验证](../research/verify_irrational_chord_packing.py) · [证书](../certificates/irrational_chord_packing_20261108.json)。
+
+本轮审计外部Zenodo 2026-05-13未审定“无理圆周角投影证明χ7”摘要的普适角密度论断；**仅阅读摘要、未审全文/Lean，故不宣称完整反驳其全部证明**。外部最新独立kernel核对仍为普通χ∈{6,7}。本轮[四冻结双码近纯简化桥](proofs/twofold_palette_identity_conditional_20261108.md)在[早先FIVE-COSET-ESCAPE](proofs/five_coset_palette_escape_and_mass_20261107.md)已有更强1/56每色主导密度、1/21固定颜色漂移定理，因此只是重放而非原创新成果。最新[RANKTWO-SIX-RAY](proofs/two_direction_six_ray_majority_interface_20261107.md)60条真单位射线只在binary翻转模型下给rank-two传播，仍没排除所有六标签重排或高混色情形。**无 χ=7 完整证明。**
+
 ## 2026-11-07：十组双方向60单位射线，首次在二元逃逸模型中锁定全指标7子格（R2026-RANKTWO-SIX-RAY）
 
 [完整几何及条件证明](proofs/two_direction_six_ray_majority_interface_20261107.md)·[标准库精确核验](../research/verify_two_direction_six_ray_rigidity_20261107.py)·[证书](../certificates/two_direction_six_ray_rigidity_20261107.json)：针对精确两缺陷七色码T={0,1}的五个nonmixed类a=2..6，构造**每类2套独立真实六射线**，10套共**60条精确单位边**。每套由同一p看见6张代码类2..6的六角宏片，其中源类a出现**两次**、其余四类各一次。统一叶内盘r=1/50，60个真实叶点的有理-Q√3平方安全间隙最小严格为\(1637/25000>0\)；所有宏片在假想weak proper六染中若均η=1/62500非mixed，则6个**实际主导标签不可全部不同**（density-one lemma+πr²>6ηM，**无需冻结颜色参考**）。
