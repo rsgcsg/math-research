@@ -1,3 +1,11 @@
+## 2026-11-08 R2026-CIRCLE-SHARP：无理单位弦的可测独立集sup=1/2、显式π/3错误界反例
+
+| ID | 定理与反例 | 正确界限 |
+| --- | --- | --- |
+| R2026-CIRCLE-SHARP-A | 半径sqrt3圆周，alpha=acos(5/6)、cos(5alpha)=−475/486、2pi/3<5alpha<pi；A={theta:(5theta mod2pi)∈(0,5alpha)}是五弧严格单位弦独立集，角长5alpha>2pi/3，即46.61%圆周 | [完整证明](proofs/irrational_unit_chord_circle_independence_sharp_20261108.md)·[Fraction检查](../research/verify_irrational_chord_packing.py)·[证书](../certificates/irrational_chord_packing_20261108.json)；仅圆周条件、不是χ7证明 |
+| R2026-CIRCLE-SHARP-B | 对任何alpha/2pi无理，全部可测单位弦独立集角长sup=pi（1/2圆周）且每一份严格<pi；上界由不交与2alpha遍历，逼近由nalpha接近pi和有限开弧组合 | 同文§3；直接驳斥一般单圆周π/3角密度限制与固定1/2−δ间隙，不能单凭无理性提高平面色数 |
+| R2026-PALETTE-RECHECK | [本轮近纯四冻结条件桥](proofs/twofold_palette_identity_conditional_20261108.md)核对21对有限域非AP补全和12叶面积阈值，但旧[FIVE-COSET-ESCAPE](proofs/five_coset_palette_escape_and_mass_20261107.md)已证明更强的全六标签38格出现与每色1/56、指定五色参考漂移≥1/21 | **历史结果，不能计入新的χ下界进展** |
+
 ## 2026-11-07 R2026-RANKTWO-SIX-RAY：60个真实单位叶、rank-two全核格相干及binary逃逸边界
 
 | 结果ID | 严格断言 | 证书与不可越过的边界 |
