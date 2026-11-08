@@ -1,3 +1,9 @@
+## 2026-11-08：淘汰单圆周无理旋转的“每色最多pi/3”假设；继续真实全六标签共同law
+
+[显式Chebyshev反例及精确圆周密度sup](proofs/irrational_unit_chord_circle_independence_sharp_20261108.md)使半径sqrt3、单位弦无理旋转下的可测独立弧份额达到46.61%，且任意无理旋转的可测独立密度上确界为1/2但不取到。因此不能利用单圆周无理性推出任意单色角长<pi/3或固定远离半圆的下界。仍可用：若全部方向被迫仅使用两种固定缺口色，则两份各严格少于半圆的可测独立集不可覆盖全圆。但**这种两色全方向强迫仍然缺证明**。
+
+本轮[双缺陷四冻结近纯条件桥](proofs/twofold_palette_identity_conditional_20261108.md)只是旧[FIVE-COSET-ESCAPE](proofs/five_coset_palette_escape_and_mass_20261107.md)更强定理的简写、已去重。现有[60条rank-two六射线](proofs/two_direction_six_ray_majority_interface_20261107.md)仅解决受限binary色身份逃逸；任意6标签可共同交换且有限松弛SAT仍可行。实际下一步只能推进**无附加前提的全六色跨格联合约束**，再结合R2026-TWOFOLD-RIGID低混色结构和高混色能量分支；或者构造可审计精确NON6有限单位图/6-SAT UNSAT证书。χ仍6/7。
+
 ## 2026-11-07：从单向局部逃逸跨到秩二真实单位射线接口——但binary子模型不是全六标签证明
 
 [R2026-RANKTWO-SIX-RAY](proofs/two_direction_six_ray_majority_interface_20261107.md)给出5个非mixed七色码余类、每类2组不同方向的**全部60条**严格精确单位射线，共同内盘r=1/50，所有6叶主导色不能rainbow；10组下界min=1637/25000，五对配对平移det=±7恰生成完整指标7核格L。其真正跨领域结构是：原来单方向探针只同步沿Z条纹，现在两独立单位探针同步整个Z²核格。对binary模型g(v)∈{参考f(k),第六色6}，每个被翻转的同类邻对必须由至少一个其它原码类的第六色翻转支撑；若其它四类全不翻转，则每个代码类在全L上颜色身份常数。对周期binary六标签过程，指标翻转边界\(D_a(t)\le\sum_{b\ne a}\rho_b\)，沿m,n位移有线性长度相关界。
